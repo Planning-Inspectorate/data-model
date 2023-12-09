@@ -80,6 +80,7 @@
 			]
 		},
 		"dateReceived": {
+			"type": "string",
 			"format": "date-time",
 			"examples": ["2023-03-26T00:00:00.000"]
 		},

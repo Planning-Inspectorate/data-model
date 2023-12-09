@@ -1,0 +1,10 @@
+# Node
+node_modules
+npm-debug.log
+
+# Editors
+.idea
+**/*.swp
+
+# Env settings / local env files
+.env

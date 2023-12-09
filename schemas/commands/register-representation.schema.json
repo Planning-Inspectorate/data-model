@@ -32,11 +32,11 @@
 			"enum": ["PERSON", "ORGANISATION", "FAMILY_GROUP"]
 		},
 		"represented": {
-			"$ref": "../events/interested-party.schema.json",
+			"$ref": "interested-party.schema.json",
 			"description": "Person or organisation being represented"
 		},
 		"representative": {
-			"$ref": "../events/interested-party.schema.json",
+			"$ref": "interested-party.schema.json",
 			"description": "Person or organisation submitting representation in the case of Agent representationFrom"
 		}
 	}

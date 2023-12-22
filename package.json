@@ -5,6 +5,7 @@
   "main": "src/index.js",
   "type": "module",
   "scripts": {
+    "gen-docs": "node src/gen-docs.js",
     "gen-types": "node src/gen-types.js"
   },
   "repository": {
@@ -16,6 +17,7 @@
     "jsonc-parser": "^3.2.0"
   },
   "devDependencies": {
+    "@adobe/jsonschema2md": "^7.1.5",
     "json-schema-to-typescript": "^13.1.1"
   }
 }

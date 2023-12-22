@@ -32,4 +32,10 @@ Once a schema is updated, it is important to update the TypeScript definitions b
 
 `npm run gen-types`
 
+and update the generated markdown by running:
+
+`npm run gen-docs`
+
 and also tag the repo with a new version (format TBC).
+
+> todo: run this on pre-commit or on a pipeline

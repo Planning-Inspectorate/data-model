@@ -5,9 +5,6 @@
  * and run json-schema-to-typescript to regenerate this file.
  */
 
-/**
- * ???
- */
 export interface CaseSchedule {}
 
 export interface Employee {
@@ -126,6 +123,17 @@ export interface NSIPDocument {
    * Filter field to provide additional filtering
    */
   filter2?: string;
+}
+
+/**
+ * Result of processing a new exam timetable submission
+ */
+export interface NsipExamTimetableSubmission {
+  status: 'SUCCESS' | 'VIRUS_DETECTED' | 'FAILURE';
+  deadline: string;
+  submissionType: string;
+  blobGuid: string;
+  documentName: string;
 }
 
 /**
@@ -498,8 +506,6 @@ export interface NSIPProject {
   applicantId?: string;
 }
 
-export type Name = string;
-
 export interface Representation {
   representationId: number;
   referenceId?: string;
@@ -516,8 +522,14 @@ export interface Representation {
   redactedBy?: string;
   redactedNotes?: string;
   representationFrom?: 'PERSON' | 'ORGANISATION' | 'AGENT';
-  represented: InterestedParty;
-  representative?: InterestedParty1;
+  /**
+   * ServiceUser Id of the person or organisation being represented
+   */
+  representedId: string;
+  /**
+   * ServiceUser Id of the person or organisation submitting representation in the case of Agent representationFrom
+   */
+  representativeId?: string;
   registerFor?: 'PERSON' | 'ORGANISATION' | 'FAMILY_GROUP';
   representationType?:
     | 'Local Authorities'
@@ -528,70 +540,7 @@ export interface Representation {
     | 'Non-Statutory Organisations'
     | 'Another Individual';
   dateReceived: string;
-  attachments?: Attachment[];
-}
-/**
- * Person or organisation being represented
- */
-export interface InterestedParty {
-  id?: number;
-  interestedPartyNumber?: string;
-  firstName?: string;
-  lastName?: string;
-  under18?: boolean;
-  organisationName?: Name;
-  jobTitle?: string;
-  contactMethod?: 'email' | 'post';
-  email?: string;
-  phoneNumber?: string;
-  address?: Address;
-}
-export interface Address {
-  addressLine1: string;
-  addressLine2?: string;
-  town: string;
-  postcode: string;
-  country?: string;
-}
-/**
- * Person or organisation submitting representation in the case of Agent representationFrom
- */
-export interface InterestedParty1 {
-  id?: number;
-  interestedPartyNumber?: string;
-  firstName?: string;
-  lastName?: string;
-  under18?: boolean;
-  organisationName?: Name;
-  jobTitle?: string;
-  contactMethod?: 'email' | 'post';
-  email?: string;
-  phoneNumber?: string;
-  address?: Address;
-}
-export interface Attachment {
-  /**
-   * The unique identifier for the file
-   */
-  documentId: string;
-  /**
-   * Current stored filename of the file
-   */
-  filename: string;
-  size: number;
-  mime?: string;
-  documentURI: string;
-}
-
-/**
- * Result of processing a new exam timetable submission
- */
-export interface NsipExamTimetableSubmission {
-  status: 'SUCCESS' | 'VIRUS_DETECTED' | 'FAILURE';
-  deadline: string;
-  submissionType: string;
-  blobGuid: string;
-  documentName: string;
+  attachmentIds?: string[];
 }
 
 /**
@@ -763,57 +712,6 @@ export interface ServiceUser {
 }
 
 /**
- * A command to deliver metadata about a new document submission added to a deadline
- */
-export interface NewDeadlineSubmission {
-  /**
-   * The unique reference of the case
-   */
-  caseReference?: string;
-  /**
-   * The name of the FO user who made the submission
-   */
-  name: string;
-  /**
-   * The email address of the FO user who made the submission
-   */
-  email: string;
-  /**
-   * Was the submission made by an interested party on behalf of someone else?
-   */
-  interestedParty?: boolean;
-  /**
-   * Only necessary if `interestedParty` is true
-   */
-  interestedPartyReference?: string;
-  /**
-   * The name of the deadline which the submission was made against
-   */
-  deadline: string;
-  /**
-   * The name of the deadline line item the submission was made against
-   */
-  submissionType: string;
-  /**
-   * Does the submission contain sensitive data?
-   */
-  sensitiveData?: boolean;
-  lateSubmission?: boolean;
-  /**
-   * ID of the submission in the database
-   */
-  submissionId?: string;
-  /**
-   * The GUID of the blob in storage
-   */
-  blobGuid: string;
-  /**
-   * The file name of the document in blob storage
-   */
-  documentName: string;
-}
-
-/**
  * A command to register an NSIP subscription with the back office
  */
 export interface RegisterNsipSubscription {
@@ -912,5 +810,56 @@ export interface InterestedParty1 {
   email?: string;
   phoneNumber?: string;
   address?: Address;
+}
+
+/**
+ * A command to deliver metadata about a new document submission added to a deadline
+ */
+export interface NewDeadlineSubmission {
+  /**
+   * The unique reference of the case
+   */
+  caseReference?: string;
+  /**
+   * The name of the FO user who made the submission
+   */
+  name: string;
+  /**
+   * The email address of the FO user who made the submission
+   */
+  email: string;
+  /**
+   * Was the submission made by an interested party on behalf of someone else?
+   */
+  interestedParty?: boolean;
+  /**
+   * Only necessary if `interestedParty` is true
+   */
+  interestedPartyReference?: string;
+  /**
+   * The name of the deadline which the submission was made against
+   */
+  deadline: string;
+  /**
+   * The name of the deadline line item the submission was made against
+   */
+  submissionType: string;
+  /**
+   * Does the submission contain sensitive data?
+   */
+  sensitiveData?: boolean;
+  lateSubmission?: boolean;
+  /**
+   * ID of the submission in the database
+   */
+  submissionId?: string;
+  /**
+   * The GUID of the blob in storage
+   */
+  blobGuid: string;
+  /**
+   * The file name of the document in blob storage
+   */
+  documentName: string;
 }
 

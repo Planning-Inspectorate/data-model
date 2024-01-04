@@ -18,12 +18,12 @@
 | [redactedBy](#redactedby)                         | `string`  | Optional | cannot be null | [Representation](nsip-representation-properties-redactedby.md "nsip-representation.schema.json#/properties/redactedBy")                         |
 | [redactedNotes](#redactednotes)                   | `string`  | Optional | cannot be null | [Representation](nsip-representation-properties-redactednotes.md "nsip-representation.schema.json#/properties/redactedNotes")                   |
 | [representationFrom](#representationfrom)         | `string`  | Optional | cannot be null | [Representation](nsip-representation-properties-representationfrom.md "nsip-representation.schema.json#/properties/representationFrom")         |
-| [represented](#represented)                       | `object`  | Required | cannot be null | [Representation](nsip-representation-properties-interested-party.md "interested-party.schema.json#/properties/represented")                     |
-| [representative](#representative)                 | `object`  | Optional | cannot be null | [Representation](nsip-representation-properties-interested-party-1.md "interested-party.schema.json#/properties/representative")                |
+| [representedId](#representedid)                   | `string`  | Required | cannot be null | [Representation](nsip-representation-properties-representedid.md "nsip-representation.schema.json#/properties/representedId")                   |
+| [representativeId](#representativeid)             | `string`  | Optional | cannot be null | [Representation](nsip-representation-properties-representativeid.md "nsip-representation.schema.json#/properties/representativeId")             |
 | [registerFor](#registerfor)                       | `string`  | Optional | cannot be null | [Representation](nsip-representation-properties-registerfor.md "nsip-representation.schema.json#/properties/registerFor")                       |
 | [representationType](#representationtype)         | `string`  | Optional | cannot be null | [Representation](nsip-representation-properties-representationtype.md "nsip-representation.schema.json#/properties/representationType")         |
 | [dateReceived](#datereceived)                     | `string`  | Required | cannot be null | [Representation](nsip-representation-properties-datereceived.md "nsip-representation.schema.json#/properties/dateReceived")                     |
-| [attachments](#attachments)                       | `array`   | Optional | cannot be null | [Representation](nsip-representation-properties-attachments.md "nsip-representation.schema.json#/properties/attachments")                       |
+| [attachmentIds](#attachmentids)                   | `array`   | Optional | cannot be null | [Representation](nsip-representation-properties-attachmentids.md "nsip-representation.schema.json#/properties/attachmentIds")                   |
 
 ## representationId
 
@@ -294,41 +294,41 @@ The unique identifier within the Back Office. This is not the same as the case r
 | `"ORGANISATION"` |             |
 | `"AGENT"`        |             |
 
-## represented
+## representedId
 
-Subset of Pins Data Model \[Service User]
+ServiceUser Id of the person or organisation being represented
 
-`represented`
+`representedId`
 
 *   is required
 
-*   Type: `object` ([interested-party](nsip-representation-properties-interested-party-1.md))
+*   Type: `string`
 
 *   cannot be null
 
-*   defined in: [Representation](nsip-representation-properties-interested-party-1.md "interested-party.schema.json#/properties/represented")
+*   defined in: [Representation](nsip-representation-properties-representedid.md "nsip-representation.schema.json#/properties/representedId")
 
-### represented Type
+### representedId Type
 
-`object` ([interested-party](nsip-representation-properties-interested-party-1.md))
+`string`
 
-## representative
+## representativeId
 
-Subset of Pins Data Model \[Service User]
+ServiceUser Id of the person or organisation submitting representation in the case of Agent representationFrom
 
-`representative`
+`representativeId`
 
 *   is optional
 
-*   Type: `object` ([interested-party](nsip-representation-properties-interested-party-1.md))
+*   Type: `string`
 
 *   cannot be null
 
-*   defined in: [Representation](nsip-representation-properties-interested-party-1.md "interested-party.schema.json#/properties/representative")
+*   defined in: [Representation](nsip-representation-properties-representativeid.md "nsip-representation.schema.json#/properties/representativeId")
 
-### representative Type
+### representativeId Type
 
-`object` ([interested-party](nsip-representation-properties-interested-party-1.md))
+`string`
 
 ## registerFor
 
@@ -418,158 +418,20 @@ Subset of Pins Data Model \[Service User]
 "2023-03-26T00:00:00.000"
 ```
 
-## attachments
+## attachmentIds
 
 
 
-`attachments`
-
-*   is optional
-
-*   Type: `object[]` ([Details](nsip-representation-defs-attachment.md))
-
-*   cannot be null
-
-*   defined in: [Representation](nsip-representation-properties-attachments.md "nsip-representation.schema.json#/properties/attachments")
-
-### attachments Type
-
-`object[]` ([Details](nsip-representation-defs-attachment.md))
-
-# Representation Definitions
-
-## Definitions group attachment
-
-Reference this group by using
-
-```json
-{"$ref":"nsip-representation.schema.json#/$defs/attachment"}
-```
-
-| Property                    | Type     | Required | Nullable       | Defined by                                                                                                                                                 |
-| :-------------------------- | :------- | :------- | :------------- | :--------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [documentId](#documentid)   | `string` | Required | cannot be null | [Representation](nsip-representation-defs-attachment-properties-documentid.md "nsip-representation.schema.json#/$defs/attachment/properties/documentId")   |
-| [filename](#filename)       | `string` | Required | cannot be null | [Representation](nsip-representation-defs-attachment-properties-filename.md "nsip-representation.schema.json#/$defs/attachment/properties/filename")       |
-| [size](#size)               | `number` | Required | cannot be null | [Representation](nsip-representation-defs-attachment-properties-size.md "nsip-representation.schema.json#/$defs/attachment/properties/size")               |
-| [mime](#mime)               | `string` | Optional | cannot be null | [Representation](nsip-representation-defs-attachment-properties-mime.md "nsip-representation.schema.json#/$defs/attachment/properties/mime")               |
-| [documentURI](#documenturi) | `string` | Required | cannot be null | [Representation](nsip-representation-defs-attachment-properties-documenturi.md "nsip-representation.schema.json#/$defs/attachment/properties/documentURI") |
-
-### documentId
-
-The unique identifier for the file
-
-`documentId`
-
-*   is required
-
-*   Type: `string`
-
-*   cannot be null
-
-*   defined in: [Representation](nsip-representation-defs-attachment-properties-documentid.md "nsip-representation.schema.json#/$defs/attachment/properties/documentId")
-
-#### documentId Type
-
-`string`
-
-#### documentId Examples
-
-```json
-"ID23343453"
-```
-
-### filename
-
-Current stored filename of the file
-
-`filename`
-
-*   is required
-
-*   Type: `string`
-
-*   cannot be null
-
-*   defined in: [Representation](nsip-representation-defs-attachment-properties-filename.md "nsip-representation.schema.json#/$defs/attachment/properties/filename")
-
-#### filename Type
-
-`string`
-
-#### filename Examples
-
-```json
-"filename.pdf"
-```
-
-### size
-
-
-
-`size`
-
-*   is required
-
-*   Type: `number`
-
-*   cannot be null
-
-*   defined in: [Representation](nsip-representation-defs-attachment-properties-size.md "nsip-representation.schema.json#/$defs/attachment/properties/size")
-
-#### size Type
-
-`number`
-
-#### size Examples
-
-```json
-23452
-```
-
-### mime
-
-
-
-`mime`
+`attachmentIds`
 
 *   is optional
 
-*   Type: `string`
+*   Type: `string[]`
 
 *   cannot be null
 
-*   defined in: [Representation](nsip-representation-defs-attachment-properties-mime.md "nsip-representation.schema.json#/$defs/attachment/properties/mime")
+*   defined in: [Representation](nsip-representation-properties-attachmentids.md "nsip-representation.schema.json#/properties/attachmentIds")
 
-#### mime Type
+### attachmentIds Type
 
-`string`
-
-#### mime Examples
-
-```json
-"application/pdf"
-```
-
-### documentURI
-
-
-
-`documentURI`
-
-*   is required
-
-*   Type: `string`
-
-*   cannot be null
-
-*   defined in: [Representation](nsip-representation-defs-attachment-properties-documenturi.md "nsip-representation.schema.json#/$defs/attachment/properties/documentURI")
-
-#### documentURI Type
-
-`string`
-
-#### documentURI Examples
-
-```json
-"blob:https://published/en010120/filename.pdf"
-```
+`string[]`

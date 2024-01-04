@@ -36,8 +36,6 @@
 
 *   [Untitled object in Examination Timetable](./nsip-exam-timetable-defs-line-item.md) – `nsip-exam-timetable.schema.json#/$defs/line-item`
 
-*   [Untitled object in Representation](./nsip-representation-defs-attachment.md) – `nsip-representation.schema.json#/$defs/attachment`
-
 ### Arrays
 
 *   [Untitled array in Examination Timetable](./nsip-exam-timetable-properties-events.md) – `nsip-exam-timetable.schema.json#/properties/events`
@@ -52,7 +50,7 @@
 
 *   [Untitled array in NSIP Project](./nsip-project-properties-inspectorids.md) – `nsip-project.schema.json#/properties/inspectorIds`
 
-*   [Untitled array in Representation](./nsip-representation-properties-attachments.md) – `nsip-representation.schema.json#/properties/attachments`
+*   [Untitled array in Representation](./nsip-representation-properties-attachmentids.md) – `nsip-representation.schema.json#/properties/attachmentIds`
 
 *   [Untitled array in S51 Advice](./s51-advice-properties-attachmentids.md) – `s51-advice.schema.json#/properties/attachmentIds`
 

@@ -13,32 +13,6 @@ export interface Employee {
   lastName: string;
 }
 
-export type Name = string;
-
-/**
- * Subset of Pins Data Model [Service User]
- */
-export interface InterestedParty {
-  id?: number;
-  interestedPartyNumber?: string;
-  firstName?: string;
-  lastName?: string;
-  under18?: boolean;
-  organisationName?: Name;
-  jobTitle?: string;
-  contactMethod?: 'email' | 'post';
-  email?: string;
-  phoneNumber?: string;
-  address?: Address;
-}
-export interface Address {
-  addressLine1: string;
-  addressLine2?: string;
-  town: string;
-  postcode: string;
-  country?: string;
-}
-
 export interface NSIPDocument {
   /**
    * The unique identifier for the file. This will be different to documentReference
@@ -123,17 +97,6 @@ export interface NSIPDocument {
    * Filter field to provide additional filtering
    */
   filter2?: string;
-}
-
-/**
- * Result of processing a new exam timetable submission
- */
-export interface NsipExamTimetableSubmission {
-  status: 'SUCCESS' | 'VIRUS_DETECTED' | 'FAILURE';
-  deadline: string;
-  submissionType: string;
-  blobGuid: string;
-  documentName: string;
 }
 
 /**
@@ -543,34 +506,6 @@ export interface Representation {
   attachmentIds?: string[];
 }
 
-/**
- * Subscribers are a subset of Service Users, part of the PINS Data Model
- */
-export interface NsipSubscription {
-  /**
-   * The unique identifier within the Back Office. Ignored as part of register-nsip-subscription.
-   */
-  subscriptionId?: number;
-  /**
-   * the case reference the subscription relates to
-   */
-  caseReference: string;
-  emailAddress: string;
-  /**
-   * which update does the subscriber want to get notified of. For multiple types, use multiple messages.
-   */
-  subscriptionType: 'allUpdates' | 'applicationSubmitted' | 'applicationDecided' | 'registrationOpen';
-  /**
-   * The date to start getting updates
-   */
-  startDate?: string;
-  /**
-   * The date to stop getting updates
-   */
-  endDate?: string;
-  language?: 'English' | 'Welsh';
-}
-
 export interface S51Advice {
   adviceId: number;
   adviceReference: string;
@@ -615,6 +550,34 @@ export interface S51Advice {
   status?: 'checked' | 'unchecked' | 'readytopublish' | 'published' | 'donotpublish';
   redactionStatus?: 'unredacted' | 'redacted';
   attachmentIds?: string[];
+}
+
+/**
+ * Subscribers are a subset of Service Users, part of the PINS Data Model
+ */
+export interface NsipSubscription {
+  /**
+   * The unique identifier within the Back Office. Ignored as part of register-nsip-subscription.
+   */
+  subscriptionId?: number;
+  /**
+   * the case reference the subscription relates to
+   */
+  caseReference: string;
+  emailAddress: string;
+  /**
+   * which update does the subscriber want to get notified of. For multiple types, use multiple messages.
+   */
+  subscriptionType: 'allUpdates' | 'applicationSubmitted' | 'applicationDecided' | 'registrationOpen';
+  /**
+   * The date to start getting updates
+   */
+  startDate?: string;
+  /**
+   * The date to stop getting updates
+   */
+  endDate?: string;
+  language?: 'English' | 'Welsh';
 }
 
 /**
@@ -711,6 +674,94 @@ export interface ServiceUser {
   sourceSuid: string;
 }
 
+export type Name = string;
+
+/**
+ * Subset of Pins Data Model [Service User]
+ */
+export interface InterestedParty {
+  id?: number;
+  interestedPartyNumber?: string;
+  firstName?: string;
+  lastName?: string;
+  under18?: boolean;
+  organisationName?: Name;
+  jobTitle?: string;
+  contactMethod?: 'email' | 'post';
+  email?: string;
+  phoneNumber?: string;
+  address?: Address;
+}
+export interface Address {
+  addressLine1: string;
+  addressLine2?: string;
+  town: string;
+  postcode: string;
+  country?: string;
+}
+
+/**
+ * A command to deliver metadata about a new document submission added to a deadline
+ */
+export interface NewDeadlineSubmission {
+  /**
+   * The unique reference of the case
+   */
+  caseReference?: string;
+  /**
+   * The name of the FO user who made the submission
+   */
+  name: string;
+  /**
+   * The email address of the FO user who made the submission
+   */
+  email: string;
+  /**
+   * Was the submission made by an interested party on behalf of someone else?
+   */
+  interestedParty?: boolean;
+  /**
+   * Only necessary if `interestedParty` is true
+   */
+  interestedPartyReference?: string;
+  /**
+   * The name of the deadline which the submission was made against
+   */
+  deadline: string;
+  /**
+   * The name of the deadline line item the submission was made against
+   */
+  submissionType: string;
+  /**
+   * Does the submission contain sensitive data?
+   */
+  sensitiveData?: boolean;
+  lateSubmission?: boolean;
+  /**
+   * ID of the submission in the database
+   */
+  submissionId?: string;
+  /**
+   * The GUID of the blob in storage
+   */
+  blobGuid: string;
+  /**
+   * The file name of the document in blob storage
+   */
+  documentName: string;
+}
+
+/**
+ * Result of processing a new exam timetable submission
+ */
+export interface NsipExamTimetableSubmission {
+  status: 'SUCCESS' | 'VIRUS_DETECTED' | 'FAILURE';
+  deadline: string;
+  submissionType: string;
+  blobGuid: string;
+  documentName: string;
+}
+
 /**
  * A command to register an NSIP subscription with the back office
  */
@@ -766,11 +817,16 @@ export interface RegisterRepresentation {
    * The unique reference of the case
    */
   caseReference: string;
+  /**
+   * Type of representation
+   */
+  representationType?: string;
   originalRepresentation: string;
   representationFrom: 'PERSON' | 'ORGANISATION' | 'AGENT';
   registerFor: 'PERSON' | 'ORGANISATION' | 'FAMILY_GROUP';
   represented: InterestedParty;
   representative?: InterestedParty1;
+  dateReceived?: string;
 }
 /**
  * Person or organisation being represented
@@ -810,56 +866,5 @@ export interface InterestedParty1 {
   email?: string;
   phoneNumber?: string;
   address?: Address;
-}
-
-/**
- * A command to deliver metadata about a new document submission added to a deadline
- */
-export interface NewDeadlineSubmission {
-  /**
-   * The unique reference of the case
-   */
-  caseReference?: string;
-  /**
-   * The name of the FO user who made the submission
-   */
-  name: string;
-  /**
-   * The email address of the FO user who made the submission
-   */
-  email: string;
-  /**
-   * Was the submission made by an interested party on behalf of someone else?
-   */
-  interestedParty?: boolean;
-  /**
-   * Only necessary if `interestedParty` is true
-   */
-  interestedPartyReference?: string;
-  /**
-   * The name of the deadline which the submission was made against
-   */
-  deadline: string;
-  /**
-   * The name of the deadline line item the submission was made against
-   */
-  submissionType: string;
-  /**
-   * Does the submission contain sensitive data?
-   */
-  sensitiveData?: boolean;
-  lateSubmission?: boolean;
-  /**
-   * ID of the submission in the database
-   */
-  submissionId?: string;
-  /**
-   * The GUID of the blob in storage
-   */
-  blobGuid: string;
-  /**
-   * The file name of the document in blob storage
-   */
-  documentName: string;
 }
 

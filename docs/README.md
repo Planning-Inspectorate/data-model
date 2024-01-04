@@ -20,17 +20,11 @@
 
 *   [Service User](./service-user.md "Service User of the planning inspectorate") – `service-user.schema.json`
 
-*   [interested-party](./interested-party.md "Subset of Pins Data Model \[Service User]") – `interested-party.schema.json`
-
-*   [nsip-exam-timetable-submission](./nsip-exam-timetable-submission.md "Result of processing a new exam timetable submission") – `nsip-exam-timetable-submission.schema.json`
-
 *   [nsip-subscription](./nsip-subscription.md "Subscribers are a subset of Service Users, part of the PINS Data Model") – `nsip-subscription.schema.json`
 
 ## Other Schemas
 
 ### Objects
-
-*   [Address](./interested-party-properties-address.md) – `interested-party.schema.json#/properties/address`
 
 *   [Untitled object in Examination Timetable](./nsip-exam-timetable-defs-event.md) – `nsip-exam-timetable.schema.json#/$defs/event`
 

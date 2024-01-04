@@ -1,6 +1,6 @@
 {
 	"$schema": "http://json-schema.org/draft-07/schema#",
-	"$id": "nsip-exam-timetable-submission.schema.json",
+	"$id": "commands/nsip-exam-timetable-submission.schema.json",
 	"title": "nsip-exam-timetable-submission",
 	"description": "Result of processing a new exam timetable submission",
 	"type": "object",

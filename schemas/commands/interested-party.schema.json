@@ -1,6 +1,6 @@
 {
 	"$schema": "http://json-schema.org/draft-07/schema#",
-	"$id": "interested-party.schema.json",
+	"$id": "commands/interested-party.schema.json",
 	"title": "interested-party",
 	"description": "Subset of Pins Data Model [Service User]",
 	"type": "object",

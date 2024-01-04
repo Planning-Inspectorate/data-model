@@ -1,6 +1,6 @@
 {
 	"$schema": "http://json-schema.org/draft-07/schema#",
-	"$id": "new-deadline-submission.schema.json",
+	"$id": "commands/new-deadline-submission.schema.json",
 	"title": "new-deadline-submission",
 	"description": "A command to deliver metadata about a new document submission added to a deadline",
 	"type": "object",

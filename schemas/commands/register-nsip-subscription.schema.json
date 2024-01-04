@@ -1,6 +1,6 @@
 {
 	"$schema": "http://json-schema.org/draft-07/schema#",
-	"$id": "register-nsip-subscription.schema.json",
+	"$id": "commands/register-nsip-subscription.schema.json",
 	"title": "register-nsip-subscription",
 	"description": "A command to register an NSIP subscription with the back office",
 	"type": "object",

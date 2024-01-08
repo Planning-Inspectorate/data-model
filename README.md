@@ -60,6 +60,6 @@ and also tag the repo with a new version (format TBC).
 
 > todo: run this on pre-commit or on a pipeline
 
-It is also import to update the Python pydantic models, by running:
+It is also important to update the Python pydantic models, by running:
 
 `python pins_data_model/gen_models.py`

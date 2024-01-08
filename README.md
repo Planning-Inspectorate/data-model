@@ -37,7 +37,14 @@ import {loadAllSchemas} from 'pins-data-model';
 
 To use these schemas in a Python project, add this repo as a dependency (with a particular tag or commit as the version):
 
-`pip install git+https://github.com/Planning-Inspectorate/data-model@v1.0.0#egg=pins-data-model`
+`pip install git+https://github.com/Planning-Inspectorate/data-model@v1.0.0#egg=pins_data_model`
+
+```python
+from pins_data_model.load_schemas import load_all_schemas
+
+schemas = load_all_schemas()
+print(schemas)
+```
 
 ## Updates
 

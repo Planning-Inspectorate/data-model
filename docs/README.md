@@ -8,6 +8,8 @@
 
 *   [Examination Timetable](./nsip-exam-timetable.md "Examination Timetable for an NSIP Project") – `nsip-exam-timetable.schema.json`
 
+*   [Folder](./folder.md "Folders can have optional parents") – `folder.schema.json`
+
 *   [NSIP Document](./nsip-document.md) – `nsip-document.schema.json`
 
 *   [NSIP Project](./nsip-project.md "Subset of Pins Data Model \[Case]") – `nsip-project.schema.json`

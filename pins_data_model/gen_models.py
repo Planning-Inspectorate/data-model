@@ -3,15 +3,13 @@ Module to generate pydantic models from json schemas
 """
 
 import json
-from os import path
 from pathlib import Path
 from datamodel_code_generator import InputFileType, PythonVersion, generate
 from datamodel_code_generator import DataModelType
 
 from load_schemas import load_all_schemas
 
-modelsDir = path.join(path.dirname(path.realpath(__file__)), "models")
-
+models_dir = Path.cwd() / "models"
 
 def gen_models() -> None:
     """
@@ -37,7 +35,7 @@ def gen_models() -> None:
             json_schema,
             input_file_type=InputFileType.JsonSchema,
             input_filename=name,
-            output=Path(path.join(modelsDir, filename)),
+            output=models_dir / filename,
             output_model_type=DataModelType.PydanticV2BaseModel,
             use_double_quotes=True,
             use_standard_collections=True,

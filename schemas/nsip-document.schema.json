@@ -187,6 +187,10 @@
     "horizonFolderId": {
       "type": "string",
       "description": "The folder where the document exists"
+    },
+    "transcriptId": {
+      "type": "string",
+      "description": "The GUID of the transcript document (if one was provided)."
     }
 	}
 }

@@ -183,6 +183,10 @@
 			"type": "string",
 			"examples": ["Scoping Option Report"],
 			"description": "Filter field to provide additional filtering"
-		}
+		},
+    "horizonFolderId": {
+      "type": "string",
+      "description": "The folder where the document exists"
+    }
 	}
 }

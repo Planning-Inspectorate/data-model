@@ -24,7 +24,6 @@
 | [dateCreated](#datecreated)                       | `string` | Required | cannot be null | [NSIP Document](nsip-document-properties-datecreated.md "nsip-document.schema.json#/properties/dateCreated")                       |
 | [lastModified](#lastmodified)                     | `string` | Optional | cannot be null | [NSIP Document](nsip-document-properties-lastmodified.md "nsip-document.schema.json#/properties/lastModified")                     |
 | [caseType](#casetype)                             | `string` | Optional | cannot be null | [NSIP Document](nsip-document-properties-casetype.md "nsip-document.schema.json#/properties/caseType")                             |
-| [documentStatus](#documentstatus)                 | `string` | Optional | cannot be null | [NSIP Document](nsip-document-properties-documentstatus.md "nsip-document.schema.json#/properties/documentStatus")                 |
 | [redactedStatus](#redactedstatus)                 | `string` | Optional | cannot be null | [NSIP Document](nsip-document-properties-redactedstatus.md "nsip-document.schema.json#/properties/redactedStatus")                 |
 | [publishedStatus](#publishedstatus)               | `string` | Optional | cannot be null | [NSIP Document](nsip-document-properties-publishedstatus.md "nsip-document.schema.json#/properties/publishedStatus")               |
 | [datePublished](#datepublished)                   | `string` | Optional | cannot be null | [NSIP Document](nsip-document-properties-datepublished.md "nsip-document.schema.json#/properties/datePublished")                   |
@@ -36,9 +35,11 @@
 | [author](#author)                                 | `string` | Optional | cannot be null | [NSIP Document](nsip-document-properties-author.md "nsip-document.schema.json#/properties/author")                                 |
 | [representative](#representative)                 | `string` | Optional | cannot be null | [NSIP Document](nsip-document-properties-representative.md "nsip-document.schema.json#/properties/representative")                 |
 | [description](#description)                       | `string` | Optional | cannot be null | [NSIP Document](nsip-document-properties-description.md "nsip-document.schema.json#/properties/description")                       |
-| [stage](#stage)                                   | `string` | Optional | cannot be null | [NSIP Document](nsip-document-properties-stage.md "nsip-document.schema.json#/properties/stage")                                   |
+| [documentCaseStage](#documentcasestage)           | `string` | Optional | cannot be null | [NSIP Document](nsip-document-properties-documentcasestage.md "nsip-document.schema.json#/properties/documentCaseStage")           |
 | [filter1](#filter1)                               | `string` | Optional | cannot be null | [NSIP Document](nsip-document-properties-filter1.md "nsip-document.schema.json#/properties/filter1")                               |
 | [filter2](#filter2)                               | `string` | Optional | cannot be null | [NSIP Document](nsip-document-properties-filter2.md "nsip-document.schema.json#/properties/filter2")                               |
+| [horizonFolderId](#horizonfolderid)               | `string` | Optional | cannot be null | [NSIP Document](nsip-document-properties-horizonfolderid.md "nsip-document.schema.json#/properties/horizonFolderId")               |
+| [transcriptId](#transcriptid)                     | `string` | Optional | cannot be null | [NSIP Document](nsip-document-properties-transcriptid.md "nsip-document.schema.json#/properties/transcriptId")                     |
 
 ## documentId
 
@@ -487,34 +488,6 @@ The location of the published document. Only applicable to documents which are p
 | `"nsip"` |             |
 | `"has"`  |             |
 
-## documentStatus
-
-
-
-`documentStatus`
-
-*   is optional
-
-*   Type: `string`
-
-*   cannot be null
-
-*   defined in: [NSIP Document](nsip-document-properties-documentstatus.md "nsip-document.schema.json#/properties/documentStatus")
-
-### documentStatus Type
-
-`string`
-
-### documentStatus Constraints
-
-**enum**: the value of this property must be equal to one of the following values:
-
-| Value         | Explanation |
-| :------------ | :---------- |
-| `"submitted"` |             |
-| `"internal"`  |             |
-| `"draft"`     |             |
-
 ## redactedStatus
 
 
@@ -798,11 +771,11 @@ The on behalf of or agent submitter of document
 "Attachments to the letter to Department for Business, Energy & Industrial Strategy"
 ```
 
-## stage
+## documentCaseStage
 
 
 
-`stage`
+`documentCaseStage`
 
 *   is optional
 
@@ -810,13 +783,13 @@ The on behalf of or agent submitter of document
 
 *   cannot be null
 
-*   defined in: [NSIP Document](nsip-document-properties-stage.md "nsip-document.schema.json#/properties/stage")
+*   defined in: [NSIP Document](nsip-document-properties-documentcasestage.md "nsip-document.schema.json#/properties/documentCaseStage")
 
-### stage Type
+### documentCaseStage Type
 
 `string`
 
-### stage Constraints
+### documentCaseStage Constraints
 
 **enum**: the value of this property must be equal to one of the following values:
 
@@ -880,3 +853,39 @@ Filter field to provide additional filtering
 ```json
 "Scoping Option Report"
 ```
+
+## horizonFolderId
+
+The folder where the document exists
+
+`horizonFolderId`
+
+*   is optional
+
+*   Type: `string`
+
+*   cannot be null
+
+*   defined in: [NSIP Document](nsip-document-properties-horizonfolderid.md "nsip-document.schema.json#/properties/horizonFolderId")
+
+### horizonFolderId Type
+
+`string`
+
+## transcriptId
+
+The GUID of the transcript document (if one was provided).
+
+`transcriptId`
+
+*   is optional
+
+*   Type: `string`
+
+*   cannot be null
+
+*   defined in: [NSIP Document](nsip-document-properties-transcriptid.md "nsip-document.schema.json#/properties/transcriptId")
+
+### transcriptId Type
+
+`string`

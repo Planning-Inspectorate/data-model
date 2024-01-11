@@ -11,6 +11,8 @@ export interface Employee {
   lastName: string;
 }
 
+export interface CaseSchedule {}
+
 /**
  * Folders can have optional parents. All folders belong to a Case.
  */
@@ -36,8 +38,6 @@ export interface Folder {
    */
   parentFolderId?: number;
 }
-
-export interface CaseSchedule {}
 
 export interface NSIPDocument {
   /**
@@ -79,7 +79,6 @@ export interface NSIPDocument {
   dateCreated: string;
   lastModified?: string;
   caseType?: 'nsip' | 'has';
-  documentStatus?: 'submitted' | 'internal' | 'draft';
   redactedStatus?: 'not_redacted' | 'redacted';
   publishedStatus?:
     | 'not_checked'
@@ -104,7 +103,7 @@ export interface NSIPDocument {
    */
   representative?: string;
   description?: string;
-  stage?:
+  documentCaseStage?:
     | 'draft'
     | 'pre-application'
     | 'acceptance'
@@ -123,40 +122,14 @@ export interface NSIPDocument {
    * Filter field to provide additional filtering
    */
   filter2?: string;
-}
-
-/**
- * NSIP Project Update (formerly known as Banners)
- */
-export interface NSIPProjectUpdate {
   /**
-   * The unique identifier within the Back Office.
+   * The folder where the document exists
    */
-  id: number;
+  horizonFolderId?: string;
   /**
-   * the case reference this update relates to
+   * The GUID of the transcript document (if one was provided).
    */
-  caseReference: string;
-  /**
-   * The date the update was published
-   */
-  updateDate?: string;
-  /**
-   * Internal title or name of the update
-   */
-  updateName?: string;
-  /**
-   * HTML content of the update in English. Can only include `<a> <b> <ul> <li>` tags.
-   */
-  updateContentEnglish: string;
-  /**
-   * HTML content of the update in Welsh. Can only include `<a> <b> <ul> <li>` tags.
-   */
-  updateContentWelsh?: string;
-  /**
-   * The current status of this update
-   */
-  updateStatus: 'draft' | 'ready-to-publish' | 'published' | 'ready-to-unpublish' | 'unpublished' | 'archived';
+  transcriptId?: string;
 }
 
 /**
@@ -209,41 +182,38 @@ export interface LineItem {
   description: string;
 }
 
-export interface Representation {
-  representationId: number;
-  referenceId?: string;
-  examinationLibraryRef?: string;
-  caseRef: string;
+/**
+ * NSIP Project Update (formerly known as Banners)
+ */
+export interface NSIPProjectUpdate {
   /**
-   * The unique identifier within the Back Office. This is not the same as the case reference
+   * The unique identifier within the Back Office.
    */
-  caseId?: number;
-  status?: 'awaiting_review' | 'referred' | 'valid' | 'invalid' | 'published' | 'archived';
-  originalRepresentation: string;
-  redacted?: boolean;
-  redactedRepresentation?: string;
-  redactedBy?: string;
-  redactedNotes?: string;
-  representationFrom?: 'PERSON' | 'ORGANISATION' | 'AGENT';
+  id: number;
   /**
-   * ServiceUser Id of the person or organisation being represented
+   * the case reference this update relates to
    */
-  representedId: string;
+  caseReference: string;
   /**
-   * ServiceUser Id of the person or organisation submitting representation in the case of Agent representationFrom
+   * The date the update was published
    */
-  representativeId?: string;
-  registerFor?: 'PERSON' | 'ORGANISATION' | 'FAMILY_GROUP';
-  representationType?:
-    | 'Local Authorities'
-    | 'Parish Councils'
-    | 'Members of the Public/Businesses'
-    | 'Public & Businesses'
-    | 'Statutory Consultees'
-    | 'Non-Statutory Organisations'
-    | 'Another Individual';
-  dateReceived: string;
-  attachmentIds?: string[];
+  updateDate?: string;
+  /**
+   * Internal title or name of the update
+   */
+  updateName?: string;
+  /**
+   * HTML content of the update in English. Can only include `<a> <b> <ul> <li>` tags.
+   */
+  updateContentEnglish: string;
+  /**
+   * HTML content of the update in Welsh. Can only include `<a> <b> <ul> <li>` tags.
+   */
+  updateContentWelsh?: string;
+  /**
+   * The current status of this update
+   */
+  updateStatus: 'draft' | 'ready-to-publish' | 'published' | 'ready-to-unpublish' | 'unpublished' | 'archived';
 }
 
 /**
@@ -532,6 +502,43 @@ export interface NSIPProject {
   applicantId?: string;
 }
 
+export interface Representation {
+  representationId: number;
+  referenceId?: string;
+  examinationLibraryRef?: string;
+  caseRef: string;
+  /**
+   * The unique identifier within the Back Office. This is not the same as the case reference
+   */
+  caseId?: number;
+  status?: 'awaiting_review' | 'referred' | 'valid' | 'invalid' | 'published' | 'archived';
+  originalRepresentation: string;
+  redacted?: boolean;
+  redactedRepresentation?: string;
+  redactedBy?: string;
+  redactedNotes?: string;
+  representationFrom?: 'PERSON' | 'ORGANISATION' | 'AGENT';
+  /**
+   * ServiceUser Id of the person or organisation being represented
+   */
+  representedId: string;
+  /**
+   * ServiceUser Id of the person or organisation submitting representation in the case of Agent representationFrom
+   */
+  representativeId?: string;
+  registerFor?: 'PERSON' | 'ORGANISATION' | 'FAMILY_GROUP';
+  representationType?:
+    | 'Local Authorities'
+    | 'Parish Councils'
+    | 'Members of the Public/Businesses'
+    | 'Public & Businesses'
+    | 'Statutory Consultees'
+    | 'Non-Statutory Organisations'
+    | 'Another Individual';
+  dateReceived: string;
+  attachmentIds?: string[];
+}
+
 /**
  * Subscribers are a subset of Service Users, part of the PINS Data Model
  */
@@ -558,6 +565,52 @@ export interface NsipSubscription {
    */
   endDate?: string;
   language?: 'English' | 'Welsh';
+}
+
+export interface S51Advice {
+  adviceId: number;
+  adviceReference: string;
+  caseId?: number;
+  caseReference?: string;
+  /**
+   * Title of the advice
+   */
+  title: string;
+  /**
+   * Who the enquiry is from
+   */
+  from: string;
+  /**
+   * Who the enquiry is on behalf of
+   */
+  agent: string;
+  /**
+   * How the enquiry was made
+   */
+  method: 'phone' | 'email' | 'meeting' | 'post';
+  /**
+   * Date the enquiry was made
+   */
+  enquiryDate?: string;
+  /**
+   * Details of the enquiry
+   */
+  enquiryDetails?: string;
+  /**
+   * Who issued the advice
+   */
+  adviceGivenBy?: string;
+  /**
+   * Date the advice was given
+   */
+  adviceDate?: string;
+  /**
+   * Details of the advice
+   */
+  adviceDetails?: string;
+  status?: 'checked' | 'unchecked' | 'readytopublish' | 'published' | 'donotpublish';
+  redactionStatus?: 'unredacted' | 'redacted';
+  attachmentIds?: string[];
 }
 
 /**
@@ -654,50 +707,30 @@ export interface ServiceUser {
   sourceSuid: string;
 }
 
-export interface S51Advice {
-  adviceId: number;
-  adviceReference: string;
-  caseId?: number;
-  caseReference?: string;
-  /**
-   * Title of the advice
-   */
-  title: string;
-  /**
-   * Who the enquiry is from
-   */
-  from: string;
-  /**
-   * Who the enquiry is on behalf of
-   */
-  agent: string;
-  /**
-   * How the enquiry was made
-   */
-  method: 'phone' | 'email' | 'meeting' | 'post';
-  /**
-   * Date the enquiry was made
-   */
-  enquiryDate?: string;
-  /**
-   * Details of the enquiry
-   */
-  enquiryDetails?: string;
-  /**
-   * Who issued the advice
-   */
-  adviceGivenBy?: string;
-  /**
-   * Date the advice was given
-   */
-  adviceDate?: string;
-  /**
-   * Details of the advice
-   */
-  adviceDetails?: string;
-  status?: 'checked' | 'unchecked' | 'readytopublish' | 'published' | 'donotpublish';
-  redactionStatus?: 'unredacted' | 'redacted';
-  attachmentIds?: string[];
+export type Name = string;
+
+/**
+ * Subset of Pins Data Model [Service User]
+ */
+export interface InterestedParty {
+  id?: number;
+  interestedPartyNumber?: string;
+  firstName?: string;
+  lastName?: string;
+  under18?: boolean;
+  organisationName?: Name;
+  jobTitle?: string;
+  contactMethod?: 'email' | 'post';
+  email?: string;
+  phoneNumber?: string;
+  address?: Address;
+}
+export interface Address {
+  addressLine1: string;
+  addressLine2?: string;
+  town: string;
+  postcode: string;
+  country?: string;
 }
 
 /**
@@ -749,32 +782,6 @@ export interface NewDeadlineSubmission {
    * The file name of the document in blob storage
    */
   documentName: string;
-}
-
-export type Name = string;
-
-/**
- * Subset of Pins Data Model [Service User]
- */
-export interface InterestedParty {
-  id?: number;
-  interestedPartyNumber?: string;
-  firstName?: string;
-  lastName?: string;
-  under18?: boolean;
-  organisationName?: Name;
-  jobTitle?: string;
-  contactMethod?: 'email' | 'post';
-  email?: string;
-  phoneNumber?: string;
-  address?: Address;
-}
-export interface Address {
-  addressLine1: string;
-  addressLine2?: string;
-  town: string;
-  postcode: string;
-  country?: string;
 }
 
 /**

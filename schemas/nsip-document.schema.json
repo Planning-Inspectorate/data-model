@@ -159,7 +159,7 @@
 				"Attachments to the letter to Department for Business, Energy & Industrial Strategy"
 			]
 		},
-		"stage": {
+		"documentCaseStage": {
 			"type": "string",
 			"enum": [
 				"draft",

@@ -5,13 +5,39 @@
  * and run json-schema-to-typescript to regenerate this file.
  */
 
-export interface CaseSchedule {}
-
 export interface Employee {
   id: string;
   firstName: string;
   lastName: string;
 }
+
+/**
+ * Folders can have optional parents. All folders belong to a Case.
+ */
+export interface Folder {
+  /**
+   * The unique identifier within the Back Office.
+   */
+  id: number;
+  /**
+   * The case reference this folder belongs to.
+   */
+  caseReference: string;
+  /**
+   * Folder display name in English.
+   */
+  displayNameEnglish: string;
+  /**
+   * Folder display name in Welsh.
+   */
+  displayNameWelsh?: string;
+  /**
+   * Optional parent folder ID.
+   */
+  parentFolderId?: number;
+}
+
+export interface CaseSchedule {}
 
 export interface NSIPDocument {
   /**
@@ -100,6 +126,40 @@ export interface NSIPDocument {
 }
 
 /**
+ * NSIP Project Update (formerly known as Banners)
+ */
+export interface NSIPProjectUpdate {
+  /**
+   * The unique identifier within the Back Office.
+   */
+  id: number;
+  /**
+   * the case reference this update relates to
+   */
+  caseReference: string;
+  /**
+   * The date the update was published
+   */
+  updateDate?: string;
+  /**
+   * Internal title or name of the update
+   */
+  updateName?: string;
+  /**
+   * HTML content of the update in English. Can only include `<a> <b> <ul> <li>` tags.
+   */
+  updateContentEnglish: string;
+  /**
+   * HTML content of the update in Welsh. Can only include `<a> <b> <ul> <li>` tags.
+   */
+  updateContentWelsh?: string;
+  /**
+   * The current status of this update
+   */
+  updateStatus: 'draft' | 'ready-to-publish' | 'published' | 'ready-to-unpublish' | 'unpublished' | 'archived';
+}
+
+/**
  * Examination Timetable for an NSIP Project
  */
 export interface ExaminationTimetable {
@@ -149,38 +209,41 @@ export interface LineItem {
   description: string;
 }
 
-/**
- * NSIP Project Update (formerly known as Banners)
- */
-export interface NSIPProjectUpdate {
+export interface Representation {
+  representationId: number;
+  referenceId?: string;
+  examinationLibraryRef?: string;
+  caseRef: string;
   /**
-   * The unique identifier within the Back Office.
+   * The unique identifier within the Back Office. This is not the same as the case reference
    */
-  id: number;
+  caseId?: number;
+  status?: 'awaiting_review' | 'referred' | 'valid' | 'invalid' | 'published' | 'archived';
+  originalRepresentation: string;
+  redacted?: boolean;
+  redactedRepresentation?: string;
+  redactedBy?: string;
+  redactedNotes?: string;
+  representationFrom?: 'PERSON' | 'ORGANISATION' | 'AGENT';
   /**
-   * the case reference this update relates to
+   * ServiceUser Id of the person or organisation being represented
    */
-  caseReference: string;
+  representedId: string;
   /**
-   * The date the update was published
+   * ServiceUser Id of the person or organisation submitting representation in the case of Agent representationFrom
    */
-  updateDate?: string;
-  /**
-   * Internal title or name of the update
-   */
-  updateName?: string;
-  /**
-   * HTML content of the update in English. Can only include `<a> <b> <ul> <li>` tags.
-   */
-  updateContentEnglish: string;
-  /**
-   * HTML content of the update in Welsh. Can only include `<a> <b> <ul> <li>` tags.
-   */
-  updateContentWelsh?: string;
-  /**
-   * The current status of this update
-   */
-  updateStatus: 'draft' | 'ready-to-publish' | 'published' | 'ready-to-unpublish' | 'unpublished' | 'archived';
+  representativeId?: string;
+  registerFor?: 'PERSON' | 'ORGANISATION' | 'FAMILY_GROUP';
+  representationType?:
+    | 'Local Authorities'
+    | 'Parish Councils'
+    | 'Members of the Public/Businesses'
+    | 'Public & Businesses'
+    | 'Statutory Consultees'
+    | 'Non-Statutory Organisations'
+    | 'Another Individual';
+  dateReceived: string;
+  attachmentIds?: string[];
 }
 
 /**
@@ -469,89 +532,6 @@ export interface NSIPProject {
   applicantId?: string;
 }
 
-export interface Representation {
-  representationId: number;
-  referenceId?: string;
-  examinationLibraryRef?: string;
-  caseRef: string;
-  /**
-   * The unique identifier within the Back Office. This is not the same as the case reference
-   */
-  caseId?: number;
-  status?: 'awaiting_review' | 'referred' | 'valid' | 'invalid' | 'published' | 'archived';
-  originalRepresentation: string;
-  redacted?: boolean;
-  redactedRepresentation?: string;
-  redactedBy?: string;
-  redactedNotes?: string;
-  representationFrom?: 'PERSON' | 'ORGANISATION' | 'AGENT';
-  /**
-   * ServiceUser Id of the person or organisation being represented
-   */
-  representedId: string;
-  /**
-   * ServiceUser Id of the person or organisation submitting representation in the case of Agent representationFrom
-   */
-  representativeId?: string;
-  registerFor?: 'PERSON' | 'ORGANISATION' | 'FAMILY_GROUP';
-  representationType?:
-    | 'Local Authorities'
-    | 'Parish Councils'
-    | 'Members of the Public/Businesses'
-    | 'Public & Businesses'
-    | 'Statutory Consultees'
-    | 'Non-Statutory Organisations'
-    | 'Another Individual';
-  dateReceived: string;
-  attachmentIds?: string[];
-}
-
-export interface S51Advice {
-  adviceId: number;
-  adviceReference: string;
-  caseId?: number;
-  caseReference?: string;
-  /**
-   * Title of the advice
-   */
-  title: string;
-  /**
-   * Who the enquiry is from
-   */
-  from: string;
-  /**
-   * Who the enquiry is on behalf of
-   */
-  agent: string;
-  /**
-   * How the enquiry was made
-   */
-  method: 'phone' | 'email' | 'meeting' | 'post';
-  /**
-   * Date the enquiry was made
-   */
-  enquiryDate?: string;
-  /**
-   * Details of the enquiry
-   */
-  enquiryDetails?: string;
-  /**
-   * Who issued the advice
-   */
-  adviceGivenBy?: string;
-  /**
-   * Date the advice was given
-   */
-  adviceDate?: string;
-  /**
-   * Details of the advice
-   */
-  adviceDetails?: string;
-  status?: 'checked' | 'unchecked' | 'readytopublish' | 'published' | 'donotpublish';
-  redactionStatus?: 'unredacted' | 'redacted';
-  attachmentIds?: string[];
-}
-
 /**
  * Subscribers are a subset of Service Users, part of the PINS Data Model
  */
@@ -674,30 +654,50 @@ export interface ServiceUser {
   sourceSuid: string;
 }
 
-export type Name = string;
-
-/**
- * Subset of Pins Data Model [Service User]
- */
-export interface InterestedParty {
-  id?: number;
-  interestedPartyNumber?: string;
-  firstName?: string;
-  lastName?: string;
-  under18?: boolean;
-  organisationName?: Name;
-  jobTitle?: string;
-  contactMethod?: 'email' | 'post';
-  email?: string;
-  phoneNumber?: string;
-  address?: Address;
-}
-export interface Address {
-  addressLine1: string;
-  addressLine2?: string;
-  town: string;
-  postcode: string;
-  country?: string;
+export interface S51Advice {
+  adviceId: number;
+  adviceReference: string;
+  caseId?: number;
+  caseReference?: string;
+  /**
+   * Title of the advice
+   */
+  title: string;
+  /**
+   * Who the enquiry is from
+   */
+  from: string;
+  /**
+   * Who the enquiry is on behalf of
+   */
+  agent: string;
+  /**
+   * How the enquiry was made
+   */
+  method: 'phone' | 'email' | 'meeting' | 'post';
+  /**
+   * Date the enquiry was made
+   */
+  enquiryDate?: string;
+  /**
+   * Details of the enquiry
+   */
+  enquiryDetails?: string;
+  /**
+   * Who issued the advice
+   */
+  adviceGivenBy?: string;
+  /**
+   * Date the advice was given
+   */
+  adviceDate?: string;
+  /**
+   * Details of the advice
+   */
+  adviceDetails?: string;
+  status?: 'checked' | 'unchecked' | 'readytopublish' | 'published' | 'donotpublish';
+  redactionStatus?: 'unredacted' | 'redacted';
+  attachmentIds?: string[];
 }
 
 /**
@@ -749,6 +749,32 @@ export interface NewDeadlineSubmission {
    * The file name of the document in blob storage
    */
   documentName: string;
+}
+
+export type Name = string;
+
+/**
+ * Subset of Pins Data Model [Service User]
+ */
+export interface InterestedParty {
+  id?: number;
+  interestedPartyNumber?: string;
+  firstName?: string;
+  lastName?: string;
+  under18?: boolean;
+  organisationName?: Name;
+  jobTitle?: string;
+  contactMethod?: 'email' | 'post';
+  email?: string;
+  phoneNumber?: string;
+  address?: Address;
+}
+export interface Address {
+  addressLine1: string;
+  addressLine2?: string;
+  town: string;
+  postcode: string;
+  country?: string;
 }
 
 /**

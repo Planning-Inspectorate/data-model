@@ -5,6 +5,12 @@
  * and run json-schema-to-typescript to regenerate this file.
  */
 
+export interface Employee {
+  id: string;
+  firstName: string;
+  lastName: string;
+}
+
 /**
  * Folders can have optional parents. All folders belong to a Case.
  */
@@ -14,27 +20,143 @@ export interface Folder {
    */
   id: number;
   /**
-   * the case reference this update relates to
+   * The case reference this folder belongs to.
    */
   caseReference: string;
   /**
-   * the case reference this update relates to
+   * Folder display name in English.
    */
   displayNameEnglish: string;
   /**
-   * Internal title or name of the update
+   * Folder display name in Welsh.
    */
   displayNameWelsh?: string;
   /**
-   * Optional parent folder ID
+   * Optional parent folder ID.
    */
   parentFolderId?: number;
 }
 
-export interface Employee {
-  id: string;
-  firstName: string;
-  lastName: string;
+export interface CaseSchedule {}
+
+export interface NSIPDocument {
+  /**
+   * The unique identifier for the file. This will be different to documentReference
+   */
+  documentId: string;
+  /**
+   * Internal case identifier
+   */
+  caseId?: number;
+  caseRef?: string;
+  /**
+   * Reference used throughout ODT <CaseRef>-<SequenceNo>
+   */
+  documentReference?: string;
+  version: number;
+  examinationRefNo?: string;
+  /**
+   * Current stored filename of the file
+   */
+  filename: string;
+  /**
+   * Original filename of file
+   */
+  originalFilename: string;
+  size: number;
+  mime?: string;
+  /**
+   * The internal location of the document
+   */
+  documentURI: string;
+  /**
+   * The location of the published document. Only applicable to documents which are published.
+   */
+  publishedDocumentURI?: string;
+  path?: string;
+  virusCheckStatus?: 'not_scanned' | 'scanned' | 'affected';
+  fileMD5?: string;
+  dateCreated: string;
+  lastModified?: string;
+  caseType?: 'nsip' | 'has';
+  documentStatus?: 'submitted' | 'internal' | 'draft';
+  redactedStatus?: 'not_redacted' | 'redacted';
+  publishedStatus?:
+    | 'not_checked'
+    | 'checked'
+    | 'ready_to_publish'
+    | 'do_not_publish'
+    | 'publishing'
+    | 'published'
+    | 'archived';
+  datePublished?: string;
+  documentType?: string;
+  securityClassification?: 'public' | 'official' | 'secret' | 'top-secret';
+  sourceSystem?: 'back-office-appeals' | 'back-office-applications' | 'horizon' | 'ni_file' | 'sharepoint';
+  origin?: 'pins' | 'citizen' | 'lpa' | 'ogd';
+  owner?: string;
+  /**
+   * Name of person who authored document
+   */
+  author?: string;
+  /**
+   * The on behalf of or agent submitter of document
+   */
+  representative?: string;
+  description?: string;
+  stage?:
+    | 'draft'
+    | 'pre-application'
+    | 'acceptance'
+    | 'pre-examination'
+    | 'examination'
+    | 'recommendation'
+    | 'decision'
+    | 'post_decision'
+    | 'withdrawn'
+    | 'developers_application';
+  /**
+   * Filter field to provide additional filtering
+   */
+  filter1?: string;
+  /**
+   * Filter field to provide additional filtering
+   */
+  filter2?: string;
+}
+
+/**
+ * NSIP Project Update (formerly known as Banners)
+ */
+export interface NSIPProjectUpdate {
+  /**
+   * The unique identifier within the Back Office.
+   */
+  id: number;
+  /**
+   * the case reference this update relates to
+   */
+  caseReference: string;
+  /**
+   * The date the update was published
+   */
+  updateDate?: string;
+  /**
+   * Internal title or name of the update
+   */
+  updateName?: string;
+  /**
+   * HTML content of the update in English. Can only include `<a> <b> <ul> <li>` tags.
+   */
+  updateContentEnglish: string;
+  /**
+   * HTML content of the update in Welsh. Can only include `<a> <b> <ul> <li>` tags.
+   */
+  updateContentWelsh?: string;
+  /**
+   * The current status of this update
+   */
+  updateStatus: 'draft' | 'ready-to-publish' | 'published' | 'ready-to-unpublish' | 'unpublished' | 'archived';
 }
 
 /**
@@ -86,8 +208,6 @@ export interface Event {
 export interface LineItem {
   description: string;
 }
-
-export interface CaseSchedule {}
 
 export interface Representation {
   representationId: number;
@@ -412,126 +532,6 @@ export interface NSIPProject {
   applicantId?: string;
 }
 
-export interface NSIPDocument {
-  /**
-   * The unique identifier for the file. This will be different to documentReference
-   */
-  documentId: string;
-  /**
-   * Internal case identifier
-   */
-  caseId?: number;
-  caseRef?: string;
-  /**
-   * Reference used throughout ODT <CaseRef>-<SequenceNo>
-   */
-  documentReference?: string;
-  version: number;
-  examinationRefNo?: string;
-  /**
-   * Current stored filename of the file
-   */
-  filename: string;
-  /**
-   * Original filename of file
-   */
-  originalFilename: string;
-  size: number;
-  mime?: string;
-  /**
-   * The internal location of the document
-   */
-  documentURI: string;
-  /**
-   * The location of the published document. Only applicable to documents which are published.
-   */
-  publishedDocumentURI?: string;
-  path?: string;
-  virusCheckStatus?: 'not_scanned' | 'scanned' | 'affected';
-  fileMD5?: string;
-  dateCreated: string;
-  lastModified?: string;
-  caseType?: 'nsip' | 'has';
-  documentStatus?: 'submitted' | 'internal' | 'draft';
-  redactedStatus?: 'not_redacted' | 'redacted';
-  publishedStatus?:
-    | 'not_checked'
-    | 'checked'
-    | 'ready_to_publish'
-    | 'do_not_publish'
-    | 'publishing'
-    | 'published'
-    | 'archived';
-  datePublished?: string;
-  documentType?: string;
-  securityClassification?: 'public' | 'official' | 'secret' | 'top-secret';
-  sourceSystem?: 'back-office-appeals' | 'back-office-applications' | 'horizon' | 'ni_file' | 'sharepoint';
-  origin?: 'pins' | 'citizen' | 'lpa' | 'ogd';
-  owner?: string;
-  /**
-   * Name of person who authored document
-   */
-  author?: string;
-  /**
-   * The on behalf of or agent submitter of document
-   */
-  representative?: string;
-  description?: string;
-  stage?:
-    | 'draft'
-    | 'pre-application'
-    | 'acceptance'
-    | 'pre-examination'
-    | 'examination'
-    | 'recommendation'
-    | 'decision'
-    | 'post_decision'
-    | 'withdrawn'
-    | 'developers_application';
-  /**
-   * Filter field to provide additional filtering
-   */
-  filter1?: string;
-  /**
-   * Filter field to provide additional filtering
-   */
-  filter2?: string;
-}
-
-/**
- * NSIP Project Update (formerly known as Banners)
- */
-export interface NSIPProjectUpdate {
-  /**
-   * The unique identifier within the Back Office.
-   */
-  id: number;
-  /**
-   * the case reference this update relates to
-   */
-  caseReference: string;
-  /**
-   * The date the update was published
-   */
-  updateDate?: string;
-  /**
-   * Internal title or name of the update
-   */
-  updateName?: string;
-  /**
-   * HTML content of the update in English. Can only include `<a> <b> <ul> <li>` tags.
-   */
-  updateContentEnglish: string;
-  /**
-   * HTML content of the update in Welsh. Can only include `<a> <b> <ul> <li>` tags.
-   */
-  updateContentWelsh?: string;
-  /**
-   * The current status of this update
-   */
-  updateStatus: 'draft' | 'ready-to-publish' | 'published' | 'ready-to-unpublish' | 'unpublished' | 'archived';
-}
-
 /**
  * Subscribers are a subset of Service Users, part of the PINS Data Model
  */
@@ -558,52 +558,6 @@ export interface NsipSubscription {
    */
   endDate?: string;
   language?: 'English' | 'Welsh';
-}
-
-export interface S51Advice {
-  adviceId: number;
-  adviceReference: string;
-  caseId?: number;
-  caseReference?: string;
-  /**
-   * Title of the advice
-   */
-  title: string;
-  /**
-   * Who the enquiry is from
-   */
-  from: string;
-  /**
-   * Who the enquiry is on behalf of
-   */
-  agent: string;
-  /**
-   * How the enquiry was made
-   */
-  method: 'phone' | 'email' | 'meeting' | 'post';
-  /**
-   * Date the enquiry was made
-   */
-  enquiryDate?: string;
-  /**
-   * Details of the enquiry
-   */
-  enquiryDetails?: string;
-  /**
-   * Who issued the advice
-   */
-  adviceGivenBy?: string;
-  /**
-   * Date the advice was given
-   */
-  adviceDate?: string;
-  /**
-   * Details of the advice
-   */
-  adviceDetails?: string;
-  status?: 'checked' | 'unchecked' | 'readytopublish' | 'published' | 'donotpublish';
-  redactionStatus?: 'unredacted' | 'redacted';
-  attachmentIds?: string[];
 }
 
 /**
@@ -700,30 +654,50 @@ export interface ServiceUser {
   sourceSuid: string;
 }
 
-export type Name = string;
-
-/**
- * Subset of Pins Data Model [Service User]
- */
-export interface InterestedParty {
-  id?: number;
-  interestedPartyNumber?: string;
-  firstName?: string;
-  lastName?: string;
-  under18?: boolean;
-  organisationName?: Name;
-  jobTitle?: string;
-  contactMethod?: 'email' | 'post';
-  email?: string;
-  phoneNumber?: string;
-  address?: Address;
-}
-export interface Address {
-  addressLine1: string;
-  addressLine2?: string;
-  town: string;
-  postcode: string;
-  country?: string;
+export interface S51Advice {
+  adviceId: number;
+  adviceReference: string;
+  caseId?: number;
+  caseReference?: string;
+  /**
+   * Title of the advice
+   */
+  title: string;
+  /**
+   * Who the enquiry is from
+   */
+  from: string;
+  /**
+   * Who the enquiry is on behalf of
+   */
+  agent: string;
+  /**
+   * How the enquiry was made
+   */
+  method: 'phone' | 'email' | 'meeting' | 'post';
+  /**
+   * Date the enquiry was made
+   */
+  enquiryDate?: string;
+  /**
+   * Details of the enquiry
+   */
+  enquiryDetails?: string;
+  /**
+   * Who issued the advice
+   */
+  adviceGivenBy?: string;
+  /**
+   * Date the advice was given
+   */
+  adviceDate?: string;
+  /**
+   * Details of the advice
+   */
+  adviceDetails?: string;
+  status?: 'checked' | 'unchecked' | 'readytopublish' | 'published' | 'donotpublish';
+  redactionStatus?: 'unredacted' | 'redacted';
+  attachmentIds?: string[];
 }
 
 /**
@@ -777,6 +751,43 @@ export interface NewDeadlineSubmission {
   documentName: string;
 }
 
+export type Name = string;
+
+/**
+ * Subset of Pins Data Model [Service User]
+ */
+export interface InterestedParty {
+  id?: number;
+  interestedPartyNumber?: string;
+  firstName?: string;
+  lastName?: string;
+  under18?: boolean;
+  organisationName?: Name;
+  jobTitle?: string;
+  contactMethod?: 'email' | 'post';
+  email?: string;
+  phoneNumber?: string;
+  address?: Address;
+}
+export interface Address {
+  addressLine1: string;
+  addressLine2?: string;
+  town: string;
+  postcode: string;
+  country?: string;
+}
+
+/**
+ * Result of processing a new exam timetable submission
+ */
+export interface NsipExamTimetableSubmission {
+  status: 'SUCCESS' | 'VIRUS_DETECTED' | 'FAILURE';
+  deadline: string;
+  submissionType: string;
+  blobGuid: string;
+  documentName: string;
+}
+
 /**
  * A command to register an NSIP subscription with the back office
  */
@@ -819,17 +830,6 @@ export interface NsipSubscription {
    */
   endDate?: string;
   language?: 'English' | 'Welsh';
-}
-
-/**
- * Result of processing a new exam timetable submission
- */
-export interface NsipExamTimetableSubmission {
-  status: 'SUCCESS' | 'VIRUS_DETECTED' | 'FAILURE';
-  deadline: string;
-  submissionType: string;
-  blobGuid: string;
-  documentName: string;
 }
 
 export type Name = string;

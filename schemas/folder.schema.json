@@ -12,19 +12,19 @@
     },
     "caseReference": {
       "type": "string",
-      "description": "the case reference this update relates to"
+      "description": "The case reference this folder belongs to."
     },
     "displayNameEnglish": {
       "type": "string",
-      "description": "the case reference this update relates to"
+      "description": "Folder display name in English."
     },
     "displayNameWelsh": {
       "type": "string",
-      "description": "Internal title or name of the update"
+      "description": "Folder display name in Welsh."
     },
     "parentFolderId": {
       "type": "integer",
-      "description": "Optional parent folder ID"
+      "description": "Optional parent folder ID."
     }
   }
 }

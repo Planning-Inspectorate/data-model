@@ -32,7 +32,7 @@ The unique identifier within the Back Office.
 
 ## caseReference
 
-the case reference this update relates to
+The case reference this folder belongs to.
 
 `caseReference`
 
@@ -50,7 +50,7 @@ the case reference this update relates to
 
 ## displayNameEnglish
 
-the case reference this update relates to
+Folder display name in English.
 
 `displayNameEnglish`
 
@@ -68,7 +68,7 @@ the case reference this update relates to
 
 ## displayNameWelsh
 
-Internal title or name of the update
+Folder display name in Welsh.
 
 `displayNameWelsh`
 
@@ -86,7 +86,7 @@ Internal title or name of the update
 
 ## parentFolderId
 
-Optional parent folder ID
+Optional parent folder ID.
 
 `parentFolderId`
 

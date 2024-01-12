@@ -2,8 +2,6 @@
 
 ## Top-level Schemas
 
-*   [Case Schedule](./case-schedule.md) – `case-schedule.schema.json`
-
 *   [Employee](./employee.md) – `employee.schema.json`
 
 *   [Examination Timetable](./nsip-exam-timetable.md "Examination Timetable for an NSIP Project") – `nsip-exam-timetable.schema.json`

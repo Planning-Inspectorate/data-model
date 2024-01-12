@@ -6,7 +6,7 @@
 
 | Property                                                                                                | Type          | Required | Nullable       | Defined by                                                                                                                                                                            |
 | :------------------------------------------------------------------------------------------------------ | :------------ | :------- | :------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| [caseId](#caseid)                                                                                       | `number`      | Required | cannot be null | [NSIP Project](nsip-project-properties-caseid.md "nsip-project.schema.json#/properties/caseId")                                                                                       |
+| [caseId](#caseid)                                                                                       | `integer`     | Required | cannot be null | [NSIP Project](nsip-project-properties-caseid.md "nsip-project.schema.json#/properties/caseId")                                                                                       |
 | [caseReference](#casereference)                                                                         | `string`      | Optional | cannot be null | [NSIP Project](nsip-project-properties-casereference.md "nsip-project.schema.json#/properties/caseReference")                                                                         |
 | [projectName](#projectname)                                                                             | `string`      | Optional | cannot be null | [NSIP Project](nsip-project-properties-projectname.md "nsip-project.schema.json#/properties/projectName")                                                                             |
 | [projectDescription](#projectdescription)                                                               | `string`      | Optional | cannot be null | [NSIP Project](nsip-project-properties-projectdescription.md "nsip-project.schema.json#/properties/projectDescription")                                                               |
@@ -20,8 +20,8 @@
 | [projectEmailAddress](#projectemailaddress)                                                             | `string`      | Optional | cannot be null | [NSIP Project](nsip-project-properties-projectemailaddress.md "nsip-project.schema.json#/properties/projectEmailAddress")                                                             |
 | [regions](#regions)                                                                                     | `array`       | Optional | cannot be null | [NSIP Project](nsip-project-properties-regions.md "nsip-project.schema.json#/properties/regions")                                                                                     |
 | [transboundary](#transboundary)                                                                         | `boolean`     | Optional | cannot be null | [NSIP Project](nsip-project-properties-transboundary.md "nsip-project.schema.json#/properties/transboundary")                                                                         |
-| [easting](#easting)                                                                                     | `number`      | Optional | cannot be null | [NSIP Project](nsip-project-properties-easting.md "nsip-project.schema.json#/properties/easting")                                                                                     |
-| [northing](#northing)                                                                                   | `number`      | Optional | cannot be null | [NSIP Project](nsip-project-properties-northing.md "nsip-project.schema.json#/properties/northing")                                                                                   |
+| [easting](#easting)                                                                                     | `integer`     | Optional | cannot be null | [NSIP Project](nsip-project-properties-easting.md "nsip-project.schema.json#/properties/easting")                                                                                     |
+| [northing](#northing)                                                                                   | `integer`     | Optional | cannot be null | [NSIP Project](nsip-project-properties-northing.md "nsip-project.schema.json#/properties/northing")                                                                                   |
 | [welshLanguage](#welshlanguage)                                                                         | `boolean`     | Optional | cannot be null | [NSIP Project](nsip-project-properties-welshlanguage.md "nsip-project.schema.json#/properties/welshLanguage")                                                                         |
 | [mapZoomLevel](#mapzoomlevel)                                                                           | `string`      | Optional | cannot be null | [NSIP Project](nsip-project-properties-mapzoomlevel.md "nsip-project.schema.json#/properties/mapZoomLevel")                                                                           |
 | [secretaryOfState](#secretaryofstate)                                                                   | `string`      | Optional | cannot be null | [NSIP Project](nsip-project-properties-secretaryofstate.md "nsip-project.schema.json#/properties/secretaryOfState")                                                                   |
@@ -88,7 +88,7 @@ The unique identifier within the Back Office. This is not the same as the case r
 
 *   is required
 
-*   Type: `number`
+*   Type: `integer`
 
 *   cannot be null
 
@@ -96,7 +96,7 @@ The unique identifier within the Back Office. This is not the same as the case r
 
 ### caseId Type
 
-`number`
+`integer`
 
 ### caseId Examples
 
@@ -475,7 +475,7 @@ Project site Easting co-ordinate.
 
 *   is optional
 
-*   Type: `number`
+*   Type: `integer`
 
 *   cannot be null
 
@@ -483,7 +483,7 @@ Project site Easting co-ordinate.
 
 ### easting Type
 
-`number`
+`integer`
 
 ### easting Examples
 
@@ -499,7 +499,7 @@ Project site Northing co-ordinate.
 
 *   is optional
 
-*   Type: `number`
+*   Type: `integer`
 
 *   cannot be null
 
@@ -507,7 +507,7 @@ Project site Northing co-ordinate.
 
 ### northing Type
 
-`number`
+`integer`
 
 ### northing Examples
 
@@ -638,7 +638,7 @@ Date at which applicant notify PINS of a project (pre-publishing)
 ### datePINSFirstNotifiedOfProject Examples
 
 ```json
-"2023-03-26T00:00:00.000"
+"2023-07-27T20:30:00.000Z"
 ```
 
 ## dateProjectAppearsOnWebsite
@@ -666,7 +666,7 @@ Date Project Appears On Website
 ### dateProjectAppearsOnWebsite Examples
 
 ```json
-"2023-03-26T00:00:00.000"
+"2023-07-27T20:30:00.000Z"
 ```
 
 ## anticipatedSubmissionDateNonSpecific
@@ -718,7 +718,7 @@ Anticipated Submission Date Of Application
 ### anticipatedDateOfSubmission Examples
 
 ```json
-"2023-03-26T00:00:00.000"
+"2023-07-27T20:30:00.000Z"
 ```
 
 ## screeningOpinionSought
@@ -746,7 +746,7 @@ Anticipated Submission Date Of Application
 ### screeningOpinionSought Examples
 
 ```json
-"2023-03-26T00:00:00.000"
+"2023-07-27T20:30:00.000Z"
 ```
 
 ## screeningOpinionIssued
@@ -774,7 +774,7 @@ Anticipated Submission Date Of Application
 ### screeningOpinionIssued Examples
 
 ```json
-"2023-03-26T00:00:00.000"
+"2023-07-27T20:30:00.000Z"
 ```
 
 ## scopingOpinionSought
@@ -802,7 +802,7 @@ Anticipated Submission Date Of Application
 ### scopingOpinionSought Examples
 
 ```json
-"2023-03-26T00:00:00.000"
+"2023-07-27T20:30:00.000Z"
 ```
 
 ## scopingOpinionIssued
@@ -830,7 +830,7 @@ Anticipated Submission Date Of Application
 ### scopingOpinionIssued Examples
 
 ```json
-"2023-03-26T00:00:00.000"
+"2023-07-27T20:30:00.000Z"
 ```
 
 ## section46Notification
@@ -858,7 +858,7 @@ Applicant must notify PINS of statutory consultation
 ### section46Notification Examples
 
 ```json
-"2023-03-26T00:00:00.000"
+"2023-07-27T20:30:00.000Z"
 ```
 
 ## \_acceptanceDates
@@ -904,7 +904,7 @@ Date Applcation is submitted
 ### dateOfDCOSubmission Examples
 
 ```json
-"2023-03-26T00:00:00.000"
+"2023-07-27T20:30:00.000Z"
 ```
 
 ## deadlineForAcceptanceDecision
@@ -932,7 +932,7 @@ DeadlineForAcceptanceDecision
 ### deadlineForAcceptanceDecision Examples
 
 ```json
-"2023-03-26T00:00:00.000"
+"2023-07-27T20:30:00.000Z"
 ```
 
 ## dateOfDCOAcceptance
@@ -960,7 +960,7 @@ Date Application is Formerly Accepted by PINS
 ### dateOfDCOAcceptance Examples
 
 ```json
-"2023-03-26T00:00:00.000"
+"2023-07-27T20:30:00.000Z"
 ```
 
 ## dateOfNonAcceptance
@@ -988,7 +988,7 @@ Date of Non Acceptance
 ### dateOfNonAcceptance Examples
 
 ```json
-"2023-03-26T00:00:00.000"
+"2023-07-27T20:30:00.000Z"
 ```
 
 ## \_preExaminationDates
@@ -1034,7 +1034,7 @@ Date at which point publish can submit relevant reps
 ### dateOfRepresentationPeriodOpen Examples
 
 ```json
-"2023-03-26T00:00:00.000"
+"2023-07-27T20:30:00.000Z"
 ```
 
 ## dateOfRelevantRepresentationClose
@@ -1062,7 +1062,7 @@ Date at which point publish can no longer submit relevant reps
 ### dateOfRelevantRepresentationClose Examples
 
 ```json
-"2023-03-26T00:00:00.000"
+"2023-07-27T20:30:00.000Z"
 ```
 
 ## extensionToDateRelevantRepresentationsClose
@@ -1090,7 +1090,7 @@ ExtensionToDateRelevantRepresentationsClose
 ### extensionToDateRelevantRepresentationsClose Examples
 
 ```json
-"2023-03-26T00:00:00.000"
+"2023-07-27T20:30:00.000Z"
 ```
 
 ## dateRRepAppearOnWebsite
@@ -1118,7 +1118,7 @@ Date at which relevant reps appear on the website
 ### dateRRepAppearOnWebsite Examples
 
 ```json
-"2023-03-26T00:00:00.000"
+"2023-07-27T20:30:00.000Z"
 ```
 
 ## dateIAPIDue
@@ -1146,7 +1146,7 @@ Date at which relevant reps appear on the website
 ### dateIAPIDue Examples
 
 ```json
-"2023-03-26T00:00:00.000"
+"2023-07-27T20:30:00.000Z"
 ```
 
 ## rule6LetterPublishDate
@@ -1174,7 +1174,7 @@ Date at which relevant reps appear on the website
 ### rule6LetterPublishDate Examples
 
 ```json
-"2023-03-26T00:00:00.000"
+"2023-07-27T20:30:00.000Z"
 ```
 
 ## preliminaryMeetingStartDate
@@ -1202,7 +1202,7 @@ Meeting between all parties inc public
 ### preliminaryMeetingStartDate Examples
 
 ```json
-"2023-03-26T00:00:00.000"
+"2023-07-27T20:30:00.000Z"
 ```
 
 ## notificationDateForPMAndEventsDirectlyFollowingPM
@@ -1230,7 +1230,7 @@ Meeting between all parties inc public
 ### notificationDateForPMAndEventsDirectlyFollowingPM Examples
 
 ```json
-"2023-03-26T00:00:00.000"
+"2023-07-27T20:30:00.000Z"
 ```
 
 ## notificationDateForEventsDeveloper
@@ -1258,7 +1258,7 @@ Meeting between all parties inc public
 ### notificationDateForEventsDeveloper Examples
 
 ```json
-"2023-03-26T00:00:00.000"
+"2023-07-27T20:30:00.000Z"
 ```
 
 ## \_examinationDates
@@ -1304,7 +1304,7 @@ Applicant has notified all parties of application
 ### dateSection58NoticeReceived Examples
 
 ```json
-"2023-03-26T00:00:00.000"
+"2023-07-27T20:30:00.000Z"
 ```
 
 ## confirmedStartOfExamination
@@ -1332,7 +1332,7 @@ ConfirmedStartOfExamination by panel
 ### confirmedStartOfExamination Examples
 
 ```json
-"2023-03-26T00:00:00.000"
+"2023-07-27T20:30:00.000Z"
 ```
 
 ## rule8LetterPublishDate
@@ -1360,7 +1360,7 @@ ConfirmedStartOfExamination by panel
 ### rule8LetterPublishDate Examples
 
 ```json
-"2023-03-26T00:00:00.000"
+"2023-07-27T20:30:00.000Z"
 ```
 
 ## deadlineForCloseOfExamination
@@ -1388,7 +1388,7 @@ DeadlineForCloseOfExamination
 ### deadlineForCloseOfExamination Examples
 
 ```json
-"2023-03-26T00:00:00.000"
+"2023-07-27T20:30:00.000Z"
 ```
 
 ## dateTimeExaminationEnds
@@ -1416,7 +1416,7 @@ ConfirmedSEndOfExamination by panel
 ### dateTimeExaminationEnds Examples
 
 ```json
-"2023-03-26T00:00:00.000"
+"2023-07-27T20:30:00.000Z"
 ```
 
 ## stage4ExtensionToExamCloseDate
@@ -1444,7 +1444,7 @@ Examination Period extended to this date
 ### stage4ExtensionToExamCloseDate Examples
 
 ```json
-"2023-03-26T00:00:00.000"
+"2023-07-27T20:30:00.000Z"
 ```
 
 ## \_recommendationDates
@@ -1490,7 +1490,7 @@ DeadlineForSubmissionOfRecommendation
 ### deadlineForSubmissionOfRecommendation Examples
 
 ```json
-"2023-03-26T00:00:00.000"
+"2023-07-27T20:30:00.000Z"
 ```
 
 ## dateOfRecommendations
@@ -1518,7 +1518,7 @@ Date recomm report sent to SoS
 ### dateOfRecommendations Examples
 
 ```json
-"2023-03-26T00:00:00.000"
+"2023-07-27T20:30:00.000Z"
 ```
 
 ## stage5ExtensionToRecommendationDeadline
@@ -1546,7 +1546,7 @@ Recommendation period extended to this date
 ### stage5ExtensionToRecommendationDeadline Examples
 
 ```json
-"2023-03-26T00:00:00.000"
+"2023-07-27T20:30:00.000Z"
 ```
 
 ## \_decisionDates
@@ -1592,7 +1592,7 @@ DeadlineForDecision
 ### deadlineForDecision Examples
 
 ```json
-"2023-03-26T00:00:00.000"
+"2023-07-27T20:30:00.000Z"
 ```
 
 ## confirmedDateOfDecision
@@ -1620,7 +1620,7 @@ Decision by SoS
 ### confirmedDateOfDecision Examples
 
 ```json
-"2023-03-26T00:00:00.000"
+"2023-07-27T20:30:00.000Z"
 ```
 
 ## stage5ExtensionToDecisionDeadline
@@ -1648,7 +1648,7 @@ Decision period extended to this date
 ### stage5ExtensionToDecisionDeadline Examples
 
 ```json
-"2023-03-26T00:00:00.000"
+"2023-07-27T20:30:00.000Z"
 ```
 
 ## \_postDecisionDates
@@ -1694,7 +1694,7 @@ Judicial Review
 ### jRPeriodEndDate Examples
 
 ```json
-"2023-03-26T00:00:00.000"
+"2023-07-27T20:30:00.000Z"
 ```
 
 ## \_withdrawalDates
@@ -1740,7 +1740,7 @@ DateProjectWithdrawn by applicant
 ### dateProjectWithdrawn Examples
 
 ```json
-"2023-03-26T00:00:00.000"
+"2023-07-27T20:30:00.000Z"
 ```
 
 ## operationsLeadId

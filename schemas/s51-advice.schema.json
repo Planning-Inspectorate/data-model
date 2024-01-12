@@ -6,7 +6,7 @@
 	"required": ["adviceId", "adviceReference", "title", "from", "agent", "method", "dateGiven"],
 	"properties": {
 		"adviceId": {
-			"type": "number",
+			"type": "integer",
 			"examples": [1234]
 		},
 		"adviceReference": {
@@ -14,7 +14,7 @@
 			"examples": ["TR0200007-0005"]
 		},
 		"caseId": {
-			"type": "number",
+			"type": "integer",
 			"examples": [1234]
 		},
 		"caseReference": {

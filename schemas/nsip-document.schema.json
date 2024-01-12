@@ -19,7 +19,7 @@
 			"description": "The unique identifier for the file. This will be different to documentReference"
 		},
 		"caseId": {
-			"type": "number",
+			"type": "integer",
 			"examples": [1],
 			"description": "Internal case identifier"
 		},
@@ -33,7 +33,7 @@
 			"description": "Reference used throughout ODT <CaseRef>-<SequenceNo>"
 		},
 		"version": {
-			"type": "number",
+			"type": "integer",
 			"examples": [1]
 		},
 		"examinationRefNo": {
@@ -51,7 +51,7 @@
 			"description": "Original filename of file"
 		},
 		"size": {
-			"type": "number",
+			"type": "integer",
 			"examples": [23452]
 		},
 		"mime": {

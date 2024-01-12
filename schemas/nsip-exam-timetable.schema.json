@@ -23,7 +23,7 @@
 			"required": ["title", "description", "type", "date"],
 			"properties": {
 				"eventId": {
-					"type": "number",
+					"type": "integer",
 					"description": "Event Identifier"
 				},
 				"type": {

@@ -7,7 +7,7 @@
 	"required": ["caseId", "sourceSystem"],
 	"properties": {
 		"caseId": {
-			"type": "number",
+			"type": "integer",
 			"examples": [1242],
 			"description": "The unique identifier within the Back Office. This is not the same as the case reference"
 		},
@@ -134,12 +134,12 @@
 			"examples": [true, false]
 		},
 		"easting": {
-			"type": "number",
+			"type": "integer",
 			"description": "Project site Easting co-ordinate.",
 			"examples": [345678]
 		},
 		"northing": {
-			"type": "number",
+			"type": "integer",
 			"description": "Project site Northing co-ordinate.",
 			"examples": [345678]
 		},
@@ -173,13 +173,13 @@
 			"type": "string",
 			"description": "Date at which applicant notify PINS of a project (pre-publishing)",
 			"format": "date-time",
-			"examples": ["2023-03-26T00:00:00.000"]
+			"examples": ["2023-07-27T20:30:00.000Z"]
 		},
 		"dateProjectAppearsOnWebsite": {
 			"type": "string",
 			"description": "Date Project Appears On Website",
 			"format": "date-time",
-			"examples": ["2023-03-26T00:00:00.000"]
+			"examples": ["2023-07-27T20:30:00.000Z"]
 		},
 		"anticipatedSubmissionDateNonSpecific": {
 			"type": "string",
@@ -190,37 +190,37 @@
 			"type": "string",
 			"description": "Anticipated Submission Date Of Application",
 			"format": "date-time",
-			"examples": ["2023-03-26T00:00:00.000"]
+			"examples": ["2023-07-27T20:30:00.000Z"]
 		},
 		"screeningOpinionSought": {
 			"type": "string",
 			"description": "(TBC by Env. Services Team)",
 			"format": "date-time",
-			"examples": ["2023-03-26T00:00:00.000"]
+			"examples": ["2023-07-27T20:30:00.000Z"]
 		},
 		"screeningOpinionIssued": {
 			"type": "string",
 			"description": "(TBC by Env. Services Team)",
 			"format": "date-time",
-			"examples": ["2023-03-26T00:00:00.000"]
+			"examples": ["2023-07-27T20:30:00.000Z"]
 		},
 		"scopingOpinionSought": {
 			"type": "string",
 			"description": "(TBC by Env. Services Team)",
 			"format": "date-time",
-			"examples": ["2023-03-26T00:00:00.000"]
+			"examples": ["2023-07-27T20:30:00.000Z"]
 		},
 		"scopingOpinionIssued": {
 			"type": "string",
 			"description": "(TBC by Env. Services Team)",
 			"format": "date-time",
-			"examples": ["2023-03-26T00:00:00.000"]
+			"examples": ["2023-07-27T20:30:00.000Z"]
 		},
 		"section46Notification": {
 			"type": "string",
 			"description": "Applicant must notify PINS of statutory consultation",
 			"format": "date-time",
-			"examples": ["2023-03-26T00:00:00.000"]
+			"examples": ["2023-07-27T20:30:00.000Z"]
 		},
 
 		"_acceptanceDates": {},
@@ -228,76 +228,76 @@
 			"type": "string",
 			"description": "Date Applcation is submitted",
 			"format": "date-time",
-			"examples": ["2023-03-26T00:00:00.000"]
+			"examples": ["2023-07-27T20:30:00.000Z"]
 		},
 		"deadlineForAcceptanceDecision": {
 			"type": "string",
 			"description": "DeadlineForAcceptanceDecision",
 			"format": "date-time",
-			"examples": ["2023-03-26T00:00:00.000"]
+			"examples": ["2023-07-27T20:30:00.000Z"]
 		},
 		"dateOfDCOAcceptance": {
 			"type": "string",
 			"description": "Date Application is Formerly Accepted by PINS",
 			"format": "date-time",
-			"examples": ["2023-03-26T00:00:00.000"]
+			"examples": ["2023-07-27T20:30:00.000Z"]
 		},
 		"dateOfNonAcceptance": {
 			"type": "string",
 			"description": "Date of Non Acceptance",
 			"format": "date-time",
-			"examples": ["2023-03-26T00:00:00.000"]
+			"examples": ["2023-07-27T20:30:00.000Z"]
 		},
 		"_preExaminationDates": {},
 		"dateOfRepresentationPeriodOpen": {
 			"type": "string",
 			"description": "Date at which point publish can submit relevant reps",
 			"format": "date-time",
-			"examples": ["2023-03-26T00:00:00.000"]
+			"examples": ["2023-07-27T20:30:00.000Z"]
 		},
 		"dateOfRelevantRepresentationClose": {
 			"type": "string",
 			"description": "Date at which point publish can no longer submit relevant reps",
 			"format": "date-time",
-			"examples": ["2023-03-26T00:00:00.000"]
+			"examples": ["2023-07-27T20:30:00.000Z"]
 		},
 		"extensionToDateRelevantRepresentationsClose": {
 			"type": "string",
 			"description": "ExtensionToDateRelevantRepresentationsClose",
 			"format": "date-time",
-			"examples": ["2023-03-26T00:00:00.000"]
+			"examples": ["2023-07-27T20:30:00.000Z"]
 		},
 		"dateRRepAppearOnWebsite": {
 			"type": "string",
 			"description": "Date at which relevant reps appear on the website",
 			"format": "date-time",
-			"examples": ["2023-03-26T00:00:00.000"]
+			"examples": ["2023-07-27T20:30:00.000Z"]
 		},
 		"dateIAPIDue": {
 			"type": "string",
 			"format": "date-time",
-			"examples": ["2023-03-26T00:00:00.000"]
+			"examples": ["2023-07-27T20:30:00.000Z"]
 		},
 		"rule6LetterPublishDate": {
 			"type": "string",
 			"format": "date-time",
-			"examples": ["2023-03-26T00:00:00.000"]
+			"examples": ["2023-07-27T20:30:00.000Z"]
 		},
 		"preliminaryMeetingStartDate": {
 			"type": "string",
 			"description": "Meeting between all parties inc public",
 			"format": "date-time",
-			"examples": ["2023-03-26T00:00:00.000"]
+			"examples": ["2023-07-27T20:30:00.000Z"]
 		},
 		"notificationDateForPMAndEventsDirectlyFollowingPM": {
 			"type": "string",
 			"format": "date-time",
-			"examples": ["2023-03-26T00:00:00.000"]
+			"examples": ["2023-07-27T20:30:00.000Z"]
 		},
 		"notificationDateForEventsDeveloper": {
 			"type": "string",
 			"format": "date-time",
-			"examples": ["2023-03-26T00:00:00.000"]
+			"examples": ["2023-07-27T20:30:00.000Z"]
 		},
 
 		"_examinationDates": {},
@@ -305,36 +305,36 @@
 			"type": "string",
 			"description": "Applicant has notified all parties of application",
 			"format": "date-time",
-			"examples": ["2023-03-26T00:00:00.000"]
+			"examples": ["2023-07-27T20:30:00.000Z"]
 		},
 		"confirmedStartOfExamination": {
 			"type": "string",
 			"description": "ConfirmedStartOfExamination by panel",
 			"format": "date-time",
-			"examples": ["2023-03-26T00:00:00.000"]
+			"examples": ["2023-07-27T20:30:00.000Z"]
 		},
 		"rule8LetterPublishDate": {
 			"type": "string",
 			"format": "date-time",
-			"examples": ["2023-03-26T00:00:00.000"]
+			"examples": ["2023-07-27T20:30:00.000Z"]
 		},
 		"deadlineForCloseOfExamination": {
 			"type": "string",
 			"description": "DeadlineForCloseOfExamination",
 			"format": "date-time",
-			"examples": ["2023-03-26T00:00:00.000"]
+			"examples": ["2023-07-27T20:30:00.000Z"]
 		},
 		"dateTimeExaminationEnds": {
 			"type": "string",
 			"description": "ConfirmedSEndOfExamination by panel",
 			"format": "date-time",
-			"examples": ["2023-03-26T00:00:00.000"]
+			"examples": ["2023-07-27T20:30:00.000Z"]
 		},
 		"stage4ExtensionToExamCloseDate": {
 			"type": "string",
 			"description": "Examination Period extended to this date",
 			"format": "date-time",
-			"examples": ["2023-03-26T00:00:00.000"]
+			"examples": ["2023-07-27T20:30:00.000Z"]
 		},
 
 		"_recommendationDates": {},
@@ -342,19 +342,19 @@
 			"type": "string",
 			"description": "DeadlineForSubmissionOfRecommendation",
 			"format": "date-time",
-			"examples": ["2023-03-26T00:00:00.000"]
+			"examples": ["2023-07-27T20:30:00.000Z"]
 		},
 		"dateOfRecommendations": {
 			"type": "string",
 			"description": "Date recomm report sent to SoS",
 			"format": "date-time",
-			"examples": ["2023-03-26T00:00:00.000"]
+			"examples": ["2023-07-27T20:30:00.000Z"]
 		},
 		"stage5ExtensionToRecommendationDeadline": {
 			"type": "string",
 			"description": "Recommendation period extended to this date",
 			"format": "date-time",
-			"examples": ["2023-03-26T00:00:00.000"]
+			"examples": ["2023-07-27T20:30:00.000Z"]
 		},
 
 		"_decisionDates": {},
@@ -362,19 +362,19 @@
 			"type": "string",
 			"description": "DeadlineForDecision",
 			"format": "date-time",
-			"examples": ["2023-03-26T00:00:00.000"]
+			"examples": ["2023-07-27T20:30:00.000Z"]
 		},
 		"confirmedDateOfDecision": {
 			"type": "string",
 			"description": "Decision by SoS",
 			"format": "date-time",
-			"examples": ["2023-03-26T00:00:00.000"]
+			"examples": ["2023-07-27T20:30:00.000Z"]
 		},
 		"stage5ExtensionToDecisionDeadline": {
 			"type": "string",
 			"description": "Decision period extended to this date",
 			"format": "date-time",
-			"examples": ["2023-03-26T00:00:00.000"]
+			"examples": ["2023-07-27T20:30:00.000Z"]
 		},
 
 		"_postDecisionDates": {},
@@ -382,7 +382,7 @@
 			"type": "string",
 			"description": "Judicial Review",
 			"format": "date-time",
-			"examples": ["2023-03-26T00:00:00.000"]
+			"examples": ["2023-07-27T20:30:00.000Z"]
 		},
 
 		"_withdrawalDates": {},
@@ -390,7 +390,7 @@
 			"type": "string",
 			"description": "DateProjectWithdrawn by applicant",
 			"format": "date-time",
-			"examples": ["2023-03-26T00:00:00.000"]
+			"examples": ["2023-07-27T20:30:00.000Z"]
 		},
 
 		"operationsLeadId": {

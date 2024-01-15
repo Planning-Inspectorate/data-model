@@ -12,7 +12,7 @@
 	],
 	"properties": {
 		"representationId": {
-			"type": "number"
+			"type": "integer"
 		},
 		"referenceId": {
 			"examples": ["TR043003-000010"],
@@ -26,7 +26,7 @@
 			"type": "string"
 		},
 		"caseId": {
-			"type": "number",
+			"type": "integer",
 			"examples": [1242],
 			"description": "The unique identifier within the Back Office. This is not the same as the case reference"
 		},
@@ -82,7 +82,7 @@
 		"dateReceived": {
 			"type": "string",
 			"format": "date-time",
-			"examples": ["2023-03-26T00:00:00.000"]
+			"examples": ["2023-07-27T20:30:00.000Z"]
 		},
 		"attachmentIds": {
 			"type": "array",

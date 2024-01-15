@@ -5,14 +5,6 @@
  * and run json-schema-to-typescript to regenerate this file.
  */
 
-export interface Employee {
-  id: string;
-  firstName: string;
-  lastName: string;
-}
-
-export interface CaseSchedule {}
-
 /**
  * Folders can have optional parents. All folders belong to a Case.
  */
@@ -132,6 +124,46 @@ export interface NSIPDocument {
   transcriptId?: string;
 }
 
+export interface Employee {
+  id: string;
+  firstName: string;
+  lastName: string;
+}
+
+/**
+ * NSIP Project Update (formerly known as Banners)
+ */
+export interface NSIPProjectUpdate {
+  /**
+   * The unique identifier within the Back Office.
+   */
+  id: number;
+  /**
+   * the case reference this update relates to
+   */
+  caseReference: string;
+  /**
+   * The date the update was published
+   */
+  updateDate?: string;
+  /**
+   * Internal title or name of the update
+   */
+  updateName?: string;
+  /**
+   * HTML content of the update in English. Can only include `<a> <b> <ul> <li>` tags.
+   */
+  updateContentEnglish: string;
+  /**
+   * HTML content of the update in Welsh. Can only include `<a> <b> <ul> <li>` tags.
+   */
+  updateContentWelsh?: string;
+  /**
+   * The current status of this update
+   */
+  updateStatus: 'draft' | 'ready-to-publish' | 'published' | 'ready-to-unpublish' | 'unpublished' | 'archived';
+}
+
 /**
  * Examination Timetable for an NSIP Project
  */
@@ -182,38 +214,50 @@ export interface LineItem {
   description: string;
 }
 
-/**
- * NSIP Project Update (formerly known as Banners)
- */
-export interface NSIPProjectUpdate {
+export interface S51Advice {
+  adviceId: number;
+  adviceReference: string;
+  caseId?: number;
+  caseReference?: string;
   /**
-   * The unique identifier within the Back Office.
+   * Title of the advice
    */
-  id: number;
+  title: string;
   /**
-   * the case reference this update relates to
+   * Who the enquiry is from
    */
-  caseReference: string;
+  from: string;
   /**
-   * The date the update was published
+   * Who the enquiry is on behalf of
    */
-  updateDate?: string;
+  agent: string;
   /**
-   * Internal title or name of the update
+   * How the enquiry was made
    */
-  updateName?: string;
+  method: 'phone' | 'email' | 'meeting' | 'post';
   /**
-   * HTML content of the update in English. Can only include `<a> <b> <ul> <li>` tags.
+   * Date the enquiry was made
    */
-  updateContentEnglish: string;
+  enquiryDate?: string;
   /**
-   * HTML content of the update in Welsh. Can only include `<a> <b> <ul> <li>` tags.
+   * Details of the enquiry
    */
-  updateContentWelsh?: string;
+  enquiryDetails?: string;
   /**
-   * The current status of this update
+   * Who issued the advice
    */
-  updateStatus: 'draft' | 'ready-to-publish' | 'published' | 'ready-to-unpublish' | 'unpublished' | 'archived';
+  adviceGivenBy?: string;
+  /**
+   * Date the advice was given
+   */
+  adviceDate?: string;
+  /**
+   * Details of the advice
+   */
+  adviceDetails?: string;
+  status?: 'checked' | 'unchecked' | 'readytopublish' | 'published' | 'donotpublish';
+  redactionStatus?: 'unredacted' | 'redacted';
+  attachmentIds?: string[];
 }
 
 /**
@@ -540,80 +584,6 @@ export interface Representation {
 }
 
 /**
- * Subscribers are a subset of Service Users, part of the PINS Data Model
- */
-export interface NsipSubscription {
-  /**
-   * The unique identifier within the Back Office. Ignored as part of register-nsip-subscription.
-   */
-  subscriptionId?: number;
-  /**
-   * the case reference the subscription relates to
-   */
-  caseReference: string;
-  emailAddress: string;
-  /**
-   * which update does the subscriber want to get notified of. For multiple types, use multiple messages.
-   */
-  subscriptionType: 'allUpdates' | 'applicationSubmitted' | 'applicationDecided' | 'registrationOpen';
-  /**
-   * The date to start getting updates
-   */
-  startDate?: string;
-  /**
-   * The date to stop getting updates
-   */
-  endDate?: string;
-  language?: 'English' | 'Welsh';
-}
-
-export interface S51Advice {
-  adviceId: number;
-  adviceReference: string;
-  caseId?: number;
-  caseReference?: string;
-  /**
-   * Title of the advice
-   */
-  title: string;
-  /**
-   * Who the enquiry is from
-   */
-  from: string;
-  /**
-   * Who the enquiry is on behalf of
-   */
-  agent: string;
-  /**
-   * How the enquiry was made
-   */
-  method: 'phone' | 'email' | 'meeting' | 'post';
-  /**
-   * Date the enquiry was made
-   */
-  enquiryDate?: string;
-  /**
-   * Details of the enquiry
-   */
-  enquiryDetails?: string;
-  /**
-   * Who issued the advice
-   */
-  adviceGivenBy?: string;
-  /**
-   * Date the advice was given
-   */
-  adviceDate?: string;
-  /**
-   * Details of the advice
-   */
-  adviceDetails?: string;
-  status?: 'checked' | 'unchecked' | 'readytopublish' | 'published' | 'donotpublish';
-  redactionStatus?: 'unredacted' | 'redacted';
-  attachmentIds?: string[];
-}
-
-/**
  * Service User of the planning inspectorate. Also contains role information by combining serviceUserType and caseReference.
  */
 export interface ServiceUser {
@@ -707,30 +677,32 @@ export interface ServiceUser {
   sourceSuid: string;
 }
 
-export type Name = string;
-
 /**
- * Subset of Pins Data Model [Service User]
+ * Subscribers are a subset of Service Users, part of the PINS Data Model
  */
-export interface InterestedParty {
-  id?: number;
-  interestedPartyNumber?: string;
-  firstName?: string;
-  lastName?: string;
-  under18?: boolean;
-  organisationName?: Name;
-  jobTitle?: string;
-  contactMethod?: 'email' | 'post';
-  email?: string;
-  phoneNumber?: string;
-  address?: Address;
-}
-export interface Address {
-  addressLine1: string;
-  addressLine2?: string;
-  town: string;
-  postcode: string;
-  country?: string;
+export interface NsipSubscription {
+  /**
+   * The unique identifier within the Back Office. Ignored as part of register-nsip-subscription.
+   */
+  subscriptionId?: number;
+  /**
+   * the case reference the subscription relates to
+   */
+  caseReference: string;
+  emailAddress: string;
+  /**
+   * which update does the subscriber want to get notified of. For multiple types, use multiple messages.
+   */
+  subscriptionType: 'allUpdates' | 'applicationSubmitted' | 'applicationDecided' | 'registrationOpen';
+  /**
+   * The date to start getting updates
+   */
+  startDate?: string;
+  /**
+   * The date to stop getting updates
+   */
+  endDate?: string;
+  language?: 'English' | 'Welsh';
 }
 
 /**
@@ -795,50 +767,6 @@ export interface NsipExamTimetableSubmission {
   documentName: string;
 }
 
-/**
- * A command to register an NSIP subscription with the back office
- */
-export interface RegisterNsipSubscription {
-  /**
-   * Properties in additionalProperties in the Service Bus message. Not present in the message body.
-   */
-  __additionalProperties__?: {
-    type?: 'Create' | 'Delete';
-  };
-  nsipSubscription?: NsipSubscription;
-  /**
-   * Which update(s) does the subscriber want to get notified of. Note nsipSubscription.subscriptionType is ignored.
-   */
-  subscriptionTypes?: ('allUpdates' | 'applicationSubmitted' | 'applicationDecided' | 'registrationOpen')[];
-}
-/**
- * Subscribers are a subset of Service Users, part of the PINS Data Model
- */
-export interface NsipSubscription {
-  /**
-   * The unique identifier within the Back Office. Ignored as part of register-nsip-subscription.
-   */
-  subscriptionId?: number;
-  /**
-   * the case reference the subscription relates to
-   */
-  caseReference: string;
-  emailAddress: string;
-  /**
-   * which update does the subscriber want to get notified of. For multiple types, use multiple messages.
-   */
-  subscriptionType: 'allUpdates' | 'applicationSubmitted' | 'applicationDecided' | 'registrationOpen';
-  /**
-   * The date to start getting updates
-   */
-  startDate?: string;
-  /**
-   * The date to stop getting updates
-   */
-  endDate?: string;
-  language?: 'English' | 'Welsh';
-}
-
 export type Name = string;
 
 export interface RegisterRepresentation {
@@ -899,5 +827,75 @@ export interface InterestedParty1 {
   email?: string;
   phoneNumber?: string;
   address?: Address;
+}
+
+export type Name = string;
+
+/**
+ * Subset of Pins Data Model [Service User]
+ */
+export interface InterestedParty {
+  id?: number;
+  interestedPartyNumber?: string;
+  firstName?: string;
+  lastName?: string;
+  under18?: boolean;
+  organisationName?: Name;
+  jobTitle?: string;
+  contactMethod?: 'email' | 'post';
+  email?: string;
+  phoneNumber?: string;
+  address?: Address;
+}
+export interface Address {
+  addressLine1: string;
+  addressLine2?: string;
+  town: string;
+  postcode: string;
+  country?: string;
+}
+
+/**
+ * A command to register an NSIP subscription with the back office
+ */
+export interface RegisterNsipSubscription {
+  /**
+   * Properties in additionalProperties in the Service Bus message. Not present in the message body.
+   */
+  __additionalProperties__?: {
+    type?: 'Create' | 'Delete';
+  };
+  nsipSubscription?: NsipSubscription;
+  /**
+   * Which update(s) does the subscriber want to get notified of. Note nsipSubscription.subscriptionType is ignored.
+   */
+  subscriptionTypes?: ('allUpdates' | 'applicationSubmitted' | 'applicationDecided' | 'registrationOpen')[];
+}
+/**
+ * Subscribers are a subset of Service Users, part of the PINS Data Model
+ */
+export interface NsipSubscription {
+  /**
+   * The unique identifier within the Back Office. Ignored as part of register-nsip-subscription.
+   */
+  subscriptionId?: number;
+  /**
+   * the case reference the subscription relates to
+   */
+  caseReference: string;
+  emailAddress: string;
+  /**
+   * which update does the subscriber want to get notified of. For multiple types, use multiple messages.
+   */
+  subscriptionType: 'allUpdates' | 'applicationSubmitted' | 'applicationDecided' | 'registrationOpen';
+  /**
+   * The date to start getting updates
+   */
+  startDate?: string;
+  /**
+   * The date to stop getting updates
+   */
+  endDate?: string;
+  language?: 'English' | 'Welsh';
 }
 

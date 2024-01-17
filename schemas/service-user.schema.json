@@ -8,92 +8,92 @@
 		"id": {
 			"type": "string",
 			"description": "A unique identifier for the entity.",
-			"example": "12345"
+			"examples": ["12345"]
 		},
 		"salutation": {
 			"type": "string",
 			"description": "A formal greeting, e.g., Mr, Mrs, Ms.",
-			"example": "Mr"
+			"examples": ["Mr"]
 		},
 		"firstName": {
 			"type": "string",
 			"description": "The first name of the individual.",
-			"example": "John"
+			"examples": ["John"]
 		},
 		"lastName": {
 			"type": "string",
 			"description": "The last name of the individual.",
-			"example": "Doe"
+			"examples": ["Doe"]
 		},
 		"addressLine1": {
 			"type": "string",
 			"description": "The first line of the address.",
-			"example": "123 Elm Street"
+			"examples": ["123 Elm Street"]
 		},
 		"addressLine2": {
 			"type": "string",
 			"description": "The second line of the address, usually includes suite or apartment number.",
-			"example": "Apt 4B"
+			"examples": ["Apt 4B"]
 		},
 		"addressTown": {
 			"type": "string",
 			"description": "The town or city of the address.",
-			"example": "Springfield"
+			"examples": ["Springfield"]
 		},
 		"addressCounty": {
 			"type": "string",
 			"description": "The county in which the town or city is located.",
-			"example": "Hampshire"
+			"examples": ["Hampshire"]
 		},
 		"postcode": {
 			"type": "string",
 			"description": "The postal code for the address.",
-			"example": "M12 4AF"
+			"examples": ["M12 4AF"]
 		},
 		"addressCountry": {
 			"type": "string",
 			"description": "The country of the address.",
-			"example": "United Kingdom"
+			"examples": ["United Kingdom"]
 		},
 		"organisation": {
 			"type": "string",
 			"description": "The name of the organisation associated with the individual.",
-			"example": "Tech Corp"
+			"examples": ["Tech Corp"]
 		},
 		"organisationType": {
 			"type": "string",
 			"description": "The type or nature of the organisation.",
-			"example": "Private Company"
+			"examples": ["Private Company"]
 		},
 		"role": {
 			"type": "string",
 			"description": "The individual's role or position within the organisation.",
-			"example": "Agent"
+			"examples": ["Agent"]
 		},
 		"telephoneNumber": {
 			"type": "string",
 			"description": "The primary telephone contact number.",
-			"example": "+447123456789"
+			"examples": ["+447123456789"]
 		},
 		"otherPhoneNumber": {
 			"type": "string",
 			"description": "An alternate or secondary phone number.",
-			"example": "+447123456789"
+			"examples": ["+447123456789"]
 		},
 		"faxNumber": {
 			"type": "string",
 			"description": "A fax contact number.",
-			"example": "+447123456789"
+			"examples": ["+447123456789"]
 		},
 		"emailAddress": {
 			"type": "string",
 			"description": "The primary email address for contact.",
-			"example": "john.doe@example.com"
+			"examples": ["john.doe@example.com"]
 		},
 		"webAddress": {
 			"type": "string",
 			"description": "Website address or URL.",
-			"example": "https://www.example.com"
+			"examples": ["https://www.example.com"]
 		},
 		"serviceUserType": {
 			"type": "string",
@@ -113,7 +113,7 @@
 		"sourceSuid": {
 			"type": "string",
 			"description": "Unique identifier from the source system.",
-			"example": "12345"
+			"examples": ["12345"]
 		}
 	},
 	"required": ["id", "sourceSuid", "sourceSystem", "serviceUserType", "caseReference"],

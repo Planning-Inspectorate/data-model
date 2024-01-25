@@ -11,9 +11,9 @@
 | [caseId](#caseid)                   | `integer` | Optional | cannot be null | [S51 Advice](s51-advice-properties-caseid.md "s51-advice.schema.json#/properties/caseId")                   |
 | [caseReference](#casereference)     | `string`  | Optional | cannot be null | [S51 Advice](s51-advice-properties-casereference.md "s51-advice.schema.json#/properties/caseReference")     |
 | [title](#title)                     | `string`  | Required | cannot be null | [S51 Advice](s51-advice-properties-title.md "s51-advice.schema.json#/properties/title")                     |
-| [from](#from)                       | `string`  | Required | cannot be null | [S51 Advice](s51-advice-properties-from.md "s51-advice.schema.json#/properties/from")                       |
-| [agent](#agent)                     | `string`  | Required | cannot be null | [S51 Advice](s51-advice-properties-agent.md "s51-advice.schema.json#/properties/agent")                     |
-| [method](#method)                   | `string`  | Required | cannot be null | [S51 Advice](s51-advice-properties-method.md "s51-advice.schema.json#/properties/method")                   |
+| [from](#from)                       | `string`  | Optional | cannot be null | [S51 Advice](s51-advice-properties-from.md "s51-advice.schema.json#/properties/from")                       |
+| [agent](#agent)                     | `string`  | Optional | cannot be null | [S51 Advice](s51-advice-properties-agent.md "s51-advice.schema.json#/properties/agent")                     |
+| [method](#method)                   | `string`  | Optional | cannot be null | [S51 Advice](s51-advice-properties-method.md "s51-advice.schema.json#/properties/method")                   |
 | [enquiryDate](#enquirydate)         | `string`  | Optional | cannot be null | [S51 Advice](s51-advice-properties-enquirydate.md "s51-advice.schema.json#/properties/enquiryDate")         |
 | [enquiryDetails](#enquirydetails)   | `string`  | Optional | cannot be null | [S51 Advice](s51-advice-properties-enquirydetails.md "s51-advice.schema.json#/properties/enquiryDetails")   |
 | [adviceGivenBy](#advicegivenby)     | `string`  | Optional | cannot be null | [S51 Advice](s51-advice-properties-advicegivenby.md "s51-advice.schema.json#/properties/adviceGivenBy")     |
@@ -149,7 +149,7 @@ Who the enquiry is from
 
 `from`
 
-*   is required
+*   is optional
 
 *   Type: `string`
 
@@ -167,7 +167,7 @@ Who the enquiry is on behalf of
 
 `agent`
 
-*   is required
+*   is optional
 
 *   Type: `string`
 
@@ -185,7 +185,7 @@ How the enquiry was made
 
 `method`
 
-*   is required
+*   is optional
 
 *   Type: `string`
 

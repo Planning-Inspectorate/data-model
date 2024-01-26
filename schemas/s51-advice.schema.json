@@ -3,7 +3,7 @@
 	"$id": "s51-advice.schema.json",
 	"title": "S51 Advice",
 	"type": "object",
-	"required": ["adviceId", "adviceReference", "title", "from", "agent", "method", "dateGiven"],
+	"required": ["adviceId", "adviceReference", "title"],
 	"properties": {
 		"adviceId": {
 			"type": "integer",

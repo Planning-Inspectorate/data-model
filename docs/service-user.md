@@ -47,6 +47,12 @@ A unique identifier for the entity.
 
 `string`
 
+### id Examples
+
+```json
+"12345"
+```
+
 ## salutation
 
 A formal greeting, e.g., Mr, Mrs, Ms.
@@ -64,6 +70,12 @@ A formal greeting, e.g., Mr, Mrs, Ms.
 ### salutation Type
 
 `string`
+
+### salutation Examples
+
+```json
+"Mr"
+```
 
 ## firstName
 
@@ -83,6 +95,12 @@ The first name of the individual.
 
 `string`
 
+### firstName Examples
+
+```json
+"John"
+```
+
 ## lastName
 
 The last name of the individual.
@@ -100,6 +118,12 @@ The last name of the individual.
 ### lastName Type
 
 `string`
+
+### lastName Examples
+
+```json
+"Doe"
+```
 
 ## addressLine1
 
@@ -119,6 +143,12 @@ The first line of the address.
 
 `string`
 
+### addressLine1 Examples
+
+```json
+"123 Elm Street"
+```
+
 ## addressLine2
 
 The second line of the address, usually includes suite or apartment number.
@@ -136,6 +166,12 @@ The second line of the address, usually includes suite or apartment number.
 ### addressLine2 Type
 
 `string`
+
+### addressLine2 Examples
+
+```json
+"Apt 4B"
+```
 
 ## addressTown
 
@@ -155,6 +191,12 @@ The town or city of the address.
 
 `string`
 
+### addressTown Examples
+
+```json
+"Springfield"
+```
+
 ## addressCounty
 
 The county in which the town or city is located.
@@ -172,6 +214,12 @@ The county in which the town or city is located.
 ### addressCounty Type
 
 `string`
+
+### addressCounty Examples
+
+```json
+"Hampshire"
+```
 
 ## postcode
 
@@ -191,6 +239,12 @@ The postal code for the address.
 
 `string`
 
+### postcode Examples
+
+```json
+"M12 4AF"
+```
+
 ## addressCountry
 
 The country of the address.
@@ -208,6 +262,12 @@ The country of the address.
 ### addressCountry Type
 
 `string`
+
+### addressCountry Examples
+
+```json
+"United Kingdom"
+```
 
 ## organisation
 
@@ -227,6 +287,12 @@ The name of the organisation associated with the individual.
 
 `string`
 
+### organisation Examples
+
+```json
+"Tech Corp"
+```
+
 ## organisationType
 
 The type or nature of the organisation.
@@ -244,6 +310,12 @@ The type or nature of the organisation.
 ### organisationType Type
 
 `string`
+
+### organisationType Examples
+
+```json
+"Private Company"
+```
 
 ## role
 
@@ -263,6 +335,12 @@ The individual's role or position within the organisation.
 
 `string`
 
+### role Examples
+
+```json
+"Agent"
+```
+
 ## telephoneNumber
 
 The primary telephone contact number.
@@ -280,6 +358,12 @@ The primary telephone contact number.
 ### telephoneNumber Type
 
 `string`
+
+### telephoneNumber Examples
+
+```json
+"+447123456789"
+```
 
 ## otherPhoneNumber
 
@@ -299,6 +383,12 @@ An alternate or secondary phone number.
 
 `string`
 
+### otherPhoneNumber Examples
+
+```json
+"+447123456789"
+```
+
 ## faxNumber
 
 A fax contact number.
@@ -316,6 +406,12 @@ A fax contact number.
 ### faxNumber Type
 
 `string`
+
+### faxNumber Examples
+
+```json
+"+447123456789"
+```
 
 ## emailAddress
 
@@ -335,6 +431,12 @@ The primary email address for contact.
 
 `string`
 
+### emailAddress Examples
+
+```json
+"john.doe@example.com"
+```
+
 ## webAddress
 
 Website address or URL.
@@ -352,6 +454,12 @@ Website address or URL.
 ### webAddress Type
 
 `string`
+
+### webAddress Examples
+
+```json
+"https://www.example.com"
+```
 
 ## serviceUserType
 
@@ -452,3 +560,9 @@ Unique identifier from the source system.
 ### sourceSuid Type
 
 `string`
+
+### sourceSuid Examples
+
+```json
+"12345"
+```

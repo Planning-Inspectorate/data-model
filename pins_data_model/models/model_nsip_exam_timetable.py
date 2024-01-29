@@ -33,7 +33,7 @@ class LineItem(BaseModel):
 
 
 class Event(BaseModel):
-    eventId: int | None = None
+    eventId: int
     """
     Event Identifier
     """
@@ -41,7 +41,7 @@ class Event(BaseModel):
     """
     Compulsory Acquisition Hearing/Deadline/Issue Specific Hearing etc
     """
-    eventTitle: str | None = None
+    eventTitle: str
     """
     Title Of Examination Timetable Event
     """

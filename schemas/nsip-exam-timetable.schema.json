@@ -20,7 +20,7 @@
 	"$defs": {
 		"event": {
 			"type": "object",
-			"required": ["title", "description", "type", "date"],
+			"required": ["eventId", "eventTitle", "description", "type", "date"],
 			"properties": {
 				"eventId": {
 					"type": "integer",

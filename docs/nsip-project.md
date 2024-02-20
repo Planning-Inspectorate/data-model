@@ -79,6 +79,7 @@
 | [environmentalServicesOfficerId](#environmentalservicesofficerid)                                       | `string`      | Optional | cannot be null | [NSIP Project](nsip-project-properties-environmentalservicesofficerid.md "nsip-project.schema.json#/properties/environmentalServicesOfficerId")                                       |
 | [legalOfficerId](#legalofficerid)                                                                       | `string`      | Optional | cannot be null | [NSIP Project](nsip-project-properties-legalofficerid.md "nsip-project.schema.json#/properties/legalOfficerId")                                                                       |
 | [applicantId](#applicantid)                                                                             | `string`      | Optional | cannot be null | [NSIP Project](nsip-project-properties-applicantid.md "nsip-project.schema.json#/properties/applicantId")                                                                             |
+| [migrationStatus](#migrationstatus)                                                                     | `boolean`     | Optional | can be null    | [NSIP Project](nsip-project-properties-migrationstatus.md "nsip-project.schema.json#/properties/migrationStatus")                                                                     |
 
 ## caseId
 
@@ -1922,3 +1923,21 @@ Maps to \[ServiceUser].\[id] where the serviceUserType is Applicant
 ### applicantId Type
 
 `string`
+
+## migrationStatus
+
+Has this case been migrated from the legacy system? True if so.
+
+`migrationStatus`
+
+*   is optional
+
+*   Type: `boolean`
+
+*   can be null
+
+*   defined in: [NSIP Project](nsip-project-properties-migrationstatus.md "nsip-project.schema.json#/properties/migrationStatus")
+
+### migrationStatus Type
+
+`boolean`

@@ -441,6 +441,10 @@
 		"applicantId": {
 			"type": "string",
 			"description": "Maps to [ServiceUser].[id] where the serviceUserType is Applicant"
+		},
+		"migrationStatus": {
+			"type": ["boolean", "null"],
+			"description": "Has this case been migrated from the legacy system? True if so."
 		}
 	}
 }

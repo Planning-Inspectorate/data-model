@@ -40,7 +40,7 @@
 			"enum": ["phone", "email", "meeting", "post"]
 		},
 		"enquiryDate": {
-			"type": "string",
+			"type": ["string","null"],
 			"description": "Date the enquiry was made",
 			"format": "date-time",
 			"examples": ["2023-07-27T20:30:00.000Z"]
@@ -54,7 +54,7 @@
 			"description": "Who issued the advice"
 		},
 		"adviceDate": {
-			"type": "string",
+			"type": ["string","null"],
 			"description": "Date the advice was given",
 			"format": "date-time",
 			"examples": ["2023-07-27T20:30:00.000Z"]

@@ -115,7 +115,7 @@
 			]
 		},
 		"datePublished": {
-			"type": "string",
+			"type": ["string","null"],
 			"format": "date-time",
 			"examples": ["2023-07-27T20:30:00.000Z"]
 		},

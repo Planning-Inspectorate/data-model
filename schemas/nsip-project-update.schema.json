@@ -15,7 +15,7 @@
 			"description": "the case reference this update relates to"
 		},
 		"updateDate": {
-			"type": "string",
+			"type": ["string","null"],
 			"format": "date-time",
 			"description": "The date the update was published"
 		},

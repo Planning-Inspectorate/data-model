@@ -25,12 +25,12 @@
 			"description": "which update does the subscriber want to get notified of. For multiple types, use multiple messages."
 		},
 		"startDate": {
-			"type": "string",
+			"type": ["string","null"],
 			"format": "date-time",
 			"description": "The date to start getting updates"
 		},
 		"endDate": {
-			"type": "string",
+			"type": ["string","null"],
 			"format": "date-time",
 			"description": "The date to stop getting updates"
 		},

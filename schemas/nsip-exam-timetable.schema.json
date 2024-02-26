@@ -52,13 +52,13 @@
 					"type": "string"
 				},
 				"eventDeadlineStartDate": {
-					"type": "string",
+					"type": ["string","null"],
 					"description": "Optional start date for event window",
 					"format": "date-time",
 					"examples": ["2023-07-27T20:30:00.000Z"]
 				},
 				"date": {
-					"type": "string",
+					"type": ["string","null"],
 					"description": "Event Date = effective deadline (end) date",
 					"format": "date-time",
 					"examples": ["2023-07-27T20:30:00.000Z"]

@@ -85,12 +85,12 @@
 			"examples": ["b1946ac92492d2347c6235b4d2611184"]
 		},
 		"dateCreated": {
-			"type": "string",
+			"type": ["string","null"],
 			"format": "date-time",
 			"examples": ["2023-07-27T20:30:00.000Z"]
 		},
 		"lastModified": {
-			"type": "string",
+			"type": ["string","null"],
 			"format": "date-time",
 			"examples": ["2023-07-27T20:30:00.000Z"]
 		},

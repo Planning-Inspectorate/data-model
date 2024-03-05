@@ -6,6 +6,43 @@
  */
 
 /**
+ * Folders can have optional parents. All folders belong to a Case.
+ */
+export interface Folder {
+  /**
+   * The unique identifier within the Back Office.
+   */
+  id: number;
+  /**
+   * The case reference this folder belongs to.
+   */
+  caseReference: string;
+  /**
+   * Folder display name in English.
+   */
+  displayNameEnglish: string;
+  /**
+   * Folder display name in Welsh.
+   */
+  displayNameWelsh?: string;
+  /**
+   * Optional parent folder ID.
+   */
+  parentFolderId?: number;
+  caseStage?:
+    | 'draft'
+    | 'pre-application'
+    | 'acceptance'
+    | 'pre-examination'
+    | 'examination'
+    | 'recommendation'
+    | 'decision'
+    | 'post_decision'
+    | 'withdrawn'
+    | 'developers_application';
+}
+
+/**
  * Examination Timetable for an NSIP Project
  */
 export interface ExaminationTimetable {
@@ -53,105 +90,6 @@ export interface Event {
 }
 export interface LineItem {
   description: string;
-}
-
-export interface NSIPDocument {
-  /**
-   * The unique identifier for the file. This will be different to documentReference
-   */
-  documentId: string;
-  /**
-   * Internal case identifier
-   */
-  caseId?: number;
-  caseRef?: string;
-  /**
-   * Reference used throughout ODT <CaseRef>-<SequenceNo>
-   */
-  documentReference?: string;
-  version: number;
-  examinationRefNo?: string;
-  /**
-   * Current stored filename of the file
-   */
-  filename: string;
-  /**
-   * Original filename of file
-   */
-  originalFilename: string;
-  size: number;
-  mime?: string;
-  /**
-   * The internal location of the document
-   */
-  documentURI: string;
-  /**
-   * The location of the published document. Only applicable to documents which are published.
-   */
-  publishedDocumentURI?: string;
-  path?: string;
-  virusCheckStatus?: 'not_scanned' | 'scanned' | 'affected';
-  fileMD5?: string;
-  dateCreated: string;
-  lastModified?: string;
-  caseType?: 'nsip' | 'has';
-  redactedStatus?: 'not_redacted' | 'redacted';
-  publishedStatus?:
-    | 'not_checked'
-    | 'checked'
-    | 'ready_to_publish'
-    | 'do_not_publish'
-    | 'publishing'
-    | 'published'
-    | 'archived';
-  datePublished?: string;
-  documentType?: string;
-  securityClassification?: 'public' | 'official' | 'secret' | 'top-secret';
-  sourceSystem?: 'back-office-appeals' | 'back-office-applications' | 'horizon' | 'ni_file' | 'sharepoint';
-  origin?: 'pins' | 'citizen' | 'lpa' | 'ogd';
-  owner?: string;
-  /**
-   * Name of person who authored document
-   */
-  author?: string;
-  /**
-   * The on behalf of or agent submitter of document
-   */
-  representative?: string;
-  description?: string;
-  documentCaseStage?:
-    | 'draft'
-    | 'pre-application'
-    | 'acceptance'
-    | 'pre-examination'
-    | 'examination'
-    | 'recommendation'
-    | 'decision'
-    | 'post_decision'
-    | 'withdrawn'
-    | 'developers_application';
-  /**
-   * Filter field to provide additional filtering
-   */
-  filter1?: string;
-  /**
-   * Filter field to provide additional filtering
-   */
-  filter2?: string;
-  /**
-   * The folder where the document exists
-   */
-  horizonFolderId?: string;
-  /**
-   * The GUID of the transcript document (if one was provided).
-   */
-  transcriptId?: string;
-}
-
-export interface Employee {
-  id: string;
-  firstName: string;
-  lastName: string;
 }
 
 /**
@@ -444,6 +382,12 @@ export interface NSIPProject {
   migrationStatus?: boolean | null;
 }
 
+export interface Employee {
+  id: string;
+  firstName: string;
+  lastName: string;
+}
+
 /**
  * NSIP Project Update (formerly known as Banners)
  */
@@ -476,6 +420,136 @@ export interface NSIPProjectUpdate {
    * The current status of this update
    */
   updateStatus: 'draft' | 'ready-to-publish' | 'published' | 'ready-to-unpublish' | 'unpublished' | 'archived';
+}
+
+export interface NSIPDocument {
+  /**
+   * The unique identifier for the file. This will be different to documentReference
+   */
+  documentId: string;
+  /**
+   * Internal case identifier
+   */
+  caseId?: number;
+  caseRef?: string;
+  /**
+   * Reference used throughout ODT <CaseRef>-<SequenceNo>
+   */
+  documentReference?: string;
+  version: number;
+  examinationRefNo?: string;
+  /**
+   * Current stored filename of the file
+   */
+  filename: string;
+  /**
+   * Original filename of file
+   */
+  originalFilename: string;
+  size: number;
+  mime?: string;
+  /**
+   * The internal location of the document
+   */
+  documentURI: string;
+  /**
+   * The location of the published document. Only applicable to documents which are published.
+   */
+  publishedDocumentURI?: string;
+  path?: string;
+  virusCheckStatus?: 'not_scanned' | 'scanned' | 'affected';
+  fileMD5?: string;
+  dateCreated: string;
+  lastModified?: string;
+  caseType?: 'nsip' | 'has';
+  redactedStatus?: 'not_redacted' | 'redacted';
+  publishedStatus?:
+    | 'not_checked'
+    | 'checked'
+    | 'ready_to_publish'
+    | 'do_not_publish'
+    | 'publishing'
+    | 'published'
+    | 'archived';
+  datePublished?: string;
+  documentType?: string;
+  securityClassification?: 'public' | 'official' | 'secret' | 'top-secret';
+  sourceSystem?: 'back-office-appeals' | 'back-office-applications' | 'horizon' | 'ni_file' | 'sharepoint';
+  origin?: 'pins' | 'citizen' | 'lpa' | 'ogd';
+  owner?: string;
+  /**
+   * Name of person who authored document
+   */
+  author?: string;
+  /**
+   * The on behalf of or agent submitter of document
+   */
+  representative?: string;
+  description?: string;
+  documentCaseStage?:
+    | 'draft'
+    | 'pre-application'
+    | 'acceptance'
+    | 'pre-examination'
+    | 'examination'
+    | 'recommendation'
+    | 'decision'
+    | 'post_decision'
+    | 'withdrawn'
+    | 'developers_application';
+  /**
+   * Filter field to provide additional filtering
+   */
+  filter1?: string;
+  /**
+   * Filter field to provide additional filtering
+   */
+  filter2?: string;
+  /**
+   * The folder where the document exists
+   */
+  horizonFolderId?: string;
+  /**
+   * The GUID of the transcript document (if one was provided).
+   */
+  transcriptId?: string;
+}
+
+export interface Representation {
+  representationId: number;
+  referenceId?: string;
+  examinationLibraryRef?: string;
+  caseRef: string;
+  /**
+   * The unique identifier within the Back Office. This is not the same as the case reference
+   */
+  caseId?: number;
+  status?: 'awaiting_review' | 'referred' | 'valid' | 'invalid' | 'published' | 'archived';
+  originalRepresentation: string;
+  redacted?: boolean;
+  redactedRepresentation?: string;
+  redactedBy?: string;
+  redactedNotes?: string;
+  representationFrom?: 'PERSON' | 'ORGANISATION' | 'AGENT';
+  /**
+   * ServiceUser Id of the person or organisation being represented
+   */
+  representedId: string;
+  /**
+   * ServiceUser Id of the person or organisation submitting representation in the case of Agent representationFrom
+   */
+  representativeId?: string;
+  registerFor?: 'PERSON' | 'ORGANISATION' | 'FAMILY_GROUP';
+  representationType?:
+    | 'Local Authorities'
+    | 'Parish Councils'
+    | 'Members of the Public/Businesses'
+    | 'Public & Businesses'
+    | 'Statutory Consultees'
+    | 'Non-Statutory Organisations'
+    | 'Another Individual';
+  dateReceived: string;
+  attachmentIds?: string[];
 }
 
 export interface S51Advice {
@@ -522,6 +596,34 @@ export interface S51Advice {
   status?: 'checked' | 'unchecked' | 'readytopublish' | 'published' | 'donotpublish';
   redactionStatus?: 'unredacted' | 'redacted';
   attachmentIds?: string[];
+}
+
+/**
+ * Subscribers are a subset of Service Users, part of the PINS Data Model
+ */
+export interface NsipSubscription {
+  /**
+   * The unique identifier within the Back Office. Ignored as part of register-nsip-subscription.
+   */
+  subscriptionId?: number;
+  /**
+   * the case reference the subscription relates to
+   */
+  caseReference: string;
+  emailAddress: string;
+  /**
+   * which update does the subscriber want to get notified of. For multiple types, use multiple messages.
+   */
+  subscriptionType: 'allUpdates' | 'applicationSubmitted' | 'applicationDecided' | 'registrationOpen';
+  /**
+   * The date to start getting updates
+   */
+  startDate?: string;
+  /**
+   * The date to stop getting updates
+   */
+  endDate?: string;
+  language?: 'English' | 'Welsh';
 }
 
 /**
@@ -619,94 +721,14 @@ export interface ServiceUser {
 }
 
 /**
- * Folders can have optional parents. All folders belong to a Case.
+ * Result of processing a new exam timetable submission
  */
-export interface Folder {
-  /**
-   * The unique identifier within the Back Office.
-   */
-  id: number;
-  /**
-   * The case reference this folder belongs to.
-   */
-  caseReference: string;
-  /**
-   * Folder display name in English.
-   */
-  displayNameEnglish: string;
-  /**
-   * Folder display name in Welsh.
-   */
-  displayNameWelsh?: string;
-  /**
-   * Optional parent folder ID.
-   */
-  parentFolderId?: number;
-}
-
-/**
- * Subscribers are a subset of Service Users, part of the PINS Data Model
- */
-export interface NsipSubscription {
-  /**
-   * The unique identifier within the Back Office. Ignored as part of register-nsip-subscription.
-   */
-  subscriptionId?: number;
-  /**
-   * the case reference the subscription relates to
-   */
-  caseReference: string;
-  emailAddress: string;
-  /**
-   * which update does the subscriber want to get notified of. For multiple types, use multiple messages.
-   */
-  subscriptionType: 'allUpdates' | 'applicationSubmitted' | 'applicationDecided' | 'registrationOpen';
-  /**
-   * The date to start getting updates
-   */
-  startDate?: string;
-  /**
-   * The date to stop getting updates
-   */
-  endDate?: string;
-  language?: 'English' | 'Welsh';
-}
-
-export interface Representation {
-  representationId: number;
-  referenceId?: string;
-  examinationLibraryRef?: string;
-  caseRef: string;
-  /**
-   * The unique identifier within the Back Office. This is not the same as the case reference
-   */
-  caseId?: number;
-  status?: 'awaiting_review' | 'referred' | 'valid' | 'invalid' | 'published' | 'archived';
-  originalRepresentation: string;
-  redacted?: boolean;
-  redactedRepresentation?: string;
-  redactedBy?: string;
-  redactedNotes?: string;
-  representationFrom?: 'PERSON' | 'ORGANISATION' | 'AGENT';
-  /**
-   * ServiceUser Id of the person or organisation being represented
-   */
-  representedId: string;
-  /**
-   * ServiceUser Id of the person or organisation submitting representation in the case of Agent representationFrom
-   */
-  representativeId?: string;
-  registerFor?: 'PERSON' | 'ORGANISATION' | 'FAMILY_GROUP';
-  representationType?:
-    | 'Local Authorities'
-    | 'Parish Councils'
-    | 'Members of the Public/Businesses'
-    | 'Public & Businesses'
-    | 'Statutory Consultees'
-    | 'Non-Statutory Organisations'
-    | 'Another Individual';
-  dateReceived: string;
-  attachmentIds?: string[];
+export interface NsipExamTimetableSubmission {
+  status: 'SUCCESS' | 'VIRUS_DETECTED' | 'FAILURE';
+  deadline: string;
+  submissionType: string;
+  blobGuid: string;
+  documentName: string;
 }
 
 export type Name = string;
@@ -733,6 +755,101 @@ export interface Address {
   town: string;
   postcode: string;
   country?: string;
+}
+
+/**
+ * A command to deliver metadata about a new document submission added to a deadline
+ */
+export interface NewDeadlineSubmission {
+  /**
+   * The unique reference of the case
+   */
+  caseReference?: string;
+  /**
+   * The name of the FO user who made the submission
+   */
+  name: string;
+  /**
+   * The email address of the FO user who made the submission
+   */
+  email: string;
+  /**
+   * Was the submission made by an interested party on behalf of someone else?
+   */
+  interestedParty?: boolean;
+  /**
+   * Only necessary if `interestedParty` is true
+   */
+  interestedPartyReference?: string;
+  /**
+   * The name of the deadline which the submission was made against
+   */
+  deadline: string;
+  /**
+   * The name of the deadline line item the submission was made against
+   */
+  submissionType: string;
+  /**
+   * Does the submission contain sensitive data?
+   */
+  sensitiveData?: boolean;
+  lateSubmission?: boolean;
+  /**
+   * ID of the submission in the database
+   */
+  submissionId?: string;
+  /**
+   * The GUID of the blob in storage
+   */
+  blobGuid: string;
+  /**
+   * The file name of the document in blob storage
+   */
+  documentName: string;
+}
+
+/**
+ * A command to register an NSIP subscription with the back office
+ */
+export interface RegisterNsipSubscription {
+  /**
+   * Properties in additionalProperties in the Service Bus message. Not present in the message body.
+   */
+  __additionalProperties__?: {
+    type?: 'Create' | 'Delete';
+  };
+  nsipSubscription?: NsipSubscription;
+  /**
+   * Which update(s) does the subscriber want to get notified of. Note nsipSubscription.subscriptionType is ignored.
+   */
+  subscriptionTypes?: ('allUpdates' | 'applicationSubmitted' | 'applicationDecided' | 'registrationOpen')[];
+}
+/**
+ * Subscribers are a subset of Service Users, part of the PINS Data Model
+ */
+export interface NsipSubscription {
+  /**
+   * The unique identifier within the Back Office. Ignored as part of register-nsip-subscription.
+   */
+  subscriptionId?: number;
+  /**
+   * the case reference the subscription relates to
+   */
+  caseReference: string;
+  emailAddress: string;
+  /**
+   * which update does the subscriber want to get notified of. For multiple types, use multiple messages.
+   */
+  subscriptionType: 'allUpdates' | 'applicationSubmitted' | 'applicationDecided' | 'registrationOpen';
+  /**
+   * The date to start getting updates
+   */
+  startDate?: string;
+  /**
+   * The date to stop getting updates
+   */
+  endDate?: string;
+  language?: 'English' | 'Welsh';
 }
 
 export type Name = string;
@@ -795,111 +912,5 @@ export interface InterestedParty1 {
   email?: string;
   phoneNumber?: string;
   address?: Address;
-}
-
-/**
- * A command to deliver metadata about a new document submission added to a deadline
- */
-export interface NewDeadlineSubmission {
-  /**
-   * The unique reference of the case
-   */
-  caseReference?: string;
-  /**
-   * The name of the FO user who made the submission
-   */
-  name: string;
-  /**
-   * The email address of the FO user who made the submission
-   */
-  email: string;
-  /**
-   * Was the submission made by an interested party on behalf of someone else?
-   */
-  interestedParty?: boolean;
-  /**
-   * Only necessary if `interestedParty` is true
-   */
-  interestedPartyReference?: string;
-  /**
-   * The name of the deadline which the submission was made against
-   */
-  deadline: string;
-  /**
-   * The name of the deadline line item the submission was made against
-   */
-  submissionType: string;
-  /**
-   * Does the submission contain sensitive data?
-   */
-  sensitiveData?: boolean;
-  lateSubmission?: boolean;
-  /**
-   * ID of the submission in the database
-   */
-  submissionId?: string;
-  /**
-   * The GUID of the blob in storage
-   */
-  blobGuid: string;
-  /**
-   * The file name of the document in blob storage
-   */
-  documentName: string;
-}
-
-/**
- * Result of processing a new exam timetable submission
- */
-export interface NsipExamTimetableSubmission {
-  status: 'SUCCESS' | 'VIRUS_DETECTED' | 'FAILURE';
-  deadline: string;
-  submissionType: string;
-  blobGuid: string;
-  documentName: string;
-}
-
-/**
- * A command to register an NSIP subscription with the back office
- */
-export interface RegisterNsipSubscription {
-  /**
-   * Properties in additionalProperties in the Service Bus message. Not present in the message body.
-   */
-  __additionalProperties__?: {
-    type?: 'Create' | 'Delete';
-  };
-  nsipSubscription?: NsipSubscription;
-  /**
-   * Which update(s) does the subscriber want to get notified of. Note nsipSubscription.subscriptionType is ignored.
-   */
-  subscriptionTypes?: ('allUpdates' | 'applicationSubmitted' | 'applicationDecided' | 'registrationOpen')[];
-}
-/**
- * Subscribers are a subset of Service Users, part of the PINS Data Model
- */
-export interface NsipSubscription {
-  /**
-   * The unique identifier within the Back Office. Ignored as part of register-nsip-subscription.
-   */
-  subscriptionId?: number;
-  /**
-   * the case reference the subscription relates to
-   */
-  caseReference: string;
-  emailAddress: string;
-  /**
-   * which update does the subscriber want to get notified of. For multiple types, use multiple messages.
-   */
-  subscriptionType: 'allUpdates' | 'applicationSubmitted' | 'applicationDecided' | 'registrationOpen';
-  /**
-   * The date to start getting updates
-   */
-  startDate?: string;
-  /**
-   * The date to stop getting updates
-   */
-  endDate?: string;
-  language?: 'English' | 'Welsh';
 }
 

@@ -25,6 +25,21 @@
     "parentFolderId": {
       "type": "integer",
       "description": "Optional parent folder ID."
-    }
+    },
+    "caseStage": {
+      "type": "string",
+      "enum": [
+        "draft",
+        "pre-application",
+        "acceptance",
+        "pre-examination",
+        "examination",
+        "recommendation",
+        "decision",
+        "post_decision",
+        "withdrawn",
+        "developers_application"
+      ]
+    },
   }
 }

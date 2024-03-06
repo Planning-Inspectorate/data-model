@@ -11,6 +11,7 @@
 | [displayNameEnglish](#displaynameenglish) | `string`  | Required | cannot be null | [Folder](folder-properties-displaynameenglish.md "folder.schema.json#/properties/displayNameEnglish") |
 | [displayNameWelsh](#displaynamewelsh)     | `string`  | Optional | cannot be null | [Folder](folder-properties-displaynamewelsh.md "folder.schema.json#/properties/displayNameWelsh")     |
 | [parentFolderId](#parentfolderid)         | `integer` | Optional | cannot be null | [Folder](folder-properties-parentfolderid.md "folder.schema.json#/properties/parentFolderId")         |
+| [caseStage](#casestage)                   | `string`  | Optional | cannot be null | [Folder](folder-properties-casestage.md "folder.schema.json#/properties/caseStage")                   |
 
 ## id
 
@@ -101,3 +102,38 @@ Optional parent folder ID.
 ### parentFolderId Type
 
 `integer`
+
+## caseStage
+
+
+
+`caseStage`
+
+*   is optional
+
+*   Type: `string`
+
+*   cannot be null
+
+*   defined in: [Folder](folder-properties-casestage.md "folder.schema.json#/properties/caseStage")
+
+### caseStage Type
+
+`string`
+
+### caseStage Constraints
+
+**enum**: the value of this property must be equal to one of the following values:
+
+| Value                      | Explanation |
+| :------------------------- | :---------- |
+| `"draft"`                  |             |
+| `"pre-application"`        |             |
+| `"acceptance"`             |             |
+| `"pre-examination"`        |             |
+| `"examination"`            |             |
+| `"recommendation"`         |             |
+| `"decision"`               |             |
+| `"post_decision"`          |             |
+| `"withdrawn"`              |             |
+| `"developers_application"` |             |

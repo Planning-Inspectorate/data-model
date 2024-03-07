@@ -4,7 +4,7 @@
   "title": "Folder",
   "description": "Folders can have optional parents. All folders belong to a Case.",
   "type": "object",
-  "required": ["id", "caseReference", "displayNameEnglish"],
+  "required": ["id", "caseReference", "displayNameEnglish", "displayNameWelsh", "parentFolderId", "caseStage"],
   "properties": {
     "id": {
       "type": "integer",
@@ -19,15 +19,15 @@
       "description": "Folder display name in English."
     },
     "displayNameWelsh": {
-      "type": "string",
+      "type": ["string", "null"],
       "description": "Folder display name in Welsh."
     },
     "parentFolderId": {
-      "type": "integer",
+      "type": ["integer", "null"],
       "description": "Optional parent folder ID."
     },
     "caseStage": {
-      "type": "string",
+      "type": ["string", "null"],
       "enum": [
         "draft",
         "pre-application",
@@ -40,6 +40,6 @@
         "withdrawn",
         "developers_application"
       ]
-    },
+    }
   }
 }

@@ -2,8 +2,26 @@
 	"$schema": "http://json-schema.org/draft-07/schema#",
 	"$id": "s51-advice.schema.json",
 	"title": "S51 Advice",
+	"description": "Section 51 Advice schema",
 	"type": "object",
-	"required": ["adviceId", "adviceReference", "title"],
+	"required": [
+		"adviceId",
+		"adviceReference",
+		"caseId",
+		"caseReference",
+		"title",
+		"from",
+		"agent",
+		"method",
+		"enquiryDate",
+		"enquiryDetails",
+		"adviceGivenBy",
+		"adviceDate",
+		"adviceDetails",
+		"status",
+		"redactionStatus",
+		"attachmentIds"
+	],
 	"properties": {
 		"adviceId": {
 			"type": "integer",
@@ -14,11 +32,11 @@
 			"examples": ["TR0200007-0005"]
 		},
 		"caseId": {
-			"type": "integer",
+			"type": ["integer", "null"],
 			"examples": [1234]
 		},
 		"caseReference": {
-			"type": "string",
+			"type": ["string", "null"],
 			"examples": ["BC0110002"]
 		},
 		"title": {
@@ -27,48 +45,48 @@
 			"examples": ["Advice following issue of decision to accept the application for examination"]
 		},
 		"from": {
-			"type": "string",
+			"type": ["string", "null"],
 			"description": "Who the enquiry is from"
 		},
 		"agent": {
-			"type": "string",
+			"type": ["string", "null"],
 			"description": "Who the enquiry is on behalf of"
 		},
 		"method": {
-			"type": "string",
+			"type": ["string", "null"],
 			"description": "How the enquiry was made",
 			"enum": ["phone", "email", "meeting", "post"]
 		},
 		"enquiryDate": {
-			"type": "string",
+			"type": ["string", "null"],
 			"description": "Date the enquiry was made",
 			"format": "date-time",
 			"examples": ["2023-07-27T20:30:00.000Z"]
 		},
 		"enquiryDetails": {
-			"type": "string",
+			"type": ["string", "null"],
 			"description": "Details of the enquiry"
 		},
 		"adviceGivenBy": {
-			"type": "string",
+			"type": ["string", "null"],
 			"description": "Who issued the advice"
 		},
 		"adviceDate": {
-			"type": "string",
+			"type": ["string", "null"],
 			"description": "Date the advice was given",
 			"format": "date-time",
 			"examples": ["2023-07-27T20:30:00.000Z"]
 		},
 		"adviceDetails": {
-			"type": "string",
+			"type": ["string", "null"],
 			"description": "Details of the advice"
 		},
 		"status": {
-			"type": "string",
+			"type": ["string", "null"],
 			"enum": ["checked", "unchecked", "readytopublish", "published", "donotpublish"]
 		},
 		"redactionStatus": {
-			"type": "string",
+			"type": ["string", "null"],
 			"enum": ["unredacted", "redacted"]
 		},
 		"attachmentIds": {

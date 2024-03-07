@@ -4,7 +4,7 @@
 	"title": "NSIP Project Update",
 	"description": "NSIP Project Update (formerly known as Banners)",
 	"type": "object",
-	"required": ["id", "caseReference", "updateContentEnglish", "updateStatus"],
+	"required": ["id", "caseReference", "updateDate", "updateName", "updateContentEnglish", "updateContentWelsh", "updateStatus"],
 	"properties": {
 		"id": {
 			"type": "integer",
@@ -15,12 +15,12 @@
 			"description": "the case reference this update relates to"
 		},
 		"updateDate": {
-			"type": "string",
+			"type": ["string", "null"],
 			"format": "date-time",
 			"description": "The date the update was published"
 		},
 		"updateName": {
-			"type": "string",
+			"type": ["string", "null"],
 			"description": "Internal title or name of the update"
 		},
 		"updateContentEnglish": {
@@ -28,7 +28,7 @@
 			"description": "HTML content of the update in English. Can only include `<a> <b> <ul> <li>` tags."
 		},
 		"updateContentWelsh": {
-			"type": "string",
+			"type": ["string", "null"],
 			"description": "HTML content of the update in Welsh. Can only include `<a> <b> <ul> <li>` tags."
 		},
 		"updateStatus": {

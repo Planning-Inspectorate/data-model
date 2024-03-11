@@ -70,7 +70,9 @@
 		"welshLanguage",
 		"mapZoomLevel",
 		"secretaryOfState",
-		"migrationStatus"
+		"migrationStatus",
+		"dateOfReOpenRelevantRepresentationStart",
+		"dateOfReOpenRelevantRepresentationClose"
 	],
 	"properties": {
 		"caseId": {

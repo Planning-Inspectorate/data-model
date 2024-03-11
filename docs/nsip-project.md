@@ -80,8 +80,8 @@
 | [legalOfficerId](#legalofficerid)                                                                       | `string`      | Required | can be null    | [NSIP Project](nsip-project-properties-legalofficerid.md "nsip-project.schema.json#/properties/legalOfficerId")                                                                       |
 | [applicantId](#applicantid)                                                                             | `string`      | Required | can be null    | [NSIP Project](nsip-project-properties-applicantid.md "nsip-project.schema.json#/properties/applicantId")                                                                             |
 | [migrationStatus](#migrationstatus)                                                                     | `boolean`     | Required | can be null    | [NSIP Project](nsip-project-properties-migrationstatus.md "nsip-project.schema.json#/properties/migrationStatus")                                                                     |
-| [dateOfReOpenRelevantRepresentationStart](#dateofreopenrelevantrepresentationstart)                     | `string`      | Optional | can be null    | [NSIP Project](nsip-project-properties-dateofreopenrelevantrepresentationstart.md "nsip-project.schema.json#/properties/dateOfReOpenRelevantRepresentationStart")                     |
-| [dateOfReOpenRelevantRepresentationClose](#dateofreopenrelevantrepresentationclose)                     | `string`      | Optional | can be null    | [NSIP Project](nsip-project-properties-dateofreopenrelevantrepresentationclose.md "nsip-project.schema.json#/properties/dateOfReOpenRelevantRepresentationClose")                     |
+| [dateOfReOpenRelevantRepresentationStart](#dateofreopenrelevantrepresentationstart)                     | `string`      | Required | can be null    | [NSIP Project](nsip-project-properties-dateofreopenrelevantrepresentationstart.md "nsip-project.schema.json#/properties/dateOfReOpenRelevantRepresentationStart")                     |
+| [dateOfReOpenRelevantRepresentationClose](#dateofreopenrelevantrepresentationclose)                     | `string`      | Required | can be null    | [NSIP Project](nsip-project-properties-dateofreopenrelevantrepresentationclose.md "nsip-project.schema.json#/properties/dateOfReOpenRelevantRepresentationClose")                     |
 
 ## caseId
 
@@ -1950,7 +1950,7 @@ Date at which relevant reps can be reopened
 
 `dateOfReOpenRelevantRepresentationStart`
 
-*   is optional
+*   is required
 
 *   Type: `string`
 
@@ -1978,7 +1978,7 @@ Date at which relevant reps can no longer be reopened
 
 `dateOfReOpenRelevantRepresentationClose`
 
-*   is optional
+*   is required
 
 *   Type: `string`
 

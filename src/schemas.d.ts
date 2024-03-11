@@ -199,6 +199,111 @@ export interface NSIPDocument {
 }
 
 /**
+ * NSIP Project Update (formerly known as Banners)
+ */
+export interface NSIPProjectUpdate {
+  /**
+   * The unique identifier within the Back Office.
+   */
+  id: number;
+  /**
+   * the case reference this update relates to
+   */
+  caseReference: string;
+  /**
+   * The date the update was published
+   */
+  updateDate: string | null;
+  /**
+   * Internal title or name of the update
+   */
+  updateName: string | null;
+  /**
+   * HTML content of the update in English. Can only include `<a> <b> <ul> <li>` tags.
+   */
+  updateContentEnglish: string;
+  /**
+   * HTML content of the update in Welsh. Can only include `<a> <b> <ul> <li>` tags.
+   */
+  updateContentWelsh: string | null;
+  /**
+   * The current status of this update
+   */
+  updateStatus: 'draft' | 'ready-to-publish' | 'published' | 'ready-to-unpublish' | 'unpublished' | 'archived';
+}
+
+/**
+ * NSIP Representation schema
+ */
+export interface Representation {
+  representationId: number;
+  referenceId: string | null;
+  examinationLibraryRef: string | null;
+  caseRef: string;
+  /**
+   * The unique identifier within the Back Office. This is not the same as the case reference
+   */
+  caseId: number | null;
+  status: ('awaiting_review' | 'referred' | 'valid' | 'invalid' | 'published' | 'archived') | null;
+  originalRepresentation: string;
+  redacted: boolean | null;
+  redactedRepresentation: string | null;
+  redactedBy: string | null;
+  redactedNotes: string | null;
+  representationFrom: ('PERSON' | 'ORGANISATION' | 'AGENT') | null;
+  /**
+   * ServiceUser Id of the person or organisation being represented
+   */
+  representedId: string;
+  /**
+   * ServiceUser Id of the person or organisation submitting representation in the case of Agent representationFrom
+   */
+  representativeId: string | null;
+  registerFor: ('PERSON' | 'ORGANISATION' | 'FAMILY_GROUP') | null;
+  representationType:
+    | (
+        | 'Local Authorities'
+        | 'Parish Councils'
+        | 'Members of the Public/Businesses'
+        | 'Public & Businesses'
+        | 'Statutory Consultees'
+        | 'Non-Statutory Organisations'
+        | 'Another Individual'
+      )
+    | null;
+  dateReceived: string;
+  attachmentIds: string[];
+}
+
+/**
+ * Subscribers are a subset of Service Users, part of the PINS Data Model
+ */
+export interface NsipSubscription {
+  /**
+   * The unique identifier within the Back Office. Ignored as part of register-nsip-subscription.
+   */
+  subscriptionId: number | null;
+  /**
+   * the case reference the subscription relates to
+   */
+  caseReference: string;
+  emailAddress: string;
+  /**
+   * which update does the subscriber want to get notified of. For multiple types, use multiple messages.
+   */
+  subscriptionType: 'allUpdates' | 'applicationSubmitted' | 'applicationDecided' | 'registrationOpen';
+  /**
+   * The date to start getting updates
+   */
+  startDate: string | null;
+  /**
+   * The date to stop getting updates
+   */
+  endDate: string | null;
+  language: ('English' | 'Welsh') | null;
+}
+
+/**
  * Subset of Pins Data Model [Case]
  */
 export interface NSIPProject {
@@ -500,54 +605,11 @@ export interface NSIPProject {
   /**
    * Date at which relevant reps can be reopened
    */
-  dateOfReOpenRelevantRepresentationStart?: string | null;
+  dateOfReOpenRelevantRepresentationStart: string | null;
   /**
    * Date at which relevant reps can no longer be reopened
    */
-  dateOfReOpenRelevantRepresentationClose?: string | null;
-}
-
-/**
- * NSIP Representation schema
- */
-export interface Representation {
-  representationId: number;
-  referenceId: string | null;
-  examinationLibraryRef: string | null;
-  caseRef: string;
-  /**
-   * The unique identifier within the Back Office. This is not the same as the case reference
-   */
-  caseId: number | null;
-  status: ('awaiting_review' | 'referred' | 'valid' | 'invalid' | 'published' | 'archived') | null;
-  originalRepresentation: string;
-  redacted: boolean | null;
-  redactedRepresentation: string | null;
-  redactedBy: string | null;
-  redactedNotes: string | null;
-  representationFrom: ('PERSON' | 'ORGANISATION' | 'AGENT') | null;
-  /**
-   * ServiceUser Id of the person or organisation being represented
-   */
-  representedId: string;
-  /**
-   * ServiceUser Id of the person or organisation submitting representation in the case of Agent representationFrom
-   */
-  representativeId: string | null;
-  registerFor: ('PERSON' | 'ORGANISATION' | 'FAMILY_GROUP') | null;
-  representationType:
-    | (
-        | 'Local Authorities'
-        | 'Parish Councils'
-        | 'Members of the Public/Businesses'
-        | 'Public & Businesses'
-        | 'Statutory Consultees'
-        | 'Non-Statutory Organisations'
-        | 'Another Individual'
-      )
-    | null;
-  dateReceived: string;
-  attachmentIds: string[];
+  dateOfReOpenRelevantRepresentationClose: string | null;
 }
 
 /**
@@ -597,68 +659,6 @@ export interface S51Advice {
   status: ('checked' | 'unchecked' | 'readytopublish' | 'published' | 'donotpublish') | null;
   redactionStatus: ('unredacted' | 'redacted') | null;
   attachmentIds: string[];
-}
-
-/**
- * NSIP Project Update (formerly known as Banners)
- */
-export interface NSIPProjectUpdate {
-  /**
-   * The unique identifier within the Back Office.
-   */
-  id: number;
-  /**
-   * the case reference this update relates to
-   */
-  caseReference: string;
-  /**
-   * The date the update was published
-   */
-  updateDate: string | null;
-  /**
-   * Internal title or name of the update
-   */
-  updateName: string | null;
-  /**
-   * HTML content of the update in English. Can only include `<a> <b> <ul> <li>` tags.
-   */
-  updateContentEnglish: string;
-  /**
-   * HTML content of the update in Welsh. Can only include `<a> <b> <ul> <li>` tags.
-   */
-  updateContentWelsh: string | null;
-  /**
-   * The current status of this update
-   */
-  updateStatus: 'draft' | 'ready-to-publish' | 'published' | 'ready-to-unpublish' | 'unpublished' | 'archived';
-}
-
-/**
- * Subscribers are a subset of Service Users, part of the PINS Data Model
- */
-export interface NsipSubscription {
-  /**
-   * The unique identifier within the Back Office. Ignored as part of register-nsip-subscription.
-   */
-  subscriptionId: number | null;
-  /**
-   * the case reference the subscription relates to
-   */
-  caseReference: string;
-  emailAddress: string;
-  /**
-   * which update does the subscriber want to get notified of. For multiple types, use multiple messages.
-   */
-  subscriptionType: 'allUpdates' | 'applicationSubmitted' | 'applicationDecided' | 'registrationOpen';
-  /**
-   * The date to start getting updates
-   */
-  startDate: string | null;
-  /**
-   * The date to stop getting updates
-   */
-  endDate: string | null;
-  language: ('English' | 'Welsh') | null;
 }
 
 /**
@@ -756,6 +756,61 @@ export interface ServiceUser {
 }
 
 /**
+ * A command to register an NSIP subscription with the back office
+ */
+export interface RegisterNsipSubscription {
+  /**
+   * Properties in additionalProperties in the Service Bus message. Not present in the message body.
+   */
+  __additionalProperties__?: {
+    type?: 'Create' | 'Delete';
+  };
+  nsipSubscription?: NsipSubscription;
+  /**
+   * Which update(s) does the subscriber want to get notified of. Note nsipSubscription.subscriptionType is ignored.
+   */
+  subscriptionTypes?: ('allUpdates' | 'applicationSubmitted' | 'applicationDecided' | 'registrationOpen')[];
+}
+/**
+ * Subscribers are a subset of Service Users, part of the PINS Data Model
+ */
+export interface NsipSubscription {
+  /**
+   * The unique identifier within the Back Office. Ignored as part of register-nsip-subscription.
+   */
+  subscriptionId: number | null;
+  /**
+   * the case reference the subscription relates to
+   */
+  caseReference: string;
+  emailAddress: string;
+  /**
+   * which update does the subscriber want to get notified of. For multiple types, use multiple messages.
+   */
+  subscriptionType: 'allUpdates' | 'applicationSubmitted' | 'applicationDecided' | 'registrationOpen';
+  /**
+   * The date to start getting updates
+   */
+  startDate: string | null;
+  /**
+   * The date to stop getting updates
+   */
+  endDate: string | null;
+  language: ('English' | 'Welsh') | null;
+}
+
+/**
+ * Result of processing a new exam timetable submission
+ */
+export interface NsipExamTimetableSubmission {
+  status: 'SUCCESS' | 'VIRUS_DETECTED' | 'FAILURE';
+  deadline: string;
+  submissionType: string;
+  blobGuid: string;
+  documentName: string;
+}
+
+/**
  * A command to deliver metadata about a new document submission added to a deadline
  */
 export interface NewDeadlineSubmission {
@@ -804,61 +859,6 @@ export interface NewDeadlineSubmission {
    * The file name of the document in blob storage
    */
   documentName: string;
-}
-
-/**
- * Result of processing a new exam timetable submission
- */
-export interface NsipExamTimetableSubmission {
-  status: 'SUCCESS' | 'VIRUS_DETECTED' | 'FAILURE';
-  deadline: string;
-  submissionType: string;
-  blobGuid: string;
-  documentName: string;
-}
-
-/**
- * A command to register an NSIP subscription with the back office
- */
-export interface RegisterNsipSubscription {
-  /**
-   * Properties in additionalProperties in the Service Bus message. Not present in the message body.
-   */
-  __additionalProperties__?: {
-    type?: 'Create' | 'Delete';
-  };
-  nsipSubscription?: NsipSubscription;
-  /**
-   * Which update(s) does the subscriber want to get notified of. Note nsipSubscription.subscriptionType is ignored.
-   */
-  subscriptionTypes?: ('allUpdates' | 'applicationSubmitted' | 'applicationDecided' | 'registrationOpen')[];
-}
-/**
- * Subscribers are a subset of Service Users, part of the PINS Data Model
- */
-export interface NsipSubscription {
-  /**
-   * The unique identifier within the Back Office. Ignored as part of register-nsip-subscription.
-   */
-  subscriptionId: number | null;
-  /**
-   * the case reference the subscription relates to
-   */
-  caseReference: string;
-  emailAddress: string;
-  /**
-   * which update does the subscriber want to get notified of. For multiple types, use multiple messages.
-   */
-  subscriptionType: 'allUpdates' | 'applicationSubmitted' | 'applicationDecided' | 'registrationOpen';
-  /**
-   * The date to start getting updates
-   */
-  startDate: string | null;
-  /**
-   * The date to stop getting updates
-   */
-  endDate: string | null;
-  language: ('English' | 'Welsh') | null;
 }
 
 export type Name = string;

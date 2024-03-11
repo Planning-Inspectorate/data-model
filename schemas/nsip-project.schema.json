@@ -30,7 +30,6 @@
 		"scopingOpinionSought",
 		"scopingOpinionIssued",
 		"section46Notification",
-		"_acceptanceDates",
 		"dateOfDCOSubmission",
 		"deadlineForAcceptanceDecision",
 		"dateOfDCOAcceptance",
@@ -67,7 +66,11 @@
 		"inspectorIds",
 		"environmentalServicesOfficerId",
 		"legalOfficerId",
-		"applicantId"
+		"applicantId",
+		"welshLanguage",
+		"mapZoomLevel",
+		"secretaryOfState",
+		"migrationStatus"
 	],
 	"properties": {
 		"caseId": {

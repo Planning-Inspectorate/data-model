@@ -7,23 +7,23 @@
 | Property                              | Type     | Required | Nullable       | Defined by                                                                                                          |
 | :------------------------------------ | :------- | :------- | :------------- | :------------------------------------------------------------------------------------------------------------------ |
 | [id](#id)                             | `string` | Required | cannot be null | [Service User](service-user-properties-id.md "service-user.schema.json#/properties/id")                             |
-| [salutation](#salutation)             | `string` | Optional | cannot be null | [Service User](service-user-properties-salutation.md "service-user.schema.json#/properties/salutation")             |
-| [firstName](#firstname)               | `string` | Optional | cannot be null | [Service User](service-user-properties-firstname.md "service-user.schema.json#/properties/firstName")               |
-| [lastName](#lastname)                 | `string` | Optional | cannot be null | [Service User](service-user-properties-lastname.md "service-user.schema.json#/properties/lastName")                 |
-| [addressLine1](#addressline1)         | `string` | Optional | cannot be null | [Service User](service-user-properties-addressline1.md "service-user.schema.json#/properties/addressLine1")         |
-| [addressLine2](#addressline2)         | `string` | Optional | cannot be null | [Service User](service-user-properties-addressline2.md "service-user.schema.json#/properties/addressLine2")         |
-| [addressTown](#addresstown)           | `string` | Optional | cannot be null | [Service User](service-user-properties-addresstown.md "service-user.schema.json#/properties/addressTown")           |
-| [addressCounty](#addresscounty)       | `string` | Optional | cannot be null | [Service User](service-user-properties-addresscounty.md "service-user.schema.json#/properties/addressCounty")       |
-| [postcode](#postcode)                 | `string` | Optional | cannot be null | [Service User](service-user-properties-postcode.md "service-user.schema.json#/properties/postcode")                 |
-| [addressCountry](#addresscountry)     | `string` | Optional | cannot be null | [Service User](service-user-properties-addresscountry.md "service-user.schema.json#/properties/addressCountry")     |
-| [organisation](#organisation)         | `string` | Optional | cannot be null | [Service User](service-user-properties-organisation.md "service-user.schema.json#/properties/organisation")         |
-| [organisationType](#organisationtype) | `string` | Optional | cannot be null | [Service User](service-user-properties-organisationtype.md "service-user.schema.json#/properties/organisationType") |
-| [role](#role)                         | `string` | Optional | cannot be null | [Service User](service-user-properties-role.md "service-user.schema.json#/properties/role")                         |
-| [telephoneNumber](#telephonenumber)   | `string` | Optional | cannot be null | [Service User](service-user-properties-telephonenumber.md "service-user.schema.json#/properties/telephoneNumber")   |
-| [otherPhoneNumber](#otherphonenumber) | `string` | Optional | cannot be null | [Service User](service-user-properties-otherphonenumber.md "service-user.schema.json#/properties/otherPhoneNumber") |
-| [faxNumber](#faxnumber)               | `string` | Optional | cannot be null | [Service User](service-user-properties-faxnumber.md "service-user.schema.json#/properties/faxNumber")               |
-| [emailAddress](#emailaddress)         | `string` | Optional | cannot be null | [Service User](service-user-properties-emailaddress.md "service-user.schema.json#/properties/emailAddress")         |
-| [webAddress](#webaddress)             | `string` | Optional | cannot be null | [Service User](service-user-properties-webaddress.md "service-user.schema.json#/properties/webAddress")             |
+| [salutation](#salutation)             | `string` | Required | can be null    | [Service User](service-user-properties-salutation.md "service-user.schema.json#/properties/salutation")             |
+| [firstName](#firstname)               | `string` | Required | can be null    | [Service User](service-user-properties-firstname.md "service-user.schema.json#/properties/firstName")               |
+| [lastName](#lastname)                 | `string` | Required | can be null    | [Service User](service-user-properties-lastname.md "service-user.schema.json#/properties/lastName")                 |
+| [addressLine1](#addressline1)         | `string` | Required | can be null    | [Service User](service-user-properties-addressline1.md "service-user.schema.json#/properties/addressLine1")         |
+| [addressLine2](#addressline2)         | `string` | Required | can be null    | [Service User](service-user-properties-addressline2.md "service-user.schema.json#/properties/addressLine2")         |
+| [addressTown](#addresstown)           | `string` | Required | can be null    | [Service User](service-user-properties-addresstown.md "service-user.schema.json#/properties/addressTown")           |
+| [addressCounty](#addresscounty)       | `string` | Required | can be null    | [Service User](service-user-properties-addresscounty.md "service-user.schema.json#/properties/addressCounty")       |
+| [postcode](#postcode)                 | `string` | Required | can be null    | [Service User](service-user-properties-postcode.md "service-user.schema.json#/properties/postcode")                 |
+| [addressCountry](#addresscountry)     | `string` | Required | can be null    | [Service User](service-user-properties-addresscountry.md "service-user.schema.json#/properties/addressCountry")     |
+| [organisation](#organisation)         | `string` | Required | can be null    | [Service User](service-user-properties-organisation.md "service-user.schema.json#/properties/organisation")         |
+| [organisationType](#organisationtype) | `string` | Required | can be null    | [Service User](service-user-properties-organisationtype.md "service-user.schema.json#/properties/organisationType") |
+| [role](#role)                         | `string` | Required | can be null    | [Service User](service-user-properties-role.md "service-user.schema.json#/properties/role")                         |
+| [telephoneNumber](#telephonenumber)   | `string` | Required | can be null    | [Service User](service-user-properties-telephonenumber.md "service-user.schema.json#/properties/telephoneNumber")   |
+| [otherPhoneNumber](#otherphonenumber) | `string` | Required | can be null    | [Service User](service-user-properties-otherphonenumber.md "service-user.schema.json#/properties/otherPhoneNumber") |
+| [faxNumber](#faxnumber)               | `string` | Required | can be null    | [Service User](service-user-properties-faxnumber.md "service-user.schema.json#/properties/faxNumber")               |
+| [emailAddress](#emailaddress)         | `string` | Required | can be null    | [Service User](service-user-properties-emailaddress.md "service-user.schema.json#/properties/emailAddress")         |
+| [webAddress](#webaddress)             | `string` | Required | can be null    | [Service User](service-user-properties-webaddress.md "service-user.schema.json#/properties/webAddress")             |
 | [serviceUserType](#serviceusertype)   | `string` | Required | cannot be null | [Service User](service-user-properties-serviceusertype.md "service-user.schema.json#/properties/serviceUserType")   |
 | [caseReference](#casereference)       | `string` | Required | cannot be null | [Service User](service-user-properties-casereference.md "service-user.schema.json#/properties/caseReference")       |
 | [sourceSystem](#sourcesystem)         | `string` | Required | cannot be null | [Service User](service-user-properties-sourcesystem.md "service-user.schema.json#/properties/sourceSystem")         |
@@ -59,11 +59,11 @@ A formal greeting, e.g., Mr, Mrs, Ms.
 
 `salutation`
 
-*   is optional
+*   is required
 
 *   Type: `string`
 
-*   cannot be null
+*   can be null
 
 *   defined in: [Service User](service-user-properties-salutation.md "service-user.schema.json#/properties/salutation")
 
@@ -83,11 +83,11 @@ The first name of the individual.
 
 `firstName`
 
-*   is optional
+*   is required
 
 *   Type: `string`
 
-*   cannot be null
+*   can be null
 
 *   defined in: [Service User](service-user-properties-firstname.md "service-user.schema.json#/properties/firstName")
 
@@ -107,11 +107,11 @@ The last name of the individual.
 
 `lastName`
 
-*   is optional
+*   is required
 
 *   Type: `string`
 
-*   cannot be null
+*   can be null
 
 *   defined in: [Service User](service-user-properties-lastname.md "service-user.schema.json#/properties/lastName")
 
@@ -131,11 +131,11 @@ The first line of the address.
 
 `addressLine1`
 
-*   is optional
+*   is required
 
 *   Type: `string`
 
-*   cannot be null
+*   can be null
 
 *   defined in: [Service User](service-user-properties-addressline1.md "service-user.schema.json#/properties/addressLine1")
 
@@ -155,11 +155,11 @@ The second line of the address, usually includes suite or apartment number.
 
 `addressLine2`
 
-*   is optional
+*   is required
 
 *   Type: `string`
 
-*   cannot be null
+*   can be null
 
 *   defined in: [Service User](service-user-properties-addressline2.md "service-user.schema.json#/properties/addressLine2")
 
@@ -179,11 +179,11 @@ The town or city of the address.
 
 `addressTown`
 
-*   is optional
+*   is required
 
 *   Type: `string`
 
-*   cannot be null
+*   can be null
 
 *   defined in: [Service User](service-user-properties-addresstown.md "service-user.schema.json#/properties/addressTown")
 
@@ -203,11 +203,11 @@ The county in which the town or city is located.
 
 `addressCounty`
 
-*   is optional
+*   is required
 
 *   Type: `string`
 
-*   cannot be null
+*   can be null
 
 *   defined in: [Service User](service-user-properties-addresscounty.md "service-user.schema.json#/properties/addressCounty")
 
@@ -227,11 +227,11 @@ The postal code for the address.
 
 `postcode`
 
-*   is optional
+*   is required
 
 *   Type: `string`
 
-*   cannot be null
+*   can be null
 
 *   defined in: [Service User](service-user-properties-postcode.md "service-user.schema.json#/properties/postcode")
 
@@ -251,11 +251,11 @@ The country of the address.
 
 `addressCountry`
 
-*   is optional
+*   is required
 
 *   Type: `string`
 
-*   cannot be null
+*   can be null
 
 *   defined in: [Service User](service-user-properties-addresscountry.md "service-user.schema.json#/properties/addressCountry")
 
@@ -275,11 +275,11 @@ The name of the organisation associated with the individual.
 
 `organisation`
 
-*   is optional
+*   is required
 
 *   Type: `string`
 
-*   cannot be null
+*   can be null
 
 *   defined in: [Service User](service-user-properties-organisation.md "service-user.schema.json#/properties/organisation")
 
@@ -299,11 +299,11 @@ The type or nature of the organisation.
 
 `organisationType`
 
-*   is optional
+*   is required
 
 *   Type: `string`
 
-*   cannot be null
+*   can be null
 
 *   defined in: [Service User](service-user-properties-organisationtype.md "service-user.schema.json#/properties/organisationType")
 
@@ -323,11 +323,11 @@ The individual's role or position within the organisation.
 
 `role`
 
-*   is optional
+*   is required
 
 *   Type: `string`
 
-*   cannot be null
+*   can be null
 
 *   defined in: [Service User](service-user-properties-role.md "service-user.schema.json#/properties/role")
 
@@ -347,11 +347,11 @@ The primary telephone contact number.
 
 `telephoneNumber`
 
-*   is optional
+*   is required
 
 *   Type: `string`
 
-*   cannot be null
+*   can be null
 
 *   defined in: [Service User](service-user-properties-telephonenumber.md "service-user.schema.json#/properties/telephoneNumber")
 
@@ -371,11 +371,11 @@ An alternate or secondary phone number.
 
 `otherPhoneNumber`
 
-*   is optional
+*   is required
 
 *   Type: `string`
 
-*   cannot be null
+*   can be null
 
 *   defined in: [Service User](service-user-properties-otherphonenumber.md "service-user.schema.json#/properties/otherPhoneNumber")
 
@@ -395,11 +395,11 @@ A fax contact number.
 
 `faxNumber`
 
-*   is optional
+*   is required
 
 *   Type: `string`
 
-*   cannot be null
+*   can be null
 
 *   defined in: [Service User](service-user-properties-faxnumber.md "service-user.schema.json#/properties/faxNumber")
 
@@ -419,11 +419,11 @@ The primary email address for contact.
 
 `emailAddress`
 
-*   is optional
+*   is required
 
 *   Type: `string`
 
-*   cannot be null
+*   can be null
 
 *   defined in: [Service User](service-user-properties-emailaddress.md "service-user.schema.json#/properties/emailAddress")
 
@@ -443,11 +443,11 @@ Website address or URL.
 
 `webAddress`
 
-*   is optional
+*   is required
 
 *   Type: `string`
 
-*   cannot be null
+*   can be null
 
 *   defined in: [Service User](service-user-properties-webaddress.md "service-user.schema.json#/properties/webAddress")
 

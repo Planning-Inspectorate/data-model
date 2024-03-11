@@ -7,39 +7,39 @@
 | Property                                          | Type      | Required | Nullable       | Defined by                                                                                                                         |
 | :------------------------------------------------ | :-------- | :------- | :------------- | :--------------------------------------------------------------------------------------------------------------------------------- |
 | [documentId](#documentid)                         | `string`  | Required | cannot be null | [NSIP Document](nsip-document-properties-documentid.md "nsip-document.schema.json#/properties/documentId")                         |
-| [caseId](#caseid)                                 | `integer` | Optional | cannot be null | [NSIP Document](nsip-document-properties-caseid.md "nsip-document.schema.json#/properties/caseId")                                 |
-| [caseRef](#caseref)                               | `string`  | Optional | cannot be null | [NSIP Document](nsip-document-properties-caseref.md "nsip-document.schema.json#/properties/caseRef")                               |
-| [documentReference](#documentreference)           | `string`  | Optional | cannot be null | [NSIP Document](nsip-document-properties-documentreference.md "nsip-document.schema.json#/properties/documentReference")           |
+| [caseId](#caseid)                                 | `integer` | Required | can be null    | [NSIP Document](nsip-document-properties-caseid.md "nsip-document.schema.json#/properties/caseId")                                 |
+| [caseRef](#caseref)                               | `string`  | Required | can be null    | [NSIP Document](nsip-document-properties-caseref.md "nsip-document.schema.json#/properties/caseRef")                               |
+| [documentReference](#documentreference)           | `string`  | Required | can be null    | [NSIP Document](nsip-document-properties-documentreference.md "nsip-document.schema.json#/properties/documentReference")           |
 | [version](#version)                               | `integer` | Required | cannot be null | [NSIP Document](nsip-document-properties-version.md "nsip-document.schema.json#/properties/version")                               |
-| [examinationRefNo](#examinationrefno)             | `string`  | Optional | cannot be null | [NSIP Document](nsip-document-properties-examinationrefno.md "nsip-document.schema.json#/properties/examinationRefNo")             |
+| [examinationRefNo](#examinationrefno)             | `string`  | Required | can be null    | [NSIP Document](nsip-document-properties-examinationrefno.md "nsip-document.schema.json#/properties/examinationRefNo")             |
 | [filename](#filename)                             | `string`  | Required | cannot be null | [NSIP Document](nsip-document-properties-filename.md "nsip-document.schema.json#/properties/filename")                             |
 | [originalFilename](#originalfilename)             | `string`  | Required | cannot be null | [NSIP Document](nsip-document-properties-originalfilename.md "nsip-document.schema.json#/properties/originalFilename")             |
 | [size](#size)                                     | `integer` | Required | cannot be null | [NSIP Document](nsip-document-properties-size.md "nsip-document.schema.json#/properties/size")                                     |
-| [mime](#mime)                                     | `string`  | Optional | cannot be null | [NSIP Document](nsip-document-properties-mime.md "nsip-document.schema.json#/properties/mime")                                     |
+| [mime](#mime)                                     | `string`  | Required | can be null    | [NSIP Document](nsip-document-properties-mime.md "nsip-document.schema.json#/properties/mime")                                     |
 | [documentURI](#documenturi)                       | `string`  | Required | cannot be null | [NSIP Document](nsip-document-properties-documenturi.md "nsip-document.schema.json#/properties/documentURI")                       |
-| [publishedDocumentURI](#publisheddocumenturi)     | `string`  | Optional | cannot be null | [NSIP Document](nsip-document-properties-publisheddocumenturi.md "nsip-document.schema.json#/properties/publishedDocumentURI")     |
-| [path](#path)                                     | `string`  | Optional | cannot be null | [NSIP Document](nsip-document-properties-path.md "nsip-document.schema.json#/properties/path")                                     |
-| [virusCheckStatus](#viruscheckstatus)             | `string`  | Optional | cannot be null | [NSIP Document](nsip-document-properties-viruscheckstatus.md "nsip-document.schema.json#/properties/virusCheckStatus")             |
-| [fileMD5](#filemd5)                               | `string`  | Optional | cannot be null | [NSIP Document](nsip-document-properties-filemd5.md "nsip-document.schema.json#/properties/fileMD5")                               |
+| [publishedDocumentURI](#publisheddocumenturi)     | `string`  | Required | can be null    | [NSIP Document](nsip-document-properties-publisheddocumenturi.md "nsip-document.schema.json#/properties/publishedDocumentURI")     |
+| [path](#path)                                     | `string`  | Required | can be null    | [NSIP Document](nsip-document-properties-path.md "nsip-document.schema.json#/properties/path")                                     |
+| [virusCheckStatus](#viruscheckstatus)             | `string`  | Required | can be null    | [NSIP Document](nsip-document-properties-viruscheckstatus.md "nsip-document.schema.json#/properties/virusCheckStatus")             |
+| [fileMD5](#filemd5)                               | `string`  | Required | can be null    | [NSIP Document](nsip-document-properties-filemd5.md "nsip-document.schema.json#/properties/fileMD5")                               |
 | [dateCreated](#datecreated)                       | `string`  | Required | cannot be null | [NSIP Document](nsip-document-properties-datecreated.md "nsip-document.schema.json#/properties/dateCreated")                       |
-| [lastModified](#lastmodified)                     | `string`  | Optional | cannot be null | [NSIP Document](nsip-document-properties-lastmodified.md "nsip-document.schema.json#/properties/lastModified")                     |
-| [caseType](#casetype)                             | `string`  | Optional | cannot be null | [NSIP Document](nsip-document-properties-casetype.md "nsip-document.schema.json#/properties/caseType")                             |
-| [redactedStatus](#redactedstatus)                 | `string`  | Optional | cannot be null | [NSIP Document](nsip-document-properties-redactedstatus.md "nsip-document.schema.json#/properties/redactedStatus")                 |
-| [publishedStatus](#publishedstatus)               | `string`  | Optional | cannot be null | [NSIP Document](nsip-document-properties-publishedstatus.md "nsip-document.schema.json#/properties/publishedStatus")               |
-| [datePublished](#datepublished)                   | `string`  | Optional | cannot be null | [NSIP Document](nsip-document-properties-datepublished.md "nsip-document.schema.json#/properties/datePublished")                   |
-| [documentType](#documenttype)                     | `string`  | Optional | cannot be null | [NSIP Document](nsip-document-properties-documenttype.md "nsip-document.schema.json#/properties/documentType")                     |
-| [securityClassification](#securityclassification) | `string`  | Optional | cannot be null | [NSIP Document](nsip-document-properties-securityclassification.md "nsip-document.schema.json#/properties/securityClassification") |
-| [sourceSystem](#sourcesystem)                     | `string`  | Optional | cannot be null | [NSIP Document](nsip-document-properties-sourcesystem.md "nsip-document.schema.json#/properties/sourceSystem")                     |
-| [origin](#origin)                                 | `string`  | Optional | cannot be null | [NSIP Document](nsip-document-properties-origin.md "nsip-document.schema.json#/properties/origin")                                 |
-| [owner](#owner)                                   | `string`  | Optional | cannot be null | [NSIP Document](nsip-document-properties-owner.md "nsip-document.schema.json#/properties/owner")                                   |
-| [author](#author)                                 | `string`  | Optional | cannot be null | [NSIP Document](nsip-document-properties-author.md "nsip-document.schema.json#/properties/author")                                 |
-| [representative](#representative)                 | `string`  | Optional | cannot be null | [NSIP Document](nsip-document-properties-representative.md "nsip-document.schema.json#/properties/representative")                 |
-| [description](#description)                       | `string`  | Optional | cannot be null | [NSIP Document](nsip-document-properties-description.md "nsip-document.schema.json#/properties/description")                       |
-| [documentCaseStage](#documentcasestage)           | `string`  | Optional | cannot be null | [NSIP Document](nsip-document-properties-documentcasestage.md "nsip-document.schema.json#/properties/documentCaseStage")           |
-| [filter1](#filter1)                               | `string`  | Optional | cannot be null | [NSIP Document](nsip-document-properties-filter1.md "nsip-document.schema.json#/properties/filter1")                               |
-| [filter2](#filter2)                               | `string`  | Optional | cannot be null | [NSIP Document](nsip-document-properties-filter2.md "nsip-document.schema.json#/properties/filter2")                               |
-| [horizonFolderId](#horizonfolderid)               | `string`  | Optional | cannot be null | [NSIP Document](nsip-document-properties-horizonfolderid.md "nsip-document.schema.json#/properties/horizonFolderId")               |
-| [transcriptId](#transcriptid)                     | `string`  | Optional | cannot be null | [NSIP Document](nsip-document-properties-transcriptid.md "nsip-document.schema.json#/properties/transcriptId")                     |
+| [lastModified](#lastmodified)                     | `string`  | Required | can be null    | [NSIP Document](nsip-document-properties-lastmodified.md "nsip-document.schema.json#/properties/lastModified")                     |
+| [caseType](#casetype)                             | `string`  | Required | can be null    | [NSIP Document](nsip-document-properties-casetype.md "nsip-document.schema.json#/properties/caseType")                             |
+| [redactedStatus](#redactedstatus)                 | `string`  | Required | can be null    | [NSIP Document](nsip-document-properties-redactedstatus.md "nsip-document.schema.json#/properties/redactedStatus")                 |
+| [publishedStatus](#publishedstatus)               | `string`  | Required | can be null    | [NSIP Document](nsip-document-properties-publishedstatus.md "nsip-document.schema.json#/properties/publishedStatus")               |
+| [datePublished](#datepublished)                   | `string`  | Required | can be null    | [NSIP Document](nsip-document-properties-datepublished.md "nsip-document.schema.json#/properties/datePublished")                   |
+| [documentType](#documenttype)                     | `string`  | Required | can be null    | [NSIP Document](nsip-document-properties-documenttype.md "nsip-document.schema.json#/properties/documentType")                     |
+| [securityClassification](#securityclassification) | `string`  | Required | can be null    | [NSIP Document](nsip-document-properties-securityclassification.md "nsip-document.schema.json#/properties/securityClassification") |
+| [sourceSystem](#sourcesystem)                     | `string`  | Required | can be null    | [NSIP Document](nsip-document-properties-sourcesystem.md "nsip-document.schema.json#/properties/sourceSystem")                     |
+| [origin](#origin)                                 | `string`  | Required | can be null    | [NSIP Document](nsip-document-properties-origin.md "nsip-document.schema.json#/properties/origin")                                 |
+| [owner](#owner)                                   | `string`  | Required | can be null    | [NSIP Document](nsip-document-properties-owner.md "nsip-document.schema.json#/properties/owner")                                   |
+| [author](#author)                                 | `string`  | Required | can be null    | [NSIP Document](nsip-document-properties-author.md "nsip-document.schema.json#/properties/author")                                 |
+| [representative](#representative)                 | `string`  | Required | can be null    | [NSIP Document](nsip-document-properties-representative.md "nsip-document.schema.json#/properties/representative")                 |
+| [description](#description)                       | `string`  | Required | can be null    | [NSIP Document](nsip-document-properties-description.md "nsip-document.schema.json#/properties/description")                       |
+| [documentCaseStage](#documentcasestage)           | `string`  | Required | can be null    | [NSIP Document](nsip-document-properties-documentcasestage.md "nsip-document.schema.json#/properties/documentCaseStage")           |
+| [filter1](#filter1)                               | `string`  | Required | can be null    | [NSIP Document](nsip-document-properties-filter1.md "nsip-document.schema.json#/properties/filter1")                               |
+| [filter2](#filter2)                               | `string`  | Required | can be null    | [NSIP Document](nsip-document-properties-filter2.md "nsip-document.schema.json#/properties/filter2")                               |
+| [horizonFolderId](#horizonfolderid)               | `string`  | Required | can be null    | [NSIP Document](nsip-document-properties-horizonfolderid.md "nsip-document.schema.json#/properties/horizonFolderId")               |
+| [transcriptId](#transcriptid)                     | `string`  | Required | can be null    | [NSIP Document](nsip-document-properties-transcriptid.md "nsip-document.schema.json#/properties/transcriptId")                     |
 
 ## documentId
 
@@ -71,11 +71,11 @@ Internal case identifier
 
 `caseId`
 
-*   is optional
+*   is required
 
 *   Type: `integer`
 
-*   cannot be null
+*   can be null
 
 *   defined in: [NSIP Document](nsip-document-properties-caseid.md "nsip-document.schema.json#/properties/caseId")
 
@@ -95,11 +95,11 @@ Internal case identifier
 
 `caseRef`
 
-*   is optional
+*   is required
 
 *   Type: `string`
 
-*   cannot be null
+*   can be null
 
 *   defined in: [NSIP Document](nsip-document-properties-caseref.md "nsip-document.schema.json#/properties/caseRef")
 
@@ -119,11 +119,11 @@ Reference used throughout ODT <CaseRef>-<SequenceNo>
 
 `documentReference`
 
-*   is optional
+*   is required
 
 *   Type: `string`
 
-*   cannot be null
+*   can be null
 
 *   defined in: [NSIP Document](nsip-document-properties-documentreference.md "nsip-document.schema.json#/properties/documentReference")
 
@@ -167,11 +167,11 @@ Reference used throughout ODT <CaseRef>-<SequenceNo>
 
 `examinationRefNo`
 
-*   is optional
+*   is required
 
 *   Type: `string`
 
-*   cannot be null
+*   can be null
 
 *   defined in: [NSIP Document](nsip-document-properties-examinationrefno.md "nsip-document.schema.json#/properties/examinationRefNo")
 
@@ -263,11 +263,11 @@ Original filename of file
 
 `mime`
 
-*   is optional
+*   is required
 
 *   Type: `string`
 
-*   cannot be null
+*   can be null
 
 *   defined in: [NSIP Document](nsip-document-properties-mime.md "nsip-document.schema.json#/properties/mime")
 
@@ -311,11 +311,11 @@ The location of the published document. Only applicable to documents which are p
 
 `publishedDocumentURI`
 
-*   is optional
+*   is required
 
 *   Type: `string`
 
-*   cannot be null
+*   can be null
 
 *   defined in: [NSIP Document](nsip-document-properties-publisheddocumenturi.md "nsip-document.schema.json#/properties/publishedDocumentURI")
 
@@ -335,11 +335,11 @@ The location of the published document. Only applicable to documents which are p
 
 `path`
 
-*   is optional
+*   is required
 
 *   Type: `string`
 
-*   cannot be null
+*   can be null
 
 *   defined in: [NSIP Document](nsip-document-properties-path.md "nsip-document.schema.json#/properties/path")
 
@@ -359,11 +359,11 @@ The location of the published document. Only applicable to documents which are p
 
 `virusCheckStatus`
 
-*   is optional
+*   is required
 
 *   Type: `string`
 
-*   cannot be null
+*   can be null
 
 *   defined in: [NSIP Document](nsip-document-properties-viruscheckstatus.md "nsip-document.schema.json#/properties/virusCheckStatus")
 
@@ -387,11 +387,11 @@ The location of the published document. Only applicable to documents which are p
 
 `fileMD5`
 
-*   is optional
+*   is required
 
 *   Type: `string`
 
-*   cannot be null
+*   can be null
 
 *   defined in: [NSIP Document](nsip-document-properties-filemd5.md "nsip-document.schema.json#/properties/fileMD5")
 
@@ -439,11 +439,11 @@ The location of the published document. Only applicable to documents which are p
 
 `lastModified`
 
-*   is optional
+*   is required
 
 *   Type: `string`
 
-*   cannot be null
+*   can be null
 
 *   defined in: [NSIP Document](nsip-document-properties-lastmodified.md "nsip-document.schema.json#/properties/lastModified")
 
@@ -467,11 +467,11 @@ The location of the published document. Only applicable to documents which are p
 
 `caseType`
 
-*   is optional
+*   is required
 
 *   Type: `string`
 
-*   cannot be null
+*   can be null
 
 *   defined in: [NSIP Document](nsip-document-properties-casetype.md "nsip-document.schema.json#/properties/caseType")
 
@@ -494,11 +494,11 @@ The location of the published document. Only applicable to documents which are p
 
 `redactedStatus`
 
-*   is optional
+*   is required
 
 *   Type: `string`
 
-*   cannot be null
+*   can be null
 
 *   defined in: [NSIP Document](nsip-document-properties-redactedstatus.md "nsip-document.schema.json#/properties/redactedStatus")
 
@@ -521,11 +521,11 @@ The location of the published document. Only applicable to documents which are p
 
 `publishedStatus`
 
-*   is optional
+*   is required
 
 *   Type: `string`
 
-*   cannot be null
+*   can be null
 
 *   defined in: [NSIP Document](nsip-document-properties-publishedstatus.md "nsip-document.schema.json#/properties/publishedStatus")
 
@@ -553,11 +553,11 @@ The location of the published document. Only applicable to documents which are p
 
 `datePublished`
 
-*   is optional
+*   is required
 
 *   Type: `string`
 
-*   cannot be null
+*   can be null
 
 *   defined in: [NSIP Document](nsip-document-properties-datepublished.md "nsip-document.schema.json#/properties/datePublished")
 
@@ -581,11 +581,11 @@ The location of the published document. Only applicable to documents which are p
 
 `documentType`
 
-*   is optional
+*   is required
 
 *   Type: `string`
 
-*   cannot be null
+*   can be null
 
 *   defined in: [NSIP Document](nsip-document-properties-documenttype.md "nsip-document.schema.json#/properties/documentType")
 
@@ -605,11 +605,11 @@ The location of the published document. Only applicable to documents which are p
 
 `securityClassification`
 
-*   is optional
+*   is required
 
 *   Type: `string`
 
-*   cannot be null
+*   can be null
 
 *   defined in: [NSIP Document](nsip-document-properties-securityclassification.md "nsip-document.schema.json#/properties/securityClassification")
 
@@ -634,11 +634,11 @@ The location of the published document. Only applicable to documents which are p
 
 `sourceSystem`
 
-*   is optional
+*   is required
 
 *   Type: `string`
 
-*   cannot be null
+*   can be null
 
 *   defined in: [NSIP Document](nsip-document-properties-sourcesystem.md "nsip-document.schema.json#/properties/sourceSystem")
 
@@ -664,11 +664,11 @@ The location of the published document. Only applicable to documents which are p
 
 `origin`
 
-*   is optional
+*   is required
 
 *   Type: `string`
 
-*   cannot be null
+*   can be null
 
 *   defined in: [NSIP Document](nsip-document-properties-origin.md "nsip-document.schema.json#/properties/origin")
 
@@ -693,11 +693,11 @@ The location of the published document. Only applicable to documents which are p
 
 `owner`
 
-*   is optional
+*   is required
 
 *   Type: `string`
 
-*   cannot be null
+*   can be null
 
 *   defined in: [NSIP Document](nsip-document-properties-owner.md "nsip-document.schema.json#/properties/owner")
 
@@ -711,11 +711,11 @@ Name of person who authored document
 
 `author`
 
-*   is optional
+*   is required
 
 *   Type: `string`
 
-*   cannot be null
+*   can be null
 
 *   defined in: [NSIP Document](nsip-document-properties-author.md "nsip-document.schema.json#/properties/author")
 
@@ -729,11 +729,11 @@ The on behalf of or agent submitter of document
 
 `representative`
 
-*   is optional
+*   is required
 
 *   Type: `string`
 
-*   cannot be null
+*   can be null
 
 *   defined in: [NSIP Document](nsip-document-properties-representative.md "nsip-document.schema.json#/properties/representative")
 
@@ -753,11 +753,11 @@ The on behalf of or agent submitter of document
 
 `description`
 
-*   is optional
+*   is required
 
 *   Type: `string`
 
-*   cannot be null
+*   can be null
 
 *   defined in: [NSIP Document](nsip-document-properties-description.md "nsip-document.schema.json#/properties/description")
 
@@ -777,11 +777,11 @@ The on behalf of or agent submitter of document
 
 `documentCaseStage`
 
-*   is optional
+*   is required
 
 *   Type: `string`
 
-*   cannot be null
+*   can be null
 
 *   defined in: [NSIP Document](nsip-document-properties-documentcasestage.md "nsip-document.schema.json#/properties/documentCaseStage")
 
@@ -812,11 +812,11 @@ Filter field to provide additional filtering
 
 `filter1`
 
-*   is optional
+*   is required
 
 *   Type: `string`
 
-*   cannot be null
+*   can be null
 
 *   defined in: [NSIP Document](nsip-document-properties-filter1.md "nsip-document.schema.json#/properties/filter1")
 
@@ -836,11 +836,11 @@ Filter field to provide additional filtering
 
 `filter2`
 
-*   is optional
+*   is required
 
 *   Type: `string`
 
-*   cannot be null
+*   can be null
 
 *   defined in: [NSIP Document](nsip-document-properties-filter2.md "nsip-document.schema.json#/properties/filter2")
 
@@ -860,11 +860,11 @@ The folder where the document exists
 
 `horizonFolderId`
 
-*   is optional
+*   is required
 
 *   Type: `string`
 
-*   cannot be null
+*   can be null
 
 *   defined in: [NSIP Document](nsip-document-properties-horizonfolderid.md "nsip-document.schema.json#/properties/horizonFolderId")
 
@@ -878,11 +878,11 @@ The GUID of the transcript document (if one was provided).
 
 `transcriptId`
 
-*   is optional
+*   is required
 
 *   Type: `string`
 
-*   cannot be null
+*   can be null
 
 *   defined in: [NSIP Document](nsip-document-properties-transcriptid.md "nsip-document.schema.json#/properties/transcriptId")
 

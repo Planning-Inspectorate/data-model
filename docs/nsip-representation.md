@@ -7,23 +7,23 @@
 | Property                                          | Type      | Required | Nullable       | Defined by                                                                                                                                      |
 | :------------------------------------------------ | :-------- | :------- | :------------- | :---------------------------------------------------------------------------------------------------------------------------------------------- |
 | [representationId](#representationid)             | `integer` | Required | cannot be null | [Representation](nsip-representation-properties-representationid.md "nsip-representation.schema.json#/properties/representationId")             |
-| [referenceId](#referenceid)                       | `string`  | Optional | cannot be null | [Representation](nsip-representation-properties-referenceid.md "nsip-representation.schema.json#/properties/referenceId")                       |
-| [examinationLibraryRef](#examinationlibraryref)   | `string`  | Optional | cannot be null | [Representation](nsip-representation-properties-examinationlibraryref.md "nsip-representation.schema.json#/properties/examinationLibraryRef")   |
+| [referenceId](#referenceid)                       | `string`  | Required | can be null    | [Representation](nsip-representation-properties-referenceid.md "nsip-representation.schema.json#/properties/referenceId")                       |
+| [examinationLibraryRef](#examinationlibraryref)   | `string`  | Required | can be null    | [Representation](nsip-representation-properties-examinationlibraryref.md "nsip-representation.schema.json#/properties/examinationLibraryRef")   |
 | [caseRef](#caseref)                               | `string`  | Required | cannot be null | [Representation](nsip-representation-properties-caseref.md "nsip-representation.schema.json#/properties/caseRef")                               |
-| [caseId](#caseid)                                 | `integer` | Optional | cannot be null | [Representation](nsip-representation-properties-caseid.md "nsip-representation.schema.json#/properties/caseId")                                 |
-| [status](#status)                                 | `string`  | Optional | cannot be null | [Representation](nsip-representation-properties-status.md "nsip-representation.schema.json#/properties/status")                                 |
+| [caseId](#caseid)                                 | `integer` | Required | can be null    | [Representation](nsip-representation-properties-caseid.md "nsip-representation.schema.json#/properties/caseId")                                 |
+| [status](#status)                                 | `string`  | Required | can be null    | [Representation](nsip-representation-properties-status.md "nsip-representation.schema.json#/properties/status")                                 |
 | [originalRepresentation](#originalrepresentation) | `string`  | Required | cannot be null | [Representation](nsip-representation-properties-originalrepresentation.md "nsip-representation.schema.json#/properties/originalRepresentation") |
-| [redacted](#redacted)                             | `boolean` | Optional | cannot be null | [Representation](nsip-representation-properties-redacted.md "nsip-representation.schema.json#/properties/redacted")                             |
-| [redactedRepresentation](#redactedrepresentation) | `string`  | Optional | cannot be null | [Representation](nsip-representation-properties-redactedrepresentation.md "nsip-representation.schema.json#/properties/redactedRepresentation") |
-| [redactedBy](#redactedby)                         | `string`  | Optional | cannot be null | [Representation](nsip-representation-properties-redactedby.md "nsip-representation.schema.json#/properties/redactedBy")                         |
-| [redactedNotes](#redactednotes)                   | `string`  | Optional | cannot be null | [Representation](nsip-representation-properties-redactednotes.md "nsip-representation.schema.json#/properties/redactedNotes")                   |
-| [representationFrom](#representationfrom)         | `string`  | Optional | cannot be null | [Representation](nsip-representation-properties-representationfrom.md "nsip-representation.schema.json#/properties/representationFrom")         |
+| [redacted](#redacted)                             | `boolean` | Required | can be null    | [Representation](nsip-representation-properties-redacted.md "nsip-representation.schema.json#/properties/redacted")                             |
+| [redactedRepresentation](#redactedrepresentation) | `string`  | Required | can be null    | [Representation](nsip-representation-properties-redactedrepresentation.md "nsip-representation.schema.json#/properties/redactedRepresentation") |
+| [redactedBy](#redactedby)                         | `string`  | Required | can be null    | [Representation](nsip-representation-properties-redactedby.md "nsip-representation.schema.json#/properties/redactedBy")                         |
+| [redactedNotes](#redactednotes)                   | `string`  | Required | can be null    | [Representation](nsip-representation-properties-redactednotes.md "nsip-representation.schema.json#/properties/redactedNotes")                   |
+| [representationFrom](#representationfrom)         | `string`  | Required | can be null    | [Representation](nsip-representation-properties-representationfrom.md "nsip-representation.schema.json#/properties/representationFrom")         |
 | [representedId](#representedid)                   | `string`  | Required | cannot be null | [Representation](nsip-representation-properties-representedid.md "nsip-representation.schema.json#/properties/representedId")                   |
-| [representativeId](#representativeid)             | `string`  | Optional | cannot be null | [Representation](nsip-representation-properties-representativeid.md "nsip-representation.schema.json#/properties/representativeId")             |
-| [registerFor](#registerfor)                       | `string`  | Optional | cannot be null | [Representation](nsip-representation-properties-registerfor.md "nsip-representation.schema.json#/properties/registerFor")                       |
-| [representationType](#representationtype)         | `string`  | Optional | cannot be null | [Representation](nsip-representation-properties-representationtype.md "nsip-representation.schema.json#/properties/representationType")         |
+| [representativeId](#representativeid)             | `string`  | Required | can be null    | [Representation](nsip-representation-properties-representativeid.md "nsip-representation.schema.json#/properties/representativeId")             |
+| [registerFor](#registerfor)                       | `string`  | Required | can be null    | [Representation](nsip-representation-properties-registerfor.md "nsip-representation.schema.json#/properties/registerFor")                       |
+| [representationType](#representationtype)         | `string`  | Required | can be null    | [Representation](nsip-representation-properties-representationtype.md "nsip-representation.schema.json#/properties/representationType")         |
 | [dateReceived](#datereceived)                     | `string`  | Required | cannot be null | [Representation](nsip-representation-properties-datereceived.md "nsip-representation.schema.json#/properties/dateReceived")                     |
-| [attachmentIds](#attachmentids)                   | `array`   | Optional | cannot be null | [Representation](nsip-representation-properties-attachmentids.md "nsip-representation.schema.json#/properties/attachmentIds")                   |
+| [attachmentIds](#attachmentids)                   | `array`   | Required | cannot be null | [Representation](nsip-representation-properties-attachmentids.md "nsip-representation.schema.json#/properties/attachmentIds")                   |
 
 ## representationId
 
@@ -49,11 +49,11 @@
 
 `referenceId`
 
-*   is optional
+*   is required
 
 *   Type: `string`
 
-*   cannot be null
+*   can be null
 
 *   defined in: [Representation](nsip-representation-properties-referenceid.md "nsip-representation.schema.json#/properties/referenceId")
 
@@ -73,11 +73,11 @@
 
 `examinationLibraryRef`
 
-*   is optional
+*   is required
 
 *   Type: `string`
 
-*   cannot be null
+*   can be null
 
 *   defined in: [Representation](nsip-representation-properties-examinationlibraryref.md "nsip-representation.schema.json#/properties/examinationLibraryRef")
 
@@ -115,11 +115,11 @@ The unique identifier within the Back Office. This is not the same as the case r
 
 `caseId`
 
-*   is optional
+*   is required
 
 *   Type: `integer`
 
-*   cannot be null
+*   can be null
 
 *   defined in: [Representation](nsip-representation-properties-caseid.md "nsip-representation.schema.json#/properties/caseId")
 
@@ -139,11 +139,11 @@ The unique identifier within the Back Office. This is not the same as the case r
 
 `status`
 
-*   is optional
+*   is required
 
 *   Type: `string`
 
-*   cannot be null
+*   can be null
 
 *   defined in: [Representation](nsip-representation-properties-status.md "nsip-representation.schema.json#/properties/status")
 
@@ -188,11 +188,11 @@ The unique identifier within the Back Office. This is not the same as the case r
 
 `redacted`
 
-*   is optional
+*   is required
 
 *   Type: `boolean`
 
-*   cannot be null
+*   can be null
 
 *   defined in: [Representation](nsip-representation-properties-redacted.md "nsip-representation.schema.json#/properties/redacted")
 
@@ -206,11 +206,11 @@ The unique identifier within the Back Office. This is not the same as the case r
 
 `redactedRepresentation`
 
-*   is optional
+*   is required
 
 *   Type: `string`
 
-*   cannot be null
+*   can be null
 
 *   defined in: [Representation](nsip-representation-properties-redactedrepresentation.md "nsip-representation.schema.json#/properties/redactedRepresentation")
 
@@ -224,11 +224,11 @@ The unique identifier within the Back Office. This is not the same as the case r
 
 `redactedBy`
 
-*   is optional
+*   is required
 
 *   Type: `string`
 
-*   cannot be null
+*   can be null
 
 *   defined in: [Representation](nsip-representation-properties-redactedby.md "nsip-representation.schema.json#/properties/redactedBy")
 
@@ -248,11 +248,11 @@ The unique identifier within the Back Office. This is not the same as the case r
 
 `redactedNotes`
 
-*   is optional
+*   is required
 
 *   Type: `string`
 
-*   cannot be null
+*   can be null
 
 *   defined in: [Representation](nsip-representation-properties-redactednotes.md "nsip-representation.schema.json#/properties/redactedNotes")
 
@@ -272,11 +272,11 @@ The unique identifier within the Back Office. This is not the same as the case r
 
 `representationFrom`
 
-*   is optional
+*   is required
 
 *   Type: `string`
 
-*   cannot be null
+*   can be null
 
 *   defined in: [Representation](nsip-representation-properties-representationfrom.md "nsip-representation.schema.json#/properties/representationFrom")
 
@@ -318,11 +318,11 @@ ServiceUser Id of the person or organisation submitting representation in the ca
 
 `representativeId`
 
-*   is optional
+*   is required
 
 *   Type: `string`
 
-*   cannot be null
+*   can be null
 
 *   defined in: [Representation](nsip-representation-properties-representativeid.md "nsip-representation.schema.json#/properties/representativeId")
 
@@ -336,11 +336,11 @@ ServiceUser Id of the person or organisation submitting representation in the ca
 
 `registerFor`
 
-*   is optional
+*   is required
 
 *   Type: `string`
 
-*   cannot be null
+*   can be null
 
 *   defined in: [Representation](nsip-representation-properties-registerfor.md "nsip-representation.schema.json#/properties/registerFor")
 
@@ -364,11 +364,11 @@ ServiceUser Id of the person or organisation submitting representation in the ca
 
 `representationType`
 
-*   is optional
+*   is required
 
 *   Type: `string`
 
-*   cannot be null
+*   can be null
 
 *   defined in: [Representation](nsip-representation-properties-representationtype.md "nsip-representation.schema.json#/properties/representationType")
 
@@ -424,7 +424,7 @@ ServiceUser Id of the person or organisation submitting representation in the ca
 
 `attachmentIds`
 
-*   is optional
+*   is required
 
 *   Type: `string[]`
 

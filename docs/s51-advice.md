@@ -8,20 +8,20 @@
 | :---------------------------------- | :-------- | :------- | :------------- | :---------------------------------------------------------------------------------------------------------- |
 | [adviceId](#adviceid)               | `integer` | Required | cannot be null | [S51 Advice](s51-advice-properties-adviceid.md "s51-advice.schema.json#/properties/adviceId")               |
 | [adviceReference](#advicereference) | `string`  | Required | cannot be null | [S51 Advice](s51-advice-properties-advicereference.md "s51-advice.schema.json#/properties/adviceReference") |
-| [caseId](#caseid)                   | `integer` | Optional | cannot be null | [S51 Advice](s51-advice-properties-caseid.md "s51-advice.schema.json#/properties/caseId")                   |
-| [caseReference](#casereference)     | `string`  | Optional | cannot be null | [S51 Advice](s51-advice-properties-casereference.md "s51-advice.schema.json#/properties/caseReference")     |
+| [caseId](#caseid)                   | `integer` | Required | can be null    | [S51 Advice](s51-advice-properties-caseid.md "s51-advice.schema.json#/properties/caseId")                   |
+| [caseReference](#casereference)     | `string`  | Required | can be null    | [S51 Advice](s51-advice-properties-casereference.md "s51-advice.schema.json#/properties/caseReference")     |
 | [title](#title)                     | `string`  | Required | cannot be null | [S51 Advice](s51-advice-properties-title.md "s51-advice.schema.json#/properties/title")                     |
-| [from](#from)                       | `string`  | Optional | cannot be null | [S51 Advice](s51-advice-properties-from.md "s51-advice.schema.json#/properties/from")                       |
-| [agent](#agent)                     | `string`  | Optional | cannot be null | [S51 Advice](s51-advice-properties-agent.md "s51-advice.schema.json#/properties/agent")                     |
-| [method](#method)                   | `string`  | Optional | cannot be null | [S51 Advice](s51-advice-properties-method.md "s51-advice.schema.json#/properties/method")                   |
-| [enquiryDate](#enquirydate)         | `string`  | Optional | cannot be null | [S51 Advice](s51-advice-properties-enquirydate.md "s51-advice.schema.json#/properties/enquiryDate")         |
-| [enquiryDetails](#enquirydetails)   | `string`  | Optional | cannot be null | [S51 Advice](s51-advice-properties-enquirydetails.md "s51-advice.schema.json#/properties/enquiryDetails")   |
-| [adviceGivenBy](#advicegivenby)     | `string`  | Optional | cannot be null | [S51 Advice](s51-advice-properties-advicegivenby.md "s51-advice.schema.json#/properties/adviceGivenBy")     |
-| [adviceDate](#advicedate)           | `string`  | Optional | cannot be null | [S51 Advice](s51-advice-properties-advicedate.md "s51-advice.schema.json#/properties/adviceDate")           |
-| [adviceDetails](#advicedetails)     | `string`  | Optional | cannot be null | [S51 Advice](s51-advice-properties-advicedetails.md "s51-advice.schema.json#/properties/adviceDetails")     |
-| [status](#status)                   | `string`  | Optional | cannot be null | [S51 Advice](s51-advice-properties-status.md "s51-advice.schema.json#/properties/status")                   |
-| [redactionStatus](#redactionstatus) | `string`  | Optional | cannot be null | [S51 Advice](s51-advice-properties-redactionstatus.md "s51-advice.schema.json#/properties/redactionStatus") |
-| [attachmentIds](#attachmentids)     | `array`   | Optional | cannot be null | [S51 Advice](s51-advice-properties-attachmentids.md "s51-advice.schema.json#/properties/attachmentIds")     |
+| [from](#from)                       | `string`  | Required | can be null    | [S51 Advice](s51-advice-properties-from.md "s51-advice.schema.json#/properties/from")                       |
+| [agent](#agent)                     | `string`  | Required | can be null    | [S51 Advice](s51-advice-properties-agent.md "s51-advice.schema.json#/properties/agent")                     |
+| [method](#method)                   | `string`  | Required | can be null    | [S51 Advice](s51-advice-properties-method.md "s51-advice.schema.json#/properties/method")                   |
+| [enquiryDate](#enquirydate)         | `string`  | Required | can be null    | [S51 Advice](s51-advice-properties-enquirydate.md "s51-advice.schema.json#/properties/enquiryDate")         |
+| [enquiryDetails](#enquirydetails)   | `string`  | Required | can be null    | [S51 Advice](s51-advice-properties-enquirydetails.md "s51-advice.schema.json#/properties/enquiryDetails")   |
+| [adviceGivenBy](#advicegivenby)     | `string`  | Required | can be null    | [S51 Advice](s51-advice-properties-advicegivenby.md "s51-advice.schema.json#/properties/adviceGivenBy")     |
+| [adviceDate](#advicedate)           | `string`  | Required | can be null    | [S51 Advice](s51-advice-properties-advicedate.md "s51-advice.schema.json#/properties/adviceDate")           |
+| [adviceDetails](#advicedetails)     | `string`  | Required | can be null    | [S51 Advice](s51-advice-properties-advicedetails.md "s51-advice.schema.json#/properties/adviceDetails")     |
+| [status](#status)                   | `string`  | Required | can be null    | [S51 Advice](s51-advice-properties-status.md "s51-advice.schema.json#/properties/status")                   |
+| [redactionStatus](#redactionstatus) | `string`  | Required | can be null    | [S51 Advice](s51-advice-properties-redactionstatus.md "s51-advice.schema.json#/properties/redactionStatus") |
+| [attachmentIds](#attachmentids)     | `array`   | Required | cannot be null | [S51 Advice](s51-advice-properties-attachmentids.md "s51-advice.schema.json#/properties/attachmentIds")     |
 
 ## adviceId
 
@@ -77,11 +77,11 @@
 
 `caseId`
 
-*   is optional
+*   is required
 
 *   Type: `integer`
 
-*   cannot be null
+*   can be null
 
 *   defined in: [S51 Advice](s51-advice-properties-caseid.md "s51-advice.schema.json#/properties/caseId")
 
@@ -101,11 +101,11 @@
 
 `caseReference`
 
-*   is optional
+*   is required
 
 *   Type: `string`
 
-*   cannot be null
+*   can be null
 
 *   defined in: [S51 Advice](s51-advice-properties-casereference.md "s51-advice.schema.json#/properties/caseReference")
 
@@ -149,11 +149,11 @@ Who the enquiry is from
 
 `from`
 
-*   is optional
+*   is required
 
 *   Type: `string`
 
-*   cannot be null
+*   can be null
 
 *   defined in: [S51 Advice](s51-advice-properties-from.md "s51-advice.schema.json#/properties/from")
 
@@ -167,11 +167,11 @@ Who the enquiry is on behalf of
 
 `agent`
 
-*   is optional
+*   is required
 
 *   Type: `string`
 
-*   cannot be null
+*   can be null
 
 *   defined in: [S51 Advice](s51-advice-properties-agent.md "s51-advice.schema.json#/properties/agent")
 
@@ -185,11 +185,11 @@ How the enquiry was made
 
 `method`
 
-*   is optional
+*   is required
 
 *   Type: `string`
 
-*   cannot be null
+*   can be null
 
 *   defined in: [S51 Advice](s51-advice-properties-method.md "s51-advice.schema.json#/properties/method")
 
@@ -214,11 +214,11 @@ Date the enquiry was made
 
 `enquiryDate`
 
-*   is optional
+*   is required
 
 *   Type: `string`
 
-*   cannot be null
+*   can be null
 
 *   defined in: [S51 Advice](s51-advice-properties-enquirydate.md "s51-advice.schema.json#/properties/enquiryDate")
 
@@ -242,11 +242,11 @@ Details of the enquiry
 
 `enquiryDetails`
 
-*   is optional
+*   is required
 
 *   Type: `string`
 
-*   cannot be null
+*   can be null
 
 *   defined in: [S51 Advice](s51-advice-properties-enquirydetails.md "s51-advice.schema.json#/properties/enquiryDetails")
 
@@ -260,11 +260,11 @@ Who issued the advice
 
 `adviceGivenBy`
 
-*   is optional
+*   is required
 
 *   Type: `string`
 
-*   cannot be null
+*   can be null
 
 *   defined in: [S51 Advice](s51-advice-properties-advicegivenby.md "s51-advice.schema.json#/properties/adviceGivenBy")
 
@@ -278,11 +278,11 @@ Date the advice was given
 
 `adviceDate`
 
-*   is optional
+*   is required
 
 *   Type: `string`
 
-*   cannot be null
+*   can be null
 
 *   defined in: [S51 Advice](s51-advice-properties-advicedate.md "s51-advice.schema.json#/properties/adviceDate")
 
@@ -306,11 +306,11 @@ Details of the advice
 
 `adviceDetails`
 
-*   is optional
+*   is required
 
 *   Type: `string`
 
-*   cannot be null
+*   can be null
 
 *   defined in: [S51 Advice](s51-advice-properties-advicedetails.md "s51-advice.schema.json#/properties/adviceDetails")
 
@@ -324,11 +324,11 @@ Details of the advice
 
 `status`
 
-*   is optional
+*   is required
 
 *   Type: `string`
 
-*   cannot be null
+*   can be null
 
 *   defined in: [S51 Advice](s51-advice-properties-status.md "s51-advice.schema.json#/properties/status")
 
@@ -354,11 +354,11 @@ Details of the advice
 
 `redactionStatus`
 
-*   is optional
+*   is required
 
 *   Type: `string`
 
-*   cannot be null
+*   can be null
 
 *   defined in: [S51 Advice](s51-advice-properties-redactionstatus.md "s51-advice.schema.json#/properties/redactionStatus")
 
@@ -381,7 +381,7 @@ Details of the advice
 
 `attachmentIds`
 
-*   is optional
+*   is required
 
 *   Type: `string[]`
 

@@ -80,6 +80,8 @@
 | [legalOfficerId](#legalofficerid)                                                                       | `string`      | Required | can be null    | [NSIP Project](nsip-project-properties-legalofficerid.md "nsip-project.schema.json#/properties/legalOfficerId")                                                                       |
 | [applicantId](#applicantid)                                                                             | `string`      | Required | can be null    | [NSIP Project](nsip-project-properties-applicantid.md "nsip-project.schema.json#/properties/applicantId")                                                                             |
 | [migrationStatus](#migrationstatus)                                                                     | `boolean`     | Required | can be null    | [NSIP Project](nsip-project-properties-migrationstatus.md "nsip-project.schema.json#/properties/migrationStatus")                                                                     |
+| [dateOfReOpenRelevantRepresentationStart](#dateofreopenrelevantrepresentationstart)                     | `string`      | Required | can be null    | [NSIP Project](nsip-project-properties-dateofreopenrelevantrepresentationstart.md "nsip-project.schema.json#/properties/dateOfReOpenRelevantRepresentationStart")                     |
+| [dateOfReOpenRelevantRepresentationClose](#dateofreopenrelevantrepresentationclose)                     | `string`      | Required | can be null    | [NSIP Project](nsip-project-properties-dateofreopenrelevantrepresentationclose.md "nsip-project.schema.json#/properties/dateOfReOpenRelevantRepresentationClose")                     |
 
 ## caseId
 
@@ -1941,3 +1943,59 @@ Has this case been migrated from the legacy system? True if so.
 ### migrationStatus Type
 
 `boolean`
+
+## dateOfReOpenRelevantRepresentationStart
+
+Date at which relevant reps can be reopened
+
+`dateOfReOpenRelevantRepresentationStart`
+
+*   is required
+
+*   Type: `string`
+
+*   can be null
+
+*   defined in: [NSIP Project](nsip-project-properties-dateofreopenrelevantrepresentationstart.md "nsip-project.schema.json#/properties/dateOfReOpenRelevantRepresentationStart")
+
+### dateOfReOpenRelevantRepresentationStart Type
+
+`string`
+
+### dateOfReOpenRelevantRepresentationStart Constraints
+
+**date time**: the string must be a date time string, according to [RFC 3339, section 5.6](https://tools.ietf.org/html/rfc3339 "check the specification")
+
+### dateOfReOpenRelevantRepresentationStart Examples
+
+```json
+"2023-07-27T20:30:00.000Z"
+```
+
+## dateOfReOpenRelevantRepresentationClose
+
+Date at which relevant reps can no longer be reopened
+
+`dateOfReOpenRelevantRepresentationClose`
+
+*   is required
+
+*   Type: `string`
+
+*   can be null
+
+*   defined in: [NSIP Project](nsip-project-properties-dateofreopenrelevantrepresentationclose.md "nsip-project.schema.json#/properties/dateOfReOpenRelevantRepresentationClose")
+
+### dateOfReOpenRelevantRepresentationClose Type
+
+`string`
+
+### dateOfReOpenRelevantRepresentationClose Constraints
+
+**date time**: the string must be a date time string, according to [RFC 3339, section 5.6](https://tools.ietf.org/html/rfc3339 "check the specification")
+
+### dateOfReOpenRelevantRepresentationClose Examples
+
+```json
+"2023-07-27T20:30:00.000Z"
+```

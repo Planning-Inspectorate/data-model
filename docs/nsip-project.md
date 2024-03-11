@@ -7,79 +7,79 @@
 | Property                                                                                                | Type          | Required | Nullable       | Defined by                                                                                                                                                                            |
 | :------------------------------------------------------------------------------------------------------ | :------------ | :------- | :------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | [caseId](#caseid)                                                                                       | `integer`     | Required | cannot be null | [NSIP Project](nsip-project-properties-caseid.md "nsip-project.schema.json#/properties/caseId")                                                                                       |
-| [caseReference](#casereference)                                                                         | `string`      | Optional | cannot be null | [NSIP Project](nsip-project-properties-casereference.md "nsip-project.schema.json#/properties/caseReference")                                                                         |
-| [projectName](#projectname)                                                                             | `string`      | Optional | cannot be null | [NSIP Project](nsip-project-properties-projectname.md "nsip-project.schema.json#/properties/projectName")                                                                             |
-| [projectDescription](#projectdescription)                                                               | `string`      | Optional | cannot be null | [NSIP Project](nsip-project-properties-projectdescription.md "nsip-project.schema.json#/properties/projectDescription")                                                               |
-| [decision](#decision)                                                                                   | `string`      | Optional | cannot be null | [NSIP Project](nsip-project-properties-decision.md "nsip-project.schema.json#/properties/decision")                                                                                   |
-| [publishStatus](#publishstatus)                                                                         | `string`      | Optional | cannot be null | [NSIP Project](nsip-project-properties-publishstatus.md "nsip-project.schema.json#/properties/publishStatus")                                                                         |
-| [sector](#sector)                                                                                       | `string`      | Optional | cannot be null | [NSIP Project](nsip-project-properties-sector.md "nsip-project.schema.json#/properties/sector")                                                                                       |
-| [projectType](#projecttype)                                                                             | `string`      | Optional | cannot be null | [NSIP Project](nsip-project-properties-projecttype.md "nsip-project.schema.json#/properties/projectType")                                                                             |
+| [caseReference](#casereference)                                                                         | `string`      | Required | can be null    | [NSIP Project](nsip-project-properties-casereference.md "nsip-project.schema.json#/properties/caseReference")                                                                         |
+| [projectName](#projectname)                                                                             | `string`      | Required | can be null    | [NSIP Project](nsip-project-properties-projectname.md "nsip-project.schema.json#/properties/projectName")                                                                             |
+| [projectDescription](#projectdescription)                                                               | `string`      | Required | can be null    | [NSIP Project](nsip-project-properties-projectdescription.md "nsip-project.schema.json#/properties/projectDescription")                                                               |
+| [decision](#decision)                                                                                   | `string`      | Required | can be null    | [NSIP Project](nsip-project-properties-decision.md "nsip-project.schema.json#/properties/decision")                                                                                   |
+| [publishStatus](#publishstatus)                                                                         | `string`      | Required | can be null    | [NSIP Project](nsip-project-properties-publishstatus.md "nsip-project.schema.json#/properties/publishStatus")                                                                         |
+| [sector](#sector)                                                                                       | `string`      | Required | can be null    | [NSIP Project](nsip-project-properties-sector.md "nsip-project.schema.json#/properties/sector")                                                                                       |
+| [projectType](#projecttype)                                                                             | `string`      | Required | can be null    | [NSIP Project](nsip-project-properties-projecttype.md "nsip-project.schema.json#/properties/projectType")                                                                             |
 | [sourceSystem](#sourcesystem)                                                                           | `string`      | Required | cannot be null | [NSIP Project](nsip-project-properties-sourcesystem.md "nsip-project.schema.json#/properties/sourceSystem")                                                                           |
-| [stage](#stage)                                                                                         | `string`      | Optional | cannot be null | [NSIP Project](nsip-project-properties-stage.md "nsip-project.schema.json#/properties/stage")                                                                                         |
-| [projectLocation](#projectlocation)                                                                     | `string`      | Optional | cannot be null | [NSIP Project](nsip-project-properties-projectlocation.md "nsip-project.schema.json#/properties/projectLocation")                                                                     |
-| [projectEmailAddress](#projectemailaddress)                                                             | `string`      | Optional | cannot be null | [NSIP Project](nsip-project-properties-projectemailaddress.md "nsip-project.schema.json#/properties/projectEmailAddress")                                                             |
-| [regions](#regions)                                                                                     | `array`       | Optional | cannot be null | [NSIP Project](nsip-project-properties-regions.md "nsip-project.schema.json#/properties/regions")                                                                                     |
-| [transboundary](#transboundary)                                                                         | `boolean`     | Optional | cannot be null | [NSIP Project](nsip-project-properties-transboundary.md "nsip-project.schema.json#/properties/transboundary")                                                                         |
-| [easting](#easting)                                                                                     | `integer`     | Optional | cannot be null | [NSIP Project](nsip-project-properties-easting.md "nsip-project.schema.json#/properties/easting")                                                                                     |
-| [northing](#northing)                                                                                   | `integer`     | Optional | cannot be null | [NSIP Project](nsip-project-properties-northing.md "nsip-project.schema.json#/properties/northing")                                                                                   |
-| [welshLanguage](#welshlanguage)                                                                         | `boolean`     | Optional | cannot be null | [NSIP Project](nsip-project-properties-welshlanguage.md "nsip-project.schema.json#/properties/welshLanguage")                                                                         |
-| [mapZoomLevel](#mapzoomlevel)                                                                           | `string`      | Optional | cannot be null | [NSIP Project](nsip-project-properties-mapzoomlevel.md "nsip-project.schema.json#/properties/mapZoomLevel")                                                                           |
-| [secretaryOfState](#secretaryofstate)                                                                   | `string`      | Optional | cannot be null | [NSIP Project](nsip-project-properties-secretaryofstate.md "nsip-project.schema.json#/properties/secretaryOfState")                                                                   |
+| [stage](#stage)                                                                                         | `string`      | Required | can be null    | [NSIP Project](nsip-project-properties-stage.md "nsip-project.schema.json#/properties/stage")                                                                                         |
+| [projectLocation](#projectlocation)                                                                     | `string`      | Required | can be null    | [NSIP Project](nsip-project-properties-projectlocation.md "nsip-project.schema.json#/properties/projectLocation")                                                                     |
+| [projectEmailAddress](#projectemailaddress)                                                             | `string`      | Required | can be null    | [NSIP Project](nsip-project-properties-projectemailaddress.md "nsip-project.schema.json#/properties/projectEmailAddress")                                                             |
+| [regions](#regions)                                                                                     | `array`       | Required | cannot be null | [NSIP Project](nsip-project-properties-regions.md "nsip-project.schema.json#/properties/regions")                                                                                     |
+| [transboundary](#transboundary)                                                                         | `boolean`     | Required | can be null    | [NSIP Project](nsip-project-properties-transboundary.md "nsip-project.schema.json#/properties/transboundary")                                                                         |
+| [easting](#easting)                                                                                     | `integer`     | Required | can be null    | [NSIP Project](nsip-project-properties-easting.md "nsip-project.schema.json#/properties/easting")                                                                                     |
+| [northing](#northing)                                                                                   | `integer`     | Required | can be null    | [NSIP Project](nsip-project-properties-northing.md "nsip-project.schema.json#/properties/northing")                                                                                   |
+| [welshLanguage](#welshlanguage)                                                                         | `boolean`     | Required | can be null    | [NSIP Project](nsip-project-properties-welshlanguage.md "nsip-project.schema.json#/properties/welshLanguage")                                                                         |
+| [mapZoomLevel](#mapzoomlevel)                                                                           | `string`      | Required | can be null    | [NSIP Project](nsip-project-properties-mapzoomlevel.md "nsip-project.schema.json#/properties/mapZoomLevel")                                                                           |
+| [secretaryOfState](#secretaryofstate)                                                                   | `string`      | Required | can be null    | [NSIP Project](nsip-project-properties-secretaryofstate.md "nsip-project.schema.json#/properties/secretaryOfState")                                                                   |
 | [\_preApplicationDates](#_preapplicationdates)                                                          | Not specified | Optional | cannot be null | [NSIP Project](nsip-project-properties-_preapplicationdates.md "nsip-project.schema.json#/properties/_preApplicationDates")                                                           |
-| [datePINSFirstNotifiedOfProject](#datepinsfirstnotifiedofproject)                                       | `string`      | Optional | cannot be null | [NSIP Project](nsip-project-properties-datepinsfirstnotifiedofproject.md "nsip-project.schema.json#/properties/datePINSFirstNotifiedOfProject")                                       |
-| [dateProjectAppearsOnWebsite](#dateprojectappearsonwebsite)                                             | `string`      | Optional | cannot be null | [NSIP Project](nsip-project-properties-dateprojectappearsonwebsite.md "nsip-project.schema.json#/properties/dateProjectAppearsOnWebsite")                                             |
-| [anticipatedSubmissionDateNonSpecific](#anticipatedsubmissiondatenonspecific)                           | `string`      | Optional | cannot be null | [NSIP Project](nsip-project-properties-anticipatedsubmissiondatenonspecific.md "nsip-project.schema.json#/properties/anticipatedSubmissionDateNonSpecific")                           |
-| [anticipatedDateOfSubmission](#anticipateddateofsubmission)                                             | `string`      | Optional | cannot be null | [NSIP Project](nsip-project-properties-anticipateddateofsubmission.md "nsip-project.schema.json#/properties/anticipatedDateOfSubmission")                                             |
-| [screeningOpinionSought](#screeningopinionsought)                                                       | `string`      | Optional | cannot be null | [NSIP Project](nsip-project-properties-screeningopinionsought.md "nsip-project.schema.json#/properties/screeningOpinionSought")                                                       |
-| [screeningOpinionIssued](#screeningopinionissued)                                                       | `string`      | Optional | cannot be null | [NSIP Project](nsip-project-properties-screeningopinionissued.md "nsip-project.schema.json#/properties/screeningOpinionIssued")                                                       |
-| [scopingOpinionSought](#scopingopinionsought)                                                           | `string`      | Optional | cannot be null | [NSIP Project](nsip-project-properties-scopingopinionsought.md "nsip-project.schema.json#/properties/scopingOpinionSought")                                                           |
-| [scopingOpinionIssued](#scopingopinionissued)                                                           | `string`      | Optional | cannot be null | [NSIP Project](nsip-project-properties-scopingopinionissued.md "nsip-project.schema.json#/properties/scopingOpinionIssued")                                                           |
-| [section46Notification](#section46notification)                                                         | `string`      | Optional | cannot be null | [NSIP Project](nsip-project-properties-section46notification.md "nsip-project.schema.json#/properties/section46Notification")                                                         |
+| [datePINSFirstNotifiedOfProject](#datepinsfirstnotifiedofproject)                                       | `string`      | Required | can be null    | [NSIP Project](nsip-project-properties-datepinsfirstnotifiedofproject.md "nsip-project.schema.json#/properties/datePINSFirstNotifiedOfProject")                                       |
+| [dateProjectAppearsOnWebsite](#dateprojectappearsonwebsite)                                             | `string`      | Required | can be null    | [NSIP Project](nsip-project-properties-dateprojectappearsonwebsite.md "nsip-project.schema.json#/properties/dateProjectAppearsOnWebsite")                                             |
+| [anticipatedSubmissionDateNonSpecific](#anticipatedsubmissiondatenonspecific)                           | `string`      | Required | can be null    | [NSIP Project](nsip-project-properties-anticipatedsubmissiondatenonspecific.md "nsip-project.schema.json#/properties/anticipatedSubmissionDateNonSpecific")                           |
+| [anticipatedDateOfSubmission](#anticipateddateofsubmission)                                             | `string`      | Required | can be null    | [NSIP Project](nsip-project-properties-anticipateddateofsubmission.md "nsip-project.schema.json#/properties/anticipatedDateOfSubmission")                                             |
+| [screeningOpinionSought](#screeningopinionsought)                                                       | `string`      | Required | can be null    | [NSIP Project](nsip-project-properties-screeningopinionsought.md "nsip-project.schema.json#/properties/screeningOpinionSought")                                                       |
+| [screeningOpinionIssued](#screeningopinionissued)                                                       | `string`      | Required | can be null    | [NSIP Project](nsip-project-properties-screeningopinionissued.md "nsip-project.schema.json#/properties/screeningOpinionIssued")                                                       |
+| [scopingOpinionSought](#scopingopinionsought)                                                           | `string`      | Required | can be null    | [NSIP Project](nsip-project-properties-scopingopinionsought.md "nsip-project.schema.json#/properties/scopingOpinionSought")                                                           |
+| [scopingOpinionIssued](#scopingopinionissued)                                                           | `string`      | Required | can be null    | [NSIP Project](nsip-project-properties-scopingopinionissued.md "nsip-project.schema.json#/properties/scopingOpinionIssued")                                                           |
+| [section46Notification](#section46notification)                                                         | `string`      | Required | can be null    | [NSIP Project](nsip-project-properties-section46notification.md "nsip-project.schema.json#/properties/section46Notification")                                                         |
 | [\_acceptanceDates](#_acceptancedates)                                                                  | Not specified | Optional | cannot be null | [NSIP Project](nsip-project-properties-_acceptancedates.md "nsip-project.schema.json#/properties/_acceptanceDates")                                                                   |
-| [dateOfDCOSubmission](#dateofdcosubmission)                                                             | `string`      | Optional | cannot be null | [NSIP Project](nsip-project-properties-dateofdcosubmission.md "nsip-project.schema.json#/properties/dateOfDCOSubmission")                                                             |
-| [deadlineForAcceptanceDecision](#deadlineforacceptancedecision)                                         | `string`      | Optional | cannot be null | [NSIP Project](nsip-project-properties-deadlineforacceptancedecision.md "nsip-project.schema.json#/properties/deadlineForAcceptanceDecision")                                         |
-| [dateOfDCOAcceptance](#dateofdcoacceptance)                                                             | `string`      | Optional | cannot be null | [NSIP Project](nsip-project-properties-dateofdcoacceptance.md "nsip-project.schema.json#/properties/dateOfDCOAcceptance")                                                             |
-| [dateOfNonAcceptance](#dateofnonacceptance)                                                             | `string`      | Optional | cannot be null | [NSIP Project](nsip-project-properties-dateofnonacceptance.md "nsip-project.schema.json#/properties/dateOfNonAcceptance")                                                             |
+| [dateOfDCOSubmission](#dateofdcosubmission)                                                             | `string`      | Required | can be null    | [NSIP Project](nsip-project-properties-dateofdcosubmission.md "nsip-project.schema.json#/properties/dateOfDCOSubmission")                                                             |
+| [deadlineForAcceptanceDecision](#deadlineforacceptancedecision)                                         | `string`      | Required | can be null    | [NSIP Project](nsip-project-properties-deadlineforacceptancedecision.md "nsip-project.schema.json#/properties/deadlineForAcceptanceDecision")                                         |
+| [dateOfDCOAcceptance](#dateofdcoacceptance)                                                             | `string`      | Required | can be null    | [NSIP Project](nsip-project-properties-dateofdcoacceptance.md "nsip-project.schema.json#/properties/dateOfDCOAcceptance")                                                             |
+| [dateOfNonAcceptance](#dateofnonacceptance)                                                             | `string`      | Required | can be null    | [NSIP Project](nsip-project-properties-dateofnonacceptance.md "nsip-project.schema.json#/properties/dateOfNonAcceptance")                                                             |
 | [\_preExaminationDates](#_preexaminationdates)                                                          | Not specified | Optional | cannot be null | [NSIP Project](nsip-project-properties-_preexaminationdates.md "nsip-project.schema.json#/properties/_preExaminationDates")                                                           |
-| [dateOfRepresentationPeriodOpen](#dateofrepresentationperiodopen)                                       | `string`      | Optional | cannot be null | [NSIP Project](nsip-project-properties-dateofrepresentationperiodopen.md "nsip-project.schema.json#/properties/dateOfRepresentationPeriodOpen")                                       |
-| [dateOfRelevantRepresentationClose](#dateofrelevantrepresentationclose)                                 | `string`      | Optional | cannot be null | [NSIP Project](nsip-project-properties-dateofrelevantrepresentationclose.md "nsip-project.schema.json#/properties/dateOfRelevantRepresentationClose")                                 |
-| [extensionToDateRelevantRepresentationsClose](#extensiontodaterelevantrepresentationsclose)             | `string`      | Optional | cannot be null | [NSIP Project](nsip-project-properties-extensiontodaterelevantrepresentationsclose.md "nsip-project.schema.json#/properties/extensionToDateRelevantRepresentationsClose")             |
-| [dateRRepAppearOnWebsite](#daterrepappearonwebsite)                                                     | `string`      | Optional | cannot be null | [NSIP Project](nsip-project-properties-daterrepappearonwebsite.md "nsip-project.schema.json#/properties/dateRRepAppearOnWebsite")                                                     |
-| [dateIAPIDue](#dateiapidue)                                                                             | `string`      | Optional | cannot be null | [NSIP Project](nsip-project-properties-dateiapidue.md "nsip-project.schema.json#/properties/dateIAPIDue")                                                                             |
-| [rule6LetterPublishDate](#rule6letterpublishdate)                                                       | `string`      | Optional | cannot be null | [NSIP Project](nsip-project-properties-rule6letterpublishdate.md "nsip-project.schema.json#/properties/rule6LetterPublishDate")                                                       |
-| [preliminaryMeetingStartDate](#preliminarymeetingstartdate)                                             | `string`      | Optional | cannot be null | [NSIP Project](nsip-project-properties-preliminarymeetingstartdate.md "nsip-project.schema.json#/properties/preliminaryMeetingStartDate")                                             |
-| [notificationDateForPMAndEventsDirectlyFollowingPM](#notificationdateforpmandeventsdirectlyfollowingpm) | `string`      | Optional | cannot be null | [NSIP Project](nsip-project-properties-notificationdateforpmandeventsdirectlyfollowingpm.md "nsip-project.schema.json#/properties/notificationDateForPMAndEventsDirectlyFollowingPM") |
-| [notificationDateForEventsDeveloper](#notificationdateforeventsdeveloper)                               | `string`      | Optional | cannot be null | [NSIP Project](nsip-project-properties-notificationdateforeventsdeveloper.md "nsip-project.schema.json#/properties/notificationDateForEventsDeveloper")                               |
+| [dateOfRepresentationPeriodOpen](#dateofrepresentationperiodopen)                                       | `string`      | Required | can be null    | [NSIP Project](nsip-project-properties-dateofrepresentationperiodopen.md "nsip-project.schema.json#/properties/dateOfRepresentationPeriodOpen")                                       |
+| [dateOfRelevantRepresentationClose](#dateofrelevantrepresentationclose)                                 | `string`      | Required | can be null    | [NSIP Project](nsip-project-properties-dateofrelevantrepresentationclose.md "nsip-project.schema.json#/properties/dateOfRelevantRepresentationClose")                                 |
+| [extensionToDateRelevantRepresentationsClose](#extensiontodaterelevantrepresentationsclose)             | `string`      | Required | can be null    | [NSIP Project](nsip-project-properties-extensiontodaterelevantrepresentationsclose.md "nsip-project.schema.json#/properties/extensionToDateRelevantRepresentationsClose")             |
+| [dateRRepAppearOnWebsite](#daterrepappearonwebsite)                                                     | `string`      | Required | can be null    | [NSIP Project](nsip-project-properties-daterrepappearonwebsite.md "nsip-project.schema.json#/properties/dateRRepAppearOnWebsite")                                                     |
+| [dateIAPIDue](#dateiapidue)                                                                             | `string`      | Required | can be null    | [NSIP Project](nsip-project-properties-dateiapidue.md "nsip-project.schema.json#/properties/dateIAPIDue")                                                                             |
+| [rule6LetterPublishDate](#rule6letterpublishdate)                                                       | `string`      | Required | can be null    | [NSIP Project](nsip-project-properties-rule6letterpublishdate.md "nsip-project.schema.json#/properties/rule6LetterPublishDate")                                                       |
+| [preliminaryMeetingStartDate](#preliminarymeetingstartdate)                                             | `string`      | Required | can be null    | [NSIP Project](nsip-project-properties-preliminarymeetingstartdate.md "nsip-project.schema.json#/properties/preliminaryMeetingStartDate")                                             |
+| [notificationDateForPMAndEventsDirectlyFollowingPM](#notificationdateforpmandeventsdirectlyfollowingpm) | `string`      | Required | can be null    | [NSIP Project](nsip-project-properties-notificationdateforpmandeventsdirectlyfollowingpm.md "nsip-project.schema.json#/properties/notificationDateForPMAndEventsDirectlyFollowingPM") |
+| [notificationDateForEventsDeveloper](#notificationdateforeventsdeveloper)                               | `string`      | Required | can be null    | [NSIP Project](nsip-project-properties-notificationdateforeventsdeveloper.md "nsip-project.schema.json#/properties/notificationDateForEventsDeveloper")                               |
 | [\_examinationDates](#_examinationdates)                                                                | Not specified | Optional | cannot be null | [NSIP Project](nsip-project-properties-_examinationdates.md "nsip-project.schema.json#/properties/_examinationDates")                                                                 |
-| [dateSection58NoticeReceived](#datesection58noticereceived)                                             | `string`      | Optional | cannot be null | [NSIP Project](nsip-project-properties-datesection58noticereceived.md "nsip-project.schema.json#/properties/dateSection58NoticeReceived")                                             |
-| [confirmedStartOfExamination](#confirmedstartofexamination)                                             | `string`      | Optional | cannot be null | [NSIP Project](nsip-project-properties-confirmedstartofexamination.md "nsip-project.schema.json#/properties/confirmedStartOfExamination")                                             |
-| [rule8LetterPublishDate](#rule8letterpublishdate)                                                       | `string`      | Optional | cannot be null | [NSIP Project](nsip-project-properties-rule8letterpublishdate.md "nsip-project.schema.json#/properties/rule8LetterPublishDate")                                                       |
-| [deadlineForCloseOfExamination](#deadlineforcloseofexamination)                                         | `string`      | Optional | cannot be null | [NSIP Project](nsip-project-properties-deadlineforcloseofexamination.md "nsip-project.schema.json#/properties/deadlineForCloseOfExamination")                                         |
-| [dateTimeExaminationEnds](#datetimeexaminationends)                                                     | `string`      | Optional | cannot be null | [NSIP Project](nsip-project-properties-datetimeexaminationends.md "nsip-project.schema.json#/properties/dateTimeExaminationEnds")                                                     |
-| [stage4ExtensionToExamCloseDate](#stage4extensiontoexamclosedate)                                       | `string`      | Optional | cannot be null | [NSIP Project](nsip-project-properties-stage4extensiontoexamclosedate.md "nsip-project.schema.json#/properties/stage4ExtensionToExamCloseDate")                                       |
+| [dateSection58NoticeReceived](#datesection58noticereceived)                                             | `string`      | Required | can be null    | [NSIP Project](nsip-project-properties-datesection58noticereceived.md "nsip-project.schema.json#/properties/dateSection58NoticeReceived")                                             |
+| [confirmedStartOfExamination](#confirmedstartofexamination)                                             | `string`      | Required | can be null    | [NSIP Project](nsip-project-properties-confirmedstartofexamination.md "nsip-project.schema.json#/properties/confirmedStartOfExamination")                                             |
+| [rule8LetterPublishDate](#rule8letterpublishdate)                                                       | `string`      | Required | can be null    | [NSIP Project](nsip-project-properties-rule8letterpublishdate.md "nsip-project.schema.json#/properties/rule8LetterPublishDate")                                                       |
+| [deadlineForCloseOfExamination](#deadlineforcloseofexamination)                                         | `string`      | Required | can be null    | [NSIP Project](nsip-project-properties-deadlineforcloseofexamination.md "nsip-project.schema.json#/properties/deadlineForCloseOfExamination")                                         |
+| [dateTimeExaminationEnds](#datetimeexaminationends)                                                     | `string`      | Required | can be null    | [NSIP Project](nsip-project-properties-datetimeexaminationends.md "nsip-project.schema.json#/properties/dateTimeExaminationEnds")                                                     |
+| [stage4ExtensionToExamCloseDate](#stage4extensiontoexamclosedate)                                       | `string`      | Required | can be null    | [NSIP Project](nsip-project-properties-stage4extensiontoexamclosedate.md "nsip-project.schema.json#/properties/stage4ExtensionToExamCloseDate")                                       |
 | [\_recommendationDates](#_recommendationdates)                                                          | Not specified | Optional | cannot be null | [NSIP Project](nsip-project-properties-_recommendationdates.md "nsip-project.schema.json#/properties/_recommendationDates")                                                           |
-| [deadlineForSubmissionOfRecommendation](#deadlineforsubmissionofrecommendation)                         | `string`      | Optional | cannot be null | [NSIP Project](nsip-project-properties-deadlineforsubmissionofrecommendation.md "nsip-project.schema.json#/properties/deadlineForSubmissionOfRecommendation")                         |
-| [dateOfRecommendations](#dateofrecommendations)                                                         | `string`      | Optional | cannot be null | [NSIP Project](nsip-project-properties-dateofrecommendations.md "nsip-project.schema.json#/properties/dateOfRecommendations")                                                         |
-| [stage5ExtensionToRecommendationDeadline](#stage5extensiontorecommendationdeadline)                     | `string`      | Optional | cannot be null | [NSIP Project](nsip-project-properties-stage5extensiontorecommendationdeadline.md "nsip-project.schema.json#/properties/stage5ExtensionToRecommendationDeadline")                     |
+| [deadlineForSubmissionOfRecommendation](#deadlineforsubmissionofrecommendation)                         | `string`      | Required | can be null    | [NSIP Project](nsip-project-properties-deadlineforsubmissionofrecommendation.md "nsip-project.schema.json#/properties/deadlineForSubmissionOfRecommendation")                         |
+| [dateOfRecommendations](#dateofrecommendations)                                                         | `string`      | Required | can be null    | [NSIP Project](nsip-project-properties-dateofrecommendations.md "nsip-project.schema.json#/properties/dateOfRecommendations")                                                         |
+| [stage5ExtensionToRecommendationDeadline](#stage5extensiontorecommendationdeadline)                     | `string`      | Required | can be null    | [NSIP Project](nsip-project-properties-stage5extensiontorecommendationdeadline.md "nsip-project.schema.json#/properties/stage5ExtensionToRecommendationDeadline")                     |
 | [\_decisionDates](#_decisiondates)                                                                      | Not specified | Optional | cannot be null | [NSIP Project](nsip-project-properties-_decisiondates.md "nsip-project.schema.json#/properties/_decisionDates")                                                                       |
-| [deadlineForDecision](#deadlinefordecision)                                                             | `string`      | Optional | cannot be null | [NSIP Project](nsip-project-properties-deadlinefordecision.md "nsip-project.schema.json#/properties/deadlineForDecision")                                                             |
-| [confirmedDateOfDecision](#confirmeddateofdecision)                                                     | `string`      | Optional | cannot be null | [NSIP Project](nsip-project-properties-confirmeddateofdecision.md "nsip-project.schema.json#/properties/confirmedDateOfDecision")                                                     |
-| [stage5ExtensionToDecisionDeadline](#stage5extensiontodecisiondeadline)                                 | `string`      | Optional | cannot be null | [NSIP Project](nsip-project-properties-stage5extensiontodecisiondeadline.md "nsip-project.schema.json#/properties/stage5ExtensionToDecisionDeadline")                                 |
+| [deadlineForDecision](#deadlinefordecision)                                                             | `string`      | Required | can be null    | [NSIP Project](nsip-project-properties-deadlinefordecision.md "nsip-project.schema.json#/properties/deadlineForDecision")                                                             |
+| [confirmedDateOfDecision](#confirmeddateofdecision)                                                     | `string`      | Required | can be null    | [NSIP Project](nsip-project-properties-confirmeddateofdecision.md "nsip-project.schema.json#/properties/confirmedDateOfDecision")                                                     |
+| [stage5ExtensionToDecisionDeadline](#stage5extensiontodecisiondeadline)                                 | `string`      | Required | can be null    | [NSIP Project](nsip-project-properties-stage5extensiontodecisiondeadline.md "nsip-project.schema.json#/properties/stage5ExtensionToDecisionDeadline")                                 |
 | [\_postDecisionDates](#_postdecisiondates)                                                              | Not specified | Optional | cannot be null | [NSIP Project](nsip-project-properties-_postdecisiondates.md "nsip-project.schema.json#/properties/_postDecisionDates")                                                               |
-| [jRPeriodEndDate](#jrperiodenddate)                                                                     | `string`      | Optional | cannot be null | [NSIP Project](nsip-project-properties-jrperiodenddate.md "nsip-project.schema.json#/properties/jRPeriodEndDate")                                                                     |
+| [jRPeriodEndDate](#jrperiodenddate)                                                                     | `string`      | Required | can be null    | [NSIP Project](nsip-project-properties-jrperiodenddate.md "nsip-project.schema.json#/properties/jRPeriodEndDate")                                                                     |
 | [\_withdrawalDates](#_withdrawaldates)                                                                  | Not specified | Optional | cannot be null | [NSIP Project](nsip-project-properties-_withdrawaldates.md "nsip-project.schema.json#/properties/_withdrawalDates")                                                                   |
-| [dateProjectWithdrawn](#dateprojectwithdrawn)                                                           | `string`      | Optional | cannot be null | [NSIP Project](nsip-project-properties-dateprojectwithdrawn.md "nsip-project.schema.json#/properties/dateProjectWithdrawn")                                                           |
-| [operationsLeadId](#operationsleadid)                                                                   | `string`      | Optional | cannot be null | [NSIP Project](nsip-project-properties-operationsleadid.md "nsip-project.schema.json#/properties/operationsLeadId")                                                                   |
-| [operationsManagerId](#operationsmanagerid)                                                             | `string`      | Optional | cannot be null | [NSIP Project](nsip-project-properties-operationsmanagerid.md "nsip-project.schema.json#/properties/operationsManagerId")                                                             |
-| [caseManagerId](#casemanagerid)                                                                         | `string`      | Optional | cannot be null | [NSIP Project](nsip-project-properties-casemanagerid.md "nsip-project.schema.json#/properties/caseManagerId")                                                                         |
-| [nsipOfficerIds](#nsipofficerids)                                                                       | `array`       | Optional | cannot be null | [NSIP Project](nsip-project-properties-nsipofficerids.md "nsip-project.schema.json#/properties/nsipOfficerIds")                                                                       |
-| [nsipAdministrationOfficerIds](#nsipadministrationofficerids)                                           | `array`       | Optional | cannot be null | [NSIP Project](nsip-project-properties-nsipadministrationofficerids.md "nsip-project.schema.json#/properties/nsipAdministrationOfficerIds")                                           |
-| [leadInspectorId](#leadinspectorid)                                                                     | `string`      | Optional | cannot be null | [NSIP Project](nsip-project-properties-leadinspectorid.md "nsip-project.schema.json#/properties/leadInspectorId")                                                                     |
-| [inspectorIds](#inspectorids)                                                                           | `array`       | Optional | cannot be null | [NSIP Project](nsip-project-properties-inspectorids.md "nsip-project.schema.json#/properties/inspectorIds")                                                                           |
-| [environmentalServicesOfficerId](#environmentalservicesofficerid)                                       | `string`      | Optional | cannot be null | [NSIP Project](nsip-project-properties-environmentalservicesofficerid.md "nsip-project.schema.json#/properties/environmentalServicesOfficerId")                                       |
-| [legalOfficerId](#legalofficerid)                                                                       | `string`      | Optional | cannot be null | [NSIP Project](nsip-project-properties-legalofficerid.md "nsip-project.schema.json#/properties/legalOfficerId")                                                                       |
-| [applicantId](#applicantid)                                                                             | `string`      | Optional | cannot be null | [NSIP Project](nsip-project-properties-applicantid.md "nsip-project.schema.json#/properties/applicantId")                                                                             |
-| [migrationStatus](#migrationstatus)                                                                     | `boolean`     | Optional | can be null    | [NSIP Project](nsip-project-properties-migrationstatus.md "nsip-project.schema.json#/properties/migrationStatus")                                                                     |
+| [dateProjectWithdrawn](#dateprojectwithdrawn)                                                           | `string`      | Required | can be null    | [NSIP Project](nsip-project-properties-dateprojectwithdrawn.md "nsip-project.schema.json#/properties/dateProjectWithdrawn")                                                           |
+| [operationsLeadId](#operationsleadid)                                                                   | `string`      | Required | can be null    | [NSIP Project](nsip-project-properties-operationsleadid.md "nsip-project.schema.json#/properties/operationsLeadId")                                                                   |
+| [operationsManagerId](#operationsmanagerid)                                                             | `string`      | Required | can be null    | [NSIP Project](nsip-project-properties-operationsmanagerid.md "nsip-project.schema.json#/properties/operationsManagerId")                                                             |
+| [caseManagerId](#casemanagerid)                                                                         | `string`      | Required | can be null    | [NSIP Project](nsip-project-properties-casemanagerid.md "nsip-project.schema.json#/properties/caseManagerId")                                                                         |
+| [nsipOfficerIds](#nsipofficerids)                                                                       | `array`       | Required | cannot be null | [NSIP Project](nsip-project-properties-nsipofficerids.md "nsip-project.schema.json#/properties/nsipOfficerIds")                                                                       |
+| [nsipAdministrationOfficerIds](#nsipadministrationofficerids)                                           | `array`       | Required | cannot be null | [NSIP Project](nsip-project-properties-nsipadministrationofficerids.md "nsip-project.schema.json#/properties/nsipAdministrationOfficerIds")                                           |
+| [leadInspectorId](#leadinspectorid)                                                                     | `string`      | Required | can be null    | [NSIP Project](nsip-project-properties-leadinspectorid.md "nsip-project.schema.json#/properties/leadInspectorId")                                                                     |
+| [inspectorIds](#inspectorids)                                                                           | `array`       | Required | cannot be null | [NSIP Project](nsip-project-properties-inspectorids.md "nsip-project.schema.json#/properties/inspectorIds")                                                                           |
+| [environmentalServicesOfficerId](#environmentalservicesofficerid)                                       | `string`      | Required | can be null    | [NSIP Project](nsip-project-properties-environmentalservicesofficerid.md "nsip-project.schema.json#/properties/environmentalServicesOfficerId")                                       |
+| [legalOfficerId](#legalofficerid)                                                                       | `string`      | Required | can be null    | [NSIP Project](nsip-project-properties-legalofficerid.md "nsip-project.schema.json#/properties/legalOfficerId")                                                                       |
+| [applicantId](#applicantid)                                                                             | `string`      | Required | can be null    | [NSIP Project](nsip-project-properties-applicantid.md "nsip-project.schema.json#/properties/applicantId")                                                                             |
+| [migrationStatus](#migrationstatus)                                                                     | `boolean`     | Required | can be null    | [NSIP Project](nsip-project-properties-migrationstatus.md "nsip-project.schema.json#/properties/migrationStatus")                                                                     |
 
 ## caseId
 
@@ -111,11 +111,11 @@ The unique identifier within the Back Office. This is not the same as the case r
 
 `caseReference`
 
-*   is optional
+*   is required
 
 *   Type: `string`
 
-*   cannot be null
+*   can be null
 
 *   defined in: [NSIP Project](nsip-project-properties-casereference.md "nsip-project.schema.json#/properties/caseReference")
 
@@ -135,11 +135,11 @@ Name of project
 
 `projectName`
 
-*   is optional
+*   is required
 
 *   Type: `string`
 
-*   cannot be null
+*   can be null
 
 *   defined in: [NSIP Project](nsip-project-properties-projectname.md "nsip-project.schema.json#/properties/projectName")
 
@@ -159,11 +159,11 @@ Name of project
 
 `projectDescription`
 
-*   is optional
+*   is required
 
 *   Type: `string`
 
-*   cannot be null
+*   can be null
 
 *   defined in: [NSIP Project](nsip-project-properties-projectdescription.md "nsip-project.schema.json#/properties/projectDescription")
 
@@ -183,11 +183,11 @@ Decision: approved/refused/split-decision
 
 `decision`
 
-*   is optional
+*   is required
 
 *   Type: `string`
 
-*   cannot be null
+*   can be null
 
 *   defined in: [NSIP Project](nsip-project-properties-decision.md "nsip-project.schema.json#/properties/decision")
 
@@ -211,11 +211,11 @@ Decision: approved/refused/split-decision
 
 `publishStatus`
 
-*   is optional
+*   is required
 
 *   Type: `string`
 
-*   cannot be null
+*   can be null
 
 *   defined in: [NSIP Project](nsip-project-properties-publishstatus.md "nsip-project.schema.json#/properties/publishStatus")
 
@@ -238,11 +238,11 @@ Decision: approved/refused/split-decision
 
 `sector`
 
-*   is optional
+*   is required
 
 *   Type: `string`
 
-*   cannot be null
+*   can be null
 
 *   defined in: [NSIP Project](nsip-project-properties-sector.md "nsip-project.schema.json#/properties/sector")
 
@@ -269,11 +269,11 @@ Decision: approved/refused/split-decision
 
 `projectType`
 
-*   is optional
+*   is required
 
 *   Type: `string`
 
-*   cannot be null
+*   can be null
 
 *   defined in: [NSIP Project](nsip-project-properties-projecttype.md "nsip-project.schema.json#/properties/projectType")
 
@@ -346,11 +346,11 @@ Process stage identifier
 
 `stage`
 
-*   is optional
+*   is required
 
 *   Type: `string`
 
-*   cannot be null
+*   can be null
 
 *   defined in: [NSIP Project](nsip-project-properties-stage.md "nsip-project.schema.json#/properties/stage")
 
@@ -380,11 +380,11 @@ Description of site location
 
 `projectLocation`
 
-*   is optional
+*   is required
 
 *   Type: `string`
 
-*   cannot be null
+*   can be null
 
 *   defined in: [NSIP Project](nsip-project-properties-projectlocation.md "nsip-project.schema.json#/properties/projectLocation")
 
@@ -404,11 +404,11 @@ PINS Project email address pubished on website
 
 `projectEmailAddress`
 
-*   is optional
+*   is required
 
 *   Type: `string`
 
-*   cannot be null
+*   can be null
 
 *   defined in: [NSIP Project](nsip-project-properties-projectemailaddress.md "nsip-project.schema.json#/properties/projectEmailAddress")
 
@@ -428,7 +428,7 @@ PINS Project email address pubished on website
 
 `regions`
 
-*   is optional
+*   is required
 
 *   Type: `string[]`
 
@@ -446,11 +446,11 @@ Drives addition of Transboundary tab on website. \[TODO]
 
 `transboundary`
 
-*   is optional
+*   is required
 
 *   Type: `boolean`
 
-*   cannot be null
+*   can be null
 
 *   defined in: [NSIP Project](nsip-project-properties-transboundary.md "nsip-project.schema.json#/properties/transboundary")
 
@@ -474,11 +474,11 @@ Project site Easting co-ordinate.
 
 `easting`
 
-*   is optional
+*   is required
 
 *   Type: `integer`
 
-*   cannot be null
+*   can be null
 
 *   defined in: [NSIP Project](nsip-project-properties-easting.md "nsip-project.schema.json#/properties/easting")
 
@@ -498,11 +498,11 @@ Project site Northing co-ordinate.
 
 `northing`
 
-*   is optional
+*   is required
 
 *   Type: `integer`
 
-*   cannot be null
+*   can be null
 
 *   defined in: [NSIP Project](nsip-project-properties-northing.md "nsip-project.schema.json#/properties/northing")
 
@@ -522,11 +522,11 @@ Welsh Language translation required.
 
 `welshLanguage`
 
-*   is optional
+*   is required
 
 *   Type: `boolean`
 
-*   cannot be null
+*   can be null
 
 *   defined in: [NSIP Project](nsip-project-properties-welshlanguage.md "nsip-project.schema.json#/properties/welshLanguage")
 
@@ -550,11 +550,11 @@ Resolution of pinned map. Set when co-ordinates are created.
 
 `mapZoomLevel`
 
-*   is optional
+*   is required
 
 *   Type: `string`
 
-*   cannot be null
+*   can be null
 
 *   defined in: [NSIP Project](nsip-project-properties-mapzoomlevel.md "nsip-project.schema.json#/properties/mapZoomLevel")
 
@@ -584,11 +584,11 @@ Relevant Government Department. \[TODO]
 
 `secretaryOfState`
 
-*   is optional
+*   is required
 
 *   Type: `string`
 
-*   cannot be null
+*   can be null
 
 *   defined in: [NSIP Project](nsip-project-properties-secretaryofstate.md "nsip-project.schema.json#/properties/secretaryOfState")
 
@@ -620,11 +620,11 @@ Date at which applicant notify PINS of a project (pre-publishing)
 
 `datePINSFirstNotifiedOfProject`
 
-*   is optional
+*   is required
 
 *   Type: `string`
 
-*   cannot be null
+*   can be null
 
 *   defined in: [NSIP Project](nsip-project-properties-datepinsfirstnotifiedofproject.md "nsip-project.schema.json#/properties/datePINSFirstNotifiedOfProject")
 
@@ -648,11 +648,11 @@ Date Project Appears On Website
 
 `dateProjectAppearsOnWebsite`
 
-*   is optional
+*   is required
 
 *   Type: `string`
 
-*   cannot be null
+*   can be null
 
 *   defined in: [NSIP Project](nsip-project-properties-dateprojectappearsonwebsite.md "nsip-project.schema.json#/properties/dateProjectAppearsOnWebsite")
 
@@ -676,11 +676,11 @@ Approximate Anticipated Submission Date Of Application, e.g. Q3 2023
 
 `anticipatedSubmissionDateNonSpecific`
 
-*   is optional
+*   is required
 
 *   Type: `string`
 
-*   cannot be null
+*   can be null
 
 *   defined in: [NSIP Project](nsip-project-properties-anticipatedsubmissiondatenonspecific.md "nsip-project.schema.json#/properties/anticipatedSubmissionDateNonSpecific")
 
@@ -700,11 +700,11 @@ Anticipated Submission Date Of Application
 
 `anticipatedDateOfSubmission`
 
-*   is optional
+*   is required
 
 *   Type: `string`
 
-*   cannot be null
+*   can be null
 
 *   defined in: [NSIP Project](nsip-project-properties-anticipateddateofsubmission.md "nsip-project.schema.json#/properties/anticipatedDateOfSubmission")
 
@@ -728,11 +728,11 @@ Anticipated Submission Date Of Application
 
 `screeningOpinionSought`
 
-*   is optional
+*   is required
 
 *   Type: `string`
 
-*   cannot be null
+*   can be null
 
 *   defined in: [NSIP Project](nsip-project-properties-screeningopinionsought.md "nsip-project.schema.json#/properties/screeningOpinionSought")
 
@@ -756,11 +756,11 @@ Anticipated Submission Date Of Application
 
 `screeningOpinionIssued`
 
-*   is optional
+*   is required
 
 *   Type: `string`
 
-*   cannot be null
+*   can be null
 
 *   defined in: [NSIP Project](nsip-project-properties-screeningopinionissued.md "nsip-project.schema.json#/properties/screeningOpinionIssued")
 
@@ -784,11 +784,11 @@ Anticipated Submission Date Of Application
 
 `scopingOpinionSought`
 
-*   is optional
+*   is required
 
 *   Type: `string`
 
-*   cannot be null
+*   can be null
 
 *   defined in: [NSIP Project](nsip-project-properties-scopingopinionsought.md "nsip-project.schema.json#/properties/scopingOpinionSought")
 
@@ -812,11 +812,11 @@ Anticipated Submission Date Of Application
 
 `scopingOpinionIssued`
 
-*   is optional
+*   is required
 
 *   Type: `string`
 
-*   cannot be null
+*   can be null
 
 *   defined in: [NSIP Project](nsip-project-properties-scopingopinionissued.md "nsip-project.schema.json#/properties/scopingOpinionIssued")
 
@@ -840,11 +840,11 @@ Applicant must notify PINS of statutory consultation
 
 `section46Notification`
 
-*   is optional
+*   is required
 
 *   Type: `string`
 
-*   cannot be null
+*   can be null
 
 *   defined in: [NSIP Project](nsip-project-properties-section46notification.md "nsip-project.schema.json#/properties/section46Notification")
 
@@ -886,11 +886,11 @@ Date Applcation is submitted
 
 `dateOfDCOSubmission`
 
-*   is optional
+*   is required
 
 *   Type: `string`
 
-*   cannot be null
+*   can be null
 
 *   defined in: [NSIP Project](nsip-project-properties-dateofdcosubmission.md "nsip-project.schema.json#/properties/dateOfDCOSubmission")
 
@@ -914,11 +914,11 @@ DeadlineForAcceptanceDecision
 
 `deadlineForAcceptanceDecision`
 
-*   is optional
+*   is required
 
 *   Type: `string`
 
-*   cannot be null
+*   can be null
 
 *   defined in: [NSIP Project](nsip-project-properties-deadlineforacceptancedecision.md "nsip-project.schema.json#/properties/deadlineForAcceptanceDecision")
 
@@ -942,11 +942,11 @@ Date Application is Formerly Accepted by PINS
 
 `dateOfDCOAcceptance`
 
-*   is optional
+*   is required
 
 *   Type: `string`
 
-*   cannot be null
+*   can be null
 
 *   defined in: [NSIP Project](nsip-project-properties-dateofdcoacceptance.md "nsip-project.schema.json#/properties/dateOfDCOAcceptance")
 
@@ -970,11 +970,11 @@ Date of Non Acceptance
 
 `dateOfNonAcceptance`
 
-*   is optional
+*   is required
 
 *   Type: `string`
 
-*   cannot be null
+*   can be null
 
 *   defined in: [NSIP Project](nsip-project-properties-dateofnonacceptance.md "nsip-project.schema.json#/properties/dateOfNonAcceptance")
 
@@ -1016,11 +1016,11 @@ Date at which point publish can submit relevant reps
 
 `dateOfRepresentationPeriodOpen`
 
-*   is optional
+*   is required
 
 *   Type: `string`
 
-*   cannot be null
+*   can be null
 
 *   defined in: [NSIP Project](nsip-project-properties-dateofrepresentationperiodopen.md "nsip-project.schema.json#/properties/dateOfRepresentationPeriodOpen")
 
@@ -1044,11 +1044,11 @@ Date at which point publish can no longer submit relevant reps
 
 `dateOfRelevantRepresentationClose`
 
-*   is optional
+*   is required
 
 *   Type: `string`
 
-*   cannot be null
+*   can be null
 
 *   defined in: [NSIP Project](nsip-project-properties-dateofrelevantrepresentationclose.md "nsip-project.schema.json#/properties/dateOfRelevantRepresentationClose")
 
@@ -1072,11 +1072,11 @@ ExtensionToDateRelevantRepresentationsClose
 
 `extensionToDateRelevantRepresentationsClose`
 
-*   is optional
+*   is required
 
 *   Type: `string`
 
-*   cannot be null
+*   can be null
 
 *   defined in: [NSIP Project](nsip-project-properties-extensiontodaterelevantrepresentationsclose.md "nsip-project.schema.json#/properties/extensionToDateRelevantRepresentationsClose")
 
@@ -1100,11 +1100,11 @@ Date at which relevant reps appear on the website
 
 `dateRRepAppearOnWebsite`
 
-*   is optional
+*   is required
 
 *   Type: `string`
 
-*   cannot be null
+*   can be null
 
 *   defined in: [NSIP Project](nsip-project-properties-daterrepappearonwebsite.md "nsip-project.schema.json#/properties/dateRRepAppearOnWebsite")
 
@@ -1128,11 +1128,11 @@ Date at which relevant reps appear on the website
 
 `dateIAPIDue`
 
-*   is optional
+*   is required
 
 *   Type: `string`
 
-*   cannot be null
+*   can be null
 
 *   defined in: [NSIP Project](nsip-project-properties-dateiapidue.md "nsip-project.schema.json#/properties/dateIAPIDue")
 
@@ -1156,11 +1156,11 @@ Date at which relevant reps appear on the website
 
 `rule6LetterPublishDate`
 
-*   is optional
+*   is required
 
 *   Type: `string`
 
-*   cannot be null
+*   can be null
 
 *   defined in: [NSIP Project](nsip-project-properties-rule6letterpublishdate.md "nsip-project.schema.json#/properties/rule6LetterPublishDate")
 
@@ -1184,11 +1184,11 @@ Meeting between all parties inc public
 
 `preliminaryMeetingStartDate`
 
-*   is optional
+*   is required
 
 *   Type: `string`
 
-*   cannot be null
+*   can be null
 
 *   defined in: [NSIP Project](nsip-project-properties-preliminarymeetingstartdate.md "nsip-project.schema.json#/properties/preliminaryMeetingStartDate")
 
@@ -1212,11 +1212,11 @@ Meeting between all parties inc public
 
 `notificationDateForPMAndEventsDirectlyFollowingPM`
 
-*   is optional
+*   is required
 
 *   Type: `string`
 
-*   cannot be null
+*   can be null
 
 *   defined in: [NSIP Project](nsip-project-properties-notificationdateforpmandeventsdirectlyfollowingpm.md "nsip-project.schema.json#/properties/notificationDateForPMAndEventsDirectlyFollowingPM")
 
@@ -1240,11 +1240,11 @@ Meeting between all parties inc public
 
 `notificationDateForEventsDeveloper`
 
-*   is optional
+*   is required
 
 *   Type: `string`
 
-*   cannot be null
+*   can be null
 
 *   defined in: [NSIP Project](nsip-project-properties-notificationdateforeventsdeveloper.md "nsip-project.schema.json#/properties/notificationDateForEventsDeveloper")
 
@@ -1286,11 +1286,11 @@ Applicant has notified all parties of application
 
 `dateSection58NoticeReceived`
 
-*   is optional
+*   is required
 
 *   Type: `string`
 
-*   cannot be null
+*   can be null
 
 *   defined in: [NSIP Project](nsip-project-properties-datesection58noticereceived.md "nsip-project.schema.json#/properties/dateSection58NoticeReceived")
 
@@ -1314,11 +1314,11 @@ ConfirmedStartOfExamination by panel
 
 `confirmedStartOfExamination`
 
-*   is optional
+*   is required
 
 *   Type: `string`
 
-*   cannot be null
+*   can be null
 
 *   defined in: [NSIP Project](nsip-project-properties-confirmedstartofexamination.md "nsip-project.schema.json#/properties/confirmedStartOfExamination")
 
@@ -1342,11 +1342,11 @@ ConfirmedStartOfExamination by panel
 
 `rule8LetterPublishDate`
 
-*   is optional
+*   is required
 
 *   Type: `string`
 
-*   cannot be null
+*   can be null
 
 *   defined in: [NSIP Project](nsip-project-properties-rule8letterpublishdate.md "nsip-project.schema.json#/properties/rule8LetterPublishDate")
 
@@ -1370,11 +1370,11 @@ DeadlineForCloseOfExamination
 
 `deadlineForCloseOfExamination`
 
-*   is optional
+*   is required
 
 *   Type: `string`
 
-*   cannot be null
+*   can be null
 
 *   defined in: [NSIP Project](nsip-project-properties-deadlineforcloseofexamination.md "nsip-project.schema.json#/properties/deadlineForCloseOfExamination")
 
@@ -1398,11 +1398,11 @@ ConfirmedSEndOfExamination by panel
 
 `dateTimeExaminationEnds`
 
-*   is optional
+*   is required
 
 *   Type: `string`
 
-*   cannot be null
+*   can be null
 
 *   defined in: [NSIP Project](nsip-project-properties-datetimeexaminationends.md "nsip-project.schema.json#/properties/dateTimeExaminationEnds")
 
@@ -1426,11 +1426,11 @@ Examination Period extended to this date
 
 `stage4ExtensionToExamCloseDate`
 
-*   is optional
+*   is required
 
 *   Type: `string`
 
-*   cannot be null
+*   can be null
 
 *   defined in: [NSIP Project](nsip-project-properties-stage4extensiontoexamclosedate.md "nsip-project.schema.json#/properties/stage4ExtensionToExamCloseDate")
 
@@ -1472,11 +1472,11 @@ DeadlineForSubmissionOfRecommendation
 
 `deadlineForSubmissionOfRecommendation`
 
-*   is optional
+*   is required
 
 *   Type: `string`
 
-*   cannot be null
+*   can be null
 
 *   defined in: [NSIP Project](nsip-project-properties-deadlineforsubmissionofrecommendation.md "nsip-project.schema.json#/properties/deadlineForSubmissionOfRecommendation")
 
@@ -1500,11 +1500,11 @@ Date recomm report sent to SoS
 
 `dateOfRecommendations`
 
-*   is optional
+*   is required
 
 *   Type: `string`
 
-*   cannot be null
+*   can be null
 
 *   defined in: [NSIP Project](nsip-project-properties-dateofrecommendations.md "nsip-project.schema.json#/properties/dateOfRecommendations")
 
@@ -1528,11 +1528,11 @@ Recommendation period extended to this date
 
 `stage5ExtensionToRecommendationDeadline`
 
-*   is optional
+*   is required
 
 *   Type: `string`
 
-*   cannot be null
+*   can be null
 
 *   defined in: [NSIP Project](nsip-project-properties-stage5extensiontorecommendationdeadline.md "nsip-project.schema.json#/properties/stage5ExtensionToRecommendationDeadline")
 
@@ -1574,11 +1574,11 @@ DeadlineForDecision
 
 `deadlineForDecision`
 
-*   is optional
+*   is required
 
 *   Type: `string`
 
-*   cannot be null
+*   can be null
 
 *   defined in: [NSIP Project](nsip-project-properties-deadlinefordecision.md "nsip-project.schema.json#/properties/deadlineForDecision")
 
@@ -1602,11 +1602,11 @@ Decision by SoS
 
 `confirmedDateOfDecision`
 
-*   is optional
+*   is required
 
 *   Type: `string`
 
-*   cannot be null
+*   can be null
 
 *   defined in: [NSIP Project](nsip-project-properties-confirmeddateofdecision.md "nsip-project.schema.json#/properties/confirmedDateOfDecision")
 
@@ -1630,11 +1630,11 @@ Decision period extended to this date
 
 `stage5ExtensionToDecisionDeadline`
 
-*   is optional
+*   is required
 
 *   Type: `string`
 
-*   cannot be null
+*   can be null
 
 *   defined in: [NSIP Project](nsip-project-properties-stage5extensiontodecisiondeadline.md "nsip-project.schema.json#/properties/stage5ExtensionToDecisionDeadline")
 
@@ -1676,11 +1676,11 @@ Judicial Review
 
 `jRPeriodEndDate`
 
-*   is optional
+*   is required
 
 *   Type: `string`
 
-*   cannot be null
+*   can be null
 
 *   defined in: [NSIP Project](nsip-project-properties-jrperiodenddate.md "nsip-project.schema.json#/properties/jRPeriodEndDate")
 
@@ -1722,11 +1722,11 @@ DateProjectWithdrawn by applicant
 
 `dateProjectWithdrawn`
 
-*   is optional
+*   is required
 
 *   Type: `string`
 
-*   cannot be null
+*   can be null
 
 *   defined in: [NSIP Project](nsip-project-properties-dateprojectwithdrawn.md "nsip-project.schema.json#/properties/dateProjectWithdrawn")
 
@@ -1750,11 +1750,11 @@ Maps to \[Employee].\[EmployeeID].
 
 `operationsLeadId`
 
-*   is optional
+*   is required
 
 *   Type: `string`
 
-*   cannot be null
+*   can be null
 
 *   defined in: [NSIP Project](nsip-project-properties-operationsleadid.md "nsip-project.schema.json#/properties/operationsLeadId")
 
@@ -1768,11 +1768,11 @@ New NSIP role, Maps to \[Employee].\[EmployeeID]
 
 `operationsManagerId`
 
-*   is optional
+*   is required
 
 *   Type: `string`
 
-*   cannot be null
+*   can be null
 
 *   defined in: [NSIP Project](nsip-project-properties-operationsmanagerid.md "nsip-project.schema.json#/properties/operationsManagerId")
 
@@ -1786,11 +1786,11 @@ Maps to \[Employee].\[EmployeeID]
 
 `caseManagerId`
 
-*   is optional
+*   is required
 
 *   Type: `string`
 
-*   cannot be null
+*   can be null
 
 *   defined in: [NSIP Project](nsip-project-properties-casemanagerid.md "nsip-project.schema.json#/properties/caseManagerId")
 
@@ -1804,7 +1804,7 @@ Maps to \[Employee].\[EmployeeID]
 
 `nsipOfficerIds`
 
-*   is optional
+*   is required
 
 *   Type: `string[]`
 
@@ -1822,7 +1822,7 @@ Maps to \[Employee].\[EmployeeID]
 
 `nsipAdministrationOfficerIds`
 
-*   is optional
+*   is required
 
 *   Type: `string[]`
 
@@ -1840,11 +1840,11 @@ Maps to \[Employee].\[EmployeeID]
 
 `leadInspectorId`
 
-*   is optional
+*   is required
 
 *   Type: `string`
 
-*   cannot be null
+*   can be null
 
 *   defined in: [NSIP Project](nsip-project-properties-leadinspectorid.md "nsip-project.schema.json#/properties/leadInspectorId")
 
@@ -1858,7 +1858,7 @@ Maps to \[Employee].\[EmployeeID]
 
 `inspectorIds`
 
-*   is optional
+*   is required
 
 *   Type: `string[]`
 
@@ -1876,11 +1876,11 @@ Maps to \[Employee].\[EmployeeID]
 
 `environmentalServicesOfficerId`
 
-*   is optional
+*   is required
 
 *   Type: `string`
 
-*   cannot be null
+*   can be null
 
 *   defined in: [NSIP Project](nsip-project-properties-environmentalservicesofficerid.md "nsip-project.schema.json#/properties/environmentalServicesOfficerId")
 
@@ -1894,11 +1894,11 @@ Maps to \[Employee].\[EmployeeID]
 
 `legalOfficerId`
 
-*   is optional
+*   is required
 
 *   Type: `string`
 
-*   cannot be null
+*   can be null
 
 *   defined in: [NSIP Project](nsip-project-properties-legalofficerid.md "nsip-project.schema.json#/properties/legalOfficerId")
 
@@ -1912,11 +1912,11 @@ Maps to \[ServiceUser].\[id] where the serviceUserType is Applicant
 
 `applicantId`
 
-*   is optional
+*   is required
 
 *   Type: `string`
 
-*   cannot be null
+*   can be null
 
 *   defined in: [NSIP Project](nsip-project-properties-applicantid.md "nsip-project.schema.json#/properties/applicantId")
 
@@ -1930,7 +1930,7 @@ Has this case been migrated from the legacy system? True if so.
 
 `migrationStatus`
 
-*   is optional
+*   is required
 
 *   Type: `boolean`
 

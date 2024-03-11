@@ -4,7 +4,74 @@
 	"title": "NSIP Project",
 	"description": "Subset of Pins Data Model [Case]",
 	"type": "object",
-	"required": ["caseId", "sourceSystem"],
+	"required":[
+		"caseId",
+		"caseReference",
+		"projectName",
+		"projectDescription",
+		"decision",
+		"publishStatus",
+		"sector",
+		"projectType",
+		"sourceSystem",
+		"stage",
+		"projectLocation",
+		"projectEmailAddress",
+		"regions",
+		"transboundary",
+		"easting",
+		"northing",
+		"datePINSFirstNotifiedOfProject",
+		"dateProjectAppearsOnWebsite",
+		"anticipatedSubmissionDateNonSpecific",
+		"anticipatedDateOfSubmission",
+		"screeningOpinionSought",
+		"screeningOpinionIssued",
+		"scopingOpinionSought",
+		"scopingOpinionIssued",
+		"section46Notification",
+		"dateOfDCOSubmission",
+		"deadlineForAcceptanceDecision",
+		"dateOfDCOAcceptance",
+		"dateOfNonAcceptance",
+		"dateOfRepresentationPeriodOpen",
+		"dateOfRelevantRepresentationClose",
+		"extensionToDateRelevantRepresentationsClose",
+		"dateRRepAppearOnWebsite",
+		"dateIAPIDue",
+		"rule6LetterPublishDate",
+		"preliminaryMeetingStartDate",
+		"notificationDateForPMAndEventsDirectlyFollowingPM",
+		"notificationDateForEventsDeveloper",
+		"dateSection58NoticeReceived",
+		"confirmedStartOfExamination",
+		"rule8LetterPublishDate",
+		"deadlineForCloseOfExamination",
+		"dateTimeExaminationEnds",
+		"stage4ExtensionToExamCloseDate",
+		"deadlineForSubmissionOfRecommendation",
+		"dateOfRecommendations",
+		"stage5ExtensionToRecommendationDeadline",
+		"deadlineForDecision",
+		"confirmedDateOfDecision",
+		"stage5ExtensionToDecisionDeadline",
+		"jRPeriodEndDate",
+		"dateProjectWithdrawn",
+		"operationsLeadId",
+		"operationsManagerId",
+		"caseManagerId",
+		"nsipOfficerIds",
+		"nsipAdministrationOfficerIds",
+		"leadInspectorId",
+		"inspectorIds",
+		"environmentalServicesOfficerId",
+		"legalOfficerId",
+		"applicantId",
+		"welshLanguage",
+		"mapZoomLevel",
+		"secretaryOfState",
+		"migrationStatus"
+	],
 	"properties": {
 		"caseId": {
 			"type": "integer",
@@ -12,31 +79,31 @@
 			"description": "The unique identifier within the Back Office. This is not the same as the case reference"
 		},
 		"caseReference": {
-			"type": "string",
+			"type": ["string", "null"],
 			"examples": ["BC0510001"]
 		},
 		"projectName": {
-			"type": "string",
+			"type": ["string", "null"],
 			"description": "Name of project",
 			"examples": ["A1 Birtley to Coal House Improvement Scheme"]
 		},
 		"projectDescription": {
-			"type": "string",
+			"type": ["string", "null"],
 			"examples": [
 				"The scheme is 6.5 km in length and will consist of online widening of the A1 south of Gateshead to four lanes between junction 65"
 			]
 		},
 		"decision": {
-			"type": "string",
+			"type": ["string", "null"],
 			"description": "Decision: approved/refused/split-decision",
 			"enum": ["approved", "refused", "split-decision"]
 		},
 		"publishStatus": {
-			"type": "string",
+			"type": ["string", "null"],
 			"enum": ["published", "unpublished"]
 		},
 		"sector": {
-			"type": "string",
+			"type": ["string", "null"],
 			"description": "{Sector Abbreviation} - {Sector Display Name}",
 			"enum": [
 				"BC - Business and Commercial",
@@ -48,7 +115,7 @@
 			]
 		},
 		"projectType": {
-			"type": "string",
+			"type": ["string", "null"],
 			"description": "{SubSector Abbreviation} - {SubSector Display Name}",
 			"enum": [
 				"BC01 - Office Use",
@@ -83,7 +150,7 @@
 			"enum": ["back-office-applications", "horizon"]
 		},
 		"stage": {
-			"type": "string",
+			"type": ["string", "null"],
 			"description": "Process stage identifier",
 			"enum": [
 				"draft",
@@ -98,14 +165,14 @@
 			]
 		},
 		"projectLocation": {
-			"type": "string",
+			"type": ["string", "null"],
 			"description": "Description of site location",
 			"examples": [
 				"The scheme is located on the A1 Newcastle Gateshead Western Bypass, between junctions 65 and 67."
 			]
 		},
 		"projectEmailAddress": {
-			"type": "string",
+			"type": ["string", "null"],
 			"description": "PINS Project email address pubished on website",
 			"examples": ["NIEnquiries@planninginspectorate.gsi.gov.uk"]
 		},
@@ -129,27 +196,27 @@
 			}
 		},
 		"transboundary": {
-			"type": "boolean",
+			"type": ["boolean", "null"],
 			"description": "Drives addition of Transboundary tab on website. [TODO]",
 			"examples": [true, false]
 		},
 		"easting": {
-			"type": "integer",
+			"type": ["integer", "null"],
 			"description": "Project site Easting co-ordinate.",
 			"examples": [345678]
 		},
 		"northing": {
-			"type": "integer",
+			"type": ["integer", "null"],
 			"description": "Project site Northing co-ordinate.",
 			"examples": [345678]
 		},
 		"welshLanguage": {
-			"type": "boolean",
+			"type": ["boolean", "null"],
 			"description": "Welsh Language translation required.",
 			"examples": [true, false]
 		},
 		"mapZoomLevel": {
-			"type": "string",
+			"type": ["string", "null"],
 			"description": "Resolution of pinned map. Set when co-ordinates are created.",
 			"enum": [
 				"country",
@@ -164,60 +231,60 @@
 			]
 		},
 		"secretaryOfState": {
-			"type": "string",
+			"type": ["string", "null"],
 			"description": "Relevant Government Department. [TODO]"
 		},
 
 		"_preApplicationDates": {},
 		"datePINSFirstNotifiedOfProject": {
-			"type": "string",
+			"type": ["string", "null"],
 			"description": "Date at which applicant notify PINS of a project (pre-publishing)",
 			"format": "date-time",
 			"examples": ["2023-07-27T20:30:00.000Z"]
 		},
 		"dateProjectAppearsOnWebsite": {
-			"type": "string",
+			"type": ["string", "null"],
 			"description": "Date Project Appears On Website",
 			"format": "date-time",
 			"examples": ["2023-07-27T20:30:00.000Z"]
 		},
 		"anticipatedSubmissionDateNonSpecific": {
-			"type": "string",
+			"type": ["string", "null"],
 			"description": "Approximate Anticipated Submission Date Of Application, e.g. Q3 2023",
 			"examples": ["Q3 2023"]
 		},
 		"anticipatedDateOfSubmission": {
-			"type": "string",
+			"type": ["string", "null"],
 			"description": "Anticipated Submission Date Of Application",
 			"format": "date-time",
 			"examples": ["2023-07-27T20:30:00.000Z"]
 		},
 		"screeningOpinionSought": {
-			"type": "string",
+			"type": ["string", "null"],
 			"description": "(TBC by Env. Services Team)",
 			"format": "date-time",
 			"examples": ["2023-07-27T20:30:00.000Z"]
 		},
 		"screeningOpinionIssued": {
-			"type": "string",
+			"type": ["string", "null"],
 			"description": "(TBC by Env. Services Team)",
 			"format": "date-time",
 			"examples": ["2023-07-27T20:30:00.000Z"]
 		},
 		"scopingOpinionSought": {
-			"type": "string",
+			"type": ["string", "null"],
 			"description": "(TBC by Env. Services Team)",
 			"format": "date-time",
 			"examples": ["2023-07-27T20:30:00.000Z"]
 		},
 		"scopingOpinionIssued": {
-			"type": "string",
+			"type": ["string", "null"],
 			"description": "(TBC by Env. Services Team)",
 			"format": "date-time",
 			"examples": ["2023-07-27T20:30:00.000Z"]
 		},
 		"section46Notification": {
-			"type": "string",
+			"type": ["string", "null"],
 			"description": "Applicant must notify PINS of statutory consultation",
 			"format": "date-time",
 			"examples": ["2023-07-27T20:30:00.000Z"]
@@ -225,113 +292,113 @@
 
 		"_acceptanceDates": {},
 		"dateOfDCOSubmission": {
-			"type": "string",
+			"type": ["string", "null"],
 			"description": "Date Applcation is submitted",
 			"format": "date-time",
 			"examples": ["2023-07-27T20:30:00.000Z"]
 		},
 		"deadlineForAcceptanceDecision": {
-			"type": "string",
+			"type": ["string", "null"],
 			"description": "DeadlineForAcceptanceDecision",
 			"format": "date-time",
 			"examples": ["2023-07-27T20:30:00.000Z"]
 		},
 		"dateOfDCOAcceptance": {
-			"type": "string",
+			"type": ["string", "null"],
 			"description": "Date Application is Formerly Accepted by PINS",
 			"format": "date-time",
 			"examples": ["2023-07-27T20:30:00.000Z"]
 		},
 		"dateOfNonAcceptance": {
-			"type": "string",
+			"type": ["string", "null"],
 			"description": "Date of Non Acceptance",
 			"format": "date-time",
 			"examples": ["2023-07-27T20:30:00.000Z"]
 		},
 		"_preExaminationDates": {},
 		"dateOfRepresentationPeriodOpen": {
-			"type": "string",
+			"type": ["string", "null"],
 			"description": "Date at which point publish can submit relevant reps",
 			"format": "date-time",
 			"examples": ["2023-07-27T20:30:00.000Z"]
 		},
 		"dateOfRelevantRepresentationClose": {
-			"type": "string",
+			"type": ["string", "null"],
 			"description": "Date at which point publish can no longer submit relevant reps",
 			"format": "date-time",
 			"examples": ["2023-07-27T20:30:00.000Z"]
 		},
 		"extensionToDateRelevantRepresentationsClose": {
-			"type": "string",
+			"type": ["string", "null"],
 			"description": "ExtensionToDateRelevantRepresentationsClose",
 			"format": "date-time",
 			"examples": ["2023-07-27T20:30:00.000Z"]
 		},
 		"dateRRepAppearOnWebsite": {
-			"type": "string",
+			"type": ["string", "null"],
 			"description": "Date at which relevant reps appear on the website",
 			"format": "date-time",
 			"examples": ["2023-07-27T20:30:00.000Z"]
 		},
 		"dateIAPIDue": {
-			"type": "string",
+			"type": ["string", "null"],
 			"format": "date-time",
 			"examples": ["2023-07-27T20:30:00.000Z"]
 		},
 		"rule6LetterPublishDate": {
-			"type": "string",
+			"type": ["string", "null"],
 			"format": "date-time",
 			"examples": ["2023-07-27T20:30:00.000Z"]
 		},
 		"preliminaryMeetingStartDate": {
-			"type": "string",
+			"type": ["string", "null"],
 			"description": "Meeting between all parties inc public",
 			"format": "date-time",
 			"examples": ["2023-07-27T20:30:00.000Z"]
 		},
 		"notificationDateForPMAndEventsDirectlyFollowingPM": {
-			"type": "string",
+			"type": ["string", "null"],
 			"format": "date-time",
 			"examples": ["2023-07-27T20:30:00.000Z"]
 		},
 		"notificationDateForEventsDeveloper": {
-			"type": "string",
+			"type": ["string", "null"],
 			"format": "date-time",
 			"examples": ["2023-07-27T20:30:00.000Z"]
 		},
 
 		"_examinationDates": {},
 		"dateSection58NoticeReceived": {
-			"type": "string",
+			"type": ["string", "null"],
 			"description": "Applicant has notified all parties of application",
 			"format": "date-time",
 			"examples": ["2023-07-27T20:30:00.000Z"]
 		},
 		"confirmedStartOfExamination": {
-			"type": "string",
+			"type": ["string", "null"],
 			"description": "ConfirmedStartOfExamination by panel",
 			"format": "date-time",
 			"examples": ["2023-07-27T20:30:00.000Z"]
 		},
 		"rule8LetterPublishDate": {
-			"type": "string",
+			"type": ["string", "null"],
 			"format": "date-time",
 			"examples": ["2023-07-27T20:30:00.000Z"]
 		},
 		"deadlineForCloseOfExamination": {
-			"type": "string",
+			"type": ["string", "null"],
 			"description": "DeadlineForCloseOfExamination",
 			"format": "date-time",
 			"examples": ["2023-07-27T20:30:00.000Z"]
 		},
 		"dateTimeExaminationEnds": {
-			"type": "string",
+			"type": ["string", "null"],
 			"description": "ConfirmedSEndOfExamination by panel",
 			"format": "date-time",
 			"examples": ["2023-07-27T20:30:00.000Z"]
 		},
 		"stage4ExtensionToExamCloseDate": {
-			"type": "string",
+			"type": ["string", "null"],
 			"description": "Examination Period extended to this date",
 			"format": "date-time",
 			"examples": ["2023-07-27T20:30:00.000Z"]
@@ -339,19 +406,19 @@
 
 		"_recommendationDates": {},
 		"deadlineForSubmissionOfRecommendation": {
-			"type": "string",
+			"type": ["string", "null"],
 			"description": "DeadlineForSubmissionOfRecommendation",
 			"format": "date-time",
 			"examples": ["2023-07-27T20:30:00.000Z"]
 		},
 		"dateOfRecommendations": {
-			"type": "string",
+			"type": ["string", "null"],
 			"description": "Date recomm report sent to SoS",
 			"format": "date-time",
 			"examples": ["2023-07-27T20:30:00.000Z"]
 		},
 		"stage5ExtensionToRecommendationDeadline": {
-			"type": "string",
+			"type": ["string", "null"],
 			"description": "Recommendation period extended to this date",
 			"format": "date-time",
 			"examples": ["2023-07-27T20:30:00.000Z"]
@@ -359,19 +426,19 @@
 
 		"_decisionDates": {},
 		"deadlineForDecision": {
-			"type": "string",
+			"type": ["string", "null"],
 			"description": "DeadlineForDecision",
 			"format": "date-time",
 			"examples": ["2023-07-27T20:30:00.000Z"]
 		},
 		"confirmedDateOfDecision": {
-			"type": "string",
+			"type": ["string", "null"],
 			"description": "Decision by SoS",
 			"format": "date-time",
 			"examples": ["2023-07-27T20:30:00.000Z"]
 		},
 		"stage5ExtensionToDecisionDeadline": {
-			"type": "string",
+			"type": ["string", "null"],
 			"description": "Decision period extended to this date",
 			"format": "date-time",
 			"examples": ["2023-07-27T20:30:00.000Z"]
@@ -379,7 +446,7 @@
 
 		"_postDecisionDates": {},
 		"jRPeriodEndDate": {
-			"type": "string",
+			"type": ["string", "null"],
 			"description": "Judicial Review",
 			"format": "date-time",
 			"examples": ["2023-07-27T20:30:00.000Z"]
@@ -387,22 +454,22 @@
 
 		"_withdrawalDates": {},
 		"dateProjectWithdrawn": {
-			"type": "string",
+			"type": ["string", "null"],
 			"description": "DateProjectWithdrawn by applicant",
 			"format": "date-time",
 			"examples": ["2023-07-27T20:30:00.000Z"]
 		},
 
 		"operationsLeadId": {
-			"type": "string",
+			"type": ["string", "null"],
 			"description": "Maps to [Employee].[EmployeeID]."
 		},
 		"operationsManagerId": {
-			"type": "string",
+			"type": ["string", "null"],
 			"description": "New NSIP role, Maps to [Employee].[EmployeeID]"
 		},
 		"caseManagerId": {
-			"type": "string",
+			"type": ["string", "null"],
 			"description": "Maps to [Employee].[EmployeeID]"
 		},
 		"nsipOfficerIds": {
@@ -420,7 +487,7 @@
 			}
 		},
 		"leadInspectorId": {
-			"type": "string",
+			"type": ["string", "null"],
 			"description": "Maps to [Employee].[EmployeeID]"
 		},
 		"inspectorIds": {
@@ -431,15 +498,15 @@
 			}
 		},
 		"environmentalServicesOfficerId": {
-			"type": "string",
+			"type": ["string", "null"],
 			"description": "Maps to [Employee].[EmployeeID]"
 		},
 		"legalOfficerId": {
-			"type": "string",
+			"type": ["string", "null"],
 			"description": "Maps to [Employee].[EmployeeID]"
 		},
 		"applicantId": {
-			"type": "string",
+			"type": ["string", "null"],
 			"description": "Maps to [ServiceUser].[id] where the serviceUserType is Applicant"
 		},
 		"migrationStatus": {

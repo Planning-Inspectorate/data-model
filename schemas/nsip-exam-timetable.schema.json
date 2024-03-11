@@ -20,7 +20,7 @@
 	"$defs": {
 		"event": {
 			"type": "object",
-			"required": ["eventId", "eventTitle", "description", "type", "date"],
+			"required": ["eventId", "type", "eventTitle", "description", "date", "eventLineItems"],
 			"properties": {
 				"eventId": {
 					"type": "integer",
@@ -52,7 +52,7 @@
 					"type": "string"
 				},
 				"eventDeadlineStartDate": {
-					"type": "string",
+					"type": ["string", "null"],
 					"description": "Optional start date for event window",
 					"format": "date-time",
 					"examples": ["2023-07-27T20:30:00.000Z"]

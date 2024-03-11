@@ -4,6 +4,30 @@
 	"title": "Service User",
 	"description": "Service User of the planning inspectorate. Also contains role information by combining serviceUserType and caseReference.",
 	"type": "object",
+	"required": [
+		"id",
+		"salutation",
+		"firstName",
+		"lastName",
+		"addressLine1",
+		"addressLine2",
+		"addressTown",
+		"addressCounty",
+		"postcode",
+		"addressCountry",
+		"organisation",
+		"organisationType",
+		"role",
+		"telephoneNumber",
+		"otherPhoneNumber",
+		"faxNumber",
+		"emailAddress",
+		"webAddress",
+		"serviceUserType",
+		"caseReference",
+		"sourceSystem",
+		"sourceSuid"
+	],
 	"properties": {
 		"id": {
 			"type": "string",
@@ -11,87 +35,87 @@
 			"examples": ["12345"]
 		},
 		"salutation": {
-			"type": "string",
+			"type": ["string", "null"],
 			"description": "A formal greeting, e.g., Mr, Mrs, Ms.",
 			"examples": ["Mr"]
 		},
 		"firstName": {
-			"type": "string",
+			"type": ["string", "null"],
 			"description": "The first name of the individual.",
 			"examples": ["John"]
 		},
 		"lastName": {
-			"type": "string",
+			"type": ["string", "null"],
 			"description": "The last name of the individual.",
 			"examples": ["Doe"]
 		},
 		"addressLine1": {
-			"type": "string",
+			"type": ["string", "null"],
 			"description": "The first line of the address.",
 			"examples": ["123 Elm Street"]
 		},
 		"addressLine2": {
-			"type": "string",
+			"type": ["string", "null"],
 			"description": "The second line of the address, usually includes suite or apartment number.",
 			"examples": ["Apt 4B"]
 		},
 		"addressTown": {
-			"type": "string",
+			"type": ["string", "null"],
 			"description": "The town or city of the address.",
 			"examples": ["Springfield"]
 		},
 		"addressCounty": {
-			"type": "string",
+			"type": ["string", "null"],
 			"description": "The county in which the town or city is located.",
 			"examples": ["Hampshire"]
 		},
 		"postcode": {
-			"type": "string",
+			"type": ["string", "null"],
 			"description": "The postal code for the address.",
 			"examples": ["M12 4AF"]
 		},
 		"addressCountry": {
-			"type": "string",
+			"type": ["string", "null"],
 			"description": "The country of the address.",
 			"examples": ["United Kingdom"]
 		},
 		"organisation": {
-			"type": "string",
+			"type": ["string", "null"],
 			"description": "The name of the organisation associated with the individual.",
 			"examples": ["Tech Corp"]
 		},
 		"organisationType": {
-			"type": "string",
+			"type": ["string", "null"],
 			"description": "The type or nature of the organisation.",
 			"examples": ["Private Company"]
 		},
 		"role": {
-			"type": "string",
+			"type": ["string", "null"],
 			"description": "The individual's role or position within the organisation.",
 			"examples": ["Agent"]
 		},
 		"telephoneNumber": {
-			"type": "string",
+			"type": ["string", "null"],
 			"description": "The primary telephone contact number.",
 			"examples": ["+447123456789"]
 		},
 		"otherPhoneNumber": {
-			"type": "string",
+			"type": ["string", "null"],
 			"description": "An alternate or secondary phone number.",
 			"examples": ["+447123456789"]
 		},
 		"faxNumber": {
-			"type": "string",
+			"type": ["string", "null"],
 			"description": "A fax contact number.",
 			"examples": ["+447123456789"]
 		},
 		"emailAddress": {
-			"type": "string",
+			"type": ["string", "null"],
 			"description": "The primary email address for contact.",
 			"examples": ["john.doe@example.com"]
 		},
 		"webAddress": {
-			"type": "string",
+			"type": ["string", "null"],
 			"description": "Website address or URL.",
 			"examples": ["https://www.example.com"]
 		},
@@ -116,6 +140,5 @@
 			"examples": ["12345"]
 		}
 	},
-	"required": ["id", "sourceSuid", "sourceSystem", "serviceUserType", "caseReference"],
 	"additionalProperties": false
 }

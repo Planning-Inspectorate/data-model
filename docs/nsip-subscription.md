@@ -6,13 +6,13 @@
 
 | Property                              | Type      | Required | Nullable       | Defined by                                                                                                                         |
 | :------------------------------------ | :-------- | :------- | :------------- | :--------------------------------------------------------------------------------------------------------------------------------- |
-| [subscriptionId](#subscriptionid)     | `integer` | Optional | cannot be null | [nsip-subscription](nsip-subscription-properties-subscriptionid.md "nsip-subscription.schema.json#/properties/subscriptionId")     |
+| [subscriptionId](#subscriptionid)     | `integer` | Required | can be null    | [nsip-subscription](nsip-subscription-properties-subscriptionid.md "nsip-subscription.schema.json#/properties/subscriptionId")     |
 | [caseReference](#casereference)       | `string`  | Required | cannot be null | [nsip-subscription](nsip-subscription-properties-casereference.md "nsip-subscription.schema.json#/properties/caseReference")       |
 | [emailAddress](#emailaddress)         | `string`  | Required | cannot be null | [nsip-subscription](nsip-subscription-properties-emailaddress.md "nsip-subscription.schema.json#/properties/emailAddress")         |
 | [subscriptionType](#subscriptiontype) | `string`  | Required | cannot be null | [nsip-subscription](nsip-subscription-properties-subscriptiontype.md "nsip-subscription.schema.json#/properties/subscriptionType") |
-| [startDate](#startdate)               | `string`  | Optional | cannot be null | [nsip-subscription](nsip-subscription-properties-startdate.md "nsip-subscription.schema.json#/properties/startDate")               |
-| [endDate](#enddate)                   | `string`  | Optional | cannot be null | [nsip-subscription](nsip-subscription-properties-enddate.md "nsip-subscription.schema.json#/properties/endDate")                   |
-| [language](#language)                 | `string`  | Optional | cannot be null | [nsip-subscription](nsip-subscription-properties-language.md "nsip-subscription.schema.json#/properties/language")                 |
+| [startDate](#startdate)               | `string`  | Required | can be null    | [nsip-subscription](nsip-subscription-properties-startdate.md "nsip-subscription.schema.json#/properties/startDate")               |
+| [endDate](#enddate)                   | `string`  | Required | can be null    | [nsip-subscription](nsip-subscription-properties-enddate.md "nsip-subscription.schema.json#/properties/endDate")                   |
+| [language](#language)                 | `string`  | Required | can be null    | [nsip-subscription](nsip-subscription-properties-language.md "nsip-subscription.schema.json#/properties/language")                 |
 
 ## subscriptionId
 
@@ -20,11 +20,11 @@ The unique identifier within the Back Office. Ignored as part of register-nsip-s
 
 `subscriptionId`
 
-*   is optional
+*   is required
 
 *   Type: `integer`
 
-*   cannot be null
+*   can be null
 
 *   defined in: [nsip-subscription](nsip-subscription-properties-subscriptionid.md "nsip-subscription.schema.json#/properties/subscriptionId")
 
@@ -113,11 +113,11 @@ The date to start getting updates
 
 `startDate`
 
-*   is optional
+*   is required
 
 *   Type: `string`
 
-*   cannot be null
+*   can be null
 
 *   defined in: [nsip-subscription](nsip-subscription-properties-startdate.md "nsip-subscription.schema.json#/properties/startDate")
 
@@ -135,11 +135,11 @@ The date to stop getting updates
 
 `endDate`
 
-*   is optional
+*   is required
 
 *   Type: `string`
 
-*   cannot be null
+*   can be null
 
 *   defined in: [nsip-subscription](nsip-subscription-properties-enddate.md "nsip-subscription.schema.json#/properties/endDate")
 
@@ -157,11 +157,11 @@ The date to stop getting updates
 
 `language`
 
-*   is optional
+*   is required
 
 *   Type: `string`
 
-*   cannot be null
+*   can be null
 
 *   defined in: [nsip-subscription](nsip-subscription-properties-language.md "nsip-subscription.schema.json#/properties/language")
 

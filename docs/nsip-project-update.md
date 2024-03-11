@@ -8,10 +8,10 @@
 | :-------------------------------------------- | :-------- | :------- | :------------- | :----------------------------------------------------------------------------------------------------------------------------------------------- |
 | [id](#id)                                     | `integer` | Required | cannot be null | [NSIP Project Update](nsip-project-update-properties-id.md "nsip-project-update.schema.json#/properties/id")                                     |
 | [caseReference](#casereference)               | `string`  | Required | cannot be null | [NSIP Project Update](nsip-project-update-properties-casereference.md "nsip-project-update.schema.json#/properties/caseReference")               |
-| [updateDate](#updatedate)                     | `string`  | Optional | cannot be null | [NSIP Project Update](nsip-project-update-properties-updatedate.md "nsip-project-update.schema.json#/properties/updateDate")                     |
-| [updateName](#updatename)                     | `string`  | Optional | cannot be null | [NSIP Project Update](nsip-project-update-properties-updatename.md "nsip-project-update.schema.json#/properties/updateName")                     |
+| [updateDate](#updatedate)                     | `string`  | Required | can be null    | [NSIP Project Update](nsip-project-update-properties-updatedate.md "nsip-project-update.schema.json#/properties/updateDate")                     |
+| [updateName](#updatename)                     | `string`  | Required | can be null    | [NSIP Project Update](nsip-project-update-properties-updatename.md "nsip-project-update.schema.json#/properties/updateName")                     |
 | [updateContentEnglish](#updatecontentenglish) | `string`  | Required | cannot be null | [NSIP Project Update](nsip-project-update-properties-updatecontentenglish.md "nsip-project-update.schema.json#/properties/updateContentEnglish") |
-| [updateContentWelsh](#updatecontentwelsh)     | `string`  | Optional | cannot be null | [NSIP Project Update](nsip-project-update-properties-updatecontentwelsh.md "nsip-project-update.schema.json#/properties/updateContentWelsh")     |
+| [updateContentWelsh](#updatecontentwelsh)     | `string`  | Required | can be null    | [NSIP Project Update](nsip-project-update-properties-updatecontentwelsh.md "nsip-project-update.schema.json#/properties/updateContentWelsh")     |
 | [updateStatus](#updatestatus)                 | `string`  | Required | cannot be null | [NSIP Project Update](nsip-project-update-properties-updatestatus.md "nsip-project-update.schema.json#/properties/updateStatus")                 |
 
 ## id
@@ -56,11 +56,11 @@ The date the update was published
 
 `updateDate`
 
-*   is optional
+*   is required
 
 *   Type: `string`
 
-*   cannot be null
+*   can be null
 
 *   defined in: [NSIP Project Update](nsip-project-update-properties-updatedate.md "nsip-project-update.schema.json#/properties/updateDate")
 
@@ -78,11 +78,11 @@ Internal title or name of the update
 
 `updateName`
 
-*   is optional
+*   is required
 
 *   Type: `string`
 
-*   cannot be null
+*   can be null
 
 *   defined in: [NSIP Project Update](nsip-project-update-properties-updatename.md "nsip-project-update.schema.json#/properties/updateName")
 
@@ -114,11 +114,11 @@ HTML content of the update in Welsh. Can only include `<a> <b> <ul> <li>` tags.
 
 `updateContentWelsh`
 
-*   is optional
+*   is required
 
 *   Type: `string`
 
-*   cannot be null
+*   can be null
 
 *   defined in: [NSIP Project Update](nsip-project-update-properties-updatecontentwelsh.md "nsip-project-update.schema.json#/properties/updateContentWelsh")
 

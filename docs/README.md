@@ -2,21 +2,21 @@
 
 ## Top-level Schemas
 
-*   [Employee](./employee.md) – `employee.schema.json`
+*   [Employee](./employee.md "Employee schema") – `employee.schema.json`
 
 *   [Examination Timetable](./nsip-exam-timetable.md "Examination Timetable for an NSIP Project") – `nsip-exam-timetable.schema.json`
 
 *   [Folder](./folder.md "Folders can have optional parents") – `folder.schema.json`
 
-*   [NSIP Document](./nsip-document.md) – `nsip-document.schema.json`
+*   [NSIP Document](./nsip-document.md "NSIP document schema") – `nsip-document.schema.json`
 
 *   [NSIP Project](./nsip-project.md "Subset of Pins Data Model \[Case]") – `nsip-project.schema.json`
 
 *   [NSIP Project Update](./nsip-project-update.md "NSIP Project Update (formerly known as Banners)") – `nsip-project-update.schema.json`
 
-*   [Representation](./nsip-representation.md) – `nsip-representation.schema.json`
+*   [Representation](./nsip-representation.md "NSIP Representation schema") – `nsip-representation.schema.json`
 
-*   [S51 Advice](./s51-advice.md) – `s51-advice.schema.json`
+*   [S51 Advice](./s51-advice.md "Section 51 Advice schema") – `s51-advice.schema.json`
 
 *   [Service User](./service-user.md "Service User of the planning inspectorate") – `service-user.schema.json`
 

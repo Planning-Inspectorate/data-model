@@ -6,6 +6,15 @@
  */
 
 /**
+ * Employee schema
+ */
+export interface Employee {
+  id: string;
+  firstName: string;
+  lastName: string;
+}
+
+/**
  * Folders can have optional parents. All folders belong to a Case.
  */
 export interface Folder {
@@ -24,22 +33,119 @@ export interface Folder {
   /**
    * Folder display name in Welsh.
    */
-  displayNameWelsh?: string;
+  displayNameWelsh: string | null;
   /**
    * Optional parent folder ID.
    */
-  parentFolderId?: number;
-  caseStage?:
-    | 'draft'
-    | 'pre-application'
-    | 'acceptance'
-    | 'pre-examination'
-    | 'examination'
-    | 'recommendation'
-    | 'decision'
-    | 'post_decision'
-    | 'withdrawn'
-    | 'developers_application';
+  parentFolderId: number | null;
+  caseStage:
+    | (
+        | 'draft'
+        | 'pre-application'
+        | 'acceptance'
+        | 'pre-examination'
+        | 'examination'
+        | 'recommendation'
+        | 'decision'
+        | 'post_decision'
+        | 'withdrawn'
+        | 'developers_application'
+      )
+    | null;
+}
+
+/**
+ * NSIP document schema
+ */
+export interface NSIPDocument {
+  /**
+   * The unique identifier for the file. This will be different to documentReference
+   */
+  documentId: string;
+  /**
+   * Internal case identifier
+   */
+  caseId: number | null;
+  caseRef: string | null;
+  /**
+   * Reference used throughout ODT <CaseRef>-<SequenceNo>
+   */
+  documentReference: string | null;
+  version: number;
+  examinationRefNo: string | null;
+  /**
+   * Current stored filename of the file
+   */
+  filename: string;
+  /**
+   * Original filename of file
+   */
+  originalFilename: string;
+  size: number;
+  mime: string | null;
+  /**
+   * The internal location of the document
+   */
+  documentURI: string;
+  /**
+   * The location of the published document. Only applicable to documents which are published.
+   */
+  publishedDocumentURI: string | null;
+  path: string | null;
+  virusCheckStatus: ('not_scanned' | 'scanned' | 'affected') | null;
+  fileMD5: string | null;
+  dateCreated: string;
+  lastModified: string | null;
+  caseType: ('nsip' | 'has') | null;
+  redactedStatus: ('not_redacted' | 'redacted') | null;
+  publishedStatus:
+    | ('not_checked' | 'checked' | 'ready_to_publish' | 'do_not_publish' | 'publishing' | 'published' | 'archived')
+    | null;
+  datePublished: string | null;
+  documentType: string | null;
+  securityClassification: ('public' | 'official' | 'secret' | 'top-secret') | null;
+  sourceSystem: ('back-office-appeals' | 'back-office-applications' | 'horizon' | 'ni_file' | 'sharepoint') | null;
+  origin: ('pins' | 'citizen' | 'lpa' | 'ogd') | null;
+  owner: string | null;
+  /**
+   * Name of person who authored document
+   */
+  author: string | null;
+  /**
+   * The on behalf of or agent submitter of document
+   */
+  representative: string | null;
+  description: string | null;
+  documentCaseStage:
+    | (
+        | 'draft'
+        | 'pre-application'
+        | 'acceptance'
+        | 'pre-examination'
+        | 'examination'
+        | 'recommendation'
+        | 'decision'
+        | 'post_decision'
+        | 'withdrawn'
+        | 'developers_application'
+      )
+    | null;
+  /**
+   * Filter field to provide additional filtering
+   */
+  filter1: string | null;
+  /**
+   * Filter field to provide additional filtering
+   */
+  filter2: string | null;
+  /**
+   * The folder where the document exists
+   */
+  horizonFolderId: string | null;
+  /**
+   * The GUID of the transcript document (if one was provided).
+   */
+  transcriptId: string | null;
 }
 
 /**
@@ -81,311 +187,15 @@ export interface Event {
   /**
    * Optional start date for event window
    */
-  eventDeadlineStartDate?: string;
+  eventDeadlineStartDate?: string | null;
   /**
    * Event Date = effective deadline (end) date
    */
   date: string;
-  eventLineItems?: LineItem[];
+  eventLineItems: LineItem[];
 }
 export interface LineItem {
   description: string;
-}
-
-/**
- * Subset of Pins Data Model [Case]
- */
-export interface NSIPProject {
-  /**
-   * The unique identifier within the Back Office. This is not the same as the case reference
-   */
-  caseId: number;
-  caseReference?: string;
-  /**
-   * Name of project
-   */
-  projectName?: string;
-  projectDescription?: string;
-  /**
-   * Decision: approved/refused/split-decision
-   */
-  decision?: 'approved' | 'refused' | 'split-decision';
-  publishStatus?: 'published' | 'unpublished';
-  /**
-   * {Sector Abbreviation} - {Sector Display Name}
-   */
-  sector?:
-    | 'BC - Business and Commercial'
-    | 'EN - Energy'
-    | 'TR - Transport'
-    | 'WA - Water'
-    | 'WS - Waste'
-    | 'WW - Waste Water';
-  /**
-   * {SubSector Abbreviation} - {SubSector Display Name}
-   */
-  projectType?:
-    | 'BC01 - Office Use'
-    | 'BC02 - Research and Development of Products or Processes'
-    | 'BC03 - An Industrial Process or Processes'
-    | 'BC04 - Storage or Distribution of Goods'
-    | 'BC05 - Conferences'
-    | 'BC06 - Exhibitions'
-    | 'BC07 - Sport'
-    | 'BC08 - Leisure'
-    | 'BC09 - Tourism'
-    | 'EN01 - Generating Stations'
-    | 'EN02 - Electric Lines'
-    | 'EN03 - Underground Gas Storage Facilities'
-    | 'EN04 - LNG Facilities'
-    | 'EN05 - Gas Reception Facilities'
-    | 'EN06 - Gas Transporter Pipe-lines'
-    | 'EN07 - Other Pipe-lines'
-    | 'TR01 - Highways'
-    | 'TR02 - Airports'
-    | 'TR03 - Harbour Facilities'
-    | 'TR04 - Railways'
-    | 'TR05 - Rail Freight Interchanges'
-    | 'WS01 - Hazardous Waste Facilities'
-    | 'WW01 - Waste Water Treatment Plants'
-    | 'WA01 - Dams and Reservoirs'
-    | 'WA02 - Transfer of Water Resources';
-  sourceSystem: 'back-office-applications' | 'horizon';
-  /**
-   * Process stage identifier
-   */
-  stage?:
-    | 'draft'
-    | 'pre_application'
-    | 'acceptance'
-    | 'pre_examination'
-    | 'examination'
-    | 'recommendation'
-    | 'decision'
-    | 'post_decision'
-    | 'withdrawn';
-  /**
-   * Description of site location
-   */
-  projectLocation?: string;
-  /**
-   * PINS Project email address pubished on website
-   */
-  projectEmailAddress?: string;
-  regions?: (
-    | 'east_midlands'
-    | 'eastern'
-    | 'london'
-    | 'north_east'
-    | 'north_west'
-    | 'south_east'
-    | 'south_west'
-    | 'wales'
-    | 'west_midlands'
-    | 'yorkshire_and_the_humber'
-  )[];
-  /**
-   * Drives addition of Transboundary tab on website. [TODO]
-   */
-  transboundary?: boolean;
-  /**
-   * Project site Easting co-ordinate.
-   */
-  easting?: number;
-  /**
-   * Project site Northing co-ordinate.
-   */
-  northing?: number;
-  /**
-   * Welsh Language translation required.
-   */
-  welshLanguage?: boolean;
-  /**
-   * Resolution of pinned map. Set when co-ordinates are created.
-   */
-  mapZoomLevel?: 'country' | 'region' | 'county' | 'borough' | 'district' | 'city' | 'town' | 'junction' | 'none';
-  /**
-   * Relevant Government Department. [TODO]
-   */
-  secretaryOfState?: string;
-  _preApplicationDates?: unknown;
-  /**
-   * Date at which applicant notify PINS of a project (pre-publishing)
-   */
-  datePINSFirstNotifiedOfProject?: string;
-  /**
-   * Date Project Appears On Website
-   */
-  dateProjectAppearsOnWebsite?: string;
-  /**
-   * Approximate Anticipated Submission Date Of Application, e.g. Q3 2023
-   */
-  anticipatedSubmissionDateNonSpecific?: string;
-  /**
-   * Anticipated Submission Date Of Application
-   */
-  anticipatedDateOfSubmission?: string;
-  /**
-   * (TBC by Env. Services Team)
-   */
-  screeningOpinionSought?: string;
-  /**
-   * (TBC by Env. Services Team)
-   */
-  screeningOpinionIssued?: string;
-  /**
-   * (TBC by Env. Services Team)
-   */
-  scopingOpinionSought?: string;
-  /**
-   * (TBC by Env. Services Team)
-   */
-  scopingOpinionIssued?: string;
-  /**
-   * Applicant must notify PINS of statutory consultation
-   */
-  section46Notification?: string;
-  _acceptanceDates?: unknown;
-  /**
-   * Date Applcation is submitted
-   */
-  dateOfDCOSubmission?: string;
-  /**
-   * DeadlineForAcceptanceDecision
-   */
-  deadlineForAcceptanceDecision?: string;
-  /**
-   * Date Application is Formerly Accepted by PINS
-   */
-  dateOfDCOAcceptance?: string;
-  /**
-   * Date of Non Acceptance
-   */
-  dateOfNonAcceptance?: string;
-  _preExaminationDates?: unknown;
-  /**
-   * Date at which point publish can submit relevant reps
-   */
-  dateOfRepresentationPeriodOpen?: string;
-  /**
-   * Date at which point publish can no longer submit relevant reps
-   */
-  dateOfRelevantRepresentationClose?: string;
-  /**
-   * ExtensionToDateRelevantRepresentationsClose
-   */
-  extensionToDateRelevantRepresentationsClose?: string;
-  /**
-   * Date at which relevant reps appear on the website
-   */
-  dateRRepAppearOnWebsite?: string;
-  dateIAPIDue?: string;
-  rule6LetterPublishDate?: string;
-  /**
-   * Meeting between all parties inc public
-   */
-  preliminaryMeetingStartDate?: string;
-  notificationDateForPMAndEventsDirectlyFollowingPM?: string;
-  notificationDateForEventsDeveloper?: string;
-  _examinationDates?: unknown;
-  /**
-   * Applicant has notified all parties of application
-   */
-  dateSection58NoticeReceived?: string;
-  /**
-   * ConfirmedStartOfExamination by panel
-   */
-  confirmedStartOfExamination?: string;
-  rule8LetterPublishDate?: string;
-  /**
-   * DeadlineForCloseOfExamination
-   */
-  deadlineForCloseOfExamination?: string;
-  /**
-   * ConfirmedSEndOfExamination by panel
-   */
-  dateTimeExaminationEnds?: string;
-  /**
-   * Examination Period extended to this date
-   */
-  stage4ExtensionToExamCloseDate?: string;
-  _recommendationDates?: unknown;
-  /**
-   * DeadlineForSubmissionOfRecommendation
-   */
-  deadlineForSubmissionOfRecommendation?: string;
-  /**
-   * Date recomm report sent to SoS
-   */
-  dateOfRecommendations?: string;
-  /**
-   * Recommendation period extended to this date
-   */
-  stage5ExtensionToRecommendationDeadline?: string;
-  _decisionDates?: unknown;
-  /**
-   * DeadlineForDecision
-   */
-  deadlineForDecision?: string;
-  /**
-   * Decision by SoS
-   */
-  confirmedDateOfDecision?: string;
-  /**
-   * Decision period extended to this date
-   */
-  stage5ExtensionToDecisionDeadline?: string;
-  _postDecisionDates?: unknown;
-  /**
-   * Judicial Review
-   */
-  jRPeriodEndDate?: string;
-  _withdrawalDates?: unknown;
-  /**
-   * DateProjectWithdrawn by applicant
-   */
-  dateProjectWithdrawn?: string;
-  /**
-   * Maps to [Employee].[EmployeeID].
-   */
-  operationsLeadId?: string;
-  /**
-   * New NSIP role, Maps to [Employee].[EmployeeID]
-   */
-  operationsManagerId?: string;
-  /**
-   * Maps to [Employee].[EmployeeID]
-   */
-  caseManagerId?: string;
-  nsipOfficerIds?: string[];
-  nsipAdministrationOfficerIds?: string[];
-  /**
-   * Maps to [Employee].[EmployeeID]
-   */
-  leadInspectorId?: string;
-  inspectorIds?: string[];
-  /**
-   * Maps to [Employee].[EmployeeID]
-   */
-  environmentalServicesOfficerId?: string;
-  /**
-   * Maps to [Employee].[EmployeeID]
-   */
-  legalOfficerId?: string;
-  /**
-   * Maps to [ServiceUser].[id] where the serviceUserType is Applicant
-   */
-  applicantId?: string;
-  /**
-   * Has this case been migrated from the legacy system? True if so.
-   */
-  migrationStatus?: boolean | null;
-}
-
-export interface Employee {
-  id: string;
-  firstName: string;
-  lastName: string;
 }
 
 /**
@@ -403,11 +213,11 @@ export interface NSIPProjectUpdate {
   /**
    * The date the update was published
    */
-  updateDate?: string;
+  updateDate: string | null;
   /**
    * Internal title or name of the update
    */
-  updateName?: string;
+  updateName: string | null;
   /**
    * HTML content of the update in English. Can only include `<a> <b> <ul> <li>` tags.
    */
@@ -415,122 +225,333 @@ export interface NSIPProjectUpdate {
   /**
    * HTML content of the update in Welsh. Can only include `<a> <b> <ul> <li>` tags.
    */
-  updateContentWelsh?: string;
+  updateContentWelsh: string | null;
   /**
    * The current status of this update
    */
   updateStatus: 'draft' | 'ready-to-publish' | 'published' | 'ready-to-unpublish' | 'unpublished' | 'archived';
 }
 
-export interface NSIPDocument {
+/**
+ * Subset of Pins Data Model [Case]
+ */
+export interface NSIPProject {
   /**
-   * The unique identifier for the file. This will be different to documentReference
+   * The unique identifier within the Back Office. This is not the same as the case reference
    */
-  documentId: string;
+  caseId: number;
+  caseReference: string | null;
   /**
-   * Internal case identifier
+   * Name of project
    */
-  caseId?: number;
-  caseRef?: string;
+  projectName: string | null;
+  projectDescription: string | null;
   /**
-   * Reference used throughout ODT <CaseRef>-<SequenceNo>
+   * Decision: approved/refused/split-decision
    */
-  documentReference?: string;
-  version: number;
-  examinationRefNo?: string;
+  decision: ('approved' | 'refused' | 'split-decision') | null;
+  publishStatus: ('published' | 'unpublished') | null;
   /**
-   * Current stored filename of the file
+   * {Sector Abbreviation} - {Sector Display Name}
    */
-  filename: string;
+  sector:
+    | (
+        | 'BC - Business and Commercial'
+        | 'EN - Energy'
+        | 'TR - Transport'
+        | 'WA - Water'
+        | 'WS - Waste'
+        | 'WW - Waste Water'
+      )
+    | null;
   /**
-   * Original filename of file
+   * {SubSector Abbreviation} - {SubSector Display Name}
    */
-  originalFilename: string;
-  size: number;
-  mime?: string;
+  projectType:
+    | (
+        | 'BC01 - Office Use'
+        | 'BC02 - Research and Development of Products or Processes'
+        | 'BC03 - An Industrial Process or Processes'
+        | 'BC04 - Storage or Distribution of Goods'
+        | 'BC05 - Conferences'
+        | 'BC06 - Exhibitions'
+        | 'BC07 - Sport'
+        | 'BC08 - Leisure'
+        | 'BC09 - Tourism'
+        | 'EN01 - Generating Stations'
+        | 'EN02 - Electric Lines'
+        | 'EN03 - Underground Gas Storage Facilities'
+        | 'EN04 - LNG Facilities'
+        | 'EN05 - Gas Reception Facilities'
+        | 'EN06 - Gas Transporter Pipe-lines'
+        | 'EN07 - Other Pipe-lines'
+        | 'TR01 - Highways'
+        | 'TR02 - Airports'
+        | 'TR03 - Harbour Facilities'
+        | 'TR04 - Railways'
+        | 'TR05 - Rail Freight Interchanges'
+        | 'WS01 - Hazardous Waste Facilities'
+        | 'WW01 - Waste Water Treatment Plants'
+        | 'WA01 - Dams and Reservoirs'
+        | 'WA02 - Transfer of Water Resources'
+      )
+    | null;
+  sourceSystem: 'back-office-applications' | 'horizon';
   /**
-   * The internal location of the document
+   * Process stage identifier
    */
-  documentURI: string;
+  stage:
+    | (
+        | 'draft'
+        | 'pre_application'
+        | 'acceptance'
+        | 'pre_examination'
+        | 'examination'
+        | 'recommendation'
+        | 'decision'
+        | 'post_decision'
+        | 'withdrawn'
+      )
+    | null;
   /**
-   * The location of the published document. Only applicable to documents which are published.
+   * Description of site location
    */
-  publishedDocumentURI?: string;
-  path?: string;
-  virusCheckStatus?: 'not_scanned' | 'scanned' | 'affected';
-  fileMD5?: string;
-  dateCreated: string;
-  lastModified?: string;
-  caseType?: 'nsip' | 'has';
-  redactedStatus?: 'not_redacted' | 'redacted';
-  publishedStatus?:
-    | 'not_checked'
-    | 'checked'
-    | 'ready_to_publish'
-    | 'do_not_publish'
-    | 'publishing'
-    | 'published'
-    | 'archived';
-  datePublished?: string;
-  documentType?: string;
-  securityClassification?: 'public' | 'official' | 'secret' | 'top-secret';
-  sourceSystem?: 'back-office-appeals' | 'back-office-applications' | 'horizon' | 'ni_file' | 'sharepoint';
-  origin?: 'pins' | 'citizen' | 'lpa' | 'ogd';
-  owner?: string;
+  projectLocation: string | null;
   /**
-   * Name of person who authored document
+   * PINS Project email address pubished on website
    */
-  author?: string;
+  projectEmailAddress: string | null;
+  regions: (
+    | 'east_midlands'
+    | 'eastern'
+    | 'london'
+    | 'north_east'
+    | 'north_west'
+    | 'south_east'
+    | 'south_west'
+    | 'wales'
+    | 'west_midlands'
+    | 'yorkshire_and_the_humber'
+  )[];
   /**
-   * The on behalf of or agent submitter of document
+   * Drives addition of Transboundary tab on website. [TODO]
    */
-  representative?: string;
-  description?: string;
-  documentCaseStage?:
-    | 'draft'
-    | 'pre-application'
-    | 'acceptance'
-    | 'pre-examination'
-    | 'examination'
-    | 'recommendation'
-    | 'decision'
-    | 'post_decision'
-    | 'withdrawn'
-    | 'developers_application';
+  transboundary: boolean | null;
   /**
-   * Filter field to provide additional filtering
+   * Project site Easting co-ordinate.
    */
-  filter1?: string;
+  easting: number | null;
   /**
-   * Filter field to provide additional filtering
+   * Project site Northing co-ordinate.
    */
-  filter2?: string;
+  northing: number | null;
   /**
-   * The folder where the document exists
+   * Welsh Language translation required.
    */
-  horizonFolderId?: string;
+  welshLanguage: boolean | null;
   /**
-   * The GUID of the transcript document (if one was provided).
+   * Resolution of pinned map. Set when co-ordinates are created.
    */
-  transcriptId?: string;
+  mapZoomLevel:
+    | ('country' | 'region' | 'county' | 'borough' | 'district' | 'city' | 'town' | 'junction' | 'none')
+    | null;
+  /**
+   * Relevant Government Department. [TODO]
+   */
+  secretaryOfState: string | null;
+  _preApplicationDates?: unknown;
+  /**
+   * Date at which applicant notify PINS of a project (pre-publishing)
+   */
+  datePINSFirstNotifiedOfProject: string | null;
+  /**
+   * Date Project Appears On Website
+   */
+  dateProjectAppearsOnWebsite: string | null;
+  /**
+   * Approximate Anticipated Submission Date Of Application, e.g. Q3 2023
+   */
+  anticipatedSubmissionDateNonSpecific: string | null;
+  /**
+   * Anticipated Submission Date Of Application
+   */
+  anticipatedDateOfSubmission: string | null;
+  /**
+   * (TBC by Env. Services Team)
+   */
+  screeningOpinionSought: string | null;
+  /**
+   * (TBC by Env. Services Team)
+   */
+  screeningOpinionIssued: string | null;
+  /**
+   * (TBC by Env. Services Team)
+   */
+  scopingOpinionSought: string | null;
+  /**
+   * (TBC by Env. Services Team)
+   */
+  scopingOpinionIssued: string | null;
+  /**
+   * Applicant must notify PINS of statutory consultation
+   */
+  section46Notification: string | null;
+  _acceptanceDates?: unknown;
+  /**
+   * Date Applcation is submitted
+   */
+  dateOfDCOSubmission: string | null;
+  /**
+   * DeadlineForAcceptanceDecision
+   */
+  deadlineForAcceptanceDecision: string | null;
+  /**
+   * Date Application is Formerly Accepted by PINS
+   */
+  dateOfDCOAcceptance: string | null;
+  /**
+   * Date of Non Acceptance
+   */
+  dateOfNonAcceptance: string | null;
+  _preExaminationDates?: unknown;
+  /**
+   * Date at which point publish can submit relevant reps
+   */
+  dateOfRepresentationPeriodOpen: string | null;
+  /**
+   * Date at which point publish can no longer submit relevant reps
+   */
+  dateOfRelevantRepresentationClose: string | null;
+  /**
+   * ExtensionToDateRelevantRepresentationsClose
+   */
+  extensionToDateRelevantRepresentationsClose: string | null;
+  /**
+   * Date at which relevant reps appear on the website
+   */
+  dateRRepAppearOnWebsite: string | null;
+  dateIAPIDue: string | null;
+  rule6LetterPublishDate: string | null;
+  /**
+   * Meeting between all parties inc public
+   */
+  preliminaryMeetingStartDate: string | null;
+  notificationDateForPMAndEventsDirectlyFollowingPM: string | null;
+  notificationDateForEventsDeveloper: string | null;
+  _examinationDates?: unknown;
+  /**
+   * Applicant has notified all parties of application
+   */
+  dateSection58NoticeReceived: string | null;
+  /**
+   * ConfirmedStartOfExamination by panel
+   */
+  confirmedStartOfExamination: string | null;
+  rule8LetterPublishDate: string | null;
+  /**
+   * DeadlineForCloseOfExamination
+   */
+  deadlineForCloseOfExamination: string | null;
+  /**
+   * ConfirmedSEndOfExamination by panel
+   */
+  dateTimeExaminationEnds: string | null;
+  /**
+   * Examination Period extended to this date
+   */
+  stage4ExtensionToExamCloseDate: string | null;
+  _recommendationDates?: unknown;
+  /**
+   * DeadlineForSubmissionOfRecommendation
+   */
+  deadlineForSubmissionOfRecommendation: string | null;
+  /**
+   * Date recomm report sent to SoS
+   */
+  dateOfRecommendations: string | null;
+  /**
+   * Recommendation period extended to this date
+   */
+  stage5ExtensionToRecommendationDeadline: string | null;
+  _decisionDates?: unknown;
+  /**
+   * DeadlineForDecision
+   */
+  deadlineForDecision: string | null;
+  /**
+   * Decision by SoS
+   */
+  confirmedDateOfDecision: string | null;
+  /**
+   * Decision period extended to this date
+   */
+  stage5ExtensionToDecisionDeadline: string | null;
+  _postDecisionDates?: unknown;
+  /**
+   * Judicial Review
+   */
+  jRPeriodEndDate: string | null;
+  _withdrawalDates?: unknown;
+  /**
+   * DateProjectWithdrawn by applicant
+   */
+  dateProjectWithdrawn: string | null;
+  /**
+   * Maps to [Employee].[EmployeeID].
+   */
+  operationsLeadId: string | null;
+  /**
+   * New NSIP role, Maps to [Employee].[EmployeeID]
+   */
+  operationsManagerId: string | null;
+  /**
+   * Maps to [Employee].[EmployeeID]
+   */
+  caseManagerId: string | null;
+  nsipOfficerIds: string[];
+  nsipAdministrationOfficerIds: string[];
+  /**
+   * Maps to [Employee].[EmployeeID]
+   */
+  leadInspectorId: string | null;
+  inspectorIds: string[];
+  /**
+   * Maps to [Employee].[EmployeeID]
+   */
+  environmentalServicesOfficerId: string | null;
+  /**
+   * Maps to [Employee].[EmployeeID]
+   */
+  legalOfficerId: string | null;
+  /**
+   * Maps to [ServiceUser].[id] where the serviceUserType is Applicant
+   */
+  applicantId: string | null;
+  /**
+   * Has this case been migrated from the legacy system? True if so.
+   */
+  migrationStatus: boolean | null;
 }
 
+/**
+ * NSIP Representation schema
+ */
 export interface Representation {
   representationId: number;
-  referenceId?: string;
-  examinationLibraryRef?: string;
+  referenceId: string | null;
+  examinationLibraryRef: string | null;
   caseRef: string;
   /**
    * The unique identifier within the Back Office. This is not the same as the case reference
    */
-  caseId?: number;
-  status?: 'awaiting_review' | 'referred' | 'valid' | 'invalid' | 'published' | 'archived';
+  caseId: number | null;
+  status: ('awaiting_review' | 'referred' | 'valid' | 'invalid' | 'published' | 'archived') | null;
   originalRepresentation: string;
-  redacted?: boolean;
-  redactedRepresentation?: string;
-  redactedBy?: string;
-  redactedNotes?: string;
-  representationFrom?: 'PERSON' | 'ORGANISATION' | 'AGENT';
+  redacted: boolean | null;
+  redactedRepresentation: string | null;
+  redactedBy: string | null;
+  redactedNotes: string | null;
+  representationFrom: ('PERSON' | 'ORGANISATION' | 'AGENT') | null;
   /**
    * ServiceUser Id of the person or organisation being represented
    */
@@ -538,64 +559,21 @@ export interface Representation {
   /**
    * ServiceUser Id of the person or organisation submitting representation in the case of Agent representationFrom
    */
-  representativeId?: string;
-  registerFor?: 'PERSON' | 'ORGANISATION' | 'FAMILY_GROUP';
-  representationType?:
-    | 'Local Authorities'
-    | 'Parish Councils'
-    | 'Members of the Public/Businesses'
-    | 'Public & Businesses'
-    | 'Statutory Consultees'
-    | 'Non-Statutory Organisations'
-    | 'Another Individual';
+  representativeId: string | null;
+  registerFor: ('PERSON' | 'ORGANISATION' | 'FAMILY_GROUP') | null;
+  representationType:
+    | (
+        | 'Local Authorities'
+        | 'Parish Councils'
+        | 'Members of the Public/Businesses'
+        | 'Public & Businesses'
+        | 'Statutory Consultees'
+        | 'Non-Statutory Organisations'
+        | 'Another Individual'
+      )
+    | null;
   dateReceived: string;
-  attachmentIds?: string[];
-}
-
-export interface S51Advice {
-  adviceId: number;
-  adviceReference: string;
-  caseId?: number;
-  caseReference?: string;
-  /**
-   * Title of the advice
-   */
-  title: string;
-  /**
-   * Who the enquiry is from
-   */
-  from?: string;
-  /**
-   * Who the enquiry is on behalf of
-   */
-  agent?: string;
-  /**
-   * How the enquiry was made
-   */
-  method?: 'phone' | 'email' | 'meeting' | 'post';
-  /**
-   * Date the enquiry was made
-   */
-  enquiryDate?: string;
-  /**
-   * Details of the enquiry
-   */
-  enquiryDetails?: string;
-  /**
-   * Who issued the advice
-   */
-  adviceGivenBy?: string;
-  /**
-   * Date the advice was given
-   */
-  adviceDate?: string;
-  /**
-   * Details of the advice
-   */
-  adviceDetails?: string;
-  status?: 'checked' | 'unchecked' | 'readytopublish' | 'published' | 'donotpublish';
-  redactionStatus?: 'unredacted' | 'redacted';
-  attachmentIds?: string[];
+  attachmentIds: string[];
 }
 
 /**
@@ -605,7 +583,7 @@ export interface NsipSubscription {
   /**
    * The unique identifier within the Back Office. Ignored as part of register-nsip-subscription.
    */
-  subscriptionId?: number;
+  subscriptionId: number | null;
   /**
    * the case reference the subscription relates to
    */
@@ -618,12 +596,61 @@ export interface NsipSubscription {
   /**
    * The date to start getting updates
    */
-  startDate?: string;
+  startDate: string | null;
   /**
    * The date to stop getting updates
    */
-  endDate?: string;
-  language?: 'English' | 'Welsh';
+  endDate: string | null;
+  language: ('English' | 'Welsh') | null;
+}
+
+/**
+ * Section 51 Advice schema
+ */
+export interface S51Advice {
+  adviceId: number;
+  adviceReference: string;
+  caseId: number | null;
+  caseReference: string | null;
+  /**
+   * Title of the advice
+   */
+  title: string;
+  /**
+   * Who the enquiry is from
+   */
+  from: string | null;
+  /**
+   * Who the enquiry is on behalf of
+   */
+  agent: string | null;
+  /**
+   * How the enquiry was made
+   */
+  method: ('phone' | 'email' | 'meeting' | 'post') | null;
+  /**
+   * Date the enquiry was made
+   */
+  enquiryDate: string | null;
+  /**
+   * Details of the enquiry
+   */
+  enquiryDetails: string | null;
+  /**
+   * Who issued the advice
+   */
+  adviceGivenBy: string | null;
+  /**
+   * Date the advice was given
+   */
+  adviceDate: string | null;
+  /**
+   * Details of the advice
+   */
+  adviceDetails: string | null;
+  status: ('checked' | 'unchecked' | 'readytopublish' | 'published' | 'donotpublish') | null;
+  redactionStatus: ('unredacted' | 'redacted') | null;
+  attachmentIds: string[];
 }
 
 /**
@@ -637,71 +664,71 @@ export interface ServiceUser {
   /**
    * A formal greeting, e.g., Mr, Mrs, Ms.
    */
-  salutation?: string;
+  salutation: string | null;
   /**
    * The first name of the individual.
    */
-  firstName?: string;
+  firstName: string | null;
   /**
    * The last name of the individual.
    */
-  lastName?: string;
+  lastName: string | null;
   /**
    * The first line of the address.
    */
-  addressLine1?: string;
+  addressLine1: string | null;
   /**
    * The second line of the address, usually includes suite or apartment number.
    */
-  addressLine2?: string;
+  addressLine2: string | null;
   /**
    * The town or city of the address.
    */
-  addressTown?: string;
+  addressTown: string | null;
   /**
    * The county in which the town or city is located.
    */
-  addressCounty?: string;
+  addressCounty: string | null;
   /**
    * The postal code for the address.
    */
-  postcode?: string;
+  postcode: string | null;
   /**
    * The country of the address.
    */
-  addressCountry?: string;
+  addressCountry: string | null;
   /**
    * The name of the organisation associated with the individual.
    */
-  organisation?: string;
+  organisation: string | null;
   /**
    * The type or nature of the organisation.
    */
-  organisationType?: string;
+  organisationType: string | null;
   /**
    * The individual's role or position within the organisation.
    */
-  role?: string;
+  role: string | null;
   /**
    * The primary telephone contact number.
    */
-  telephoneNumber?: string;
+  telephoneNumber: string | null;
   /**
    * An alternate or secondary phone number.
    */
-  otherPhoneNumber?: string;
+  otherPhoneNumber: string | null;
   /**
    * A fax contact number.
    */
-  faxNumber?: string;
+  faxNumber: string | null;
   /**
    * The primary email address for contact.
    */
-  emailAddress?: string;
+  emailAddress: string | null;
   /**
    * Website address or URL.
    */
-  webAddress?: string;
+  webAddress: string | null;
   /**
    * Type or category of the service user.
    */
@@ -718,17 +745,6 @@ export interface ServiceUser {
    * Unique identifier from the source system.
    */
   sourceSuid: string;
-}
-
-/**
- * Result of processing a new exam timetable submission
- */
-export interface NsipExamTimetableSubmission {
-  status: 'SUCCESS' | 'VIRUS_DETECTED' | 'FAILURE';
-  deadline: string;
-  submissionType: string;
-  blobGuid: string;
-  documentName: string;
 }
 
 export type Name = string;
@@ -755,6 +771,61 @@ export interface Address {
   town: string;
   postcode: string;
   country?: string;
+}
+
+/**
+ * Result of processing a new exam timetable submission
+ */
+export interface NsipExamTimetableSubmission {
+  status: 'SUCCESS' | 'VIRUS_DETECTED' | 'FAILURE';
+  deadline: string;
+  submissionType: string;
+  blobGuid: string;
+  documentName: string;
+}
+
+/**
+ * A command to register an NSIP subscription with the back office
+ */
+export interface RegisterNsipSubscription {
+  /**
+   * Properties in additionalProperties in the Service Bus message. Not present in the message body.
+   */
+  __additionalProperties__?: {
+    type?: 'Create' | 'Delete';
+  };
+  nsipSubscription?: NsipSubscription;
+  /**
+   * Which update(s) does the subscriber want to get notified of. Note nsipSubscription.subscriptionType is ignored.
+   */
+  subscriptionTypes?: ('allUpdates' | 'applicationSubmitted' | 'applicationDecided' | 'registrationOpen')[];
+}
+/**
+ * Subscribers are a subset of Service Users, part of the PINS Data Model
+ */
+export interface NsipSubscription {
+  /**
+   * The unique identifier within the Back Office. Ignored as part of register-nsip-subscription.
+   */
+  subscriptionId: number | null;
+  /**
+   * the case reference the subscription relates to
+   */
+  caseReference: string;
+  emailAddress: string;
+  /**
+   * which update does the subscriber want to get notified of. For multiple types, use multiple messages.
+   */
+  subscriptionType: 'allUpdates' | 'applicationSubmitted' | 'applicationDecided' | 'registrationOpen';
+  /**
+   * The date to start getting updates
+   */
+  startDate: string | null;
+  /**
+   * The date to stop getting updates
+   */
+  endDate: string | null;
+  language: ('English' | 'Welsh') | null;
 }
 
 /**
@@ -806,50 +877,6 @@ export interface NewDeadlineSubmission {
    * The file name of the document in blob storage
    */
   documentName: string;
-}
-
-/**
- * A command to register an NSIP subscription with the back office
- */
-export interface RegisterNsipSubscription {
-  /**
-   * Properties in additionalProperties in the Service Bus message. Not present in the message body.
-   */
-  __additionalProperties__?: {
-    type?: 'Create' | 'Delete';
-  };
-  nsipSubscription?: NsipSubscription;
-  /**
-   * Which update(s) does the subscriber want to get notified of. Note nsipSubscription.subscriptionType is ignored.
-   */
-  subscriptionTypes?: ('allUpdates' | 'applicationSubmitted' | 'applicationDecided' | 'registrationOpen')[];
-}
-/**
- * Subscribers are a subset of Service Users, part of the PINS Data Model
- */
-export interface NsipSubscription {
-  /**
-   * The unique identifier within the Back Office. Ignored as part of register-nsip-subscription.
-   */
-  subscriptionId?: number;
-  /**
-   * the case reference the subscription relates to
-   */
-  caseReference: string;
-  emailAddress: string;
-  /**
-   * which update does the subscriber want to get notified of. For multiple types, use multiple messages.
-   */
-  subscriptionType: 'allUpdates' | 'applicationSubmitted' | 'applicationDecided' | 'registrationOpen';
-  /**
-   * The date to start getting updates
-   */
-  startDate?: string;
-  /**
-   * The date to stop getting updates
-   */
-  endDate?: string;
-  language?: 'English' | 'Welsh';
 }
 
 export type Name = string;

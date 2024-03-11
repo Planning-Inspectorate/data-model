@@ -9,9 +9,9 @@
 | [id](#id)                                 | `integer` | Required | cannot be null | [Folder](folder-properties-id.md "folder.schema.json#/properties/id")                                 |
 | [caseReference](#casereference)           | `string`  | Required | cannot be null | [Folder](folder-properties-casereference.md "folder.schema.json#/properties/caseReference")           |
 | [displayNameEnglish](#displaynameenglish) | `string`  | Required | cannot be null | [Folder](folder-properties-displaynameenglish.md "folder.schema.json#/properties/displayNameEnglish") |
-| [displayNameWelsh](#displaynamewelsh)     | `string`  | Optional | cannot be null | [Folder](folder-properties-displaynamewelsh.md "folder.schema.json#/properties/displayNameWelsh")     |
-| [parentFolderId](#parentfolderid)         | `integer` | Optional | cannot be null | [Folder](folder-properties-parentfolderid.md "folder.schema.json#/properties/parentFolderId")         |
-| [caseStage](#casestage)                   | `string`  | Optional | cannot be null | [Folder](folder-properties-casestage.md "folder.schema.json#/properties/caseStage")                   |
+| [displayNameWelsh](#displaynamewelsh)     | `string`  | Required | can be null    | [Folder](folder-properties-displaynamewelsh.md "folder.schema.json#/properties/displayNameWelsh")     |
+| [parentFolderId](#parentfolderid)         | `integer` | Required | can be null    | [Folder](folder-properties-parentfolderid.md "folder.schema.json#/properties/parentFolderId")         |
+| [caseStage](#casestage)                   | `string`  | Required | can be null    | [Folder](folder-properties-casestage.md "folder.schema.json#/properties/caseStage")                   |
 
 ## id
 
@@ -73,11 +73,11 @@ Folder display name in Welsh.
 
 `displayNameWelsh`
 
-*   is optional
+*   is required
 
 *   Type: `string`
 
-*   cannot be null
+*   can be null
 
 *   defined in: [Folder](folder-properties-displaynamewelsh.md "folder.schema.json#/properties/displayNameWelsh")
 
@@ -91,11 +91,11 @@ Optional parent folder ID.
 
 `parentFolderId`
 
-*   is optional
+*   is required
 
 *   Type: `integer`
 
-*   cannot be null
+*   can be null
 
 *   defined in: [Folder](folder-properties-parentfolderid.md "folder.schema.json#/properties/parentFolderId")
 
@@ -109,11 +109,11 @@ Optional parent folder ID.
 
 `caseStage`
 
-*   is optional
+*   is required
 
 *   Type: `string`
 
-*   cannot be null
+*   can be null
 
 *   defined in: [Folder](folder-properties-casestage.md "folder.schema.json#/properties/caseStage")
 

@@ -512,6 +512,18 @@
 		"migrationStatus": {
 			"type": ["boolean", "null"],
 			"description": "Has this case been migrated from the legacy system? True if so."
+		},
+		"dateOfReOpenRelevantRepresentationStart": {
+			"type": ["string", "null"],
+			"description": "Date at which relevant reps can be reopened",
+			"format": "date-time",
+			"examples": ["2023-07-27T20:30:00.000Z"]
+		},
+		"dateOfReOpenRelevantRepresentationClose": {
+			"type": ["string", "null"],
+			"description": "Date at which relevant reps can no longer be reopened",
+			"format": "date-time",
+			"examples": ["2023-07-27T20:30:00.000Z"]
 		}
 	}
 }

@@ -206,6 +206,7 @@ Decision: approved/refused/split-decision
 | `"approved"`       |             |
 | `"refused"`        |             |
 | `"split-decision"` |             |
+| `null`             |             |
 
 ## publishStatus
 
@@ -233,6 +234,7 @@ Decision: approved/refused/split-decision
 | :-------------- | :---------- |
 | `"published"`   |             |
 | `"unpublished"` |             |
+| `null`          |             |
 
 ## sector
 
@@ -264,6 +266,7 @@ Decision: approved/refused/split-decision
 | `"WA - Water"`                   |             |
 | `"WS - Waste"`                   |             |
 | `"WW - Waste Water"`             |             |
+| `null`                           |             |
 
 ## projectType
 
@@ -314,6 +317,7 @@ Decision: approved/refused/split-decision
 | `"WW01 - Waste Water Treatment Plants"`                      |             |
 | `"WA01 - Dams and Reservoirs"`                               |             |
 | `"WA02 - Transfer of Water Resources"`                       |             |
+| `null`                                                       |             |
 
 ## sourceSystem
 
@@ -375,6 +379,7 @@ Process stage identifier
 | `"decision"`        |             |
 | `"post_decision"`   |             |
 | `"withdrawn"`       |             |
+| `null`              |             |
 
 ## projectLocation
 
@@ -579,6 +584,7 @@ Resolution of pinned map. Set when co-ordinates are created.
 | `"town"`     |             |
 | `"junction"` |             |
 | `"none"`     |             |
+| `null`       |             |
 
 ## secretaryOfState
 

@@ -55,7 +55,7 @@
 		"method": {
 			"type": ["string", "null"],
 			"description": "How the enquiry was made",
-			"enum": ["phone", "email", "meeting", "post"]
+			"enum": ["phone", "email", "meeting", "post", null]
 		},
 		"enquiryDate": {
 			"type": ["string", "null"],
@@ -83,11 +83,11 @@
 		},
 		"status": {
 			"type": ["string", "null"],
-			"enum": ["checked", "unchecked", "readytopublish", "published", "donotpublish"]
+			"enum": ["checked", "unchecked", "readytopublish", "published", "donotpublish", null]
 		},
 		"redactionStatus": {
 			"type": ["string", "null"],
-			"enum": ["unredacted", "redacted"]
+			"enum": ["unredacted", "redacted", null]
 		},
 		"attachmentIds": {
 			"type": "array",

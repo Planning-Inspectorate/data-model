@@ -177,6 +177,7 @@ The date to stop getting updates
 | :---------- | :---------- |
 | `"English"` |             |
 | `"Welsh"`   |             |
+| `null`      |             |
 
 ### language Default Value
 

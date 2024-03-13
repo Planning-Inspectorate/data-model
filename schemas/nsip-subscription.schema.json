@@ -36,7 +36,7 @@
 		},
 		"language": {
 			"type": ["string", "null"],
-			"enum": ["English", "Welsh"],
+			"enum": ["English", "Welsh", null],
 			"default": "English"
 		}
 	}

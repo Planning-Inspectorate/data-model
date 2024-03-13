@@ -98,11 +98,11 @@
 		"decision": {
 			"type": ["string", "null"],
 			"description": "Decision: approved/refused/split-decision",
-			"enum": ["approved", "refused", "split-decision"]
+			"enum": ["approved", "refused", "split-decision", null]
 		},
 		"publishStatus": {
 			"type": ["string", "null"],
-			"enum": ["published", "unpublished"]
+			"enum": ["published", "unpublished", null]
 		},
 		"sector": {
 			"type": ["string", "null"],
@@ -113,7 +113,8 @@
 				"TR - Transport",
 				"WA - Water",
 				"WS - Waste",
-				"WW - Waste Water"
+				"WW - Waste Water",
+				null
 			]
 		},
 		"projectType": {
@@ -144,7 +145,8 @@
 				"WS01 - Hazardous Waste Facilities",
 				"WW01 - Waste Water Treatment Plants",
 				"WA01 - Dams and Reservoirs",
-				"WA02 - Transfer of Water Resources"
+				"WA02 - Transfer of Water Resources",
+				null
 			]
 		},
 		"sourceSystem": {
@@ -163,7 +165,8 @@
 				"recommendation",
 				"decision",
 				"post_decision",
-				"withdrawn"
+				"withdrawn",
+				null
 			]
 		},
 		"projectLocation": {
@@ -229,7 +232,8 @@
 				"city",
 				"town",
 				"junction",
-				"none"
+				"none",
+				null
 			]
 		},
 		"secretaryOfState": {

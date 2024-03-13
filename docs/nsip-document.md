@@ -380,6 +380,7 @@ The location of the published document. Only applicable to documents which are p
 | `"not_scanned"` |             |
 | `"scanned"`     |             |
 | `"affected"`    |             |
+| `null`          |             |
 
 ## fileMD5
 
@@ -487,6 +488,7 @@ The location of the published document. Only applicable to documents which are p
 | :------- | :---------- |
 | `"nsip"` |             |
 | `"has"`  |             |
+| `null`   |             |
 
 ## redactedStatus
 
@@ -514,6 +516,7 @@ The location of the published document. Only applicable to documents which are p
 | :--------------- | :---------- |
 | `"not_redacted"` |             |
 | `"redacted"`     |             |
+| `null`           |             |
 
 ## publishedStatus
 
@@ -546,6 +549,7 @@ The location of the published document. Only applicable to documents which are p
 | `"publishing"`       |             |
 | `"published"`        |             |
 | `"archived"`         |             |
+| `null`               |             |
 
 ## datePublished
 
@@ -627,6 +631,7 @@ The location of the published document. Only applicable to documents which are p
 | `"official"`   |             |
 | `"secret"`     |             |
 | `"top-secret"` |             |
+| `null`         |             |
 
 ## sourceSystem
 
@@ -657,6 +662,7 @@ The location of the published document. Only applicable to documents which are p
 | `"horizon"`                  |             |
 | `"ni_file"`                  |             |
 | `"sharepoint"`               |             |
+| `null`                       |             |
 
 ## origin
 
@@ -686,6 +692,7 @@ The location of the published document. Only applicable to documents which are p
 | `"citizen"` |             |
 | `"lpa"`     |             |
 | `"ogd"`     |             |
+| `null`      |             |
 
 ## owner
 
@@ -805,6 +812,7 @@ The on behalf of or agent submitter of document
 | `"post_decision"`          |             |
 | `"withdrawn"`              |             |
 | `"developers_application"` |             |
+| `null`                     |             |
 
 ## filter1
 

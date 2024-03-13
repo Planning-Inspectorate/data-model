@@ -38,7 +38,8 @@
         "decision",
         "post_decision",
         "withdrawn",
-        "developers_application"
+        "developers_application",
+        null
       ]
     }
   }

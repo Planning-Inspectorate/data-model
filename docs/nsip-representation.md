@@ -163,6 +163,7 @@ The unique identifier within the Back Office. This is not the same as the case r
 | `"invalid"`         |             |
 | `"published"`       |             |
 | `"archived"`        |             |
+| `null`              |             |
 
 ## originalRepresentation
 
@@ -293,6 +294,7 @@ The unique identifier within the Back Office. This is not the same as the case r
 | `"PERSON"`       |             |
 | `"ORGANISATION"` |             |
 | `"AGENT"`        |             |
+| `null`           |             |
 
 ## representedId
 
@@ -357,6 +359,7 @@ ServiceUser Id of the person or organisation submitting representation in the ca
 | `"PERSON"`       |             |
 | `"ORGANISATION"` |             |
 | `"FAMILY_GROUP"` |             |
+| `null`           |             |
 
 ## representationType
 
@@ -389,6 +392,7 @@ ServiceUser Id of the person or organisation submitting representation in the ca
 | `"Statutory Consultees"`             |             |
 | `"Non-Statutory Organisations"`      |             |
 | `"Another Individual"`               |             |
+| `null`                               |             |
 
 ## dateReceived
 

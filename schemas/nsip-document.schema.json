@@ -106,7 +106,7 @@
 		},
 		"virusCheckStatus": {
 			"type": ["string", "null"],
-			"enum": ["not_scanned", "scanned", "affected"]
+			"enum": ["not_scanned", "scanned", "affected", null]
 		},
 		"fileMD5": {
 			"type": ["string", "null"],
@@ -124,11 +124,11 @@
 		},
 		"caseType": {
 			"type": ["string", "null"],
-			"enum": ["nsip", "has"]
+			"enum": ["nsip", "has", null]
 		},
 		"redactedStatus": {
 			"type": ["string", "null"],
-			"enum": ["not_redacted", "redacted"]
+			"enum": ["not_redacted", "redacted", null]
 		},
 		"publishedStatus": {
 			"type": ["string", "null"],
@@ -139,7 +139,8 @@
 				"do_not_publish",
 				"publishing",
 				"published",
-				"archived"
+				"archived",
+				null
 			]
 		},
 		"datePublished": {
@@ -153,7 +154,7 @@
 		},
 		"securityClassification": {
 			"type": ["string", "null"],
-			"enum": ["public", "official", "secret", "top-secret"]
+			"enum": ["public", "official", "secret", "top-secret", null]
 		},
 		"sourceSystem": {
 			"type": ["string", "null"],
@@ -162,12 +163,13 @@
 				"back-office-applications",
 				"horizon",
 				"ni_file",
-				"sharepoint"
+				"sharepoint",
+				null
 			]
 		},
 		"origin": {
 			"type": ["string", "null"],
-			"enum": ["pins", "citizen", "lpa", "ogd"]
+			"enum": ["pins", "citizen", "lpa", "ogd", null]
 		},
 		"owner": {
 			"type": ["string", "null"]
@@ -199,7 +201,8 @@
 				"decision",
 				"post_decision",
 				"withdrawn",
-				"developers_application"
+				"developers_application",
+				null
 			]
 		},
 		"filter1": {

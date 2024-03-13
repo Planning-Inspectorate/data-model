@@ -46,7 +46,7 @@
 		},
 		"status": {
 			"type": ["string", "null"],
-			"enum": ["awaiting_review", "referred", "valid", "invalid", "published", "archived"]
+			"enum": ["awaiting_review", "referred", "valid", "invalid", "published", "archived", null]
 		},
 		"originalRepresentation": {
 			"type": "string"
@@ -67,7 +67,7 @@
 		},
 		"representationFrom": {
 			"type": ["string", "null"],
-			"enum": ["PERSON", "ORGANISATION", "AGENT"]
+			"enum": ["PERSON", "ORGANISATION", "AGENT", null]
 		},
 		"representedId": {
 			"type": "string",
@@ -79,7 +79,7 @@
 		},
 		"registerFor": {
 			"type": ["string", "null"],
-			"enum": ["PERSON", "ORGANISATION", "FAMILY_GROUP"]
+			"enum": ["PERSON", "ORGANISATION", "FAMILY_GROUP", null]
 		},
 		"representationType": {
 			"type": ["string", "null"],
@@ -90,7 +90,8 @@
 				"Public & Businesses",
 				"Statutory Consultees",
 				"Non-Statutory Organisations",
-				"Another Individual"
+				"Another Individual",
+				null
 			]
 		},
 		"dateReceived": {

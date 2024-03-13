@@ -207,6 +207,7 @@ How the enquiry was made
 | `"email"`   |             |
 | `"meeting"` |             |
 | `"post"`    |             |
+| `null`      |             |
 
 ## enquiryDate
 
@@ -347,6 +348,7 @@ Details of the advice
 | `"readytopublish"` |             |
 | `"published"`      |             |
 | `"donotpublish"`   |             |
+| `null`             |             |
 
 ## redactionStatus
 
@@ -374,6 +376,7 @@ Details of the advice
 | :------------- | :---------- |
 | `"unredacted"` |             |
 | `"redacted"`   |             |
+| `null`         |             |
 
 ## attachmentIds
 

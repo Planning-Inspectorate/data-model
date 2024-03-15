@@ -140,6 +140,7 @@
 				"publishing",
 				"published",
 				"archived",
+				"unpublished",
 				null
 			]
 		},

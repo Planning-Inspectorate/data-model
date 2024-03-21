@@ -141,6 +141,8 @@
 				"published",
 				"archived",
 				"unpublished",
+				"unpublishing",
+				"awaiting_upload",
 				null
 			]
 		},

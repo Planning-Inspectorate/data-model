@@ -550,6 +550,8 @@ The location of the published document. Only applicable to documents which are p
 | `"published"`        |             |
 | `"archived"`         |             |
 | `"unpublished"`      |             |
+| `"unpublishing"`     |             |
+| `"awaiting_upload"`  |             |
 | `null`               |             |
 
 ## datePublished

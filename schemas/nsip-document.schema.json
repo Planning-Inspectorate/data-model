@@ -141,6 +141,8 @@
 				"published",
 				"archived",
 				"unpublished",
+				"unpublishing",
+				"awaiting_upload",
 				null
 			]
 		},
@@ -203,6 +205,8 @@
 				"post_decision",
 				"withdrawn",
 				"developers_application",
+				"correspondence",
+				"0",
 				null
 			]
 		},

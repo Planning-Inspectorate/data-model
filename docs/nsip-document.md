@@ -550,6 +550,8 @@ The location of the published document. Only applicable to documents which are p
 | `"published"`        |             |
 | `"archived"`         |             |
 | `"unpublished"`      |             |
+| `"unpublishing"`     |             |
+| `"awaiting_upload"`  |             |
 | `null`               |             |
 
 ## datePublished
@@ -813,6 +815,8 @@ The on behalf of or agent submitter of document
 | `"post_decision"`          |             |
 | `"withdrawn"`              |             |
 | `"developers_application"` |             |
+| `"correspondence"`         |             |
+| `"0"`                      |             |
 | `null`                     |             |
 
 ## filter1

@@ -65,6 +65,40 @@ export interface LineItem {
 }
 
 /**
+ * NSIP Project Update (formerly known as Banners)
+ */
+export interface NSIPProjectUpdate {
+  /**
+   * The unique identifier within the Back Office.
+   */
+  id: number;
+  /**
+   * the case reference this update relates to
+   */
+  caseReference: string;
+  /**
+   * The date the update was published
+   */
+  updateDate: string | null;
+  /**
+   * Internal title or name of the update
+   */
+  updateName: string | null;
+  /**
+   * HTML content of the update in English. Can only include `<a> <b> <ul> <li>` tags.
+   */
+  updateContentEnglish: string;
+  /**
+   * HTML content of the update in Welsh. Can only include `<a> <b> <ul> <li>` tags.
+   */
+  updateContentWelsh: string | null;
+  /**
+   * The current status of this update
+   */
+  updateStatus: 'draft' | 'ready-to-publish' | 'published' | 'ready-to-unpublish' | 'unpublished' | 'archived';
+}
+
+/**
  * NSIP document schema
  */
 export interface NSIPDocument {
@@ -117,6 +151,8 @@ export interface NSIPDocument {
     | 'published'
     | 'archived'
     | 'unpublished'
+    | 'unpublishing'
+    | 'awaiting_upload'
     | null;
   datePublished: string | null;
   documentType: string | null;
@@ -239,6 +275,83 @@ export interface Representation {
     | 'Another Individual'
     | null;
   dateReceived: string;
+  attachmentIds: string[];
+}
+
+/**
+ * Subscribers are a subset of Service Users, part of the PINS Data Model
+ */
+export interface NsipSubscription {
+  /**
+   * The unique identifier within the Back Office. Ignored as part of register-nsip-subscription.
+   */
+  subscriptionId: number | null;
+  /**
+   * the case reference the subscription relates to
+   */
+  caseReference: string;
+  emailAddress: string;
+  /**
+   * which update does the subscriber want to get notified of. For multiple types, use multiple messages.
+   */
+  subscriptionType: 'allUpdates' | 'applicationSubmitted' | 'applicationDecided' | 'registrationOpen';
+  /**
+   * The date to start getting updates
+   */
+  startDate: string | null;
+  /**
+   * The date to stop getting updates
+   */
+  endDate: string | null;
+  language: 'English' | 'Welsh' | null;
+}
+
+/**
+ * Section 51 Advice schema
+ */
+export interface S51Advice {
+  adviceId: number;
+  adviceReference: string;
+  caseId: number | null;
+  caseReference: string | null;
+  /**
+   * Title of the advice
+   */
+  title: string;
+  /**
+   * Who the enquiry is from
+   */
+  from: string | null;
+  /**
+   * Who the enquiry is on behalf of
+   */
+  agent: string | null;
+  /**
+   * How the enquiry was made
+   */
+  method: 'phone' | 'email' | 'meeting' | 'post' | null;
+  /**
+   * Date the enquiry was made
+   */
+  enquiryDate: string | null;
+  /**
+   * Details of the enquiry
+   */
+  enquiryDetails: string | null;
+  /**
+   * Who issued the advice
+   */
+  adviceGivenBy: string | null;
+  /**
+   * Date the advice was given
+   */
+  adviceDate: string | null;
+  /**
+   * Details of the advice
+   */
+  adviceDetails: string | null;
+  status: 'checked' | 'unchecked' | 'readytopublish' | 'published' | 'donotpublish' | null;
+  redactionStatus: 'unredacted' | 'redacted' | null;
   attachmentIds: string[];
 }
 
@@ -544,117 +657,6 @@ export interface NSIPProject {
 }
 
 /**
- * Subscribers are a subset of Service Users, part of the PINS Data Model
- */
-export interface NsipSubscription {
-  /**
-   * The unique identifier within the Back Office. Ignored as part of register-nsip-subscription.
-   */
-  subscriptionId: number | null;
-  /**
-   * the case reference the subscription relates to
-   */
-  caseReference: string;
-  emailAddress: string;
-  /**
-   * which update does the subscriber want to get notified of. For multiple types, use multiple messages.
-   */
-  subscriptionType: 'allUpdates' | 'applicationSubmitted' | 'applicationDecided' | 'registrationOpen';
-  /**
-   * The date to start getting updates
-   */
-  startDate: string | null;
-  /**
-   * The date to stop getting updates
-   */
-  endDate: string | null;
-  language: 'English' | 'Welsh' | null;
-}
-
-/**
- * Section 51 Advice schema
- */
-export interface S51Advice {
-  adviceId: number;
-  adviceReference: string;
-  caseId: number | null;
-  caseReference: string | null;
-  /**
-   * Title of the advice
-   */
-  title: string;
-  /**
-   * Who the enquiry is from
-   */
-  from: string | null;
-  /**
-   * Who the enquiry is on behalf of
-   */
-  agent: string | null;
-  /**
-   * How the enquiry was made
-   */
-  method: 'phone' | 'email' | 'meeting' | 'post' | null;
-  /**
-   * Date the enquiry was made
-   */
-  enquiryDate: string | null;
-  /**
-   * Details of the enquiry
-   */
-  enquiryDetails: string | null;
-  /**
-   * Who issued the advice
-   */
-  adviceGivenBy: string | null;
-  /**
-   * Date the advice was given
-   */
-  adviceDate: string | null;
-  /**
-   * Details of the advice
-   */
-  adviceDetails: string | null;
-  status: 'checked' | 'unchecked' | 'readytopublish' | 'published' | 'donotpublish' | null;
-  redactionStatus: 'unredacted' | 'redacted' | null;
-  attachmentIds: string[];
-}
-
-/**
- * NSIP Project Update (formerly known as Banners)
- */
-export interface NSIPProjectUpdate {
-  /**
-   * The unique identifier within the Back Office.
-   */
-  id: number;
-  /**
-   * the case reference this update relates to
-   */
-  caseReference: string;
-  /**
-   * The date the update was published
-   */
-  updateDate: string | null;
-  /**
-   * Internal title or name of the update
-   */
-  updateName: string | null;
-  /**
-   * HTML content of the update in English. Can only include `<a> <b> <ul> <li>` tags.
-   */
-  updateContentEnglish: string;
-  /**
-   * HTML content of the update in Welsh. Can only include `<a> <b> <ul> <li>` tags.
-   */
-  updateContentWelsh: string | null;
-  /**
-   * The current status of this update
-   */
-  updateStatus: 'draft' | 'ready-to-publish' | 'published' | 'ready-to-unpublish' | 'unpublished' | 'archived';
-}
-
-/**
  * Service User of the planning inspectorate. Also contains role information by combining serviceUserType and caseReference.
  */
 export interface ServiceUser {
@@ -746,6 +748,32 @@ export interface ServiceUser {
    * Unique identifier from the source system.
    */
   sourceSuid: string;
+}
+
+export type Name = string;
+
+/**
+ * Subset of Pins Data Model [Service User]
+ */
+export interface InterestedParty {
+  id?: number;
+  interestedPartyNumber?: string;
+  firstName?: string;
+  lastName?: string;
+  under18?: boolean;
+  organisationName?: Name;
+  jobTitle?: string;
+  contactMethod?: 'email' | 'post';
+  email?: string;
+  phoneNumber?: string;
+  address?: Address;
+}
+export interface Address {
+  addressLine1: string;
+  addressLine2?: string;
+  town: string;
+  postcode: string;
+  country?: string;
 }
 
 /**
@@ -852,32 +880,6 @@ export interface NsipSubscription {
    */
   endDate: string | null;
   language: 'English' | 'Welsh' | null;
-}
-
-export type Name = string;
-
-/**
- * Subset of Pins Data Model [Service User]
- */
-export interface InterestedParty {
-  id?: number;
-  interestedPartyNumber?: string;
-  firstName?: string;
-  lastName?: string;
-  under18?: boolean;
-  organisationName?: Name;
-  jobTitle?: string;
-  contactMethod?: 'email' | 'post';
-  email?: string;
-  phoneNumber?: string;
-  address?: Address;
-}
-export interface Address {
-  addressLine1: string;
-  addressLine2?: string;
-  town: string;
-  postcode: string;
-  country?: string;
 }
 
 export type Name = string;

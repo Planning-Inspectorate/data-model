@@ -8,18 +8,6 @@
 /**
  * Folders can have optional parents. All folders belong to a Case.
  */
-<<<<<<< HEAD
-=======
-export interface Employee {
-  id: string;
-  firstName: string;
-  lastName: string;
-}
-
-/**
- * Folders can have optional parents. All folders belong to a Case.
- */
->>>>>>> main
 export interface Folder {
   /**
    * The unique identifier within the Back Office.
@@ -58,110 +46,6 @@ export interface Folder {
 }
 
 /**
- * NSIP document schema
- */
-export interface NSIPDocument {
-  /**
-   * The unique identifier for the file. This will be different to documentReference
-   */
-  documentId: string;
-  /**
-   * Internal case identifier
-   */
-  caseId: number | null;
-  caseRef: string | null;
-  /**
-   * Reference used throughout ODT <CaseRef>-<SequenceNo>
-   */
-  documentReference: string | null;
-  version: number;
-  examinationRefNo: string | null;
-  /**
-   * Current stored filename of the file
-   */
-  filename: string;
-  /**
-   * Original filename of file
-   */
-  originalFilename: string;
-  size: number;
-  mime: string | null;
-  /**
-   * The internal location of the document
-   */
-  documentURI: string;
-  /**
-   * The location of the published document. Only applicable to documents which are published.
-   */
-  publishedDocumentURI: string | null;
-  path: string | null;
-  virusCheckStatus: 'not_scanned' | 'scanned' | 'affected' | null;
-  fileMD5: string | null;
-  dateCreated: string;
-  lastModified: string | null;
-  caseType: 'nsip' | 'has' | null;
-  redactedStatus: 'not_redacted' | 'redacted' | null;
-  publishedStatus:
-    | 'not_checked'
-    | 'checked'
-    | 'ready_to_publish'
-    | 'do_not_publish'
-    | 'publishing'
-    | 'published'
-    | 'archived'
-    | 'unpublished'
-    | 'unpublishing'
-    | 'awaiting_upload'
-    | null;
-  datePublished: string | null;
-  documentType: string | null;
-  securityClassification: 'public' | 'official' | 'secret' | 'top-secret' | null;
-  sourceSystem: 'back-office-appeals' | 'back-office-applications' | 'horizon' | 'ni_file' | 'sharepoint' | null;
-  origin: 'pins' | 'citizen' | 'lpa' | 'ogd' | null;
-  owner: string | null;
-  /**
-   * Name of person who authored document
-   */
-  author: string | null;
-  /**
-   * The on behalf of or agent submitter of document
-   */
-  representative: string | null;
-  description: string | null;
-  documentCaseStage:
-    | 'draft'
-    | 'pre-application'
-    | 'acceptance'
-    | 'pre-examination'
-    | 'examination'
-    | 'recommendation'
-    | 'decision'
-    | 'post_decision'
-    | 'withdrawn'
-    | 'developers_application'
-    | 'correspondence'
-    | '0'
-    | null;
-  /**
-   * Filter field to provide additional filtering
-   */
-  filter1: string | null;
-  /**
-   * Filter field to provide additional filtering
-   */
-  filter2: string | null;
-  /**
-   * The folder where the document exists
-   */
-  horizonFolderId: string | null;
-  /**
-   * The GUID of the transcript document (if one was provided).
-   */
-  transcriptId: string | null;
-}
-
-/**
-<<<<<<< HEAD
  * NSIP Representation schema
  */
 export interface Representation {
@@ -169,22 +53,9 @@ export interface Representation {
   referenceId: string | null;
   examinationLibraryRef: string | null;
   caseRef: string;
-=======
- * Examination Timetable for an NSIP Project
- */
-export interface ExaminationTimetable {
   /**
-   * Unique string reference of the associated Case
+   * The unique identifier within the Back Office. This is not the same as the case reference
    */
-  caseReference: string;
-  events: Event[];
-}
-export interface Event {
->>>>>>> main
-  /**
-   * Event Identifier
-   */
-<<<<<<< HEAD
   caseId: number | null;
   status:
     | 'awaiting_review'
@@ -202,9 +73,43 @@ export interface Event {
   redactedBy: string | null;
   redactedNotes: string | null;
   representationFrom: 'PERSON' | 'ORGANISATION' | 'AGENT' | null;
-=======
+  /**
+   * ServiceUser Id of the person or organisation being represented
+   */
+  representedId: string;
+  /**
+   * ServiceUser Id of the person or organisation submitting representation in the case of Agent representationFrom
+   */
+  representativeId: string | null;
+  registerFor: 'PERSON' | 'ORGANISATION' | 'FAMILY_GROUP' | null;
+  representationType:
+    | 'Local Authorities'
+    | 'Parish Councils'
+    | 'Members of the Public/Businesses'
+    | 'Public & Businesses'
+    | 'Statutory Consultees'
+    | 'Non-Statutory Organisations'
+    | 'Another Individual'
+    | null;
+  dateReceived: string;
+  attachmentIds: string[];
+}
+
+/**
+ * Examination Timetable for an NSIP Project
+ */
+export interface ExaminationTimetable {
+  /**
+   * Unique string reference of the associated Case
+   */
+  caseReference: string;
+  events: Event[];
+}
+export interface Event {
+  /**
+   * Event Identifier
+   */
   eventId: number;
->>>>>>> main
   /**
    * Compulsory Acquisition Hearing/Deadline/Issue Specific Hearing etc
    */
@@ -238,15 +143,6 @@ export interface Event {
 }
 export interface LineItem {
   description: string;
-}
-
-/**
- * Employee schema
- */
-export interface Employee {
-  id: string;
-  firstName: string;
-  lastName: string;
 }
 
 /**
@@ -551,56 +447,6 @@ export interface NSIPProject {
 }
 
 /**
- * Examination Timetable for an NSIP Project
- */
-export interface ExaminationTimetable {
-  /**
-   * Unique string reference of the associated Case
-   */
-  caseReference: string;
-  events: Event[];
-}
-export interface Event {
-  /**
-   * Event Identifier
-   */
-  eventId: number;
-  /**
-   * Compulsory Acquisition Hearing/Deadline/Issue Specific Hearing etc
-   */
-  type:
-    | 'Accompanied Site Inspection'
-    | 'Compulsory Acquisition Hearing'
-    | 'Deadline'
-    | 'Deadline For Close Of Examination'
-    | 'Issued By'
-    | 'Issue Specific Hearing'
-    | 'Open Floor Hearing'
-    | 'Other Meeting'
-    | 'Preliminary Meeting'
-    | 'Procedural Deadline (Pre-Examination)'
-    | 'Procedural Decision'
-    | 'Publication Of';
-  /**
-   * Title Of Examination Timetable Event
-   */
-  eventTitle: string;
-  description: string;
-  /**
-   * Optional start date for event window
-   */
-  eventDeadlineStartDate?: string | null;
-  /**
-   * Event Date = effective deadline (end) date
-   */
-  date: string;
-  eventLineItems: LineItem[];
-}
-export interface LineItem {
-  description: string;
-}
-
-/**
  * NSIP Project Update (formerly known as Banners)
  */
 export interface NSIPProjectUpdate {
@@ -660,6 +506,167 @@ export interface NsipSubscription {
    */
   endDate: string | null;
   language: 'English' | 'Welsh' | null;
+}
+
+/**
+ * NSIP document schema
+ */
+export interface NSIPDocument {
+  /**
+   * The unique identifier for the file. This will be different to documentReference
+   */
+  documentId: string;
+  /**
+   * Internal case identifier
+   */
+  caseId: number | null;
+  caseRef: string | null;
+  /**
+   * Reference used throughout ODT <CaseRef>-<SequenceNo>
+   */
+  documentReference: string | null;
+  version: number;
+  examinationRefNo: string | null;
+  /**
+   * Current stored filename of the file
+   */
+  filename: string;
+  /**
+   * Original filename of file
+   */
+  originalFilename: string;
+  size: number;
+  mime: string | null;
+  /**
+   * The internal location of the document
+   */
+  documentURI: string;
+  /**
+   * The location of the published document. Only applicable to documents which are published.
+   */
+  publishedDocumentURI: string | null;
+  path: string | null;
+  virusCheckStatus: 'not_scanned' | 'scanned' | 'affected' | null;
+  fileMD5: string | null;
+  dateCreated: string;
+  lastModified: string | null;
+  caseType: 'nsip' | 'has' | null;
+  redactedStatus: 'not_redacted' | 'redacted' | null;
+  publishedStatus:
+    | 'not_checked'
+    | 'checked'
+    | 'ready_to_publish'
+    | 'do_not_publish'
+    | 'publishing'
+    | 'published'
+    | 'archived'
+    | 'unpublished'
+    | 'unpublishing'
+    | 'awaiting_upload'
+    | null;
+  datePublished: string | null;
+  documentType: string | null;
+  securityClassification: 'public' | 'official' | 'secret' | 'top-secret' | null;
+  sourceSystem: 'back-office-appeals' | 'back-office-applications' | 'horizon' | 'ni_file' | 'sharepoint' | null;
+  origin: 'pins' | 'citizen' | 'lpa' | 'ogd' | null;
+  owner: string | null;
+  /**
+   * Name of person who authored document
+   */
+  author: string | null;
+  /**
+   * The on behalf of or agent submitter of document
+   */
+  representative: string | null;
+  description: string | null;
+  documentCaseStage:
+    | 'draft'
+    | 'pre-application'
+    | 'acceptance'
+    | 'pre-examination'
+    | 'examination'
+    | 'recommendation'
+    | 'decision'
+    | 'post_decision'
+    | 'withdrawn'
+    | 'developers_application'
+    | 'correspondence'
+    | '0'
+    | null;
+  /**
+   * Filter field to provide additional filtering
+   */
+  filter1: string | null;
+  /**
+   * Filter field to provide additional filtering
+   */
+  filter2: string | null;
+  /**
+   * The folder where the document exists
+   */
+  horizonFolderId: string | null;
+  /**
+   * The GUID of the transcript document (if one was provided).
+   */
+  transcriptId: string | null;
+}
+
+/**
+ * Section 51 Advice schema
+ */
+export interface S51Advice {
+  adviceId: number;
+  adviceReference: string;
+  caseId: number | null;
+  caseReference: string | null;
+  /**
+   * Title of the advice
+   */
+  title: string;
+  /**
+   * Who the enquiry is from
+   */
+  from: string | null;
+  /**
+   * Who the enquiry is on behalf of
+   */
+  agent: string | null;
+  /**
+   * How the enquiry was made
+   */
+  method: 'phone' | 'email' | 'meeting' | 'post' | null;
+  /**
+   * Date the enquiry was made
+   */
+  enquiryDate: string | null;
+  /**
+   * Details of the enquiry
+   */
+  enquiryDetails: string | null;
+  /**
+   * Who issued the advice
+   */
+  adviceGivenBy: string | null;
+  /**
+   * Date the advice was given
+   */
+  adviceDate: string | null;
+  /**
+   * Details of the advice
+   */
+  adviceDetails: string | null;
+  status: 'checked' | 'unchecked' | 'readytopublish' | 'published' | 'donotpublish' | null;
+  redactionStatus: 'unredacted' | 'redacted' | null;
+  attachmentIds: string[];
+}
+
+/**
+ * Employee schema
+ */
+export interface Employee {
+  id: string;
+  firstName: string;
+  lastName: string;
 }
 
 /**
@@ -756,56 +763,6 @@ export interface ServiceUser {
   sourceSuid: string;
 }
 
-/**
-<<<<<<< HEAD
- * Section 51 Advice schema
- */
-export interface S51Advice {
-  adviceId: number;
-  adviceReference: string;
-  caseId: number | null;
-  caseReference: string | null;
-  /**
-   * Title of the advice
-   */
-  title: string;
-  /**
-   * Who the enquiry is from
-   */
-  from: string | null;
-  /**
-   * Who the enquiry is on behalf of
-   */
-  agent: string | null;
-  /**
-   * How the enquiry was made
-   */
-  method: 'phone' | 'email' | 'meeting' | 'post' | null;
-  /**
-   * Date the enquiry was made
-   */
-  enquiryDate: string | null;
-  /**
-   * Details of the enquiry
-   */
-  enquiryDetails: string | null;
-  /**
-   * Who issued the advice
-   */
-  adviceGivenBy: string | null;
-  /**
-   * Date the advice was given
-   */
-  adviceDate: string | null;
-  /**
-   * Details of the advice
-   */
-  adviceDetails: string | null;
-  status: 'checked' | 'unchecked' | 'readytopublish' | 'published' | 'donotpublish' | null;
-  redactionStatus: 'unredacted' | 'redacted' | null;
-  attachmentIds: string[];
-}
-
 export type Name = string;
 
 /**
@@ -832,6 +789,68 @@ export interface Address {
   country?: string;
 }
 
+export type Name = string;
+
+export interface RegisterRepresentation {
+  /**
+   * registration identification number
+   */
+  referenceId: string;
+  /**
+   * The unique reference of the case
+   */
+  caseReference: string;
+  /**
+   * Type of representation
+   */
+  representationType?: string;
+  originalRepresentation: string;
+  representationFrom: 'PERSON' | 'ORGANISATION' | 'AGENT';
+  registerFor: 'PERSON' | 'ORGANISATION' | 'FAMILY_GROUP';
+  represented: InterestedParty;
+  representative?: InterestedParty1;
+  dateReceived?: string;
+}
+/**
+ * Person or organisation being represented
+ */
+export interface InterestedParty {
+  id?: number;
+  interestedPartyNumber?: string;
+  firstName?: string;
+  lastName?: string;
+  under18?: boolean;
+  organisationName?: Name;
+  jobTitle?: string;
+  contactMethod?: 'email' | 'post';
+  email?: string;
+  phoneNumber?: string;
+  address?: Address;
+}
+export interface Address {
+  addressLine1: string;
+  addressLine2?: string;
+  town: string;
+  postcode: string;
+  country?: string;
+}
+/**
+ * Person or organisation submitting representation in the case of Agent representationFrom
+ */
+export interface InterestedParty1 {
+  id?: number;
+  interestedPartyNumber?: string;
+  firstName?: string;
+  lastName?: string;
+  under18?: boolean;
+  organisationName?: Name;
+  jobTitle?: string;
+  contactMethod?: 'email' | 'post';
+  email?: string;
+  phoneNumber?: string;
+  address?: Address;
+}
+
 /**
  * Result of processing a new exam timetable submission
  */
@@ -843,48 +862,6 @@ export interface NsipExamTimetableSubmission {
   documentName: string;
 }
 
-=======
- * NSIP Representation schema
- */
-export interface Representation {
-  representationId: number;
-  referenceId: string | null;
-  examinationLibraryRef: string | null;
-  caseRef: string;
-  /**
-   * The unique identifier within the Back Office. This is not the same as the case reference
-   */
-  caseId: number | null;
-  status: 'awaiting_review' | 'referred' | 'valid' | 'invalid' | 'published' | 'archived' | null;
-  originalRepresentation: string;
-  redacted: boolean | null;
-  redactedRepresentation: string | null;
-  redactedBy: string | null;
-  redactedNotes: string | null;
-  representationFrom: 'PERSON' | 'ORGANISATION' | 'AGENT' | null;
-  /**
-   * ServiceUser Id of the person or organisation being represented
-   */
-  representedId: string;
-  /**
-   * ServiceUser Id of the person or organisation submitting representation in the case of Agent representationFrom
-   */
-  representativeId: string | null;
-  registerFor: 'PERSON' | 'ORGANISATION' | 'FAMILY_GROUP' | null;
-  representationType:
-    | 'Local Authorities'
-    | 'Parish Councils'
-    | 'Members of the Public/Businesses'
-    | 'Public & Businesses'
-    | 'Statutory Consultees'
-    | 'Non-Statutory Organisations'
-    | 'Another Individual'
-    | null;
-  dateReceived: string;
-  attachmentIds: string[];
-}
-
->>>>>>> main
 /**
  * A command to deliver metadata about a new document submission added to a deadline
  */
@@ -978,93 +955,5 @@ export interface NsipSubscription {
    */
   endDate: string | null;
   language: 'English' | 'Welsh' | null;
-}
-
-export type Name = string;
-
-export interface RegisterRepresentation {
-  /**
-   * registration identification number
-   */
-  referenceId: string;
-  /**
-   * The unique reference of the case
-   */
-  caseReference: string;
-  /**
-   * Type of representation
-   */
-  representationType?: string;
-  originalRepresentation: string;
-  representationFrom: 'PERSON' | 'ORGANISATION' | 'AGENT';
-  registerFor: 'PERSON' | 'ORGANISATION' | 'FAMILY_GROUP';
-  represented: InterestedParty;
-  representative?: InterestedParty1;
-  dateReceived?: string;
-}
-/**
- * Person or organisation being represented
- */
-export interface InterestedParty {
-  id?: number;
-  interestedPartyNumber?: string;
-  firstName?: string;
-  lastName?: string;
-  under18?: boolean;
-  organisationName?: Name;
-  jobTitle?: string;
-  contactMethod?: 'email' | 'post';
-  email?: string;
-  phoneNumber?: string;
-  address?: Address;
-}
-export interface Address {
-  addressLine1: string;
-  addressLine2?: string;
-  town: string;
-  postcode: string;
-  country?: string;
-}
-/**
- * Person or organisation submitting representation in the case of Agent representationFrom
- */
-export interface InterestedParty1 {
-  id?: number;
-  interestedPartyNumber?: string;
-  firstName?: string;
-  lastName?: string;
-  under18?: boolean;
-  organisationName?: Name;
-  jobTitle?: string;
-  contactMethod?: 'email' | 'post';
-  email?: string;
-  phoneNumber?: string;
-  address?: Address;
-}
-
-export type Name = string;
-
-/**
- * Subset of Pins Data Model [Service User]
- */
-export interface InterestedParty {
-  id?: number;
-  interestedPartyNumber?: string;
-  firstName?: string;
-  lastName?: string;
-  under18?: boolean;
-  organisationName?: Name;
-  jobTitle?: string;
-  contactMethod?: 'email' | 'post';
-  email?: string;
-  phoneNumber?: string;
-  address?: Address;
-}
-export interface Address {
-  addressLine1: string;
-  addressLine2?: string;
-  town: string;
-  postcode: string;
-  country?: string;
 }
 

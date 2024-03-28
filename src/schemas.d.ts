@@ -8,6 +8,18 @@
 /**
  * Folders can have optional parents. All folders belong to a Case.
  */
+<<<<<<< HEAD
+=======
+export interface Employee {
+  id: string;
+  firstName: string;
+  lastName: string;
+}
+
+/**
+ * Folders can have optional parents. All folders belong to a Case.
+ */
+>>>>>>> main
 export interface Folder {
   /**
    * The unique identifier within the Back Office.
@@ -149,6 +161,7 @@ export interface NSIPDocument {
 }
 
 /**
+<<<<<<< HEAD
  * NSIP Representation schema
  */
 export interface Representation {
@@ -156,9 +169,22 @@ export interface Representation {
   referenceId: string | null;
   examinationLibraryRef: string | null;
   caseRef: string;
+=======
+ * Examination Timetable for an NSIP Project
+ */
+export interface ExaminationTimetable {
   /**
-   * The unique identifier within the Back Office. This is not the same as the case reference
+   * Unique string reference of the associated Case
    */
+  caseReference: string;
+  events: Event[];
+}
+export interface Event {
+>>>>>>> main
+  /**
+   * Event Identifier
+   */
+<<<<<<< HEAD
   caseId: number | null;
   status:
     | 'awaiting_review'
@@ -176,26 +202,42 @@ export interface Representation {
   redactedBy: string | null;
   redactedNotes: string | null;
   representationFrom: 'PERSON' | 'ORGANISATION' | 'AGENT' | null;
+=======
+  eventId: number;
+>>>>>>> main
   /**
-   * ServiceUser Id of the person or organisation being represented
+   * Compulsory Acquisition Hearing/Deadline/Issue Specific Hearing etc
    */
-  representedId: string;
+  type:
+    | 'Accompanied Site Inspection'
+    | 'Compulsory Acquisition Hearing'
+    | 'Deadline'
+    | 'Deadline For Close Of Examination'
+    | 'Issued By'
+    | 'Issue Specific Hearing'
+    | 'Open Floor Hearing'
+    | 'Other Meeting'
+    | 'Preliminary Meeting'
+    | 'Procedural Deadline (Pre-Examination)'
+    | 'Procedural Decision'
+    | 'Publication Of';
   /**
-   * ServiceUser Id of the person or organisation submitting representation in the case of Agent representationFrom
+   * Title Of Examination Timetable Event
    */
-  representativeId: string | null;
-  registerFor: 'PERSON' | 'ORGANISATION' | 'FAMILY_GROUP' | null;
-  representationType:
-    | 'Local Authorities'
-    | 'Parish Councils'
-    | 'Members of the Public/Businesses'
-    | 'Public & Businesses'
-    | 'Statutory Consultees'
-    | 'Non-Statutory Organisations'
-    | 'Another Individual'
-    | null;
-  dateReceived: string;
-  attachmentIds: string[];
+  eventTitle: string;
+  description: string;
+  /**
+   * Optional start date for event window
+   */
+  eventDeadlineStartDate?: string | null;
+  /**
+   * Event Date = effective deadline (end) date
+   */
+  date: string;
+  eventLineItems: LineItem[];
+}
+export interface LineItem {
+  description: string;
 }
 
 /**
@@ -715,6 +757,7 @@ export interface ServiceUser {
 }
 
 /**
+<<<<<<< HEAD
  * Section 51 Advice schema
  */
 export interface S51Advice {
@@ -800,6 +843,48 @@ export interface NsipExamTimetableSubmission {
   documentName: string;
 }
 
+=======
+ * NSIP Representation schema
+ */
+export interface Representation {
+  representationId: number;
+  referenceId: string | null;
+  examinationLibraryRef: string | null;
+  caseRef: string;
+  /**
+   * The unique identifier within the Back Office. This is not the same as the case reference
+   */
+  caseId: number | null;
+  status: 'awaiting_review' | 'referred' | 'valid' | 'invalid' | 'published' | 'archived' | null;
+  originalRepresentation: string;
+  redacted: boolean | null;
+  redactedRepresentation: string | null;
+  redactedBy: string | null;
+  redactedNotes: string | null;
+  representationFrom: 'PERSON' | 'ORGANISATION' | 'AGENT' | null;
+  /**
+   * ServiceUser Id of the person or organisation being represented
+   */
+  representedId: string;
+  /**
+   * ServiceUser Id of the person or organisation submitting representation in the case of Agent representationFrom
+   */
+  representativeId: string | null;
+  registerFor: 'PERSON' | 'ORGANISATION' | 'FAMILY_GROUP' | null;
+  representationType:
+    | 'Local Authorities'
+    | 'Parish Councils'
+    | 'Members of the Public/Businesses'
+    | 'Public & Businesses'
+    | 'Statutory Consultees'
+    | 'Non-Statutory Organisations'
+    | 'Another Individual'
+    | null;
+  dateReceived: string;
+  attachmentIds: string[];
+}
+
+>>>>>>> main
 /**
  * A command to deliver metadata about a new document submission added to a deadline
  */
@@ -955,5 +1040,31 @@ export interface InterestedParty1 {
   email?: string;
   phoneNumber?: string;
   address?: Address;
+}
+
+export type Name = string;
+
+/**
+ * Subset of Pins Data Model [Service User]
+ */
+export interface InterestedParty {
+  id?: number;
+  interestedPartyNumber?: string;
+  firstName?: string;
+  lastName?: string;
+  under18?: boolean;
+  organisationName?: Name;
+  jobTitle?: string;
+  contactMethod?: 'email' | 'post';
+  email?: string;
+  phoneNumber?: string;
+  address?: Address;
+}
+export interface Address {
+  addressLine1: string;
+  addressLine2?: string;
+  town: string;
+  postcode: string;
+  country?: string;
 }
 

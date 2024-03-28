@@ -39,6 +39,8 @@ class PublishedStatus(Enum):
     unpublished = "unpublished"
     unpublishing = "unpublishing"
     awaiting_upload = "awaiting_upload"
+    unpublishing = "unpublishing"
+    awaiting_upload = "awaiting_upload"
     NoneType_None = None
 
 

@@ -137,4 +137,6 @@ Optional parent folder ID.
 | `"post_decision"`          |             |
 | `"withdrawn"`              |             |
 | `"developers_application"` |             |
+| `"correspondence"`         |             |
+| `"0"`                      |             |
 | `null`                     |             |

@@ -815,6 +815,8 @@ The on behalf of or agent submitter of document
 | `"post_decision"`          |             |
 | `"withdrawn"`              |             |
 | `"developers_application"` |             |
+| `"correspondence"`         |             |
+| `"0"`                      |             |
 | `null`                     |             |
 
 ## filter1

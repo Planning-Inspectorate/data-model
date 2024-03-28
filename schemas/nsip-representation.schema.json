@@ -46,7 +46,7 @@
 		},
 		"status": {
 			"type": ["string", "null"],
-			"enum": ["awaiting_review", "referred", "valid", "invalid", "published", "archived", null]
+			"enum": ["awaiting_review", "referred", "valid", "invalid", "published", "archived", "draft", "withdrawn", null]
 		},
 		"originalRepresentation": {
 			"type": "string"

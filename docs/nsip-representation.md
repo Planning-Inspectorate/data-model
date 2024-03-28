@@ -163,6 +163,8 @@ The unique identifier within the Back Office. This is not the same as the case r
 | `"invalid"`         |             |
 | `"published"`       |             |
 | `"archived"`        |             |
+| `"draft"`           |             |
+| `"withdrawn"`       |             |
 | `null`              |             |
 
 ## originalRepresentation

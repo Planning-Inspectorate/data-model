@@ -34,3 +34,4 @@ share/python-wheels/
 *.egg
 MANIFEST
 *cache
+!src/lib

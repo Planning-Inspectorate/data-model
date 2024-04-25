@@ -24,6 +24,7 @@
 | [representationType](#representationtype)         | `string`  | Required | can be null    | [Representation](nsip-representation-properties-representationtype.md "nsip-representation.schema.json#/properties/representationType")         |
 | [dateReceived](#datereceived)                     | `string`  | Required | cannot be null | [Representation](nsip-representation-properties-datereceived.md "nsip-representation.schema.json#/properties/dateReceived")                     |
 | [attachmentIds](#attachmentids)                   | `array`   | Required | cannot be null | [Representation](nsip-representation-properties-attachmentids.md "nsip-representation.schema.json#/properties/attachmentIds")                   |
+| Additional Properties                             | Any       | Optional | can be null    |                                                                                                                                                 |
 
 ## representationId
 
@@ -441,3 +442,7 @@ ServiceUser Id of the person or organisation submitting representation in the ca
 ### attachmentIds Type
 
 `string[]`
+
+## Additional Properties
+
+Additional properties are allowed and do not have to follow a specific schema

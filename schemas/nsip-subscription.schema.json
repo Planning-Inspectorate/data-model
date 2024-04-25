@@ -4,6 +4,7 @@
 	"title": "nsip-subscription",
 	"description": "Subscribers are a subset of Service Users, part of the PINS Data Model",
 	"type": "object",
+	"additionalProperties": true,
 	"required": ["subscriptionId", "caseReference", "emailAddress", "subscriptionType", "startDate", "endDate", "language"],
 	"properties": {
 		"subscriptionId": {

@@ -4,6 +4,7 @@
 	"title": "interested-party",
 	"description": "Subset of Pins Data Model [Service User]",
 	"type": "object",
+	"additionalProperties": true,
 	"required": [],
 	"properties": {
 		"id": {

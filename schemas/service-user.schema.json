@@ -4,6 +4,7 @@
 	"title": "Service User",
 	"description": "Service User of the planning inspectorate. Also contains role information by combining serviceUserType and caseReference.",
 	"type": "object",
+	"additionalProperties": true,
 	"required": [
 		"id",
 		"salutation",
@@ -139,6 +140,5 @@
 			"description": "Unique identifier from the source system.",
 			"examples": ["12345"]
 		}
-	},
-	"additionalProperties": false
+	}
 }

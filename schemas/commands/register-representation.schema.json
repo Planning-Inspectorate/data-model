@@ -3,6 +3,7 @@
 	"$id": "commands/register-representation.schema.json",
 	"title": "Register Representation",
 	"type": "object",
+	"additionalProperties": true,
 	"required": [
 		"referenceId",
 		"caseReference",

@@ -4,6 +4,7 @@
 	"title": "Employee",
 	"description": "Employee schema",
 	"type": "object",
+	"additionalProperties": true,
 	"required": ["id", "firstName", "lastName"],
 	"properties": {
 		"id": {

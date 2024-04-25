@@ -4,6 +4,7 @@
 	"title": "nsip-exam-timetable-submission",
 	"description": "Result of processing a new exam timetable submission",
 	"type": "object",
+	"additionalProperties": true,
 	"required": ["status", "deadline", "submissionType", "blobGuid", "documentName"],
 	"properties": {
 		"status": {

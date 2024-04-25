@@ -6,60 +6,12 @@
  */
 
 /**
- * Examination Timetable for an NSIP Project
+ * Employee schema
  */
-export interface ExaminationTimetable {
-  /**
-   * Unique string reference of the associated Case
-   */
-  caseReference: string;
-  events: Event[];
-  [k: string]: unknown;
-}
-export interface Event {
-  /**
-   * Event Identifier
-   */
-  eventId: number;
-  /**
-   * Compulsory Acquisition Hearing/Deadline/Issue Specific Hearing etc
-   */
-  type:
-    | 'Accompanied Site Inspection'
-    | 'Compulsory Acquisition Hearing'
-    | 'Deadline'
-    | 'Deadline For Close Of Examination'
-    | 'Issued By'
-    | 'Issue Specific Hearing'
-    | 'Open Floor Hearing'
-    | 'Other Meeting'
-    | 'Preliminary Meeting'
-    | 'Procedural Deadline (Pre-Examination)'
-    | 'Procedural Decision'
-    | 'Publication Of';
-  /**
-   * Title Of Examination Timetable Event
-   */
-  eventTitle: string;
-  /**
-   * Title Of Examination Timetable Event In Welsh
-   */
-  eventTitleWelsh?: string | null;
-  description: string;
-  descriptionWelsh?: string | null;
-  /**
-   * Optional start date for event window
-   */
-  eventDeadlineStartDate?: string | null;
-  /**
-   * Event Date = effective deadline (end) date
-   */
-  date: string;
-  eventLineItems: LineItem[];
-  [k: string]: unknown;
-}
-export interface LineItem {
-  description: string;
+export interface Employee {
+  id: string;
+  firstName: string;
+  lastName: string;
   [k: string]: unknown;
 }
 
@@ -644,64 +596,64 @@ export interface NsipSubscription {
 }
 
 /**
- * Section 51 Advice schema
+ * Examination Timetable for an NSIP Project
  */
-export interface S51Advice {
-  adviceId: number;
-  adviceReference: string;
-  caseId: number | null;
-  caseReference: string | null;
+export interface ExaminationTimetable {
   /**
-   * Title of the advice
+   * Unique string reference of the associated Case
    */
-  title: string;
+  caseReference: string;
   /**
-   * Title of the advice in Welsh
+   * whether the Examination Timetable has been published or not
    */
-  titleWelsh?: string | null;
+  published?: boolean | null;
+  events: Event[];
+  [k: string]: unknown;
+}
+export interface Event {
   /**
-   * Who the enquiry is from
+   * Event Identifier
    */
-  from: string | null;
+  eventId: number;
   /**
-   * Who the enquiry is on behalf of
+   * Compulsory Acquisition Hearing/Deadline/Issue Specific Hearing etc
    */
-  agent: string | null;
+  type:
+    | 'Accompanied Site Inspection'
+    | 'Compulsory Acquisition Hearing'
+    | 'Deadline'
+    | 'Deadline For Close Of Examination'
+    | 'Issued By'
+    | 'Issue Specific Hearing'
+    | 'Open Floor Hearing'
+    | 'Other Meeting'
+    | 'Preliminary Meeting'
+    | 'Procedural Deadline (Pre-Examination)'
+    | 'Procedural Decision'
+    | 'Publication Of';
   /**
-   * How the enquiry was made
+   * Title Of Examination Timetable Event
    */
-  method: 'phone' | 'email' | 'meeting' | 'post' | null;
+  eventTitle: string;
   /**
-   * Date the enquiry was made
+   * Title Of Examination Timetable Event In Welsh
    */
-  enquiryDate: string | null;
+  eventTitleWelsh?: string | null;
+  description: string;
+  descriptionWelsh?: string | null;
   /**
-   * Details of the enquiry
+   * Optional start date for event window
    */
-  enquiryDetails: string | null;
+  eventDeadlineStartDate?: string | null;
   /**
-   * Details of the enquiry in Welsh
+   * Event Date = effective deadline (end) date
    */
-  enquiryDetailsWelsh?: string | null;
-  /**
-   * Who issued the advice
-   */
-  adviceGivenBy: string | null;
-  /**
-   * Date the advice was given
-   */
-  adviceDate: string | null;
-  /**
-   * Details of the advice
-   */
-  adviceDetails: string | null;
-  /**
-   * Details of the advice in Welsh
-   */
-  adviceDetailsWelsh?: string | null;
-  status: 'checked' | 'unchecked' | 'readytopublish' | 'published' | 'donotpublish' | null;
-  redactionStatus: 'unredacted' | 'redacted' | null;
-  attachmentIds: string[];
+  date: string;
+  eventLineItems: LineItem[];
+  [k: string]: unknown;
+}
+export interface LineItem {
+  description: string;
   [k: string]: unknown;
 }
 
@@ -801,12 +753,64 @@ export interface ServiceUser {
 }
 
 /**
- * Employee schema
+ * Section 51 Advice schema
  */
-export interface Employee {
-  id: string;
-  firstName: string;
-  lastName: string;
+export interface S51Advice {
+  adviceId: number;
+  adviceReference: string;
+  caseId: number | null;
+  caseReference: string | null;
+  /**
+   * Title of the advice
+   */
+  title: string;
+  /**
+   * Title of the advice in Welsh
+   */
+  titleWelsh?: string | null;
+  /**
+   * Who the enquiry is from
+   */
+  from: string | null;
+  /**
+   * Who the enquiry is on behalf of
+   */
+  agent: string | null;
+  /**
+   * How the enquiry was made
+   */
+  method: 'phone' | 'email' | 'meeting' | 'post' | null;
+  /**
+   * Date the enquiry was made
+   */
+  enquiryDate: string | null;
+  /**
+   * Details of the enquiry
+   */
+  enquiryDetails: string | null;
+  /**
+   * Details of the enquiry in Welsh
+   */
+  enquiryDetailsWelsh?: string | null;
+  /**
+   * Who issued the advice
+   */
+  adviceGivenBy: string | null;
+  /**
+   * Date the advice was given
+   */
+  adviceDate: string | null;
+  /**
+   * Details of the advice
+   */
+  adviceDetails: string | null;
+  /**
+   * Details of the advice in Welsh
+   */
+  adviceDetailsWelsh?: string | null;
+  status: 'checked' | 'unchecked' | 'readytopublish' | 'published' | 'donotpublish' | null;
+  redactionStatus: 'unredacted' | 'redacted' | null;
+  attachmentIds: string[];
   [k: string]: unknown;
 }
 

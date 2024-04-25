@@ -11,6 +11,10 @@
 			"type": "string",
 			"description": "Unique string reference of the associated Case"
 		},
+		"published": {
+			"type": ["boolean", "null"],
+			"description": "whether the Examination Timetable has been published or not"
+		},
 		"events": {
 			"type": "array",
 			"items": {

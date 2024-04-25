@@ -4,11 +4,12 @@
 
 # Examination Timetable Properties
 
-| Property                        | Type     | Required | Nullable       | Defined by                                                                                                                           |
-| :------------------------------ | :------- | :------- | :------------- | :----------------------------------------------------------------------------------------------------------------------------------- |
-| [caseReference](#casereference) | `string` | Required | cannot be null | [Examination Timetable](nsip-exam-timetable-properties-casereference.md "nsip-exam-timetable.schema.json#/properties/caseReference") |
-| [events](#events)               | `array`  | Required | cannot be null | [Examination Timetable](nsip-exam-timetable-properties-events.md "nsip-exam-timetable.schema.json#/properties/events")               |
-| Additional Properties           | Any      | Optional | can be null    |                                                                                                                                      |
+| Property                        | Type      | Required | Nullable       | Defined by                                                                                                                           |
+| :------------------------------ | :-------- | :------- | :------------- | :----------------------------------------------------------------------------------------------------------------------------------- |
+| [caseReference](#casereference) | `string`  | Required | cannot be null | [Examination Timetable](nsip-exam-timetable-properties-casereference.md "nsip-exam-timetable.schema.json#/properties/caseReference") |
+| [published](#published)         | `boolean` | Optional | can be null    | [Examination Timetable](nsip-exam-timetable-properties-published.md "nsip-exam-timetable.schema.json#/properties/published")         |
+| [events](#events)               | `array`   | Required | cannot be null | [Examination Timetable](nsip-exam-timetable-properties-events.md "nsip-exam-timetable.schema.json#/properties/events")               |
+| Additional Properties           | Any       | Optional | can be null    |                                                                                                                                      |
 
 ## caseReference
 
@@ -27,6 +28,24 @@ Unique string reference of the associated Case
 ### caseReference Type
 
 `string`
+
+## published
+
+whether the Examination Timetable has been published or not
+
+`published`
+
+*   is optional
+
+*   Type: `boolean`
+
+*   can be null
+
+*   defined in: [Examination Timetable](nsip-exam-timetable-properties-published.md "nsip-exam-timetable.schema.json#/properties/published")
+
+### published Type
+
+`boolean`
 
 ## events
 

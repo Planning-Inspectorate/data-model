@@ -9,7 +9,137 @@ All messages over the enterprise service bus are in Data Model compliant formats
 * Each service bus topic corresponds to one schema. 
 * Each message encompasses the complete state of an entity (as defined by [ECST](https://blogs.mulesoft.com/api-integration/strategy/event-carried-state-messages/)) and does not delineate specific changes (the delta). 
 * Consumers must support processing related messages received through different topics regardless of the order in which they are sent.
-* Required values cannot be null, while optional values may be null. All properties are required to be present in the message, whether null or otherwise.
+* Values required by the Data Model cannot be null, while optional values must be null if they have no value. 
+
+## Schema Changes
+
+Since we are using these schemas across a distributed system we must ensure backwards and forwards compatibility. This enables systems to adopt new schema versions independently of one another. Also, consumers don't need to know the schema version of the messages they have received, as it should validate against any version.
+
+Backwards compatibility ensures that messages using a newer schema version can be understood and processed by consumers that have not been updated to support the new version.
+
+Forwards compatibility ensures that messages using an older schema version can be understood and processed by consumers that have been updated to support a newer schema version.
+
+### Rules
+
+To ensure compatibility, the following rules must be followed:
+
+1. No fields can be removed from the schema
+1. No fields can be removed from the `required` list
+1. Optional fields must support the `null` type
+1. Fields cannot be renamed
+1. Any new fields must be optional
+1. Any enum changes must only add options
+1. `additionalProperties` must always be true
+
+### Examples
+
+Given a simple schema at v1:
+
+```json
+{
+    "type": "object",
+    "title": "Book",
+    "required": ["id", "title"]
+    "additionalProperties": true,
+    "properties": {
+        "id": {
+            "type": "integer",
+            "description": "The unique identifier"
+        },
+        "title": {
+            "type": "string",
+            "description": "The title or name of this book"
+        },
+        "blurb": {
+            "type": ["string", "null"],
+            "description": "The blurb"
+        },
+        "category": {
+            "type": ["string", "null"],
+            "description": "The top-level category",
+            "enum": [
+                "fiction",
+                "non-fiction",
+                null
+            ]
+        }
+    }
+}
+```
+
+An example valid message at v1 could be:
+
+```json
+{
+    "id": 85347,
+    "title": "Mastering the Rubik's Cube",
+    "blurb": null,
+    "category": "non-fiction"
+}
+```
+
+Let's make a v2 schema:
+
+```json
+{
+    "type": "object",
+    "title": "Book",
+    "required": ["id", "title"]
+    "additionalProperties": true,
+    "properties": {
+        "id": {
+            "type": "integer",
+            "description": "The unique identifier"
+        },
+        "title": {
+            "type": "string",
+            "description": "The title or name of this book"
+        },
+        "blurb": {
+            "type": ["string", "null"],
+            "description": "The blurb"
+        },
+        "category": {
+            "type": ["string", "null"],
+            "description": "The top-level category",
+            "enum": [
+                "fiction",
+                "non-fiction",
+                "ai-generated",
+                null
+            ]
+        },
+        "subCategory": {
+            "type": ["string", "null"],
+            "description": "The sub category",
+            "enum": [
+                "manuals",
+                "stories",
+                null
+            ]
+        }
+    }
+}
+```
+
+Two changes have been made:
+ 1. a new enum valid for `category`
+ 1. a new field, `subCategory`
+
+Now the original v1 message still validates against this schema. And a new v2 message, for example:
+
+```json
+{
+    "id": 85347,
+    "title": "Mastering the Rubik's Cube",
+    "blurb": null,
+    "category": "non-fiction",
+    "subCategory": "manuals"
+}
+```
+
+validates against the _old schema_ and the new schema!
+
 
 ## Structure
 

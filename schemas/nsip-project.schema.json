@@ -4,6 +4,7 @@
 	"title": "NSIP Project",
 	"description": "Subset of Pins Data Model [Case]",
 	"type": "object",
+	"additionalProperties": true,
 	"required":[
 		"caseId",
 		"caseReference",

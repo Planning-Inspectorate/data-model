@@ -4,6 +4,7 @@
 	"title": "S51 Advice",
 	"description": "Section 51 Advice schema",
 	"type": "object",
+	"additionalProperties": true,
 	"required": [
 		"adviceId",
 		"adviceReference",

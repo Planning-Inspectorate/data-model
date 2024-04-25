@@ -9,6 +9,7 @@
 | [id](#id)               | `string` | Required | cannot be null | [Employee](employee-properties-id.md "employee.schema.json#/properties/id")               |
 | [firstName](#firstname) | `string` | Required | cannot be null | [Employee](employee-properties-firstname.md "employee.schema.json#/properties/firstName") |
 | [lastName](#lastname)   | `string` | Required | cannot be null | [Employee](employee-properties-lastname.md "employee.schema.json#/properties/lastName")   |
+| Additional Properties   | Any      | Optional | can be null    |                                                                                           |
 
 ## id
 
@@ -63,3 +64,7 @@
 ### lastName Type
 
 `string`
+
+## Additional Properties
+
+Additional properties are allowed and do not have to follow a specific schema

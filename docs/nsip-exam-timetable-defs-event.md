@@ -13,6 +13,7 @@
 | [eventDeadlineStartDate](#eventdeadlinestartdate) | `string`  | Optional | can be null    | [Examination Timetable](nsip-exam-timetable-defs-event-properties-eventdeadlinestartdate.md "nsip-exam-timetable.schema.json#/$defs/event/properties/eventDeadlineStartDate") |
 | [date](#date)                                     | `string`  | Required | cannot be null | [Examination Timetable](nsip-exam-timetable-defs-event-properties-date.md "nsip-exam-timetable.schema.json#/$defs/event/properties/date")                                     |
 | [eventLineItems](#eventlineitems)                 | `array`   | Required | cannot be null | [Examination Timetable](nsip-exam-timetable-defs-event-properties-eventlineitems.md "nsip-exam-timetable.schema.json#/$defs/event/properties/eventLineItems")                 |
+| Additional Properties                             | Any       | Optional | can be null    |                                                                                                                                                                               |
 
 ## eventId
 
@@ -178,3 +179,7 @@ Event Date = effective deadline (end) date
 ### eventLineItems Type
 
 `object[]` ([Details](nsip-exam-timetable-defs-line-item.md))
+
+## Additional Properties
+
+Additional properties are allowed and do not have to follow a specific schema

@@ -28,6 +28,7 @@
 | [caseReference](#casereference)       | `string` | Required | cannot be null | [Service User](service-user-properties-casereference.md "service-user.schema.json#/properties/caseReference")       |
 | [sourceSystem](#sourcesystem)         | `string` | Required | cannot be null | [Service User](service-user-properties-sourcesystem.md "service-user.schema.json#/properties/sourceSystem")         |
 | [sourceSuid](#sourcesuid)             | `string` | Required | cannot be null | [Service User](service-user-properties-sourcesuid.md "service-user.schema.json#/properties/sourceSuid")             |
+| Additional Properties                 | Any      | Optional | can be null    |                                                                                                                     |
 
 ## id
 
@@ -566,3 +567,7 @@ Unique identifier from the source system.
 ```json
 "12345"
 ```
+
+## Additional Properties
+
+Additional properties are allowed and do not have to follow a specific schema

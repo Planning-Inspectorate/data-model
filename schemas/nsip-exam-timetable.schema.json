@@ -4,6 +4,7 @@
 	"title": "Examination Timetable",
 	"description": "Examination Timetable for an NSIP Project",
 	"type": "object",
+	"additionalProperties": true,
 	"required": ["caseReference", "events"],
 	"properties": {
 		"caseReference": {
@@ -20,6 +21,7 @@
 	"$defs": {
 		"event": {
 			"type": "object",
+			"additionalProperties": true,
 			"required": ["eventId", "type", "eventTitle", "description", "date", "eventLineItems"],
 			"properties": {
 				"eventId": {
@@ -73,6 +75,7 @@
 		},
 		"line-item": {
 			"type": "object",
+			"additionalProperties": true,
 			"required": ["description"],
 			"properties": {
 				"description": {

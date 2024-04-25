@@ -13,6 +13,7 @@
 | [updateContentEnglish](#updatecontentenglish) | `string`  | Required | cannot be null | [NSIP Project Update](nsip-project-update-properties-updatecontentenglish.md "nsip-project-update.schema.json#/properties/updateContentEnglish") |
 | [updateContentWelsh](#updatecontentwelsh)     | `string`  | Required | can be null    | [NSIP Project Update](nsip-project-update-properties-updatecontentwelsh.md "nsip-project-update.schema.json#/properties/updateContentWelsh")     |
 | [updateStatus](#updatestatus)                 | `string`  | Required | cannot be null | [NSIP Project Update](nsip-project-update-properties-updatestatus.md "nsip-project-update.schema.json#/properties/updateStatus")                 |
+| Additional Properties                         | Any       | Optional | can be null    |                                                                                                                                                  |
 
 ## id
 
@@ -156,3 +157,7 @@ The current status of this update
 | `"ready-to-unpublish"` |             |
 | `"unpublished"`        |             |
 | `"archived"`           |             |
+
+## Additional Properties
+
+Additional properties are allowed and do not have to follow a specific schema

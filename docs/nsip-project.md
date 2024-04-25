@@ -82,6 +82,7 @@
 | [migrationStatus](#migrationstatus)                                                                     | `boolean`     | Required | can be null    | [NSIP Project](nsip-project-properties-migrationstatus.md "nsip-project.schema.json#/properties/migrationStatus")                                                                     |
 | [dateOfReOpenRelevantRepresentationStart](#dateofreopenrelevantrepresentationstart)                     | `string`      | Required | can be null    | [NSIP Project](nsip-project-properties-dateofreopenrelevantrepresentationstart.md "nsip-project.schema.json#/properties/dateOfReOpenRelevantRepresentationStart")                     |
 | [dateOfReOpenRelevantRepresentationClose](#dateofreopenrelevantrepresentationclose)                     | `string`      | Required | can be null    | [NSIP Project](nsip-project-properties-dateofreopenrelevantrepresentationclose.md "nsip-project.schema.json#/properties/dateOfReOpenRelevantRepresentationClose")                     |
+| Additional Properties                                                                                   | Any           | Optional | can be null    |                                                                                                                                                                                       |
 
 ## caseId
 
@@ -2005,3 +2006,7 @@ Date at which relevant reps can no longer be reopened
 ```json
 "2023-07-27T20:30:00.000Z"
 ```
+
+## Additional Properties
+
+Additional properties are allowed and do not have to follow a specific schema

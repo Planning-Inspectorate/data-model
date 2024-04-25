@@ -4,6 +4,7 @@
 	"title": "Representation",
 	"description": "NSIP Representation schema",
 	"type": "object",
+	"additionalProperties": true,
 	"required": [
 		"representationId",
 		"referenceId",

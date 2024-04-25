@@ -4,6 +4,7 @@
 	"title": "NSIP Document",
 	"description": "NSIP document schema",
 	"type": "object",
+	"additionalProperties": true,
 	"required": [
 		"documentId",
 		"caseId",

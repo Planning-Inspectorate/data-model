@@ -40,6 +40,7 @@
 | [filter2](#filter2)                               | `string`  | Required | can be null    | [NSIP Document](nsip-document-properties-filter2.md "nsip-document.schema.json#/properties/filter2")                               |
 | [horizonFolderId](#horizonfolderid)               | `string`  | Required | can be null    | [NSIP Document](nsip-document-properties-horizonfolderid.md "nsip-document.schema.json#/properties/horizonFolderId")               |
 | [transcriptId](#transcriptid)                     | `string`  | Required | can be null    | [NSIP Document](nsip-document-properties-transcriptid.md "nsip-document.schema.json#/properties/transcriptId")                     |
+| Additional Properties                             | Any       | Optional | can be null    |                                                                                                                                    |
 
 ## documentId
 
@@ -902,3 +903,7 @@ The GUID of the transcript document (if one was provided).
 ### transcriptId Type
 
 `string`
+
+## Additional Properties
+
+Additional properties are allowed and do not have to follow a specific schema

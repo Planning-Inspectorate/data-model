@@ -4,6 +4,7 @@
 	"title": "new-deadline-submission",
 	"description": "A command to deliver metadata about a new document submission added to a deadline",
 	"type": "object",
+	"additionalProperties": true,
 	"required": ["name", "email", "deadline", "submissionType", "blobGuid", "documentName"],
 	"properties": {
 		"caseReference": {

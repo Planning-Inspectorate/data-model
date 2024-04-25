@@ -22,6 +22,7 @@
 | [status](#status)                   | `string`  | Required | can be null    | [S51 Advice](s51-advice-properties-status.md "s51-advice.schema.json#/properties/status")                   |
 | [redactionStatus](#redactionstatus) | `string`  | Required | can be null    | [S51 Advice](s51-advice-properties-redactionstatus.md "s51-advice.schema.json#/properties/redactionStatus") |
 | [attachmentIds](#attachmentids)     | `array`   | Required | cannot be null | [S51 Advice](s51-advice-properties-attachmentids.md "s51-advice.schema.json#/properties/attachmentIds")     |
+| Additional Properties               | Any       | Optional | can be null    |                                                                                                             |
 
 ## adviceId
 
@@ -395,3 +396,7 @@ Details of the advice
 ### attachmentIds Type
 
 `string[]`
+
+## Additional Properties
+
+Additional properties are allowed and do not have to follow a specific schema

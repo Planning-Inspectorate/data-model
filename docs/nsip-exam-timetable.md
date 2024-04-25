@@ -8,6 +8,7 @@
 | :------------------------------ | :------- | :------- | :------------- | :----------------------------------------------------------------------------------------------------------------------------------- |
 | [caseReference](#casereference) | `string` | Required | cannot be null | [Examination Timetable](nsip-exam-timetable-properties-casereference.md "nsip-exam-timetable.schema.json#/properties/caseReference") |
 | [events](#events)               | `array`  | Required | cannot be null | [Examination Timetable](nsip-exam-timetable-properties-events.md "nsip-exam-timetable.schema.json#/properties/events")               |
+| Additional Properties           | Any      | Optional | can be null    |                                                                                                                                      |
 
 ## caseReference
 
@@ -45,6 +46,10 @@ Unique string reference of the associated Case
 
 `object[]` ([Details](nsip-exam-timetable-defs-event.md))
 
+## Additional Properties
+
+Additional properties are allowed and do not have to follow a specific schema
+
 # Examination Timetable Definitions
 
 ## Definitions group event
@@ -64,6 +69,7 @@ Reference this group by using
 | [eventDeadlineStartDate](#eventdeadlinestartdate) | `string`  | Optional | can be null    | [Examination Timetable](nsip-exam-timetable-defs-event-properties-eventdeadlinestartdate.md "nsip-exam-timetable.schema.json#/$defs/event/properties/eventDeadlineStartDate") |
 | [date](#date)                                     | `string`  | Required | cannot be null | [Examination Timetable](nsip-exam-timetable-defs-event-properties-date.md "nsip-exam-timetable.schema.json#/$defs/event/properties/date")                                     |
 | [eventLineItems](#eventlineitems)                 | `array`   | Required | cannot be null | [Examination Timetable](nsip-exam-timetable-defs-event-properties-eventlineitems.md "nsip-exam-timetable.schema.json#/$defs/event/properties/eventLineItems")                 |
+| Additional Properties                             | Any       | Optional | can be null    |                                                                                                                                                                               |
 
 ### eventId
 
@@ -230,6 +236,10 @@ Event Date = effective deadline (end) date
 
 `object[]` ([Details](nsip-exam-timetable-defs-line-item.md))
 
+### Additional Properties
+
+Additional properties are allowed and do not have to follow a specific schema
+
 ## Definitions group line-item
 
 Reference this group by using
@@ -241,6 +251,7 @@ Reference this group by using
 | Property                      | Type     | Required | Nullable       | Defined by                                                                                                                                                      |
 | :---------------------------- | :------- | :------- | :------------- | :-------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | [description](#description-1) | `string` | Required | cannot be null | [Examination Timetable](nsip-exam-timetable-defs-line-item-properties-description.md "nsip-exam-timetable.schema.json#/$defs/line-item/properties/description") |
+| Additional Properties         | Any      | Optional | can be null    |                                                                                                                                                                 |
 
 ### description
 
@@ -259,3 +270,7 @@ Reference this group by using
 #### description Type
 
 `string`
+
+### Additional Properties
+
+Additional properties are allowed and do not have to follow a specific schema

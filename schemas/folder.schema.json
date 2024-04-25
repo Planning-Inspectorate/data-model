@@ -4,6 +4,7 @@
   "title": "Folder",
   "description": "Folders can have optional parents. All folders belong to a Case.",
   "type": "object",
+  "additionalProperties": true,
   "required": ["id", "caseReference", "displayNameEnglish", "displayNameWelsh", "parentFolderId", "caseStage"],
   "properties": {
     "id": {

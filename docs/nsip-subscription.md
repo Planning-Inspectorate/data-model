@@ -13,6 +13,7 @@
 | [startDate](#startdate)               | `string`  | Required | can be null    | [nsip-subscription](nsip-subscription-properties-startdate.md "nsip-subscription.schema.json#/properties/startDate")               |
 | [endDate](#enddate)                   | `string`  | Required | can be null    | [nsip-subscription](nsip-subscription-properties-enddate.md "nsip-subscription.schema.json#/properties/endDate")                   |
 | [language](#language)                 | `string`  | Required | can be null    | [nsip-subscription](nsip-subscription-properties-language.md "nsip-subscription.schema.json#/properties/language")                 |
+| Additional Properties                 | Any       | Optional | can be null    |                                                                                                                                    |
 
 ## subscriptionId
 
@@ -186,3 +187,7 @@ The default value is:
 ```json
 "English"
 ```
+
+## Additional Properties
+
+Additional properties are allowed and do not have to follow a specific schema

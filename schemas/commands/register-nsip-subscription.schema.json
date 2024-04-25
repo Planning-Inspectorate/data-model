@@ -4,6 +4,7 @@
 	"title": "register-nsip-subscription",
 	"description": "A command to register an NSIP subscription with the back office",
 	"type": "object",
+	"additionalProperties": true,
 	"required": ["emailSubscriber"],
 	"properties": {
 		"__additionalProperties__": {

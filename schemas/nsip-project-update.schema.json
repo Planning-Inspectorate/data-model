@@ -4,6 +4,7 @@
 	"title": "NSIP Project Update",
 	"description": "NSIP Project Update (formerly known as Banners)",
 	"type": "object",
+	"additionalProperties": true,
 	"required": ["id", "caseReference", "updateDate", "updateName", "updateContentEnglish", "updateContentWelsh", "updateStatus"],
 	"properties": {
 		"id": {

@@ -12,6 +12,7 @@
 | [displayNameWelsh](#displaynamewelsh)     | `string`  | Required | can be null    | [Folder](folder-properties-displaynamewelsh.md "folder.schema.json#/properties/displayNameWelsh")     |
 | [parentFolderId](#parentfolderid)         | `integer` | Required | can be null    | [Folder](folder-properties-parentfolderid.md "folder.schema.json#/properties/parentFolderId")         |
 | [caseStage](#casestage)                   | `string`  | Required | can be null    | [Folder](folder-properties-casestage.md "folder.schema.json#/properties/caseStage")                   |
+| Additional Properties                     | Any       | Optional | can be null    |                                                                                                       |
 
 ## id
 
@@ -140,3 +141,7 @@ Optional parent folder ID.
 | `"correspondence"`         |             |
 | `"0"`                      |             |
 | `null`                     |             |
+
+## Additional Properties
+
+Additional properties are allowed and do not have to follow a specific schema

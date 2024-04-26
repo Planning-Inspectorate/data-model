@@ -5,7 +5,6 @@
   "main": "src/index.js",
   "type": "module",
   "scripts": {
-    "check-required": "node src/check-required.js",
     "gen": "npm run gen-docs && npm run gen-types",
     "gen-docs": "node src/gen-docs.js",
     "gen-types": "node src/gen-types.js"

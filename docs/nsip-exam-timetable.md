@@ -65,7 +65,9 @@ Reference this group by using
 | [eventId](#eventid)                               | `integer` | Required | cannot be null | [Examination Timetable](nsip-exam-timetable-defs-event-properties-eventid.md "nsip-exam-timetable.schema.json#/$defs/event/properties/eventId")                               |
 | [type](#type)                                     | `string`  | Required | cannot be null | [Examination Timetable](nsip-exam-timetable-defs-event-properties-type.md "nsip-exam-timetable.schema.json#/$defs/event/properties/type")                                     |
 | [eventTitle](#eventtitle)                         | `string`  | Required | cannot be null | [Examination Timetable](nsip-exam-timetable-defs-event-properties-eventtitle.md "nsip-exam-timetable.schema.json#/$defs/event/properties/eventTitle")                         |
+| [eventTitleWelsh](#eventtitlewelsh)               | `string`  | Optional | can be null    | [Examination Timetable](nsip-exam-timetable-defs-event-properties-eventtitlewelsh.md "nsip-exam-timetable.schema.json#/$defs/event/properties/eventTitleWelsh")               |
 | [description](#description)                       | `string`  | Required | cannot be null | [Examination Timetable](nsip-exam-timetable-defs-event-properties-description.md "nsip-exam-timetable.schema.json#/$defs/event/properties/description")                       |
+| [descriptionWelsh](#descriptionwelsh)             | `string`  | Optional | can be null    | [Examination Timetable](nsip-exam-timetable-defs-event-properties-descriptionwelsh.md "nsip-exam-timetable.schema.json#/$defs/event/properties/descriptionWelsh")             |
 | [eventDeadlineStartDate](#eventdeadlinestartdate) | `string`  | Optional | can be null    | [Examination Timetable](nsip-exam-timetable-defs-event-properties-eventdeadlinestartdate.md "nsip-exam-timetable.schema.json#/$defs/event/properties/eventDeadlineStartDate") |
 | [date](#date)                                     | `string`  | Required | cannot be null | [Examination Timetable](nsip-exam-timetable-defs-event-properties-date.md "nsip-exam-timetable.schema.json#/$defs/event/properties/date")                                     |
 | [eventLineItems](#eventlineitems)                 | `array`   | Required | cannot be null | [Examination Timetable](nsip-exam-timetable-defs-event-properties-eventlineitems.md "nsip-exam-timetable.schema.json#/$defs/event/properties/eventLineItems")                 |
@@ -144,6 +146,24 @@ Title Of Examination Timetable Event
 
 `string`
 
+### eventTitleWelsh
+
+Title Of Examination Timetable Event In Welsh
+
+`eventTitleWelsh`
+
+*   is optional
+
+*   Type: `string`
+
+*   can be null
+
+*   defined in: [Examination Timetable](nsip-exam-timetable-defs-event-properties-eventtitlewelsh.md "nsip-exam-timetable.schema.json#/$defs/event/properties/eventTitleWelsh")
+
+#### eventTitleWelsh Type
+
+`string`
+
 ### description
 
 
@@ -159,6 +179,24 @@ Title Of Examination Timetable Event
 *   defined in: [Examination Timetable](nsip-exam-timetable-defs-event-properties-description.md "nsip-exam-timetable.schema.json#/$defs/event/properties/description")
 
 #### description Type
+
+`string`
+
+### descriptionWelsh
+
+
+
+`descriptionWelsh`
+
+*   is optional
+
+*   Type: `string`
+
+*   can be null
+
+*   defined in: [Examination Timetable](nsip-exam-timetable-defs-event-properties-descriptionwelsh.md "nsip-exam-timetable.schema.json#/$defs/event/properties/descriptionWelsh")
+
+#### descriptionWelsh Type
 
 `string`
 

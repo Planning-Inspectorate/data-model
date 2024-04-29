@@ -33,10 +33,13 @@
 | [origin](#origin)                                 | `string`  | Required | can be null    | [NSIP Document](nsip-document-properties-origin.md "nsip-document.schema.json#/properties/origin")                                 |
 | [owner](#owner)                                   | `string`  | Required | can be null    | [NSIP Document](nsip-document-properties-owner.md "nsip-document.schema.json#/properties/owner")                                   |
 | [author](#author)                                 | `string`  | Required | can be null    | [NSIP Document](nsip-document-properties-author.md "nsip-document.schema.json#/properties/author")                                 |
+| [authorWelsh](#authorwelsh)                       | `string`  | Optional | can be null    | [NSIP Document](nsip-document-properties-authorwelsh.md "nsip-document.schema.json#/properties/authorWelsh")                       |
 | [representative](#representative)                 | `string`  | Required | can be null    | [NSIP Document](nsip-document-properties-representative.md "nsip-document.schema.json#/properties/representative")                 |
 | [description](#description)                       | `string`  | Required | can be null    | [NSIP Document](nsip-document-properties-description.md "nsip-document.schema.json#/properties/description")                       |
+| [descriptionWelsh](#descriptionwelsh)             | `string`  | Optional | can be null    | [NSIP Document](nsip-document-properties-descriptionwelsh.md "nsip-document.schema.json#/properties/descriptionWelsh")             |
 | [documentCaseStage](#documentcasestage)           | `string`  | Required | can be null    | [NSIP Document](nsip-document-properties-documentcasestage.md "nsip-document.schema.json#/properties/documentCaseStage")           |
 | [filter1](#filter1)                               | `string`  | Required | can be null    | [NSIP Document](nsip-document-properties-filter1.md "nsip-document.schema.json#/properties/filter1")                               |
+| [filter1Welsh](#filter1welsh)                     | `string`  | Optional | can be null    | [NSIP Document](nsip-document-properties-filter1welsh.md "nsip-document.schema.json#/properties/filter1Welsh")                     |
 | [filter2](#filter2)                               | `string`  | Required | can be null    | [NSIP Document](nsip-document-properties-filter2.md "nsip-document.schema.json#/properties/filter2")                               |
 | [horizonFolderId](#horizonfolderid)               | `string`  | Required | can be null    | [NSIP Document](nsip-document-properties-horizonfolderid.md "nsip-document.schema.json#/properties/horizonFolderId")               |
 | [transcriptId](#transcriptid)                     | `string`  | Required | can be null    | [NSIP Document](nsip-document-properties-transcriptid.md "nsip-document.schema.json#/properties/transcriptId")                     |
@@ -734,6 +737,24 @@ Name of person who authored document
 
 `string`
 
+## authorWelsh
+
+Welsh name of person who authored document
+
+`authorWelsh`
+
+*   is optional
+
+*   Type: `string`
+
+*   can be null
+
+*   defined in: [NSIP Document](nsip-document-properties-authorwelsh.md "nsip-document.schema.json#/properties/authorWelsh")
+
+### authorWelsh Type
+
+`string`
+
 ## representative
 
 The on behalf of or agent submitter of document
@@ -781,6 +802,24 @@ The on behalf of or agent submitter of document
 ```json
 "Attachments to the letter to Department for Business, Energy & Industrial Strategy"
 ```
+
+## descriptionWelsh
+
+
+
+`descriptionWelsh`
+
+*   is optional
+
+*   Type: `string`
+
+*   can be null
+
+*   defined in: [NSIP Document](nsip-document-properties-descriptionwelsh.md "nsip-document.schema.json#/properties/descriptionWelsh")
+
+### descriptionWelsh Type
+
+`string`
 
 ## documentCaseStage
 
@@ -843,6 +882,24 @@ Filter field to provide additional filtering
 ```json
 "Deadline 2"
 ```
+
+## filter1Welsh
+
+Filter field in Welsh
+
+`filter1Welsh`
+
+*   is optional
+
+*   Type: `string`
+
+*   can be null
+
+*   defined in: [NSIP Document](nsip-document-properties-filter1welsh.md "nsip-document.schema.json#/properties/filter1Welsh")
+
+### filter1Welsh Type
+
+`string`
 
 ## filter2
 

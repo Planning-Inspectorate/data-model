@@ -6,53 +6,131 @@
  */
 
 /**
+ * Schema defining the metadata for appeal documents
+ */
+export interface AppealDocument {
+  /**
+   * The unique identifier for the document
+   */
+  documentId: string;
+  /**
+   * Internal case identifier
+   */
+  caseId: number | null;
+  /**
+   * External case identifier
+   */
+  caseReference: string;
+  /**
+   * A document can have multiple versions, and this indicates the latest version
+   */
+  version: number;
+  /**
+   * Current stored name of the document
+   */
+  filename: string;
+  /**
+   * Original name of document
+   */
+  originalFilename: string;
+  /**
+   * The file size, in bytes
+   */
+  size: number;
+  /**
+   * The mime type for the current version of the file
+   */
+  mime: string;
+  /**
+   * The internal location of the document
+   */
+  documentURI: string;
+  /**
+   * The location of the published document, will be null if published status is false
+   */
+  publishedDocumentURI: string | null;
+  /**
+   * Indicates the virus check status for the current document
+   */
+  virusCheckStatus: 'not_scanned' | 'scanned' | 'affected' | null;
+  /**
+   * A MD5 hash to check the validity of the file
+   */
+  fileMD5: string | null;
+  /**
+   * The creation date for the document
+   */
+  dateCreated: string;
+  /**
+   * The date the document was received
+   */
+  dateReceived: string | null;
+  /**
+   * The last update date for the document
+   */
+  lastModified: string | null;
+  /**
+   * The internal code for an appeal type, e.g. Householder (D)
+   */
+  caseType: 'C' | 'D' | 'F' | 'G' | 'H' | 'L' | 'Q' | 'S' | 'V' | 'W' | 'X' | 'Y' | 'Z' | null;
+  /**
+   * Indicates the redaction status for the document
+   */
+  redactedStatus: 'not_redacted' | 'redacted' | 'no_redaction_required' | null;
+  /**
+   * Indicates if a document can be shared with third-parties
+   */
+  publishedStatus: boolean;
+  /**
+   * The type of document, used for exchange, migrations and consumption from the appeal back-office system
+   */
+  documentType: 'appellantCostsApplication' | 'lpaCostsApplication' | null;
+  /**
+   * The system mastering the metadata for the current document
+   */
+  sourceSystem: 'back-office-appeals' | 'horizon' | 'acp' | 'sharepoint' | null;
+  /**
+   * Indicates where the documents originates from
+   */
+  origin: 'pins' | 'citizen' | 'lpa' | 'ogd' | null;
+  /**
+   * Owner of the current document
+   */
+  owner: string | null;
+  /**
+   * Name of person who authored document
+   */
+  author: string | null;
+  /**
+   * A custom description for the document
+   */
+  description: string | null;
+  /**
+   * The stage in the appeal process that has created the document
+   */
+  caseStage:
+    | 'appellant-case'
+    | 'lpa-questionnaire'
+    | 'statements'
+    | 'third-party-comments'
+    | 'final-comments'
+    | 'appeal-decision'
+    | 'costs'
+    | null;
+  /**
+   * The folder ID containing the document in Horizon
+   */
+  horizonFolderId: string | null;
+  [k: string]: unknown;
+}
+
+/**
  * Employee schema
  */
 export interface Employee {
   id: string;
   firstName: string;
   lastName: string;
-  [k: string]: unknown;
-}
-
-/**
- * Folders can have optional parents. All folders belong to a Case.
- */
-export interface Folder {
-  /**
-   * The unique identifier within the Back Office.
-   */
-  id: number;
-  /**
-   * The case reference this folder belongs to.
-   */
-  caseReference: string;
-  /**
-   * Folder display name in English.
-   */
-  displayNameEnglish: string;
-  /**
-   * Folder display name in Welsh.
-   */
-  displayNameWelsh: string | null;
-  /**
-   * Optional parent folder ID.
-   */
-  parentFolderId: number | null;
-  caseStage:
-    | 'draft'
-    | 'pre-application'
-    | 'acceptance'
-    | 'pre-examination'
-    | 'examination'
-    | 'recommendation'
-    | 'decision'
-    | 'post_decision'
-    | 'withdrawn'
-    | 'developers_application'
-    | 'correspondence'
-    | '0'
-    | null;
   [k: string]: unknown;
 }
 
@@ -578,6 +656,35 @@ export interface NSIPProject {
 }
 
 /**
+ * Subscribers are a subset of Service Users, part of the PINS Data Model
+ */
+export interface NsipSubscription {
+  /**
+   * The unique identifier within the Back Office. Ignored as part of register-nsip-subscription.
+   */
+  subscriptionId: number | null;
+  /**
+   * the case reference the subscription relates to
+   */
+  caseReference: string;
+  emailAddress: string;
+  /**
+   * which update does the subscriber want to get notified of. For multiple types, use multiple messages.
+   */
+  subscriptionType: 'allUpdates' | 'applicationSubmitted' | 'applicationDecided' | 'registrationOpen';
+  /**
+   * The date to start getting updates
+   */
+  startDate: string | null;
+  /**
+   * The date to stop getting updates
+   */
+  endDate: string | null;
+  language: 'English' | 'Welsh' | null;
+  [k: string]: unknown;
+}
+
+/**
  * NSIP Representation schema
  */
 export interface Representation {
@@ -716,6 +823,47 @@ export interface S51Advice {
   status: 'checked' | 'unchecked' | 'readytopublish' | 'published' | 'donotpublish' | null;
   redactionStatus: 'unredacted' | 'redacted' | null;
   attachmentIds: string[];
+  [k: string]: unknown;
+}
+
+/**
+ * Folders can have optional parents. All folders belong to a Case.
+ */
+export interface Folder {
+  /**
+   * The unique identifier within the Back Office.
+   */
+  id: number;
+  /**
+   * The case reference this folder belongs to.
+   */
+  caseReference: string;
+  /**
+   * Folder display name in English.
+   */
+  displayNameEnglish: string;
+  /**
+   * Folder display name in Welsh.
+   */
+  displayNameWelsh: string | null;
+  /**
+   * Optional parent folder ID.
+   */
+  parentFolderId: number | null;
+  caseStage:
+    | 'draft'
+    | 'pre-application'
+    | 'acceptance'
+    | 'pre-examination'
+    | 'examination'
+    | 'recommendation'
+    | 'decision'
+    | 'post_decision'
+    | 'withdrawn'
+    | 'developers_application'
+    | 'correspondence'
+    | '0'
+    | null;
   [k: string]: unknown;
 }
 

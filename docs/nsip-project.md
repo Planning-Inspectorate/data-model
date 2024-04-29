@@ -9,7 +9,9 @@
 | [caseId](#caseid)                                                                                       | `integer`     | Required | cannot be null | [NSIP Project](nsip-project-properties-caseid.md "nsip-project.schema.json#/properties/caseId")                                                                                       |
 | [caseReference](#casereference)                                                                         | `string`      | Required | can be null    | [NSIP Project](nsip-project-properties-casereference.md "nsip-project.schema.json#/properties/caseReference")                                                                         |
 | [projectName](#projectname)                                                                             | `string`      | Required | can be null    | [NSIP Project](nsip-project-properties-projectname.md "nsip-project.schema.json#/properties/projectName")                                                                             |
+| [projectNameWelsh](#projectnamewelsh)                                                                   | `string`      | Optional | can be null    | [NSIP Project](nsip-project-properties-projectnamewelsh.md "nsip-project.schema.json#/properties/projectNameWelsh")                                                                   |
 | [projectDescription](#projectdescription)                                                               | `string`      | Required | can be null    | [NSIP Project](nsip-project-properties-projectdescription.md "nsip-project.schema.json#/properties/projectDescription")                                                               |
+| [projectDescriptionWelsh](#projectdescriptionwelsh)                                                     | `string`      | Optional | can be null    | [NSIP Project](nsip-project-properties-projectdescriptionwelsh.md "nsip-project.schema.json#/properties/projectDescriptionWelsh")                                                     |
 | [decision](#decision)                                                                                   | `string`      | Required | can be null    | [NSIP Project](nsip-project-properties-decision.md "nsip-project.schema.json#/properties/decision")                                                                                   |
 | [publishStatus](#publishstatus)                                                                         | `string`      | Required | can be null    | [NSIP Project](nsip-project-properties-publishstatus.md "nsip-project.schema.json#/properties/publishStatus")                                                                         |
 | [sector](#sector)                                                                                       | `string`      | Required | can be null    | [NSIP Project](nsip-project-properties-sector.md "nsip-project.schema.json#/properties/sector")                                                                                       |
@@ -17,6 +19,7 @@
 | [sourceSystem](#sourcesystem)                                                                           | `string`      | Required | cannot be null | [NSIP Project](nsip-project-properties-sourcesystem.md "nsip-project.schema.json#/properties/sourceSystem")                                                                           |
 | [stage](#stage)                                                                                         | `string`      | Required | can be null    | [NSIP Project](nsip-project-properties-stage.md "nsip-project.schema.json#/properties/stage")                                                                                         |
 | [projectLocation](#projectlocation)                                                                     | `string`      | Required | can be null    | [NSIP Project](nsip-project-properties-projectlocation.md "nsip-project.schema.json#/properties/projectLocation")                                                                     |
+| [projectLocationWelsh](#projectlocationwelsh)                                                           | `string`      | Optional | can be null    | [NSIP Project](nsip-project-properties-projectlocationwelsh.md "nsip-project.schema.json#/properties/projectLocationWelsh")                                                           |
 | [projectEmailAddress](#projectemailaddress)                                                             | `string`      | Required | can be null    | [NSIP Project](nsip-project-properties-projectemailaddress.md "nsip-project.schema.json#/properties/projectEmailAddress")                                                             |
 | [regions](#regions)                                                                                     | `array`       | Required | cannot be null | [NSIP Project](nsip-project-properties-regions.md "nsip-project.schema.json#/properties/regions")                                                                                     |
 | [transboundary](#transboundary)                                                                         | `boolean`     | Required | can be null    | [NSIP Project](nsip-project-properties-transboundary.md "nsip-project.schema.json#/properties/transboundary")                                                                         |
@@ -156,6 +159,24 @@ Name of project
 "A1 Birtley to Coal House Improvement Scheme"
 ```
 
+## projectNameWelsh
+
+Name of project in Welsh
+
+`projectNameWelsh`
+
+*   is optional
+
+*   Type: `string`
+
+*   can be null
+
+*   defined in: [NSIP Project](nsip-project-properties-projectnamewelsh.md "nsip-project.schema.json#/properties/projectNameWelsh")
+
+### projectNameWelsh Type
+
+`string`
+
 ## projectDescription
 
 
@@ -179,6 +200,24 @@ Name of project
 ```json
 "The scheme is 6.5 km in length and will consist of online widening of the A1 south of Gateshead to four lanes between junction 65"
 ```
+
+## projectDescriptionWelsh
+
+
+
+`projectDescriptionWelsh`
+
+*   is optional
+
+*   Type: `string`
+
+*   can be null
+
+*   defined in: [NSIP Project](nsip-project-properties-projectdescriptionwelsh.md "nsip-project.schema.json#/properties/projectDescriptionWelsh")
+
+### projectDescriptionWelsh Type
+
+`string`
 
 ## decision
 
@@ -405,6 +444,24 @@ Description of site location
 ```json
 "The scheme is located on the A1 Newcastle Gateshead Western Bypass, between junctions 65 and 67."
 ```
+
+## projectLocationWelsh
+
+Description of site location in Welsh
+
+`projectLocationWelsh`
+
+*   is optional
+
+*   Type: `string`
+
+*   can be null
+
+*   defined in: [NSIP Project](nsip-project-properties-projectlocationwelsh.md "nsip-project.schema.json#/properties/projectLocationWelsh")
+
+### projectLocationWelsh Type
+
+`string`
 
 ## projectEmailAddress
 

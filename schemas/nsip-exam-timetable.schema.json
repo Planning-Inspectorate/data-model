@@ -50,8 +50,15 @@
 					"type": "string",
 					"description": "Title Of Examination Timetable Event"
 				},
+				"eventTitleWelsh": {
+					"type": ["string", "null"],
+					"description": "Title Of Examination Timetable Event In Welsh"
+				},
 				"description": {
 					"type": "string"
+				},
+				"descriptionWelsh": {
+					"type": ["string", "null"]
 				},
 				"eventDeadlineStartDate": {
 					"type": ["string", "null"],

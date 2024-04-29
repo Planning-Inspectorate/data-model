@@ -90,11 +90,18 @@
 			"description": "Name of project",
 			"examples": ["A1 Birtley to Coal House Improvement Scheme"]
 		},
+		"projectNameWelsh": {
+			"type": ["string", "null"],
+			"description": "Name of project in Welsh"
+		},
 		"projectDescription": {
 			"type": ["string", "null"],
 			"examples": [
 				"The scheme is 6.5 km in length and will consist of online widening of the A1 south of Gateshead to four lanes between junction 65"
 			]
+		},
+		"projectDescriptionWelsh": {
+			"type": ["string", "null"]
 		},
 		"decision": {
 			"type": ["string", "null"],
@@ -176,6 +183,10 @@
 			"examples": [
 				"The scheme is located on the A1 Newcastle Gateshead Western Bypass, between junctions 65 and 67."
 			]
+		},
+		"projectLocationWelsh": {
+			"type": ["string", "null"],
+			"description": "Description of site location in Welsh"
 		},
 		"projectEmailAddress": {
 			"type": ["string", "null"],

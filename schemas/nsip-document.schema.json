@@ -182,6 +182,10 @@
 			"type": ["string", "null"],
 			"description": "Name of person who authored document"
 		},
+		"authorWelsh": {
+			"type": ["string", "null"],
+			"description": "Welsh name of person who authored document"
+		},
 		"representative": {
 			"type": ["string", "null"],
 			"examples": ["ZZZ Agency"],
@@ -192,6 +196,9 @@
 			"examples": [
 				"Attachments to the letter to Department for Business, Energy & Industrial Strategy"
 			]
+		},
+		"descriptionWelsh": {
+			"type": ["string", "null"]
 		},
 		"documentCaseStage": {
 			"type": ["string", "null"],
@@ -215,6 +222,10 @@
 			"type": ["string", "null"],
 			"examples": ["Deadline 2"],
 			"description": "Filter field to provide additional filtering"
+		},
+		"filter1Welsh": {
+			"type": ["string", "null"],
+			"description": "Filter field in Welsh"
 		},
 		"filter2": {
 			"type": ["string", "null"],

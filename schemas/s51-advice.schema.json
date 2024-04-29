@@ -45,6 +45,10 @@
 			"description": "Title of the advice",
 			"examples": ["Advice following issue of decision to accept the application for examination"]
 		},
+		"titleWelsh": {
+			"type": ["string", "null"],
+			"description": "Title of the advice in Welsh"
+		},
 		"from": {
 			"type": ["string", "null"],
 			"description": "Who the enquiry is from"
@@ -68,6 +72,10 @@
 			"type": ["string", "null"],
 			"description": "Details of the enquiry"
 		},
+		"enquiryDetailsWelsh": {
+			"type": ["string", "null"],
+			"description": "Details of the enquiry in Welsh"
+		},
 		"adviceGivenBy": {
 			"type": ["string", "null"],
 			"description": "Who issued the advice"
@@ -81,6 +89,10 @@
 		"adviceDetails": {
 			"type": ["string", "null"],
 			"description": "Details of the advice"
+		},
+		"adviceDetailsWelsh": {
+			"type": ["string", "null"],
+			"description": "Details of the advice in Welsh"
 		},
 		"status": {
 			"type": ["string", "null"],

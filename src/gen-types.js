@@ -14,26 +14,30 @@ export const typesPath = path.join(__dirname, 'schemas.d.ts');
  */
 async function run() {
     const s = await loadAllSchemas();
-    
+
     let types = '';
     let first = true;
 
-    for (const schema of Object.values(s.schemas)) {
+    for (const schemaName of Object.keys(s.schemas).sort()) {
+        const schema = s.schemas[schemaName]
         types += await compile(schema, schema['$id'], options(first));
         types += '\n';
         first = false;
     }
-    for (const schema of Object.values(s.commands)) {
+
+    for (const commandName of Object.keys(s.commands).sort()) {
+        const schema = s.commands[commandName];
         types += await compile(schema, schema['$id'], options(first));
         types += '\n';
         first = false;
     }
+
     await fs.writeFile(typesPath, types);
 }
 
 /**
- * 
- * @param {boolean} first 
+ *
+ * @param {boolean} first
  * @returns {Partial<import('json-schema-to-typescript').Options>}
  */
 function options(first) {

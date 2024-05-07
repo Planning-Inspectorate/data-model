@@ -6,60 +6,12 @@
  */
 
 /**
- * Examination Timetable for an NSIP Project
+ * Employee schema
  */
-export interface ExaminationTimetable {
-  /**
-   * Unique string reference of the associated Case
-   */
-  caseReference: string;
-  events: Event[];
-  [k: string]: unknown;
-}
-export interface Event {
-  /**
-   * Event Identifier
-   */
-  eventId: number;
-  /**
-   * Compulsory Acquisition Hearing/Deadline/Issue Specific Hearing etc
-   */
-  type:
-    | 'Accompanied Site Inspection'
-    | 'Compulsory Acquisition Hearing'
-    | 'Deadline'
-    | 'Deadline For Close Of Examination'
-    | 'Issued By'
-    | 'Issue Specific Hearing'
-    | 'Open Floor Hearing'
-    | 'Other Meeting'
-    | 'Preliminary Meeting'
-    | 'Procedural Deadline (Pre-Examination)'
-    | 'Procedural Decision'
-    | 'Publication Of';
-  /**
-   * Title Of Examination Timetable Event
-   */
-  eventTitle: string;
-  /**
-   * Title Of Examination Timetable Event In Welsh
-   */
-  eventTitleWelsh?: string | null;
-  description: string;
-  descriptionWelsh?: string | null;
-  /**
-   * Optional start date for event window
-   */
-  eventDeadlineStartDate?: string | null;
-  /**
-   * Event Date = effective deadline (end) date
-   */
-  date: string;
-  eventLineItems: LineItem[];
-  [k: string]: unknown;
-}
-export interface LineItem {
-  description: string;
+export interface Employee {
+  id: string;
+  firstName: string;
+  lastName: string;
   [k: string]: unknown;
 }
 
@@ -214,6 +166,68 @@ export interface NSIPDocument {
    * The GUID of the transcript document (if one was provided).
    */
   transcriptId: string | null;
+  [k: string]: unknown;
+}
+
+/**
+ * Examination Timetable for an NSIP Project
+ */
+export interface ExaminationTimetable {
+  /**
+   * Unique string reference of the associated Case
+   */
+  caseReference: string;
+  /**
+   * whether the Examination Timetable has been published or not
+   */
+  published?: boolean | null;
+  events: Event[];
+  [k: string]: unknown;
+}
+export interface Event {
+  /**
+   * Event Identifier
+   */
+  eventId: number;
+  /**
+   * Compulsory Acquisition Hearing/Deadline/Issue Specific Hearing etc
+   */
+  type:
+    | 'Accompanied Site Inspection'
+    | 'Compulsory Acquisition Hearing'
+    | 'Deadline'
+    | 'Deadline For Close Of Examination'
+    | 'Issued By'
+    | 'Issue Specific Hearing'
+    | 'Open Floor Hearing'
+    | 'Other Meeting'
+    | 'Preliminary Meeting'
+    | 'Procedural Deadline (Pre-Examination)'
+    | 'Procedural Decision'
+    | 'Publication Of';
+  /**
+   * Title Of Examination Timetable Event
+   */
+  eventTitle: string;
+  /**
+   * Title Of Examination Timetable Event In Welsh
+   */
+  eventTitleWelsh?: string | null;
+  description: string;
+  descriptionWelsh?: string | null;
+  /**
+   * Optional start date for event window
+   */
+  eventDeadlineStartDate?: string | null;
+  /**
+   * Event Date = effective deadline (end) date
+   */
+  date: string;
+  eventLineItems: LineItem[];
+  [k: string]: unknown;
+}
+export interface LineItem {
+  description: string;
   [k: string]: unknown;
 }
 
@@ -800,13 +814,82 @@ export interface ServiceUser {
   [k: string]: unknown;
 }
 
+export type Name = string;
+
 /**
- * Employee schema
+ * Subset of Pins Data Model [Service User]
  */
-export interface Employee {
-  id: string;
-  firstName: string;
-  lastName: string;
+export interface InterestedParty {
+  id?: number;
+  interestedPartyNumber?: string;
+  firstName?: string;
+  lastName?: string;
+  under18?: boolean;
+  organisationName?: Name;
+  jobTitle?: string;
+  contactMethod?: 'email' | 'post';
+  email?: string;
+  phoneNumber?: string;
+  address?: Address;
+  [k: string]: unknown;
+}
+export interface Address {
+  addressLine1: string;
+  addressLine2?: string;
+  town: string;
+  postcode: string;
+  country?: string;
+}
+
+/**
+ * A command to deliver metadata about a new document submission added to a deadline
+ */
+export interface NewDeadlineSubmission {
+  /**
+   * The unique reference of the case
+   */
+  caseReference?: string;
+  /**
+   * The name of the FO user who made the submission
+   */
+  name: string;
+  /**
+   * The email address of the FO user who made the submission
+   */
+  email: string;
+  /**
+   * Was the submission made by an interested party on behalf of someone else?
+   */
+  interestedParty?: boolean;
+  /**
+   * Only necessary if `interestedParty` is true
+   */
+  interestedPartyReference?: string;
+  /**
+   * The name of the deadline which the submission was made against
+   */
+  deadline: string;
+  /**
+   * The name of the deadline line item the submission was made against
+   */
+  submissionType: string;
+  /**
+   * Does the submission contain sensitive data?
+   */
+  sensitiveData?: boolean;
+  lateSubmission?: boolean;
+  /**
+   * ID of the submission in the database
+   */
+  submissionId?: string;
+  /**
+   * The GUID of the blob in storage
+   */
+  blobGuid: string;
+  /**
+   * The file name of the document in blob storage
+   */
+  documentName: string;
   [k: string]: unknown;
 }
 
@@ -865,58 +948,6 @@ export interface NsipSubscription {
    */
   endDate: string | null;
   language: 'English' | 'Welsh' | null;
-  [k: string]: unknown;
-}
-
-/**
- * A command to deliver metadata about a new document submission added to a deadline
- */
-export interface NewDeadlineSubmission {
-  /**
-   * The unique reference of the case
-   */
-  caseReference?: string;
-  /**
-   * The name of the FO user who made the submission
-   */
-  name: string;
-  /**
-   * The email address of the FO user who made the submission
-   */
-  email: string;
-  /**
-   * Was the submission made by an interested party on behalf of someone else?
-   */
-  interestedParty?: boolean;
-  /**
-   * Only necessary if `interestedParty` is true
-   */
-  interestedPartyReference?: string;
-  /**
-   * The name of the deadline which the submission was made against
-   */
-  deadline: string;
-  /**
-   * The name of the deadline line item the submission was made against
-   */
-  submissionType: string;
-  /**
-   * Does the submission contain sensitive data?
-   */
-  sensitiveData?: boolean;
-  lateSubmission?: boolean;
-  /**
-   * ID of the submission in the database
-   */
-  submissionId?: string;
-  /**
-   * The GUID of the blob in storage
-   */
-  blobGuid: string;
-  /**
-   * The file name of the document in blob storage
-   */
-  documentName: string;
   [k: string]: unknown;
 }
 
@@ -983,32 +1014,5 @@ export interface InterestedParty1 {
   phoneNumber?: string;
   address?: Address;
   [k: string]: unknown;
-}
-
-export type Name = string;
-
-/**
- * Subset of Pins Data Model [Service User]
- */
-export interface InterestedParty {
-  id?: number;
-  interestedPartyNumber?: string;
-  firstName?: string;
-  lastName?: string;
-  under18?: boolean;
-  organisationName?: Name;
-  jobTitle?: string;
-  contactMethod?: 'email' | 'post';
-  email?: string;
-  phoneNumber?: string;
-  address?: Address;
-  [k: string]: unknown;
-}
-export interface Address {
-  addressLine1: string;
-  addressLine2?: string;
-  town: string;
-  postcode: string;
-  country?: string;
 }
 

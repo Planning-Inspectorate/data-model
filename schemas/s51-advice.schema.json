@@ -49,6 +49,18 @@
 			"type": ["string", "null"],
 			"description": "Title of the advice in Welsh"
 		},
+		"enquirerFirstName": {
+			"type": ["string", "null"],
+			"description": "Enquirer's First name"
+		},
+		"enquirerLastName": {
+			"type": ["string", "null"],
+			"description": "Enquirer's last name"
+		},
+		"enquirerOrganisation": {
+			"type": ["string", "null"],
+			"description": "Enquirer's organisation name"
+		},
 		"from": {
 			"type": ["string", "null"],
 			"description": "Who the enquiry is from"

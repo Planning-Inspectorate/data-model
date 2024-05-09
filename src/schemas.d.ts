@@ -674,6 +674,18 @@ export interface S51Advice {
    */
   titleWelsh?: string | null;
   /**
+   * Enquirer's First name
+   */
+  enquirerFirstName?: string | null;
+  /**
+   * Enquirer's last name
+   */
+  enquirerLastName?: string | null;
+  /**
+   * Enquirer's organisation name
+   */
+  enquirerOrganisation?: string | null;
+  /**
    * Who the enquiry is from
    */
   from: string | null;

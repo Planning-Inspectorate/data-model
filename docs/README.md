@@ -2,6 +2,8 @@
 
 ## Top-level Schemas
 
+*   [Appeal Document](./appeal-document.md "Schema defining the metadata for appeal documents") – `appeal-document.schema.json`
+
 *   [Employee](./employee.md "Employee schema") – `employee.schema.json`
 
 *   [Examination Timetable](./nsip-exam-timetable.md "Examination Timetable for an NSIP Project") – `nsip-exam-timetable.schema.json`

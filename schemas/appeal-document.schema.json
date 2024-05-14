@@ -112,6 +112,12 @@
       "description": "The date the document was received",
       "$comment": "This is a manually entered date to indicate documents exchanged manually"
     },
+    "datePublished": {
+      "type": ["string", "null"],
+      "format": "date-time",
+      "examples": ["2023-07-27T20:30:00.000Z"],
+      "description": "The date the document was published"
+    },
     "lastModified": {
       "type": ["string", "null"],
       "format": "date-time",
@@ -143,11 +149,6 @@
       "enum": ["not_redacted", "redacted", "no_redaction_required", null],
       "description": "Indicates the redaction status for the document"
     },
-    "publishedStatus": {
-      "type": ["boolean"],
-      "description": "Indicates if a document can be shared with third-parties",
-      "$comment": "Consumers should expose documents that are published, and have a suitable redaction status"
-    },
     "documentType": {
       "type": ["string", "null"],
       "enum": [
@@ -167,7 +168,6 @@
         "lpaCostsApplication",
         "lpaCostsCorrespondence",
         "lpaCostsWithdrawal",
-        "lpaStatementDocuments",
         "otherPartyRepresentations",
         "planningOfficerReport",
         "pressAdvert",

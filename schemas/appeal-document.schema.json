@@ -1,0 +1,226 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "appeal-document.schema.json",
+  "title": "Appeal Document",
+  "description": "Schema defining the metadata for appeal documents",
+  "type": "object",
+  "additionalProperties": true,
+  "required": [
+    "documentId",
+    "caseId",
+    "caseReference",
+    "version",
+    "filename",
+    "originalFilename",
+    "size",
+    "mime",
+    "documentURI",
+    "publishedDocumentURI",
+    "virusCheckStatus",
+    "fileMD5",
+    "dateCreated",
+    "dateReceived",
+    "lastModified",
+    "caseType",
+    "redactedStatus",
+    "publishedStatus",
+    "documentType",
+    "sourceSystem",
+    "origin",
+    "owner",
+    "author",
+    "description",
+    "caseStage",
+    "horizonFolderId"
+  ],
+  "properties": {
+    "documentId": {
+      "type": "string",
+      "examples": ["4547fec8-16b2-47bb-836d-4d0baac04079"],
+      "description": "The unique identifier for the document"
+    },
+    "caseId": {
+      "type": ["integer", "null"],
+      "examples": [1200],
+      "description": "Internal case identifier"
+    },
+    "caseReference": {
+      "type": "string",
+      "examples": ["7002471"],
+      "description": "External case identifier"
+    },
+    "version": {
+      "type": "integer",
+      "examples": [1],
+      "description": "A document can have multiple versions, and this indicates the latest version"
+    },
+    "filename": {
+      "type": "string",
+      "examples": ["filename.pdf"],
+      "description": "Current stored name of the document"
+    },
+    "originalFilename": {
+      "type": "string",
+      "examples": ["original_filename.pdf"],
+      "description": "Original name of document"
+    },
+    "size": {
+      "type": "integer",
+      "examples": [23452],
+      "description": "The file size, in bytes"
+    },
+    "mime": {
+      "type": ["string"],
+      "examples": ["application/pdf"],
+      "description": "The mime type for the current version of the file"
+    },
+    "documentURI": {
+      "type": "string",
+      "examples": [
+        "https://custom-domain.gov.uk/container-name/appeal/7002471/4547fec8-16b2-47bb-836d-4d0baac04079/v1/filename.pdf"
+      ],
+      "description": "The internal location of the document",
+      "$comment": "This property contains blob storage info (domain, container), caseReference, version and filename"
+    },
+    "publishedDocumentURI": {
+      "type": ["string", "null"],
+      "examples": [
+        "https://custom-domain.gov.uk/container-name/appeal/7002471/4547fec8-16b2-47bb-836d-4d0baac04079/v1/filename.pdf"
+      ],
+      "description": "The location of the published document, will be null if published status is false"
+    },
+    "virusCheckStatus": {
+      "type": ["string", "null"],
+      "enum": ["not_scanned", "scanned", "affected", null],
+      "description": "Indicates the virus check status for the current document"
+    },
+    "fileMD5": {
+      "type": ["string", "null"],
+      "examples": ["b1946ac92492d2347c6235b4d2611184"],
+      "description": "A MD5 hash to check the validity of the file"
+    },
+    "dateCreated": {
+      "type": "string",
+      "format": "date-time",
+      "examples": ["2023-07-27T20:30:00.000Z"],
+      "description": "The creation date for the document"
+    },
+    "dateReceived": {
+      "type": ["string", "null"],
+      "format": "date-time",
+      "examples": ["2023-07-27T20:30:00.000Z"],
+      "description": "The date the document was received",
+      "$comment": "This is a manually entered date to indicate documents exchanged manually"
+    },
+    "datePublished": {
+      "type": ["string", "null"],
+      "format": "date-time",
+      "examples": ["2023-07-27T20:30:00.000Z"],
+      "description": "The date the document was published"
+    },
+    "lastModified": {
+      "type": ["string", "null"],
+      "format": "date-time",
+      "examples": ["2023-07-27T20:30:00.000Z"],
+      "description": "The last update date for the document"
+    },
+    "caseType": {
+      "type": ["string", "null"],
+      "enum": [
+        "C",
+        "D",
+        "F",
+        "G",
+        "H",
+        "L",
+        "Q",
+        "S",
+        "V",
+        "W",
+        "X",
+        "Y",
+        "Z",
+        null
+      ],
+      "description": "The internal code for an appeal type, e.g. Householder (D)"
+    },
+    "redactedStatus": {
+      "type": ["string", "null"],
+      "enum": ["not_redacted", "redacted", "no_redaction_required", null],
+      "description": "Indicates the redaction status for the document"
+    },
+    "documentType": {
+      "type": ["string", "null"],
+      "enum": [
+        "appellantCaseCorrespondence",
+        "appellantCaseWithdrawalLetter",
+        "appellantCostsApplication",
+        "appellantCostsCorrespondence",
+        "appellantCostsWithdrawal",
+        "appellantStatement",
+        "applicationDecisionLetter",
+        "changedDescription",
+        "originalApplicationForm",
+        "whoNotified",
+        "conservationMap",
+        "lettersNeighbours",
+        "lpaCaseCorrespondence",
+        "lpaCostsApplication",
+        "lpaCostsCorrespondence",
+        "lpaCostsWithdrawal",
+        "otherPartyRepresentations",
+        "planningOfficerReport",
+        "pressAdvert",
+        "siteNotice",
+        "costsDecisionLetter",
+        "caseDecisionLetter",
+        "crossTeamCorrespondence",
+        "inspectorCorrespondence",
+        null
+      ],
+      "description": "The type of document, used for exchange, migrations and consumption from the appeal back-office system"
+    },
+    "sourceSystem": {
+      "type": ["string", "null"],
+      "enum": ["back-office-appeals", "horizon", "acp", "sharepoint", null],
+      "description": "The system mastering the metadata for the current document"
+    },
+    "origin": {
+      "type": ["string", "null"],
+      "enum": ["pins", "citizen", "lpa", "ogd", null],
+      "description": "Indicates where the documents originates from"
+    },
+    "owner": {
+      "type": ["string", "null"],
+      "description": "Owner of the current document"
+    },
+    "author": {
+      "type": ["string", "null"],
+      "description": "Name of person who authored document"
+    },
+    "description": {
+      "type": ["string", "null"],
+      "description": "A custom description for the document"
+    },
+    "caseStage": {
+      "type": ["string", "null"],
+      "enum": [
+        "appellant-case",
+        "lpa-questionnaire",
+        "statements",
+        "third-party-comments",
+        "final-comments",
+        "appeal-decision",
+        "costs",
+        null
+      ],
+      "description": "The stage in the appeal process that has created the document",
+      "$comment": "This could be useful to reduce the number of document types, allowing the same type to be reused across stages"
+    },
+    "horizonFolderId": {
+      "type": ["string", "null"],
+      "description": "The folder ID containing the document in Horizon",
+      "$comment": "Used for legacy / migrations"
+    }
+  }
+}

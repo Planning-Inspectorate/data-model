@@ -20,7 +20,7 @@
 | [fileMD5](#filemd5)                           | `string`  | Required | can be null    | [Appeal Document](appeal-document-properties-filemd5.md "appeal-document.schema.json#/properties/fileMD5")                           |
 | [dateCreated](#datecreated)                   | `string`  | Required | cannot be null | [Appeal Document](appeal-document-properties-datecreated.md "appeal-document.schema.json#/properties/dateCreated")                   |
 | [dateReceived](#datereceived)                 | `string`  | Required | can be null    | [Appeal Document](appeal-document-properties-datereceived.md "appeal-document.schema.json#/properties/dateReceived")                 |
-| [datePublished](#datepublished)               | `string`  | Optional | can be null    | [Appeal Document](appeal-document-properties-datepublished.md "appeal-document.schema.json#/properties/datePublished")               |
+| [datePublished](#datepublished)               | `string`  | Required | can be null    | [Appeal Document](appeal-document-properties-datepublished.md "appeal-document.schema.json#/properties/datePublished")               |
 | [lastModified](#lastmodified)                 | `string`  | Required | can be null    | [Appeal Document](appeal-document-properties-lastmodified.md "appeal-document.schema.json#/properties/lastModified")                 |
 | [caseType](#casetype)                         | `string`  | Required | can be null    | [Appeal Document](appeal-document-properties-casetype.md "appeal-document.schema.json#/properties/caseType")                         |
 | [redactedStatus](#redactedstatus)             | `string`  | Required | can be null    | [Appeal Document](appeal-document-properties-redactedstatus.md "appeal-document.schema.json#/properties/redactedStatus")             |
@@ -254,7 +254,7 @@ The internal location of the document
 
 ## publishedDocumentURI
 
-The location of the published document, will be null if published status is false
+The location of the published document, will be null if the datePublished is not set
 
 `publishedDocumentURI`
 
@@ -393,7 +393,7 @@ The date the document was published
 
 `datePublished`
 
-*   is optional
+*   is required
 
 *   Type: `string`
 

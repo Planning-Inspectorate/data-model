@@ -20,10 +20,10 @@
     "fileMD5",
     "dateCreated",
     "dateReceived",
+    "datePublished",
     "lastModified",
     "caseType",
     "redactedStatus",
-    "publishedStatus",
     "documentType",
     "sourceSystem",
     "origin",
@@ -87,7 +87,7 @@
       "examples": [
         "https://custom-domain.gov.uk/container-name/appeal/7002471/4547fec8-16b2-47bb-836d-4d0baac04079/v1/filename.pdf"
       ],
-      "description": "The location of the published document, will be null if published status is false"
+      "description": "The location of the published document, will be null if the datePublished is not set"
     },
     "virusCheckStatus": {
       "type": ["string", "null"],

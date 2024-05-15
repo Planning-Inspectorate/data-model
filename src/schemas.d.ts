@@ -46,7 +46,7 @@ export interface AppealDocument {
    */
   documentURI: string;
   /**
-   * The location of the published document, will be null if published status is false
+   * The location of the published document, will be null if the datePublished is not set
    */
   publishedDocumentURI: string | null;
   /**
@@ -68,7 +68,7 @@ export interface AppealDocument {
   /**
    * The date the document was published
    */
-  datePublished?: string | null;
+  datePublished: string | null;
   /**
    * The last update date for the document
    */

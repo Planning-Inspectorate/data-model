@@ -493,9 +493,9 @@
     },
     "neighbouringSiteAddresses": {
       "type": "array",
-      "additionalProperties": true,
       "items": {
         "type": "object",
+        "additionalProperties": true,
         "properties": {
           "neighbouringSiteAddressLine1": {
             "type": "string",

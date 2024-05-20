@@ -104,7 +104,6 @@ export interface AppealDocument {
     | 'otherPartyRepresentations'
     | 'planningOfficerReport'
     | 'pressAdvert'
-    | 'siteNotice'
     | 'costsDecisionLetter'
     | 'caseDecisionLetter'
     | 'crossTeamCorrespondence'
@@ -464,6 +463,7 @@ export interface AppealCase {
      * Provided information on site health and safety on this address
      */
     neighbouringSiteSafetyDetails: string | null;
+    [k: string]: unknown;
   }[];
   /**
    * A list of affected listed building IDs from Historic England

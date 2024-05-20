@@ -415,7 +415,7 @@ export interface AppealCase {
   /**
    * The methods used to notify relevant parties
    */
-  notificationMethod: ('notice' | 'letter' | 'advert') | null;
+  notificationMethod: string[];
   /**
    * Indicates if the appellant has informed other owners of the site
    */

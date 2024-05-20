@@ -68,7 +68,7 @@
 | [knowsOtherOwners](#knowsotherowners)                                           | `string`  | Required | cannot be null | [Appeal Case](appeal-properties-knowsotherowners.md "appeal.schema.json#/properties/knowsOtherOwners")                                           |
 | [knowsAllOwners](#knowsallowners)                                               | `string`  | Required | cannot be null | [Appeal Case](appeal-properties-knowsallowners.md "appeal.schema.json#/properties/knowsAllOwners")                                               |
 | [advertisedAppeal](#advertisedappeal)                                           | `boolean` | Required | cannot be null | [Appeal Case](appeal-properties-advertisedappeal.md "appeal.schema.json#/properties/advertisedAppeal")                                           |
-| [notificationMethod](#notificationmethod)                                       | `string`  | Required | can be null    | [Appeal Case](appeal-properties-notificationmethod.md "appeal.schema.json#/properties/notificationMethod")                                       |
+| [notificationMethod](#notificationmethod)                                       | `array`   | Required | cannot be null | [Appeal Case](appeal-properties-notificationmethod.md "appeal.schema.json#/properties/notificationMethod")                                       |
 | [ownersInformed](#ownersinformed)                                               | `boolean` | Required | cannot be null | [Appeal Case](appeal-properties-ownersinformed.md "appeal.schema.json#/properties/ownersInformed")                                               |
 | [originalDevelopmentDescription](#originaldevelopmentdescription)               | `string`  | Required | can be null    | [Appeal Case](appeal-properties-originaldevelopmentdescription.md "appeal.schema.json#/properties/originalDevelopmentDescription")               |
 | [changedDevelopmentDescription](#changeddevelopmentdescription)                 | `string`  | Required | can be null    | [Appeal Case](appeal-properties-changeddevelopmentdescription.md "appeal.schema.json#/properties/changedDevelopmentDescription")                 |
@@ -1697,25 +1697,15 @@ The methods used to notify relevant parties
 
 *   is required
 
-*   Type: `string`
+*   Type: `string[]`
 
-*   can be null
+*   cannot be null
 
 *   defined in: [Appeal Case](appeal-properties-notificationmethod.md "appeal.schema.json#/properties/notificationMethod")
 
 ### notificationMethod Type
 
-`string`
-
-### notificationMethod Constraints
-
-**enum**: the value of this property must be equal to one of the following values:
-
-| Value      | Explanation |
-| :--------- | :---------- |
-| `"notice"` |             |
-| `"letter"` |             |
-| `"advert"` |             |
+`string[]`
 
 ## ownersInformed
 

@@ -455,8 +455,11 @@
       "description": "Indicates if the appellant has advertised the appeal to the LPA decision"
     },
     "notificationMethod": {
-      "type": ["string", "null"],
-      "enum": ["notice", "letter", "advert"],
+      "type": "array",
+      "items": {
+        "type": "string",
+        "examples": ["notice", "letter", "advert"]
+      },
       "description": "The methods used to notify relevant parties"
     },
     "ownersInformed": {

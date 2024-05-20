@@ -463,7 +463,7 @@ export interface AppealCase {
     /**
      * Provided information on site health and safety on this address
      */
-    neighbouringSiteSafetyDetails: string;
+    neighbouringSiteSafetyDetails: string | null;
   }[];
   /**
    * A list of affected listed building IDs from Historic England

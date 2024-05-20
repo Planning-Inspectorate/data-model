@@ -519,7 +519,7 @@
             "description": "Postal code of the site address"
           },
           "neighbouringSiteSafetyDetails": {
-            "type": "string",
+            "type": ["string", "null"],
             "examples": ["Ongoing road works at this address"],
             "description": "Provided information on site health and safety on this address"
           }

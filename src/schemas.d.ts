@@ -150,6 +150,337 @@ export interface AppealDocument {
 }
 
 /**
+ * Schema defining the metadata for an appeal
+ */
+export interface AppealCase {
+  /**
+   * Internal case identifier
+   */
+  caseId: number | null;
+  /**
+   * External case identifier
+   */
+  caseReference: string;
+  /**
+   * The processing status for the appeal
+   */
+  caseStatus:
+    | 'assign_case_officer'
+    | 'validation'
+    | 'ready_to_start'
+    | 'lpa_questionnaire'
+    | 'issue_determination'
+    | 'complete'
+    | 'invalid'
+    | 'closed'
+    | 'withdrawn'
+    | 'awaiting_transfer'
+    | 'transferred';
+  /**
+   * The internal code for an appeal type, e.g. D (Householder)
+   */
+  caseTypeCode: 'C' | 'D' | 'F' | 'G' | 'H' | 'L' | 'Q' | 'S' | 'V' | 'W' | 'X' | 'Y' | 'Z';
+  /**
+   * The type of procedure for the appeal
+   */
+  caseProcedure: 'written' | 'hearing' | 'inquiry';
+  /**
+   * A unique identifier for the Local Planning Authority
+   */
+  lpaCode: string;
+  /**
+   * Unique identifier for the case officer assigned to the case
+   */
+  caseOfficerId: string | null;
+  /**
+   * Unique identifier for the inspector assigned to the case
+   */
+  inspectorId: string | null;
+  /**
+   * A level used for allocation purposes
+   */
+  allocationLevel: ('A' | 'B' | 'C' | 'D' | 'E' | 'F' | 'G' | 'H') | null;
+  /**
+   * A band used for allocation purposes
+   */
+  allocationBand: (1 | 2 | 3) | null;
+  /**
+   * A list of specialisms for allocation purposes
+   */
+  caseSpecialisms: string[];
+  /**
+   * The date the appeal was submitted by the appellant
+   */
+  caseSubmittedDate: string;
+  /**
+   * The date the appeal was received
+   */
+  caseCreatedDate: string;
+  /**
+   * The date the appeal was last updated in the back-office
+   */
+  caseUpdatedDate: string;
+  /**
+   * The date since when the appeal was considered valid
+   */
+  caseValidDate: string | null;
+  /**
+   * The date the appeal was validated in the back-office
+   */
+  caseValidationDate: string | null;
+  /**
+   * The outcome of the validation action
+   */
+  caseValidationOutcome: ('valid' | 'invalid' | 'incomplete') | null;
+  /**
+   * A list of reasons why the appeal is invalid
+   */
+  caseValidationInvalidDetails: string[];
+  /**
+   * A list of reasons why the appeal is incomplete
+   */
+  caseValidationIncompleteDetails: string[];
+  /**
+   * When the validation outcome is incomplete, an extension may be granted to provide missing information
+   */
+  caseExtensionDate: string | null;
+  /**
+   * A date indicating when the case was started, resulting in the creation of a timetable
+   */
+  caseStartedDate: string | null;
+  /**
+   * A date indicating when the case was published
+   */
+  casePublishedDate: string | null;
+  /**
+   * Indicates if the case is linked, and the type of relationship
+   */
+  linkedCaseStatus: 'lead' | 'child' | null;
+  /**
+   * The reference of the lead case, if the case is a child case
+   */
+  leadCaseReference: string | null;
+  /**
+   * If the case is started and has a timetable, a deadline for the LPA to provide a response
+   */
+  lpaQuestionnaireDueDate: string | null;
+  /**
+   * The date the LPA provided a response to the case
+   */
+  lpaQuestionnaireSubmittedDate: string | null;
+  /**
+   * The date the LPA response was receeived
+   */
+  lpaQuestionnaireCreateDate: string | null;
+  /**
+   * The date indicating when the questionnaire review was completed and the questionnaire published
+   */
+  lpaQuestionnairePublishedDate: string | null;
+  /**
+   * The outcome of the validation action
+   */
+  lpaQuestionnaireValidationOutcome: ('complete' | 'incomplete') | null;
+  /**
+   * The date the LPA response was validated
+   */
+  lpaQuestionnaireValidationOutcomeDate: string | null;
+  /**
+   * A list of reasons why the questionnaire is incomplete
+   */
+  lpaQuestionnaireValidationDetails: string[];
+  /**
+   * A statement provided by the LPA
+   */
+  lpaStatement: string | null;
+  /**
+   * The date the appeal was withdrawn by the appellant
+   */
+  caseWithdrawnDate: string | null;
+  /**
+   * The date the appeal was transferred to a new case of a different type
+   */
+  caseTransferredDate: string | null;
+  /**
+   * The date the appeal was closed and the appellant requested to resubmit
+   */
+  caseClosedDate: string | null;
+  /**
+   * The date of the appeal decision
+   */
+  caseDecisionOutcomeDate: string | null;
+  /**
+   * The date the appeal decision was published
+   */
+  caseDecisionPublishedDate: string | null;
+  /**
+   * The final outcome for the decision
+   */
+  caseDecisionOutcome: ('allowed' | 'split_decision' | 'dismissed' | 'invalid') | null;
+  /**
+   * The date the appeal decision letter
+   */
+  caseCompletedDate: string | null;
+  /**
+   * Indicates if an enforcement notice is the reason for the appeal
+   */
+  enforcementNotice: boolean;
+  /**
+   * The unique identifier of the LPA application
+   */
+  applicationReference: string;
+  /**
+   * The date of the original LPA application
+   */
+  applicationDate: string;
+  /**
+   * The outcome of the original LPA decision
+   */
+  applicationDecision: 'granted' | 'refused' | 'not_received';
+  /**
+   * The date of the original LPA decision
+   */
+  applicationDecisionDate: string;
+  /**
+   * The statutory deadline for submitting an appeal from the original LPA decision date
+   */
+  caseSubmissionDueDate: string;
+  /**
+   * First line of address for the appeal site
+   */
+  siteAddressLine1: string;
+  /**
+   * Second line of address for the appeal site
+   */
+  siteAddressLine2: string | null;
+  /**
+   * Town / City of the site address
+   */
+  siteAddressTown: string;
+  /**
+   * County of the site address
+   */
+  siteAddressCounty: string | null;
+  /**
+   * Postal code of the site address
+   */
+  siteAddressPostcode: string;
+  /**
+   * Provided information on site accessibility
+   */
+  siteAccessDetails: string | null;
+  /**
+   * Provided information on site health and safety
+   */
+  siteSafetyDetails: string | null;
+  /**
+   * The site area, in square meters
+   */
+  siteAreaSquareMetres: number | null;
+  /**
+   * The floor space, in square meters
+   */
+  floorSpaceSquareMetres: number | null;
+  /**
+   * Indicates if the LPA considers the appeal type appropriate
+   */
+  isCorrectAppealType: boolean;
+  /**
+   * Indicates if the site is in a green belt
+   */
+  isGreenBelt: boolean;
+  /**
+   * Indicates if the site is in a conservation area
+   */
+  inConservationArea: boolean;
+  /**
+   * Indicates if the appellant has complete ownership of the site
+   */
+  ownsAllLand: boolean;
+  /**
+   * Indicates if the appellant has partial ownership of the site
+   */
+  ownsSomeLand: boolean;
+  /**
+   * Indicates if the appellant knows other owners of the site
+   */
+  knowsOtherOwners: 'Yes' | 'No' | 'Some';
+  /**
+   * Indicates if the appellant knows all owners of the site
+   */
+  knowsAllOwners: 'Yes' | 'No' | 'Some';
+  /**
+   * Indicates if the appellant has advertised the appeal to the LPA decision
+   */
+  advertisedAppeal: boolean;
+  /**
+   * The methods used to notify relevant parties
+   */
+  notificationMethod: ('notice' | 'letter' | 'advert') | null;
+  /**
+   * Indicates if the appellant has informed other owners of the site
+   */
+  ownersInformed: boolean;
+  /**
+   * The original description of the development, as provided by the appellant
+   */
+  originalDevelopmentDescription: string | null;
+  /**
+   * The description of the development, if it was changed by the LPA
+   */
+  changedDevelopmentDescription: string | null;
+  /**
+   * New conditions details provided by the LPA
+   */
+  newConditionDetails: string | null;
+  /**
+   * A list of related case references known to the appellant and the LPA
+   */
+  nearbyCaseReferences: string[];
+  /**
+   * A list of neighbouring site addresses
+   */
+  neighbouringSiteAddresses: {
+    /**
+     * First line of address of the site
+     */
+    neighbouringSiteAddressLine1: string;
+    /**
+     * Second line of address of the site
+     */
+    neighbouringSiteAddressLine2: string | null;
+    /**
+     * Town / City of the site address
+     */
+    neighbouringSiteAddressTown: string;
+    /**
+     * County of the site address
+     */
+    neighbouringSiteAddressCounty: string | null;
+    /**
+     * Postal code of the site address
+     */
+    neighbouringSiteAddressPostcode: string;
+    /**
+     * Provided information on site health and safety on this address
+     */
+    neighbouringSiteSafetyDetails: string;
+  }[];
+  /**
+   * A list of affected listed building IDs from Historic England
+   */
+  affectedListedBuildingNumbers: string[];
+  /**
+   * Indicates if the appellant has applied for costs
+   */
+  appellantCostsAppliedFor: boolean;
+  /**
+   * Indicates if the appellant has applied for costs
+   */
+  lpaCostsAppliedFor: boolean;
+  [k: string]: unknown;
+}
+
+/**
  * Employee schema
  */
 export interface Employee {

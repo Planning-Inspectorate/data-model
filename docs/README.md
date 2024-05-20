@@ -2,6 +2,8 @@
 
 ## Top-level Schemas
 
+*   [Appeal Case](./appeal.md "Schema defining the metadata for an appeal") – `appeal.schema.json`
+
 *   [Appeal Document](./appeal-document.md "Schema defining the metadata for appeal documents") – `appeal-document.schema.json`
 
 *   [Employee](./employee.md "Employee schema") – `employee.schema.json`
@@ -28,11 +30,21 @@
 
 ### Objects
 
+*   [Untitled object in Appeal Case](./appeal-properties-neighbouringsiteaddresses-items.md) – `appeal.schema.json#/properties/neighbouringSiteAddresses/items`
+
 *   [Untitled object in Examination Timetable](./nsip-exam-timetable-defs-event.md) – `nsip-exam-timetable.schema.json#/$defs/event`
 
 *   [Untitled object in Examination Timetable](./nsip-exam-timetable-defs-line-item.md) – `nsip-exam-timetable.schema.json#/$defs/line-item`
 
 ### Arrays
+
+*   [Untitled array in Appeal Case](./appeal-properties-casespecialisms.md "A list of specialisms for allocation purposes") – `appeal.schema.json#/properties/caseSpecialisms`
+
+*   [Untitled array in Appeal Case](./appeal-properties-nearbycasereferences.md "A list of related case references known to the appellant and the LPA") – `appeal.schema.json#/properties/nearbyCaseReferences`
+
+*   [Untitled array in Appeal Case](./appeal-properties-neighbouringsiteaddresses.md "A list of neighbouring site addresses") – `appeal.schema.json#/properties/neighbouringSiteAddresses`
+
+*   [Untitled array in Appeal Case](./appeal-properties-affectedlistedbuildingnumbers.md "A list of affected listed building IDs from Historic England") – `appeal.schema.json#/properties/affectedListedBuildingNumbers`
 
 *   [Untitled array in Examination Timetable](./nsip-exam-timetable-properties-events.md) – `nsip-exam-timetable.schema.json#/properties/events`
 

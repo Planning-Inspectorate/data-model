@@ -1,0 +1,555 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "appeal.schema.json",
+  "title": "Appeal Case",
+  "description": "Schema defining the metadata for an appeal",
+  "$comment": "The current definition includes Householder (D) fields only",
+  "type": "object",
+  "additionalProperties": true,
+  "required": [
+    "caseId",
+    "caseReference",
+    "caseStatus",
+    "caseTypeCode",
+    "caseProcedure",
+    "lpaCode",
+    "caseOfficerId",
+    "inspectorId",
+    "allocationLevel",
+    "allocationBand",
+    "caseSpecialisms",
+    "caseSubmittedDate",
+    "caseCreatedDate",
+    "caseUpdatedDate",
+    "caseValidDate",
+    "caseValidationDate",
+    "caseValidationOutcome",
+    "caseValidationInvalidDetails",
+    "caseValidationIncompleteDetails",
+    "caseExtensionDate",
+    "caseStartedDate",
+    "casePublishedDate",
+    "linkedCaseStatus",
+    "leadCaseReference",
+    "lpaQuestionnaireDueDate",
+    "lpaQuestionnaireSubmittedDate",
+    "lpaQuestionnaireCreateDate",
+    "lpaQuestionnairePublishedDate",
+    "lpaQuestionnaireValidationOutcome",
+    "lpaQuestionnaireValidationOutcomeDate",
+    "lpaQuestionnaireValidationDetails",
+    "lpaStatement",
+    "caseWithdrawnDate",
+    "caseTransferredDate",
+    "caseClosedDate",
+    "caseDecisionOutcomeDate",
+    "caseDecisionPublishedDate",
+    "caseDecisionOutcome",
+    "caseCompletedDate",
+    "enforcementNotice",
+    "applicationReference",
+    "applicationDate",
+    "applicationDecision",
+    "applicationDecisionDate",
+    "caseSubmissionDueDate",
+    "siteAddressLine1",
+    "siteAddressLine2",
+    "siteAddressTown",
+    "siteAddressCounty",
+    "siteAddressPostcode",
+    "siteAccessDetails",
+    "siteSafetyDetails",
+    "siteAreaSquareMetres",
+    "floorSpaceSquareMetres",
+    "isCorrectAppealType",
+    "isGreenBelt",
+    "inConservationArea",
+    "ownsAllLand",
+    "ownsSomeLand",
+    "knowsOtherOwners",
+    "knowsAllOwners",
+    "advertisedAppeal",
+    "notificationMethod",
+    "ownersInformed",
+    "originalDevelopmentDescription",
+    "changedDevelopmentDescription",
+    "newConditionDetails",
+    "nearbyCaseReferences",
+    "neighbouringSiteAddresses",
+    "affectedListedBuildingNumbers",
+    "appellantCostsAppliedFor",
+    "lpaCostsAppliedFor"
+  ],
+  "properties": {
+    "caseId": {
+      "type": ["integer", "null"],
+      "examples": [1200],
+      "description": "Internal case identifier"
+    },
+    "caseReference": {
+      "type": "string",
+      "examples": ["7002471"],
+      "description": "External case identifier"
+    },
+    "caseStatus": {
+      "type": "string",
+      "enum": [
+        "assign_case_officer",
+        "validation",
+        "ready_to_start",
+        "lpa_questionnaire",
+        "issue_determination",
+        "complete",
+        "invalid",
+        "closed",
+        "withdrawn",
+        "awaiting_transfer",
+        "transferred"
+      ],
+      "description": "The processing status for the appeal"
+    },
+    "caseTypeCode": {
+      "type": "string",
+      "enum": ["C", "D", "F", "G", "H", "L", "Q", "S", "V", "W", "X", "Y", "Z"],
+      "description": "The internal code for an appeal type, e.g. D (Householder)"
+    },
+    "caseProcedure": {
+      "type": "string",
+      "enum": ["written", "hearing", "inquiry"],
+      "description": "The type of procedure for the appeal"
+    },
+    "lpaCode": {
+      "type": "string",
+      "examples": ["Q9999"],
+      "description": "A unique identifier for the Local Planning Authority",
+      "$comment": "Uses the internal PINS code identifying LPAs"
+    },
+    "caseOfficerId": {
+      "type": ["string", "null"],
+      "description": "Unique identifier for the case officer assigned to the case",
+      "$comment": "This is the user ID in Active Directory"
+    },
+    "inspectorId": {
+      "type": ["string", "null"],
+      "description": "Unique identifier for the inspector assigned to the case",
+      "$comment": "This is the user ID in Active Directory"
+    },
+    "allocationLevel": {
+      "type": ["string", "null"],
+      "enum": ["A", "B", "C", "D", "E", "F", "G", "H"],
+      "description": "A level used for allocation purposes"
+    },
+    "allocationBand": {
+      "type": ["number", "null"],
+      "enum": [1, 2, 3],
+      "description": "A band used for allocation purposes",
+      "$comment": "Linked to the level, e.g. 1[E,F,G,H], 2[C,D], 3[A,B]"
+    },
+    "caseSpecialisms": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "examples": [
+        "Access",
+        "Listed building and enforcement",
+        "Roads and traffics",
+        "Natural heritage",
+        "Schedule 1"
+      ],
+      "description": "A list of specialisms for allocation purposes"
+    },
+    "caseSubmittedDate": {
+      "type": "string",
+      "format": "date-time",
+      "examples": ["2023-07-27T20:30:00.000Z"],
+      "description": "The date the appeal was submitted by the appellant"
+    },
+    "caseCreatedDate": {
+      "type": "string",
+      "format": "date-time",
+      "examples": ["2023-07-27T20:30:00.000Z"],
+      "description": "The date the appeal was received"
+    },
+    "caseUpdatedDate": {
+      "type": "string",
+      "format": "date-time",
+      "examples": ["2023-07-27T20:30:00.000Z"],
+      "description": "The date the appeal was last updated in the back-office"
+    },
+    "caseValidDate": {
+      "type": ["string", "null"],
+      "format": "date-time",
+      "examples": ["2023-07-27T20:30:00.000Z"],
+      "description": "The date since when the appeal was considered valid"
+    },
+    "caseValidationDate": {
+      "type": ["string", "null"],
+      "format": "date-time",
+      "examples": ["2023-07-27T20:30:00.000Z"],
+      "description": "The date the appeal was validated in the back-office"
+    },
+    "caseValidationOutcome": {
+      "type": ["string", "null"],
+      "enum": ["valid", "invalid", "incomplete"],
+      "description": "The outcome of the validation action"
+    },
+    "caseValidationInvalidDetails": {
+      "type": ["array"],
+      "items": {
+        "type": "string",
+        "examples": [
+          "Appeal has not been submitted on time",
+          "The appellant doesn't have the right to appeal"
+        ]
+      },
+      "description": "A list of reasons why the appeal is invalid",
+      "$comment": "The list will contain items only if the caseValidationOutcome is invalid"
+    },
+    "caseValidationIncompleteDetails": {
+      "type": ["array"],
+      "items": {
+        "type": "string",
+        "examples": [
+          "Appellant name is not the same on the application form and appeal form",
+          "LPA's decision notice is missing"
+        ]
+      },
+      "description": "A list of reasons why the appeal is incomplete",
+      "$comment": "The list will contain items only if the caseValidationOutcome is incomplete"
+    },
+    "caseExtensionDate": {
+      "type": ["string", "null"],
+      "format": "date-time",
+      "examples": ["2023-07-27T20:30:00.000Z"],
+      "description": "When the validation outcome is incomplete, an extension may be granted to provide missing information"
+    },
+    "caseStartedDate": {
+      "type": ["string", "null"],
+      "format": "date-time",
+      "examples": ["2023-07-27T20:30:00.000Z"],
+      "description": "A date indicating when the case was started, resulting in the creation of a timetable"
+    },
+    "casePublishedDate": {
+      "type": ["string", "null"],
+      "format": "date-time",
+      "examples": ["2023-07-27T20:30:00.000Z"],
+      "description": "A date indicating when the case was published"
+    },
+    "linkedCaseStatus": {
+      "type": ["string", "null"],
+      "enum": ["lead", "child", null],
+      "description": "Indicates if the case is linked, and the type of relationship"
+    },
+    "leadCaseReference": {
+      "type": ["string", "null"],
+      "examples": ["7002471"],
+      "description": "The reference of the lead case, if the case is a child case"
+    },
+    "lpaQuestionnaireDueDate": {
+      "type": ["string", "null"],
+      "format": "date-time",
+      "examples": ["2023-07-27T20:30:00.000Z"],
+      "description": "If the case is started and has a timetable, a deadline for the LPA to provide a response"
+    },
+    "lpaQuestionnaireSubmittedDate": {
+      "type": ["string", "null"],
+      "format": "date-time",
+      "examples": ["2023-07-27T20:30:00.000Z"],
+      "description": "The date the LPA provided a response to the case"
+    },
+    "lpaQuestionnaireCreateDate": {
+      "type": ["string", "null"],
+      "format": "date-time",
+      "examples": ["2023-07-27T20:30:00.000Z"],
+      "description": "The date the LPA response was receeived"
+    },
+    "lpaQuestionnairePublishedDate": {
+      "type": ["string", "null"],
+      "format": "date-time",
+      "examples": ["2023-07-27T20:30:00.000Z"],
+      "description": "The date indicating when the questionnaire review was completed and the questionnaire published"
+    },
+    "lpaQuestionnaireValidationOutcome": {
+      "type": ["string", "null"],
+      "enum": ["complete", "incomplete"],
+      "description": "The outcome of the validation action"
+    },
+    "lpaQuestionnaireValidationOutcomeDate": {
+      "type": ["string", "null"],
+      "format": "date-time",
+      "examples": ["2023-07-27T20:30:00.000Z"],
+      "description": "The date the LPA response was validated"
+    },
+    "lpaQuestionnaireValidationDetails": {
+      "type": ["array"],
+      "items": {
+        "type": "string",
+        "examples": [
+          "Policies are missing",
+          "Other documents or information are missing"
+        ]
+      },
+      "description": "A list of reasons why the questionnaire is incomplete",
+      "$comment": "The list will contain items only if the lpaQuestionnaireValidationOutcome is incomplete"
+    },
+    "lpaStatement": {
+      "type": ["string", "null"],
+      "examples": ["We refused the application because of ..."],
+      "description": "A statement provided by the LPA"
+    },
+    "caseWithdrawnDate": {
+      "type": ["string", "null"],
+      "format": "date-time",
+      "examples": ["2023-07-27T20:30:00.000Z"],
+      "description": "The date the appeal was withdrawn by the appellant"
+    },
+    "caseTransferredDate": {
+      "type": ["string", "null"],
+      "format": "date-time",
+      "examples": ["2023-07-27T20:30:00.000Z"],
+      "description": "The date the appeal was transferred to a new case of a different type"
+    },
+    "caseClosedDate": {
+      "type": ["string", "null"],
+      "format": "date-time",
+      "examples": ["2023-07-27T20:30:00.000Z"],
+      "description": "The date the appeal was closed and the appellant requested to resubmit"
+    },
+    "caseDecisionOutcomeDate": {
+      "type": ["string", "null"],
+      "format": "date-time",
+      "examples": ["2023-07-27T20:30:00.000Z"],
+      "description": "The date of the appeal decision"
+    },
+    "caseDecisionPublishedDate": {
+      "type": ["string", "null"],
+      "format": "date-time",
+      "examples": ["2023-07-27T20:30:00.000Z"],
+      "description": "The date the appeal decision was published"
+    },
+    "caseDecisionOutcome": {
+      "type": ["string", "null"],
+      "enum": ["allowed", "split_decision", "dismissed", "invalid"],
+      "description": "The final outcome for the decision"
+    },
+    "caseCompletedDate": {
+      "type": ["string", "null"],
+      "format": "date-time",
+      "examples": ["2023-07-27T20:30:00.000Z"],
+      "description": "The date the appeal decision letter"
+    },
+    "enforcementNotice": {
+      "type": "boolean",
+      "description": "Indicates if an enforcement notice is the reason for the appeal"
+    },
+    "applicationReference": {
+      "type": "string",
+      "examples": ["43010/APP/1/290572"],
+      "description": "The unique identifier of the LPA application"
+    },
+    "applicationDate": {
+      "type": "string",
+      "format": "date-time",
+      "examples": ["2023-07-27T20:30:00.000Z"],
+      "description": "The date of the original LPA application"
+    },
+    "applicationDecision": {
+      "type": "string",
+      "enum": ["granted", "refused", "not_received"],
+      "description": "The outcome of the original LPA decision"
+    },
+    "applicationDecisionDate": {
+      "type": "string",
+      "format": "date-time",
+      "examples": ["2023-07-27T20:30:00.000Z"],
+      "description": "The date of the original LPA decision"
+    },
+    "caseSubmissionDueDate": {
+      "type": "string",
+      "format": "date-time",
+      "examples": ["2023-07-27T20:30:00.000Z"],
+      "description": "The statutory deadline for submitting an appeal from the original LPA decision date",
+      "$comment": "Calculated from the applicationDecisionDate"
+    },
+    "siteAddressLine1": {
+      "type": "string",
+      "examples": ["96 The Avenue"],
+      "description": "First line of address for the appeal site"
+    },
+    "siteAddressLine2": {
+      "type": ["string", "null"],
+      "description": "Second line of address for the appeal site"
+    },
+    "siteAddressTown": {
+      "type": "string",
+      "examples": ["Maidstone"],
+      "description": "Town / City of the site address"
+    },
+    "siteAddressCounty": {
+      "type": ["string", "null"],
+      "examples": ["Kent"],
+      "description": "County of the site address"
+    },
+    "siteAddressPostcode": {
+      "type": "string",
+      "examples": ["MD21 5XY"],
+      "description": "Postal code of the site address"
+    },
+    "siteAccessDetails": {
+      "type": ["string", "null"],
+      "examples": [
+        "The site is accessible through the small gate on the left of the property"
+      ],
+      "description": "Provided information on site accessibility"
+    },
+    "siteSafetyDetails": {
+      "type": ["string", "null"],
+      "examples": ["There is an aggressive dog in the property"],
+      "description": "Provided information on site health and safety"
+    },
+    "siteAreaSquareMetres": {
+      "type": ["number", "null"],
+      "multipleOf": 0.1,
+      "examples": [45.7],
+      "description": "The site area, in square meters"
+    },
+    "floorSpaceSquareMetres": {
+      "type": ["number", "null"],
+      "multipleOf": 0.1,
+      "examples": [3.5],
+      "description": "The floor space, in square meters"
+    },
+    "isCorrectAppealType": {
+      "type": "boolean",
+      "description": "Indicates if the LPA considers the appeal type appropriate"
+    },
+    "isGreenBelt": {
+      "type": "boolean",
+      "description": "Indicates if the site is in a green belt"
+    },
+    "inConservationArea": {
+      "type": "boolean",
+      "description": "Indicates if the site is in a conservation area"
+    },
+    "ownsAllLand": {
+      "type": "boolean",
+      "description": "Indicates if the appellant has complete ownership of the site"
+    },
+    "ownsSomeLand": {
+      "type": "boolean",
+      "description": "Indicates if the appellant has partial ownership of the site"
+    },
+    "knowsOtherOwners": {
+      "type": "string",
+      "enum": ["Yes", "No", "Some"],
+      "description": "Indicates if the appellant knows other owners of the site"
+    },
+    "knowsAllOwners": {
+      "type": "string",
+      "enum": ["Yes", "No", "Some"],
+      "description": "Indicates if the appellant knows all owners of the site"
+    },
+    "advertisedAppeal": {
+      "type": "boolean",
+      "description": "Indicates if the appellant has advertised the appeal to the LPA decision"
+    },
+    "notificationMethod": {
+      "type": ["string", "null"],
+      "enum": ["notice", "letter", "advert"],
+      "description": "The methods used to notify relevant parties"
+    },
+    "ownersInformed": {
+      "type": "boolean",
+      "description": "Indicates if the appellant has informed other owners of the site"
+    },
+    "originalDevelopmentDescription": {
+      "type": ["string", "null"],
+      "examples": ["Replacement of an existing gate to access the property"],
+      "description": "The original description of the development, as provided by the appellant"
+    },
+    "changedDevelopmentDescription": {
+      "type": ["string", "null"],
+      "examples": [
+        "Demolition of existing gate. Erection of a new taller gate"
+      ],
+      "description": "The description of the development, if it was changed by the LPA"
+    },
+    "newConditionDetails": {
+      "type": ["string", "null"],
+      "examples": ["Since the original application, a number of things have changed..."],
+      "description": "New conditions details provided by the LPA"
+    },
+    "nearbyCaseReferences": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "examples": ["6000456", "8004567"]
+      },
+      "description": "A list of related case references known to the appellant and the LPA"
+    },
+    "neighbouringSiteAddresses": {
+      "type": "array",
+      "additionalProperties": true,
+      "items": {
+        "type": "object",
+        "properties": {
+          "neighbouringSiteAddressLine1": {
+            "type": "string",
+            "examples": ["96 The Avenue"],
+            "description": "First line of address of the site"
+          },
+          "neighbouringSiteAddressLine2": {
+            "type": ["string", "null"],
+            "description": "Second line of address of the site"
+          },
+          "neighbouringSiteAddressTown": {
+            "type": "string",
+            "examples": ["Maidstone"],
+            "description": "Town / City of the site address"
+          },
+          "neighbouringSiteAddressCounty": {
+            "type": ["string", "null"],
+            "examples": ["Kent"],
+            "description": "County of the site address"
+          },
+          "neighbouringSiteAddressPostcode": {
+            "type": "string",
+            "examples": ["MD21 5XY"],
+            "description": "Postal code of the site address"
+          },
+          "neighbouringSiteSafetyDetails": {
+            "type": "string",
+            "examples": ["Ongoing road works at this address"],
+            "description": "Provided information on site health and safety on this address"
+          }
+        },
+        "required": [
+          "neighbouringSiteAddressLine1",
+          "neighbouringSiteAddressLine2",
+          "neighbouringSiteAddressTown",
+          "neighbouringSiteAddressCounty",
+          "neighbouringSiteAddressPostcode",
+          "neighbouringSiteSafetyDetails"
+        ]
+      },
+      "description": "A list of neighbouring site addresses"
+    },
+    "affectedListedBuildingNumbers": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "examples": ["10023", "17824"]
+      },
+      "description": "A list of affected listed building IDs from Historic England"
+    },
+    "appellantCostsAppliedFor": {
+      "type": "boolean",
+      "description": "Indicates if the appellant has applied for costs"
+    },
+    "lpaCostsAppliedFor": {
+      "type": "boolean",
+      "description": "Indicates if the appellant has applied for costs"
+    }
+  }
+}

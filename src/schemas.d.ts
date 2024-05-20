@@ -271,7 +271,7 @@ export interface AppealCase {
   /**
    * The date the LPA response was receeived
    */
-  lpaQuestionnaireCreateDate: string | null;
+  lpaQuestionnaireCreatedDate: string | null;
   /**
    * The date indicating when the questionnaire review was completed and the questionnaire published
    */

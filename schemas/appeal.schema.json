@@ -33,7 +33,7 @@
     "leadCaseReference",
     "lpaQuestionnaireDueDate",
     "lpaQuestionnaireSubmittedDate",
-    "lpaQuestionnaireCreateDate",
+    "lpaQuestionnaireCreatedDate",
     "lpaQuestionnairePublishedDate",
     "lpaQuestionnaireValidationOutcome",
     "lpaQuestionnaireValidationOutcomeDate",
@@ -127,12 +127,12 @@
     "caseOfficerId": {
       "type": ["string", "null"],
       "description": "Unique identifier for the case officer assigned to the case",
-      "$comment": "This is the user ID in Active Directory"
+      "$comment": "This is the user in Entra ID"
     },
     "inspectorId": {
       "type": ["string", "null"],
       "description": "Unique identifier for the inspector assigned to the case",
-      "$comment": "This is the user ID in Active Directory"
+      "$comment": "This is the user in Entra ID"
     },
     "allocationLevel": {
       "type": ["string", "null"],
@@ -258,7 +258,7 @@
       "examples": ["2023-07-27T20:30:00.000Z"],
       "description": "The date the LPA provided a response to the case"
     },
-    "lpaQuestionnaireCreateDate": {
+    "lpaQuestionnaireCreatedDate": {
       "type": ["string", "null"],
       "format": "date-time",
       "examples": ["2023-07-27T20:30:00.000Z"],

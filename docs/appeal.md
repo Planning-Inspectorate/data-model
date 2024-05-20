@@ -32,7 +32,7 @@
 | [leadCaseReference](#leadcasereference)                                         | `string`  | Required | can be null    | [Appeal Case](appeal-properties-leadcasereference.md "appeal.schema.json#/properties/leadCaseReference")                                         |
 | [lpaQuestionnaireDueDate](#lpaquestionnaireduedate)                             | `string`  | Required | can be null    | [Appeal Case](appeal-properties-lpaquestionnaireduedate.md "appeal.schema.json#/properties/lpaQuestionnaireDueDate")                             |
 | [lpaQuestionnaireSubmittedDate](#lpaquestionnairesubmitteddate)                 | `string`  | Required | can be null    | [Appeal Case](appeal-properties-lpaquestionnairesubmitteddate.md "appeal.schema.json#/properties/lpaQuestionnaireSubmittedDate")                 |
-| [lpaQuestionnaireCreateDate](#lpaquestionnairecreatedate)                       | `string`  | Required | can be null    | [Appeal Case](appeal-properties-lpaquestionnairecreatedate.md "appeal.schema.json#/properties/lpaQuestionnaireCreateDate")                       |
+| [lpaQuestionnaireCreatedDate](#lpaquestionnairecreateddate)                     | `string`  | Required | can be null    | [Appeal Case](appeal-properties-lpaquestionnairecreateddate.md "appeal.schema.json#/properties/lpaQuestionnaireCreatedDate")                     |
 | [lpaQuestionnairePublishedDate](#lpaquestionnairepublisheddate)                 | `string`  | Required | can be null    | [Appeal Case](appeal-properties-lpaquestionnairepublisheddate.md "appeal.schema.json#/properties/lpaQuestionnairePublishedDate")                 |
 | [lpaQuestionnaireValidationOutcome](#lpaquestionnairevalidationoutcome)         | `string`  | Required | can be null    | [Appeal Case](appeal-properties-lpaquestionnairevalidationoutcome.md "appeal.schema.json#/properties/lpaQuestionnaireValidationOutcome")         |
 | [lpaQuestionnaireValidationOutcomeDate](#lpaquestionnairevalidationoutcomedate) | `string`  | Required | can be null    | [Appeal Case](appeal-properties-lpaquestionnairevalidationoutcomedate.md "appeal.schema.json#/properties/lpaQuestionnaireValidationOutcomeDate") |
@@ -260,7 +260,7 @@ A unique identifier for the Local Planning Authority
 
 Unique identifier for the case officer assigned to the case
 
-> This is the user ID in Active Directory
+> This is the user in Entra ID
 
 `caseOfficerId`
 
@@ -280,7 +280,7 @@ Unique identifier for the case officer assigned to the case
 
 Unique identifier for the inspector assigned to the case
 
-> This is the user ID in Active Directory
+> This is the user in Entra ID
 
 `inspectorId`
 
@@ -799,11 +799,11 @@ The date the LPA provided a response to the case
 "2023-07-27T20:30:00.000Z"
 ```
 
-## lpaQuestionnaireCreateDate
+## lpaQuestionnaireCreatedDate
 
 The date the LPA response was receeived
 
-`lpaQuestionnaireCreateDate`
+`lpaQuestionnaireCreatedDate`
 
 *   is required
 
@@ -811,17 +811,17 @@ The date the LPA response was receeived
 
 *   can be null
 
-*   defined in: [Appeal Case](appeal-properties-lpaquestionnairecreatedate.md "appeal.schema.json#/properties/lpaQuestionnaireCreateDate")
+*   defined in: [Appeal Case](appeal-properties-lpaquestionnairecreateddate.md "appeal.schema.json#/properties/lpaQuestionnaireCreatedDate")
 
-### lpaQuestionnaireCreateDate Type
+### lpaQuestionnaireCreatedDate Type
 
 `string`
 
-### lpaQuestionnaireCreateDate Constraints
+### lpaQuestionnaireCreatedDate Constraints
 
 **date time**: the string must be a date time string, according to [RFC 3339, section 5.6](https://tools.ietf.org/html/rfc3339 "check the specification")
 
-### lpaQuestionnaireCreateDate Examples
+### lpaQuestionnaireCreatedDate Examples
 
 ```json
 "2023-07-27T20:30:00.000Z"

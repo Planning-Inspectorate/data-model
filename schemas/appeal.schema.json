@@ -340,7 +340,7 @@
       "description": "The date the appeal decision letter"
     },
     "enforcementNotice": {
-      "type": "boolean",
+      "type": ["boolean", "null"],
       "description": "Indicates if an enforcement notice is the reason for the appeal"
     },
     "applicationReference": {
@@ -429,19 +429,19 @@
       "description": "Indicates if the LPA considers the appeal type appropriate"
     },
     "isGreenBelt": {
-      "type": "boolean",
+      "type": ["boolean", "null"],
       "description": "Indicates if the site is in a green belt"
     },
     "inConservationArea": {
-      "type": "boolean",
+      "type": ["boolean", "null"],
       "description": "Indicates if the site is in a conservation area"
     },
     "ownsAllLand": {
-      "type": "boolean",
+      "type": ["boolean", "null"],
       "description": "Indicates if the appellant has complete ownership of the site"
     },
     "ownsSomeLand": {
-      "type": "boolean",
+      "type": ["boolean", "null"],
       "description": "Indicates if the appellant has partial ownership of the site"
     },
     "knowsOtherOwners": {
@@ -485,7 +485,7 @@
       "description": "New conditions details provided by the LPA"
     },
     "nearbyCaseReferences": {
-      "type": "array",
+      "type": ["array", "null"],
       "items": {
         "type": "string",
         "examples": ["6000456", "8004567"]
@@ -493,7 +493,7 @@
       "description": "A list of related case references known to the appellant and the LPA"
     },
     "neighbouringSiteAddresses": {
-      "type": "array",
+      "type": ["array", "null"],
       "items": {
         "type": "object",
         "additionalProperties": true,

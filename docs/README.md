@@ -38,10 +38,6 @@
 
 ### Arrays
 
-*   [Untitled array in Appeal Case](./appeal-properties-nearbycasereferences.md "A list of related case references known to the appellant and the LPA") – `appeal.schema.json#/properties/nearbyCaseReferences`
-
-*   [Untitled array in Appeal Case](./appeal-properties-neighbouringsiteaddresses.md "A list of neighbouring site addresses") – `appeal.schema.json#/properties/neighbouringSiteAddresses`
-
 *   [Untitled array in Examination Timetable](./nsip-exam-timetable-properties-events.md) – `nsip-exam-timetable.schema.json#/properties/events`
 
 *   [Untitled array in Examination Timetable](./nsip-exam-timetable-defs-event-properties-eventlineitems.md) – `nsip-exam-timetable.schema.json#/$defs/event/properties/eventLineItems`

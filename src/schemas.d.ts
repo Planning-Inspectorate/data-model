@@ -320,7 +320,7 @@ export interface AppealCase {
   /**
    * Indicates if an enforcement notice is the reason for the appeal
    */
-  enforcementNotice: boolean;
+  enforcementNotice: boolean | null;
   /**
    * The unique identifier of the LPA application
    */
@@ -384,19 +384,19 @@ export interface AppealCase {
   /**
    * Indicates if the site is in a green belt
    */
-  isGreenBelt: boolean;
+  isGreenBelt: boolean | null;
   /**
    * Indicates if the site is in a conservation area
    */
-  inConservationArea: boolean;
+  inConservationArea: boolean | null;
   /**
    * Indicates if the appellant has complete ownership of the site
    */
-  ownsAllLand: boolean;
+  ownsAllLand: boolean | null;
   /**
    * Indicates if the appellant has partial ownership of the site
    */
-  ownsSomeLand: boolean;
+  ownsSomeLand: boolean | null;
   /**
    * Indicates if the appellant knows other owners of the site
    */
@@ -432,41 +432,43 @@ export interface AppealCase {
   /**
    * A list of related case references known to the appellant and the LPA
    */
-  nearbyCaseReferences: string[];
+  nearbyCaseReferences: string[] | null;
   /**
    * A list of neighbouring site addresses
    */
-  neighbouringSiteAddresses: {
-    /**
-     * First line of address of the site
-     */
-    neighbouringSiteAddressLine1: string;
-    /**
-     * Second line of address of the site
-     */
-    neighbouringSiteAddressLine2: string | null;
-    /**
-     * Town / City of the site address
-     */
-    neighbouringSiteAddressTown: string;
-    /**
-     * County of the site address
-     */
-    neighbouringSiteAddressCounty: string | null;
-    /**
-     * Postal code of the site address
-     */
-    neighbouringSiteAddressPostcode: string;
-    /**
-     * Provided information on site accessibility on this address
-     */
-    neighbouringSiteAccessDetails: string | null;
-    /**
-     * Provided information on site health and safety on this address
-     */
-    neighbouringSiteSafetyDetails: string | null;
-    [k: string]: unknown;
-  }[];
+  neighbouringSiteAddresses:
+    | {
+        /**
+         * First line of address of the site
+         */
+        neighbouringSiteAddressLine1: string;
+        /**
+         * Second line of address of the site
+         */
+        neighbouringSiteAddressLine2: string | null;
+        /**
+         * Town / City of the site address
+         */
+        neighbouringSiteAddressTown: string;
+        /**
+         * County of the site address
+         */
+        neighbouringSiteAddressCounty: string | null;
+        /**
+         * Postal code of the site address
+         */
+        neighbouringSiteAddressPostcode: string;
+        /**
+         * Provided information on site accessibility on this address
+         */
+        neighbouringSiteAccessDetails: string | null;
+        /**
+         * Provided information on site health and safety on this address
+         */
+        neighbouringSiteSafetyDetails: string | null;
+        [k: string]: unknown;
+      }[]
+    | null;
   /**
    * A list of affected listed building IDs from Historic England
    */

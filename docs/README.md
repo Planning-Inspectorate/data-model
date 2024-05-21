@@ -38,15 +38,9 @@
 
 ### Arrays
 
-*   [Untitled array in Appeal Case](./appeal-properties-casespecialisms.md "A list of specialisms for allocation purposes") – `appeal.schema.json#/properties/caseSpecialisms`
-
-*   [Untitled array in Appeal Case](./appeal-properties-notificationmethod.md "The methods used to notify relevant parties") – `appeal.schema.json#/properties/notificationMethod`
-
 *   [Untitled array in Appeal Case](./appeal-properties-nearbycasereferences.md "A list of related case references known to the appellant and the LPA") – `appeal.schema.json#/properties/nearbyCaseReferences`
 
 *   [Untitled array in Appeal Case](./appeal-properties-neighbouringsiteaddresses.md "A list of neighbouring site addresses") – `appeal.schema.json#/properties/neighbouringSiteAddresses`
-
-*   [Untitled array in Appeal Case](./appeal-properties-affectedlistedbuildingnumbers.md "A list of affected listed building IDs from Historic England") – `appeal.schema.json#/properties/affectedListedBuildingNumbers`
 
 *   [Untitled array in Examination Timetable](./nsip-exam-timetable-properties-events.md) – `nsip-exam-timetable.schema.json#/properties/events`
 

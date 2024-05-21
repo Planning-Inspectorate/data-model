@@ -96,14 +96,12 @@ export interface AppealDocument {
     | 'originalApplicationForm'
     | 'whoNotified'
     | 'conservationMap'
-    | 'lettersNeighbours'
     | 'lpaCaseCorrespondence'
     | 'lpaCostsApplication'
     | 'lpaCostsCorrespondence'
     | 'lpaCostsWithdrawal'
     | 'otherPartyRepresentations'
     | 'planningOfficerReport'
-    | 'pressAdvert'
     | 'costsDecisionLetter'
     | 'caseDecisionLetter'
     | 'crossTeamCorrespondence'
@@ -206,7 +204,7 @@ export interface AppealCase {
   /**
    * A list of specialisms for allocation purposes
    */
-  caseSpecialisms: string[];
+  caseSpecialisms: string[] | null;
   /**
    * The date the appeal was submitted by the appellant
    */
@@ -230,15 +228,15 @@ export interface AppealCase {
   /**
    * The outcome of the validation action
    */
-  caseValidationOutcome: ('valid' | 'invalid' | 'incomplete') | null;
+  caseValidationOutcome: 'valid' | 'invalid' | 'incomplete' | null;
   /**
    * A list of reasons why the appeal is invalid
    */
-  caseValidationInvalidDetails: string[];
+  caseValidationInvalidDetails: string[] | null;
   /**
    * A list of reasons why the appeal is incomplete
    */
-  caseValidationIncompleteDetails: string[];
+  caseValidationIncompleteDetails: string[] | null;
   /**
    * When the validation outcome is incomplete, an extension may be granted to provide missing information
    */
@@ -278,7 +276,7 @@ export interface AppealCase {
   /**
    * The outcome of the validation action
    */
-  lpaQuestionnaireValidationOutcome: ('complete' | 'incomplete') | null;
+  lpaQuestionnaireValidationOutcome: 'complete' | 'incomplete' | null;
   /**
    * The date the LPA response was validated
    */
@@ -286,7 +284,7 @@ export interface AppealCase {
   /**
    * A list of reasons why the questionnaire is incomplete
    */
-  lpaQuestionnaireValidationDetails: string[];
+  lpaQuestionnaireValidationDetails: string[] | null;
   /**
    * A statement provided by the LPA
    */
@@ -314,7 +312,7 @@ export interface AppealCase {
   /**
    * The final outcome for the decision
    */
-  caseDecisionOutcome: ('allowed' | 'split_decision' | 'dismissed' | 'invalid') | null;
+  caseDecisionOutcome: 'allowed' | 'split_decision' | 'dismissed' | 'invalid' | null;
   /**
    * The date the appeal decision letter
    */
@@ -338,11 +336,11 @@ export interface AppealCase {
   /**
    * The date of the original LPA decision
    */
-  applicationDecisionDate: string;
+  applicationDecisionDate: string | null;
   /**
    * The statutory deadline for submitting an appeal from the original LPA decision date
    */
-  caseSubmissionDueDate: string;
+  caseSubmissionDueDate: string | null;
   /**
    * First line of address for the appeal site
    */
@@ -366,11 +364,11 @@ export interface AppealCase {
   /**
    * Provided information on site accessibility
    */
-  siteAccessDetails: string | null;
+  siteAccessDetails: string[] | null;
   /**
    * Provided information on site health and safety
    */
-  siteSafetyDetails: string | null;
+  siteSafetyDetails: string[] | null;
   /**
    * The site area, in square meters
    */
@@ -382,7 +380,7 @@ export interface AppealCase {
   /**
    * Indicates if the LPA considers the appeal type appropriate
    */
-  isCorrectAppealType: boolean;
+  isCorrectAppealType: boolean | null;
   /**
    * Indicates if the site is in a green belt
    */
@@ -402,31 +400,31 @@ export interface AppealCase {
   /**
    * Indicates if the appellant knows other owners of the site
    */
-  knowsOtherOwners: 'Yes' | 'No' | 'Some';
+  knowsOtherOwners: 'Yes' | 'No' | 'Some' | null;
   /**
    * Indicates if the appellant knows all owners of the site
    */
-  knowsAllOwners: 'Yes' | 'No' | 'Some';
+  knowsAllOwners: 'Yes' | 'No' | 'Some' | null;
   /**
    * Indicates if the appellant has advertised the appeal to the LPA decision
    */
-  advertisedAppeal: boolean;
+  advertisedAppeal: boolean | null;
   /**
    * The methods used to notify relevant parties
    */
-  notificationMethod: string[];
+  notificationMethod: string[] | null;
   /**
    * Indicates if the appellant has informed other owners of the site
    */
-  ownersInformed: boolean;
+  ownersInformed: boolean | null;
   /**
    * The original description of the development, as provided by the appellant
    */
   originalDevelopmentDescription: string | null;
   /**
-   * The description of the development, if it was changed by the LPA
+   * Indicates that the LPA has changed the development description
    */
-  changedDevelopmentDescription: string | null;
+  changedDevelopmentDescription: boolean | null;
   /**
    * New conditions details provided by the LPA
    */
@@ -460,6 +458,10 @@ export interface AppealCase {
      */
     neighbouringSiteAddressPostcode: string;
     /**
+     * Provided information on site accessibility on this address
+     */
+    neighbouringSiteAccessDetails: string | null;
+    /**
      * Provided information on site health and safety on this address
      */
     neighbouringSiteSafetyDetails: string | null;
@@ -468,7 +470,7 @@ export interface AppealCase {
   /**
    * A list of affected listed building IDs from Historic England
    */
-  affectedListedBuildingNumbers: string[];
+  affectedListedBuildingNumbers: string[] | null;
   /**
    * Indicates if the appellant has applied for costs
    */

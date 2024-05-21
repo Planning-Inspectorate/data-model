@@ -146,7 +146,7 @@
       "$comment": "Linked to the level, e.g. 1[E,F,G,H], 2[C,D], 3[A,B]"
     },
     "caseSpecialisms": {
-      "type": "array",
+      "type": ["array", "null"],
       "items": {
         "type": "string"
       },
@@ -191,11 +191,11 @@
     },
     "caseValidationOutcome": {
       "type": ["string", "null"],
-      "enum": ["valid", "invalid", "incomplete"],
+      "enum": ["valid", "invalid", "incomplete", null],
       "description": "The outcome of the validation action"
     },
     "caseValidationInvalidDetails": {
-      "type": ["array"],
+      "type": ["array", "null"],
       "items": {
         "type": "string",
         "examples": [
@@ -207,7 +207,7 @@
       "$comment": "The list will contain items only if the caseValidationOutcome is invalid"
     },
     "caseValidationIncompleteDetails": {
-      "type": ["array"],
+      "type": ["array", "null"],
       "items": {
         "type": "string",
         "examples": [
@@ -272,7 +272,7 @@
     },
     "lpaQuestionnaireValidationOutcome": {
       "type": ["string", "null"],
-      "enum": ["complete", "incomplete"],
+      "enum": ["complete", "incomplete", null],
       "description": "The outcome of the validation action"
     },
     "lpaQuestionnaireValidationOutcomeDate": {
@@ -282,7 +282,7 @@
       "description": "The date the LPA response was validated"
     },
     "lpaQuestionnaireValidationDetails": {
-      "type": ["array"],
+      "type": ["array", "null"],
       "items": {
         "type": "string",
         "examples": [
@@ -330,7 +330,7 @@
     },
     "caseDecisionOutcome": {
       "type": ["string", "null"],
-      "enum": ["allowed", "split_decision", "dismissed", "invalid"],
+      "enum": ["allowed", "split_decision", "dismissed", "invalid", null],
       "description": "The final outcome for the decision"
     },
     "caseCompletedDate": {
@@ -360,13 +360,13 @@
       "description": "The outcome of the original LPA decision"
     },
     "applicationDecisionDate": {
-      "type": "string",
+      "type": ["string", "null"],
       "format": "date-time",
       "examples": ["2023-07-27T20:30:00.000Z"],
       "description": "The date of the original LPA decision"
     },
     "caseSubmissionDueDate": {
-      "type": "string",
+      "type": ["string", "null"],
       "format": "date-time",
       "examples": ["2023-07-27T20:30:00.000Z"],
       "description": "The statutory deadline for submitting an appeal from the original LPA decision date",
@@ -397,15 +397,19 @@
       "description": "Postal code of the site address"
     },
     "siteAccessDetails": {
-      "type": ["string", "null"],
-      "examples": [
-        "The site is accessible through the small gate on the left of the property"
-      ],
+      "type": ["array", "null"],
+      "items": {
+        "type": "string",
+        "examples": ["The site is accessible through the small gate on the left of the property"]
+      },
       "description": "Provided information on site accessibility"
     },
     "siteSafetyDetails": {
-      "type": ["string", "null"],
-      "examples": ["There is an aggressive dog in the property"],
+      "type": ["array", "null"],
+      "items": {
+        "type": "string",
+        "examples": ["There is an aggressive dog in the property"]
+      },
       "description": "Provided information on site health and safety"
     },
     "siteAreaSquareMetres": {
@@ -421,7 +425,7 @@
       "description": "The floor space, in square meters"
     },
     "isCorrectAppealType": {
-      "type": "boolean",
+      "type": ["boolean", "null"],
       "description": "Indicates if the LPA considers the appeal type appropriate"
     },
     "isGreenBelt": {
@@ -441,21 +445,21 @@
       "description": "Indicates if the appellant has partial ownership of the site"
     },
     "knowsOtherOwners": {
-      "type": "string",
-      "enum": ["Yes", "No", "Some"],
+      "type": ["string", "null"],
+      "enum": ["Yes", "No", "Some", null],
       "description": "Indicates if the appellant knows other owners of the site"
     },
     "knowsAllOwners": {
-      "type": "string",
-      "enum": ["Yes", "No", "Some"],
+      "type": ["string", "null"],
+      "enum": ["Yes", "No", "Some", null],
       "description": "Indicates if the appellant knows all owners of the site"
     },
     "advertisedAppeal": {
-      "type": "boolean",
+      "type": ["boolean", "null"],
       "description": "Indicates if the appellant has advertised the appeal to the LPA decision"
     },
     "notificationMethod": {
-      "type": "array",
+      "type":["array", "null"],
       "items": {
         "type": "string",
         "examples": ["notice", "letter", "advert"]
@@ -463,7 +467,7 @@
       "description": "The methods used to notify relevant parties"
     },
     "ownersInformed": {
-      "type": "boolean",
+      "type": ["boolean", "null"],
       "description": "Indicates if the appellant has informed other owners of the site"
     },
     "originalDevelopmentDescription": {
@@ -472,11 +476,8 @@
       "description": "The original description of the development, as provided by the appellant"
     },
     "changedDevelopmentDescription": {
-      "type": ["string", "null"],
-      "examples": [
-        "Demolition of existing gate. Erection of a new taller gate"
-      ],
-      "description": "The description of the development, if it was changed by the LPA"
+      "type": ["boolean", "null"],
+      "description": "Indicates that the LPA has changed the development description"
     },
     "newConditionDetails": {
       "type": ["string", "null"],
@@ -521,6 +522,11 @@
             "examples": ["MD21 5XY"],
             "description": "Postal code of the site address"
           },
+          "neighbouringSiteAccessDetails": {
+            "type": ["string", "null"],
+            "examples": ["Ongoing road works at this address"],
+            "description": "Provided information on site accessibility on this address"
+          },
           "neighbouringSiteSafetyDetails": {
             "type": ["string", "null"],
             "examples": ["Ongoing road works at this address"],
@@ -533,13 +539,14 @@
           "neighbouringSiteAddressTown",
           "neighbouringSiteAddressCounty",
           "neighbouringSiteAddressPostcode",
+          "neighbouringSiteAccessDetails",
           "neighbouringSiteSafetyDetails"
         ]
       },
       "description": "A list of neighbouring site addresses"
     },
     "affectedListedBuildingNumbers": {
-      "type": "array",
+      "type": ["array", "null"],
       "items": {
         "type": "string",
         "examples": ["10023", "17824"]

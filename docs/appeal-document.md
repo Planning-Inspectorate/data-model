@@ -546,15 +546,12 @@ The type of document, used for exchange, migrations and consumption from the app
 | `"originalApplicationForm"`       |             |
 | `"whoNotified"`                   |             |
 | `"conservationMap"`               |             |
-| `"lettersNeighbours"`             |             |
 | `"lpaCaseCorrespondence"`         |             |
 | `"lpaCostsApplication"`           |             |
 | `"lpaCostsCorrespondence"`        |             |
 | `"lpaCostsWithdrawal"`            |             |
 | `"otherPartyRepresentations"`     |             |
 | `"planningOfficerReport"`         |             |
-| `"pressAdvert"`                   |             |
-| `"siteNotice"`                    |             |
 | `"costsDecisionLetter"`           |             |
 | `"caseDecisionLetter"`            |             |
 | `"crossTeamCorrespondence"`       |             |

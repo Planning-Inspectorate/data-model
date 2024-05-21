@@ -176,7 +176,7 @@ export interface AppealCase {
   /**
    * The internal code for an appeal type, e.g. D (Householder)
    */
-  caseTypeCode: 'C' | 'D' | 'F' | 'G' | 'H' | 'L' | 'Q' | 'S' | 'V' | 'W' | 'X' | 'Y' | 'Z';
+  caseType: 'C' | 'D' | 'F' | 'G' | 'H' | 'L' | 'Q' | 'S' | 'V' | 'W' | 'X' | 'Y' | 'Z';
   /**
    * The type of procedure for the appeal
    */

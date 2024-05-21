@@ -9,7 +9,7 @@
 | [caseId](#caseid)                                                               | `integer` | Required | can be null    | [Appeal Case](appeal-properties-caseid.md "appeal.schema.json#/properties/caseId")                                                               |
 | [caseReference](#casereference)                                                 | `string`  | Required | cannot be null | [Appeal Case](appeal-properties-casereference.md "appeal.schema.json#/properties/caseReference")                                                 |
 | [caseStatus](#casestatus)                                                       | `string`  | Required | cannot be null | [Appeal Case](appeal-properties-casestatus.md "appeal.schema.json#/properties/caseStatus")                                                       |
-| [caseTypeCode](#casetypecode)                                                   | `string`  | Required | cannot be null | [Appeal Case](appeal-properties-casetypecode.md "appeal.schema.json#/properties/caseTypeCode")                                                   |
+| [caseType](#casetype)                                                           | `string`  | Required | cannot be null | [Appeal Case](appeal-properties-casetype.md "appeal.schema.json#/properties/caseType")                                                           |
 | [caseProcedure](#caseprocedure)                                                 | `string`  | Required | cannot be null | [Appeal Case](appeal-properties-caseprocedure.md "appeal.schema.json#/properties/caseProcedure")                                                 |
 | [lpaCode](#lpacode)                                                             | `string`  | Required | cannot be null | [Appeal Case](appeal-properties-lpacode.md "appeal.schema.json#/properties/lpaCode")                                                             |
 | [caseOfficerId](#caseofficerid)                                                 | `string`  | Required | can be null    | [Appeal Case](appeal-properties-caseofficerid.md "appeal.schema.json#/properties/caseOfficerId")                                                 |
@@ -164,11 +164,11 @@ The processing status for the appeal
 | `"awaiting_transfer"`   |             |
 | `"transferred"`         |             |
 
-## caseTypeCode
+## caseType
 
 The internal code for an appeal type, e.g. D (Householder)
 
-`caseTypeCode`
+`caseType`
 
 *   is required
 
@@ -176,13 +176,13 @@ The internal code for an appeal type, e.g. D (Householder)
 
 *   cannot be null
 
-*   defined in: [Appeal Case](appeal-properties-casetypecode.md "appeal.schema.json#/properties/caseTypeCode")
+*   defined in: [Appeal Case](appeal-properties-casetype.md "appeal.schema.json#/properties/caseType")
 
-### caseTypeCode Type
+### caseType Type
 
 `string`
 
-### caseTypeCode Constraints
+### caseType Constraints
 
 **enum**: the value of this property must be equal to one of the following values:
 

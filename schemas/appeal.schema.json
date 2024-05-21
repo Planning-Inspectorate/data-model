@@ -10,7 +10,7 @@
     "caseId",
     "caseReference",
     "caseStatus",
-    "caseTypeCode",
+    "caseType",
     "caseProcedure",
     "lpaCode",
     "caseOfficerId",
@@ -108,7 +108,7 @@
       ],
       "description": "The processing status for the appeal"
     },
-    "caseTypeCode": {
+    "caseType": {
       "type": "string",
       "enum": ["C", "D", "F", "G", "H", "L", "Q", "S", "V", "W", "X", "Y", "Z"],
       "description": "The internal code for an appeal type, e.g. D (Householder)"

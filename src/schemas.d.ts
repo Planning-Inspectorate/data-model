@@ -474,11 +474,11 @@ export interface AppealCase {
   /**
    * Indicates if the appellant has applied for costs
    */
-  appellantCostsAppliedFor: boolean;
+  appellantCostsAppliedFor: boolean | null;
   /**
    * Indicates if the appellant has applied for costs
    */
-  lpaCostsAppliedFor: boolean;
+  lpaCostsAppliedFor: boolean | null;
   [k: string]: unknown;
 }
 

@@ -554,11 +554,11 @@
       "description": "A list of affected listed building IDs from Historic England"
     },
     "appellantCostsAppliedFor": {
-      "type": "boolean",
+      "type": ["boolean", "null"],
       "description": "Indicates if the appellant has applied for costs"
     },
     "lpaCostsAppliedFor": {
-      "type": "boolean",
+      "type": ["boolean", "null"],
       "description": "Indicates if the appellant has applied for costs"
     }
   }

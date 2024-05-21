@@ -76,8 +76,8 @@
 | [nearbyCaseReferences](#nearbycasereferences)                                   | `array`   | Required | cannot be null | [Appeal Case](appeal-properties-nearbycasereferences.md "appeal.schema.json#/properties/nearbyCaseReferences")                                   |
 | [neighbouringSiteAddresses](#neighbouringsiteaddresses)                         | `array`   | Required | cannot be null | [Appeal Case](appeal-properties-neighbouringsiteaddresses.md "appeal.schema.json#/properties/neighbouringSiteAddresses")                         |
 | [affectedListedBuildingNumbers](#affectedlistedbuildingnumbers)                 | `array`   | Required | can be null    | [Appeal Case](appeal-properties-affectedlistedbuildingnumbers.md "appeal.schema.json#/properties/affectedListedBuildingNumbers")                 |
-| [appellantCostsAppliedFor](#appellantcostsappliedfor)                           | `boolean` | Required | cannot be null | [Appeal Case](appeal-properties-appellantcostsappliedfor.md "appeal.schema.json#/properties/appellantCostsAppliedFor")                           |
-| [lpaCostsAppliedFor](#lpacostsappliedfor)                                       | `boolean` | Required | cannot be null | [Appeal Case](appeal-properties-lpacostsappliedfor.md "appeal.schema.json#/properties/lpaCostsAppliedFor")                                       |
+| [appellantCostsAppliedFor](#appellantcostsappliedfor)                           | `boolean` | Required | can be null    | [Appeal Case](appeal-properties-appellantcostsappliedfor.md "appeal.schema.json#/properties/appellantCostsAppliedFor")                           |
+| [lpaCostsAppliedFor](#lpacostsappliedfor)                                       | `boolean` | Required | can be null    | [Appeal Case](appeal-properties-lpacostsappliedfor.md "appeal.schema.json#/properties/lpaCostsAppliedFor")                                       |
 | Additional Properties                                                           | Any       | Optional | can be null    |                                                                                                                                                  |
 
 ## caseId
@@ -1848,7 +1848,7 @@ Indicates if the appellant has applied for costs
 
 *   Type: `boolean`
 
-*   cannot be null
+*   can be null
 
 *   defined in: [Appeal Case](appeal-properties-appellantcostsappliedfor.md "appeal.schema.json#/properties/appellantCostsAppliedFor")
 
@@ -1866,7 +1866,7 @@ Indicates if the appellant has applied for costs
 
 *   Type: `boolean`
 
-*   cannot be null
+*   can be null
 
 *   defined in: [Appeal Case](appeal-properties-lpacostsappliedfor.md "appeal.schema.json#/properties/lpaCostsAppliedFor")
 

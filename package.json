@@ -1,6 +1,6 @@
 {
   "name": "pins-data-model",
-  "version": "1.3.0",
+  "version": "1.4.0",
   "description": "JSON Schemas for the Planning Inspectorate's Data Model",
   "main": "src/index.js",
   "type": "module",

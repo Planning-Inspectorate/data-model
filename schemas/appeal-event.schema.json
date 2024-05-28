@@ -1,0 +1,123 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "appeal-event.schema.json",
+  "title": "Appeal Event",
+  "description": "Schema defining the metadata for appeal events, such as site visits, inquiries, hearings",
+  "type": "object",
+  "additionalProperties": true,
+  "required": [
+    "eventId",
+    "caseReference",
+    "eventType",
+    "eventName",
+    "eventStatus",
+    "isUrgent",
+    "eventPublished",
+    "eventStartDateTime",
+    "eventEndDateTime",
+    "notificationOfSiteVisit",
+    "addressLine1",
+    "addressLine2",
+    "addressTown",
+    "addressCounty",
+    "addressPostcode"
+  ],
+  "properties": {
+    "eventId": {
+      "type": "string",
+      "examples": ["7000000-1"],
+      "description": "The unique identifier for the event",
+      "$comment": "This is a composite key with the caseReference and an event counter"
+    },
+    "caseReference": {
+      "type": "string",
+      "examples": ["7002471"],
+      "description": "External case identifier"
+    },
+    "eventType": {
+      "type": "string",
+      "enum": [
+        "site_visit_access_required",
+        "site_visit_accompanied",
+        "site_visit_unaccompanied",
+        "hearing",
+        "hearing_virtual",
+        "inquiry",
+        "inquiry_virtual",
+        "in_house",
+        "pre_inquiry",
+        "pre_inquiry_virtual"
+      ],
+      "description": "The type of event"
+    },
+    "eventName": {
+      "type": ["string", "null"],
+      "examples": ["A site visit"],
+      "description": "An optional description / name for the event"
+    },
+    "eventStatus": {
+      "type": "string",
+      "enum": [
+        "withdrawn",
+        "in_abeyance",
+        "change_of_procedure",
+        "new_rescheduled",
+        "confirmed",
+        "link_to_enforcement",
+        "offered",
+        "postponed"
+      ],
+      "description": "Status of the event"
+    },
+    "isUrgent": {
+      "type": "boolean",
+      "description": "Indicates if the event is urgent"
+    },
+    "eventPublished": {
+      "type": ["boolean", "null"],
+      "description": "Indicates if the event has been published"
+    },
+    "eventStartDateTime": {
+      "type": "string",
+      "format": "date-time",
+      "examples": ["2023-07-27T20:30:00.000Z"],
+      "description": "Event start date and time"
+    },
+    "eventEndDateTime": {
+      "type": ["string", "null"],
+      "format": "date-time",
+      "examples": ["2023-07-27T20:30:00.000Z"],
+      "description": "Event end date and time"
+    },
+    "notificationOfSiteVisit": {
+      "type": ["string", "null"],
+      "format": "date-time",
+      "examples": ["2023-07-27T20:30:00.000Z"],
+      "description": "The date third-parties were informed of the site visit event"
+    },
+    "addressLine1": {
+      "type": "string",
+      "examples": ["96 The Avenue"],
+      "description": "First line of address for the event site"
+    },
+    "addressLine2": {
+      "type": ["string", "null"],
+      "description": "Second line of address for the event site"
+    },
+    "addressTown": {
+      "type": "string",
+      "examples": ["Maidstone"],
+      "description": "Town / City of the event address"
+    },
+    "addressCounty": {
+      "type": ["string", "null"],
+      "examples": ["Kent"],
+      "description": "County of the event address"
+    },
+    "addressPostcode": {
+      "type": "string",
+      "examples": ["MD21 5XY"],
+      "description": "Postal code of the event address"
+    }
+  }
+}

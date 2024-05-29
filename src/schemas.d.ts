@@ -147,6 +147,91 @@ export interface AppealDocument {
 }
 
 /**
+ * Schema defining the metadata for appeal events, such as site visits, inquiries, hearings
+ */
+export interface AppealEvent {
+  /**
+   * The unique identifier for the event
+   */
+  eventId: string;
+  /**
+   * External case identifier
+   */
+  caseReference: string;
+  /**
+   * The type of event
+   */
+  eventType:
+    | 'site_visit_access_required'
+    | 'site_visit_accompanied'
+    | 'site_visit_unaccompanied'
+    | 'hearing'
+    | 'hearing_virtual'
+    | 'inquiry'
+    | 'inquiry_virtual'
+    | 'in_house'
+    | 'pre_inquiry'
+    | 'pre_inquiry_virtual';
+  /**
+   * An optional description / name for the event
+   */
+  eventName: string | null;
+  /**
+   * Status of the event
+   */
+  eventStatus:
+    | 'withdrawn'
+    | 'in_abeyance'
+    | 'change_of_procedure'
+    | 'new_rescheduled'
+    | 'confirmed'
+    | 'link_to_enforcement'
+    | 'offered'
+    | 'postponed';
+  /**
+   * Indicates if the event is urgent
+   */
+  isUrgent: boolean;
+  /**
+   * Indicates if the event has been published
+   */
+  eventPublished: boolean | null;
+  /**
+   * Event start date and time
+   */
+  eventStartDateTime: string;
+  /**
+   * Event end date and time
+   */
+  eventEndDateTime: string | null;
+  /**
+   * The date third-parties were informed of the site visit event
+   */
+  notificationOfSiteVisit: string | null;
+  /**
+   * First line of address for the event site
+   */
+  addressLine1: string;
+  /**
+   * Second line of address for the event site
+   */
+  addressLine2: string | null;
+  /**
+   * Town / City of the event address
+   */
+  addressTown: string;
+  /**
+   * County of the event address
+   */
+  addressCounty: string | null;
+  /**
+   * Postal code of the event address
+   */
+  addressPostcode: string;
+  [k: string]: unknown;
+}
+
+/**
  * Schema defining the metadata for an appeal
  */
 export interface AppealCase {

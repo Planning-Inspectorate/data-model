@@ -6,6 +6,8 @@
 
 *   [Appeal Document](./appeal-document.md "Schema defining the metadata for appeal documents") – `appeal-document.schema.json`
 
+*   [Appeal Event](./appeal-event.md "Schema defining the metadata for appeal events, such as site visits, inquiries, hearings") – `appeal-event.schema.json`
+
 *   [Employee](./employee.md "Employee schema") – `employee.schema.json`
 
 *   [Examination Timetable](./nsip-exam-timetable.md "Examination Timetable for an NSIP Project") – `nsip-exam-timetable.schema.json`

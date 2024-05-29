@@ -1,0 +1,254 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "lpa-questionnaire.schema.json",
+  "title": "LPA Questionnaire Command",
+  "description": "Schema defining the data produced by the Front-Office when an LPA Questionnaire is submitted",
+  "$comment": "This is a combination of an LPA Questionnaire and Documents",
+  "type": "object",
+  "additionalProperties": true,
+  "required": ["casedata", "documents"],
+  "properties": {
+    "casedata": {
+      "type": "object",
+      "additionalProperties": true,
+      "properties": {
+        "caseReference": {
+          "type": "string",
+          "examples": ["7002471"],
+          "description": "External case identifier"
+        },
+        "lpaQuestionnaireSubmittedDate": {
+          "type": ["string", "null"],
+          "format": "date-time",
+          "examples": ["2023-07-27T20:30:00.000Z"],
+          "description": "The date the LPA provided a response to the case"
+        },
+        "lpaStatement": {
+          "type": ["string", "null"],
+          "examples": ["We refused the application because of ..."],
+          "description": "A statement provided by the LPA"
+        },
+        "siteAccessDetails": {
+          "type": ["array", "null"],
+          "items": {
+            "type": "string",
+            "examples": [
+              "The site is accessible through the small gate on the left of the property"
+            ]
+          },
+          "description": "Provided information on site accessibility"
+        },
+        "siteSafetyDetails": {
+          "type": ["array", "null"],
+          "items": {
+            "type": "string",
+            "examples": ["There is an aggressive dog in the property"]
+          },
+          "description": "Provided information on site health and safety"
+        },
+        "isCorrectAppealType": {
+          "type": ["boolean", "null"],
+          "description": "Indicates if the LPA considers the appeal type appropriate"
+        },
+        "isGreenBelt": {
+          "type": ["boolean", "null"],
+          "description": "Indicates if the site is in a green belt"
+        },
+        "inConservationArea": {
+          "type": ["boolean", "null"],
+          "description": "Indicates if the site is in a conservation area"
+        },
+        "newConditionDetails": {
+          "type": ["string", "null"],
+          "examples": [
+            "Since the original application, a number of things have changed..."
+          ],
+          "description": "New conditions details provided by the LPA"
+        },
+        "notificationMethod": {
+          "type": ["array", "null"],
+          "items": {
+            "type": "string",
+            "examples": ["notice", "letter", "advert"]
+          },
+          "description": "The methods used to notify relevant parties"
+        },
+        "nearbyCaseReferences": {
+          "type": ["array", "null"],
+          "items": {
+            "type": "string",
+            "examples": ["6000456", "8004567"]
+          },
+          "description": "A list of related case references known to the appellant and the LPA"
+        },
+        "neighbouringSiteAddresses": {
+          "type": ["array", "null"],
+          "items": {
+            "type": "object",
+            "additionalProperties": true,
+            "properties": {
+              "neighbouringSiteAddressLine1": {
+                "type": "string",
+                "examples": ["96 The Avenue"],
+                "description": "First line of address of the site"
+              },
+              "neighbouringSiteAddressLine2": {
+                "type": ["string", "null"],
+                "description": "Second line of address of the site"
+              },
+              "neighbouringSiteAddressTown": {
+                "type": "string",
+                "examples": ["Maidstone"],
+                "description": "Town / City of the site address"
+              },
+              "neighbouringSiteAddressCounty": {
+                "type": ["string", "null"],
+                "examples": ["Kent"],
+                "description": "County of the site address"
+              },
+              "neighbouringSiteAddressPostcode": {
+                "type": "string",
+                "examples": ["MD21 5XY"],
+                "description": "Postal code of the site address"
+              },
+              "neighbouringSiteAccessDetails": {
+                "type": ["string", "null"],
+                "examples": ["Ongoing road works at this address"],
+                "description": "Provided information on site accessibility on this address"
+              },
+              "neighbouringSiteSafetyDetails": {
+                "type": ["string", "null"],
+                "examples": ["Ongoing road works at this address"],
+                "description": "Provided information on site health and safety on this address"
+              }
+            },
+            "required": [
+              "neighbouringSiteAddressLine1",
+              "neighbouringSiteAddressLine2",
+              "neighbouringSiteAddressTown",
+              "neighbouringSiteAddressCounty",
+              "neighbouringSiteAddressPostcode",
+              "neighbouringSiteAccessDetails",
+              "neighbouringSiteSafetyDetails"
+            ]
+          },
+          "description": "A list of neighbouring site addresses"
+        },
+        "affectedListedBuildingNumbers": {
+          "type": ["array", "null"],
+          "items": {
+            "type": "string",
+            "examples": ["10023", "17824"]
+          },
+          "description": "A list of affected listed building IDs from Historic England"
+        },
+        "lpaCostsAppliedFor": {
+          "type": ["boolean", "null"],
+          "description": "Indicates if the LPA has applied for costs"
+        }
+      },
+      "required": [
+        "caseReference",
+        "lpaQuestionnaireSubmittedDate",
+        "lpaStatement",
+        "siteAccessDetails",
+        "siteSafetyDetails",
+        "isCorrectAppealType",
+        "isGreenBelt",
+        "inConservationArea",
+        "notificationMethod",
+        "newConditionDetails",
+        "nearbyCaseReferences",
+        "neighbouringSiteAddresses",
+        "affectedListedBuildingNumbers",
+        "lpaCostsAppliedFor"
+      ]
+    },
+    "documents": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": true,
+        "properties": {
+          "documentId": {
+            "type": "string",
+            "examples": ["4547fec8-16b2-47bb-836d-4d0baac04079"],
+            "description": "The unique identifier for the document"
+          },
+          "filename": {
+            "type": "string",
+            "examples": ["filename.pdf"],
+            "description": "Current stored name of the document"
+          },
+          "originalFilename": {
+            "type": "string",
+            "examples": ["original_filename.pdf"],
+            "description": "Original name of document"
+          },
+          "size": {
+            "type": "integer",
+            "examples": [23452],
+            "description": "The file size, in bytes"
+          },
+          "mime": {
+            "type": ["string"],
+            "examples": ["application/pdf"],
+            "description": "The mime type for the current version of the file"
+          },
+          "documentURI": {
+            "type": "string",
+            "examples": [
+              "https://custom-domain.gov.uk/container-name/appeal/7002471/4547fec8-16b2-47bb-836d-4d0baac04079/v1/filename.pdf"
+            ],
+            "description": "The internal location of the document",
+            "$comment": "This property contains blob storage info (domain, container), caseReference, version and filename"
+          },
+          "dateCreated": {
+            "type": "string",
+            "format": "date-time",
+            "examples": ["2023-07-27T20:30:00.000Z"],
+            "description": "The creation date for the document"
+          },
+          "documentType": {
+            "type": ["string", "null"],
+            "enum": [
+              "appellantCaseCorrespondence",
+              "appellantCaseWithdrawalLetter",
+              "appellantCostsApplication",
+              "appellantCostsCorrespondence",
+              "appellantCostsWithdrawal",
+              "appellantStatement",
+              "applicationDecisionLetter",
+              "changedDescription",
+              "originalApplicationForm",
+              "whoNotified",
+              "conservationMap",
+              "lpaCaseCorrespondence",
+              "lpaCostsApplication",
+              "lpaCostsCorrespondence",
+              "lpaCostsWithdrawal",
+              "otherPartyRepresentations",
+              "planningOfficerReport",
+              "costsDecisionLetter",
+              "caseDecisionLetter",
+              "crossTeamCorrespondence",
+              "inspectorCorrespondence",
+              null
+            ],
+            "description": "The type of document, used for exchange, migrations and consumption from the appeal back-office system"
+          }
+        },
+        "required": [
+          "documentId",
+          "filename",
+          "originalFilename",
+          "size",
+          "mime",
+          "documentURI",
+          "dateCreated",
+          "documentType"
+        ]
+      }
+    }
+  }
+}

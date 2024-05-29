@@ -1293,6 +1293,248 @@ export interface ServiceUser {
   [k: string]: unknown;
 }
 
+/**
+ * Schema defining the data produced by the Front-Office when an appeal is requested
+ */
+export interface AppellantSubmissionCommand {
+  casedata: {
+    /**
+     * The internal code for an appeal type, e.g. D (Householder)
+     */
+    caseType: 'C' | 'D' | 'F' | 'G' | 'H' | 'L' | 'Q' | 'S' | 'V' | 'W' | 'X' | 'Y' | 'Z';
+    /**
+     * The type of procedure for the appeal
+     */
+    caseProcedure: 'written' | 'hearing' | 'inquiry';
+    /**
+     * A unique identifier for the Local Planning Authority
+     */
+    lpaCode: string;
+    /**
+     * The date the appeal was submitted by the appellant
+     */
+    caseSubmittedDate: string;
+    /**
+     * Indicates if an enforcement notice is the reason for the appeal
+     */
+    enforcementNotice: boolean | null;
+    /**
+     * The unique identifier of the LPA application
+     */
+    applicationReference: string;
+    /**
+     * The date of the original LPA application
+     */
+    applicationDate: string;
+    /**
+     * The outcome of the original LPA decision
+     */
+    applicationDecision: 'granted' | 'refused' | 'not_received';
+    /**
+     * The date of the original LPA decision
+     */
+    applicationDecisionDate: string | null;
+    /**
+     * The statutory deadline for submitting an appeal from the original LPA decision date
+     */
+    caseSubmissionDueDate: string | null;
+    /**
+     * First line of address for the appeal site
+     */
+    siteAddressLine1: string;
+    /**
+     * Second line of address for the appeal site
+     */
+    siteAddressLine2: string | null;
+    /**
+     * Town / City of the site address
+     */
+    siteAddressTown: string;
+    /**
+     * County of the site address
+     */
+    siteAddressCounty: string | null;
+    /**
+     * Postal code of the site address
+     */
+    siteAddressPostcode: string;
+    /**
+     * Provided information on site accessibility
+     */
+    siteAccessDetails: string[] | null;
+    /**
+     * Provided information on site health and safety
+     */
+    siteSafetyDetails: string[] | null;
+    /**
+     * The site area, in square meters
+     */
+    siteAreaSquareMetres: number | null;
+    /**
+     * The floor space, in square meters
+     */
+    floorSpaceSquareMetres: number | null;
+    /**
+     * Indicates if the appellant has complete ownership of the site
+     */
+    ownsAllLand: boolean | null;
+    /**
+     * Indicates if the appellant has partial ownership of the site
+     */
+    ownsSomeLand: boolean | null;
+    /**
+     * Indicates if the appellant knows other owners of the site
+     */
+    knowsOtherOwners: 'Yes' | 'No' | 'Some' | null;
+    /**
+     * Indicates if the appellant knows all owners of the site
+     */
+    knowsAllOwners: 'Yes' | 'No' | 'Some' | null;
+    /**
+     * Indicates if the appellant has advertised the appeal to the LPA decision
+     */
+    advertisedAppeal: boolean | null;
+    /**
+     * Indicates if the appellant has informed other owners of the site
+     */
+    ownersInformed: boolean | null;
+    /**
+     * The original description of the development, as provided by the appellant
+     */
+    originalDevelopmentDescription: string | null;
+    /**
+     * Indicates that the LPA has changed the development description
+     */
+    changedDevelopmentDescription: boolean | null;
+    /**
+     * A list of related case references known to the appellant and the LPA
+     */
+    nearbyCaseReferences: string[] | null;
+    /**
+     * A list of neighbouring site addresses
+     */
+    neighbouringSiteAddresses:
+      | {
+          /**
+           * First line of address of the site
+           */
+          neighbouringSiteAddressLine1: string;
+          /**
+           * Second line of address of the site
+           */
+          neighbouringSiteAddressLine2: string | null;
+          /**
+           * Town / City of the site address
+           */
+          neighbouringSiteAddressTown: string;
+          /**
+           * County of the site address
+           */
+          neighbouringSiteAddressCounty: string | null;
+          /**
+           * Postal code of the site address
+           */
+          neighbouringSiteAddressPostcode: string;
+          /**
+           * Provided information on site accessibility on this address
+           */
+          neighbouringSiteAccessDetails: string | null;
+          /**
+           * Provided information on site health and safety on this address
+           */
+          neighbouringSiteSafetyDetails: string | null;
+          [k: string]: unknown;
+        }[]
+      | null;
+    /**
+     * Indicates if the appellant has applied for costs
+     */
+    appellantCostsAppliedFor: boolean | null;
+    [k: string]: unknown;
+  };
+  documents: {
+    /**
+     * The unique identifier for the document
+     */
+    documentId: string;
+    /**
+     * Current stored name of the document
+     */
+    filename: string;
+    /**
+     * Original name of document
+     */
+    originalFilename: string;
+    /**
+     * The file size, in bytes
+     */
+    size: number;
+    /**
+     * The mime type for the current version of the file
+     */
+    mime: string;
+    /**
+     * The internal location of the document
+     */
+    documentURI: string;
+    /**
+     * The creation date for the document
+     */
+    dateCreated: string;
+    /**
+     * The type of document, used for exchange, migrations and consumption from the appeal back-office system
+     */
+    documentType:
+      | 'appellantCaseCorrespondence'
+      | 'appellantCaseWithdrawalLetter'
+      | 'appellantCostsApplication'
+      | 'appellantCostsCorrespondence'
+      | 'appellantCostsWithdrawal'
+      | 'appellantStatement'
+      | 'applicationDecisionLetter'
+      | 'changedDescription'
+      | 'originalApplicationForm'
+      | 'whoNotified'
+      | 'conservationMap'
+      | 'lpaCaseCorrespondence'
+      | 'lpaCostsApplication'
+      | 'lpaCostsCorrespondence'
+      | 'lpaCostsWithdrawal'
+      | 'otherPartyRepresentations'
+      | 'planningOfficerReport'
+      | 'costsDecisionLetter'
+      | 'caseDecisionLetter'
+      | 'crossTeamCorrespondence'
+      | 'inspectorCorrespondence'
+      | null;
+    [k: string]: unknown;
+  }[];
+  users: {
+    /**
+     * A formal greeting, e.g., Mr, Mrs, Ms.
+     */
+    salutation: string | null;
+    /**
+     * The first name of the individual.
+     */
+    firstName: string | null;
+    /**
+     * The last name of the individual.
+     */
+    lastName: string | null;
+    /**
+     * The primary email address for contact.
+     */
+    emailAddress: string | null;
+    /**
+     * Type or category of the service user.
+     */
+    serviceUserType: 'Applicant' | 'Appellant' | 'Agent' | 'RepresentationContact' | 'Subscriber';
+    [k: string]: unknown;
+  }[];
+  [k: string]: unknown;
+}
+
 export type Name = string;
 
 /**

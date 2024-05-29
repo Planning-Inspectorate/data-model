@@ -1,0 +1,388 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "appellant-submission.schema.json",
+  "title": "Appellant Submission Command",
+  "description": "Schema defining the data produced by the Front-Office when an appeal is requested",
+  "$comment": "This is a combination of Appeal, Documents and Service user data",
+  "type": "object",
+  "additionalProperties": true,
+  "required": [
+    "casedata",
+    "documents",
+    "users"
+  ],
+  "properties": {
+    "casedata": {
+      "type": "object",
+      "additionalProperties": true,
+      "properties": {
+        "caseType": {
+          "type": "string",
+          "enum": ["C", "D", "F", "G", "H", "L", "Q", "S", "V", "W", "X", "Y", "Z"],
+          "description": "The internal code for an appeal type, e.g. D (Householder)"
+        },
+        "caseProcedure": {
+          "type": "string",
+          "enum": ["written", "hearing", "inquiry"],
+          "description": "The type of procedure for the appeal"
+        },
+        "lpaCode": {
+          "type": "string",
+          "examples": ["Q9999"],
+          "description": "A unique identifier for the Local Planning Authority",
+          "$comment": "Uses the internal PINS code identifying LPAs"
+        },
+        "caseSubmittedDate": {
+          "type": "string",
+          "format": "date-time",
+          "examples": ["2023-07-27T20:30:00.000Z"],
+          "description": "The date the appeal was submitted by the appellant"
+        },
+        "enforcementNotice": {
+          "type": ["boolean", "null"],
+          "description": "Indicates if an enforcement notice is the reason for the appeal"
+        },
+        "applicationReference": {
+          "type": "string",
+          "examples": ["43010/APP/1/290572"],
+          "description": "The unique identifier of the LPA application"
+        },
+        "applicationDate": {
+          "type": "string",
+          "format": "date-time",
+          "examples": ["2023-07-27T20:30:00.000Z"],
+          "description": "The date of the original LPA application"
+        },
+        "applicationDecision": {
+          "type": "string",
+          "enum": ["granted", "refused", "not_received"],
+          "description": "The outcome of the original LPA decision"
+        },
+        "applicationDecisionDate": {
+          "type": ["string", "null"],
+          "format": "date-time",
+          "examples": ["2023-07-27T20:30:00.000Z"],
+          "description": "The date of the original LPA decision"
+        },
+        "caseSubmissionDueDate": {
+          "type": ["string", "null"],
+          "format": "date-time",
+          "examples": ["2023-07-27T20:30:00.000Z"],
+          "description": "The statutory deadline for submitting an appeal from the original LPA decision date",
+          "$comment": "Calculated from the applicationDecisionDate"
+        },
+        "siteAddressLine1": {
+          "type": "string",
+          "examples": ["96 The Avenue"],
+          "description": "First line of address for the appeal site"
+        },
+        "siteAddressLine2": {
+          "type": ["string", "null"],
+          "description": "Second line of address for the appeal site"
+        },
+        "siteAddressTown": {
+          "type": "string",
+          "examples": ["Maidstone"],
+          "description": "Town / City of the site address"
+        },
+        "siteAddressCounty": {
+          "type": ["string", "null"],
+          "examples": ["Kent"],
+          "description": "County of the site address"
+        },
+        "siteAddressPostcode": {
+          "type": "string",
+          "examples": ["MD21 5XY"],
+          "description": "Postal code of the site address"
+        },
+        "siteAccessDetails": {
+          "type": ["array", "null"],
+          "items": {
+            "type": "string",
+            "examples": ["The site is accessible through the small gate on the left of the property"]
+          },
+          "description": "Provided information on site accessibility"
+        },
+        "siteSafetyDetails": {
+          "type": ["array", "null"],
+          "items": {
+            "type": "string",
+            "examples": ["There is an aggressive dog in the property"]
+          },
+          "description": "Provided information on site health and safety"
+        },
+        "siteAreaSquareMetres": {
+          "type": ["number", "null"],
+          "multipleOf": 0.1,
+          "examples": [45.7],
+          "description": "The site area, in square meters"
+        },
+        "floorSpaceSquareMetres": {
+          "type": ["number", "null"],
+          "multipleOf": 0.1,
+          "examples": [3.5],
+          "description": "The floor space, in square meters"
+        },
+        "ownsAllLand": {
+          "type": ["boolean", "null"],
+          "description": "Indicates if the appellant has complete ownership of the site"
+        },
+        "ownsSomeLand": {
+          "type": ["boolean", "null"],
+          "description": "Indicates if the appellant has partial ownership of the site"
+        },
+        "knowsOtherOwners": {
+          "type": ["string", "null"],
+          "enum": ["Yes", "No", "Some", null],
+          "description": "Indicates if the appellant knows other owners of the site"
+        },
+        "knowsAllOwners": {
+          "type": ["string", "null"],
+          "enum": ["Yes", "No", "Some", null],
+          "description": "Indicates if the appellant knows all owners of the site"
+        },
+        "advertisedAppeal": {
+          "type": ["boolean", "null"],
+          "description": "Indicates if the appellant has advertised the appeal to the LPA decision"
+        },
+        "ownersInformed": {
+          "type": ["boolean", "null"],
+          "description": "Indicates if the appellant has informed other owners of the site"
+        },
+        "originalDevelopmentDescription": {
+          "type": ["string", "null"],
+          "examples": ["Replacement of an existing gate to access the property"],
+          "description": "The original description of the development, as provided by the appellant"
+        },
+        "changedDevelopmentDescription": {
+          "type": ["boolean", "null"],
+          "description": "Indicates that the LPA has changed the development description"
+        },
+        "nearbyCaseReferences": {
+          "type": ["array", "null"],
+          "items": {
+            "type": "string",
+            "examples": ["6000456", "8004567"]
+          },
+          "description": "A list of related case references known to the appellant and the LPA"
+        },
+        "neighbouringSiteAddresses": {
+          "type": ["array", "null"],
+          "items": {
+            "type": "object",
+            "additionalProperties": true,
+            "properties": {
+              "neighbouringSiteAddressLine1": {
+                "type": "string",
+                "examples": ["96 The Avenue"],
+                "description": "First line of address of the site"
+              },
+              "neighbouringSiteAddressLine2": {
+                "type": ["string", "null"],
+                "description": "Second line of address of the site"
+              },
+              "neighbouringSiteAddressTown": {
+                "type": "string",
+                "examples": ["Maidstone"],
+                "description": "Town / City of the site address"
+              },
+              "neighbouringSiteAddressCounty": {
+                "type": ["string", "null"],
+                "examples": ["Kent"],
+                "description": "County of the site address"
+              },
+              "neighbouringSiteAddressPostcode": {
+                "type": "string",
+                "examples": ["MD21 5XY"],
+                "description": "Postal code of the site address"
+              },
+              "neighbouringSiteAccessDetails": {
+                "type": ["string", "null"],
+                "examples": ["Ongoing road works at this address"],
+                "description": "Provided information on site accessibility on this address"
+              },
+              "neighbouringSiteSafetyDetails": {
+                "type": ["string", "null"],
+                "examples": ["Ongoing road works at this address"],
+                "description": "Provided information on site health and safety on this address"
+              }
+            },
+            "required": [
+              "neighbouringSiteAddressLine1",
+              "neighbouringSiteAddressLine2",
+              "neighbouringSiteAddressTown",
+              "neighbouringSiteAddressCounty",
+              "neighbouringSiteAddressPostcode",
+              "neighbouringSiteAccessDetails",
+              "neighbouringSiteSafetyDetails"
+            ]
+          },
+          "description": "A list of neighbouring site addresses"
+        },
+        "appellantCostsAppliedFor": {
+          "type": ["boolean", "null"],
+          "description": "Indicates if the appellant has applied for costs"
+        }
+      },
+      "required": [
+        "caseType",
+        "caseProcedure",
+        "lpaCode",
+        "caseSubmittedDate",
+        "enforcementNotice",
+        "applicationReference",
+        "applicationDate",
+        "applicationDecision",
+        "applicationDecisionDate",
+        "caseSubmissionDueDate",
+        "siteAddressLine1",
+        "siteAddressLine2",
+        "siteAddressTown",
+        "siteAddressCounty",
+        "siteAddressPostcode",
+        "siteAccessDetails",
+        "siteSafetyDetails",
+        "siteAreaSquareMetres",
+        "floorSpaceSquareMetres",
+        "ownsAllLand",
+        "ownsSomeLand",
+        "knowsOtherOwners",
+        "knowsAllOwners",
+        "advertisedAppeal",
+        "ownersInformed",
+        "originalDevelopmentDescription",
+        "changedDevelopmentDescription",
+        "nearbyCaseReferences",
+        "neighbouringSiteAddresses",
+        "appellantCostsAppliedFor"
+      ]
+    },
+    "documents": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": true,
+        "properties": {
+          "documentId": {
+            "type": "string",
+            "examples": ["4547fec8-16b2-47bb-836d-4d0baac04079"],
+            "description": "The unique identifier for the document"
+          },
+          "filename": {
+            "type": "string",
+            "examples": ["filename.pdf"],
+            "description": "Current stored name of the document"
+          },
+          "originalFilename": {
+            "type": "string",
+            "examples": ["original_filename.pdf"],
+            "description": "Original name of document"
+          },
+          "size": {
+            "type": "integer",
+            "examples": [23452],
+            "description": "The file size, in bytes"
+          },
+          "mime": {
+            "type": ["string"],
+            "examples": ["application/pdf"],
+            "description": "The mime type for the current version of the file"
+          },
+          "documentURI": {
+            "type": "string",
+            "examples": [
+              "https://custom-domain.gov.uk/container-name/appeal/7002471/4547fec8-16b2-47bb-836d-4d0baac04079/v1/filename.pdf"
+            ],
+            "description": "The internal location of the document",
+            "$comment": "This property contains blob storage info (domain, container), caseReference, version and filename"
+          },
+          "dateCreated": {
+            "type": "string",
+            "format": "date-time",
+            "examples": ["2023-07-27T20:30:00.000Z"],
+            "description": "The creation date for the document"
+          },
+          "documentType": {
+            "type": ["string", "null"],
+            "enum": [
+              "appellantCaseCorrespondence",
+              "appellantCaseWithdrawalLetter",
+              "appellantCostsApplication",
+              "appellantCostsCorrespondence",
+              "appellantCostsWithdrawal",
+              "appellantStatement",
+              "applicationDecisionLetter",
+              "changedDescription",
+              "originalApplicationForm",
+              "whoNotified",
+              "conservationMap",
+              "lpaCaseCorrespondence",
+              "lpaCostsApplication",
+              "lpaCostsCorrespondence",
+              "lpaCostsWithdrawal",
+              "otherPartyRepresentations",
+              "planningOfficerReport",
+              "costsDecisionLetter",
+              "caseDecisionLetter",
+              "crossTeamCorrespondence",
+              "inspectorCorrespondence",
+              null
+            ],
+            "description": "The type of document, used for exchange, migrations and consumption from the appeal back-office system"
+          }
+        },
+        "required": [
+          "documentId",
+          "filename",
+          "originalFilename",
+          "size",
+          "mime",
+          "documentURI",
+          "dateCreated",
+          "documentType"
+        ]
+      }
+    },
+    "users": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": true,
+        "properties": {
+          "salutation": {
+            "type": ["string", "null"],
+            "description": "A formal greeting, e.g., Mr, Mrs, Ms.",
+            "examples": ["Mr"]
+          },
+          "firstName": {
+            "type": ["string", "null"],
+            "description": "The first name of the individual.",
+            "examples": ["John"]
+          },
+          "lastName": {
+            "type": ["string", "null"],
+            "description": "The last name of the individual.",
+            "examples": ["Doe"]
+          },
+          "emailAddress": {
+            "type": ["string", "null"],
+            "description": "The primary email address for contact.",
+            "examples": ["john.doe@example.com"]
+          },
+          "serviceUserType": {
+            "type": "string",
+            "description": "Type or category of the service user.",
+            "enum": ["Applicant", "Appellant", "Agent", "RepresentationContact", "Subscriber"]
+          }
+        },
+        "required": [
+          "salutation",
+          "firstName",
+          "lastName",
+          "emailAddress",
+          "serviceUserType"
+        ]
+      }
+    }
+  }
+}

@@ -30,3 +30,5 @@ export function loadAllSchemasSync() {
     commands: loadSchemasSync(commandsPath),
   };
 }
+
+console.log(await loadAllSchemas());

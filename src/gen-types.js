@@ -1,9 +1,8 @@
 import fs from 'fs/promises';
 import path from 'path';
 import url from 'url';
-import { loadAllSchemas } from './index.js';
+import { loadAllSchemas, schemasPath } from './index.js';
 import { compile } from 'json-schema-to-typescript';
-import { schemasPath } from './index.js';
 
 const __dirname = path.dirname(url.fileURLToPath(import.meta.url));
 
@@ -16,9 +15,9 @@ async function run() {
   const s = await loadAllSchemas();
 
   let types = '';
-  /** @type {(string | undefined)[]} */
+  /** @type {(string | undefined)[][]} */
   const eventSchemas = [];
-  /** @type {(string | undefined)[]} */
+  /** @type {(string | undefined)[][]} */
   const commandSchemas = [];
   let first = true;
 
@@ -30,9 +29,9 @@ async function run() {
       options(first)
     );
     const typeName = compiledTypeStr.match(/^export interface (\w+) {$/im)?.[1];
-    eventSchemas.push(typeName);
+    eventSchemas.push([schemaName, typeName]);
     types += compiledTypeStr;
-    types += types += '\n';
+    types += '\n';
     first = false;
   }
 
@@ -44,18 +43,30 @@ async function run() {
       options(first)
     );
     const typeName = compiledTypeStr.match(/^export interface (\w+) {$/im)?.[1];
-    commandSchemas.push(typeName);
+    commandSchemas.push([commandName, typeName]);
+    types += compiledTypeStr;
     types += '\n';
     first = false;
   }
 
-  types += `type EventSchemas = ${eventSchemas
+  types += `export type EventSchemas =\n  | ${eventSchemas
+    .map(([_, e]) => e)
     .filter(Boolean)
-    .join(' | ')}\n\n`;
-  types += `type CommandSchemas = ${commandSchemas
+    .join('\n  | ')};\n\n`;
+  types += `export type CommandSchemas =\n  | ${commandSchemas
+    .map(([_, e]) => e)
     .filter(Boolean)
-    .join(' | ')}\n\n`;
-  types += 'type Schemas = EventSchemas | CommandSchemas\n';
+    .join('\n  | ')};\n\n`;
+  types += 'export type Schemas = EventSchemas | CommandSchemas;\n\n';
+
+  types += `export type LoadedSchemas = {
+    schemas: {
+      ${eventSchemas.flatMap(([a, b]) => `"${a}": ${b};`).join('\n      ')}
+    };
+    commands: {
+      ${commandSchemas.flatMap(([a, b]) => `"${a}": ${b};`).join('\n      ')}
+    };
+  };\n`;
 
   await fs.writeFile(typesPath, types);
 }

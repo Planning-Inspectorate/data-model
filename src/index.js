@@ -10,7 +10,7 @@ export const commandsPath = path.join(schemasPath, 'commands');
 /**
  * Load all schemas from schemas and commands folders
  *
- * @returns {Promise<import('./index.js').LoadedSchemas>}
+ * @returns {Promise<import('./schemas.js').LoadedSchemas>}
  */
 export async function loadAllSchemas() {
   return {
@@ -22,7 +22,7 @@ export async function loadAllSchemas() {
 /**
  * Load all schemas from schemas and commands folders
  *
- * @returns {import('./index.js').LoadedSchemas}
+ * @returns {import('./schemas.js').LoadedSchemas}
  */
 export function loadAllSchemasSync() {
   return {
@@ -30,5 +30,3 @@ export function loadAllSchemasSync() {
     commands: loadSchemasSync(commandsPath),
   };
 }
-
-console.log(await loadAllSchemas());

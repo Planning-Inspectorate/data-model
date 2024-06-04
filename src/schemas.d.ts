@@ -1848,27 +1848,48 @@ export type CommandSchemas =
 export type Schemas = EventSchemas | CommandSchemas;
 
 export type LoadedSchemas = {
-    schemas: {
-      "appeal-document.schema.json": AppealDocument;
-      "appeal-event.schema.json": AppealEvent;
-      "appeal.schema.json": AppealCase;
-      "employee.schema.json": Employee;
-      "folder.schema.json": Folder;
-      "nsip-document.schema.json": NSIPDocument;
-      "nsip-exam-timetable.schema.json": ExaminationTimetable;
-      "nsip-project-update.schema.json": NSIPProjectUpdate;
-      "nsip-project.schema.json": NSIPProject;
-      "nsip-representation.schema.json": Representation;
-      "nsip-subscription.schema.json": NsipSubscription;
-      "s51-advice.schema.json": S51Advice;
-      "service-user.schema.json": ServiceUser;
-    };
-    commands: {
-      "appellant-submission.schema.json": AppellantSubmissionCommand;
-      "interested-party.schema.json": InterestedParty;
-      "new-deadline-submission.schema.json": NewDeadlineSubmission;
-      "nsip-exam-timetable-submission.schema.json": NsipExamTimetableSubmission;
-      "register-nsip-subscription.schema.json": RegisterNsipSubscription;
-      "register-representation.schema.json": RegisterRepresentation;
-    };
+  schemas: {
+    'appeal-document.schema.json': AppealDocument;
+    'appeal-event.schema.json': AppealEvent;
+    'appeal.schema.json': AppealCase;
+    'employee.schema.json': Employee;
+    'folder.schema.json': Folder;
+    'nsip-document.schema.json': NSIPDocument;
+    'nsip-exam-timetable.schema.json': ExaminationTimetable;
+    'nsip-project-update.schema.json': NSIPProjectUpdate;
+    'nsip-project.schema.json': NSIPProject;
+    'nsip-representation.schema.json': Representation;
+    'nsip-subscription.schema.json': NsipSubscription;
+    's51-advice.schema.json': S51Advice;
+    'service-user.schema.json': ServiceUser;
   };
+  commands: {
+    'appellant-submission.schema.json': AppellantSubmissionCommand;
+    'interested-party.schema.json': InterestedParty;
+    'new-deadline-submission.schema.json': NewDeadlineSubmission;
+    'nsip-exam-timetable-submission.schema.json': NsipExamTimetableSubmission;
+    'register-nsip-subscription.schema.json': RegisterNsipSubscription;
+    'register-representation.schema.json': RegisterRepresentation;
+  };
+};
+
+export type SchemaName =
+  | 'appeal-document'
+  | 'appeal-event'
+  | 'appeal'
+  | 'employee'
+  | 'folder'
+  | 'nsip-document'
+  | 'nsip-exam-timetable'
+  | 'nsip-project-update'
+  | 'nsip-project'
+  | 'nsip-representation'
+  | 'nsip-subscription'
+  | 's51-advice'
+  | 'service-user'
+  | 'appellant-submission'
+  | 'interested-party'
+  | 'new-deadline-submission'
+  | 'nsip-exam-timetable-submission'
+  | 'register-nsip-subscription'
+  | 'register-representation'

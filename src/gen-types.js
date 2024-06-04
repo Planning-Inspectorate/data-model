@@ -60,13 +60,26 @@ async function run() {
   types += 'export type Schemas = EventSchemas | CommandSchemas;\n\n';
 
   types += `export type LoadedSchemas = {
-    schemas: {
-      ${eventSchemas.flatMap(([a, b]) => `"${a}": ${b};`).join('\n      ')}
-    };
-    commands: {
-      ${commandSchemas.flatMap(([a, b]) => `"${a}": ${b};`).join('\n      ')}
-    };
-  };\n`;
+  schemas: {
+    ${eventSchemas.flatMap(([a, b]) => `'${a}': ${b};`).join('\n    ')}
+  };
+  commands: {
+    ${commandSchemas.flatMap(([a, b]) => `'${a}': ${b};`).join('\n    ')}
+  };
+};\n\n`;
+
+  types += `export type SchemaName =${eventSchemas
+    .map(([n]) => {
+      const name = n?.split('.')[0];
+      return `\n  | '${name}'`;
+    })
+    .join('')}${commandSchemas
+    .map(([n]) => {
+      const name = n?.split('.')[0];
+      return `\n  | '${name}'`;
+    })
+    .join('')}
+`;
 
   await fs.writeFile(typesPath, types);
 }

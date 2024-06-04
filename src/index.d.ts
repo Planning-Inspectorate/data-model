@@ -1,12 +1,12 @@
-import * as Schemas from './schemas';
+import { EventSchemas, CommandSchemas, Schemas } from './schemas';
 
 export interface LoadedSchemas {
-    schemas: {
-        [name: string]: any
-    }
-    commands: {
-        [name: string]: any
-    }
+  schemas: {
+    [name: string]: EventSchemas;
+  };
+  commands: {
+    [name: string]: CommandSchemas;
+  };
 }
 
 export const schemasPath: string;

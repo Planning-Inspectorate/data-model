@@ -1,12 +1,7 @@
-import {
-  EventSchemas,
-  CommandSchemas,
-  LoadedSchemas,
-  Schemas,
-} from './schemas';
+import { LoadedSchemas } from './schemas';
 
 export const schemasPath: string;
 export const commandsPath: string;
 export function loadAllSchemas(): Promise<LoadedSchemas>;
 
-export { Schemas };
+export * from './schemas';

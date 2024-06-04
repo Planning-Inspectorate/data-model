@@ -170,6 +170,10 @@ Then import as required:
 import {loadAllSchemas} from 'pins-data-model';
 ```
 
+To upgrade to a different version, simply doing npm command does not seem to get the correct version, so we need to first uninstall and then reinstall. You can do this by running:
+
+`npm uninstall pins-data-model && npm prune && npm i -s github:Planning-Inspectorate/data-model#some-tag-or-commit`
+
 ## Python usage
 
 To use these schemas in a Python project, add this repo as a dependency (with a particular tag or commit as the version):

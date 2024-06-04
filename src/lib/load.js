@@ -7,7 +7,7 @@ import path from 'path';
  * Load all schemas from a directory and return a map of schema name to parsed schema object.
  *
  * @param {string} dirPath
- * @returns {Promise<Object<string,any>>}
+ * @returns {Promise<any>}
  */
 export async function loadSchemas(dirPath) {
   const entries = await readdir(dirPath);
@@ -51,13 +51,13 @@ function isSchemaFile(filePath) {
  * Load all schemas from a directory and return a map of schema name to parsed schema object.
  *
  * @param {string} dirPath
- * @returns {Object<string,any>}
+ * @returns {any}
  */
 export function loadSchemasSync(dirPath) {
   const entries = readdirSync(dirPath);
   const schemaFiles = entries.filter(isSchemaFile);
 
-  /** @type {Object<string,any>} */
+  /** @type {any} */
   const initialSchemaMap = {};
 
   return schemaFiles.reduce((acc, filePath) => {

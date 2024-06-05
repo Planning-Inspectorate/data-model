@@ -234,7 +234,7 @@ export interface AppealEvent {
 /**
  * Schema defining the metadata for an appeal
  */
-export interface AppealCase {
+export interface AppealHASCase {
   /**
    * Internal case identifier
    */

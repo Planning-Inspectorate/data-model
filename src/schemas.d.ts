@@ -1648,6 +1648,161 @@ export interface Address {
 }
 
 /**
+ * Schema defining the data produced by the Front-Office when an LPA Questionnaire is submitted
+ */
+export interface LPAQuestionnaireCommand {
+  casedata: {
+    /**
+     * External case identifier
+     */
+    caseReference: string;
+    /**
+     * The date the LPA provided a response to the case
+     */
+    lpaQuestionnaireSubmittedDate: string | null;
+    /**
+     * A statement provided by the LPA
+     */
+    lpaStatement: string | null;
+    /**
+     * Provided information on site accessibility
+     */
+    siteAccessDetails: string[] | null;
+    /**
+     * Provided information on site health and safety
+     */
+    siteSafetyDetails: string[] | null;
+    /**
+     * Indicates if the LPA considers the appeal type appropriate
+     */
+    isCorrectAppealType: boolean | null;
+    /**
+     * Indicates if the site is in a green belt
+     */
+    isGreenBelt: boolean | null;
+    /**
+     * Indicates if the site is in a conservation area
+     */
+    inConservationArea: boolean | null;
+    /**
+     * New conditions details provided by the LPA
+     */
+    newConditionDetails: string | null;
+    /**
+     * The methods used to notify relevant parties
+     */
+    notificationMethod: string[] | null;
+    /**
+     * A list of related case references known to the appellant and the LPA
+     */
+    nearbyCaseReferences: string[] | null;
+    /**
+     * A list of neighbouring site addresses
+     */
+    neighbouringSiteAddresses:
+      | {
+          /**
+           * First line of address of the site
+           */
+          neighbouringSiteAddressLine1: string;
+          /**
+           * Second line of address of the site
+           */
+          neighbouringSiteAddressLine2: string | null;
+          /**
+           * Town / City of the site address
+           */
+          neighbouringSiteAddressTown: string;
+          /**
+           * County of the site address
+           */
+          neighbouringSiteAddressCounty: string | null;
+          /**
+           * Postal code of the site address
+           */
+          neighbouringSiteAddressPostcode: string;
+          /**
+           * Provided information on site accessibility on this address
+           */
+          neighbouringSiteAccessDetails: string | null;
+          /**
+           * Provided information on site health and safety on this address
+           */
+          neighbouringSiteSafetyDetails: string | null;
+          [k: string]: unknown;
+        }[]
+      | null;
+    /**
+     * A list of affected listed building IDs from Historic England
+     */
+    affectedListedBuildingNumbers: string[] | null;
+    /**
+     * Indicates if the LPA has applied for costs
+     */
+    lpaCostsAppliedFor: boolean | null;
+    [k: string]: unknown;
+  };
+  documents: {
+    /**
+     * The unique identifier for the document
+     */
+    documentId: string;
+    /**
+     * Current stored name of the document
+     */
+    filename: string;
+    /**
+     * Original name of document
+     */
+    originalFilename: string;
+    /**
+     * The file size, in bytes
+     */
+    size: number;
+    /**
+     * The mime type for the current version of the file
+     */
+    mime: string;
+    /**
+     * The internal location of the document
+     */
+    documentURI: string;
+    /**
+     * The creation date for the document
+     */
+    dateCreated: string;
+    /**
+     * The type of document, used for exchange, migrations and consumption from the appeal back-office system
+     */
+    documentType:
+      | 'appellantCaseCorrespondence'
+      | 'appellantCaseWithdrawalLetter'
+      | 'appellantCostsApplication'
+      | 'appellantCostsCorrespondence'
+      | 'appellantCostsWithdrawal'
+      | 'appellantStatement'
+      | 'applicationDecisionLetter'
+      | 'changedDescription'
+      | 'originalApplicationForm'
+      | 'whoNotified'
+      | 'conservationMap'
+      | 'lpaCaseCorrespondence'
+      | 'lpaCostsApplication'
+      | 'lpaCostsCorrespondence'
+      | 'lpaCostsWithdrawal'
+      | 'otherPartyRepresentations'
+      | 'planningOfficerReport'
+      | 'costsDecisionLetter'
+      | 'caseDecisionLetter'
+      | 'crossTeamCorrespondence'
+      | 'inspectorCorrespondence'
+      | null;
+    [k: string]: unknown;
+  }[];
+  [k: string]: unknown;
+}
+
+/**
  * A command to deliver metadata about a new document submission added to a deadline
  */
 export interface NewDeadlineSubmission {

@@ -10,6 +10,8 @@
 
 *   [Employee](./employee.md "Employee schema") – `employee.schema.json`
 
+*   [Entra ID User Objects](./entra-id.md "A list of users from EntraID") – `entra-id.schema.json`
+
 *   [Examination Timetable](./nsip-exam-timetable.md "Examination Timetable for an NSIP Project") – `nsip-exam-timetable.schema.json`
 
 *   [Folder](./folder.md "Folders can have optional parents") – `folder.schema.json`

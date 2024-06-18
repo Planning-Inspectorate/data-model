@@ -580,6 +580,33 @@ export interface Employee {
 }
 
 /**
+ * A list of users from EntraID
+ */
+export interface EntraIDUserObjects {
+  /**
+   * The employee's unique identifier
+   */
+  employeeId: number;
+  /**
+   * The unique identifier within the EntraID
+   */
+  id: string;
+  /**
+   * The employee's given name
+   */
+  givenName: string;
+  /**
+   * The employee's surname
+   */
+  surname: string;
+  /**
+   * The employee's email address
+   */
+  userPrincipalName: string;
+  [k: string]: unknown;
+}
+
+/**
  * Folders can have optional parents. All folders belong to a Case.
  */
 export interface Folder {

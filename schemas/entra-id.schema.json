@@ -8,11 +8,11 @@
 	"required": ["id", "employeeId", "givenName", "surname", "userPrincipalName"],
 	"properties": {
 		"employeeId": {
-			"type": "integer",
+			"type": ["integer"],
 			"description": "The employee's unique identifier"
 		},
 		"id": {
-			"type": "string",
+			"type": ["string"],
 			"description": "The unique identifier within the EntraID"
 		},
 		"givenName": {

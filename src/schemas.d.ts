@@ -1621,29 +1621,57 @@ export interface AppellantSubmissionCommand {
       | null;
     [k: string]: unknown;
   }[];
-  users: {
-    /**
-     * A formal greeting, e.g., Mr, Mrs, Ms.
-     */
-    salutation: string | null;
-    /**
-     * The first name of the individual.
-     */
-    firstName: string | null;
-    /**
-     * The last name of the individual.
-     */
-    lastName: string | null;
-    /**
-     * The primary email address for contact.
-     */
-    emailAddress: string | null;
-    /**
-     * Type or category of the service user.
-     */
-    serviceUserType: 'Applicant' | 'Appellant' | 'Agent' | 'RepresentationContact' | 'Subscriber';
-    [k: string]: unknown;
-  }[];
+  /**
+   * @minItems 1
+   */
+  users: [
+    {
+      /**
+       * A formal greeting, e.g., Mr, Mrs, Ms.
+       */
+      salutation: string | null;
+      /**
+       * The first name of the individual.
+       */
+      firstName: string | null;
+      /**
+       * The last name of the individual.
+       */
+      lastName: string | null;
+      /**
+       * The primary email address for contact.
+       */
+      emailAddress: string | null;
+      /**
+       * Type or category of the service user.
+       */
+      serviceUserType: 'Applicant' | 'Appellant' | 'Agent' | 'RepresentationContact' | 'Subscriber';
+      [k: string]: unknown;
+    },
+    ...{
+      /**
+       * A formal greeting, e.g., Mr, Mrs, Ms.
+       */
+      salutation: string | null;
+      /**
+       * The first name of the individual.
+       */
+      firstName: string | null;
+      /**
+       * The last name of the individual.
+       */
+      lastName: string | null;
+      /**
+       * The primary email address for contact.
+       */
+      emailAddress: string | null;
+      /**
+       * Type or category of the service user.
+       */
+      serviceUserType: 'Applicant' | 'Appellant' | 'Agent' | 'RepresentationContact' | 'Subscriber';
+      [k: string]: unknown;
+    }[]
+  ];
   [k: string]: unknown;
 }
 

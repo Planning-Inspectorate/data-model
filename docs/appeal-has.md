@@ -1478,10 +1478,6 @@ The site area, in square meters
 
 `number`
 
-### siteAreaSquareMetres Constraints
-
-**multiple of**: the value of this number must be a multiple of: `0.1`
-
 ### siteAreaSquareMetres Examples
 
 ```json
@@ -1505,10 +1501,6 @@ The floor space, in square meters
 ### floorSpaceSquareMetres Type
 
 `number`
-
-### floorSpaceSquareMetres Constraints
-
-**multiple of**: the value of this number must be a multiple of: `0.1`
 
 ### floorSpaceSquareMetres Examples
 

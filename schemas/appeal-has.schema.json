@@ -413,13 +413,11 @@
     },
     "siteAreaSquareMetres": {
       "type": ["number", "null"],
-      "multipleOf": 0.1,
       "examples": [45.7],
       "description": "The site area, in square meters"
     },
     "floorSpaceSquareMetres": {
       "type": ["number", "null"],
-      "multipleOf": 0.1,
       "examples": [3.5],
       "description": "The floor space, in square meters"
     },

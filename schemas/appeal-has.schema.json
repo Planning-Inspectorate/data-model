@@ -40,7 +40,7 @@
     "lpaStatement",
     "caseWithdrawnDate",
     "caseTransferredDate",
-    "caseClosedDate",
+    "transferredCaseClosedDate",
     "caseDecisionOutcomeDate",
     "caseDecisionPublishedDate",
     "caseDecisionOutcome",
@@ -135,12 +135,12 @@
     },
     "allocationLevel": {
       "type": ["string", "null"],
-      "enum": ["A", "B", "C", "D", "E", "F", "G", "H"],
+      "enum": ["A", "B", "C", "D", "E", "F", "G", "H", null],
       "description": "A level used for allocation purposes"
     },
     "allocationBand": {
       "type": ["number", "null"],
-      "enum": [1, 2, 3],
+      "enum": [1, 2, 3, null],
       "description": "A band used for allocation purposes",
       "$comment": "Linked to the level, e.g. 1[E,F,G,H], 2[C,D], 3[A,B]"
     },
@@ -309,7 +309,7 @@
       "examples": ["2023-07-27T20:30:00.000Z"],
       "description": "The date the appeal was transferred to a new case of a different type"
     },
-    "caseClosedDate": {
+    "transferredCaseClosedDate": {
       "type": ["string", "null"],
       "format": "date-time",
       "examples": ["2023-07-27T20:30:00.000Z"],

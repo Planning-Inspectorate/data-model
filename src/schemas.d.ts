@@ -281,11 +281,11 @@ export interface AppealHASCase {
   /**
    * A level used for allocation purposes
    */
-  allocationLevel: ('A' | 'B' | 'C' | 'D' | 'E' | 'F' | 'G' | 'H') | null;
+  allocationLevel: 'A' | 'B' | 'C' | 'D' | 'E' | 'F' | 'G' | 'H' | null;
   /**
    * A band used for allocation purposes
    */
-  allocationBand: (1 | 2 | 3) | null;
+  allocationBand: 1 | 2 | 3 | null;
   /**
    * A list of specialisms for allocation purposes
    */
@@ -385,7 +385,7 @@ export interface AppealHASCase {
   /**
    * The date the appeal was closed and the appellant requested to resubmit
    */
-  caseClosedDate: string | null;
+  transferredCaseClosedDate: string | null;
   /**
    * The date of the appeal decision
    */

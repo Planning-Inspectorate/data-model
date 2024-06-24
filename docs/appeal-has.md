@@ -40,7 +40,7 @@
 | [lpaStatement](#lpastatement)                                                   | `string`  | Required | can be null    | [Appeal HAS Case](appeal-has-properties-lpastatement.md "appeal-has.schema.json#/properties/lpaStatement")                                                   |
 | [caseWithdrawnDate](#casewithdrawndate)                                         | `string`  | Required | can be null    | [Appeal HAS Case](appeal-has-properties-casewithdrawndate.md "appeal-has.schema.json#/properties/caseWithdrawnDate")                                         |
 | [caseTransferredDate](#casetransferreddate)                                     | `string`  | Required | can be null    | [Appeal HAS Case](appeal-has-properties-casetransferreddate.md "appeal-has.schema.json#/properties/caseTransferredDate")                                     |
-| [caseClosedDate](#casecloseddate)                                               | `string`  | Required | can be null    | [Appeal HAS Case](appeal-has-properties-casecloseddate.md "appeal-has.schema.json#/properties/caseClosedDate")                                               |
+| [transferredCaseClosedDate](#transferredcasecloseddate)                         | `string`  | Required | can be null    | [Appeal HAS Case](appeal-has-properties-transferredcasecloseddate.md "appeal-has.schema.json#/properties/transferredCaseClosedDate")                         |
 | [caseDecisionOutcomeDate](#casedecisionoutcomedate)                             | `string`  | Required | can be null    | [Appeal HAS Case](appeal-has-properties-casedecisionoutcomedate.md "appeal-has.schema.json#/properties/caseDecisionOutcomeDate")                             |
 | [caseDecisionPublishedDate](#casedecisionpublisheddate)                         | `string`  | Required | can be null    | [Appeal HAS Case](appeal-has-properties-casedecisionpublisheddate.md "appeal-has.schema.json#/properties/caseDecisionPublishedDate")                         |
 | [caseDecisionOutcome](#casedecisionoutcome)                                     | `string`  | Required | can be null    | [Appeal HAS Case](appeal-has-properties-casedecisionoutcome.md "appeal-has.schema.json#/properties/caseDecisionOutcome")                                     |
@@ -318,16 +318,17 @@ A level used for allocation purposes
 
 **enum**: the value of this property must be equal to one of the following values:
 
-| Value | Explanation |
-| :---- | :---------- |
-| `"A"` |             |
-| `"B"` |             |
-| `"C"` |             |
-| `"D"` |             |
-| `"E"` |             |
-| `"F"` |             |
-| `"G"` |             |
-| `"H"` |             |
+| Value  | Explanation |
+| :----- | :---------- |
+| `"A"`  |             |
+| `"B"`  |             |
+| `"C"`  |             |
+| `"D"`  |             |
+| `"E"`  |             |
+| `"F"`  |             |
+| `"G"`  |             |
+| `"H"`  |             |
+| `null` |             |
 
 ## allocationBand
 
@@ -353,11 +354,12 @@ A band used for allocation purposes
 
 **enum**: the value of this property must be equal to one of the following values:
 
-| Value | Explanation |
-| :---- | :---------- |
-| `1`   |             |
-| `2`   |             |
-| `3`   |             |
+| Value  | Explanation |
+| :----- | :---------- |
+| `1`    |             |
+| `2`    |             |
+| `3`    |             |
+| `null` |             |
 
 ## caseSpecialisms
 
@@ -1012,11 +1014,11 @@ The date the appeal was transferred to a new case of a different type
 "2023-07-27T20:30:00.000Z"
 ```
 
-## caseClosedDate
+## transferredCaseClosedDate
 
 The date the appeal was closed and the appellant requested to resubmit
 
-`caseClosedDate`
+`transferredCaseClosedDate`
 
 *   is required
 
@@ -1024,17 +1026,17 @@ The date the appeal was closed and the appellant requested to resubmit
 
 *   can be null
 
-*   defined in: [Appeal HAS Case](appeal-has-properties-casecloseddate.md "appeal-has.schema.json#/properties/caseClosedDate")
+*   defined in: [Appeal HAS Case](appeal-has-properties-transferredcasecloseddate.md "appeal-has.schema.json#/properties/transferredCaseClosedDate")
 
-### caseClosedDate Type
+### transferredCaseClosedDate Type
 
 `string`
 
-### caseClosedDate Constraints
+### transferredCaseClosedDate Constraints
 
 **date time**: the string must be a date time string, according to [RFC 3339, section 5.6](https://tools.ietf.org/html/rfc3339 "check the specification")
 
-### caseClosedDate Examples
+### transferredCaseClosedDate Examples
 
 ```json
 "2023-07-27T20:30:00.000Z"

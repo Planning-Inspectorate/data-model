@@ -1,6 +1,6 @@
 {
 	"$schema": "http://json-schema.org/draft-07/schema#",
-	"$id": "entra-id.schema.json",
+	"$id": "entraid.schema.json",
 	"title": "Entra ID User Objects",
 	"description": "A list of users from EntraID ",
 	"type": "object",

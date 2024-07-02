@@ -170,6 +170,16 @@ Then import as required:
 import {loadAllSchemas} from 'pins-data-model';
 ```
 
+or to import enum constants, for example:
+
+```es6
+import { APPEAL_CASE_STATUS } from 'pins-data-model';
+
+if (someAppeal.status === APPEAL_CASE_STATUS.COMPLETE) {
+    console.log(`we're done!`);
+}
+```
+
 To upgrade to a different version, simply doing npm command does not seem to get the correct version, so we need to first uninstall and then reinstall. You can do this by running:
 
 `npm uninstall pins-data-model && npm prune && npm i -s github:Planning-Inspectorate/data-model#some-tag-or-commit`
@@ -192,6 +202,10 @@ print(schemas)
 Once a schema is updated, it is important to update the TypeScript definitions by running:
 
 `npm run gen-types`
+
+and update the generated JavaScript enum constants by running:
+
+`npm run gen-enum`
 
 and update the generated markdown by running:
 

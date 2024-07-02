@@ -1,4 +1,5 @@
 import * as Schemas from './schemas';
+export * from './enums';
 
 export interface LoadedSchemas {
     schemas: {

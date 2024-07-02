@@ -95,6 +95,9 @@ export interface AppealDocument {
     | 'changedDescription'
     | 'originalApplicationForm'
     | 'whoNotified'
+    | 'whoNotifiedSiteNotice'
+    | 'whoNotifiedLetterToNeighbours'
+    | 'whoNotifiedPressAdvert'
     | 'conservationMap'
     | 'lpaCaseCorrespondence'
     | 'lpaCostsApplication'
@@ -1479,6 +1482,10 @@ export interface AppellantSubmissionCommand {
      */
     siteSafetyDetails: string[] | null;
     /**
+     * Indicates if the site is in a green belt
+     */
+    isGreenBelt: boolean | null;
+    /**
      * The site area, in square meters
      */
     siteAreaSquareMetres: number | null;
@@ -1606,18 +1613,6 @@ export interface AppellantSubmissionCommand {
       | 'applicationDecisionLetter'
       | 'changedDescription'
       | 'originalApplicationForm'
-      | 'whoNotified'
-      | 'conservationMap'
-      | 'lpaCaseCorrespondence'
-      | 'lpaCostsApplication'
-      | 'lpaCostsCorrespondence'
-      | 'lpaCostsWithdrawal'
-      | 'otherPartyRepresentations'
-      | 'planningOfficerReport'
-      | 'costsDecisionLetter'
-      | 'caseDecisionLetter'
-      | 'crossTeamCorrespondence'
-      | 'inspectorCorrespondence'
       | null;
     [k: string]: unknown;
   }[];
@@ -1643,6 +1638,14 @@ export interface AppellantSubmissionCommand {
        */
       emailAddress: string | null;
       /**
+       * The primary telephone contact number.
+       */
+      telephoneNumber: string | null;
+      /**
+       * The name of the organisation associated with the individual.
+       */
+      organisation: string | null;
+      /**
        * Type or category of the service user.
        */
       serviceUserType: 'Applicant' | 'Appellant' | 'Agent' | 'RepresentationContact' | 'Subscriber';
@@ -1665,6 +1668,14 @@ export interface AppellantSubmissionCommand {
        * The primary email address for contact.
        */
       emailAddress: string | null;
+      /**
+       * The primary telephone contact number.
+       */
+      telephoneNumber: string | null;
+      /**
+       * The name of the organisation associated with the individual.
+       */
+      organisation: string | null;
       /**
        * Type or category of the service user.
        */
@@ -1830,16 +1841,10 @@ export interface LPAQuestionnaireCommand {
      * The type of document, used for exchange, migrations and consumption from the appeal back-office system
      */
     documentType:
-      | 'appellantCaseCorrespondence'
-      | 'appellantCaseWithdrawalLetter'
-      | 'appellantCostsApplication'
-      | 'appellantCostsCorrespondence'
-      | 'appellantCostsWithdrawal'
-      | 'appellantStatement'
-      | 'applicationDecisionLetter'
-      | 'changedDescription'
-      | 'originalApplicationForm'
       | 'whoNotified'
+      | 'whoNotifiedSiteNotice'
+      | 'whoNotifiedLetterToNeighbours'
+      | 'whoNotifiedPressAdvert'
       | 'conservationMap'
       | 'lpaCaseCorrespondence'
       | 'lpaCostsApplication'
@@ -1847,10 +1852,6 @@ export interface LPAQuestionnaireCommand {
       | 'lpaCostsWithdrawal'
       | 'otherPartyRepresentations'
       | 'planningOfficerReport'
-      | 'costsDecisionLetter'
-      | 'caseDecisionLetter'
-      | 'crossTeamCorrespondence'
-      | 'inspectorCorrespondence'
       | null;
     [k: string]: unknown;
   }[];

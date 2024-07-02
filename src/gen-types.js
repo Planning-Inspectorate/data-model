@@ -19,7 +19,7 @@ async function run() {
     let first = true;
 
     for (const schemaName of Object.keys(s.schemas).sort()) {
-        const schema = s.schemas[schemaName]
+        const schema = s.schemas[schemaName];
         types += await compile(schema, schema['$id'], options(first));
         types += '\n';
         first = false;

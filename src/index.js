@@ -4,6 +4,8 @@ import { loadSchemas, loadSchemasSync } from './lib/load.js';
 
 const __dirname = path.dirname(url.fileURLToPath(import.meta.url));
 
+export * from './enums.js';
+
 export const schemasPath = path.join(__dirname, '..', 'schemas');
 export const commandsPath = path.join(schemasPath, 'commands');
 

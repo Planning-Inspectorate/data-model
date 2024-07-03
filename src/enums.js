@@ -96,6 +96,9 @@ export const APPEAL_DOCUMENT_TYPE = Object.freeze({
   OTHER_PARTY_REPRESENTATIONS: 'otherPartyRepresentations',
   PLANNING_OFFICER_REPORT: 'planningOfficerReport',
   WHO_NOTIFIED: 'whoNotified',
+  WHO_NOTIFIED_LETTER_TO_NEIGHBOURS: 'whoNotifiedLetterToNeighbours',
+  WHO_NOTIFIED_PRESS_ADVERT: 'whoNotifiedPressAdvert',
+  WHO_NOTIFIED_SITE_NOTICE: 'whoNotifiedSiteNotice',
 });
 
 export const APPEAL_EVENT_STATUS = Object.freeze({

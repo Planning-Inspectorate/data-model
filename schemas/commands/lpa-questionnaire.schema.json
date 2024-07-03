@@ -212,16 +212,10 @@
           "documentType": {
             "type": ["string", "null"],
             "enum": [
-              "appellantCaseCorrespondence",
-              "appellantCaseWithdrawalLetter",
-              "appellantCostsApplication",
-              "appellantCostsCorrespondence",
-              "appellantCostsWithdrawal",
-              "appellantStatement",
-              "applicationDecisionLetter",
-              "changedDescription",
-              "originalApplicationForm",
               "whoNotified",
+              "whoNotifiedSiteNotice",
+              "whoNotifiedLetterToNeighbours",
+              "whoNotifiedPressAdvert",
               "conservationMap",
               "lpaCaseCorrespondence",
               "lpaCostsApplication",
@@ -229,10 +223,6 @@
               "lpaCostsWithdrawal",
               "otherPartyRepresentations",
               "planningOfficerReport",
-              "costsDecisionLetter",
-              "caseDecisionLetter",
-              "crossTeamCorrespondence",
-              "inspectorCorrespondence",
               null
             ],
             "description": "The type of document, used for exchange, migrations and consumption from the appeal back-office system"

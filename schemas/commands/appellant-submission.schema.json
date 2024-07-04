@@ -6,11 +6,7 @@
   "$comment": "This is a combination of Appeal, Documents and Service user data",
   "type": "object",
   "additionalProperties": true,
-  "required": [
-    "casedata",
-    "documents",
-    "users"
-  ],
+  "required": ["casedata", "documents", "users"],
   "properties": {
     "casedata": {
       "type": "object",
@@ -18,7 +14,21 @@
       "properties": {
         "caseType": {
           "type": "string",
-          "enum": ["C", "D", "F", "G", "H", "L", "Q", "S", "V", "W", "X", "Y", "Z"],
+          "enum": [
+            "C",
+            "D",
+            "F",
+            "G",
+            "H",
+            "L",
+            "Q",
+            "S",
+            "V",
+            "W",
+            "X",
+            "Y",
+            "Z"
+          ],
           "description": "The internal code for an appeal type, e.g. D (Householder)"
         },
         "caseProcedure": {
@@ -99,7 +109,9 @@
           "type": ["array", "null"],
           "items": {
             "type": "string",
-            "examples": ["The site is accessible through the small gate on the left of the property"]
+            "examples": [
+              "The site is accessible through the small gate on the left of the property"
+            ]
           },
           "description": "Provided information on site accessibility"
         },
@@ -153,7 +165,9 @@
         },
         "originalDevelopmentDescription": {
           "type": ["string", "null"],
-          "examples": ["Replacement of an existing gate to access the property"],
+          "examples": [
+            "Replacement of an existing gate to access the property"
+          ],
           "description": "The original description of the development, as provided by the appellant"
         },
         "changedDevelopmentDescription": {
@@ -224,6 +238,10 @@
         "appellantCostsAppliedFor": {
           "type": ["boolean", "null"],
           "description": "Indicates if the appellant has applied for costs"
+        },
+        "greenBelt": {
+          "type": ["boolean", "null"],
+          "description": "Whether or not the site is within a green belt"
         }
       },
       "required": [
@@ -374,7 +392,21 @@
           "serviceUserType": {
             "type": "string",
             "description": "Type or category of the service user.",
-            "enum": ["Applicant", "Appellant", "Agent", "RepresentationContact", "Subscriber"]
+            "enum": [
+              "Applicant",
+              "Appellant",
+              "Agent",
+              "RepresentationContact",
+              "Subscriber"
+            ]
+          },
+          "phoneNumber": {
+            "type": ["string", "null"],
+            "description": "The primary phone number for the contact"
+          },
+          "organisation": {
+            "type": ["string", "null"],
+            "description": "An organisation associated with the contact"
           }
         },
         "required": [

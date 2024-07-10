@@ -545,6 +545,9 @@ The type of document, used for exchange, migrations and consumption from the app
 | `"changedDescription"`            |             |
 | `"originalApplicationForm"`       |             |
 | `"whoNotified"`                   |             |
+| `"whoNotifiedSiteNotice"`         |             |
+| `"whoNotifiedLetterToNeighbours"` |             |
+| `"whoNotifiedPressAdvert"`        |             |
 | `"conservationMap"`               |             |
 | `"lpaCaseCorrespondence"`         |             |
 | `"lpaCostsApplication"`           |             |

@@ -1,12 +1,13 @@
 {
   "name": "pins-data-model",
-  "version": "1.4.3",
+  "version": "1.7.1",
   "description": "JSON Schemas for the Planning Inspectorate's Data Model",
   "main": "src/index.js",
   "type": "module",
   "scripts": {
-    "gen": "npm run gen-docs && npm run gen-types",
+    "gen": "npm run gen-docs && npm run gen-enums && npm run gen-types",
     "gen-docs": "node src/gen-docs.js",
+    "gen-enums": "node src/gen-enums.js",
     "gen-types": "node src/gen-types.js"
   },
   "repository": {
@@ -19,6 +20,7 @@
   },
   "devDependencies": {
     "@adobe/jsonschema2md": "^7.1.5",
-    "json-schema-to-typescript": "^13.1.1"
+    "json-schema-to-typescript": "^14.1.0",
+    "lodash.snakecase": "^4.1.1"
   }
 }

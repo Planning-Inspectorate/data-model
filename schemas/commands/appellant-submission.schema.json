@@ -111,15 +111,17 @@
           },
           "description": "Provided information on site health and safety"
         },
+        "isGreenBelt": {
+          "type": ["boolean", "null"],
+          "description": "Indicates if the site is in a green belt"
+        },
         "siteAreaSquareMetres": {
           "type": ["number", "null"],
-          "multipleOf": 0.1,
           "examples": [45.7],
           "description": "The site area, in square meters"
         },
         "floorSpaceSquareMetres": {
           "type": ["number", "null"],
-          "multipleOf": 0.1,
           "examples": [3.5],
           "description": "The floor space, in square meters"
         },
@@ -242,6 +244,7 @@
         "siteAddressPostcode",
         "siteAccessDetails",
         "siteSafetyDetails",
+        "isGreenBelt",
         "siteAreaSquareMetres",
         "floorSpaceSquareMetres",
         "ownsAllLand",
@@ -314,18 +317,6 @@
               "applicationDecisionLetter",
               "changedDescription",
               "originalApplicationForm",
-              "whoNotified",
-              "conservationMap",
-              "lpaCaseCorrespondence",
-              "lpaCostsApplication",
-              "lpaCostsCorrespondence",
-              "lpaCostsWithdrawal",
-              "otherPartyRepresentations",
-              "planningOfficerReport",
-              "costsDecisionLetter",
-              "caseDecisionLetter",
-              "crossTeamCorrespondence",
-              "inspectorCorrespondence",
               null
             ],
             "description": "The type of document, used for exchange, migrations and consumption from the appeal back-office system"
@@ -345,6 +336,7 @@
     },
     "users": {
       "type": "array",
+      "minItems": 1,
       "items": {
         "type": "object",
         "additionalProperties": true,
@@ -369,6 +361,16 @@
             "description": "The primary email address for contact.",
             "examples": ["john.doe@example.com"]
           },
+          "telephoneNumber": {
+            "type": ["string", "null"],
+            "description": "The primary telephone contact number.",
+            "examples": ["+447123456789"]
+          },
+          "organisation": {
+            "type": ["string", "null"],
+            "description": "The name of the organisation associated with the individual.",
+            "examples": ["Tech Corp"]
+          },
           "serviceUserType": {
             "type": "string",
             "description": "Type or category of the service user.",
@@ -380,6 +382,8 @@
           "firstName",
           "lastName",
           "emailAddress",
+          "telephoneNumber",
+          "organisation",
           "serviceUserType"
         ]
       }

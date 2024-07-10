@@ -1,9 +1,8 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "$id": "appeal.schema.json",
-  "title": "Appeal Case",
+  "$id": "appeal-has.schema.json",
+  "title": "Appeal HAS Case",
   "description": "Schema defining the metadata for an appeal",
-  "$comment": "The current definition includes Householder (D) fields only",
   "type": "object",
   "additionalProperties": true,
   "required": [
@@ -41,7 +40,7 @@
     "lpaStatement",
     "caseWithdrawnDate",
     "caseTransferredDate",
-    "caseClosedDate",
+    "transferredCaseClosedDate",
     "caseDecisionOutcomeDate",
     "caseDecisionPublishedDate",
     "caseDecisionOutcome",
@@ -136,12 +135,12 @@
     },
     "allocationLevel": {
       "type": ["string", "null"],
-      "enum": ["A", "B", "C", "D", "E", "F", "G", "H"],
+      "enum": ["A", "B", "C", "D", "E", "F", "G", "H", null],
       "description": "A level used for allocation purposes"
     },
     "allocationBand": {
       "type": ["number", "null"],
-      "enum": [1, 2, 3],
+      "enum": [1, 2, 3, null],
       "description": "A band used for allocation purposes",
       "$comment": "Linked to the level, e.g. 1[E,F,G,H], 2[C,D], 3[A,B]"
     },
@@ -310,7 +309,7 @@
       "examples": ["2023-07-27T20:30:00.000Z"],
       "description": "The date the appeal was transferred to a new case of a different type"
     },
-    "caseClosedDate": {
+    "transferredCaseClosedDate": {
       "type": ["string", "null"],
       "format": "date-time",
       "examples": ["2023-07-27T20:30:00.000Z"],
@@ -414,13 +413,11 @@
     },
     "siteAreaSquareMetres": {
       "type": ["number", "null"],
-      "multipleOf": 0.1,
       "examples": [45.7],
       "description": "The site area, in square meters"
     },
     "floorSpaceSquareMetres": {
       "type": ["number", "null"],
-      "multipleOf": 0.1,
       "examples": [3.5],
       "description": "The floor space, in square meters"
     },

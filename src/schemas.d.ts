@@ -95,6 +95,9 @@ export interface AppealDocument {
     | 'changedDescription'
     | 'originalApplicationForm'
     | 'whoNotified'
+    | 'whoNotifiedSiteNotice'
+    | 'whoNotifiedLetterToNeighbours'
+    | 'whoNotifiedPressAdvert'
     | 'conservationMap'
     | 'lpaCaseCorrespondence'
     | 'lpaCostsApplication'
@@ -234,7 +237,7 @@ export interface AppealEvent {
 /**
  * Schema defining the metadata for an appeal
  */
-export interface AppealCase {
+export interface AppealHASCase {
   /**
    * Internal case identifier
    */
@@ -281,11 +284,11 @@ export interface AppealCase {
   /**
    * A level used for allocation purposes
    */
-  allocationLevel: ('A' | 'B' | 'C' | 'D' | 'E' | 'F' | 'G' | 'H') | null;
+  allocationLevel: 'A' | 'B' | 'C' | 'D' | 'E' | 'F' | 'G' | 'H' | null;
   /**
    * A band used for allocation purposes
    */
-  allocationBand: (1 | 2 | 3) | null;
+  allocationBand: 1 | 2 | 3 | null;
   /**
    * A list of specialisms for allocation purposes
    */
@@ -385,7 +388,7 @@ export interface AppealCase {
   /**
    * The date the appeal was closed and the appellant requested to resubmit
    */
-  caseClosedDate: string | null;
+  transferredCaseClosedDate: string | null;
   /**
    * The date of the appeal decision
    */
@@ -576,6 +579,33 @@ export interface Employee {
   id: string;
   firstName: string;
   lastName: string;
+  [k: string]: unknown;
+}
+
+/**
+ * A list of users from EntraID
+ */
+export interface EntraIDUserObjects {
+  /**
+   * The employee's unique identifier
+   */
+  employeeId: number;
+  /**
+   * The unique identifier within the EntraID
+   */
+  id: string;
+  /**
+   * The employee's given name
+   */
+  givenName: string;
+  /**
+   * The employee's surname
+   */
+  surname: string;
+  /**
+   * The employee's email address
+   */
+  userPrincipalName: string;
   [k: string]: unknown;
 }
 
@@ -1452,6 +1482,10 @@ export interface AppellantSubmissionCommand {
      */
     siteSafetyDetails: string[] | null;
     /**
+     * Indicates if the site is in a green belt
+     */
+    isGreenBelt: boolean | null;
+    /**
      * The site area, in square meters
      */
     siteAreaSquareMetres: number | null;
@@ -1579,44 +1613,76 @@ export interface AppellantSubmissionCommand {
       | 'applicationDecisionLetter'
       | 'changedDescription'
       | 'originalApplicationForm'
-      | 'whoNotified'
-      | 'conservationMap'
-      | 'lpaCaseCorrespondence'
-      | 'lpaCostsApplication'
-      | 'lpaCostsCorrespondence'
-      | 'lpaCostsWithdrawal'
-      | 'otherPartyRepresentations'
-      | 'planningOfficerReport'
-      | 'costsDecisionLetter'
-      | 'caseDecisionLetter'
-      | 'crossTeamCorrespondence'
-      | 'inspectorCorrespondence'
       | null;
     [k: string]: unknown;
   }[];
-  users: {
-    /**
-     * A formal greeting, e.g., Mr, Mrs, Ms.
-     */
-    salutation: string | null;
-    /**
-     * The first name of the individual.
-     */
-    firstName: string | null;
-    /**
-     * The last name of the individual.
-     */
-    lastName: string | null;
-    /**
-     * The primary email address for contact.
-     */
-    emailAddress: string | null;
-    /**
-     * Type or category of the service user.
-     */
-    serviceUserType: 'Applicant' | 'Appellant' | 'Agent' | 'RepresentationContact' | 'Subscriber';
-    [k: string]: unknown;
-  }[];
+  /**
+   * @minItems 1
+   */
+  users: [
+    {
+      /**
+       * A formal greeting, e.g., Mr, Mrs, Ms.
+       */
+      salutation: string | null;
+      /**
+       * The first name of the individual.
+       */
+      firstName: string | null;
+      /**
+       * The last name of the individual.
+       */
+      lastName: string | null;
+      /**
+       * The primary email address for contact.
+       */
+      emailAddress: string | null;
+      /**
+       * The primary telephone contact number.
+       */
+      telephoneNumber: string | null;
+      /**
+       * The name of the organisation associated with the individual.
+       */
+      organisation: string | null;
+      /**
+       * Type or category of the service user.
+       */
+      serviceUserType: 'Applicant' | 'Appellant' | 'Agent' | 'RepresentationContact' | 'Subscriber';
+      [k: string]: unknown;
+    },
+    ...{
+      /**
+       * A formal greeting, e.g., Mr, Mrs, Ms.
+       */
+      salutation: string | null;
+      /**
+       * The first name of the individual.
+       */
+      firstName: string | null;
+      /**
+       * The last name of the individual.
+       */
+      lastName: string | null;
+      /**
+       * The primary email address for contact.
+       */
+      emailAddress: string | null;
+      /**
+       * The primary telephone contact number.
+       */
+      telephoneNumber: string | null;
+      /**
+       * The name of the organisation associated with the individual.
+       */
+      organisation: string | null;
+      /**
+       * Type or category of the service user.
+       */
+      serviceUserType: 'Applicant' | 'Appellant' | 'Agent' | 'RepresentationContact' | 'Subscriber';
+      [k: string]: unknown;
+    }[]
+  ];
   [k: string]: unknown;
 }
 
@@ -1645,6 +1711,151 @@ export interface Address {
   town: string;
   postcode: string;
   country?: string;
+}
+
+/**
+ * Schema defining the data produced by the Front-Office when an LPA Questionnaire is submitted
+ */
+export interface LPAQuestionnaireCommand {
+  casedata: {
+    /**
+     * External case identifier
+     */
+    caseReference: string;
+    /**
+     * The date the LPA provided a response to the case
+     */
+    lpaQuestionnaireSubmittedDate: string | null;
+    /**
+     * A statement provided by the LPA
+     */
+    lpaStatement: string | null;
+    /**
+     * Provided information on site accessibility
+     */
+    siteAccessDetails: string[] | null;
+    /**
+     * Provided information on site health and safety
+     */
+    siteSafetyDetails: string[] | null;
+    /**
+     * Indicates if the LPA considers the appeal type appropriate
+     */
+    isCorrectAppealType: boolean | null;
+    /**
+     * Indicates if the site is in a green belt
+     */
+    isGreenBelt: boolean | null;
+    /**
+     * Indicates if the site is in a conservation area
+     */
+    inConservationArea: boolean | null;
+    /**
+     * New conditions details provided by the LPA
+     */
+    newConditionDetails: string | null;
+    /**
+     * The methods used to notify relevant parties
+     */
+    notificationMethod: string[] | null;
+    /**
+     * A list of related case references known to the appellant and the LPA
+     */
+    nearbyCaseReferences: string[] | null;
+    /**
+     * A list of neighbouring site addresses
+     */
+    neighbouringSiteAddresses:
+      | {
+          /**
+           * First line of address of the site
+           */
+          neighbouringSiteAddressLine1: string;
+          /**
+           * Second line of address of the site
+           */
+          neighbouringSiteAddressLine2: string | null;
+          /**
+           * Town / City of the site address
+           */
+          neighbouringSiteAddressTown: string;
+          /**
+           * County of the site address
+           */
+          neighbouringSiteAddressCounty: string | null;
+          /**
+           * Postal code of the site address
+           */
+          neighbouringSiteAddressPostcode: string;
+          /**
+           * Provided information on site accessibility on this address
+           */
+          neighbouringSiteAccessDetails: string | null;
+          /**
+           * Provided information on site health and safety on this address
+           */
+          neighbouringSiteSafetyDetails: string | null;
+          [k: string]: unknown;
+        }[]
+      | null;
+    /**
+     * A list of affected listed building IDs from Historic England
+     */
+    affectedListedBuildingNumbers: string[] | null;
+    /**
+     * Indicates if the LPA has applied for costs
+     */
+    lpaCostsAppliedFor: boolean | null;
+    [k: string]: unknown;
+  };
+  documents: {
+    /**
+     * The unique identifier for the document
+     */
+    documentId: string;
+    /**
+     * Current stored name of the document
+     */
+    filename: string;
+    /**
+     * Original name of document
+     */
+    originalFilename: string;
+    /**
+     * The file size, in bytes
+     */
+    size: number;
+    /**
+     * The mime type for the current version of the file
+     */
+    mime: string;
+    /**
+     * The internal location of the document
+     */
+    documentURI: string;
+    /**
+     * The creation date for the document
+     */
+    dateCreated: string;
+    /**
+     * The type of document, used for exchange, migrations and consumption from the appeal back-office system
+     */
+    documentType:
+      | 'whoNotified'
+      | 'whoNotifiedSiteNotice'
+      | 'whoNotifiedLetterToNeighbours'
+      | 'whoNotifiedPressAdvert'
+      | 'conservationMap'
+      | 'lpaCaseCorrespondence'
+      | 'lpaCostsApplication'
+      | 'lpaCostsCorrespondence'
+      | 'lpaCostsWithdrawal'
+      | 'otherPartyRepresentations'
+      | 'planningOfficerReport'
+      | null;
+    [k: string]: unknown;
+  }[];
+  [k: string]: unknown;
 }
 
 /**

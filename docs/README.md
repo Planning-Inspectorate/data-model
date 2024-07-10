@@ -2,13 +2,15 @@
 
 ## Top-level Schemas
 
-*   [Appeal Case](./appeal.md "Schema defining the metadata for an appeal") – `appeal.schema.json`
-
 *   [Appeal Document](./appeal-document.md "Schema defining the metadata for appeal documents") – `appeal-document.schema.json`
 
 *   [Appeal Event](./appeal-event.md "Schema defining the metadata for appeal events, such as site visits, inquiries, hearings") – `appeal-event.schema.json`
 
+*   [Appeal HAS Case](./appeal-has.md "Schema defining the metadata for an appeal") – `appeal-has.schema.json`
+
 *   [Employee](./employee.md "Employee schema") – `employee.schema.json`
+
+*   [Entra ID User Objects](./entraid.md "A list of users from EntraID") – `entraid.schema.json`
 
 *   [Examination Timetable](./nsip-exam-timetable.md "Examination Timetable for an NSIP Project") – `nsip-exam-timetable.schema.json`
 
@@ -32,7 +34,7 @@
 
 ### Objects
 
-*   [Untitled object in Appeal Case](./appeal-properties-neighbouringsiteaddresses-items.md) – `appeal.schema.json#/properties/neighbouringSiteAddresses/items`
+*   [Untitled object in Appeal HAS Case](./appeal-has-properties-neighbouringsiteaddresses-items.md) – `appeal-has.schema.json#/properties/neighbouringSiteAddresses/items`
 
 *   [Untitled object in Examination Timetable](./nsip-exam-timetable-defs-event.md) – `nsip-exam-timetable.schema.json#/$defs/event`
 

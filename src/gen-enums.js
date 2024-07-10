@@ -8,6 +8,7 @@ const __dirname = path.dirname(url.fileURLToPath(import.meta.url));
 
 export const constPath = path.join(__dirname, 'enums.js');
 export const constTsPath = path.join(__dirname, 'enums.d.ts');
+export const constCsjPath = path.join(__dirname, 'enums.cjs');
 
 const SPACING = '  ';
 const NEW_LINE = '\r\n';
@@ -27,14 +28,23 @@ async function run() {
     }
 
     let output = '';
+    let csjOutput = '';
     let tsOutput = '';
 
     for (const name of Object.keys(enumProps).sort()) {
         output += generateConstants(name, enumProps[name]) + NEW_LINE.repeat(2);
-        tsOutput += generateConstants(name, enumProps[name], true) + NEW_LINE.repeat(2);
+        csjOutput += generateConstants(name, enumProps[name], {csj: true}) + NEW_LINE.repeat(2);
+        tsOutput += generateConstants(name, enumProps[name], {ts: true}) + NEW_LINE.repeat(2);
     }
 
+    csjOutput += `module.exports = {` + NEW_LINE;
+    for (const name of Object.keys(enumProps).sort()) {
+        csjOutput += `${SPACING}${formatName(name)},` + NEW_LINE;
+    }
+    csjOutput += `};` + NEW_LINE;
+
     await fs.writeFile(constPath, output);
+    await fs.writeFile(constCsjPath, csjOutput);
     await fs.writeFile(constTsPath, tsOutput);
 }
 
@@ -42,15 +52,18 @@ async function run() {
  * Generate JS code to define exported constants for the given enum values
  *
  * @param {string} name 
- * @param {string[]} values 
- * @param {boolean} [ts] - whether to generate the TS type or JS code
+ * @param {string[]} values
+ * @param {Object} opts
+ * @param {boolean} [opts.ts] - whether to generate the TS type or JS code
+ * @param {boolean} [opts.csj] - whether to generate the CSJ code or ES6 code
  * @returns {string}
  */
-function generateConstants(name, values, ts = false) {
+function generateConstants(name, values, {ts = false, csj = false} = {}) {
     const freezeStart = ts ? '' : 'Object.freeze(';
     const freezeEnd = ts ? '' : ')';
+    const exportPrefix = csj ? '' : 'export ';
     const lines = [
-        `export const ${formatName(name)} = ${freezeStart}{`
+        `${exportPrefix}const ${formatName(name)} = ${freezeStart}{`
     ];
     /**
      * @param {string} line

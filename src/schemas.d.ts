@@ -2036,8 +2036,9 @@ export interface InterestedParty1 {
 export type EventSchemas =
   | AppealDocument
   | AppealEvent
-  | AppealCase
+  | AppealHASCase
   | Employee
+  | EntraIDUserObjects
   | Folder
   | NSIPDocument
   | ExaminationTimetable
@@ -2051,6 +2052,7 @@ export type EventSchemas =
 export type CommandSchemas =
   | AppellantSubmissionCommand
   | InterestedParty
+  | LPAQuestionnaireCommand
   | NewDeadlineSubmission
   | NsipExamTimetableSubmission
   | RegisterNsipSubscription
@@ -2062,8 +2064,9 @@ export type LoadedSchemas = {
   schemas: {
     'appeal-document.schema.json': AppealDocument;
     'appeal-event.schema.json': AppealEvent;
-    'appeal.schema.json': AppealCase;
+    'appeal-has.schema.json': AppealHASCase;
     'employee.schema.json': Employee;
+    'entraid.schema.json': EntraIDUserObjects;
     'folder.schema.json': Folder;
     'nsip-document.schema.json': NSIPDocument;
     'nsip-exam-timetable.schema.json': ExaminationTimetable;
@@ -2077,6 +2080,7 @@ export type LoadedSchemas = {
   commands: {
     'appellant-submission.schema.json': AppellantSubmissionCommand;
     'interested-party.schema.json': InterestedParty;
+    'lpa-questionnaire.schema.json': LPAQuestionnaireCommand;
     'new-deadline-submission.schema.json': NewDeadlineSubmission;
     'nsip-exam-timetable-submission.schema.json': NsipExamTimetableSubmission;
     'register-nsip-subscription.schema.json': RegisterNsipSubscription;
@@ -2087,8 +2091,9 @@ export type LoadedSchemas = {
 export type SchemaName =
   | 'appeal-document'
   | 'appeal-event'
-  | 'appeal'
+  | 'appeal-has'
   | 'employee'
+  | 'entraid'
   | 'folder'
   | 'nsip-document'
   | 'nsip-exam-timetable'
@@ -2100,6 +2105,7 @@ export type SchemaName =
   | 'service-user'
   | 'appellant-submission'
   | 'interested-party'
+  | 'lpa-questionnaire'
   | 'new-deadline-submission'
   | 'nsip-exam-timetable-submission'
   | 'register-nsip-subscription'

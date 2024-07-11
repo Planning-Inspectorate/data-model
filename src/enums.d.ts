@@ -405,3 +405,27 @@ export const STATUS = {
   UNCHECKED: 'unchecked',
 };
 
+export const SCHEMA_NAMES = {
+  APPEAL_DOCUMENT: 'appeal-document',
+  APPEAL_EVENT: 'appeal-event',
+  APPEAL_HAS: 'appeal-has',
+  APPELLANT_SUBMISSION: 'appellant-submission',
+  EMPLOYEE: 'employee',
+  ENTRAID: 'entraid',
+  FOLDER: 'folder',
+  INTERESTED_PARTY: 'interested-party',
+  LPA_QUESTIONNAIRE: 'lpa-questionnaire',
+  NEW_DEADLINE_SUBMISSION: 'new-deadline-submission',
+  NSIP_DOCUMENT: 'nsip-document',
+  NSIP_EXAM_TIMETABLE: 'nsip-exam-timetable',
+  NSIP_EXAM_TIMETABLE_SUBMISSION: 'nsip-exam-timetable-submission',
+  NSIP_PROJECT: 'nsip-project',
+  NSIP_PROJECT_UPDATE: 'nsip-project-update',
+  NSIP_REPRESENTATION: 'nsip-representation',
+  NSIP_SUBSCRIPTION: 'nsip-subscription',
+  REGISTER_NSIP_SUBSCRIPTION: 'register-nsip-subscription',
+  REGISTER_REPRESENTATION: 'register-representation',
+  S_51_ADVICE: 's51-advice',
+  SERVICE_USER: 'service-user',
+};
+

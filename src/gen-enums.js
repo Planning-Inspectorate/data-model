@@ -8,9 +8,18 @@ const __dirname = path.dirname(url.fileURLToPath(import.meta.url));
 
 export const constPath = path.join(__dirname, 'enums.js');
 export const constTsPath = path.join(__dirname, 'enums.d.ts');
+export const constCsjPath = path.join(__dirname, 'enums.cjs');
+
+/** @typedef {'js' | 'cjs' | 'ts'} OutputModes */
 
 const SPACING = '  ';
 const NEW_LINE = '\r\n';
+/** @type {{path: string, mode: OutputModes}[]} */
+const OUTPUTS = [
+  { path: constPath, mode: 'js' },
+  { path: constCsjPath, mode: 'cjs' },
+  { path: constTsPath, mode: 'ts' },
+];
 
 /**
  * Load all schemas and generate JS constant definitions
@@ -26,13 +35,14 @@ async function run() {
     collectEnumProps(enumProps, schema.properties, schemaPrefix(schemaName));
   }
 
-  let output = '';
-  let tsOutput = '';
+  const outputs = OUTPUTS.map((o) => ({ ...o, output: '' }));
 
   for (const name of Object.keys(enumProps).sort()) {
-    output += generateConstants(name, enumProps[name]) + NEW_LINE.repeat(2);
-    tsOutput +=
-      generateConstants(name, enumProps[name], true) + NEW_LINE.repeat(2);
+    for (let ii in outputs) {
+      outputs[ii].output +=
+        generateConstants(name, enumProps[name], { mode: outputs[ii].mode }) +
+        NEW_LINE.repeat(2);
+    }
   }
 
   const schemaNames = Object.keys(s)
@@ -40,12 +50,16 @@ async function run() {
     .flat()
     .map((n) => n.split('.')[0]);
 
-  output += generateConstants('SCHEMA_NAMES', schemaNames) + NEW_LINE.repeat(2);
-  tsOutput +=
-    generateConstants('SCHEMA_NAMES', schemaNames, true) + NEW_LINE.repeat(2);
+  for (let ii in outputs) {
+    outputs[ii].output +=
+      generateConstants('SCHEMA_NAMES', schemaNames, {
+        mode: outputs[ii].mode,
+      }) + NEW_LINE.repeat(2);
+  }
 
-  await fs.writeFile(constPath, output);
-  await fs.writeFile(constTsPath, tsOutput);
+  for (let { path, output } of outputs) {
+    await fs.writeFile(path, output);
+  }
 }
 
 /**
@@ -53,13 +67,14 @@ async function run() {
  *
  * @param {string} name
  * @param {string[]} values
- * @param {boolean} [ts] - whether to generate the TS type or JS code
+ * @param {{ mode: 'js' | 'cjs' | 'ts' }} [opts]
  * @returns {string}
  */
-function generateConstants(name, values, ts = false) {
-  const freezeStart = ts ? '' : 'Object.freeze(';
-  const freezeEnd = ts ? '' : ')';
-  const lines = [`export const ${formatName(name)} = ${freezeStart}{`];
+function generateConstants(name, values, { mode } = { mode: 'js' }) {
+  const freezeStart = mode === 'ts' ? '' : 'Object.freeze(';
+  const freezeEnd = mode === 'ts' ? '' : ')';
+  const exportPrefix = mode === 'cjs' ? 'exports.' : 'export const ';
+  const lines = [`${exportPrefix}${formatName(name)} = ${freezeStart}{`];
   /**
    * @param {string} line
    * @param {number} spacing

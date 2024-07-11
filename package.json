@@ -1,9 +1,13 @@
 {
   "name": "pins-data-model",
-  "version": "1.7.1",
+  "version": "1.7.2",
   "description": "JSON Schemas for the Planning Inspectorate's Data Model",
   "main": "src/index.js",
   "type": "module",
+  "exports": {
+    "import": "./src/index.js",
+    "require": "./src/index.cjs"
+  },
   "scripts": {
     "gen": "npm run gen-docs && npm run gen-enums && npm run gen-types",
     "gen-docs": "node src/gen-docs.js",

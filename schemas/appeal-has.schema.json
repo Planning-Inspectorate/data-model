@@ -90,6 +90,12 @@
       "examples": ["7002471"],
       "description": "External case identifier"
     },
+    "submissionId": {
+      "type": ["string", "null"],
+      "format": "uuid",
+      "examples": ["7f45748c-2342-4b59-b934-ad6183e8d834"],
+      "description": "Case submission id - link to draft submission created by appellant"
+    },
     "caseStatus": {
       "type": "string",
       "enum": [
@@ -399,7 +405,9 @@
       "type": ["array", "null"],
       "items": {
         "type": "string",
-        "examples": ["The site is accessible through the small gate on the left of the property"]
+        "examples": [
+          "The site is accessible through the small gate on the left of the property"
+        ]
       },
       "description": "Provided information on site accessibility"
     },
@@ -456,7 +464,7 @@
       "description": "Indicates if the appellant has advertised the appeal to the LPA decision"
     },
     "notificationMethod": {
-      "type":["array", "null"],
+      "type": ["array", "null"],
       "items": {
         "type": "string",
         "examples": ["notice", "letter", "advert"]
@@ -478,7 +486,9 @@
     },
     "newConditionDetails": {
       "type": ["string", "null"],
-      "examples": ["Since the original application, a number of things have changed..."],
+      "examples": [
+        "Since the original application, a number of things have changed..."
+      ],
       "description": "New conditions details provided by the LPA"
     },
     "nearbyCaseReferences": {

@@ -16,6 +16,12 @@
       "type": "object",
       "additionalProperties": true,
       "properties": {
+        "submissionId": {
+          "type": "string",
+          "format": "uuid",
+          "examples": ["7f45748c-2342-4b59-b934-ad6183e8d834"],
+          "description": "Case submission id - link to draft submission created by appellant"
+        },
         "caseType": {
           "type": "string",
           "enum": ["C", "D", "F", "G", "H", "L", "Q", "S", "V", "W", "X", "Y", "Z"],
@@ -227,6 +233,7 @@
         }
       },
       "required": [
+        "submissionId",
         "caseType",
         "caseProcedure",
         "lpaCode",

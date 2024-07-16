@@ -247,6 +247,10 @@ export interface AppealHASCase {
    */
   caseReference: string;
   /**
+   * Case submission id - link to draft submission created by appellant
+   */
+  submissionId?: string | null;
+  /**
    * The processing status for the appeal
    */
   caseStatus:
@@ -1413,6 +1417,10 @@ export interface ServiceUser {
  */
 export interface AppellantSubmissionCommand {
   casedata: {
+    /**
+     * Case submission id - link to draft submission created by appellant
+     */
+    submissionId: string;
     /**
      * The internal code for an appeal type, e.g. D (Householder)
      */

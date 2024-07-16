@@ -8,6 +8,7 @@
 | :------------------------------------------------------------------------------ | :-------- | :------- | :------------- | :----------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | [caseId](#caseid)                                                               | `integer` | Required | can be null    | [Appeal HAS Case](appeal-has-properties-caseid.md "appeal-has.schema.json#/properties/caseId")                                                               |
 | [caseReference](#casereference)                                                 | `string`  | Required | cannot be null | [Appeal HAS Case](appeal-has-properties-casereference.md "appeal-has.schema.json#/properties/caseReference")                                                 |
+| [submissionId](#submissionid)                                                   | `string`  | Optional | can be null    | [Appeal HAS Case](appeal-has-properties-submissionid.md "appeal-has.schema.json#/properties/submissionId")                                                   |
 | [caseStatus](#casestatus)                                                       | `string`  | Required | cannot be null | [Appeal HAS Case](appeal-has-properties-casestatus.md "appeal-has.schema.json#/properties/caseStatus")                                                       |
 | [caseType](#casetype)                                                           | `string`  | Required | cannot be null | [Appeal HAS Case](appeal-has-properties-casetype.md "appeal-has.schema.json#/properties/caseType")                                                           |
 | [caseProcedure](#caseprocedure)                                                 | `string`  | Required | cannot be null | [Appeal HAS Case](appeal-has-properties-caseprocedure.md "appeal-has.schema.json#/properties/caseProcedure")                                                 |
@@ -126,6 +127,34 @@ External case identifier
 
 ```json
 "7002471"
+```
+
+## submissionId
+
+Case submission id - link to draft submission created by appellant
+
+`submissionId`
+
+*   is optional
+
+*   Type: `string`
+
+*   can be null
+
+*   defined in: [Appeal HAS Case](appeal-has-properties-submissionid.md "appeal-has.schema.json#/properties/submissionId")
+
+### submissionId Type
+
+`string`
+
+### submissionId Constraints
+
+**UUID**: the string must be a UUID, according to [RFC 4122](https://tools.ietf.org/html/rfc4122 "check the specification")
+
+### submissionId Examples
+
+```json
+"7f45748c-2342-4b59-b934-ad6183e8d834"
 ```
 
 ## caseStatus

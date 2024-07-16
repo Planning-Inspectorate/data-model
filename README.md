@@ -205,7 +205,7 @@ Once a schema is updated, it is important to update the TypeScript definitions b
 
 and update the generated JavaScript enum constants by running:
 
-`npm run gen-enum`
+`npm run gen-enums`
 
 and update the generated markdown by running:
 

@@ -826,6 +826,7 @@ export interface Event {
 }
 export interface LineItem {
   description: string;
+  descriptionWelsh?: string | null;
   [k: string]: unknown;
 }
 

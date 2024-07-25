@@ -91,6 +91,9 @@
 			"properties": {
 				"description": {
 					"type": "string"
+				},
+				"descriptionWelsh": {
+					"type": ["string", "null"]
 				}
 			}
 		}

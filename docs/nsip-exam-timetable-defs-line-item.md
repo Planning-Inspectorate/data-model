@@ -4,10 +4,11 @@
 
 # line-item Properties
 
-| Property                    | Type     | Required | Nullable       | Defined by                                                                                                                                                      |
-| :-------------------------- | :------- | :------- | :------------- | :-------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [description](#description) | `string` | Required | cannot be null | [Examination Timetable](nsip-exam-timetable-defs-line-item-properties-description.md "nsip-exam-timetable.schema.json#/$defs/line-item/properties/description") |
-| Additional Properties       | Any      | Optional | can be null    |                                                                                                                                                                 |
+| Property                              | Type     | Required | Nullable       | Defined by                                                                                                                                                                |
+| :------------------------------------ | :------- | :------- | :------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| [description](#description)           | `string` | Required | cannot be null | [Examination Timetable](nsip-exam-timetable-defs-line-item-properties-description.md "nsip-exam-timetable.schema.json#/$defs/line-item/properties/description")           |
+| [descriptionWelsh](#descriptionwelsh) | `string` | Optional | can be null    | [Examination Timetable](nsip-exam-timetable-defs-line-item-properties-descriptionwelsh.md "nsip-exam-timetable.schema.json#/$defs/line-item/properties/descriptionWelsh") |
+| Additional Properties                 | Any      | Optional | can be null    |                                                                                                                                                                           |
 
 ## description
 
@@ -24,6 +25,24 @@
 *   defined in: [Examination Timetable](nsip-exam-timetable-defs-line-item-properties-description.md "nsip-exam-timetable.schema.json#/$defs/line-item/properties/description")
 
 ### description Type
+
+`string`
+
+## descriptionWelsh
+
+
+
+`descriptionWelsh`
+
+*   is optional
+
+*   Type: `string`
+
+*   can be null
+
+*   defined in: [Examination Timetable](nsip-exam-timetable-defs-line-item-properties-descriptionwelsh.md "nsip-exam-timetable.schema.json#/$defs/line-item/properties/descriptionWelsh")
+
+### descriptionWelsh Type
 
 `string`
 

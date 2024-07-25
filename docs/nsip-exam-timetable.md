@@ -305,10 +305,11 @@ Reference this group by using
 {"$ref":"nsip-exam-timetable.schema.json#/$defs/line-item"}
 ```
 
-| Property                      | Type     | Required | Nullable       | Defined by                                                                                                                                                      |
-| :---------------------------- | :------- | :------- | :------------- | :-------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [description](#description-1) | `string` | Required | cannot be null | [Examination Timetable](nsip-exam-timetable-defs-line-item-properties-description.md "nsip-exam-timetable.schema.json#/$defs/line-item/properties/description") |
-| Additional Properties         | Any      | Optional | can be null    |                                                                                                                                                                 |
+| Property                                | Type     | Required | Nullable       | Defined by                                                                                                                                                                |
+| :-------------------------------------- | :------- | :------- | :------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| [description](#description-1)           | `string` | Required | cannot be null | [Examination Timetable](nsip-exam-timetable-defs-line-item-properties-description.md "nsip-exam-timetable.schema.json#/$defs/line-item/properties/description")           |
+| [descriptionWelsh](#descriptionwelsh-1) | `string` | Optional | can be null    | [Examination Timetable](nsip-exam-timetable-defs-line-item-properties-descriptionwelsh.md "nsip-exam-timetable.schema.json#/$defs/line-item/properties/descriptionWelsh") |
+| Additional Properties                   | Any      | Optional | can be null    |                                                                                                                                                                           |
 
 ### description
 
@@ -325,6 +326,24 @@ Reference this group by using
 *   defined in: [Examination Timetable](nsip-exam-timetable-defs-line-item-properties-description.md "nsip-exam-timetable.schema.json#/$defs/line-item/properties/description")
 
 #### description Type
+
+`string`
+
+### descriptionWelsh
+
+
+
+`descriptionWelsh`
+
+*   is optional
+
+*   Type: `string`
+
+*   can be null
+
+*   defined in: [Examination Timetable](nsip-exam-timetable-defs-line-item-properties-descriptionwelsh.md "nsip-exam-timetable.schema.json#/$defs/line-item/properties/descriptionWelsh")
+
+#### descriptionWelsh Type
 
 `string`
 

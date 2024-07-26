@@ -199,17 +199,26 @@ print(schemas)
 
 ## Updates
 
-Once a schema is updated, it is important to update the TypeScript definitions by running:
+Once a schema is updated, it is important to run
+
+`npm run gen`
+
+This runs the following scripts, update the TypeScript definitions:
 
 `npm run gen-types`
 
-and update the generated JavaScript enum constants by running:
+and update the generated JavaScript enum constants:
 
 `npm run gen-enums`
 
-and update the generated markdown by running:
+and update the generated markdown:
 
 `npm run gen-docs`
+
+and generate a cjs version:
+
+`npm run gen-cjs`
+
 
 and also tag the repo with a new version (format TBC).
 

@@ -1,17 +1,8 @@
-import * as Schemas from './schemas';
-export * from './enums';
-
-export interface LoadedSchemas {
-    schemas: {
-        [name: string]: any
-    }
-    commands: {
-        [name: string]: any
-    }
-}
+import { LoadedSchemas } from './schemas';
 
 export const schemasPath: string;
 export const commandsPath: string;
 export function loadAllSchemas(): Promise<LoadedSchemas>;
 
-export { Schemas };
+export * from './schemas';
+export * from './enums';

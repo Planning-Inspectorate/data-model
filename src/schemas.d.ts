@@ -2042,3 +2042,80 @@ export interface InterestedParty1 {
   [k: string]: unknown;
 }
 
+export type EventSchemas =
+  | AppealDocument
+  | AppealEvent
+  | AppealHASCase
+  | Employee
+  | EntraIDUserObjects
+  | Folder
+  | NSIPDocument
+  | ExaminationTimetable
+  | NSIPProjectUpdate
+  | NSIPProject
+  | Representation
+  | NsipSubscription
+  | S51Advice
+  | ServiceUser;
+
+export type CommandSchemas =
+  | AppellantSubmissionCommand
+  | InterestedParty
+  | LPAQuestionnaireCommand
+  | NewDeadlineSubmission
+  | NsipExamTimetableSubmission
+  | RegisterNsipSubscription
+  | RegisterRepresentation;
+
+export type Schemas = EventSchemas | CommandSchemas;
+
+export type LoadedSchemas = {
+  schemas: {
+    'appeal-document.schema.json': AppealDocument;
+    'appeal-event.schema.json': AppealEvent;
+    'appeal-has.schema.json': AppealHASCase;
+    'employee.schema.json': Employee;
+    'entraid.schema.json': EntraIDUserObjects;
+    'folder.schema.json': Folder;
+    'nsip-document.schema.json': NSIPDocument;
+    'nsip-exam-timetable.schema.json': ExaminationTimetable;
+    'nsip-project-update.schema.json': NSIPProjectUpdate;
+    'nsip-project.schema.json': NSIPProject;
+    'nsip-representation.schema.json': Representation;
+    'nsip-subscription.schema.json': NsipSubscription;
+    's51-advice.schema.json': S51Advice;
+    'service-user.schema.json': ServiceUser;
+  };
+  commands: {
+    'appellant-submission.schema.json': AppellantSubmissionCommand;
+    'interested-party.schema.json': InterestedParty;
+    'lpa-questionnaire.schema.json': LPAQuestionnaireCommand;
+    'new-deadline-submission.schema.json': NewDeadlineSubmission;
+    'nsip-exam-timetable-submission.schema.json': NsipExamTimetableSubmission;
+    'register-nsip-subscription.schema.json': RegisterNsipSubscription;
+    'register-representation.schema.json': RegisterRepresentation;
+  };
+};
+
+export type SchemaName =
+  | 'appeal-document'
+  | 'appeal-event'
+  | 'appeal-has'
+  | 'employee'
+  | 'entraid'
+  | 'folder'
+  | 'nsip-document'
+  | 'nsip-exam-timetable'
+  | 'nsip-project-update'
+  | 'nsip-project'
+  | 'nsip-representation'
+  | 'nsip-subscription'
+  | 's51-advice'
+  | 'service-user'
+  | 'appellant-submission'
+  | 'interested-party'
+  | 'lpa-questionnaire'
+  | 'new-deadline-submission'
+  | 'nsip-exam-timetable-submission'
+  | 'register-nsip-subscription'
+  | 'register-representation'

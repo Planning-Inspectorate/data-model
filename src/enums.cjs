@@ -1,4 +1,4 @@
-const APPEAL_ALLOCATION_LEVEL = Object.freeze({
+exports.APPEAL_ALLOCATION_LEVEL = Object.freeze({
   A: 'A',
   B: 'B',
   C: 'C',
@@ -9,26 +9,26 @@ const APPEAL_ALLOCATION_LEVEL = Object.freeze({
   H: 'H',
 });
 
-const APPEAL_APPLICATION_DECISION = Object.freeze({
+exports.APPEAL_APPLICATION_DECISION = Object.freeze({
   GRANTED: 'granted',
   NOT_RECEIVED: 'not_received',
   REFUSED: 'refused',
 });
 
-const APPEAL_CASE_DECISION_OUTCOME = Object.freeze({
+exports.APPEAL_CASE_DECISION_OUTCOME = Object.freeze({
   ALLOWED: 'allowed',
   DISMISSED: 'dismissed',
   INVALID: 'invalid',
   SPLIT_DECISION: 'split_decision',
 });
 
-const APPEAL_CASE_PROCEDURE = Object.freeze({
+exports.APPEAL_CASE_PROCEDURE = Object.freeze({
   HEARING: 'hearing',
   INQUIRY: 'inquiry',
   WRITTEN: 'written',
 });
 
-const APPEAL_CASE_STAGE = Object.freeze({
+exports.APPEAL_CASE_STAGE = Object.freeze({
   APPEAL_DECISION: 'appeal-decision',
   APPELLANT_CASE: 'appellant-case',
   COSTS: 'costs',
@@ -38,7 +38,7 @@ const APPEAL_CASE_STAGE = Object.freeze({
   THIRD_PARTY_COMMENTS: 'third-party-comments',
 });
 
-const APPEAL_CASE_STATUS = Object.freeze({
+exports.APPEAL_CASE_STATUS = Object.freeze({
   ASSIGN_CASE_OFFICER: 'assign_case_officer',
   AWAITING_TRANSFER: 'awaiting_transfer',
   CLOSED: 'closed',
@@ -52,7 +52,7 @@ const APPEAL_CASE_STATUS = Object.freeze({
   WITHDRAWN: 'withdrawn',
 });
 
-const APPEAL_CASE_TYPE = Object.freeze({
+exports.APPEAL_CASE_TYPE = Object.freeze({
   C: 'C',
   D: 'D',
   F: 'F',
@@ -68,13 +68,13 @@ const APPEAL_CASE_TYPE = Object.freeze({
   Z: 'Z',
 });
 
-const APPEAL_CASE_VALIDATION_OUTCOME = Object.freeze({
+exports.APPEAL_CASE_VALIDATION_OUTCOME = Object.freeze({
   INCOMPLETE: 'incomplete',
   INVALID: 'invalid',
   VALID: 'valid',
 });
 
-const APPEAL_DOCUMENT_TYPE = Object.freeze({
+exports.APPEAL_DOCUMENT_TYPE = Object.freeze({
   APPELLANT_CASE_CORRESPONDENCE: 'appellantCaseCorrespondence',
   APPELLANT_CASE_WITHDRAWAL_LETTER: 'appellantCaseWithdrawalLetter',
   APPELLANT_COSTS_APPLICATION: 'appellantCostsApplication',
@@ -101,7 +101,7 @@ const APPEAL_DOCUMENT_TYPE = Object.freeze({
   WHO_NOTIFIED_SITE_NOTICE: 'whoNotifiedSiteNotice',
 });
 
-const APPEAL_EVENT_STATUS = Object.freeze({
+exports.APPEAL_EVENT_STATUS = Object.freeze({
   CHANGE_OF_PROCEDURE: 'change_of_procedure',
   CONFIRMED: 'confirmed',
   IN_ABEYANCE: 'in_abeyance',
@@ -112,7 +112,7 @@ const APPEAL_EVENT_STATUS = Object.freeze({
   WITHDRAWN: 'withdrawn',
 });
 
-const APPEAL_EVENT_TYPE = Object.freeze({
+exports.APPEAL_EVENT_TYPE = Object.freeze({
   HEARING: 'hearing',
   HEARING_VIRTUAL: 'hearing_virtual',
   IN_HOUSE: 'in_house',
@@ -125,55 +125,55 @@ const APPEAL_EVENT_TYPE = Object.freeze({
   SITE_VISIT_UNACCOMPANIED: 'site_visit_unaccompanied',
 });
 
-const APPEAL_KNOWS_ALL_OWNERS = Object.freeze({
+exports.APPEAL_KNOWS_ALL_OWNERS = Object.freeze({
   NO: 'No',
   SOME: 'Some',
   YES: 'Yes',
 });
 
-const APPEAL_KNOWS_OTHER_OWNERS = Object.freeze({
+exports.APPEAL_KNOWS_OTHER_OWNERS = Object.freeze({
   NO: 'No',
   SOME: 'Some',
   YES: 'Yes',
 });
 
-const APPEAL_LINKED_CASE_STATUS = Object.freeze({
+exports.APPEAL_LINKED_CASE_STATUS = Object.freeze({
   CHILD: 'child',
   LEAD: 'lead',
 });
 
-const APPEAL_LPA_QUESTIONNAIRE_VALIDATION_OUTCOME = Object.freeze({
+exports.APPEAL_LPA_QUESTIONNAIRE_VALIDATION_OUTCOME = Object.freeze({
   COMPLETE: 'complete',
   INCOMPLETE: 'incomplete',
 });
 
-const APPEAL_ORIGIN = Object.freeze({
+exports.APPEAL_ORIGIN = Object.freeze({
   CITIZEN: 'citizen',
   LPA: 'lpa',
   OGD: 'ogd',
   PINS: 'pins',
 });
 
-const APPEAL_REDACTED_STATUS = Object.freeze({
+exports.APPEAL_REDACTED_STATUS = Object.freeze({
   NO_REDACTION_REQUIRED: 'no_redaction_required',
   NOT_REDACTED: 'not_redacted',
   REDACTED: 'redacted',
 });
 
-const APPEAL_SOURCE_SYSTEM = Object.freeze({
+exports.APPEAL_SOURCE_SYSTEM = Object.freeze({
   ACP: 'acp',
   BACK_OFFICE_APPEALS: 'back-office-appeals',
   HORIZON: 'horizon',
   SHAREPOINT: 'sharepoint',
 });
 
-const APPEAL_VIRUS_CHECK_STATUS = Object.freeze({
+exports.APPEAL_VIRUS_CHECK_STATUS = Object.freeze({
   AFFECTED: 'affected',
   NOT_SCANNED: 'not_scanned',
   SCANNED: 'scanned',
 });
 
-const CASE_STAGE = Object.freeze({
+exports.CASE_STAGE = Object.freeze({
   0: '0',
   ACCEPTANCE: 'acceptance',
   CORRESPONDENCE: 'correspondence',
@@ -188,25 +188,25 @@ const CASE_STAGE = Object.freeze({
   WITHDRAWN: 'withdrawn',
 });
 
-const METHOD = Object.freeze({
+exports.METHOD = Object.freeze({
   EMAIL: 'email',
   MEETING: 'meeting',
   PHONE: 'phone',
   POST: 'post',
 });
 
-const NSIP_CASE_TYPE = Object.freeze({
+exports.NSIP_CASE_TYPE = Object.freeze({
   HAS: 'has',
   NSIP: 'nsip',
 });
 
-const NSIP_DECISION = Object.freeze({
+exports.NSIP_DECISION = Object.freeze({
   APPROVED: 'approved',
   REFUSED: 'refused',
   SPLIT_DECISION: 'split-decision',
 });
 
-const NSIP_DOCUMENT_CASE_STAGE = Object.freeze({
+exports.NSIP_DOCUMENT_CASE_STAGE = Object.freeze({
   0: '0',
   ACCEPTANCE: 'acceptance',
   CORRESPONDENCE: 'correspondence',
@@ -221,12 +221,12 @@ const NSIP_DOCUMENT_CASE_STAGE = Object.freeze({
   WITHDRAWN: 'withdrawn',
 });
 
-const NSIP_LANGUAGE = Object.freeze({
+exports.NSIP_LANGUAGE = Object.freeze({
   ENGLISH: 'English',
   WELSH: 'Welsh',
 });
 
-const NSIP_MAP_ZOOM_LEVEL = Object.freeze({
+exports.NSIP_MAP_ZOOM_LEVEL = Object.freeze({
   BOROUGH: 'borough',
   CITY: 'city',
   COUNTRY: 'country',
@@ -238,14 +238,14 @@ const NSIP_MAP_ZOOM_LEVEL = Object.freeze({
   TOWN: 'town',
 });
 
-const NSIP_ORIGIN = Object.freeze({
+exports.NSIP_ORIGIN = Object.freeze({
   CITIZEN: 'citizen',
   LPA: 'lpa',
   OGD: 'ogd',
   PINS: 'pins',
 });
 
-const NSIP_PROJECT_TYPE = Object.freeze({
+exports.NSIP_PROJECT_TYPE = Object.freeze({
   BC_01_OFFICE_USE: 'BC01 - Office Use',
   BC_02_RESEARCH_AND_DEVELOPMENT_OF_PRODUCTS_OR_PROCESSES: 'BC02 - Research and Development of Products or Processes',
   BC_03_AN_INDUSTRIAL_PROCESS_OR_PROCESSES: 'BC03 - An Industrial Process or Processes',
@@ -273,12 +273,12 @@ const NSIP_PROJECT_TYPE = Object.freeze({
   WW_01_WASTE_WATER_TREATMENT_PLANTS: 'WW01 - Waste Water Treatment Plants',
 });
 
-const NSIP_PUBLISH_STATUS = Object.freeze({
+exports.NSIP_PUBLISH_STATUS = Object.freeze({
   PUBLISHED: 'published',
   UNPUBLISHED: 'unpublished',
 });
 
-const NSIP_PUBLISHED_STATUS = Object.freeze({
+exports.NSIP_PUBLISHED_STATUS = Object.freeze({
   ARCHIVED: 'archived',
   AWAITING_UPLOAD: 'awaiting_upload',
   CHECKED: 'checked',
@@ -291,24 +291,24 @@ const NSIP_PUBLISHED_STATUS = Object.freeze({
   UNPUBLISHING: 'unpublishing',
 });
 
-const NSIP_REDACTED_STATUS = Object.freeze({
+exports.NSIP_REDACTED_STATUS = Object.freeze({
   NOT_REDACTED: 'not_redacted',
   REDACTED: 'redacted',
 });
 
-const NSIP_REGISTER_FOR = Object.freeze({
+exports.NSIP_REGISTER_FOR = Object.freeze({
   FAMILY_GROUP: 'FAMILY_GROUP',
   ORGANISATION: 'ORGANISATION',
   PERSON: 'PERSON',
 });
 
-const NSIP_REPRESENTATION_FROM = Object.freeze({
+exports.NSIP_REPRESENTATION_FROM = Object.freeze({
   AGENT: 'AGENT',
   ORGANISATION: 'ORGANISATION',
   PERSON: 'PERSON',
 });
 
-const NSIP_REPRESENTATION_TYPE = Object.freeze({
+exports.NSIP_REPRESENTATION_TYPE = Object.freeze({
   ANOTHER_INDIVIDUAL: 'Another Individual',
   LOCAL_AUTHORITIES: 'Local Authorities',
   MEMBERS_OF_THE_PUBLIC_BUSINESSES: 'Members of the Public/Businesses',
@@ -318,7 +318,7 @@ const NSIP_REPRESENTATION_TYPE = Object.freeze({
   STATUTORY_CONSULTEES: 'Statutory Consultees',
 });
 
-const NSIP_SECTOR = Object.freeze({
+exports.NSIP_SECTOR = Object.freeze({
   BC_BUSINESS_AND_COMMERCIAL: 'BC - Business and Commercial',
   EN_ENERGY: 'EN - Energy',
   TR_TRANSPORT: 'TR - Transport',
@@ -327,19 +327,19 @@ const NSIP_SECTOR = Object.freeze({
   WW_WASTE_WATER: 'WW - Waste Water',
 });
 
-const NSIP_SECURITY_CLASSIFICATION = Object.freeze({
+exports.NSIP_SECURITY_CLASSIFICATION = Object.freeze({
   OFFICIAL: 'official',
   PUBLIC: 'public',
   SECRET: 'secret',
   TOP_SECRET: 'top-secret',
 });
 
-const NSIP_SOURCE_SYSTEM = Object.freeze({
+exports.NSIP_SOURCE_SYSTEM = Object.freeze({
   BACK_OFFICE_APPLICATIONS: 'back-office-applications',
   HORIZON: 'horizon',
 });
 
-const NSIP_STAGE = Object.freeze({
+exports.NSIP_STAGE = Object.freeze({
   ACCEPTANCE: 'acceptance',
   DECISION: 'decision',
   DRAFT: 'draft',
@@ -351,7 +351,7 @@ const NSIP_STAGE = Object.freeze({
   WITHDRAWN: 'withdrawn',
 });
 
-const NSIP_STATUS = Object.freeze({
+exports.NSIP_STATUS = Object.freeze({
   ARCHIVED: 'archived',
   AWAITING_REVIEW: 'awaiting_review',
   DRAFT: 'draft',
@@ -362,14 +362,14 @@ const NSIP_STATUS = Object.freeze({
   WITHDRAWN: 'withdrawn',
 });
 
-const NSIP_SUBSCRIPTION_TYPE = Object.freeze({
+exports.NSIP_SUBSCRIPTION_TYPE = Object.freeze({
   ALL_UPDATES: 'allUpdates',
   APPLICATION_DECIDED: 'applicationDecided',
   APPLICATION_SUBMITTED: 'applicationSubmitted',
   REGISTRATION_OPEN: 'registrationOpen',
 });
 
-const NSIP_UPDATE_STATUS = Object.freeze({
+exports.NSIP_UPDATE_STATUS = Object.freeze({
   ARCHIVED: 'archived',
   DRAFT: 'draft',
   PUBLISHED: 'published',
@@ -378,18 +378,18 @@ const NSIP_UPDATE_STATUS = Object.freeze({
   UNPUBLISHED: 'unpublished',
 });
 
-const NSIP_VIRUS_CHECK_STATUS = Object.freeze({
+exports.NSIP_VIRUS_CHECK_STATUS = Object.freeze({
   AFFECTED: 'affected',
   NOT_SCANNED: 'not_scanned',
   SCANNED: 'scanned',
 });
 
-const REDACTION_STATUS = Object.freeze({
+exports.REDACTION_STATUS = Object.freeze({
   REDACTED: 'redacted',
   UNREDACTED: 'unredacted',
 });
 
-const SERVICE_USER_TYPE = Object.freeze({
+exports.SERVICE_USER_TYPE = Object.freeze({
   AGENT: 'Agent',
   APPELLANT: 'Appellant',
   APPLICANT: 'Applicant',
@@ -397,7 +397,7 @@ const SERVICE_USER_TYPE = Object.freeze({
   SUBSCRIBER: 'Subscriber',
 });
 
-const STATUS = Object.freeze({
+exports.STATUS = Object.freeze({
   CHECKED: 'checked',
   DONOTPUBLISH: 'donotpublish',
   PUBLISHED: 'published',
@@ -405,50 +405,27 @@ const STATUS = Object.freeze({
   UNCHECKED: 'unchecked',
 });
 
-module.exports = {
-  APPEAL_ALLOCATION_LEVEL,
-  APPEAL_APPLICATION_DECISION,
-  APPEAL_CASE_DECISION_OUTCOME,
-  APPEAL_CASE_PROCEDURE,
-  APPEAL_CASE_STAGE,
-  APPEAL_CASE_STATUS,
-  APPEAL_CASE_TYPE,
-  APPEAL_CASE_VALIDATION_OUTCOME,
-  APPEAL_DOCUMENT_TYPE,
-  APPEAL_EVENT_STATUS,
-  APPEAL_EVENT_TYPE,
-  APPEAL_KNOWS_ALL_OWNERS,
-  APPEAL_KNOWS_OTHER_OWNERS,
-  APPEAL_LINKED_CASE_STATUS,
-  APPEAL_LPA_QUESTIONNAIRE_VALIDATION_OUTCOME,
-  APPEAL_ORIGIN,
-  APPEAL_REDACTED_STATUS,
-  APPEAL_SOURCE_SYSTEM,
-  APPEAL_VIRUS_CHECK_STATUS,
-  CASE_STAGE,
-  METHOD,
-  NSIP_CASE_TYPE,
-  NSIP_DECISION,
-  NSIP_DOCUMENT_CASE_STAGE,
-  NSIP_LANGUAGE,
-  NSIP_MAP_ZOOM_LEVEL,
-  NSIP_ORIGIN,
-  NSIP_PROJECT_TYPE,
-  NSIP_PUBLISH_STATUS,
-  NSIP_PUBLISHED_STATUS,
-  NSIP_REDACTED_STATUS,
-  NSIP_REGISTER_FOR,
-  NSIP_REPRESENTATION_FROM,
-  NSIP_REPRESENTATION_TYPE,
-  NSIP_SECTOR,
-  NSIP_SECURITY_CLASSIFICATION,
-  NSIP_SOURCE_SYSTEM,
-  NSIP_STAGE,
-  NSIP_STATUS,
-  NSIP_SUBSCRIPTION_TYPE,
-  NSIP_UPDATE_STATUS,
-  NSIP_VIRUS_CHECK_STATUS,
-  REDACTION_STATUS,
-  SERVICE_USER_TYPE,
-  STATUS,
-};
+exports.SCHEMA_NAMES = Object.freeze({
+  APPEAL_DOCUMENT: 'appeal-document',
+  APPEAL_EVENT: 'appeal-event',
+  APPEAL_HAS: 'appeal-has',
+  APPELLANT_SUBMISSION: 'appellant-submission',
+  EMPLOYEE: 'employee',
+  ENTRAID: 'entraid',
+  FOLDER: 'folder',
+  INTERESTED_PARTY: 'interested-party',
+  LPA_QUESTIONNAIRE: 'lpa-questionnaire',
+  NEW_DEADLINE_SUBMISSION: 'new-deadline-submission',
+  NSIP_DOCUMENT: 'nsip-document',
+  NSIP_EXAM_TIMETABLE: 'nsip-exam-timetable',
+  NSIP_EXAM_TIMETABLE_SUBMISSION: 'nsip-exam-timetable-submission',
+  NSIP_PROJECT: 'nsip-project',
+  NSIP_PROJECT_UPDATE: 'nsip-project-update',
+  NSIP_REPRESENTATION: 'nsip-representation',
+  NSIP_SUBSCRIPTION: 'nsip-subscription',
+  REGISTER_NSIP_SUBSCRIPTION: 'register-nsip-subscription',
+  REGISTER_REPRESENTATION: 'register-representation',
+  S_51_ADVICE: 's51-advice',
+  SERVICE_USER: 'service-user',
+});
+

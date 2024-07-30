@@ -8,6 +8,8 @@
 
 *   [Appeal HAS Case](./appeal-has.md "Schema defining the metadata for an appeal") – `appeal-has.schema.json`
 
+*   [Appeal S78 Case](./appeal-s78.md "Schema defining the metadata for an appeal (S78)") – `appeal-s78.schema.json`
+
 *   [Employee](./employee.md "Employee schema") – `employee.schema.json`
 
 *   [Entra ID User Objects](./entraid.md "A list of users from EntraID") – `entraid.schema.json`
@@ -35,6 +37,8 @@
 ### Objects
 
 *   [Untitled object in Appeal HAS Case](./appeal-has-properties-neighbouringsiteaddresses-items.md) – `appeal-has.schema.json#/properties/neighbouringSiteAddresses/items`
+
+*   [Untitled object in Appeal S78 Case](./appeal-s78-properties-neighbouringsiteaddresses-items.md) – `appeal-s78.schema.json#/properties/neighbouringSiteAddresses/items`
 
 *   [Untitled object in Examination Timetable](./nsip-exam-timetable-defs-event.md) – `nsip-exam-timetable.schema.json#/$defs/event`
 

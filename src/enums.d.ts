@@ -9,6 +9,12 @@ export const APPEAL_ALLOCATION_LEVEL = {
   H: 'H',
 };
 
+export const APPEAL_APPELLANT_PROCEDURE_PREFERENCE = {
+  HEARING: 'hearing',
+  INQUIRY: 'inquiry',
+  WRITTEN: 'written',
+};
+
 export const APPEAL_APPLICATION_DECISION = {
   GRANTED: 'granted',
   NOT_RECEIVED: 'not_received',
@@ -32,10 +38,13 @@ export const APPEAL_CASE_STAGE = {
   APPEAL_DECISION: 'appeal-decision',
   APPELLANT_CASE: 'appellant-case',
   COSTS: 'costs',
+  EVIDENCE: 'evidence',
   FINAL_COMMENTS: 'final-comments',
+  INTERNAL: 'internal',
   LPA_QUESTIONNAIRE: 'lpa-questionnaire',
   STATEMENTS: 'statements',
   THIRD_PARTY_COMMENTS: 'third-party-comments',
+  WITNESSES: 'witnesses',
 };
 
 export const APPEAL_CASE_STATUS = {
@@ -43,13 +52,17 @@ export const APPEAL_CASE_STATUS = {
   AWAITING_TRANSFER: 'awaiting_transfer',
   CLOSED: 'closed',
   COMPLETE: 'complete',
+  EVIDENCE: 'evidence',
+  FINAL_COMMENTS: 'final_comments',
   INVALID: 'invalid',
   ISSUE_DETERMINATION: 'issue_determination',
   LPA_QUESTIONNAIRE: 'lpa_questionnaire',
   READY_TO_START: 'ready_to_start',
+  STATEMENTS: 'statements',
   TRANSFERRED: 'transferred',
   VALIDATION: 'validation',
   WITHDRAWN: 'withdrawn',
+  WITNESSES: 'witnesses',
 };
 
 export const APPEAL_CASE_TYPE = {
@@ -84,21 +97,61 @@ export const APPEAL_DOCUMENT_TYPE = {
   APPLICATION_DECISION_LETTER: 'applicationDecisionLetter',
   CASE_DECISION_LETTER: 'caseDecisionLetter',
   CHANGED_DESCRIPTION: 'changedDescription',
+  COMMUNITY_INFRASTRUCTURE_LEVY: 'communityInfrastructureLevy',
   CONSERVATION_MAP: 'conservationMap',
+  CONSULTATION_RESPONSES: 'consultationResponses',
   COSTS_DECISION_LETTER: 'costsDecisionLetter',
   CROSS_TEAM_CORRESPONDENCE: 'crossTeamCorrespondence',
+  DEFINITIVE_MAP_STATEMENT: 'definitiveMapStatement',
+  DESIGN_ACCESS_STATEMENT: 'designAccessStatement',
+  DEVELOPMENT_PLAN_POLICIES: 'developmentPlanPolicies',
+  EIA_ENVIRONMENTAL_STATEMENT: 'eiaEnvironmentalStatement',
+  EIA_SCREENING_DIRECTION: 'eiaScreeningDirection',
+  EIA_SCREENING_OPINION: 'eiaScreeningOpinion',
+  EMERGING_PLAN: 'emergingPlan',
   INSPECTOR_CORRESPONDENCE: 'inspectorCorrespondence',
   LPA_CASE_CORRESPONDENCE: 'lpaCaseCorrespondence',
   LPA_COSTS_APPLICATION: 'lpaCostsApplication',
   LPA_COSTS_CORRESPONDENCE: 'lpaCostsCorrespondence',
   LPA_COSTS_WITHDRAWAL: 'lpaCostsWithdrawal',
+  NEW_PLANS_DRAWINGS: 'newPlansDrawings',
   ORIGINAL_APPLICATION_FORM: 'originalApplicationForm',
+  OTHER_NEW_DOCUMENTS: 'otherNewDocuments',
   OTHER_PARTY_REPRESENTATIONS: 'otherPartyRepresentations',
+  OTHER_RELEVANT_POLICIES: 'otherRelevantPolicies',
+  OWNERSHIP_CERTIFICATE: 'ownershipCertificate',
+  PLANNING_OBLIGATION: 'planningObligation',
   PLANNING_OFFICER_REPORT: 'planningOfficerReport',
+  PLANS_DRAWINGS: 'plansDrawings',
+  STATEMENT_COMMON_GROUND: 'statementCommonGround',
+  SUPPLEMENTARY_PLANNING: 'supplementaryPlanning',
+  TREE_PRESERVATION_PLAN: 'treePreservationPlan',
+  UNCATEGORISED: 'uncategorised',
   WHO_NOTIFIED: 'whoNotified',
   WHO_NOTIFIED_LETTER_TO_NEIGHBOURS: 'whoNotifiedLetterToNeighbours',
   WHO_NOTIFIED_PRESS_ADVERT: 'whoNotifiedPressAdvert',
   WHO_NOTIFIED_SITE_NOTICE: 'whoNotifiedSiteNotice',
+};
+
+export const APPEAL_EIA_DEVELOPMENT_DESCRIPTION = {
+  AGRICULTURE_AQUACULTURE: 'agriculture-aquaculture',
+  CHANGE_EXTENSIONS: 'change-extensions',
+  CHEMICAL_INDUSTRY: 'chemical-industry',
+  ENERGY_INDUSTRY: 'energy-industry',
+  EXTRACTIVE_INDUSTRY: 'extractive-industry',
+  FOOD_INDUSTRY: 'food-industry',
+  INFRASTRUCTURE_PROJECTS: 'infrastructure-projects',
+  MINERAL_INDUSTRY: 'mineral-industry',
+  OTHER_PROJECTS: 'other-projects',
+  PRODUCTION_PROCESSING_OF_METALS: 'production-processing-of-metals',
+  RUBBER_INDUSTRY: 'rubber-industry',
+  TEXTILE_INDUSTRIES: 'textile-industries',
+  TOURISM_LEISURE: 'tourism-leisure',
+};
+
+export const APPEAL_EIA_ENVIRONMENTAL_IMPACT_SCHEDULE = {
+  SCHEDULE_1: 'schedule-1',
+  SCHEDULE_2: 'schedule-2',
 };
 
 export const APPEAL_EVENT_STATUS = {
@@ -140,6 +193,12 @@ export const APPEAL_KNOWS_OTHER_OWNERS = {
 export const APPEAL_LINKED_CASE_STATUS = {
   CHILD: 'child',
   LEAD: 'lead',
+};
+
+export const APPEAL_LPA_PROCEDURE_PREFERENCE = {
+  HEARING: 'hearing',
+  INQUIRY: 'inquiry',
+  WRITTEN: 'written',
 };
 
 export const APPEAL_LPA_QUESTIONNAIRE_VALIDATION_OUTCOME = {

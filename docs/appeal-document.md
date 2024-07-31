@@ -559,6 +559,25 @@ The type of document, used for exchange, migrations and consumption from the app
 | `"caseDecisionLetter"`            |             |
 | `"crossTeamCorrespondence"`       |             |
 | `"inspectorCorrespondence"`       |             |
+| `"uncategorised"`                 |             |
+| `"designAccessStatement"`         |             |
+| `"plansDrawings"`                 |             |
+| `"newPlansDrawings"`              |             |
+| `"planningObligation"`            |             |
+| `"ownershipCertificate"`          |             |
+| `"otherNewDocuments"`             |             |
+| `"statementCommonGround"`         |             |
+| `"communityInfrastructureLevy"`   |             |
+| `"supplementaryPlanning"`         |             |
+| `"otherRelevantPolicies"`         |             |
+| `"emergingPlan"`                  |             |
+| `"developmentPlanPolicies"`       |             |
+| `"consultationResponses"`         |             |
+| `"eiaEnvironmentalStatement"`     |             |
+| `"eiaScreeningDirection"`         |             |
+| `"eiaScreeningOpinion"`           |             |
+| `"definitiveMapStatement"`        |             |
+| `"treePreservationPlan"`          |             |
 | `null`                            |             |
 
 ## sourceSystem
@@ -705,9 +724,12 @@ The stage in the appeal process that has created the document
 | `"lpa-questionnaire"`    |             |
 | `"statements"`           |             |
 | `"third-party-comments"` |             |
+| `"evidence"`             |             |
+| `"witnesses"`            |             |
 | `"final-comments"`       |             |
 | `"appeal-decision"`      |             |
 | `"costs"`                |             |
+| `"internal"`             |             |
 | `null`                   |             |
 
 ## horizonFolderId

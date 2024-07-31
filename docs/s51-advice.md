@@ -229,6 +229,7 @@ How the enquiry was made
 | `"email"`   |             |
 | `"meeting"` |             |
 | `"post"`    |             |
+| `"fax"`     |             |
 | `null`      |             |
 
 ## enquiryDate

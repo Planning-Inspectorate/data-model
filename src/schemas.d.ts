@@ -1878,7 +1878,7 @@ export interface S51Advice {
   /**
    * How the enquiry was made
    */
-  method: 'phone' | 'email' | 'meeting' | 'post' | null;
+  method: 'phone' | 'email' | 'meeting' | 'post' | 'fax' | null;
   /**
    * Date the enquiry was made
    */

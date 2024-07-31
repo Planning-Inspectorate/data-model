@@ -60,7 +60,7 @@
 		"method": {
 			"type": ["string", "null"],
 			"description": "How the enquiry was made",
-			"enum": ["phone", "email", "meeting", "post", null]
+			"enum": ["phone", "email", "meeting", "post", "fax", null]
 		},
 		"enquiryDate": {
 			"type": ["string", "null"],

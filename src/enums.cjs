@@ -249,6 +249,7 @@ const CASE_STAGE = Object.freeze({
 
 const METHOD = Object.freeze({
   EMAIL: 'email',
+  FAX: 'fax',
   MEETING: 'meeting',
   PHONE: 'phone',
   POST: 'post',

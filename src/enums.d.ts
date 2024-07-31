@@ -249,6 +249,7 @@ export const CASE_STAGE = {
 
 export const METHOD = {
   EMAIL: 'email',
+  FAX: 'fax',
   MEETING: 'meeting',
   PHONE: 'phone',
   POST: 'post',

@@ -203,6 +203,7 @@ Once a schema is updated, it is important to update the TypeScript definitions b
 
 `npm run gen-types`
 
+
 and update the generated JavaScript enum constants by running:
 
 `npm run gen-enums`

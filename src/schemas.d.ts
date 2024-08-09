@@ -1768,6 +1768,10 @@ export interface NSIPProject {
    * Date at which relevant reps can no longer be reopened
    */
   dateOfReOpenRelevantRepresentationClose: string | null;
+  /**
+   * Is this an application for a material change?
+   */
+  isMaterialChange?: boolean | null;
   [k: string]: unknown;
 }
 

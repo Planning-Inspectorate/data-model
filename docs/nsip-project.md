@@ -85,6 +85,7 @@
 | [migrationStatus](#migrationstatus)                                                                     | `boolean`     | Required | can be null    | [NSIP Project](nsip-project-properties-migrationstatus.md "nsip-project.schema.json#/properties/migrationStatus")                                                                     |
 | [dateOfReOpenRelevantRepresentationStart](#dateofreopenrelevantrepresentationstart)                     | `string`      | Required | can be null    | [NSIP Project](nsip-project-properties-dateofreopenrelevantrepresentationstart.md "nsip-project.schema.json#/properties/dateOfReOpenRelevantRepresentationStart")                     |
 | [dateOfReOpenRelevantRepresentationClose](#dateofreopenrelevantrepresentationclose)                     | `string`      | Required | can be null    | [NSIP Project](nsip-project-properties-dateofreopenrelevantrepresentationclose.md "nsip-project.schema.json#/properties/dateOfReOpenRelevantRepresentationClose")                     |
+| [isMaterialChange](#ismaterialchange)                                                                   | `boolean`     | Optional | can be null    | [NSIP Project](nsip-project-properties-ismaterialchange.md "nsip-project.schema.json#/properties/isMaterialChange")                                                                   |
 | Additional Properties                                                                                   | Any           | Optional | can be null    |                                                                                                                                                                                       |
 
 ## caseId
@@ -2062,6 +2063,34 @@ Date at which relevant reps can no longer be reopened
 
 ```json
 "2023-07-27T20:30:00.000Z"
+```
+
+## isMaterialChange
+
+Is this an application for a material change?
+
+`isMaterialChange`
+
+*   is optional
+
+*   Type: `boolean`
+
+*   can be null
+
+*   defined in: [NSIP Project](nsip-project-properties-ismaterialchange.md "nsip-project.schema.json#/properties/isMaterialChange")
+
+### isMaterialChange Type
+
+`boolean`
+
+### isMaterialChange Examples
+
+```json
+true
+```
+
+```json
+false
 ```
 
 ## Additional Properties

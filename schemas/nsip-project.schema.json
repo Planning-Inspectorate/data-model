@@ -542,6 +542,11 @@
 			"description": "Date at which relevant reps can no longer be reopened",
 			"format": "date-time",
 			"examples": ["2023-07-27T20:30:00.000Z"]
+		},
+		"isMaterialChange": {
+			"type": ["boolean", "null"],
+			"description": "Is this an application for a material change?",
+			"examples": [true, false]
 		}
 	}
 }

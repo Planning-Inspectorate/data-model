@@ -24,12 +24,12 @@ Forwards compatibility ensures that messages using an older schema version can b
 To ensure compatibility, the following rules must be followed:
 
 1. No fields can be removed from the schema
-1. No fields can be removed from the `required` list
-1. Optional fields must support the `null` type
-1. Fields cannot be renamed
-1. Any new fields must be optional
-1. Any enum changes must only add options
-1. `additionalProperties` must always be true
+2. No fields can be removed from the `required` list
+3. Optional fields must support the `null` type
+4. Fields cannot be renamed
+5. Any new fields must be optional
+6. Any enum changes must only add options
+7. `additionalProperties` must always be true
 
 ### Examples
 
@@ -124,7 +124,7 @@ Let's make a v2 schema:
 
 Two changes have been made:
  1. a new enum valid for `category`
- 1. a new field, `subCategory`
+ 2. a new field, `subCategory`
 
 Now the original v1 message still validates against this schema. And a new v2 message, for example:
 

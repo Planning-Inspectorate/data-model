@@ -596,7 +596,7 @@
       "type":["array", "null"],
       "items": {
         "type": "string",
-        "examples": ["notice", "letter", "advert"]
+        "enum": ["notice", "letter", "advert", null]
       },
       "description": "The methods used to notify relevant parties",
       "$comment": "Also available on HAS cases"

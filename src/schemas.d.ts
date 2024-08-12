@@ -526,7 +526,7 @@ export interface AppealHASCase {
   /**
    * The methods used to notify relevant parties
    */
-  notificationMethod: string[] | null;
+  notificationMethod: ('notice' | 'letter' | 'advert' | null)[] | null;
   /**
    * Indicates if the appellant has informed other owners of the site
    */
@@ -872,7 +872,7 @@ export interface AppealS78Case {
   /**
    * The methods used to notify relevant parties
    */
-  notificationMethod: string[] | null;
+  notificationMethod: ('notice' | 'letter' | 'advert' | null)[] | null;
   /**
    * Indicates if the appellant has informed other owners of the site
    */

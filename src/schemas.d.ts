@@ -2473,7 +2473,7 @@ export interface NewDeadlineSubmission {
   /**
    * The unique reference of the case
    */
-  caseReference?: string;
+  caseReference: string;
   /**
    * The name of the FO user who made the submission
    */

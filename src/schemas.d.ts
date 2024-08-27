@@ -1188,7 +1188,7 @@ export interface EntraIDUserObjects {
   /**
    * The employee's unique identifier
    */
-  employeeId: number;
+  employeeId: string;
   /**
    * The unique identifier within the EntraID
    */

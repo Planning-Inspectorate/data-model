@@ -6,7 +6,7 @@
 
 | Property                                | Type      | Required | Nullable       | Defined by                                                                                                           |
 | :-------------------------------------- | :-------- | :------- | :------------- | :------------------------------------------------------------------------------------------------------------------- |
-| [employeeId](#employeeid)               | `integer` | Required | cannot be null | [Entra ID User Objects](entraid-properties-employeeid.md "entraid.schema.json#/properties/employeeId")               |
+| [employeeId](#employeeid)               | `string` | Required | cannot be null | [Entra ID User Objects](entraid-properties-employeeid.md "entraid.schema.json#/properties/employeeId")               |
 | [id](#id)                               | `string`  | Required | cannot be null | [Entra ID User Objects](entraid-properties-id.md "entraid.schema.json#/properties/id")                               |
 | [givenName](#givenname)                 | `string`  | Required | cannot be null | [Entra ID User Objects](entraid-properties-givenname.md "entraid.schema.json#/properties/givenName")                 |
 | [surname](#surname)                     | `string`  | Required | cannot be null | [Entra ID User Objects](entraid-properties-surname.md "entraid.schema.json#/properties/surname")                     |
@@ -21,7 +21,7 @@ The employee's unique identifier
 
 *   is required
 
-*   Type: `integer`
+*   Type: `string`
 
 *   cannot be null
 

@@ -8,7 +8,7 @@
 	"required": ["id", "employeeId", "givenName", "surname", "userPrincipalName"],
 	"properties": {
 		"employeeId": {
-			"type": ["integer"],
+			"type": ["string"],
 			"description": "The employee's unique identifier"
 		},
 		"id": {

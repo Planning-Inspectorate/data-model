@@ -10,8 +10,6 @@
 
 *   [Appeal S78 Case](./appeal-s78.md "Schema defining the metadata for an appeal (S78)") – `appeal-s78.schema.json`
 
-*   [Employee](./employee.md "Employee schema") – `employee.schema.json`
-
 *   [Entra ID User Objects](./entraid.md "A list of users from EntraID") – `entraid.schema.json`
 
 *   [Examination Timetable](./nsip-exam-timetable.md "Examination Timetable for an NSIP Project") – `nsip-exam-timetable.schema.json`

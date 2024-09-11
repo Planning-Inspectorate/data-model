@@ -599,6 +599,80 @@ export interface AppealHASCase {
 }
 
 /**
+ * Schema defining the metadata for appeal representations, such as statements, third-party comments and final comments
+ */
+export interface AppealRepresentation {
+  /**
+   * The unique identifier for the representation
+   */
+  representationId: string;
+  /**
+   * Internal case identifier
+   */
+  caseId: number | null;
+  /**
+   * External case identifier
+   */
+  caseReference: string;
+  /**
+   * Status of the representation
+   */
+  status:
+    | 'awaiting_review'
+    | 'referred'
+    | 'valid'
+    | 'invalid'
+    | 'invalid_incomplete'
+    | 'published'
+    | 'archived'
+    | 'draft'
+    | 'withdrawn'
+    | null;
+  /**
+   * The original representation
+   */
+  originalRepresentation: string | null;
+  /**
+   * Indicates if the representation is redacted
+   */
+  redacted: boolean | null;
+  /**
+   * The redacted version of the representation
+   */
+  redactedRepresentation: string | null;
+  /**
+   * Unique identifier for the case team member that performed the redaction
+   */
+  redactedBy: string | null;
+  /**
+   * An list of reasons why the representation has been marked as invalid or incomplete.
+   */
+  invalidOrIncompleteDetails?: string[];
+  /**
+   * A list of free text reasons why the representation has been marked as invalid or incomplete
+   */
+  otherInvalidOrIncompleteDetails?: string[] | null;
+  /**
+   * Source of the representation (citizen or LPA)
+   */
+  source: 'lpa' | 'citizen' | null;
+  /**
+   * Service User Id of the person or organisation making the representation
+   */
+  serviceUserId: string | null;
+  /**
+   * The type of representation
+   */
+  representationType: 'statement' | 'comment' | 'final_comment' | 'proofs_evidence' | null;
+  dateReceived: string;
+  /**
+   * An array of documentIds
+   */
+  documentIds: string[];
+  [k: string]: unknown;
+}
+
+/**
  * Schema defining the metadata for an appeal (S78)
  */
 export interface AppealS78Case {
@@ -2059,7 +2133,14 @@ export interface ServiceUser {
   /**
    * Type or category of the service user.
    */
-  serviceUserType: 'Applicant' | 'Appellant' | 'Agent' | 'RepresentationContact' | 'Subscriber';
+  serviceUserType:
+    | 'Applicant'
+    | 'Appellant'
+    | 'Agent'
+    | 'Rule6Party'
+    | 'InterestedParty'
+    | 'RepresentationContact'
+    | 'Subscriber';
   /**
    * Reference number for a particular case or incident.
    */
@@ -2319,7 +2400,7 @@ export interface AppellantSubmissionCommand {
       /**
        * Type or category of the service user.
        */
-      serviceUserType: 'Applicant' | 'Appellant' | 'Agent' | 'RepresentationContact' | 'Subscriber';
+      serviceUserType: 'Appellant' | 'Agent';
       [k: string]: unknown;
     },
     ...{
@@ -2350,7 +2431,7 @@ export interface AppellantSubmissionCommand {
       /**
        * Type or category of the service user.
        */
-      serviceUserType: 'Applicant' | 'Appellant' | 'Agent' | 'RepresentationContact' | 'Subscriber';
+      serviceUserType: 'Appellant' | 'Agent';
       [k: string]: unknown;
     }[]
   ];

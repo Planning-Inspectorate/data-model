@@ -16,11 +16,10 @@
     "redactedBy",
     "invalidDetails",
     "source",
-    "representedId",
-    "representativeId",
+    "serviceUserId",
     "representationType",
     "dateReceived",
-    "attachmentIds"
+    "documentIds"
   ],
   "properties": {
     "representationId": {
@@ -46,6 +45,7 @@
         "referred",
         "valid",
         "invalid",
+        "invalid_incomplete",
         "published",
         "archived",
         "draft",
@@ -53,7 +53,7 @@
         null
       ],
       "description": "Status of the representation",
-      "$comment": "BO workflow should validate or withdraw a representation."
+      "$comment": "BO workflow should validate or withdraw a representation.Enumerated list expected to change."
     },
     "originalRepresentation": {
       "type": ["string", "null"],
@@ -72,7 +72,22 @@
       "description": "Unique identifier for the case team member that performed the redaction",
       "$comment": "This is the user in Entra ID"
     },
-    "invalidDetails": {
+    "invalidOrIncompleteDetails": {
+      "type": ["array", "null"],
+      "enum": [
+	      "other_reason",
+        null
+      ],
+      "items": {
+        "type": "string",
+        "examples": [
+          "other_reason"
+        ]
+      },
+      "description": "An list of reasons why the representation has been marked as invalid or incomplete.",
+      "$comment": "The list will contain items only if the status is `invalid` or `invalid_incomplete`"
+    },
+    "otherInvalidOrIncompleteDetails": {
       "type": ["array", "null"],
       "items": {
         "type": "string",
@@ -81,29 +96,21 @@
           "Another reason for setting a representation as invalid"
         ]
       },
-      "description": "A list of reasons why the representation has been marked as invalid",
-      "$comment": "The list will contain items only if the status is `invalid`"
+      "description": "A list of free text reasons why the representation has been marked as invalid or incomplete",
+      "$comment": "The list will contain items only if the status is `invalid` or `invalid_incomplete` and if invalidOrIncompleteDetails list includes 'other_reason'"
     },
     "source": {
       "type": ["string", "null"],
       "enum": ["lpa", "citizen", null],
       "description": "Source of the representation (citizen or LPA)"
     },
-    "representedId": {
+    "serviceUserId": {
       "type": ["string", "null"],
-      "description": "ServiceUser Id of the person or organisation being represented"
-    },
-    "representativeId": {
-      "type": ["string", "null"],
-      "description": "ServiceUser Id of the agent representing the owner"
-    },
-    "lpaCode": {
-      "type": ["string", "null"],
-      "description": "Will only be filled if the representationType is a LPA statement"
+      "description": "Service User Id of the person or organisation making the representation"
     },
     "representationType": {
       "type": ["string", "null"],
-      "enum": ["statement", "comment", "final_comment", null],
+      "enum": ["statement", "comment", "final_comment", "proofs_evidence", null],
       "description": "The type of representation"
     },
     "dateReceived": {
@@ -111,7 +118,7 @@
       "format": "date-time",
       "examples": ["2023-07-27T20:30:00.000Z"]
     },
-    "attachmentIds": {
+    "documentIds": {
       "type": "array",
       "items": {
         "type": "string"

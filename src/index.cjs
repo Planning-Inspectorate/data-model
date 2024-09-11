@@ -304,11 +304,33 @@ const APPEAL_REDACTED_STATUS = Object.freeze({
   REDACTED: 'redacted',
 });
 
+const APPEAL_REPRESENTATION_TYPE = Object.freeze({
+  COMMENT: 'comment',
+  FINAL_COMMENT: 'final_comment',
+  STATEMENT: 'statement',
+});
+
+const APPEAL_SOURCE = Object.freeze({
+  CITIZEN: 'citizen',
+  LPA: 'lpa',
+});
+
 const APPEAL_SOURCE_SYSTEM = Object.freeze({
   ACP: 'acp',
   BACK_OFFICE_APPEALS: 'back-office-appeals',
   HORIZON: 'horizon',
   SHAREPOINT: 'sharepoint',
+});
+
+const APPEAL_STATUS = Object.freeze({
+  ARCHIVED: 'archived',
+  AWAITING_REVIEW: 'awaiting_review',
+  DRAFT: 'draft',
+  INVALID: 'invalid',
+  PUBLISHED: 'published',
+  REFERRED: 'referred',
+  VALID: 'valid',
+  WITHDRAWN: 'withdrawn',
 });
 
 const APPEAL_VIRUS_CHECK_STATUS = Object.freeze({
@@ -539,6 +561,7 @@ const SERVICE_USER_TYPE = Object.freeze({
   APPELLANT: 'Appellant',
   APPLICANT: 'Applicant',
   REPRESENTATION_CONTACT: 'RepresentationContact',
+  RULE_6_PARTY: 'Rule6Party',
   SUBSCRIBER: 'Subscriber',
 });
 
@@ -600,7 +623,10 @@ exports.APPEAL_LPA_PROCEDURE_PREFERENCE = APPEAL_LPA_PROCEDURE_PREFERENCE;
 exports.APPEAL_LPA_QUESTIONNAIRE_VALIDATION_OUTCOME = APPEAL_LPA_QUESTIONNAIRE_VALIDATION_OUTCOME;
 exports.APPEAL_ORIGIN = APPEAL_ORIGIN;
 exports.APPEAL_REDACTED_STATUS = APPEAL_REDACTED_STATUS;
+exports.APPEAL_REPRESENTATION_TYPE = APPEAL_REPRESENTATION_TYPE;
+exports.APPEAL_SOURCE = APPEAL_SOURCE;
 exports.APPEAL_SOURCE_SYSTEM = APPEAL_SOURCE_SYSTEM;
+exports.APPEAL_STATUS = APPEAL_STATUS;
 exports.APPEAL_VIRUS_CHECK_STATUS = APPEAL_VIRUS_CHECK_STATUS;
 exports.CASE_STAGE = CASE_STAGE;
 exports.METHOD = METHOD;

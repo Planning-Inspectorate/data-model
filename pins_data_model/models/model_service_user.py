@@ -17,6 +17,7 @@ class ServiceUserType(Enum):
     Applicant = "Applicant"
     Appellant = "Appellant"
     Agent = "Agent"
+    Rule6Party = "Rule6Party"
     RepresentationContact = "RepresentationContact"
     Subscriber = "Subscriber"
 

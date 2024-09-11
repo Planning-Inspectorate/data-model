@@ -1172,16 +1172,6 @@ export interface AppealS78Case {
 }
 
 /**
- * Employee schema
- */
-export interface Employee {
-  id: string;
-  firstName: string;
-  lastName: string;
-  [k: string]: unknown;
-}
-
-/**
  * A list of users from EntraID
  */
 export interface EntraIDUserObjects {

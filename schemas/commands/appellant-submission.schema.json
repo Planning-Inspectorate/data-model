@@ -267,7 +267,7 @@
         "appellantCostsAppliedFor"
       ]
     },
-    "documents": {
+    "documentIds": {
       "type": "array",
       "items": {
         "type": "object",

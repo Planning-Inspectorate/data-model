@@ -27,6 +27,6 @@
     "@adobe/jsonschema2md": "^7.1.5",
     "json-schema-to-typescript": "^14.1.0",
     "lodash.snakecase": "^4.1.1",
-    "rollup": "^4.19.0"
+    "rollup": "^4.22.4"
   }
 }

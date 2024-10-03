@@ -2450,6 +2450,8 @@ export interface LPAQuestionnaireCommand {
       | 'lpaCostsWithdrawal'
       | 'otherPartyRepresentations'
       | 'planningOfficerReport'
+      | 'plansDrawings'
+      | 'developmentPlanPolicies'
       | null;
     [k: string]: unknown;
   }[];

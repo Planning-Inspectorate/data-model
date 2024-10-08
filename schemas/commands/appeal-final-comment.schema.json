@@ -1,0 +1,116 @@
+{
+	"$schema": "http://json-schema.org/draft-07/schema#",
+	"$id": "commands/appeal-final-comment.schema.json",
+	"title": "appeal-final-comment",
+	"description": "Schema defining final comments made by a party on an appeal",
+	"type": "object",
+	"additionalProperties": true,
+    "required": [
+        "comments",
+        "documents"
+    ],
+	"properties": {
+        "comments": {
+            "type": "object",
+            "additionalProperties": true,
+            "required": ["caseReference", "wantsFinalComment" , "submittedDate"],
+            "properties": {
+                "caseReference": {
+                    "type": "string",
+                    "examples": ["7002471"],
+                    "description": "External case identifier"
+                },
+                "serviceUserId": {
+                    "type": ["string", "null"],
+                    "description": "Maps to [ServiceUser].[id], will be rule 6, agent or appellant"
+                },
+                "lpaCode": {
+                    "type": ["string", "null"],
+                    "examples": ["Q9999"],
+                    "description": "A unique identifier for the Local Planning Authority",
+                    "$comment": "Uses the internal PINS code identifying LPAs"
+                },
+                "wantsFinalComment": {
+                    "type": ["boolean"],
+                    "description": "Indicates if the user has indicated if they want to submit a final comment or not"
+                },
+                "comments": {
+                    "type": ["string", "null"],
+                    "examples": ["I have concerns"]
+                },
+                "submittedDate": {
+                    "type": ["string"],
+                    "format": "date-time",
+                    "examples": ["2023-07-27T20:30:00.000Z"],
+                    "description": "The date the response was submitted by the user"
+                }
+            }
+        },
+        "documentIds": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "additionalProperties": true,
+                "required": [
+                    "documentId",
+                    "filename",
+                    "originalFilename",
+                    "size",
+                    "mime",
+                    "documentURI",
+                    "dateCreated",
+                    "documentType"
+                ],
+                "properties": {
+                    "documentId": {
+                        "type": "string",
+                        "examples": ["4547fec8-16b2-47bb-836d-4d0baac04079"],
+                        "description": "The unique identifier for the document"
+                    },
+                    "filename": {
+                        "type": "string",
+                        "examples": ["filename.pdf"],
+                        "description": "Current stored name of the document"
+                    },
+                    "originalFilename": {
+                        "type": "string",
+                        "examples": ["original_filename.pdf"],
+                        "description": "Original name of document"
+                    },
+                    "size": {
+                        "type": "integer",
+                        "examples": [23452],
+                        "description": "The file size, in bytes"
+                    },
+                    "mime": {
+                        "type": ["string"],
+                        "examples": ["application/pdf"],
+                        "description": "The mime type for the current version of the file"
+                    },
+                    "documentURI": {
+                        "type": "string",
+                        "examples": [
+                        "https://custom-domain.gov.uk/container-name/appeal/7002471/4547fec8-16b2-47bb-836d-4d0baac04079/v1/filename.pdf"
+                        ],
+                        "description": "The internal location of the document",
+                        "$comment": "This property contains blob storage info (domain, container), caseReference, version and filename"
+                    },
+                    "dateCreated": {
+                        "type": "string",
+                        "format": "date-time",
+                        "examples": ["2023-07-27T20:30:00.000Z"],
+                        "description": "The creation date for the document"
+                    },
+                    "documentType": {
+                        "type": ["string", "null"],
+                        "enum": [
+                            "finalComments",
+                            null
+                        ],
+                        "description": "The type of document, used for exchange, migrations and consumption from the appeal back-office system"
+                    }
+                }
+            }
+        }
+	}
+}

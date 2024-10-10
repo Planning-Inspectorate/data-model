@@ -1,0 +1,71 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "questionnaire-has.schema.json",
+  "title": "LPAQ HAS submission properties",
+  "description": "Schema defining any HAS specific properties for LPAQ submissions",
+  "type": "object",
+  "additionalProperties": true,
+  "required": [
+    "isCorrectAppealType",
+    "affectedListedBuildingNumbers",
+    "isGreenBelt",
+    "inConservationArea",
+    "newConditionDetails",
+    "notificationMethod",
+    "lpaCostsAppliedFor",
+    "lpaStatement"
+  ],
+  "allOf": [
+    { "$ref": "lpa-questionnaire-common.schema.json"},
+    {
+      "properties": {
+        "isCorrectAppealType": {
+          "type": ["boolean", "null"],
+          "description": "Indicates if the LPA considers the appeal type appropriate"
+        },
+        "affectedListedBuildingNumbers": {
+          "type": ["array", "null"],
+          "items": {
+            "type": "string",
+            "examples": ["10023", "17824"]
+          },
+          "description": "A list of affected listed building IDs from Historic England"
+        },
+        "isGreenBelt": {
+          "type": ["boolean", "null"],
+          "description": "Indicates if the site is in a green belt"
+        },
+
+        "inConservationArea": {
+          "type": ["boolean", "null"],
+          "description": "Indicates if the site is in a conservation area"
+        },
+        "newConditionDetails": {
+          "type": ["string", "null"],
+          "examples": [
+            "Since the original application, a number of things have changed..."
+          ],
+          "description": "New conditions details provided by the LPA"
+        },
+        "notificationMethod": {
+          "type": ["array", "null"],
+          "items": {
+            "type": "string",
+            "examples": ["notice", "letter", "advert"]
+          },
+          "description": "The methods used to notify relevant parties"
+        },
+
+        "lpaCostsAppliedFor": {
+          "type": ["boolean", "null"],
+          "description": "Indicates if the LPA has applied for costs"
+        },
+        "lpaStatement": {
+          "type": ["string", "null"],
+          "examples": ["We refused the application because of ..."],
+          "description": "A statement provided by the LPA, unused?"
+        }
+      }
+    }
+  ]
+}

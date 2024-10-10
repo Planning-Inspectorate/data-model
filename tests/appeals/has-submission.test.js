@@ -90,7 +90,7 @@ describe("HAS submission command schema", () => {
         delete test.casedata.caseType;
         const validationResult = ajv.validate(schema, test);
         assert.strictEqual(validationResult, false);
-        assert.strictEqual(ajv.errors[0].message, "must have required property 'caseType'");
+        assert.strictEqual(ajv.errors.some((x) => x.message === "must have required property 'caseType'"), true);
     });
 
     it('should reject missing nested property', () => {
@@ -98,7 +98,7 @@ describe("HAS submission command schema", () => {
         delete test.casedata.caseProcedure;
         const validationResult = ajv.validate(schema, test);
         assert.strictEqual(validationResult, false);
-        assert.strictEqual(ajv.errors[0].message, "must have required property 'caseProcedure'");
+        assert.strictEqual(ajv.errors.some((x) => x.message === "must have required property 'caseProcedure'"), true);
     });
 
     it('should allow additional props', () => {

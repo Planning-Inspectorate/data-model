@@ -19,6 +19,7 @@ const document = {
 
 const exampleHasQuestionnaireSchema = {
     "casedata": {
+        "caseType": "D",
         "caseReference": "nisi incididunt cillum",
         "lpaQuestionnaireSubmittedDate": null,
         "lpaStatement": "consequat ex",
@@ -64,12 +65,19 @@ describe("HAS questionnaire command schema", () => {
         assert.strictEqual(validationResult, true);
     });
 
+    it('should allow HAS case without caseType', () => {
+        const test = structuredClone(exampleHasQuestionnaireSchema);
+        delete test.casedata.caseType;
+        const validationResult = ajv.validate(schema, test);
+        assert.strictEqual(validationResult, true);
+    });
+
     it('should reject missing caseReference', () => {
         const test = structuredClone(exampleHasQuestionnaireSchema);
         delete test.casedata.caseReference;
         const validationResult = ajv.validate(schema, test);
         assert.strictEqual(validationResult, false);
-        assert.strictEqual(ajv.errors[0].message, "must have required property 'caseReference'");
+        assert.strictEqual(ajv.errors.some((x) => x.message === "must have required property 'caseReference'"), true);
     });
 
     it('should allow additional props', () => {

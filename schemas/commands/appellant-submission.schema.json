@@ -18,8 +18,12 @@
       "required": ["caseType"],
       "oneOf": [
         { "allOf": [
-          {"properties": { "caseType": { "type": "string", "enum": ["D"] } }},
+          {"properties": { "caseType": { "const": "D" } }},
           { "$ref": "appeal-has.schema.json"}
+        ]},
+        { "allOf": [
+          {"properties": { "caseType": { "const": "W" } }},
+          { "$ref": "appeal-s78.schema.json"}
         ]}
       ]
     },

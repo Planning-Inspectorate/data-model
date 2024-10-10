@@ -1,0 +1,188 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "appeal-common.schema.json",
+  "title": "Appellant common submission properties",
+  "description": "Schema defining any properties common across all appeal types for appeal submissions",
+  "type": "object",
+  "additionalProperties": true,
+  "required": [
+    "submissionId",
+    "caseProcedure",
+    "lpaCode",
+    "caseSubmittedDate",
+    "enforcementNotice",
+    "applicationReference",
+    "applicationDate",
+    "applicationDecision",
+    "applicationDecisionDate",
+    "caseSubmissionDueDate",
+    "siteAddressLine1",
+    "siteAddressLine2",
+    "siteAddressTown",
+    "siteAddressCounty",
+    "siteAddressPostcode",
+    "siteAccessDetails",
+    "siteSafetyDetails",
+    "neighbouringSiteAddresses",
+    "nearbyCaseReferences"
+  ],
+  "properties": {
+    "submissionId": {
+      "type": "string",
+      "format": "uuid",
+      "examples": ["7f45748c-2342-4b59-b934-ad6183e8d834"],
+      "description": "Case submission id - link to draft submission created by appellant"
+    },
+    "caseProcedure": {
+      "type": "string",
+      "enum": ["written", "hearing", "inquiry"],
+      "description": "The type of procedure for the appeal"
+    },
+    "lpaCode": {
+      "type": "string",
+      "examples": ["Q9999"],
+      "description": "A unique identifier for the Local Planning Authority",
+      "$comment": "Uses the internal PINS code identifying LPAs"
+    },
+    "caseSubmittedDate": {
+      "type": "string",
+      "format": "date-time",
+      "examples": ["2023-07-27T20:30:00.000Z"],
+      "description": "The date the appeal was submitted by the appellant"
+    },
+    "enforcementNotice": {
+      "type": ["boolean", "null"],
+      "description": "Indicates if an enforcement notice is the reason for the appeal"
+    },
+    "applicationReference": {
+      "type": "string",
+      "examples": ["43010/APP/1/290572"],
+      "description": "The unique identifier of the LPA application"
+    },
+    "applicationDate": {
+      "type": "string",
+      "format": "date-time",
+      "examples": ["2023-07-27T20:30:00.000Z"],
+      "description": "The date of the original LPA application"
+    },
+    "applicationDecision": {
+      "type": "string",
+      "enum": ["granted", "refused", "not_received"],
+      "description": "The outcome of the original LPA decision"
+    },
+    "applicationDecisionDate": {
+      "type": ["string", "null"],
+      "format": "date-time",
+      "examples": ["2023-07-27T20:30:00.000Z"],
+      "description": "The date of the original LPA decision"
+    },
+    "caseSubmissionDueDate": {
+      "type": ["string", "null"],
+      "format": "date-time",
+      "examples": ["2023-07-27T20:30:00.000Z"],
+      "description": "The statutory deadline for submitting an appeal from the original LPA decision date",
+      "$comment": "Calculated from the applicationDecisionDate"
+    },
+    "siteAddressLine1": {
+      "type": "string",
+      "examples": ["96 The Avenue"],
+      "description": "First line of address for the appeal site"
+    },
+    "siteAddressLine2": {
+      "type": ["string", "null"],
+      "description": "Second line of address for the appeal site"
+    },
+    "siteAddressTown": {
+      "type": "string",
+      "examples": ["Maidstone"],
+      "description": "Town / City of the site address"
+    },
+    "siteAddressCounty": {
+      "type": ["string", "null"],
+      "examples": ["Kent"],
+      "description": "County of the site address"
+    },
+    "siteAddressPostcode": {
+      "type": "string",
+      "examples": ["MD21 5XY"],
+      "description": "Postal code of the site address"
+    },
+    "siteAccessDetails": {
+      "type": ["array", "null"],
+      "items": {
+        "type": "string",
+        "examples": ["The site is accessible through the small gate on the left of the property"]
+      },
+      "description": "Provided information on site accessibility"
+    },
+    "siteSafetyDetails": {
+      "type": ["array", "null"],
+      "items": {
+        "type": "string",
+        "examples": ["There is an aggressive dog in the property"]
+      },
+      "description": "Provided information on site health and safety"
+    },
+    "neighbouringSiteAddresses": {
+      "type": ["array", "null"],
+      "items": {
+        "type": "object",
+        "additionalProperties": true,
+        "properties": {
+          "neighbouringSiteAddressLine1": {
+            "type": "string",
+            "examples": ["96 The Avenue"],
+            "description": "First line of address of the site"
+          },
+          "neighbouringSiteAddressLine2": {
+            "type": ["string", "null"],
+            "description": "Second line of address of the site"
+          },
+          "neighbouringSiteAddressTown": {
+            "type": "string",
+            "examples": ["Maidstone"],
+            "description": "Town / City of the site address"
+          },
+          "neighbouringSiteAddressCounty": {
+            "type": ["string", "null"],
+            "examples": ["Kent"],
+            "description": "County of the site address"
+          },
+          "neighbouringSiteAddressPostcode": {
+            "type": "string",
+            "examples": ["MD21 5XY"],
+            "description": "Postal code of the site address"
+          },
+          "neighbouringSiteAccessDetails": {
+            "type": ["string", "null"],
+            "examples": ["Ongoing road works at this address"],
+            "description": "Provided information on site accessibility on this address"
+          },
+          "neighbouringSiteSafetyDetails": {
+            "type": ["string", "null"],
+            "examples": ["Ongoing road works at this address"],
+            "description": "Provided information on site health and safety on this address"
+          }
+        },
+        "required": [
+          "neighbouringSiteAddressLine1",
+          "neighbouringSiteAddressLine2",
+          "neighbouringSiteAddressTown",
+          "neighbouringSiteAddressCounty",
+          "neighbouringSiteAddressPostcode",
+          "neighbouringSiteAccessDetails",
+          "neighbouringSiteSafetyDetails"
+        ]
+      },
+      "description": "A list of neighbouring site addresses"
+    },
+    "nearbyCaseReferences": {
+      "type": ["array", "null"],
+      "items": {
+        "type": "string",
+        "examples": ["6000456", "8004567"]
+      },
+      "description": "A list of related case references known to the appellant and the LPA"
+    }
+  }
+}

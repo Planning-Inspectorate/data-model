@@ -1,0 +1,108 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "questionnaire-common.schema.json",
+  "title": "LPAQ common submission properties",
+  "description": "Schema defining any properties common across all appeal types for LPAQ submissions",
+  "type": "object",
+  "additionalProperties": true,
+  "required": [
+    "caseReference",
+    "lpaQuestionnaireSubmittedDate",
+    "siteAccessDetails",
+    "siteSafetyDetails",
+    "nearbyCaseReferences",
+    "neighbouringSiteAddresses"
+  ],
+  "properties": {
+    "caseReference": {
+      "type": "string",
+      "examples": ["7002471"],
+      "description": "External case identifier"
+    },
+    "lpaQuestionnaireSubmittedDate": {
+      "type": ["string", "null"],
+      "format": "date-time",
+      "examples": ["2023-07-27T20:30:00.000Z"],
+      "description": "The date the LPA provided a response to the case"
+    },
+    "siteAccessDetails": {
+      "type": ["array", "null"],
+      "items": {
+        "type": "string",
+        "examples": [
+          "The site is accessible through the small gate on the left of the property"
+        ]
+      },
+      "description": "Provided information on site accessibility"
+    },
+    "siteSafetyDetails": {
+      "type": ["array", "null"],
+      "items": {
+        "type": "string",
+        "examples": ["There is an aggressive dog in the property"]
+      },
+      "description": "Provided information on site health and safety"
+    },
+    "nearbyCaseReferences": {
+      "type": ["array", "null"],
+      "items": {
+        "type": "string",
+        "examples": ["6000456", "8004567"]
+      },
+      "description": "A list of related case references known to the appellant and the LPA"
+    },
+    "neighbouringSiteAddresses": {
+      "type": ["array", "null"],
+      "items": {
+        "type": "object",
+        "additionalProperties": true,
+        "properties": {
+          "neighbouringSiteAddressLine1": {
+            "type": "string",
+            "examples": ["96 The Avenue"],
+            "description": "First line of address of the site"
+          },
+          "neighbouringSiteAddressLine2": {
+            "type": ["string", "null"],
+            "description": "Second line of address of the site"
+          },
+          "neighbouringSiteAddressTown": {
+            "type": "string",
+            "examples": ["Maidstone"],
+            "description": "Town / City of the site address"
+          },
+          "neighbouringSiteAddressCounty": {
+            "type": ["string", "null"],
+            "examples": ["Kent"],
+            "description": "County of the site address"
+          },
+          "neighbouringSiteAddressPostcode": {
+            "type": "string",
+            "examples": ["MD21 5XY"],
+            "description": "Postal code of the site address"
+          },
+          "neighbouringSiteAccessDetails": {
+            "type": ["string", "null"],
+            "examples": ["Ongoing road works at this address"],
+            "description": "Provided information on site accessibility on this address"
+          },
+          "neighbouringSiteSafetyDetails": {
+            "type": ["string", "null"],
+            "examples": ["Ongoing road works at this address"],
+            "description": "Provided information on site health and safety on this address"
+          }
+        },
+        "required": [
+          "neighbouringSiteAddressLine1",
+          "neighbouringSiteAddressLine2",
+          "neighbouringSiteAddressTown",
+          "neighbouringSiteAddressCounty",
+          "neighbouringSiteAddressPostcode",
+          "neighbouringSiteAccessDetails",
+          "neighbouringSiteSafetyDetails"
+        ]
+      },
+      "description": "A list of neighbouring site addresses"
+    }
+  }
+}

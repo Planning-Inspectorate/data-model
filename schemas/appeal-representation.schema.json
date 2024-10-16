@@ -1,0 +1,122 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "appeal-representation.schema.json",
+  "title": "Appeal Representation",
+  "description": "Schema defining the metadata for appeal representations, such as statements, third-party comments and final comments",
+  "type": "object",
+  "additionalProperties": true,
+  "required": [
+    "representationId",
+    "caseId",
+    "caseReference",
+    "status",
+    "originalRepresentation",
+    "redacted",
+    "redactedRepresentation",
+    "redactedBy",
+    "invalidDetails",
+    "source",
+    "representedId",
+    "representativeId",
+    "representationType",
+    "dateReceived",
+    "attachmentIds"
+  ],
+  "properties": {
+    "representationId": {
+      "type": "string",
+      "examples": ["7000000-1"],
+      "description": "The unique identifier for the representation",
+      "$comment": "This is a composite key with the caseReference and a representation counter"
+    },
+    "caseId": {
+      "type": ["integer", "null"],
+      "examples": [1200],
+      "description": "Internal case identifier"
+    },
+    "caseReference": {
+      "type": "string",
+      "examples": ["7002471"],
+      "description": "External case identifier"
+    },
+    "status": {
+      "type": ["string", "null"],
+      "enum": [
+        "awaiting_review",
+        "referred",
+        "valid",
+        "invalid",
+        "published",
+        "archived",
+        "draft",
+        "withdrawn",
+        null
+      ],
+      "description": "Status of the representation",
+      "$comment": "BO workflow should validate or withdraw a representation."
+    },
+    "originalRepresentation": {
+      "type": ["string", "null"],
+      "description": "The original representation"
+    },
+    "redacted": {
+      "type": ["boolean", "null"],
+      "description": "Indicates if the representation is redacted"
+    },
+    "redactedRepresentation": {
+      "type": ["string", "null"],
+      "description": "The redacted version of the representation"
+    },
+    "redactedBy": {
+      "type": ["string", "null"],
+      "description": "Unique identifier for the case team member that performed the redaction",
+      "$comment": "This is the user in Entra ID"
+    },
+    "invalidDetails": {
+      "type": ["array", "null"],
+      "items": {
+        "type": "string",
+        "examples": [
+          "Inflammatory comments",
+          "Another reason for setting a representation as invalid"
+        ]
+      },
+      "description": "A list of reasons why the representation has been marked as invalid",
+      "$comment": "The list will contain items only if the status is `invalid`"
+    },
+    "source": {
+      "type": ["string", "null"],
+      "enum": ["lpa", "citizen", null],
+      "description": "Source of the representation (citizen or LPA)"
+    },
+    "representedId": {
+      "type": ["string", "null"],
+      "description": "ServiceUser Id of the person or organisation being represented"
+    },
+    "representativeId": {
+      "type": ["string", "null"],
+      "description": "ServiceUser Id of the agent representing the owner"
+    },
+    "lpaCode": {
+      "type": ["string", "null"],
+      "description": "Will only be filled if the representationType is a LPA statement"
+    },
+    "representationType": {
+      "type": ["string", "null"],
+      "enum": ["statement", "comment", "final_comment", null],
+      "description": "The type of representation"
+    },
+    "dateReceived": {
+      "type": "string",
+      "format": "date-time",
+      "examples": ["2023-07-27T20:30:00.000Z"]
+    },
+    "attachmentIds": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "An array of documentIds"
+    }
+  }
+}

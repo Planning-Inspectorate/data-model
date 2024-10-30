@@ -2452,6 +2452,8 @@ export interface LPAQuestionnaireCommand {
       | 'planningOfficerReport'
       | 'plansDrawings'
       | 'developmentPlanPolicies'
+      | 'supplementaryPlanning'
+      | 'emergingPlan'
       | null;
     [k: string]: unknown;
   }[];

@@ -811,9 +811,13 @@
       "$comment": "Only available in S78 cases"
     },
     "designatedSitesNames": {
-      "type": ["string", "null"],
-      "examples": ["SSSI", "cSAC", "SAC", "pSPA", "SPA", "user entered value"],
-      "description": "The designated site names"
+      "type": ["array", "null"],
+      "items": {
+        "type": "string",
+        "examples": ["SSSI", "cSAC", "SAC", "pSPA", "SPA", "user entered value"]
+      },
+      "description": "The designated site names",
+      "$comment": "Only available in S78 cases"
     },
     "hasTreePreservationOrder": {
       "type": ["boolean", "null"],

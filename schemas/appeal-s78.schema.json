@@ -996,13 +996,13 @@
       "examples": ["2023-07-27T20:30:00.000Z"],
       "$comment": "Only available in S78 cases"
     },
-    "appellantCommentsSubmitted": {
+    "appellantCommentsSubmittedDate": {
       "type": ["string", "null"],
       "format": "date-time",
       "examples": ["2023-07-27T20:30:00.000Z"],
       "$comment": "Only available in S78 cases"
     },
-    "appellantStatementSubmitted": {
+    "appellantStatementSubmittedDate": {
       "type": ["string", "null"],
       "format": "date-time",
       "examples": ["2023-07-27T20:30:00.000Z"],
@@ -1026,13 +1026,13 @@
       "examples": ["2023-07-27T20:30:00.000Z"],
       "$comment": "Only available in S78 cases"
     },
-    "lpaProofsSubmitted": {
+    "lpaProofsSubmittedDate": {
       "type": ["string", "null"],
       "format": "date-time",
       "examples": ["2023-07-27T20:30:00.000Z"],
       "$comment": "Only available in S78 cases"
     },
-    "lpaStatementSubmitted": {
+    "lpaStatementSubmittedDate": {
       "type": ["string", "null"],
       "format": "date-time",
       "examples": ["2023-07-27T20:30:00.000Z"],
@@ -1044,7 +1044,7 @@
       "examples": ["2023-07-27T20:30:00.000Z"],
       "$comment": "Only available in S78 cases"
     },
-    "siteNoticesSent": {
+    "siteNoticesSentDate": {
       "type": ["string", "null"],
       "format": "date-time",
       "examples": ["2023-07-27T20:30:00.000Z"],

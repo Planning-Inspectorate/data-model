@@ -143,7 +143,7 @@
     "proofsOfEvidenceDueDate",
     "siteNoticesSent",
     "statementDueDate",
-    "inspectorNeedToEnterSite",
+    "reasonForNeighbourVisits",
     "numberOfResidences",
     "siteGridReferenceEasting",
     "siteGridReferenceNorthing",
@@ -1056,8 +1056,8 @@
       "examples": ["2023-07-27T20:30:00.000Z"],
       "$comment": "Only available in S78 cases"
     },
-    "inspectorNeedToEnterSite": {
-      "type": ["boolean", "null"],
+    "reasonForNeighbourVisits": {
+      "type": ["string", "null"],
       "$comment": "Only available in S78 cases"
     },
     "numberOfResidences": {

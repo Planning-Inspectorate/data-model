@@ -4,154 +4,141 @@
 
 # Appeal S78 Case Properties
 
-| Property                                                                        | Type      | Required | Nullable       | Defined by                                                                                                                                                   |
-| :------------------------------------------------------------------------------ | :-------- | :------- | :------------- | :----------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [caseId](#caseid)                                                               | `integer` | Required | can be null    | [Appeal S78 Case](appeal-s78-properties-caseid.md "appeal-s78.schema.json#/properties/caseId")                                                               |
-| [caseReference](#casereference)                                                 | `string`  | Required | cannot be null | [Appeal S78 Case](appeal-s78-properties-casereference.md "appeal-s78.schema.json#/properties/caseReference")                                                 |
-| [submissionId](#submissionid)                                                   | `string`  | Optional | can be null    | [Appeal S78 Case](appeal-s78-properties-submissionid.md "appeal-s78.schema.json#/properties/submissionId")                                                   |
-| [caseStatus](#casestatus)                                                       | `string`  | Required | cannot be null | [Appeal S78 Case](appeal-s78-properties-casestatus.md "appeal-s78.schema.json#/properties/caseStatus")                                                       |
-| [caseType](#casetype)                                                           | `string`  | Required | cannot be null | [Appeal S78 Case](appeal-s78-properties-casetype.md "appeal-s78.schema.json#/properties/caseType")                                                           |
-| [caseProcedure](#caseprocedure)                                                 | `string`  | Required | can be null    | [Appeal S78 Case](appeal-s78-properties-caseprocedure.md "appeal-s78.schema.json#/properties/caseProcedure")                                                 |
-| [lpaCode](#lpacode)                                                             | `string`  | Required | cannot be null | [Appeal S78 Case](appeal-s78-properties-lpacode.md "appeal-s78.schema.json#/properties/lpaCode")                                                             |
-| [caseOfficerId](#caseofficerid)                                                 | `string`  | Required | can be null    | [Appeal S78 Case](appeal-s78-properties-caseofficerid.md "appeal-s78.schema.json#/properties/caseOfficerId")                                                 |
-| [inspectorId](#inspectorid)                                                     | `string`  | Required | can be null    | [Appeal S78 Case](appeal-s78-properties-inspectorid.md "appeal-s78.schema.json#/properties/inspectorId")                                                     |
-| [allocationLevel](#allocationlevel)                                             | `string`  | Required | can be null    | [Appeal S78 Case](appeal-s78-properties-allocationlevel.md "appeal-s78.schema.json#/properties/allocationLevel")                                             |
-| [allocationBand](#allocationband)                                               | `number`  | Required | can be null    | [Appeal S78 Case](appeal-s78-properties-allocationband.md "appeal-s78.schema.json#/properties/allocationBand")                                               |
-| [caseSpecialisms](#casespecialisms)                                             | `array`   | Required | can be null    | [Appeal S78 Case](appeal-s78-properties-casespecialisms.md "appeal-s78.schema.json#/properties/caseSpecialisms")                                             |
-| [caseSubmittedDate](#casesubmitteddate)                                         | `string`  | Required | cannot be null | [Appeal S78 Case](appeal-s78-properties-casesubmitteddate.md "appeal-s78.schema.json#/properties/caseSubmittedDate")                                         |
-| [caseCreatedDate](#casecreateddate)                                             | `string`  | Required | cannot be null | [Appeal S78 Case](appeal-s78-properties-casecreateddate.md "appeal-s78.schema.json#/properties/caseCreatedDate")                                             |
-| [caseUpdatedDate](#caseupdateddate)                                             | `string`  | Required | cannot be null | [Appeal S78 Case](appeal-s78-properties-caseupdateddate.md "appeal-s78.schema.json#/properties/caseUpdatedDate")                                             |
-| [caseValidDate](#casevaliddate)                                                 | `string`  | Required | can be null    | [Appeal S78 Case](appeal-s78-properties-casevaliddate.md "appeal-s78.schema.json#/properties/caseValidDate")                                                 |
-| [caseValidationDate](#casevalidationdate)                                       | `string`  | Required | can be null    | [Appeal S78 Case](appeal-s78-properties-casevalidationdate.md "appeal-s78.schema.json#/properties/caseValidationDate")                                       |
-| [caseValidationOutcome](#casevalidationoutcome)                                 | `string`  | Required | can be null    | [Appeal S78 Case](appeal-s78-properties-casevalidationoutcome.md "appeal-s78.schema.json#/properties/caseValidationOutcome")                                 |
-| [caseValidationInvalidDetails](#casevalidationinvaliddetails)                   | `array`   | Required | can be null    | [Appeal S78 Case](appeal-s78-properties-casevalidationinvaliddetails.md "appeal-s78.schema.json#/properties/caseValidationInvalidDetails")                   |
-| [caseValidationIncompleteDetails](#casevalidationincompletedetails)             | `array`   | Required | can be null    | [Appeal S78 Case](appeal-s78-properties-casevalidationincompletedetails.md "appeal-s78.schema.json#/properties/caseValidationIncompleteDetails")             |
-| [caseExtensionDate](#caseextensiondate)                                         | `string`  | Required | can be null    | [Appeal S78 Case](appeal-s78-properties-caseextensiondate.md "appeal-s78.schema.json#/properties/caseExtensionDate")                                         |
-| [caseStartedDate](#casestarteddate)                                             | `string`  | Required | can be null    | [Appeal S78 Case](appeal-s78-properties-casestarteddate.md "appeal-s78.schema.json#/properties/caseStartedDate")                                             |
-| [casePublishedDate](#casepublisheddate)                                         | `string`  | Required | can be null    | [Appeal S78 Case](appeal-s78-properties-casepublisheddate.md "appeal-s78.schema.json#/properties/casePublishedDate")                                         |
-| [linkedCaseStatus](#linkedcasestatus)                                           | `string`  | Required | can be null    | [Appeal S78 Case](appeal-s78-properties-linkedcasestatus.md "appeal-s78.schema.json#/properties/linkedCaseStatus")                                           |
-| [leadCaseReference](#leadcasereference)                                         | `string`  | Required | can be null    | [Appeal S78 Case](appeal-s78-properties-leadcasereference.md "appeal-s78.schema.json#/properties/leadCaseReference")                                         |
-| [lpaQuestionnaireDueDate](#lpaquestionnaireduedate)                             | `string`  | Required | can be null    | [Appeal S78 Case](appeal-s78-properties-lpaquestionnaireduedate.md "appeal-s78.schema.json#/properties/lpaQuestionnaireDueDate")                             |
-| [lpaQuestionnaireSubmittedDate](#lpaquestionnairesubmitteddate)                 | `string`  | Required | can be null    | [Appeal S78 Case](appeal-s78-properties-lpaquestionnairesubmitteddate.md "appeal-s78.schema.json#/properties/lpaQuestionnaireSubmittedDate")                 |
-| [lpaQuestionnaireCreatedDate](#lpaquestionnairecreateddate)                     | `string`  | Required | can be null    | [Appeal S78 Case](appeal-s78-properties-lpaquestionnairecreateddate.md "appeal-s78.schema.json#/properties/lpaQuestionnaireCreatedDate")                     |
-| [lpaQuestionnairePublishedDate](#lpaquestionnairepublisheddate)                 | `string`  | Required | can be null    | [Appeal S78 Case](appeal-s78-properties-lpaquestionnairepublisheddate.md "appeal-s78.schema.json#/properties/lpaQuestionnairePublishedDate")                 |
-| [lpaQuestionnaireValidationOutcome](#lpaquestionnairevalidationoutcome)         | `string`  | Required | can be null    | [Appeal S78 Case](appeal-s78-properties-lpaquestionnairevalidationoutcome.md "appeal-s78.schema.json#/properties/lpaQuestionnaireValidationOutcome")         |
-| [lpaQuestionnaireValidationOutcomeDate](#lpaquestionnairevalidationoutcomedate) | `string`  | Required | can be null    | [Appeal S78 Case](appeal-s78-properties-lpaquestionnairevalidationoutcomedate.md "appeal-s78.schema.json#/properties/lpaQuestionnaireValidationOutcomeDate") |
-| [lpaQuestionnaireValidationDetails](#lpaquestionnairevalidationdetails)         | `array`   | Required | can be null    | [Appeal S78 Case](appeal-s78-properties-lpaquestionnairevalidationdetails.md "appeal-s78.schema.json#/properties/lpaQuestionnaireValidationDetails")         |
-| [lpaStatement](#lpastatement)                                                   | `string`  | Required | can be null    | [Appeal S78 Case](appeal-s78-properties-lpastatement.md "appeal-s78.schema.json#/properties/lpaStatement")                                                   |
-| [caseWithdrawnDate](#casewithdrawndate)                                         | `string`  | Required | can be null    | [Appeal S78 Case](appeal-s78-properties-casewithdrawndate.md "appeal-s78.schema.json#/properties/caseWithdrawnDate")                                         |
-| [caseTransferredDate](#casetransferreddate)                                     | `string`  | Required | can be null    | [Appeal S78 Case](appeal-s78-properties-casetransferreddate.md "appeal-s78.schema.json#/properties/caseTransferredDate")                                     |
-| [transferredCaseClosedDate](#transferredcasecloseddate)                         | `string`  | Required | can be null    | [Appeal S78 Case](appeal-s78-properties-transferredcasecloseddate.md "appeal-s78.schema.json#/properties/transferredCaseClosedDate")                         |
-| [caseDecisionOutcomeDate](#casedecisionoutcomedate)                             | `string`  | Required | can be null    | [Appeal S78 Case](appeal-s78-properties-casedecisionoutcomedate.md "appeal-s78.schema.json#/properties/caseDecisionOutcomeDate")                             |
-| [caseDecisionPublishedDate](#casedecisionpublisheddate)                         | `string`  | Required | can be null    | [Appeal S78 Case](appeal-s78-properties-casedecisionpublisheddate.md "appeal-s78.schema.json#/properties/caseDecisionPublishedDate")                         |
-| [caseDecisionOutcome](#casedecisionoutcome)                                     | `string`  | Required | can be null    | [Appeal S78 Case](appeal-s78-properties-casedecisionoutcome.md "appeal-s78.schema.json#/properties/caseDecisionOutcome")                                     |
-| [caseCompletedDate](#casecompleteddate)                                         | `string`  | Required | can be null    | [Appeal S78 Case](appeal-s78-properties-casecompleteddate.md "appeal-s78.schema.json#/properties/caseCompletedDate")                                         |
-| [enforcementNotice](#enforcementnotice)                                         | `boolean` | Required | can be null    | [Appeal S78 Case](appeal-s78-properties-enforcementnotice.md "appeal-s78.schema.json#/properties/enforcementNotice")                                         |
-| [applicationReference](#applicationreference)                                   | `string`  | Required | cannot be null | [Appeal S78 Case](appeal-s78-properties-applicationreference.md "appeal-s78.schema.json#/properties/applicationReference")                                   |
-| [applicationDate](#applicationdate)                                             | `string`  | Required | cannot be null | [Appeal S78 Case](appeal-s78-properties-applicationdate.md "appeal-s78.schema.json#/properties/applicationDate")                                             |
-| [applicationDecision](#applicationdecision)                                     | `string`  | Required | cannot be null | [Appeal S78 Case](appeal-s78-properties-applicationdecision.md "appeal-s78.schema.json#/properties/applicationDecision")                                     |
-| [applicationDecisionDate](#applicationdecisiondate)                             | `string`  | Required | can be null    | [Appeal S78 Case](appeal-s78-properties-applicationdecisiondate.md "appeal-s78.schema.json#/properties/applicationDecisionDate")                             |
-| [caseSubmissionDueDate](#casesubmissionduedate)                                 | `string`  | Required | can be null    | [Appeal S78 Case](appeal-s78-properties-casesubmissionduedate.md "appeal-s78.schema.json#/properties/caseSubmissionDueDate")                                 |
-| [siteAddressLine1](#siteaddressline1)                                           | `string`  | Required | cannot be null | [Appeal S78 Case](appeal-s78-properties-siteaddressline1.md "appeal-s78.schema.json#/properties/siteAddressLine1")                                           |
-| [siteAddressLine2](#siteaddressline2)                                           | `string`  | Required | can be null    | [Appeal S78 Case](appeal-s78-properties-siteaddressline2.md "appeal-s78.schema.json#/properties/siteAddressLine2")                                           |
-| [siteAddressTown](#siteaddresstown)                                             | `string`  | Required | cannot be null | [Appeal S78 Case](appeal-s78-properties-siteaddresstown.md "appeal-s78.schema.json#/properties/siteAddressTown")                                             |
-| [siteAddressCounty](#siteaddresscounty)                                         | `string`  | Required | can be null    | [Appeal S78 Case](appeal-s78-properties-siteaddresscounty.md "appeal-s78.schema.json#/properties/siteAddressCounty")                                         |
-| [siteAddressPostcode](#siteaddresspostcode)                                     | `string`  | Required | cannot be null | [Appeal S78 Case](appeal-s78-properties-siteaddresspostcode.md "appeal-s78.schema.json#/properties/siteAddressPostcode")                                     |
-| [siteAccessDetails](#siteaccessdetails)                                         | `array`   | Required | can be null    | [Appeal S78 Case](appeal-s78-properties-siteaccessdetails.md "appeal-s78.schema.json#/properties/siteAccessDetails")                                         |
-| [siteSafetyDetails](#sitesafetydetails)                                         | `array`   | Required | can be null    | [Appeal S78 Case](appeal-s78-properties-sitesafetydetails.md "appeal-s78.schema.json#/properties/siteSafetyDetails")                                         |
-| [siteAreaSquareMetres](#siteareasquaremetres)                                   | `number`  | Required | can be null    | [Appeal S78 Case](appeal-s78-properties-siteareasquaremetres.md "appeal-s78.schema.json#/properties/siteAreaSquareMetres")                                   |
-| [floorSpaceSquareMetres](#floorspacesquaremetres)                               | `number`  | Required | can be null    | [Appeal S78 Case](appeal-s78-properties-floorspacesquaremetres.md "appeal-s78.schema.json#/properties/floorSpaceSquareMetres")                               |
-| [isCorrectAppealType](#iscorrectappealtype)                                     | `boolean` | Required | can be null    | [Appeal S78 Case](appeal-s78-properties-iscorrectappealtype.md "appeal-s78.schema.json#/properties/isCorrectAppealType")                                     |
-| [isGreenBelt](#isgreenbelt)                                                     | `boolean` | Required | can be null    | [Appeal S78 Case](appeal-s78-properties-isgreenbelt.md "appeal-s78.schema.json#/properties/isGreenBelt")                                                     |
-| [inConservationArea](#inconservationarea)                                       | `boolean` | Required | can be null    | [Appeal S78 Case](appeal-s78-properties-inconservationarea.md "appeal-s78.schema.json#/properties/inConservationArea")                                       |
-| [ownsAllLand](#ownsallland)                                                     | `boolean` | Required | can be null    | [Appeal S78 Case](appeal-s78-properties-ownsallland.md "appeal-s78.schema.json#/properties/ownsAllLand")                                                     |
-| [ownsSomeLand](#ownssomeland)                                                   | `boolean` | Required | can be null    | [Appeal S78 Case](appeal-s78-properties-ownssomeland.md "appeal-s78.schema.json#/properties/ownsSomeLand")                                                   |
-| [knowsOtherOwners](#knowsotherowners)                                           | `string`  | Required | can be null    | [Appeal S78 Case](appeal-s78-properties-knowsotherowners.md "appeal-s78.schema.json#/properties/knowsOtherOwners")                                           |
-| [knowsAllOwners](#knowsallowners)                                               | `string`  | Required | can be null    | [Appeal S78 Case](appeal-s78-properties-knowsallowners.md "appeal-s78.schema.json#/properties/knowsAllOwners")                                               |
-| [advertisedAppeal](#advertisedappeal)                                           | `boolean` | Required | can be null    | [Appeal S78 Case](appeal-s78-properties-advertisedappeal.md "appeal-s78.schema.json#/properties/advertisedAppeal")                                           |
-| [notificationMethod](#notificationmethod)                                       | `array`   | Required | can be null    | [Appeal S78 Case](appeal-s78-properties-notificationmethod.md "appeal-s78.schema.json#/properties/notificationMethod")                                       |
-| [ownersInformed](#ownersinformed)                                               | `boolean` | Required | can be null    | [Appeal S78 Case](appeal-s78-properties-ownersinformed.md "appeal-s78.schema.json#/properties/ownersInformed")                                               |
-| [originalDevelopmentDescription](#originaldevelopmentdescription)               | `string`  | Required | can be null    | [Appeal S78 Case](appeal-s78-properties-originaldevelopmentdescription.md "appeal-s78.schema.json#/properties/originalDevelopmentDescription")               |
-| [changedDevelopmentDescription](#changeddevelopmentdescription)                 | `boolean` | Required | can be null    | [Appeal S78 Case](appeal-s78-properties-changeddevelopmentdescription.md "appeal-s78.schema.json#/properties/changedDevelopmentDescription")                 |
-| [newConditionDetails](#newconditiondetails)                                     | `string`  | Required | can be null    | [Appeal S78 Case](appeal-s78-properties-newconditiondetails.md "appeal-s78.schema.json#/properties/newConditionDetails")                                     |
-| [nearbyCaseReferences](#nearbycasereferences)                                   | `array`   | Required | can be null    | [Appeal S78 Case](appeal-s78-properties-nearbycasereferences.md "appeal-s78.schema.json#/properties/nearbyCaseReferences")                                   |
-| [neighbouringSiteAddresses](#neighbouringsiteaddresses)                         | `array`   | Required | can be null    | [Appeal S78 Case](appeal-s78-properties-neighbouringsiteaddresses.md "appeal-s78.schema.json#/properties/neighbouringSiteAddresses")                         |
-| [affectedListedBuildingNumbers](#affectedlistedbuildingnumbers)                 | `array`   | Required | can be null    | [Appeal S78 Case](appeal-s78-properties-affectedlistedbuildingnumbers.md "appeal-s78.schema.json#/properties/affectedListedBuildingNumbers")                 |
-| [changedListedBuildingNumbers](#changedlistedbuildingnumbers)                   | `array`   | Required | can be null    | [Appeal S78 Case](appeal-s78-properties-changedlistedbuildingnumbers.md "appeal-s78.schema.json#/properties/changedListedBuildingNumbers")                   |
-| [appellantCostsAppliedFor](#appellantcostsappliedfor)                           | `boolean` | Required | can be null    | [Appeal S78 Case](appeal-s78-properties-appellantcostsappliedfor.md "appeal-s78.schema.json#/properties/appellantCostsAppliedFor")                           |
-| [lpaCostsAppliedFor](#lpacostsappliedfor)                                       | `boolean` | Required | can be null    | [Appeal S78 Case](appeal-s78-properties-lpacostsappliedfor.md "appeal-s78.schema.json#/properties/lpaCostsAppliedFor")                                       |
-| [agriculturalHolding](#agriculturalholding)                                     | `boolean` | Required | can be null    | [Appeal S78 Case](appeal-s78-properties-agriculturalholding.md "appeal-s78.schema.json#/properties/agriculturalHolding")                                     |
-| [tenantAgriculturalHolding](#tenantagriculturalholding)                         | `boolean` | Required | can be null    | [Appeal S78 Case](appeal-s78-properties-tenantagriculturalholding.md "appeal-s78.schema.json#/properties/tenantAgriculturalHolding")                         |
-| [otherTenantsAgriculturalHolding](#othertenantsagriculturalholding)             | `boolean` | Required | can be null    | [Appeal S78 Case](appeal-s78-properties-othertenantsagriculturalholding.md "appeal-s78.schema.json#/properties/otherTenantsAgriculturalHolding")             |
-| [informedTenantsAgriculturalHolding](#informedtenantsagriculturalholding)       | `boolean` | Required | can be null    | [Appeal S78 Case](appeal-s78-properties-informedtenantsagriculturalholding.md "appeal-s78.schema.json#/properties/informedTenantsAgriculturalHolding")       |
-| [appellantProcedurePreference](#appellantprocedurepreference)                   | `string`  | Required | can be null    | [Appeal S78 Case](appeal-s78-properties-appellantprocedurepreference.md "appeal-s78.schema.json#/properties/appellantProcedurePreference")                   |
-| [appellantProcedurePreferenceDetails](#appellantprocedurepreferencedetails)     | `string`  | Required | can be null    | [Appeal S78 Case](appeal-s78-properties-appellantprocedurepreferencedetails.md "appeal-s78.schema.json#/properties/appellantProcedurePreferenceDetails")     |
-| [appellantProcedurePreferenceDuration](#appellantprocedurepreferenceduration)   | `number`  | Required | can be null    | [Appeal S78 Case](appeal-s78-properties-appellantprocedurepreferenceduration.md "appeal-s78.schema.json#/properties/appellantProcedurePreferenceDuration")   |
-| [inquiryHowManyWitnesses](#inquiryhowmanywitnesses)                             | `number`  | Required | can be null    | [Appeal S78 Case](appeal-s78-properties-inquiryhowmanywitnesses.md "appeal-s78.schema.json#/properties/inquiryHowManyWitnesses")                             |
-| [updateDevelopmentDescriptionUploaded](#updatedevelopmentdescriptionuploaded)   | `boolean` | Optional | can be null    | [Appeal S78 Case](appeal-s78-properties-updatedevelopmentdescriptionuploaded.md "appeal-s78.schema.json#/properties/updateDevelopmentDescriptionUploaded")   |
-| [ownershipCertificateSubmitted](#ownershipcertificatesubmitted)                 | `boolean` | Required | can be null    | [Appeal S78 Case](appeal-s78-properties-ownershipcertificatesubmitted.md "appeal-s78.schema.json#/properties/ownershipCertificateSubmitted")                 |
-| [designAccessStatementProvided](#designaccessstatementprovided)                 | `boolean` | Required | can be null    | [Appeal S78 Case](appeal-s78-properties-designaccessstatementprovided.md "appeal-s78.schema.json#/properties/designAccessStatementProvided")                 |
-| [newPlansDrawingsProvided](#newplansdrawingsprovided)                           | `boolean` | Required | can be null    | [Appeal S78 Case](appeal-s78-properties-newplansdrawingsprovided.md "appeal-s78.schema.json#/properties/newPlansDrawingsProvided")                           |
-| [planningObligation](#planningobligation)                                       | `boolean` | Required | can be null    | [Appeal S78 Case](appeal-s78-properties-planningobligation.md "appeal-s78.schema.json#/properties/planningObligation")                                       |
-| [statusPlanningObligation](#statusplanningobligation)                           | `string`  | Required | can be null    | [Appeal S78 Case](appeal-s78-properties-statusplanningobligation.md "appeal-s78.schema.json#/properties/statusPlanningObligation")                           |
-| [appellantFinalCommentDetails](#appellantfinalcommentdetails)                   | `string`  | Required | can be null    | [Appeal S78 Case](appeal-s78-properties-appellantfinalcommentdetails.md "appeal-s78.schema.json#/properties/appellantFinalCommentDetails")                   |
-| [appellantWitnesses](#appellantwitnesses)                                       | `boolean` | Required | can be null    | [Appeal S78 Case](appeal-s78-properties-appellantwitnesses.md "appeal-s78.schema.json#/properties/appellantWitnesses")                                       |
-| [affectsScheduledMonument](#affectsscheduledmonument)                           | `boolean` | Required | can be null    | [Appeal S78 Case](appeal-s78-properties-affectsscheduledmonument.md "appeal-s78.schema.json#/properties/affectsScheduledMonument")                           |
-| [hasProtectedSpecies](#hasprotectedspecies)                                     | `boolean` | Required | can be null    | [Appeal S78 Case](appeal-s78-properties-hasprotectedspecies.md "appeal-s78.schema.json#/properties/hasProtectedSpecies")                                     |
-| [isAonbNationalLandscape](#isaonbnationallandscape)                             | `boolean` | Required | can be null    | [Appeal S78 Case](appeal-s78-properties-isaonbnationallandscape.md "appeal-s78.schema.json#/properties/isAonbNationalLandscape")                             |
-| [designatedSitesNames](#designatedsitesnames)                                   | `string`  | Required | can be null    | [Appeal S78 Case](appeal-s78-properties-designatedsitesnames.md "appeal-s78.schema.json#/properties/designatedSitesNames")                                   |
-| [hasTreePreservationOrder](#hastreepreservationorder)                           | `boolean` | Required | can be null    | [Appeal S78 Case](appeal-s78-properties-hastreepreservationorder.md "appeal-s78.schema.json#/properties/hasTreePreservationOrder")                           |
-| [isGypsyOrTravellerSite](#isgypsyortravellersite)                               | `boolean` | Required | can be null    | [Appeal S78 Case](appeal-s78-properties-isgypsyortravellersite.md "appeal-s78.schema.json#/properties/isGypsyOrTravellerSite")                               |
-| [isPublicRightOfWay](#ispublicrightofway)                                       | `boolean` | Required | can be null    | [Appeal S78 Case](appeal-s78-properties-ispublicrightofway.md "appeal-s78.schema.json#/properties/isPublicRightOfWay")                                       |
-| [eiaEnvironmentalImpactSchedule](#eiaenvironmentalimpactschedule)               | `string`  | Required | can be null    | [Appeal S78 Case](appeal-s78-properties-eiaenvironmentalimpactschedule.md "appeal-s78.schema.json#/properties/eiaEnvironmentalImpactSchedule")               |
-| [eiaDevelopmentDescription](#eiadevelopmentdescription)                         | `string`  | Required | can be null    | [Appeal S78 Case](appeal-s78-properties-eiadevelopmentdescription.md "appeal-s78.schema.json#/properties/eiaDevelopmentDescription")                         |
-| [eiaSensitiveAreaDetails](#eiasensitiveareadetails)                             | `string`  | Required | can be null    | [Appeal S78 Case](appeal-s78-properties-eiasensitiveareadetails.md "appeal-s78.schema.json#/properties/eiaSensitiveAreaDetails")                             |
-| [eiaColumnTwoThreshold](#eiacolumntwothreshold)                                 | `boolean` | Required | can be null    | [Appeal S78 Case](appeal-s78-properties-eiacolumntwothreshold.md "appeal-s78.schema.json#/properties/eiaColumnTwoThreshold")                                 |
-| [eiaScreeningOpinion](#eiascreeningopinion)                                     | `boolean` | Required | can be null    | [Appeal S78 Case](appeal-s78-properties-eiascreeningopinion.md "appeal-s78.schema.json#/properties/eiaScreeningOpinion")                                     |
-| [eiaRequiresEnvironmentalStatement](#eiarequiresenvironmentalstatement)         | `boolean` | Required | can be null    | [Appeal S78 Case](appeal-s78-properties-eiarequiresenvironmentalstatement.md "appeal-s78.schema.json#/properties/eiaRequiresEnvironmentalStatement")         |
-| [eiaCompletedEnvironmentalStatement](#eiacompletedenvironmentalstatement)       | `boolean` | Required | can be null    | [Appeal S78 Case](appeal-s78-properties-eiacompletedenvironmentalstatement.md "appeal-s78.schema.json#/properties/eiaCompletedEnvironmentalStatement")       |
-| [eiaConsultedBodiesDetails](#eiaconsultedbodiesdetails)                         | `string`  | Required | can be null    | [Appeal S78 Case](appeal-s78-properties-eiaconsultedbodiesdetails.md "appeal-s78.schema.json#/properties/eiaConsultedBodiesDetails")                         |
-| [hasStatutoryConsultees](#hasstatutoryconsultees)                               | `boolean` | Required | can be null    | [Appeal S78 Case](appeal-s78-properties-hasstatutoryconsultees.md "appeal-s78.schema.json#/properties/hasStatutoryConsultees")                               |
-| [hasConsultationResponses](#hasconsultationresponses)                           | `boolean` | Required | can be null    | [Appeal S78 Case](appeal-s78-properties-hasconsultationresponses.md "appeal-s78.schema.json#/properties/hasConsultationResponses")                           |
-| [hasEmergingPlan](#hasemergingplan)                                             | `boolean` | Required | can be null    | [Appeal S78 Case](appeal-s78-properties-hasemergingplan.md "appeal-s78.schema.json#/properties/hasEmergingPlan")                                             |
-| [hasSupplementaryPlanningDocs](#hassupplementaryplanningdocs)                   | `boolean` | Required | can be null    | [Appeal S78 Case](appeal-s78-properties-hassupplementaryplanningdocs.md "appeal-s78.schema.json#/properties/hasSupplementaryPlanningDocs")                   |
-| [hasInfrastructureLevy](#hasinfrastructurelevy)                                 | `boolean` | Required | can be null    | [Appeal S78 Case](appeal-s78-properties-hasinfrastructurelevy.md "appeal-s78.schema.json#/properties/hasInfrastructureLevy")                                 |
-| [isInfrastructureLevyFormallyAdopted](#isinfrastructurelevyformallyadopted)     | `boolean` | Required | can be null    | [Appeal S78 Case](appeal-s78-properties-isinfrastructurelevyformallyadopted.md "appeal-s78.schema.json#/properties/isInfrastructureLevyFormallyAdopted")     |
-| [infrastructureLevyAdoptedDate](#infrastructurelevyadopteddate)                 | `string`  | Required | can be null    | [Appeal S78 Case](appeal-s78-properties-infrastructurelevyadopteddate.md "appeal-s78.schema.json#/properties/infrastructureLevyAdoptedDate")                 |
-| [infrastructureLevyExpectedDate](#infrastructurelevyexpecteddate)               | `string`  | Required | can be null    | [Appeal S78 Case](appeal-s78-properties-infrastructurelevyexpecteddate.md "appeal-s78.schema.json#/properties/infrastructureLevyExpectedDate")               |
-| [lpaProcedurePreference](#lpaprocedurepreference)                               | `string`  | Required | can be null    | [Appeal S78 Case](appeal-s78-properties-lpaprocedurepreference.md "appeal-s78.schema.json#/properties/lpaProcedurePreference")                               |
-| [lpaProcedurePreferenceDetails](#lpaprocedurepreferencedetails)                 | `string`  | Required | can be null    | [Appeal S78 Case](appeal-s78-properties-lpaprocedurepreferencedetails.md "appeal-s78.schema.json#/properties/lpaProcedurePreferenceDetails")                 |
-| [lpaProcedurePreferenceDuration](#lpaprocedurepreferenceduration)               | `number`  | Required | can be null    | [Appeal S78 Case](appeal-s78-properties-lpaprocedurepreferenceduration.md "appeal-s78.schema.json#/properties/lpaProcedurePreferenceDuration")               |
-| [lpaFinalCommentDetails](#lpafinalcommentdetails)                               | `string`  | Required | can be null    | [Appeal S78 Case](appeal-s78-properties-lpafinalcommentdetails.md "appeal-s78.schema.json#/properties/lpaFinalCommentDetails")                               |
-| [lpaAddedWitnesses](#lpaaddedwitnesses)                                         | `boolean` | Required | can be null    | [Appeal S78 Case](appeal-s78-properties-lpaaddedwitnesses.md "appeal-s78.schema.json#/properties/lpaAddedWitnesses")                                         |
-| [caseworkReason](#caseworkreason)                                               | `string`  | Required | can be null    | [Appeal S78 Case](appeal-s78-properties-caseworkreason.md "appeal-s78.schema.json#/properties/caseworkReason")                                               |
-| [developmentType](#developmenttype)                                             | `string`  | Required | can be null    | [Appeal S78 Case](appeal-s78-properties-developmenttype.md "appeal-s78.schema.json#/properties/developmentType")                                             |
-| [importantInformation](#importantinformation)                                   | `string`  | Required | can be null    | [Appeal S78 Case](appeal-s78-properties-importantinformation.md "appeal-s78.schema.json#/properties/importantInformation")                                   |
-| [jurisdiction](#jurisdiction)                                                   | `string`  | Required | can be null    | [Appeal S78 Case](appeal-s78-properties-jurisdiction.md "appeal-s78.schema.json#/properties/jurisdiction")                                                   |
-| [redeterminedIndicator](#redeterminedindicator)                                 | `string`  | Required | can be null    | [Appeal S78 Case](appeal-s78-properties-redeterminedindicator.md "appeal-s78.schema.json#/properties/redeterminedIndicator")                                 |
-| [dateCostsReportDespatched](#datecostsreportdespatched)                         | `string`  | Required | can be null    | [Appeal S78 Case](appeal-s78-properties-datecostsreportdespatched.md "appeal-s78.schema.json#/properties/dateCostsReportDespatched")                         |
-| [dateNotRecoveredOrDerecovered](#datenotrecoveredorderecovered)                 | `string`  | Required | can be null    | [Appeal S78 Case](appeal-s78-properties-datenotrecoveredorderecovered.md "appeal-s78.schema.json#/properties/dateNotRecoveredOrDerecovered")                 |
-| [dateRecovered](#daterecovered)                                                 | `string`  | Required | can be null    | [Appeal S78 Case](appeal-s78-properties-daterecovered.md "appeal-s78.schema.json#/properties/dateRecovered")                                                 |
-| [originalCaseDecisionDate](#originalcasedecisiondate)                           | `string`  | Required | can be null    | [Appeal S78 Case](appeal-s78-properties-originalcasedecisiondate.md "appeal-s78.schema.json#/properties/originalCaseDecisionDate")                           |
-| [targetDate](#targetdate)                                                       | `string`  | Required | can be null    | [Appeal S78 Case](appeal-s78-properties-targetdate.md "appeal-s78.schema.json#/properties/targetDate")                                                       |
-| [appellantCommentsSubmitted](#appellantcommentssubmitted)                       | `string`  | Required | can be null    | [Appeal S78 Case](appeal-s78-properties-appellantcommentssubmitted.md "appeal-s78.schema.json#/properties/appellantCommentsSubmitted")                       |
-| [appellantStatementSubmitted](#appellantstatementsubmitted)                     | `string`  | Required | can be null    | [Appeal S78 Case](appeal-s78-properties-appellantstatementsubmitted.md "appeal-s78.schema.json#/properties/appellantStatementSubmitted")                     |
-| [finalCommentsDueDate](#finalcommentsduedate)                                   | `string`  | Required | can be null    | [Appeal S78 Case](appeal-s78-properties-finalcommentsduedate.md "appeal-s78.schema.json#/properties/finalCommentsDueDate")                                   |
-| [interestedPartyRepsDueDate](#interestedpartyrepsduedate)                       | `string`  | Required | can be null    | [Appeal S78 Case](appeal-s78-properties-interestedpartyrepsduedate.md "appeal-s78.schema.json#/properties/interestedPartyRepsDueDate")                       |
-| [lpaCommentsSubmitted](#lpacommentssubmitted)                                   | `string`  | Required | can be null    | [Appeal S78 Case](appeal-s78-properties-lpacommentssubmitted.md "appeal-s78.schema.json#/properties/lpaCommentsSubmitted")                                   |
-| [lpaProofsSubmitted](#lpaproofssubmitted)                                       | `string`  | Required | can be null    | [Appeal S78 Case](appeal-s78-properties-lpaproofssubmitted.md "appeal-s78.schema.json#/properties/lpaProofsSubmitted")                                       |
-| [lpaStatementSubmitted](#lpastatementsubmitted)                                 | `string`  | Required | can be null    | [Appeal S78 Case](appeal-s78-properties-lpastatementsubmitted.md "appeal-s78.schema.json#/properties/lpaStatementSubmitted")                                 |
-| [proofsOfEvidenceDueDate](#proofsofevidenceduedate)                             | `string`  | Required | can be null    | [Appeal S78 Case](appeal-s78-properties-proofsofevidenceduedate.md "appeal-s78.schema.json#/properties/proofsOfEvidenceDueDate")                             |
-| [siteNoticesSent](#sitenoticessent)                                             | `string`  | Required | can be null    | [Appeal S78 Case](appeal-s78-properties-sitenoticessent.md "appeal-s78.schema.json#/properties/siteNoticesSent")                                             |
-| [statementDueDate](#statementduedate)                                           | `string`  | Required | can be null    | [Appeal S78 Case](appeal-s78-properties-statementduedate.md "appeal-s78.schema.json#/properties/statementDueDate")                                           |
-| [inspectorNeedToEnterSite](#inspectorneedtoentersite)                           | `boolean` | Required | can be null    | [Appeal S78 Case](appeal-s78-properties-inspectorneedtoentersite.md "appeal-s78.schema.json#/properties/inspectorNeedToEnterSite")                           |
-| [numberOfResidences](#numberofresidences)                                       | `number`  | Required | can be null    | [Appeal S78 Case](appeal-s78-properties-numberofresidences.md "appeal-s78.schema.json#/properties/numberOfResidences")                                       |
-| [siteGridReferenceEasting](#sitegridreferenceeasting)                           | `string`  | Required | can be null    | [Appeal S78 Case](appeal-s78-properties-sitegridreferenceeasting.md "appeal-s78.schema.json#/properties/siteGridReferenceEasting")                           |
-| [siteGridReferenceNorthing](#sitegridreferencenorthing)                         | `string`  | Required | can be null    | [Appeal S78 Case](appeal-s78-properties-sitegridreferencenorthing.md "appeal-s78.schema.json#/properties/siteGridReferenceNorthing")                         |
-| [siteViewableFromRoad](#siteviewablefromroad)                                   | `boolean` | Required | can be null    | [Appeal S78 Case](appeal-s78-properties-siteviewablefromroad.md "appeal-s78.schema.json#/properties/siteViewableFromRoad")                                   |
-| [siteWithinSSSI](#sitewithinsssi)                                               | `boolean` | Required | can be null    | [Appeal S78 Case](appeal-s78-properties-sitewithinsssi.md "appeal-s78.schema.json#/properties/siteWithinSSSI")                                               |
-| [typeOfPlanningApplication](#typeofplanningapplication)                         | `string`  | Required | can be null    | [Appeal S78 Case](appeal-s78-properties-typeofplanningapplication.md "appeal-s78.schema.json#/properties/typeOfPlanningApplication")                         |
-| Additional Properties                                                           | Any       | Optional | can be null    |                                                                                                                                                              |
+| Property                                                                              | Type      | Required | Nullable       | Defined by                                                                                                                                                         |
+| :------------------------------------------------------------------------------------ | :-------- | :------- | :------------- | :----------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [caseId](#caseid)                                                                     | `integer` | Required | can be null    | [Appeal S78 Case](appeal-s78-properties-caseid.md "appeal-s78.schema.json#/properties/caseId")                                                                     |
+| [caseReference](#casereference)                                                       | `string`  | Required | cannot be null | [Appeal S78 Case](appeal-s78-properties-casereference.md "appeal-s78.schema.json#/properties/caseReference")                                                       |
+| [submissionId](#submissionid)                                                         | `string`  | Optional | can be null    | [Appeal S78 Case](appeal-s78-properties-submissionid.md "appeal-s78.schema.json#/properties/submissionId")                                                         |
+| [caseStatus](#casestatus)                                                             | `string`  | Required | cannot be null | [Appeal S78 Case](appeal-s78-properties-casestatus.md "appeal-s78.schema.json#/properties/caseStatus")                                                             |
+| [caseType](#casetype)                                                                 | `string`  | Required | cannot be null | [Appeal S78 Case](appeal-s78-properties-casetype.md "appeal-s78.schema.json#/properties/caseType")                                                                 |
+| [caseProcedure](#caseprocedure)                                                       | `string`  | Required | can be null    | [Appeal S78 Case](appeal-s78-properties-caseprocedure.md "appeal-s78.schema.json#/properties/caseProcedure")                                                       |
+| [lpaCode](#lpacode)                                                                   | `string`  | Required | cannot be null | [Appeal S78 Case](appeal-s78-properties-lpacode.md "appeal-s78.schema.json#/properties/lpaCode")                                                                   |
+| [caseOfficerId](#caseofficerid)                                                       | `string`  | Required | can be null    | [Appeal S78 Case](appeal-s78-properties-caseofficerid.md "appeal-s78.schema.json#/properties/caseOfficerId")                                                       |
+| [inspectorId](#inspectorid)                                                           | `string`  | Required | can be null    | [Appeal S78 Case](appeal-s78-properties-inspectorid.md "appeal-s78.schema.json#/properties/inspectorId")                                                           |
+| [allocationLevel](#allocationlevel)                                                   | `string`  | Required | can be null    | [Appeal S78 Case](appeal-s78-properties-allocationlevel.md "appeal-s78.schema.json#/properties/allocationLevel")                                                   |
+| [allocationBand](#allocationband)                                                     | `number`  | Required | can be null    | [Appeal S78 Case](appeal-s78-properties-allocationband.md "appeal-s78.schema.json#/properties/allocationBand")                                                     |
+| [caseSpecialisms](#casespecialisms)                                                   | `array`   | Required | can be null    | [Appeal S78 Case](appeal-s78-properties-casespecialisms.md "appeal-s78.schema.json#/properties/caseSpecialisms")                                                   |
+| [caseSubmittedDate](#casesubmitteddate)                                               | `string`  | Required | cannot be null | [Appeal S78 Case](appeal-s78-properties-casesubmitteddate.md "appeal-s78.schema.json#/properties/caseSubmittedDate")                                               |
+| [caseCreatedDate](#casecreateddate)                                                   | `string`  | Required | cannot be null | [Appeal S78 Case](appeal-s78-properties-casecreateddate.md "appeal-s78.schema.json#/properties/caseCreatedDate")                                                   |
+| [caseUpdatedDate](#caseupdateddate)                                                   | `string`  | Required | cannot be null | [Appeal S78 Case](appeal-s78-properties-caseupdateddate.md "appeal-s78.schema.json#/properties/caseUpdatedDate")                                                   |
+| [caseValidDate](#casevaliddate)                                                       | `string`  | Required | can be null    | [Appeal S78 Case](appeal-s78-properties-casevaliddate.md "appeal-s78.schema.json#/properties/caseValidDate")                                                       |
+| [caseValidationDate](#casevalidationdate)                                             | `string`  | Required | can be null    | [Appeal S78 Case](appeal-s78-properties-casevalidationdate.md "appeal-s78.schema.json#/properties/caseValidationDate")                                             |
+| [caseValidationOutcome](#casevalidationoutcome)                                       | `string`  | Required | can be null    | [Appeal S78 Case](appeal-s78-properties-casevalidationoutcome.md "appeal-s78.schema.json#/properties/caseValidationOutcome")                                       |
+| [caseValidationInvalidDetails](#casevalidationinvaliddetails)                         | `array`   | Required | can be null    | [Appeal S78 Case](appeal-s78-properties-casevalidationinvaliddetails.md "appeal-s78.schema.json#/properties/caseValidationInvalidDetails")                         |
+| [caseValidationIncompleteDetails](#casevalidationincompletedetails)                   | `array`   | Required | can be null    | [Appeal S78 Case](appeal-s78-properties-casevalidationincompletedetails.md "appeal-s78.schema.json#/properties/caseValidationIncompleteDetails")                   |
+| [caseExtensionDate](#caseextensiondate)                                               | `string`  | Required | can be null    | [Appeal S78 Case](appeal-s78-properties-caseextensiondate.md "appeal-s78.schema.json#/properties/caseExtensionDate")                                               |
+| [caseStartedDate](#casestarteddate)                                                   | `string`  | Required | can be null    | [Appeal S78 Case](appeal-s78-properties-casestarteddate.md "appeal-s78.schema.json#/properties/caseStartedDate")                                                   |
+| [casePublishedDate](#casepublisheddate)                                               | `string`  | Required | can be null    | [Appeal S78 Case](appeal-s78-properties-casepublisheddate.md "appeal-s78.schema.json#/properties/casePublishedDate")                                               |
+| [linkedCaseStatus](#linkedcasestatus)                                                 | `string`  | Required | can be null    | [Appeal S78 Case](appeal-s78-properties-linkedcasestatus.md "appeal-s78.schema.json#/properties/linkedCaseStatus")                                                 |
+| [leadCaseReference](#leadcasereference)                                               | `string`  | Required | can be null    | [Appeal S78 Case](appeal-s78-properties-leadcasereference.md "appeal-s78.schema.json#/properties/leadCaseReference")                                               |
+| [lpaQuestionnaireDueDate](#lpaquestionnaireduedate)                                   | `string`  | Required | can be null    | [Appeal S78 Case](appeal-s78-properties-lpaquestionnaireduedate.md "appeal-s78.schema.json#/properties/lpaQuestionnaireDueDate")                                   |
+| [lpaQuestionnaireSubmittedDate](#lpaquestionnairesubmitteddate)                       | `string`  | Required | can be null    | [Appeal S78 Case](appeal-s78-properties-lpaquestionnairesubmitteddate.md "appeal-s78.schema.json#/properties/lpaQuestionnaireSubmittedDate")                       |
+| [lpaQuestionnaireCreatedDate](#lpaquestionnairecreateddate)                           | `string`  | Required | can be null    | [Appeal S78 Case](appeal-s78-properties-lpaquestionnairecreateddate.md "appeal-s78.schema.json#/properties/lpaQuestionnaireCreatedDate")                           |
+| [lpaQuestionnairePublishedDate](#lpaquestionnairepublisheddate)                       | `string`  | Required | can be null    | [Appeal S78 Case](appeal-s78-properties-lpaquestionnairepublisheddate.md "appeal-s78.schema.json#/properties/lpaQuestionnairePublishedDate")                       |
+| [lpaQuestionnaireValidationOutcome](#lpaquestionnairevalidationoutcome)               | `string`  | Required | can be null    | [Appeal S78 Case](appeal-s78-properties-lpaquestionnairevalidationoutcome.md "appeal-s78.schema.json#/properties/lpaQuestionnaireValidationOutcome")               |
+| [lpaQuestionnaireValidationOutcomeDate](#lpaquestionnairevalidationoutcomedate)       | `string`  | Required | can be null    | [Appeal S78 Case](appeal-s78-properties-lpaquestionnairevalidationoutcomedate.md "appeal-s78.schema.json#/properties/lpaQuestionnaireValidationOutcomeDate")       |
+| [lpaQuestionnaireValidationDetails](#lpaquestionnairevalidationdetails)               | `array`   | Required | can be null    | [Appeal S78 Case](appeal-s78-properties-lpaquestionnairevalidationdetails.md "appeal-s78.schema.json#/properties/lpaQuestionnaireValidationDetails")               |
+| [lpaStatement](#lpastatement)                                                         | `string`  | Required | can be null    | [Appeal S78 Case](appeal-s78-properties-lpastatement.md "appeal-s78.schema.json#/properties/lpaStatement")                                                         |
+| [caseWithdrawnDate](#casewithdrawndate)                                               | `string`  | Required | can be null    | [Appeal S78 Case](appeal-s78-properties-casewithdrawndate.md "appeal-s78.schema.json#/properties/caseWithdrawnDate")                                               |
+| [caseTransferredDate](#casetransferreddate)                                           | `string`  | Required | can be null    | [Appeal S78 Case](appeal-s78-properties-casetransferreddate.md "appeal-s78.schema.json#/properties/caseTransferredDate")                                           |
+| [transferredCaseClosedDate](#transferredcasecloseddate)                               | `string`  | Required | can be null    | [Appeal S78 Case](appeal-s78-properties-transferredcasecloseddate.md "appeal-s78.schema.json#/properties/transferredCaseClosedDate")                               |
+| [caseDecisionOutcomeDate](#casedecisionoutcomedate)                                   | `string`  | Required | can be null    | [Appeal S78 Case](appeal-s78-properties-casedecisionoutcomedate.md "appeal-s78.schema.json#/properties/caseDecisionOutcomeDate")                                   |
+| [caseDecisionPublishedDate](#casedecisionpublisheddate)                               | `string`  | Required | can be null    | [Appeal S78 Case](appeal-s78-properties-casedecisionpublisheddate.md "appeal-s78.schema.json#/properties/caseDecisionPublishedDate")                               |
+| [caseDecisionOutcome](#casedecisionoutcome)                                           | `string`  | Required | can be null    | [Appeal S78 Case](appeal-s78-properties-casedecisionoutcome.md "appeal-s78.schema.json#/properties/caseDecisionOutcome")                                           |
+| [caseCompletedDate](#casecompleteddate)                                               | `string`  | Required | can be null    | [Appeal S78 Case](appeal-s78-properties-casecompleteddate.md "appeal-s78.schema.json#/properties/caseCompletedDate")                                               |
+| [enforcementNotice](#enforcementnotice)                                               | `boolean` | Required | can be null    | [Appeal S78 Case](appeal-s78-properties-enforcementnotice.md "appeal-s78.schema.json#/properties/enforcementNotice")                                               |
+| [applicationReference](#applicationreference)                                         | `string`  | Required | cannot be null | [Appeal S78 Case](appeal-s78-properties-applicationreference.md "appeal-s78.schema.json#/properties/applicationReference")                                         |
+| [applicationDate](#applicationdate)                                                   | `string`  | Required | cannot be null | [Appeal S78 Case](appeal-s78-properties-applicationdate.md "appeal-s78.schema.json#/properties/applicationDate")                                                   |
+| [applicationDecision](#applicationdecision)                                           | `string`  | Required | cannot be null | [Appeal S78 Case](appeal-s78-properties-applicationdecision.md "appeal-s78.schema.json#/properties/applicationDecision")                                           |
+| [applicationDecisionDate](#applicationdecisiondate)                                   | `string`  | Required | can be null    | [Appeal S78 Case](appeal-s78-properties-applicationdecisiondate.md "appeal-s78.schema.json#/properties/applicationDecisionDate")                                   |
+| [caseSubmissionDueDate](#casesubmissionduedate)                                       | `string`  | Required | can be null    | [Appeal S78 Case](appeal-s78-properties-casesubmissionduedate.md "appeal-s78.schema.json#/properties/caseSubmissionDueDate")                                       |
+| [siteAddressLine1](#siteaddressline1)                                                 | `string`  | Required | cannot be null | [Appeal S78 Case](appeal-s78-properties-siteaddressline1.md "appeal-s78.schema.json#/properties/siteAddressLine1")                                                 |
+| [siteAddressLine2](#siteaddressline2)                                                 | `string`  | Required | can be null    | [Appeal S78 Case](appeal-s78-properties-siteaddressline2.md "appeal-s78.schema.json#/properties/siteAddressLine2")                                                 |
+| [siteAddressTown](#siteaddresstown)                                                   | `string`  | Required | cannot be null | [Appeal S78 Case](appeal-s78-properties-siteaddresstown.md "appeal-s78.schema.json#/properties/siteAddressTown")                                                   |
+| [siteAddressCounty](#siteaddresscounty)                                               | `string`  | Required | can be null    | [Appeal S78 Case](appeal-s78-properties-siteaddresscounty.md "appeal-s78.schema.json#/properties/siteAddressCounty")                                               |
+| [siteAddressPostcode](#siteaddresspostcode)                                           | `string`  | Required | cannot be null | [Appeal S78 Case](appeal-s78-properties-siteaddresspostcode.md "appeal-s78.schema.json#/properties/siteAddressPostcode")                                           |
+| [siteAccessDetails](#siteaccessdetails)                                               | `array`   | Required | can be null    | [Appeal S78 Case](appeal-s78-properties-siteaccessdetails.md "appeal-s78.schema.json#/properties/siteAccessDetails")                                               |
+| [siteSafetyDetails](#sitesafetydetails)                                               | `array`   | Required | can be null    | [Appeal S78 Case](appeal-s78-properties-sitesafetydetails.md "appeal-s78.schema.json#/properties/siteSafetyDetails")                                               |
+| [siteAreaSquareMetres](#siteareasquaremetres)                                         | `number`  | Required | can be null    | [Appeal S78 Case](appeal-s78-properties-siteareasquaremetres.md "appeal-s78.schema.json#/properties/siteAreaSquareMetres")                                         |
+| [floorSpaceSquareMetres](#floorspacesquaremetres)                                     | `number`  | Required | can be null    | [Appeal S78 Case](appeal-s78-properties-floorspacesquaremetres.md "appeal-s78.schema.json#/properties/floorSpaceSquareMetres")                                     |
+| [isCorrectAppealType](#iscorrectappealtype)                                           | `boolean` | Required | can be null    | [Appeal S78 Case](appeal-s78-properties-iscorrectappealtype.md "appeal-s78.schema.json#/properties/isCorrectAppealType")                                           |
+| [isGreenBelt](#isgreenbelt)                                                           | `boolean` | Required | can be null    | [Appeal S78 Case](appeal-s78-properties-isgreenbelt.md "appeal-s78.schema.json#/properties/isGreenBelt")                                                           |
+| [inConservationArea](#inconservationarea)                                             | `boolean` | Required | can be null    | [Appeal S78 Case](appeal-s78-properties-inconservationarea.md "appeal-s78.schema.json#/properties/inConservationArea")                                             |
+| [ownsAllLand](#ownsallland)                                                           | `boolean` | Required | can be null    | [Appeal S78 Case](appeal-s78-properties-ownsallland.md "appeal-s78.schema.json#/properties/ownsAllLand")                                                           |
+| [ownsSomeLand](#ownssomeland)                                                         | `boolean` | Required | can be null    | [Appeal S78 Case](appeal-s78-properties-ownssomeland.md "appeal-s78.schema.json#/properties/ownsSomeLand")                                                         |
+| [knowsOtherOwners](#knowsotherowners)                                                 | `string`  | Required | can be null    | [Appeal S78 Case](appeal-s78-properties-knowsotherowners.md "appeal-s78.schema.json#/properties/knowsOtherOwners")                                                 |
+| [knowsAllOwners](#knowsallowners)                                                     | `string`  | Required | can be null    | [Appeal S78 Case](appeal-s78-properties-knowsallowners.md "appeal-s78.schema.json#/properties/knowsAllOwners")                                                     |
+| [advertisedAppeal](#advertisedappeal)                                                 | `boolean` | Required | can be null    | [Appeal S78 Case](appeal-s78-properties-advertisedappeal.md "appeal-s78.schema.json#/properties/advertisedAppeal")                                                 |
+| [notificationMethod](#notificationmethod)                                             | `array`   | Required | can be null    | [Appeal S78 Case](appeal-s78-properties-notificationmethod.md "appeal-s78.schema.json#/properties/notificationMethod")                                             |
+| [ownersInformed](#ownersinformed)                                                     | `boolean` | Required | can be null    | [Appeal S78 Case](appeal-s78-properties-ownersinformed.md "appeal-s78.schema.json#/properties/ownersInformed")                                                     |
+| [originalDevelopmentDescription](#originaldevelopmentdescription)                     | `string`  | Required | can be null    | [Appeal S78 Case](appeal-s78-properties-originaldevelopmentdescription.md "appeal-s78.schema.json#/properties/originalDevelopmentDescription")                     |
+| [changedDevelopmentDescription](#changeddevelopmentdescription)                       | `boolean` | Required | can be null    | [Appeal S78 Case](appeal-s78-properties-changeddevelopmentdescription.md "appeal-s78.schema.json#/properties/changedDevelopmentDescription")                       |
+| [newConditionDetails](#newconditiondetails)                                           | `string`  | Required | can be null    | [Appeal S78 Case](appeal-s78-properties-newconditiondetails.md "appeal-s78.schema.json#/properties/newConditionDetails")                                           |
+| [nearbyCaseReferences](#nearbycasereferences)                                         | `array`   | Required | can be null    | [Appeal S78 Case](appeal-s78-properties-nearbycasereferences.md "appeal-s78.schema.json#/properties/nearbyCaseReferences")                                         |
+| [neighbouringSiteAddresses](#neighbouringsiteaddresses)                               | `array`   | Required | can be null    | [Appeal S78 Case](appeal-s78-properties-neighbouringsiteaddresses.md "appeal-s78.schema.json#/properties/neighbouringSiteAddresses")                               |
+| [affectedListedBuildingNumbers](#affectedlistedbuildingnumbers)                       | `array`   | Required | can be null    | [Appeal S78 Case](appeal-s78-properties-affectedlistedbuildingnumbers.md "appeal-s78.schema.json#/properties/affectedListedBuildingNumbers")                       |
+| [changedListedBuildingNumbers](#changedlistedbuildingnumbers)                         | `array`   | Required | can be null    | [Appeal S78 Case](appeal-s78-properties-changedlistedbuildingnumbers.md "appeal-s78.schema.json#/properties/changedListedBuildingNumbers")                         |
+| [appellantCostsAppliedFor](#appellantcostsappliedfor)                                 | `boolean` | Required | can be null    | [Appeal S78 Case](appeal-s78-properties-appellantcostsappliedfor.md "appeal-s78.schema.json#/properties/appellantCostsAppliedFor")                                 |
+| [lpaCostsAppliedFor](#lpacostsappliedfor)                                             | `boolean` | Required | can be null    | [Appeal S78 Case](appeal-s78-properties-lpacostsappliedfor.md "appeal-s78.schema.json#/properties/lpaCostsAppliedFor")                                             |
+| [agriculturalHolding](#agriculturalholding)                                           | `boolean` | Required | can be null    | [Appeal S78 Case](appeal-s78-properties-agriculturalholding.md "appeal-s78.schema.json#/properties/agriculturalHolding")                                           |
+| [tenantAgriculturalHolding](#tenantagriculturalholding)                               | `boolean` | Required | can be null    | [Appeal S78 Case](appeal-s78-properties-tenantagriculturalholding.md "appeal-s78.schema.json#/properties/tenantAgriculturalHolding")                               |
+| [otherTenantsAgriculturalHolding](#othertenantsagriculturalholding)                   | `boolean` | Required | can be null    | [Appeal S78 Case](appeal-s78-properties-othertenantsagriculturalholding.md "appeal-s78.schema.json#/properties/otherTenantsAgriculturalHolding")                   |
+| [informedTenantsAgriculturalHolding](#informedtenantsagriculturalholding)             | `boolean` | Required | can be null    | [Appeal S78 Case](appeal-s78-properties-informedtenantsagriculturalholding.md "appeal-s78.schema.json#/properties/informedTenantsAgriculturalHolding")             |
+| [appellantProcedurePreference](#appellantprocedurepreference)                         | `string`  | Required | can be null    | [Appeal S78 Case](appeal-s78-properties-appellantprocedurepreference.md "appeal-s78.schema.json#/properties/appellantProcedurePreference")                         |
+| [appellantProcedurePreferenceDetails](#appellantprocedurepreferencedetails)           | `string`  | Required | can be null    | [Appeal S78 Case](appeal-s78-properties-appellantprocedurepreferencedetails.md "appeal-s78.schema.json#/properties/appellantProcedurePreferenceDetails")           |
+| [appellantProcedurePreferenceDuration](#appellantprocedurepreferenceduration)         | `number`  | Required | can be null    | [Appeal S78 Case](appeal-s78-properties-appellantprocedurepreferenceduration.md "appeal-s78.schema.json#/properties/appellantProcedurePreferenceDuration")         |
+| [appellantProcedurePreferenceWitnessCount](#appellantprocedurepreferencewitnesscount) | `number`  | Required | can be null    | [Appeal S78 Case](appeal-s78-properties-appellantprocedurepreferencewitnesscount.md "appeal-s78.schema.json#/properties/appellantProcedurePreferenceWitnessCount") |
+| [statusPlanningObligation](#statusplanningobligation)                                 | `string`  | Required | can be null    | [Appeal S78 Case](appeal-s78-properties-statusplanningobligation.md "appeal-s78.schema.json#/properties/statusPlanningObligation")                                 |
+| [affectsScheduledMonument](#affectsscheduledmonument)                                 | `boolean` | Required | can be null    | [Appeal S78 Case](appeal-s78-properties-affectsscheduledmonument.md "appeal-s78.schema.json#/properties/affectsScheduledMonument")                                 |
+| [hasProtectedSpecies](#hasprotectedspecies)                                           | `boolean` | Required | can be null    | [Appeal S78 Case](appeal-s78-properties-hasprotectedspecies.md "appeal-s78.schema.json#/properties/hasProtectedSpecies")                                           |
+| [isAonbNationalLandscape](#isaonbnationallandscape)                                   | `boolean` | Required | can be null    | [Appeal S78 Case](appeal-s78-properties-isaonbnationallandscape.md "appeal-s78.schema.json#/properties/isAonbNationalLandscape")                                   |
+| [designatedSitesNames](#designatedsitesnames)                                         | `array`   | Required | can be null    | [Appeal S78 Case](appeal-s78-properties-designatedsitesnames.md "appeal-s78.schema.json#/properties/designatedSitesNames")                                         |
+| [isGypsyOrTravellerSite](#isgypsyortravellersite)                                     | `boolean` | Required | can be null    | [Appeal S78 Case](appeal-s78-properties-isgypsyortravellersite.md "appeal-s78.schema.json#/properties/isGypsyOrTravellerSite")                                     |
+| [isPublicRightOfWay](#ispublicrightofway)                                             | `boolean` | Required | can be null    | [Appeal S78 Case](appeal-s78-properties-ispublicrightofway.md "appeal-s78.schema.json#/properties/isPublicRightOfWay")                                             |
+| [eiaEnvironmentalImpactSchedule](#eiaenvironmentalimpactschedule)                     | `string`  | Required | can be null    | [Appeal S78 Case](appeal-s78-properties-eiaenvironmentalimpactschedule.md "appeal-s78.schema.json#/properties/eiaEnvironmentalImpactSchedule")                     |
+| [eiaDevelopmentDescription](#eiadevelopmentdescription)                               | `string`  | Required | can be null    | [Appeal S78 Case](appeal-s78-properties-eiadevelopmentdescription.md "appeal-s78.schema.json#/properties/eiaDevelopmentDescription")                               |
+| [eiaSensitiveAreaDetails](#eiasensitiveareadetails)                                   | `string`  | Required | can be null    | [Appeal S78 Case](appeal-s78-properties-eiasensitiveareadetails.md "appeal-s78.schema.json#/properties/eiaSensitiveAreaDetails")                                   |
+| [eiaColumnTwoThreshold](#eiacolumntwothreshold)                                       | `boolean` | Required | can be null    | [Appeal S78 Case](appeal-s78-properties-eiacolumntwothreshold.md "appeal-s78.schema.json#/properties/eiaColumnTwoThreshold")                                       |
+| [eiaScreeningOpinion](#eiascreeningopinion)                                           | `boolean` | Required | can be null    | [Appeal S78 Case](appeal-s78-properties-eiascreeningopinion.md "appeal-s78.schema.json#/properties/eiaScreeningOpinion")                                           |
+| [eiaRequiresEnvironmentalStatement](#eiarequiresenvironmentalstatement)               | `boolean` | Required | can be null    | [Appeal S78 Case](appeal-s78-properties-eiarequiresenvironmentalstatement.md "appeal-s78.schema.json#/properties/eiaRequiresEnvironmentalStatement")               |
+| [eiaCompletedEnvironmentalStatement](#eiacompletedenvironmentalstatement)             | `boolean` | Required | can be null    | [Appeal S78 Case](appeal-s78-properties-eiacompletedenvironmentalstatement.md "appeal-s78.schema.json#/properties/eiaCompletedEnvironmentalStatement")             |
+| [eiaConsultedBodiesDetails](#eiaconsultedbodiesdetails)                               | `string`  | Required | can be null    | [Appeal S78 Case](appeal-s78-properties-eiaconsultedbodiesdetails.md "appeal-s78.schema.json#/properties/eiaConsultedBodiesDetails")                               |
+| [hasStatutoryConsultees](#hasstatutoryconsultees)                                     | `boolean` | Required | can be null    | [Appeal S78 Case](appeal-s78-properties-hasstatutoryconsultees.md "appeal-s78.schema.json#/properties/hasStatutoryConsultees")                                     |
+| [hasInfrastructureLevy](#hasinfrastructurelevy)                                       | `boolean` | Required | can be null    | [Appeal S78 Case](appeal-s78-properties-hasinfrastructurelevy.md "appeal-s78.schema.json#/properties/hasInfrastructureLevy")                                       |
+| [isInfrastructureLevyFormallyAdopted](#isinfrastructurelevyformallyadopted)           | `boolean` | Required | can be null    | [Appeal S78 Case](appeal-s78-properties-isinfrastructurelevyformallyadopted.md "appeal-s78.schema.json#/properties/isInfrastructureLevyFormallyAdopted")           |
+| [infrastructureLevyAdoptedDate](#infrastructurelevyadopteddate)                       | `string`  | Required | can be null    | [Appeal S78 Case](appeal-s78-properties-infrastructurelevyadopteddate.md "appeal-s78.schema.json#/properties/infrastructureLevyAdoptedDate")                       |
+| [infrastructureLevyExpectedDate](#infrastructurelevyexpecteddate)                     | `string`  | Required | can be null    | [Appeal S78 Case](appeal-s78-properties-infrastructurelevyexpecteddate.md "appeal-s78.schema.json#/properties/infrastructureLevyExpectedDate")                     |
+| [lpaProcedurePreference](#lpaprocedurepreference)                                     | `string`  | Required | can be null    | [Appeal S78 Case](appeal-s78-properties-lpaprocedurepreference.md "appeal-s78.schema.json#/properties/lpaProcedurePreference")                                     |
+| [lpaProcedurePreferenceDetails](#lpaprocedurepreferencedetails)                       | `string`  | Required | can be null    | [Appeal S78 Case](appeal-s78-properties-lpaprocedurepreferencedetails.md "appeal-s78.schema.json#/properties/lpaProcedurePreferenceDetails")                       |
+| [lpaProcedurePreferenceDuration](#lpaprocedurepreferenceduration)                     | `number`  | Required | can be null    | [Appeal S78 Case](appeal-s78-properties-lpaprocedurepreferenceduration.md "appeal-s78.schema.json#/properties/lpaProcedurePreferenceDuration")                     |
+| [caseworkReason](#caseworkreason)                                                     | `string`  | Required | can be null    | [Appeal S78 Case](appeal-s78-properties-caseworkreason.md "appeal-s78.schema.json#/properties/caseworkReason")                                                     |
+| [developmentType](#developmenttype)                                                   | `string`  | Required | can be null    | [Appeal S78 Case](appeal-s78-properties-developmenttype.md "appeal-s78.schema.json#/properties/developmentType")                                                   |
+| [importantInformation](#importantinformation)                                         | `string`  | Required | can be null    | [Appeal S78 Case](appeal-s78-properties-importantinformation.md "appeal-s78.schema.json#/properties/importantInformation")                                         |
+| [jurisdiction](#jurisdiction)                                                         | `string`  | Required | can be null    | [Appeal S78 Case](appeal-s78-properties-jurisdiction.md "appeal-s78.schema.json#/properties/jurisdiction")                                                         |
+| [redeterminedIndicator](#redeterminedindicator)                                       | `string`  | Required | can be null    | [Appeal S78 Case](appeal-s78-properties-redeterminedindicator.md "appeal-s78.schema.json#/properties/redeterminedIndicator")                                       |
+| [dateCostsReportDespatched](#datecostsreportdespatched)                               | `string`  | Required | can be null    | [Appeal S78 Case](appeal-s78-properties-datecostsreportdespatched.md "appeal-s78.schema.json#/properties/dateCostsReportDespatched")                               |
+| [dateNotRecoveredOrDerecovered](#datenotrecoveredorderecovered)                       | `string`  | Required | can be null    | [Appeal S78 Case](appeal-s78-properties-datenotrecoveredorderecovered.md "appeal-s78.schema.json#/properties/dateNotRecoveredOrDerecovered")                       |
+| [dateRecovered](#daterecovered)                                                       | `string`  | Required | can be null    | [Appeal S78 Case](appeal-s78-properties-daterecovered.md "appeal-s78.schema.json#/properties/dateRecovered")                                                       |
+| [originalCaseDecisionDate](#originalcasedecisiondate)                                 | `string`  | Required | can be null    | [Appeal S78 Case](appeal-s78-properties-originalcasedecisiondate.md "appeal-s78.schema.json#/properties/originalCaseDecisionDate")                                 |
+| [targetDate](#targetdate)                                                             | `string`  | Required | can be null    | [Appeal S78 Case](appeal-s78-properties-targetdate.md "appeal-s78.schema.json#/properties/targetDate")                                                             |
+| [appellantCommentsSubmittedDate](#appellantcommentssubmitteddate)                     | `string`  | Required | can be null    | [Appeal S78 Case](appeal-s78-properties-appellantcommentssubmitteddate.md "appeal-s78.schema.json#/properties/appellantCommentsSubmittedDate")                     |
+| [appellantStatementSubmittedDate](#appellantstatementsubmitteddate)                   | `string`  | Required | can be null    | [Appeal S78 Case](appeal-s78-properties-appellantstatementsubmitteddate.md "appeal-s78.schema.json#/properties/appellantStatementSubmittedDate")                   |
+| [finalCommentsDueDate](#finalcommentsduedate)                                         | `string`  | Required | can be null    | [Appeal S78 Case](appeal-s78-properties-finalcommentsduedate.md "appeal-s78.schema.json#/properties/finalCommentsDueDate")                                         |
+| [interestedPartyRepsDueDate](#interestedpartyrepsduedate)                             | `string`  | Required | can be null    | [Appeal S78 Case](appeal-s78-properties-interestedpartyrepsduedate.md "appeal-s78.schema.json#/properties/interestedPartyRepsDueDate")                             |
+| [lpaCommentsSubmittedDate](#lpacommentssubmitteddate)                                 | `string`  | Required | can be null    | [Appeal S78 Case](appeal-s78-properties-lpacommentssubmitteddate.md "appeal-s78.schema.json#/properties/lpaCommentsSubmittedDate")                                 |
+| [lpaProofsSubmittedDate](#lpaproofssubmitteddate)                                     | `string`  | Required | can be null    | [Appeal S78 Case](appeal-s78-properties-lpaproofssubmitteddate.md "appeal-s78.schema.json#/properties/lpaProofsSubmittedDate")                                     |
+| [lpaStatementSubmittedDate](#lpastatementsubmitteddate)                               | `string`  | Required | can be null    | [Appeal S78 Case](appeal-s78-properties-lpastatementsubmitteddate.md "appeal-s78.schema.json#/properties/lpaStatementSubmittedDate")                               |
+| [proofsOfEvidenceDueDate](#proofsofevidenceduedate)                                   | `string`  | Required | can be null    | [Appeal S78 Case](appeal-s78-properties-proofsofevidenceduedate.md "appeal-s78.schema.json#/properties/proofsOfEvidenceDueDate")                                   |
+| [siteNoticesSentDate](#sitenoticessentdate)                                           | `string`  | Required | can be null    | [Appeal S78 Case](appeal-s78-properties-sitenoticessentdate.md "appeal-s78.schema.json#/properties/siteNoticesSentDate")                                           |
+| [statementDueDate](#statementduedate)                                                 | `string`  | Required | can be null    | [Appeal S78 Case](appeal-s78-properties-statementduedate.md "appeal-s78.schema.json#/properties/statementDueDate")                                                 |
+| [reasonForNeighbourVisits](#reasonforneighbourvisits)                                 | `string`  | Required | can be null    | [Appeal S78 Case](appeal-s78-properties-reasonforneighbourvisits.md "appeal-s78.schema.json#/properties/reasonForNeighbourVisits")                                 |
+| [numberOfResidences](#numberofresidences)                                             | `number`  | Required | can be null    | [Appeal S78 Case](appeal-s78-properties-numberofresidences.md "appeal-s78.schema.json#/properties/numberOfResidences")                                             |
+| [siteGridReferenceEasting](#sitegridreferenceeasting)                                 | `string`  | Required | can be null    | [Appeal S78 Case](appeal-s78-properties-sitegridreferenceeasting.md "appeal-s78.schema.json#/properties/siteGridReferenceEasting")                                 |
+| [siteGridReferenceNorthing](#sitegridreferencenorthing)                               | `string`  | Required | can be null    | [Appeal S78 Case](appeal-s78-properties-sitegridreferencenorthing.md "appeal-s78.schema.json#/properties/siteGridReferenceNorthing")                               |
+| [siteViewableFromRoad](#siteviewablefromroad)                                         | `boolean` | Required | can be null    | [Appeal S78 Case](appeal-s78-properties-siteviewablefromroad.md "appeal-s78.schema.json#/properties/siteViewableFromRoad")                                         |
+| [siteWithinSSSI](#sitewithinsssi)                                                     | `boolean` | Required | can be null    | [Appeal S78 Case](appeal-s78-properties-sitewithinsssi.md "appeal-s78.schema.json#/properties/siteWithinSSSI")                                                     |
+| [typeOfPlanningApplication](#typeofplanningapplication)                               | `string`  | Required | can be null    | [Appeal S78 Case](appeal-s78-properties-typeofplanningapplication.md "appeal-s78.schema.json#/properties/typeOfPlanningApplication")                               |
+| Additional Properties                                                                 | Any       | Optional | can be null    |                                                                                                                                                                    |
 
 ## caseId
 
@@ -2275,13 +2262,13 @@ The duration of the procedure indicated by the appellant
 
 `number`
 
-## inquiryHowManyWitnesses
+## appellantProcedurePreferenceWitnessCount
 
-The number of witnesses in inquiries
+The number of witnesses appellant has suggested for inquiries preference
 
 > Only available in S78 cases
 
-`inquiryHowManyWitnesses`
+`appellantProcedurePreferenceWitnessCount`
 
 *   is required
 
@@ -2289,111 +2276,11 @@ The number of witnesses in inquiries
 
 *   can be null
 
-*   defined in: [Appeal S78 Case](appeal-s78-properties-inquiryhowmanywitnesses.md "appeal-s78.schema.json#/properties/inquiryHowManyWitnesses")
+*   defined in: [Appeal S78 Case](appeal-s78-properties-appellantprocedurepreferencewitnesscount.md "appeal-s78.schema.json#/properties/appellantProcedurePreferenceWitnessCount")
 
-### inquiryHowManyWitnesses Type
+### appellantProcedurePreferenceWitnessCount Type
 
 `number`
-
-## updateDevelopmentDescriptionUploaded
-
-Indicates that an update development description document has been submitted
-
-> Only available in S78 cases
-
-`updateDevelopmentDescriptionUploaded`
-
-*   is optional
-
-*   Type: `boolean`
-
-*   can be null
-
-*   defined in: [Appeal S78 Case](appeal-s78-properties-updatedevelopmentdescriptionuploaded.md "appeal-s78.schema.json#/properties/updateDevelopmentDescriptionUploaded")
-
-### updateDevelopmentDescriptionUploaded Type
-
-`boolean`
-
-## ownershipCertificateSubmitted
-
-Indicates that an ownership certificate has been submitted
-
-> Only available in S78 cases
-
-`ownershipCertificateSubmitted`
-
-*   is required
-
-*   Type: `boolean`
-
-*   can be null
-
-*   defined in: [Appeal S78 Case](appeal-s78-properties-ownershipcertificatesubmitted.md "appeal-s78.schema.json#/properties/ownershipCertificateSubmitted")
-
-### ownershipCertificateSubmitted Type
-
-`boolean`
-
-## designAccessStatementProvided
-
-Indicates that a design and access statement has been provided
-
-> Only available in S78 cases
-
-`designAccessStatementProvided`
-
-*   is required
-
-*   Type: `boolean`
-
-*   can be null
-
-*   defined in: [Appeal S78 Case](appeal-s78-properties-designaccessstatementprovided.md "appeal-s78.schema.json#/properties/designAccessStatementProvided")
-
-### designAccessStatementProvided Type
-
-`boolean`
-
-## newPlansDrawingsProvided
-
-Indicates that new plans or drawings have been provided
-
-> Only available in S78 cases
-
-`newPlansDrawingsProvided`
-
-*   is required
-
-*   Type: `boolean`
-
-*   can be null
-
-*   defined in: [Appeal S78 Case](appeal-s78-properties-newplansdrawingsprovided.md "appeal-s78.schema.json#/properties/newPlansDrawingsProvided")
-
-### newPlansDrawingsProvided Type
-
-`boolean`
-
-## planningObligation
-
-Indicates the existence of a planning obligation
-
-> Only available in S78 cases
-
-`planningObligation`
-
-*   is required
-
-*   Type: `boolean`
-
-*   can be null
-
-*   defined in: [Appeal S78 Case](appeal-s78-properties-planningobligation.md "appeal-s78.schema.json#/properties/planningObligation")
-
-### planningObligation Type
-
-`boolean`
 
 ## statusPlanningObligation
 
@@ -2414,46 +2301,6 @@ The planning obligation information, if available
 ### statusPlanningObligation Type
 
 `string`
-
-## appellantFinalCommentDetails
-
-The final comments details indicated by the appellant
-
-> Only available in S78 cases
-
-`appellantFinalCommentDetails`
-
-*   is required
-
-*   Type: `string`
-
-*   can be null
-
-*   defined in: [Appeal S78 Case](appeal-s78-properties-appellantfinalcommentdetails.md "appeal-s78.schema.json#/properties/appellantFinalCommentDetails")
-
-### appellantFinalCommentDetails Type
-
-`string`
-
-## appellantWitnesses
-
-Indicates if there are any witnesses
-
-> Only available in S78 cases
-
-`appellantWitnesses`
-
-*   is required
-
-*   Type: `boolean`
-
-*   can be null
-
-*   defined in: [Appeal S78 Case](appeal-s78-properties-appellantwitnesses.md "appeal-s78.schema.json#/properties/appellantWitnesses")
-
-### appellantWitnesses Type
-
-`boolean`
 
 ## affectsScheduledMonument
 
@@ -2519,11 +2366,13 @@ Indicates an area of outstanding beauty (National Landscape)
 
 The designated site names
 
+> Only available in S78 cases
+
 `designatedSitesNames`
 
 *   is required
 
-*   Type: `string`
+*   Type: `string[]`
 
 *   can be null
 
@@ -2531,53 +2380,7 @@ The designated site names
 
 ### designatedSitesNames Type
 
-`string`
-
-### designatedSitesNames Examples
-
-```json
-"SSSI"
-```
-
-```json
-"cSAC"
-```
-
-```json
-"SAC"
-```
-
-```json
-"pSPA"
-```
-
-```json
-"SPA"
-```
-
-```json
-"user entered value"
-```
-
-## hasTreePreservationOrder
-
-Indicates a TPO (tree preservation order)
-
-> Only available in S78 cases
-
-`hasTreePreservationOrder`
-
-*   is required
-
-*   Type: `boolean`
-
-*   can be null
-
-*   defined in: [Appeal S78 Case](appeal-s78-properties-hastreepreservationorder.md "appeal-s78.schema.json#/properties/hasTreePreservationOrder")
-
-### hasTreePreservationOrder Type
-
-`boolean`
+`string[]`
 
 ## isGypsyOrTravellerSite
 
@@ -2828,66 +2631,6 @@ Indicates statutory consultees
 
 `boolean`
 
-## hasConsultationResponses
-
-Indicates consultation responses
-
-> Only available in S78 cases
-
-`hasConsultationResponses`
-
-*   is required
-
-*   Type: `boolean`
-
-*   can be null
-
-*   defined in: [Appeal S78 Case](appeal-s78-properties-hasconsultationresponses.md "appeal-s78.schema.json#/properties/hasConsultationResponses")
-
-### hasConsultationResponses Type
-
-`boolean`
-
-## hasEmergingPlan
-
-Indicates emerging plans
-
-> Only available in S78 cases
-
-`hasEmergingPlan`
-
-*   is required
-
-*   Type: `boolean`
-
-*   can be null
-
-*   defined in: [Appeal S78 Case](appeal-s78-properties-hasemergingplan.md "appeal-s78.schema.json#/properties/hasEmergingPlan")
-
-### hasEmergingPlan Type
-
-`boolean`
-
-## hasSupplementaryPlanningDocs
-
-Indicates supplementary planning documents
-
-> Only available in S78 cases
-
-`hasSupplementaryPlanningDocs`
-
-*   is required
-
-*   Type: `boolean`
-
-*   can be null
-
-*   defined in: [Appeal S78 Case](appeal-s78-properties-hassupplementaryplanningdocs.md "appeal-s78.schema.json#/properties/hasSupplementaryPlanningDocs")
-
-### hasSupplementaryPlanningDocs Type
-
-`boolean`
-
 ## hasInfrastructureLevy
 
 Indicates the existence of an infrastructure levy
@@ -3058,46 +2801,6 @@ The duration of enquiry indicated by the LPA
 ### lpaProcedurePreferenceDuration Type
 
 `number`
-
-## lpaFinalCommentDetails
-
-The final comments details indicated by the LPA
-
-> Only available in S78 cases
-
-`lpaFinalCommentDetails`
-
-*   is required
-
-*   Type: `string`
-
-*   can be null
-
-*   defined in: [Appeal S78 Case](appeal-s78-properties-lpafinalcommentdetails.md "appeal-s78.schema.json#/properties/lpaFinalCommentDetails")
-
-### lpaFinalCommentDetails Type
-
-`string`
-
-## lpaAddedWitnesses
-
-Indicates if the LPA has added witnesses
-
-> Only available in S78 cases
-
-`lpaAddedWitnesses`
-
-*   is required
-
-*   Type: `boolean`
-
-*   can be null
-
-*   defined in: [Appeal S78 Case](appeal-s78-properties-lpaaddedwitnesses.md "appeal-s78.schema.json#/properties/lpaAddedWitnesses")
-
-### lpaAddedWitnesses Type
-
-`boolean`
 
 ## caseworkReason
 
@@ -3349,13 +3052,13 @@ The date of the cost report
 "2023-07-27T20:30:00.000Z"
 ```
 
-## appellantCommentsSubmitted
+## appellantCommentsSubmittedDate
 
 
 
 > Only available in S78 cases
 
-`appellantCommentsSubmitted`
+`appellantCommentsSubmittedDate`
 
 *   is required
 
@@ -3363,29 +3066,29 @@ The date of the cost report
 
 *   can be null
 
-*   defined in: [Appeal S78 Case](appeal-s78-properties-appellantcommentssubmitted.md "appeal-s78.schema.json#/properties/appellantCommentsSubmitted")
+*   defined in: [Appeal S78 Case](appeal-s78-properties-appellantcommentssubmitteddate.md "appeal-s78.schema.json#/properties/appellantCommentsSubmittedDate")
 
-### appellantCommentsSubmitted Type
+### appellantCommentsSubmittedDate Type
 
 `string`
 
-### appellantCommentsSubmitted Constraints
+### appellantCommentsSubmittedDate Constraints
 
 **date time**: the string must be a date time string, according to [RFC 3339, section 5.6](https://tools.ietf.org/html/rfc3339 "check the specification")
 
-### appellantCommentsSubmitted Examples
+### appellantCommentsSubmittedDate Examples
 
 ```json
 "2023-07-27T20:30:00.000Z"
 ```
 
-## appellantStatementSubmitted
+## appellantStatementSubmittedDate
 
 
 
 > Only available in S78 cases
 
-`appellantStatementSubmitted`
+`appellantStatementSubmittedDate`
 
 *   is required
 
@@ -3393,17 +3096,17 @@ The date of the cost report
 
 *   can be null
 
-*   defined in: [Appeal S78 Case](appeal-s78-properties-appellantstatementsubmitted.md "appeal-s78.schema.json#/properties/appellantStatementSubmitted")
+*   defined in: [Appeal S78 Case](appeal-s78-properties-appellantstatementsubmitteddate.md "appeal-s78.schema.json#/properties/appellantStatementSubmittedDate")
 
-### appellantStatementSubmitted Type
+### appellantStatementSubmittedDate Type
 
 `string`
 
-### appellantStatementSubmitted Constraints
+### appellantStatementSubmittedDate Constraints
 
 **date time**: the string must be a date time string, according to [RFC 3339, section 5.6](https://tools.ietf.org/html/rfc3339 "check the specification")
 
-### appellantStatementSubmitted Examples
+### appellantStatementSubmittedDate Examples
 
 ```json
 "2023-07-27T20:30:00.000Z"
@@ -3469,13 +3172,13 @@ The date of the cost report
 "2023-07-27T20:30:00.000Z"
 ```
 
-## lpaCommentsSubmitted
+## lpaCommentsSubmittedDate
 
 
 
 > Only available in S78 cases
 
-`lpaCommentsSubmitted`
+`lpaCommentsSubmittedDate`
 
 *   is required
 
@@ -3483,29 +3186,29 @@ The date of the cost report
 
 *   can be null
 
-*   defined in: [Appeal S78 Case](appeal-s78-properties-lpacommentssubmitted.md "appeal-s78.schema.json#/properties/lpaCommentsSubmitted")
+*   defined in: [Appeal S78 Case](appeal-s78-properties-lpacommentssubmitteddate.md "appeal-s78.schema.json#/properties/lpaCommentsSubmittedDate")
 
-### lpaCommentsSubmitted Type
+### lpaCommentsSubmittedDate Type
 
 `string`
 
-### lpaCommentsSubmitted Constraints
+### lpaCommentsSubmittedDate Constraints
 
 **date time**: the string must be a date time string, according to [RFC 3339, section 5.6](https://tools.ietf.org/html/rfc3339 "check the specification")
 
-### lpaCommentsSubmitted Examples
+### lpaCommentsSubmittedDate Examples
 
 ```json
 "2023-07-27T20:30:00.000Z"
 ```
 
-## lpaProofsSubmitted
+## lpaProofsSubmittedDate
 
 
 
 > Only available in S78 cases
 
-`lpaProofsSubmitted`
+`lpaProofsSubmittedDate`
 
 *   is required
 
@@ -3513,29 +3216,29 @@ The date of the cost report
 
 *   can be null
 
-*   defined in: [Appeal S78 Case](appeal-s78-properties-lpaproofssubmitted.md "appeal-s78.schema.json#/properties/lpaProofsSubmitted")
+*   defined in: [Appeal S78 Case](appeal-s78-properties-lpaproofssubmitteddate.md "appeal-s78.schema.json#/properties/lpaProofsSubmittedDate")
 
-### lpaProofsSubmitted Type
+### lpaProofsSubmittedDate Type
 
 `string`
 
-### lpaProofsSubmitted Constraints
+### lpaProofsSubmittedDate Constraints
 
 **date time**: the string must be a date time string, according to [RFC 3339, section 5.6](https://tools.ietf.org/html/rfc3339 "check the specification")
 
-### lpaProofsSubmitted Examples
+### lpaProofsSubmittedDate Examples
 
 ```json
 "2023-07-27T20:30:00.000Z"
 ```
 
-## lpaStatementSubmitted
+## lpaStatementSubmittedDate
 
 
 
 > Only available in S78 cases
 
-`lpaStatementSubmitted`
+`lpaStatementSubmittedDate`
 
 *   is required
 
@@ -3543,17 +3246,17 @@ The date of the cost report
 
 *   can be null
 
-*   defined in: [Appeal S78 Case](appeal-s78-properties-lpastatementsubmitted.md "appeal-s78.schema.json#/properties/lpaStatementSubmitted")
+*   defined in: [Appeal S78 Case](appeal-s78-properties-lpastatementsubmitteddate.md "appeal-s78.schema.json#/properties/lpaStatementSubmittedDate")
 
-### lpaStatementSubmitted Type
+### lpaStatementSubmittedDate Type
 
 `string`
 
-### lpaStatementSubmitted Constraints
+### lpaStatementSubmittedDate Constraints
 
 **date time**: the string must be a date time string, according to [RFC 3339, section 5.6](https://tools.ietf.org/html/rfc3339 "check the specification")
 
-### lpaStatementSubmitted Examples
+### lpaStatementSubmittedDate Examples
 
 ```json
 "2023-07-27T20:30:00.000Z"
@@ -3589,13 +3292,13 @@ The date of the cost report
 "2023-07-27T20:30:00.000Z"
 ```
 
-## siteNoticesSent
+## siteNoticesSentDate
 
 
 
 > Only available in S78 cases
 
-`siteNoticesSent`
+`siteNoticesSentDate`
 
 *   is required
 
@@ -3603,17 +3306,17 @@ The date of the cost report
 
 *   can be null
 
-*   defined in: [Appeal S78 Case](appeal-s78-properties-sitenoticessent.md "appeal-s78.schema.json#/properties/siteNoticesSent")
+*   defined in: [Appeal S78 Case](appeal-s78-properties-sitenoticessentdate.md "appeal-s78.schema.json#/properties/siteNoticesSentDate")
 
-### siteNoticesSent Type
+### siteNoticesSentDate Type
 
 `string`
 
-### siteNoticesSent Constraints
+### siteNoticesSentDate Constraints
 
 **date time**: the string must be a date time string, according to [RFC 3339, section 5.6](https://tools.ietf.org/html/rfc3339 "check the specification")
 
-### siteNoticesSent Examples
+### siteNoticesSentDate Examples
 
 ```json
 "2023-07-27T20:30:00.000Z"
@@ -3649,25 +3352,25 @@ The date of the cost report
 "2023-07-27T20:30:00.000Z"
 ```
 
-## inspectorNeedToEnterSite
+## reasonForNeighbourVisits
 
 
 
 > Only available in S78 cases
 
-`inspectorNeedToEnterSite`
+`reasonForNeighbourVisits`
 
 *   is required
 
-*   Type: `boolean`
+*   Type: `string`
 
 *   can be null
 
-*   defined in: [Appeal S78 Case](appeal-s78-properties-inspectorneedtoentersite.md "appeal-s78.schema.json#/properties/inspectorNeedToEnterSite")
+*   defined in: [Appeal S78 Case](appeal-s78-properties-reasonforneighbourvisits.md "appeal-s78.schema.json#/properties/reasonForNeighbourVisits")
 
-### inspectorNeedToEnterSite Type
+### reasonForNeighbourVisits Type
 
-`boolean`
+`string`
 
 ## numberOfResidences
 

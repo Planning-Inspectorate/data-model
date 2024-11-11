@@ -974,41 +974,13 @@ export interface AppealS78Case {
    */
   appellantProcedurePreferenceDuration: number | null;
   /**
-   * The number of witnesses in inquiries
+   * The number of witnesses appellant has suggested for inquiries preference
    */
-  inquiryHowManyWitnesses: number | null;
-  /**
-   * Indicates that an update development description document has been submitted
-   */
-  updateDevelopmentDescriptionUploaded?: boolean | null;
-  /**
-   * Indicates that an ownership certificate has been submitted
-   */
-  ownershipCertificateSubmitted: boolean | null;
-  /**
-   * Indicates that a design and access statement has been provided
-   */
-  designAccessStatementProvided: boolean | null;
-  /**
-   * Indicates that new plans or drawings have been provided
-   */
-  newPlansDrawingsProvided: boolean | null;
-  /**
-   * Indicates the existence of a planning obligation
-   */
-  planningObligation: boolean | null;
+  appellantProcedurePreferenceWitnessCount: number | null;
   /**
    * The planning obligation information, if available
    */
   statusPlanningObligation: string | null;
-  /**
-   * The final comments details indicated by the appellant
-   */
-  appellantFinalCommentDetails: string | null;
-  /**
-   * Indicates if there are any witnesses
-   */
-  appellantWitnesses: boolean | null;
   /**
    * Indicates that a scheduled monument is affected
    */
@@ -1024,11 +996,7 @@ export interface AppealS78Case {
   /**
    * The designated site names
    */
-  designatedSitesNames: string | null;
-  /**
-   * Indicates a TPO (tree preservation order)
-   */
-  hasTreePreservationOrder: boolean | null;
+  designatedSitesNames: string[] | null;
   /**
    * Indicates a traveller site
    */
@@ -1088,18 +1056,6 @@ export interface AppealS78Case {
    */
   hasStatutoryConsultees: boolean | null;
   /**
-   * Indicates consultation responses
-   */
-  hasConsultationResponses: boolean | null;
-  /**
-   * Indicates emerging plans
-   */
-  hasEmergingPlan: boolean | null;
-  /**
-   * Indicates supplementary planning documents
-   */
-  hasSupplementaryPlanningDocs: boolean | null;
-  /**
    * Indicates the existence of an infrastructure levy
    */
   hasInfrastructureLevy: boolean | null;
@@ -1127,14 +1083,6 @@ export interface AppealS78Case {
    * The duration of enquiry indicated by the LPA
    */
   lpaProcedurePreferenceDuration: number | null;
-  /**
-   * The final comments details indicated by the LPA
-   */
-  lpaFinalCommentDetails: string | null;
-  /**
-   * Indicates if the LPA has added witnesses
-   */
-  lpaAddedWitnesses: boolean | null;
   caseworkReason: string | null;
   developmentType: string | null;
   importantInformation: string | null;
@@ -1148,17 +1096,17 @@ export interface AppealS78Case {
   dateRecovered: string | null;
   originalCaseDecisionDate: string | null;
   targetDate: string | null;
-  appellantCommentsSubmitted: string | null;
-  appellantStatementSubmitted: string | null;
+  appellantCommentsSubmittedDate: string | null;
+  appellantStatementSubmittedDate: string | null;
   finalCommentsDueDate: string | null;
   interestedPartyRepsDueDate: string | null;
-  lpaCommentsSubmitted: string | null;
-  lpaProofsSubmitted: string | null;
-  lpaStatementSubmitted: string | null;
+  lpaCommentsSubmittedDate: string | null;
+  lpaProofsSubmittedDate: string | null;
+  lpaStatementSubmittedDate: string | null;
   proofsOfEvidenceDueDate: string | null;
-  siteNoticesSent: string | null;
+  siteNoticesSentDate: string | null;
   statementDueDate: string | null;
-  inspectorNeedToEnterSite: boolean | null;
+  reasonForNeighbourVisits: string | null;
   /**
    * Number of residences involved in the appeal
    */

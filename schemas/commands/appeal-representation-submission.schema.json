@@ -1,19 +1,19 @@
 {
 	"$schema": "http://json-schema.org/draft-07/schema#",
-	"$id": "commands/appeal-proofs-witnesses.schema.json",
-	"title": "appeal-proofs-witnesses",
-	"description": "Schema proofs of evidence and witness timings provided by a party on an appeal",
+	"$id": "commands/appeal-representation-submission.schema.json",
+	"title": "appeal-representation-submission",
+	"description": "Schema defining a submission of a representation made by a party on an appeal",
 	"type": "object",
 	"additionalProperties": true,
     "required": [
-        "proofsWitnesses",
-        "documents"
+        "representation",
+        "documents"        
     ],
 	"properties": {
-        "proofsWitnesses": {
+        "representation": {
             "type": "object",
             "additionalProperties": true,
-            "required": ["caseReference", "submittedDate"],
+            "required": ["caseReference", "representationType", "submittedDate"],
             "properties": {
                 "caseReference": {
                     "type": "string",
@@ -28,7 +28,63 @@
                     "type": ["string", "null"],
                     "examples": ["Q9999"],
                     "description": "A unique identifier for the Local Planning Authority",
-                    "$comment": "Uses the internal PINS code identifying LPAs"          
+                    "$comment": "Uses the internal PINS code identifying LPAs"
+                },
+                "newUser": {
+                    "type": "object",
+                    "additionalProperties": true,
+                    "description": "Schema defining a new user to the appeal making a representation, currently only used for interested party comments",
+                    "required": [],
+                    "properties": {
+                        "firstName": {
+                            "type": "string",
+                            "examples": ["Alan"]
+                        },
+                        "lastName": {
+                            "type": "string",
+                            "examples": ["Turing"]
+                        },
+                        "emailAddress": {
+                            "type": ["string", "null"],
+                            "examples": ["john.doe@example.com"]
+                        },
+                        "address": {
+                            "title": "Address",
+                            "type": "object",
+                            "required": ["addressLine1", "town", "postcode"],
+                            "properties": {
+                                "addressLine1": {
+                                    "type": "string",
+                                    "examples": ["National Traffic Operations Centre"]
+                                },
+                                "addressLine2": {
+                                    "type": "string",
+                                    "examples": ["3 Ridgeway, Quinton Business Park"]
+                                },
+                                "town": {
+                                    "type": "string",
+                                    "examples": ["Birmingham"]
+                                },
+                                "county": {
+                                    "type": ["string", "null"],
+                                    "examples": ["Birmingham"]
+                                },
+                                "postcode": {
+                                    "type": "string",
+                                    "examples": ["B32 1AF"]
+                                }
+                            }
+                        }
+                    }
+                },
+                "representationType": {
+                    "type": ["string", "null"],
+                    "enum": ["statement", "comment", "final_comment", "proofs_evidence", null],
+                    "description": "The type of representation"
+                },
+                "representation": {
+                    "type": ["string", "null"],
+                    "examples": ["I have concerns"]
                 },
                 "submittedDate": {
                     "type": ["string"],
@@ -36,7 +92,12 @@
                     "examples": ["2023-07-27T20:30:00.000Z"],
                     "description": "The date the statement was submitted by the user"
                 }
-            }
+            },
+            "oneOf": [
+                { "required": ["serviceUserId"] },
+                { "required": ["lpaCode"] },
+                { "required": ["newUser"] }
+            ]
         },
         "documents": {
             "type": "array",
@@ -96,14 +157,13 @@
                     "documentType": {
                         "type": ["string", "null"],
                         "enum": [
-                            "proofsOfEvidence",
-                            "witnessTimings",
+                            "appealStatement",
                             null
                         ],
                         "description": "The type of document, used for exchange, migrations and consumption from the appeal back-office system"
                     }
                 }
             }
-        }
+        }        
 	}
 }

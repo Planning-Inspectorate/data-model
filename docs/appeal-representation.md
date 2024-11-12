@@ -16,12 +16,10 @@
 | [redactedBy](#redactedby)                         | `string`  | Required | can be null    | [Appeal Representation](appeal-representation-properties-redactedby.md "appeal-representation.schema.json#/properties/redactedBy")                         |
 | [invalidDetails](#invaliddetails)                 | `array`   | Required | can be null    | [Appeal Representation](appeal-representation-properties-invaliddetails.md "appeal-representation.schema.json#/properties/invalidDetails")                 |
 | [source](#source)                                 | `string`  | Required | can be null    | [Appeal Representation](appeal-representation-properties-source.md "appeal-representation.schema.json#/properties/source")                                 |
-| [representedId](#representedid)                   | `string`  | Required | can be null    | [Appeal Representation](appeal-representation-properties-representedid.md "appeal-representation.schema.json#/properties/representedId")                   |
-| [representativeId](#representativeid)             | `string`  | Required | can be null    | [Appeal Representation](appeal-representation-properties-representativeid.md "appeal-representation.schema.json#/properties/representativeId")             |
-| [lpaCode](#lpacode)                               | `string`  | Optional | can be null    | [Appeal Representation](appeal-representation-properties-lpacode.md "appeal-representation.schema.json#/properties/lpaCode")                               |
+| [serviceUserId](#serviceuserid)                   | `string`  | Required | can be null    | [Appeal Representation](appeal-representation-properties-serviceuserid.md "appeal-representation.schema.json#/properties/serviceUserId")                   |
 | [representationType](#representationtype)         | `string`  | Required | can be null    | [Appeal Representation](appeal-representation-properties-representationtype.md "appeal-representation.schema.json#/properties/representationType")         |
 | [dateReceived](#datereceived)                     | `string`  | Required | cannot be null | [Appeal Representation](appeal-representation-properties-datereceived.md "appeal-representation.schema.json#/properties/dateReceived")                     |
-| [documentIds](#documentids)                       | `array`   | Optional | cannot be null | [Appeal Representation](appeal-representation-properties-documentids.md "appeal-representation.schema.json#/properties/documentIds")                       |
+| [documentIds](#documentids)                       | `array`   | Required | cannot be null | [Appeal Representation](appeal-representation-properties-documentids.md "appeal-representation.schema.json#/properties/documentIds")                       |
 | Additional Properties                             | Any       | Optional | can be null    |                                                                                                                                                            |
 
 ## representationId
@@ -256,29 +254,11 @@ Source of the representation (citizen or LPA)
 | `"citizen"` |             |
 | `null`      |             |
 
-## representedId
+## serviceUserId
 
-ServiceUser Id of the person or organisation being represented
+Service User Id of the person or organisation making the representaion
 
-`representedId`
-
-*   is required
-
-*   Type: `string`
-
-*   can be null
-
-*   defined in: [Appeal Representation](appeal-representation-properties-representedid.md "appeal-representation.schema.json#/properties/representedId")
-
-### representedId Type
-
-`string`
-
-## representativeId
-
-ServiceUser Id of the agent representing the owner
-
-`representativeId`
+`serviceUserId`
 
 *   is required
 
@@ -286,27 +266,9 @@ ServiceUser Id of the agent representing the owner
 
 *   can be null
 
-*   defined in: [Appeal Representation](appeal-representation-properties-representativeid.md "appeal-representation.schema.json#/properties/representativeId")
+*   defined in: [Appeal Representation](appeal-representation-properties-serviceuserid.md "appeal-representation.schema.json#/properties/serviceUserId")
 
-### representativeId Type
-
-`string`
-
-## lpaCode
-
-Will only be filled if the representationType is a LPA statement
-
-`lpaCode`
-
-*   is optional
-
-*   Type: `string`
-
-*   can be null
-
-*   defined in: [Appeal Representation](appeal-representation-properties-lpacode.md "appeal-representation.schema.json#/properties/lpaCode")
-
-### lpaCode Type
+### serviceUserId Type
 
 `string`
 
@@ -332,12 +294,13 @@ The type of representation
 
 **enum**: the value of this property must be equal to one of the following values:
 
-| Value             | Explanation |
-| :---------------- | :---------- |
-| `"statement"`     |             |
-| `"comment"`       |             |
-| `"final_comment"` |             |
-| `null`            |             |
+| Value               | Explanation |
+| :------------------ | :---------- |
+| `"statement"`       |             |
+| `"comment"`         |             |
+| `"final_comment"`   |             |
+| `"proofs_evidence"` |             |
+| `null`              |             |
 
 ## dateReceived
 
@@ -373,7 +336,7 @@ An array of documentIds
 
 `documentIds`
 
-*   is optional
+*   is required
 
 *   Type: `string[]`
 

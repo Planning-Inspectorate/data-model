@@ -652,26 +652,18 @@ export interface AppealRepresentation {
    */
   source: 'lpa' | 'citizen' | null;
   /**
-   * ServiceUser Id of the person or organisation being represented
+   * Service User Id of the person or organisation making the representaion
    */
-  representedId: string | null;
-  /**
-   * ServiceUser Id of the agent representing the owner
-   */
-  representativeId: string | null;
-  /**
-   * Will only be filled if the representationType is a LPA statement
-   */
-  lpaCode?: string | null;
+  serviceUserId: string | null;
   /**
    * The type of representation
    */
-  representationType: 'statement' | 'comment' | 'final_comment' | null;
+  representationType: 'statement' | 'comment' | 'final_comment' | 'proofs_evidence' | null;
   dateReceived: string;
   /**
    * An array of documentIds
    */
-  documentIds?: string[];
+  documentIds: string[];
   [k: string]: unknown;
 }
 
@@ -2153,150 +2145,10 @@ export interface ServiceUser {
 }
 
 /**
- * Schema defining final comments made by a party on an appeal
+ * Schema defining a submission of a representation made by a party on an appeal
  */
-export interface AppealFinalComment {
-  comments: {
-    /**
-     * External case identifier
-     */
-    caseReference: string;
-    /**
-     * Maps to [ServiceUser].[id], will be rule 6, agent or appellant
-     */
-    serviceUserId?: string | null;
-    /**
-     * A unique identifier for the Local Planning Authority
-     */
-    lpaCode?: string | null;
-    comments?: string | null;
-    /**
-     * The date the response was submitted by the user
-     */
-    submittedDate: string;
-    [k: string]: unknown;
-  };
-  documents: {
-    /**
-     * The unique identifier for the document
-     */
-    documentId: string;
-    /**
-     * Current stored name of the document
-     */
-    filename: string;
-    /**
-     * Original name of document
-     */
-    originalFilename: string;
-    /**
-     * The file size, in bytes
-     */
-    size: number;
-    /**
-     * The mime type for the current version of the file
-     */
-    mime: string;
-    /**
-     * The internal location of the document
-     */
-    documentURI: string;
-    /**
-     * The creation date for the document
-     */
-    dateCreated: string;
-    /**
-     * The type of document, used for exchange, migrations and consumption from the appeal back-office system
-     */
-    documentType: 'finalComments' | null;
-    [k: string]: unknown;
-  }[];
-  [k: string]: unknown;
-}
-
-/**
- * Schema proofs of evidence and witness timings provided by a party on an appeal
- */
-export interface AppealProofsWitnesses {
-  proofsWitnesses: {
-    /**
-     * External case identifier
-     */
-    caseReference: string;
-    /**
-     * Maps to [ServiceUser].[id], will be rule 6, agent or appellant
-     */
-    serviceUserId?: string | null;
-    /**
-     * A unique identifier for the Local Planning Authority
-     */
-    lpaCode?: string | null;
-    /**
-     * The date the statement was submitted by the user
-     */
-    submittedDate: string;
-    [k: string]: unknown;
-  };
-  documents: {
-    /**
-     * The unique identifier for the document
-     */
-    documentId: string;
-    /**
-     * Current stored name of the document
-     */
-    filename: string;
-    /**
-     * Original name of document
-     */
-    originalFilename: string;
-    /**
-     * The file size, in bytes
-     */
-    size: number;
-    /**
-     * The mime type for the current version of the file
-     */
-    mime: string;
-    /**
-     * The internal location of the document
-     */
-    documentURI: string;
-    /**
-     * The creation date for the document
-     */
-    dateCreated: string;
-    /**
-     * The type of document, used for exchange, migrations and consumption from the appeal back-office system
-     */
-    documentType: 'proofsOfEvidence' | 'witnessTimings' | null;
-    [k: string]: unknown;
-  }[];
-  [k: string]: unknown;
-}
-
-/**
- * Schema defining statement made by a party on an appeal
- */
-export interface AppealStatement {
-  statement: {
-    /**
-     * External case identifier
-     */
-    caseReference: string;
-    /**
-     * Maps to [ServiceUser].[id], will be rule 6, agent or appellant
-     */
-    serviceUserId?: string | null;
-    /**
-     * A unique identifier for the Local Planning Authority
-     */
-    lpaCode?: string | null;
-    statement?: string | null;
-    /**
-     * The date the statement was submitted by the user
-     */
-    submittedDate: string;
+export interface AppealRepresentationSubmission {
+  representation: {
     [k: string]: unknown;
   };
   documents: {

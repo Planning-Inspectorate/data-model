@@ -16,11 +16,10 @@
     "redactedBy",
     "invalidDetails",
     "source",
-    "representedId",
-    "representativeId",
+    "serviceUserId",
     "representationType",
     "dateReceived",
-    "attachmentIds"
+    "documentIds"
   ],
   "properties": {
     "representationId": {
@@ -89,21 +88,13 @@
       "enum": ["lpa", "citizen", null],
       "description": "Source of the representation (citizen or LPA)"
     },
-    "representedId": {
+    "serviceUserId": {
       "type": ["string", "null"],
-      "description": "ServiceUser Id of the person or organisation being represented"
-    },
-    "representativeId": {
-      "type": ["string", "null"],
-      "description": "ServiceUser Id of the agent representing the owner"
-    },
-    "lpaCode": {
-      "type": ["string", "null"],
-      "description": "Will only be filled if the representationType is a LPA statement"
+      "description": "Service User Id of the person or organisation making the representaion"
     },
     "representationType": {
       "type": ["string", "null"],
-      "enum": ["statement", "comment", "final_comment", null],
+      "enum": ["statement", "comment", "final_comment", "proofs_evidence", null],
       "description": "The type of representation"
     },
     "dateReceived": {

@@ -222,6 +222,7 @@ export const APPEAL_REDACTED_STATUS = {
 export const APPEAL_REPRESENTATION_TYPE = {
   COMMENT: 'comment',
   FINAL_COMMENT: 'final_comment',
+  PROOFS_EVIDENCE: 'proofs_evidence',
   STATEMENT: 'statement',
 };
 

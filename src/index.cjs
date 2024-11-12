@@ -307,6 +307,7 @@ const APPEAL_REDACTED_STATUS = Object.freeze({
 const APPEAL_REPRESENTATION_TYPE = Object.freeze({
   COMMENT: 'comment',
   FINAL_COMMENT: 'final_comment',
+  PROOFS_EVIDENCE: 'proofs_evidence',
   STATEMENT: 'statement',
 });
 

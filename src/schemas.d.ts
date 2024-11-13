@@ -599,6 +599,75 @@ export interface AppealHASCase {
 }
 
 /**
+ * Schema defining the metadata for appeal representations, such as statements, third-party comments and final comments
+ */
+export interface AppealRepresentation {
+  /**
+   * The unique identifier for the representation
+   */
+  representationId: string;
+  /**
+   * Internal case identifier
+   */
+  caseId: number | null;
+  /**
+   * External case identifier
+   */
+  caseReference: string;
+  /**
+   * Status of the representation
+   */
+  status:
+    | 'awaiting_review'
+    | 'referred'
+    | 'valid'
+    | 'invalid'
+    | 'published'
+    | 'archived'
+    | 'draft'
+    | 'withdrawn'
+    | null;
+  /**
+   * The original representation
+   */
+  originalRepresentation: string | null;
+  /**
+   * Indicates if the representation is redacted
+   */
+  redacted: boolean | null;
+  /**
+   * The redacted version of the representation
+   */
+  redactedRepresentation: string | null;
+  /**
+   * Unique identifier for the case team member that performed the redaction
+   */
+  redactedBy: string | null;
+  /**
+   * A list of reasons why the representation has been marked as invalid
+   */
+  invalidDetails: string[] | null;
+  /**
+   * Source of the representation (citizen or LPA)
+   */
+  source: 'lpa' | 'citizen' | null;
+  /**
+   * Service User Id of the person or organisation making the representaion
+   */
+  serviceUserId: string | null;
+  /**
+   * The type of representation
+   */
+  representationType: 'statement' | 'comment' | 'final_comment' | 'proofs_evidence' | null;
+  dateReceived: string;
+  /**
+   * An array of documentIds
+   */
+  documentIds: string[];
+  [k: string]: unknown;
+}
+
+/**
  * Schema defining the metadata for an appeal (S78)
  */
 export interface AppealS78Case {
@@ -1986,7 +2055,7 @@ export interface ServiceUser {
   /**
    * Type or category of the service user.
    */
-  serviceUserType: 'Applicant' | 'Appellant' | 'Agent' | 'RepresentationContact' | 'Subscriber';
+  serviceUserType: 'Applicant' | 'Appellant' | 'Agent' | 'Rule6Party' | 'RepresentationContact' | 'Subscriber';
   /**
    * Reference number for a particular case or incident.
    */
@@ -1999,6 +2068,51 @@ export interface ServiceUser {
    * Unique identifier from the source system.
    */
   sourceSuid: string;
+  [k: string]: unknown;
+}
+
+/**
+ * Schema defining a submission of a representation made by a party on an appeal
+ */
+export interface AppealRepresentationSubmission {
+  representation: {
+    [k: string]: unknown;
+  };
+  documents: {
+    /**
+     * The unique identifier for the document
+     */
+    documentId: string;
+    /**
+     * Current stored name of the document
+     */
+    filename: string;
+    /**
+     * Original name of document
+     */
+    originalFilename: string;
+    /**
+     * The file size, in bytes
+     */
+    size: number;
+    /**
+     * The mime type for the current version of the file
+     */
+    mime: string;
+    /**
+     * The internal location of the document
+     */
+    documentURI: string;
+    /**
+     * The creation date for the document
+     */
+    dateCreated: string;
+    /**
+     * The type of document, used for exchange, migrations and consumption from the appeal back-office system
+     */
+    documentType: 'appealStatement' | null;
+    [k: string]: unknown;
+  }[];
   [k: string]: unknown;
 }
 
@@ -2246,7 +2360,7 @@ export interface AppellantSubmissionCommand {
       /**
        * Type or category of the service user.
        */
-      serviceUserType: 'Applicant' | 'Appellant' | 'Agent' | 'RepresentationContact' | 'Subscriber';
+      serviceUserType: 'Appellant' | 'Agent';
       [k: string]: unknown;
     },
     ...{
@@ -2277,7 +2391,7 @@ export interface AppellantSubmissionCommand {
       /**
        * Type or category of the service user.
        */
-      serviceUserType: 'Applicant' | 'Appellant' | 'Agent' | 'RepresentationContact' | 'Subscriber';
+      serviceUserType: 'Appellant' | 'Agent';
       [k: string]: unknown;
     }[]
   ];

@@ -132,7 +132,7 @@
 | [siteNoticesSentDate](#sitenoticessentdate)                                           | `string`  | Required | can be null    | [Appeal S78 Case](appeal-s78-properties-sitenoticessentdate.md "appeal-s78.schema.json#/properties/siteNoticesSentDate")                                           |
 | [statementDueDate](#statementduedate)                                                 | `string`  | Required | can be null    | [Appeal S78 Case](appeal-s78-properties-statementduedate.md "appeal-s78.schema.json#/properties/statementDueDate")                                                 |
 | [reasonForNeighbourVisits](#reasonforneighbourvisits)                                 | `string`  | Required | can be null    | [Appeal S78 Case](appeal-s78-properties-reasonforneighbourvisits.md "appeal-s78.schema.json#/properties/reasonForNeighbourVisits")                                 |
-| [numberOfResidences](#numberofresidences)                                             | `number`  | Required | can be null    | [Appeal S78 Case](appeal-s78-properties-numberofresidences.md "appeal-s78.schema.json#/properties/numberOfResidences")                                             |
+| [numberOfResidencesNetChange](#numberofresidencesnetchange)                           | `number`  | Required | can be null    | [Appeal S78 Case](appeal-s78-properties-numberofresidencesnetchange.md "appeal-s78.schema.json#/properties/numberOfResidencesNetChange")                           |
 | [siteGridReferenceEasting](#sitegridreferenceeasting)                                 | `string`  | Required | can be null    | [Appeal S78 Case](appeal-s78-properties-sitegridreferenceeasting.md "appeal-s78.schema.json#/properties/siteGridReferenceEasting")                                 |
 | [siteGridReferenceNorthing](#sitegridreferencenorthing)                               | `string`  | Required | can be null    | [Appeal S78 Case](appeal-s78-properties-sitegridreferencenorthing.md "appeal-s78.schema.json#/properties/siteGridReferenceNorthing")                               |
 | [siteViewableFromRoad](#siteviewablefromroad)                                         | `boolean` | Required | can be null    | [Appeal S78 Case](appeal-s78-properties-siteviewablefromroad.md "appeal-s78.schema.json#/properties/siteViewableFromRoad")                                         |
@@ -3372,13 +3372,13 @@ The date of the cost report
 
 `string`
 
-## numberOfResidences
+## numberOfResidencesNetChange
 
-Number of residences involved in the appeal
+The net gain in residences of the proposed development
 
 > Only available in S78 cases
 
-`numberOfResidences`
+`numberOfResidencesNetChange`
 
 *   is required
 
@@ -3386,9 +3386,9 @@ Number of residences involved in the appeal
 
 *   can be null
 
-*   defined in: [Appeal S78 Case](appeal-s78-properties-numberofresidences.md "appeal-s78.schema.json#/properties/numberOfResidences")
+*   defined in: [Appeal S78 Case](appeal-s78-properties-numberofresidencesnetchange.md "appeal-s78.schema.json#/properties/numberOfResidencesNetChange")
 
-### numberOfResidences Type
+### numberOfResidencesNetChange Type
 
 `number`
 

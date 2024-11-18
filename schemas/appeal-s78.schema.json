@@ -133,7 +133,7 @@
     "siteNoticesSentDate",
     "statementDueDate",
     "reasonForNeighbourVisits",
-    "numberOfResidences",
+    "numberOfResidencesNetChange",
     "siteGridReferenceEasting",
     "siteGridReferenceNorthing",
     "siteViewableFromRoad",
@@ -984,9 +984,9 @@
       "type": ["string", "null"],
       "$comment": "Only available in S78 cases"
     },
-    "numberOfResidences": {
+    "numberOfResidencesNetChange": {
       "type": ["number", "null"],
-      "description": "Number of residences involved in the appeal",
+      "description": "The net gain in residences of the proposed development",
       "$comment": "Only available in S78 cases"
     },
     "siteGridReferenceEasting": {

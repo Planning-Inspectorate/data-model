@@ -1108,9 +1108,9 @@ export interface AppealS78Case {
   statementDueDate: string | null;
   reasonForNeighbourVisits: string | null;
   /**
-   * Number of residences involved in the appeal
+   * The net gain in residences of the proposed development
    */
-  numberOfResidences: number | null;
+  numberOfResidencesNetChange: number | null;
   siteGridReferenceEasting: string | null;
   siteGridReferenceNorthing: string | null;
   siteViewableFromRoad: boolean | null;

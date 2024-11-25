@@ -86,20 +86,13 @@
     "appellantProcedurePreference",
     "appellantProcedurePreferenceDetails",
     "appellantProcedurePreferenceDuration",
-    "inquiryHowManyWitnesses",
-    "updatedDevelopmentDescriptionUploaded",
-    "ownershipCertificateSubmitted",
-    "designAccessStatementProvided",
-    "newPlansDrawingsProvided",
-    "planningObligation",
+    "appellantProcedurePreferenceWitnessCount",
     "statusPlanningObligation",
     "appellantFinalCommentDetails",
-    "appellantWitnesses",
     "affectsScheduledMonument",
     "hasProtectedSpecies",
     "isAonbNationalLandscape",
     "designatedSitesNames",
-    "hasTreePreservationOrder",
     "isGypsyOrTravellerSite",
     "isPublicRightOfWay",
     "eiaEnvironmentalImpactSchedule",
@@ -111,9 +104,6 @@
     "eiaCompletedEnvironmentalStatement",
     "eiaConsultedBodiesDetails",
     "hasStatutoryConsultees",
-    "hasConsultationResponses",
-    "hasEmergingPlan",
-    "hasSupplementaryPlanningDocs",
     "hasInfrastructureLevy",
     "isInfrastructureLevyFormallyAdopted",
     "infrastructureLevyAdoptedDate",
@@ -122,7 +112,6 @@
     "lpaProcedurePreferenceDetails",
     "lpaProcedurePreferenceDuration",
     "lpaFinalCommentDetails",
-    "lpaAddedWitnesses",
     "caseworkReason",
     "developmentType",
     "importantInformation",
@@ -133,18 +122,18 @@
     "dateRecovered",
     "originalCaseDecisionDate",
     "targetDate",
-    "appellantCommentsSubmitted",
-    "appellantStatementSubmitted",
+    "appellantCommentsSubmittedDate",
+    "appellantStatementSubmittedDate",
     "finalCommentsDueDate",
     "interestedPartyRepsDueDate",
-    "lpaCommentsSubmitted",
-    "lpaProofsSubmitted",
-    "lpaStatementSubmitted",
+    "lpaCommentsSubmittedDate",
+    "lpaProofsSubmittedDate",
+    "lpaStatementSubmittedDate",
     "proofsOfEvidenceDueDate",
-    "siteNoticesSent",
+    "siteNoticesSentDate",
     "statementDueDate",
-    "inspectorNeedToEnterSite",
-    "numberOfResidences",
+    "reasonForNeighbourVisits",
+    "numberOfResidencesNetChange",
     "siteGridReferenceEasting",
     "siteGridReferenceNorthing",
     "siteViewableFromRoad",
@@ -750,49 +739,14 @@
       "description": "The duration of the procedure indicated by the appellant",
       "$comment": "Only available in S78 cases"
     },
-    "inquiryHowManyWitnesses": {
+    "appellantProcedurePreferenceWitnessCount": {
       "type": ["number", "null"],
-      "description": "The number of witnesses in inquiries",
-      "$comment": "Only available in S78 cases"
-    },
-    "updateDevelopmentDescriptionUploaded": {
-      "type": ["boolean", "null"],
-      "description": "Indicates that an update development description document has been submitted",
-      "$comment": "Only available in S78 cases"
-    },
-    "ownershipCertificateSubmitted": {
-      "type": ["boolean", "null"],
-      "description": "Indicates that an ownership certificate has been submitted",
-      "$comment": "Only available in S78 cases"
-    },
-    "designAccessStatementProvided": {
-      "type": ["boolean", "null"],
-      "description": "Indicates that a design and access statement has been provided",
-      "$comment": "Only available in S78 cases"
-    },
-    "newPlansDrawingsProvided": {
-      "type": ["boolean", "null"],
-      "description": "Indicates that new plans or drawings have been provided",
-      "$comment": "Only available in S78 cases"
-    },
-    "planningObligation": {
-      "type": ["boolean", "null"],
-      "description": "Indicates the existence of a planning obligation",
+      "description": "The number of witnesses appellant has suggested for inquiries preference",
       "$comment": "Only available in S78 cases"
     },
     "statusPlanningObligation": {
       "type": ["string", "null"],
       "description": "The planning obligation information, if available",
-      "$comment": "Only available in S78 cases"
-    },
-    "appellantFinalCommentDetails": {
-      "type": ["string", "null"],
-      "description": "The final comments details indicated by the appellant",
-      "$comment": "Only available in S78 cases"
-    },
-    "appellantWitnesses": {
-      "type": ["boolean", "null"],
-      "description": "Indicates if there are any witnesses",
       "$comment": "Only available in S78 cases"
     },
     "affectsScheduledMonument": {
@@ -811,13 +765,12 @@
       "$comment": "Only available in S78 cases"
     },
     "designatedSitesNames": {
-      "type": ["string", "null"],
-      "examples": ["SSSI", "cSAC", "SAC", "pSPA", "SPA", "user entered value"],
-      "description": "The designated site names"
-    },
-    "hasTreePreservationOrder": {
-      "type": ["boolean", "null"],
-      "description": "Indicates a TPO (tree preservation order)",
+      "type": ["array", "null"],
+      "items": {
+        "type": "string",
+        "examples": ["SSSI", "cSAC", "SAC", "pSPA", "SPA", "user entered value"]
+      },
+      "description": "The designated site names",
       "$comment": "Only available in S78 cases"
     },
     "isGypsyOrTravellerSite": {
@@ -876,21 +829,6 @@
       "description": "Indicates statutory consultees",
       "$comment": "Only available in S78 cases"
     },
-    "hasConsultationResponses": {
-      "type": ["boolean", "null"],
-      "description": "Indicates consultation responses",
-      "$comment": "Only available in S78 cases"
-    },
-    "hasEmergingPlan": {
-      "type": ["boolean", "null"],
-      "description": "Indicates emerging plans",
-      "$comment": "Only available in S78 cases"
-    },
-    "hasSupplementaryPlanningDocs": {
-      "type": ["boolean", "null"],
-      "description": "Indicates supplementary planning documents",
-      "$comment": "Only available in S78 cases"
-    },
     "hasInfrastructureLevy": {
       "type": ["boolean", "null"],
       "description": "Indicates the existence of an infrastructure levy",
@@ -929,16 +867,6 @@
     "lpaProcedurePreferenceDuration": {
       "type": ["number", "null"],
       "description": "The duration of enquiry indicated by the LPA",
-      "$comment": "Only available in S78 cases"
-    },
-    "lpaFinalCommentDetails": {
-      "type": ["string", "null"],
-      "description": "The final comments details indicated by the LPA",
-      "$comment": "Only available in S78 cases"
-    },
-    "lpaAddedWitnesses": {
-      "type": ["boolean", "null"],
-      "description": "Indicates if the LPA has added witnesses",
       "$comment": "Only available in S78 cases"
     },
     "caseworkReason": {
@@ -992,13 +920,13 @@
       "examples": ["2023-07-27T20:30:00.000Z"],
       "$comment": "Only available in S78 cases"
     },
-    "appellantCommentsSubmitted": {
+    "appellantCommentsSubmittedDate": {
       "type": ["string", "null"],
       "format": "date-time",
       "examples": ["2023-07-27T20:30:00.000Z"],
       "$comment": "Only available in S78 cases"
     },
-    "appellantStatementSubmitted": {
+    "appellantStatementSubmittedDate": {
       "type": ["string", "null"],
       "format": "date-time",
       "examples": ["2023-07-27T20:30:00.000Z"],
@@ -1016,19 +944,19 @@
       "examples": ["2023-07-27T20:30:00.000Z"],
       "$comment": "Only available in S78 cases"
     },
-    "lpaCommentsSubmitted": {
+    "lpaCommentsSubmittedDate": {
       "type": ["string", "null"],
       "format": "date-time",
       "examples": ["2023-07-27T20:30:00.000Z"],
       "$comment": "Only available in S78 cases"
     },
-    "lpaProofsSubmitted": {
+    "lpaProofsSubmittedDate": {
       "type": ["string", "null"],
       "format": "date-time",
       "examples": ["2023-07-27T20:30:00.000Z"],
       "$comment": "Only available in S78 cases"
     },
-    "lpaStatementSubmitted": {
+    "lpaStatementSubmittedDate": {
       "type": ["string", "null"],
       "format": "date-time",
       "examples": ["2023-07-27T20:30:00.000Z"],
@@ -1040,7 +968,7 @@
       "examples": ["2023-07-27T20:30:00.000Z"],
       "$comment": "Only available in S78 cases"
     },
-    "siteNoticesSent": {
+    "siteNoticesSentDate": {
       "type": ["string", "null"],
       "format": "date-time",
       "examples": ["2023-07-27T20:30:00.000Z"],
@@ -1052,13 +980,13 @@
       "examples": ["2023-07-27T20:30:00.000Z"],
       "$comment": "Only available in S78 cases"
     },
-    "inspectorNeedToEnterSite": {
-      "type": ["boolean", "null"],
+    "reasonForNeighbourVisits": {
+      "type": ["string", "null"],
       "$comment": "Only available in S78 cases"
     },
-    "numberOfResidences": {
+    "numberOfResidencesNetChange": {
       "type": ["number", "null"],
-      "description": "Number of residences involved in the appeal",
+      "description": "The net gain in residences of the proposed development",
       "$comment": "Only available in S78 cases"
     },
     "siteGridReferenceEasting": {

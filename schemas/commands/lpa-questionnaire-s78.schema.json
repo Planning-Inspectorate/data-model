@@ -1,0 +1,181 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "questionnaire-s78.schema.json",
+  "title": "LPAQ S78 submission properties",
+  "description": "Schema defining any S78 specific properties for LPAQ submissions",
+  "type": "object",
+  "additionalProperties": true,
+  "required": [
+    "changedListedBuildingNumbers",
+    "affectsScheduledMonument",
+    "hasProtectedSpecies",
+    "isAonbNationalLandscape",
+    "designatedSitesNames",
+    "hasTreePreservationOrder",
+    "isGypsyOrTravellerSite",
+    "isPublicRightOfWay",
+    "eiaEnvironmentalImpactSchedule",
+    "eiaDevelopmentDescription",
+    "eiaSensitiveAreaDetails",
+    "eiaColumnTwoThreshold",
+    "eiaScreeningOpinion",
+    "eiaRequiresEnvironmentalStatement",
+    "eiaCompletedEnvironmentalStatement",
+    "eiaConsultedBodiesDetails",
+    "hasStatutoryConsultees",
+    "hasConsultationResponses",
+    "hasEmergingPlan",
+    "hasSupplementaryPlanningDocs",
+    "hasInfrastructureLevy",
+    "isInfrastructureLevyFormallyAdopted",
+    "infrastructureLevyAdoptedDate",
+    "lpaProcedurePreference",
+    "lpaProcedurePreferenceDetails",
+    "lpaProcedurePreferenceDuration"
+  ],
+  "allOf": [
+    { "$ref": "questionnaire-has.schema.json"},
+    {
+      "properties": {
+        "changedListedBuildingNumbers": {
+          "type": ["array", "null"],
+          "items": {
+            "type": "string",
+            "examples": ["10023", "17824"]
+          },
+          "description": "A list of changed listed building IDs from Historic England",
+          "$comment": "Only available in S78 cases"
+        },
+        "affectsScheduledMonument": {
+          "type": ["boolean", "null"],
+          "description": "Indicates that a scheduled monument is affected",
+          "$comment": "Only available in S78 cases"
+        },
+        "hasProtectedSpecies": {
+          "type": ["boolean", "null"],
+          "description": "Indicates the existence of protected species",
+          "$comment": "Only available in S78 cases"
+        },
+        "isAonbNationalLandscape": {
+          "type": ["boolean", "null"],
+          "description": "Indicates an area of outstanding beauty (National Landscape)",
+          "$comment": "Only available in S78 cases"
+        },
+        "designatedSitesNames": {
+          "type": ["string", "null"],
+          "examples": ["SSSI", "cSAC", "SAC", "pSPA", "SPA", "user entered value"],
+          "description": "The designated site names"
+        },
+        "hasTreePreservationOrder": {
+          "type": ["boolean", "null"],
+          "description": "Indicates a TPO (tree preservation order)",
+          "$comment": "Only available in S78 cases"
+        },
+        "isGypsyOrTravellerSite": {
+          "type": ["boolean", "null"],
+          "description": "Indicates a traveller site",
+          "$comment": "Only available in S78 cases"
+        },
+        "isPublicRightOfWay": {
+          "type": ["boolean", "null"],
+          "description": "Indicates a PROW (public right of way)",
+          "$comment": "Only available in S78 cases"
+        },
+        "eiaEnvironmentalImpactSchedule": {
+          "type": ["string", "null"],
+          "enum": ["schedule-1", "schedule-2", null],
+          "description": "The impact schedule from EIA",
+          "$comment": "Only available in S78 cases"
+        },
+        "eiaDevelopmentDescription": {
+          "type": ["string", "null"],
+          "enum": ["agriculture-aquaculture", "change-extensions", "chemical-industry", "energy-industry", "extractive-industry", "food-industry", "infrastructure-projects", "mineral-industry", "other-projects", "production-processing-of-metals", "rubber-industry", "textile-industries", "tourism-leisure", null],
+          "description": "The development description from EIA",
+          "$comment": "Only available in S78 cases"
+        },
+        "eiaSensitiveAreaDetails": {
+          "type": ["string", "null"],
+          "description": "The sensitive area details from EIA",
+          "$comment": "Only available in S78 cases"
+        },
+        "eiaColumnTwoThreshold": {
+          "type": ["boolean", "null"],
+          "description": "EIA specific threshold",
+          "$comment": "Only available in S78 cases"
+        },
+        "eiaScreeningOpinion": {
+          "type": ["boolean", "null"],
+          "description": "EIA screening opinion",
+          "$comment": "Only available in S78 cases"
+        },
+        "eiaRequiresEnvironmentalStatement": {
+          "type": ["boolean", "null"],
+          "description": "EIA environmental statement required",
+          "$comment": "Only available in S78 cases"
+        },
+        "eiaCompletedEnvironmentalStatement": {
+          "type": ["boolean", "null"],
+          "description": "EIA completed environmental statement required",
+          "$comment": "Only available in S78 cases"
+        },
+        "eiaConsultedBodiesDetails": {
+          "type": ["string", "null"],
+          "description": "The details of the bodies consulted by EIA"
+        },
+        "hasStatutoryConsultees": {
+          "type": ["boolean", "null"],
+          "description": "Indicates statutory consultees",
+          "$comment": "Only available in S78 cases"
+        },
+        "hasConsultationResponses": {
+          "type": ["boolean", "null"],
+          "description": "Indicates consultation responses",
+          "$comment": "Only available in S78 cases"
+        },
+        "hasEmergingPlan": {
+          "type": ["boolean", "null"],
+          "description": "Indicates emerging plans",
+          "$comment": "Only available in S78 cases"
+        },
+        "hasSupplementaryPlanningDocs": {
+          "type": ["boolean", "null"],
+          "description": "Indicates supplementary planning documents",
+          "$comment": "Only available in S78 cases"
+        },
+        "hasInfrastructureLevy": {
+          "type": ["boolean", "null"],
+          "description": "Indicates the existence of an infrastructure levy",
+          "$comment": "Only available in S78 cases"
+        },
+        "isInfrastructureLevyFormallyAdopted": {
+          "type": ["boolean", "null"],
+          "description": "Indicates if the infrastructure levy is formally adopted",
+          "$comment": "Only available in S78 cases"
+        },
+        "infrastructureLevyAdoptedDate": {
+          "type": ["string", "null"],
+          "format": "date-time",
+          "examples": ["2023-07-27T20:30:00.000Z"],
+          "description": "The date of the infrastructure levy adoption",
+          "$comment": "Only available in S78 cases"
+        },
+        "lpaProcedurePreference": {
+          "type": ["string", "null"],
+          "enum": ["written", "hearing", "inquiry", null],
+          "description": "The procedure preference indicated by the LPA",
+          "$comment": "Only available in S78 cases"
+        },
+        "lpaProcedurePreferenceDetails": {
+          "type": ["string", "null"],
+          "description": "The procedure details preference indicated by the LPA",
+          "$comment": "Only available in S78 cases"
+        },
+        "lpaProcedurePreferenceDuration": {
+          "type": ["number", "null"],
+          "description": "The duration of enquiry indicated by the LPA",
+          "$comment": "Only available in S78 cases"
+        }
+      }
+    }
+  ]
+}

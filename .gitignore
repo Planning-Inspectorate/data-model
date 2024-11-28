@@ -16,6 +16,7 @@ npm-debug.log
 __pycache__/
 *.py[cod]
 *$py.class
+.venv
 
 # Python Distribution / packaging
 .Python

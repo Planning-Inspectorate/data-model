@@ -16,6 +16,8 @@
 
 *   [Folder](./folder.md "Folders can have optional parents") – `folder.schema.json`
 
+*   [Listed Building](./listed-buildings.md "Delta of listed building data pushed by the ODW") – `listed-building.schema.json`
+
 *   [NSIP Document](./nsip-document.md "NSIP document schema") – `nsip-document.schema.json`
 
 *   [NSIP Project](./nsip-project.md "Subset of Pins Data Model \[Case]") – `nsip-project.schema.json`

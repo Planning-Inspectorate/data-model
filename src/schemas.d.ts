@@ -1794,6 +1794,65 @@ export interface NsipSubscription {
 }
 
 /**
+ * Local Planning Authority (LPA) attributes as per Horizon. This will be extended with ONS data
+ */
+export interface PINSLPA {
+  /**
+   * The PINS name of the LPA
+   */
+  lpaName: string;
+  /**
+   * The organisation type of the LPA
+   */
+  organisationType?: string;
+  /**
+   * The PINS-generated unqiue LPA code
+   */
+  pinsLpaCode: string;
+  /**
+   * LPA address Post Office Box
+   */
+  poBox?: string | null;
+  /**
+   * First line of LPA address
+   */
+  address1?: string | null;
+  /**
+   * Second line of LPA address
+   */
+  address2?: string | null;
+  /**
+   * LPA address city or town
+   */
+  city?: string | null;
+  /**
+   * LPA address county
+   */
+  county?: string | null;
+  /**
+   * LPA address postcode
+   */
+  postcode?: string | null;
+  /**
+   * LPA address country
+   */
+  country?: string | null;
+  /**
+   * LPA telephine number
+   */
+  telephoneNumber?: string | null;
+  /**
+   * LPA fax number
+   */
+  fax?: string | null;
+  /**
+   * LPA email address
+   */
+  emailAddress?: string | null;
+  [k: string]: unknown;
+}
+
+/**
  * Section 51 Advice schema
  */
 export interface S51Advice {

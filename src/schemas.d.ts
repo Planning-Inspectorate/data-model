@@ -1188,6 +1188,29 @@ export interface Folder {
 }
 
 /**
+ * Delta of listed building data pushed by the ODW. Primary use case is to support Appeals UI
+ */
+export interface ListedBuilding {
+  /**
+   * A unique identifier for the listed building.
+   */
+  entity: number;
+  /**
+   * Reference number for the listed buildign
+   */
+  reference: string;
+  /**
+   * Name of listed building
+   */
+  name: string;
+  /**
+   * Grade assigned to the listing.
+   */
+  listedBuildingGrade: string;
+  [k: string]: unknown;
+}
+
+/**
  * NSIP document schema
  */
 export interface NSIPDocument {

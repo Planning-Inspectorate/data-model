@@ -2,13 +2,14 @@
     "$schema": "http://json-schema.org/draft-07/schema#",
     "$id": "pins_inspectors.schema.json",
     "title": "pinsinspectors",
-    "description": "Inspectors attributes as per Horizon. This will be extended with ONS data",
+    "description": "Inspectors attributes as per Horizon. This will be extended with SAP/Entra data",
     "type": "object",
     "additionalProperties": true,
     "required": [
         "firstName",
         "lastName",
-        "horizonId"
+        "horizonId",
+        "email"
     ],
     "properties": {
         "horizonId": {

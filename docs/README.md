@@ -24,6 +24,8 @@
 
 *   [NSIP Project Update](./nsip-project-update.md "NSIP Project Update (formerly known as Banners)") – `nsip-project-update.schema.json`
 
+*   [PINS Inspector](./pins-inspector.md "Inspector attributes as per Horizon") – `pins-inspectors.schema.json`
+
 *   [PINS LPA](./pins-lpa.md "Local Planning Authority (LPA) attributes as per Horizon") – `pins-lpa.schema.json`
 
 *   [Representation](./nsip-representation.md "NSIP Representation schema") – `nsip-representation.schema.json`

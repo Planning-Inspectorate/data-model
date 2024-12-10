@@ -1817,6 +1817,49 @@ export interface NsipSubscription {
 }
 
 /**
+ * Inspector attributes as per Horizon. This will be extended with SAP/Entra data
+ */
+export interface PINSInspector {
+  /**
+   * The PINS-generated unique horizon ID
+   */
+  horizonId: string;
+  /**
+   * The first name of the inspector
+   */
+  firstName: string;
+  /**
+   * The last name of the inspector
+   */
+  lastName: string;
+  /**
+   * The post name of the inspector
+   */
+  postName?: string | null;
+  /**
+   * The organisation name of the inspector
+   */
+  organisationName?: string | null;
+  /**
+   * The title of the inspector
+   */
+  title?: string | null;
+  /**
+   * The salutation of the inspector
+   */
+  salutation?: string | null;
+  /**
+   * The qualifications of the inspector
+   */
+  qualifications?: string | null;
+  /**
+   * The email address of the inspector
+   */
+  email: string | null;
+  [k: string]: unknown;
+}
+
+/**
  * Local Planning Authority (LPA) attributes as per Horizon. This will be extended with ONS data
  */
 export interface PINSLPA {

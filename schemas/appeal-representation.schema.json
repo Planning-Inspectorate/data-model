@@ -45,6 +45,7 @@
         "referred",
         "valid",
         "invalid",
+        "invalid_incomplete",
         "published",
         "archived",
         "draft",
@@ -52,7 +53,7 @@
         null
       ],
       "description": "Status of the representation",
-      "$comment": "BO workflow should validate or withdraw a representation."
+      "$comment": "BO workflow should validate or withdraw a representation. Enumerated list expected to change."
     },
     "originalRepresentation": {
       "type": ["string", "null"],
@@ -71,17 +72,32 @@
       "description": "Unique identifier for the case team member that performed the redaction",
       "$comment": "This is the user in Entra ID"
     },
-    "invalidDetails": {
+    "invalidOrIncompleteDetails": {
+      "type": ["array", "null"],
+      "enum": [
+	      "other_reason",
+        null
+      ],
+      "items": {
+        "type": "string",
+        "examples": [
+          "other_reason"
+        ]
+      },
+      "description": "A list of reasons why the representation has been marked as invalid or incomplete. Enumerated list expected to change.",
+      "$comment": "The list will contain items only if the status is `invalid` or `invalid_incomplete`"
+    },
+    "otherInvalidOrIncompleteDetails": {
       "type": ["array", "null"],
       "items": {
         "type": "string",
         "examples": [
           "Inflammatory comments",
-          "Another reason for setting a representation as invalid"
+          "Another free text reason for setting a representation as invalid or incomplete"
         ]
       },
-      "description": "A list of reasons why the representation has been marked as invalid",
-      "$comment": "The list will contain items only if the status is `invalid`"
+      "description": "A list of free text reasons why the representation has been marked as invalid or incomplete",
+      "$comment": "The list will contain items only if the status is `invalid` or `invalid_incomplete` and if invalidOrIncompleteDetails list includes 'Other'"
     },
     "source": {
       "type": ["string", "null"],
@@ -90,7 +106,7 @@
     },
     "serviceUserId": {
       "type": ["string", "null"],
-      "description": "Service User Id of the person or organisation making the representaion"
+      "description": "Service User Id of the person or organisation making the representation"
     },
     "representationType": {
       "type": ["string", "null"],

@@ -328,6 +328,7 @@ const APPEAL_STATUS = Object.freeze({
   AWAITING_REVIEW: 'awaiting_review',
   DRAFT: 'draft',
   INVALID: 'invalid',
+  INVALID_INCOMPLETE: 'invalid_incomplete',
   PUBLISHED: 'published',
   REFERRED: 'referred',
   VALID: 'valid',

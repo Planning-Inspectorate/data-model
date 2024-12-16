@@ -622,6 +622,7 @@ export interface AppealRepresentation {
     | 'referred'
     | 'valid'
     | 'invalid'
+    | 'invalid_incomplete'
     | 'published'
     | 'archived'
     | 'draft'
@@ -644,15 +645,19 @@ export interface AppealRepresentation {
    */
   redactedBy: string | null;
   /**
-   * A list of reasons why the representation has been marked as invalid
+   * A list of reasons why the representation has been marked as invalid or incomplete. Enumerated list expected to change.
    */
-  invalidDetails: string[] | null;
+  invalidOrIncompleteDetails?: string[];
+  /**
+   * A list of free text reasons why the representation has been marked as invalid or incomplete
+   */
+  otherInvalidOrIncompleteDetails?: string[] | null;
   /**
    * Source of the representation (citizen or LPA)
    */
   source: 'lpa' | 'citizen' | null;
   /**
-   * Service User Id of the person or organisation making the representaion
+   * Service User Id of the person or organisation making the representation
    */
   serviceUserId: string | null;
   /**

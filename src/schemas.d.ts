@@ -2133,7 +2133,14 @@ export interface ServiceUser {
   /**
    * Type or category of the service user.
    */
-  serviceUserType: 'Applicant' | 'Appellant' | 'Agent' | 'Rule6Party' | 'RepresentationContact' | 'Subscriber';
+  serviceUserType:
+    | 'Agent'
+    | 'Applicant'
+    | 'Appellant'
+    | 'InterestedParty'
+    | 'RepresentationContact'
+    | 'Rule6Party'
+    | 'Subscriber';
   /**
    * Reference number for a particular case or incident.
    */

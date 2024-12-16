@@ -477,6 +477,7 @@ export const SERVICE_USER_TYPE = Object.freeze({
   AGENT: 'Agent',
   APPELLANT: 'Appellant',
   APPLICANT: 'Applicant',
+  INTERESTED_PARTY: 'InterestedParty',
   REPRESENTATION_CONTACT: 'RepresentationContact',
   RULE_6_PARTY: 'Rule6Party',
   SUBSCRIBER: 'Subscriber',

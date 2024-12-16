@@ -486,11 +486,12 @@ Type or category of the service user.
 
 | Value                     | Explanation |
 | :------------------------ | :---------- |
+| `"Agent"`                 |             |
 | `"Applicant"`             |             |
 | `"Appellant"`             |             |
-| `"Agent"`                 |             |
-| `"Rule6Party"`            |             |
+| `"InterestedParty"`       |             |
 | `"RepresentationContact"` |             |
+| `"Rule6Party"`            |             |
 | `"Subscriber"`            |             |
 
 ## caseReference

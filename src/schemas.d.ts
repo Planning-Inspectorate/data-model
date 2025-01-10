@@ -645,7 +645,7 @@ export interface AppealRepresentation {
    */
   redactedBy: string | null;
   /**
-   * An list of reasons why the representation has been marked as invalid or incomplete.
+   * A list of reasons why the representation has been marked as invalid or incomplete.
    */
   invalidOrIncompleteDetails?: string[];
   /**

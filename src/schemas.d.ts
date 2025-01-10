@@ -128,6 +128,16 @@ export interface AppealDocument {
     | 'eiaScreeningOpinion'
     | 'definitiveMapStatement'
     | 'treePreservationPlan'
+    | 'interestedPartyComment'
+    | 'lpaStatement'
+    | 'rule6Statement'
+    | 'appellantFinalComment'
+    | 'lpaFinalComment'
+    | 'appellantProofOfEvidence'
+    | 'appellantWitnessesEvidence'
+    | 'lpaProofOfEvidence'
+    | 'lpaWitnessesEvidence'
+    | 'rule6ProofOfEvidence'
     | null;
   /**
    * The system mastering the metadata for the current document
@@ -2153,6 +2163,115 @@ export interface ServiceUser {
    * Unique identifier from the source system.
    */
   sourceSuid: string;
+  [k: string]: unknown;
+}
+
+/**
+ * Schema defining the data produced by the Front-Office when a representation is created on an appeal
+ */
+export type AppealRepresentationSubmission = AppealRepresentationSubmission1 & AppealRepresentationSubmission2;
+export type AppealRepresentationSubmission2 = {
+  [k: string]: unknown;
+};
+
+export interface AppealRepresentationSubmission1 {
+  /**
+   * External case identifier
+   */
+  caseReference: string;
+  /**
+   * The date the representation was submitted
+   */
+  representationSubmittedDate: string | null;
+  /**
+   * The original representation
+   */
+  representation: string | null;
+  documents: {
+    /**
+     * The unique identifier for the document
+     */
+    documentId: string;
+    /**
+     * Current stored name of the document
+     */
+    filename: string;
+    /**
+     * Original name of document
+     */
+    originalFilename: string;
+    /**
+     * The file size, in bytes
+     */
+    size: number;
+    /**
+     * The mime type for the current version of the file
+     */
+    mime: string;
+    /**
+     * The internal location of the document
+     */
+    documentURI: string;
+    /**
+     * The creation date for the document
+     */
+    dateCreated: string;
+    /**
+     * The type of document, used for exchange, migrations and consumption from the appeal back-office system
+     */
+    documentType:
+      | 'interestedPartyComment'
+      | 'lpaStatement'
+      | 'rule6Statement'
+      | 'appellantFinalComment'
+      | 'lpaFinalComment'
+      | 'appellantProofOfEvidence'
+      | 'appellantWitnessesEvidence'
+      | 'lpaProofOfEvidence'
+      | 'lpaWitnessesEvidence'
+      | 'rule6ProofOfEvidence'
+      | null;
+    [k: string]: unknown;
+  }[];
+  /**
+   * Service User Id of the person or organisation making the representation
+   */
+  serviceUserId?: string | null;
+  /**
+   * A unique identifier for the Local Planning Authority
+   */
+  lpaCode?: string | null;
+  newUser?: {
+    /**
+     * A formal greeting, e.g., Mr, Mrs, Ms.
+     */
+    salutation: string | null;
+    /**
+     * The first name of the individual.
+     */
+    firstName: string | null;
+    /**
+     * The last name of the individual.
+     */
+    lastName: string | null;
+    /**
+     * The primary email address for contact.
+     */
+    emailAddress: string | null;
+    /**
+     * The primary telephone contact number.
+     */
+    telephoneNumber: string | null;
+    /**
+     * The name of the organisation associated with the individual.
+     */
+    organisation: string | null;
+    /**
+     * Type or category of the service user.
+     */
+    serviceUserType: 'InterestedParty';
+    [k: string]: unknown;
+  };
   [k: string]: unknown;
 }
 

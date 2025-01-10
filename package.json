@@ -25,6 +25,8 @@
   },
   "devDependencies": {
     "@adobe/jsonschema2md": "^7.1.5",
+    "ajv": "^8.17.1",
+    "ajv-formats": "^3.0.1",
     "json-schema-to-typescript": "^14.1.0",
     "lodash.snakecase": "^4.1.1",
     "rollup": "^4.24.0"

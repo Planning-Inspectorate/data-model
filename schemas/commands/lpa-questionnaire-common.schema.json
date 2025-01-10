@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "$id": "questionnaire-common.schema.json",
+  "$id": "commands/lpa-questionnaire-common.schema.json",
   "title": "LPAQ common submission properties",
   "description": "Schema defining any properties common across all appeal types for LPAQ submissions",
   "type": "object",

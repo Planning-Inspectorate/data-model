@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "$id": "questionnaire-s78.schema.json",
+  "$id": "commands/lpa-questionnaire-s78.schema.json",
   "title": "LPAQ S78 submission properties",
   "description": "Schema defining any S78 specific properties for LPAQ submissions",
   "type": "object",
@@ -34,7 +34,7 @@
     "lpaProcedurePreferenceDuration"
   ],
   "allOf": [
-    { "$ref": "questionnaire-has.schema.json"},
+    { "$ref": "lpa-questionnaire-has.schema.json"},
     {
       "properties": {
         "changedListedBuildingNumbers": {

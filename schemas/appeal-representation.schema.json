@@ -75,16 +75,21 @@
     "invalidOrIncompleteDetails": {
       "type": ["array", "null"],
       "enum": [
-	      "other_reason",
+        "Received after deadline",
+        "Includes personal and/or medical information",
+        "Includes inflammatory content",
+        "Duplicated comment",
+        "Not relevant to this appeal",
+        "Contains links to web pages",
+        "No list of suggested conditions",
+        "other_reason",
         null
       ],
       "items": {
         "type": "string",
-        "examples": [
-          "other_reason"
-        ]
+        "examples": ["Received after deadline", "Not relevant to this appeal"]
       },
-      "description": "An list of reasons why the representation has been marked as invalid or incomplete.",
+      "description": "A list of reasons why the representation has been marked as invalid or incomplete.",
       "$comment": "The list will contain items only if the status is `invalid` or `invalid_incomplete`"
     },
     "otherInvalidOrIncompleteDetails": {
@@ -92,8 +97,8 @@
       "items": {
         "type": "string",
         "examples": [
-          "Inflammatory comments",
-          "Another reason for setting a representation as invalid"
+          "Other: reason",
+          "Supporting documents missing: document 2"
         ]
       },
       "description": "A list of free text reasons why the representation has been marked as invalid or incomplete",
@@ -110,7 +115,13 @@
     },
     "representationType": {
       "type": ["string", "null"],
-      "enum": ["statement", "comment", "final_comment", "proofs_evidence", null],
+      "enum": [
+        "statement",
+        "comment",
+        "final_comment",
+        "proofs_evidence",
+        null
+      ],
       "description": "The type of representation"
     },
     "dateReceived": {

@@ -2,7 +2,7 @@ import { describe, it } from "node:test";
 import assert from "node:assert";
 import Ajv from "ajv";
 import addFormats from "ajv-formats";
-import { loadAllSchemasSync } from "../../src/index.js"
+import { loadAllSchemasSync } from "../../../src/index.js"
 
 const schema = "appellant-submission.schema.json";
 

@@ -3,7 +3,7 @@ import path from 'path';
 import url from 'url';
 import { loadAllSchemas } from './index.js';
 import { compile } from 'json-schema-to-typescript';
-import { schemasPath } from "./index.js";
+import { schemasPath, commandsPath } from "./index.js";
 
 const __dirname = path.dirname(url.fileURLToPath(import.meta.url));
 
@@ -24,10 +24,18 @@ async function run() {
         types += '\n';
         first = false;
     }
-
+    
     for (const commandName of Object.keys(s.commands).sort()) {
         const schema = s.commands[commandName];
-        types += await compile(schema, schema['$id'], options(first));
+        
+        if (commandName.startsWith('appeal') || commandName.startsWith('lpa-questionnaire')) {
+            // hack to allow nested $ref links to function in tests and gen types,
+            // can we leverage a better means to resolve $refs that aligns with how tests/appeals references this 
+            types += await compile(schema, schema['$id'], options(first, commandsPath));
+        } else {
+            types += await compile(schema, schema['$id'], options(first));
+        }
+        
         types += '\n';
         first = false;
     }
@@ -40,18 +48,18 @@ async function run() {
  * @param {boolean} first
  * @returns {Partial<import('json-schema-to-typescript').Options>}
  */
-function options(first) {
+function options(first, refPath = schemasPath) {
     return {
         // don't allow additional properties if not explicit in the schema
         additionalProperties: false,
         // we're joining all the definitions into one, so just put the comment in once
         bannerComment: first ? undefined : '',
         // resolve $refs from the schemas folder
-        cwd: schemasPath,
+        cwd: refPath,
         declareExternallyReferenced: true,
         style: {
             singleQuote: true
-        }
+        },
     };
 }
 

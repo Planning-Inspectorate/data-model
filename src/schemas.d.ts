@@ -138,6 +138,7 @@ export interface AppealDocument {
     | 'lpaProofOfEvidence'
     | 'lpaWitnessesEvidence'
     | 'rule6ProofOfEvidence'
+    | 'environmentalAssessment'
     | null;
   /**
    * The system mastering the metadata for the current document

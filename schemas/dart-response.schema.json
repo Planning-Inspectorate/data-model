@@ -1,0 +1,293 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "dart-response.schema.json",
+  "title": "DaRT API response",
+  "description": "Schema defining the data returned by the DaRT API",
+  "type": "object",
+  "additionalProperties": true,
+  "required": [
+    
+  ],
+  "properties": {
+      "caseId": {
+        "type": "integer",
+        "examples": ["2744"],
+        "description": "description"
+      },
+      "caseReference": {
+        "type": "integer",
+        "examples": ["6002744"],
+        "description": "description"
+      },
+      "caseStatus": {
+        "type": "string",
+        "examples": ["lpa_questionnaire"],
+        "description": "description"
+      },
+      "caseType": {
+        "type": "string",
+        "examples": ["w"],
+        "description": "description"
+      },
+      "caseProcedure": {
+        "type": "string",
+        "examples": ["W"],
+        "description": "description"
+      },
+      "lpaCode": {
+        "type": "string",
+        "examples": ["DORS"],
+        "description": "description"
+      },
+      "lpaName": {
+        "type": "string",
+        "examples": ["example"],
+        "description": "description"
+      },
+      "allocationLevel": {
+        "type": "string",
+        "examples": ["H"],
+        "description": "description"
+      },
+      "allocationBand": {
+        "type": "string",
+        "examples": ["1"],
+        "description": "description"
+      },
+      "caseSpecialisms": {
+        "type": "array",
+        "examples": ["General allocation","Housing orders","Waste"],
+        "description": "description"
+      },
+      "caseSubmittedDate": {
+        "type": "string",
+        "examples": ["025-01-02T16:20:07.753Z"],
+        "description": "description"
+      },
+      "caseCreatedDate": {
+        "type": "string",
+        "examples": ["025-01-02T16:20:07.753Z"],
+        "description": "description"
+      },
+      "caseUpdatedDate": {
+        "type": "string",
+        "examples": ["025-01-02T16:20:07.753Z"],
+        "description": "description"
+      },
+      "caseValidDate": {
+        "type": "string",
+        "examples": ["025-01-02T16:20:07.753Z"],
+        "description": "description"
+      },
+      "caseValidationDate": {
+        "type": "string",
+        "examples": ["025-01-02T16:20:07.753Z"],
+        "description": "description"
+      },
+      "caseValidationOutcome": {
+        "type": "string",
+        "examples": ["valid"],
+        "description": "description"
+      },
+      "caseValidationInvalidDetails": {
+        "type": "array",
+        "examples": ["Appeal has not been submitted on time","Documents have not been submitted on time","Other: scddsfv"],
+        "description": "description"
+      },
+      "caseValidationIncompleteDetails": {
+        "type": "array",
+        "examples": ["Duis sunt ut in voluptate","nulla proident tempor do Ut","Excepteur et ut","dolore elit","elit adipisicing exercitation"],
+        "description": "description"
+      },
+      "caseExtensionDate": {
+        "type": "string",
+        "examples": ["2025-01-10T00:00:00.000Z"],
+        "description": "description"
+      },
+      "caseStartedDate": {
+        "type": "string",
+        "examples": ["2025-01-10T00:00:00.000Z"],
+        "description": "description"
+      },
+      "casePublishedDate": {
+        "type": "string",
+        "examples": ["2025-01-10T00:00:00.000Z"],
+        "description": "description"
+      },
+      "linkedCaseStatus": {
+        "type": "string",
+        "examples": ["child"],
+        "description": "description"
+      },
+      "leadCaseReference": {
+        "type": "string",
+        "examples": ["6002745"],
+        "description": "description"
+      },
+      "caseWithdrawnDate": {
+        "type": "string",
+        "examples": ["2025-01-10T00:00:00.000Z"],
+        "description": "description"
+      },
+      "caseTransferredDate": {
+        "type": "string",
+        "examples": ["2025-01-10T00:00:00.000Z"],
+        "description": "description"
+      },
+      "transferredCaseClosedDate": {
+        "type": "string",
+        "examples": ["2025-01-10T00:00:00.000Z"],
+        "description": "description"
+      },
+      "caseDecisionOutcomeDate": {
+        "type": "string",
+        "examples": ["2025-01-10T00:00:00.000Z"],
+        "description": "description"
+      },
+      "caseDecisionPublishedDate": {
+        "type": "string",
+        "examples": ["2025-01-10T00:00:00.000Z"],
+        "description": "description"
+      },
+      "caseDecisionOutcome": {
+        "type": "string",
+        "examples": ["allowed"],
+        "description": "description"
+      },
+      "caseCompletedDate": {
+        "type": "string",
+        "examples": ["2025-01-10T00:00:00.000Z"],
+        "description": "description"
+      },
+      "enforcementNotice": {
+        "type": "string",
+        "examples": ["example"],
+        "description": "description"
+      },
+      "applicationReference": {
+        "type": "string",
+        "examples": ["21824/APP/0/203130"],
+        "description": "description"
+      },
+      "applicationDate": {
+        "type": "string",
+        "examples": ["2025-01-10T00:00:00.000Z"],
+        "description": "description"
+      },
+      "applicationDecision": {
+        "type": "string",
+        "examples": ["refused"],
+        "description": "description"
+      },
+      "lpaDecisionDate": {
+        "type": "string",
+        "examples": ["2025-01-10T00:00:00.000Z"],
+        "description": "description"
+      },
+      "caseSubmissionDueDate": {
+        "type": "string",
+        "examples": ["2025-01-10T00:00:00.000Z"],
+        "description": "description"
+      },
+      "siteAddressLine1": {
+        "type": "string",
+        "examples": ["21 The Pavement"],
+        "description": "description"
+      },
+      "siteAddressLine2": {
+        "type": "string",
+        "examples": ["Shotesham Road"],
+        "description": "description"
+      },
+      "siteAddressTown": {
+        "type": "string",
+        "examples": ["Bristol"],
+        "description": "description"
+      },
+      "siteAddressCounty": {
+        "type": "string",
+        "examples": ["Wandsworth"],
+        "description": "description"
+      },
+      "siteAddressPostcode": {
+        "type": "string",
+        "examples": ["SW4 0HY"],
+        "description": "description"
+      },
+      "isCorrectAppealType": {
+        "type": "boolean",
+        "examples": ["True"],
+        "description": "description"
+      },
+      "originalDevelopmentDescription": {
+        "type": "string",
+        "examples": ["mollit esse ipsum"],
+        "description": "description"
+      },
+      "changedDevelopmentDescription": {
+        "type": "boolean",
+        "examples": ["True"],
+        "description": "description"
+      },
+      "newConditionDetails": {
+        "type": "string",
+        "examples": ["example"],
+        "description": "description"
+      },
+      "nearbyCaseReferences": {
+        "type": "array",
+        "examples": ["123","456","678","789"],
+        "description": "description"
+      },
+      "neighbouringSiteAddresses": {
+        "type": "array",
+        "examples": [{"neighbouringSiteAddressLine1":"officia qui","neighbouringSiteAddressLine2":"ea ipsum","neighbouringSiteAddressTown":"culpa mollit eu","neighbouringSiteAddressCounty":"do voluptate","neighbouringSiteAddressPostcode":"proident dolore sit cillum","neighbouringSiteSafetyDetails":"ullamco veniam nostrud"},{"neighbouringSiteAddressLine1":"dolore aliqua fugiat quis commodo","neighbouringSiteAddressLine2":"minim nisi in eu ut","neighbouringSiteAddressTown":"non aute","neighbouringSiteAddressPostcode":"eiusmod","neighbouringSiteAccessDetails":"non"},{"neighbouringSiteAddressLine1":"ut dolore Ut eu est","neighbouringSiteAddressLine2":"ea eiusmod nostrud pariatur esse","neighbouringSiteAddressTown":"nulla qui aliqua","neighbouringSiteAddressPostcode":"fugiat Ut labore","neighbouringSiteAccessDetails":"quis pariatur est"},{"neighbouringSiteAddressLine1":"do laboris Ut","neighbouringSiteAddressLine2":"cillum Ut","neighbouringSiteAddressTown":"consectetur occaecat eiusmod sit","neighbouringSiteAddressCounty":"ex tempor irure","neighbouringSiteAddressPostcode":"ea Excepteur","neighbouringSiteSafetyDetails":"Ut qui voluptate"}],
+        "description": "description"
+      },
+      "affectedListedBuildingNumbers": {
+        "type": "array",
+        "examples": ["1202152","1356318"],
+        "description": "description"
+      },
+      "appellantCostsAppliedFor": {
+        "type": "string",
+        "examples": ["example"],
+        "description": "description"
+      },
+      "lpaCostsAppliedFor": {
+        "type": "string",
+        "examples": ["example"],
+        "description": "description"
+      },
+      "appellantName": {
+        "type": "string",
+        "examples": ["example"],
+        "description": "description"
+      },
+      "typeOfEvent": {
+        "type": "string",
+        "examples": ["example"],
+        "description": "description"
+      },
+      "startDateOfTheEvent": {
+        "type": "string",
+        "examples": ["example"],
+        "description": "description"
+      },
+      "inspectorName": {
+        "type": "string",
+        "examples": ["example"],
+        "description": "description"
+      },
+      "caseOfficerName": {
+        "type": "string",
+        "examples": ["example"],
+        "description": "description"
+      },
+      "inspectorQualifications": {
+        "type": "string",
+        "examples": ["example"],
+        "description": "description"
+      }
+    }
+}

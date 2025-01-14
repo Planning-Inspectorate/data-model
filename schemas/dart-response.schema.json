@@ -250,13 +250,13 @@
         "description": "description"
       },
       "appellantCostsAppliedFor": {
-        "type": "string",
-        "examples": ["example"],
+        "type": "boolean",
+        "examples": ["True"],
         "description": "description"
       },
       "lpaCostsAppliedFor": {
-        "type": "string",
-        "examples": ["example"],
+        "type": "boolean",
+        "examples": ["False"],
         "description": "description"
       },
       "appellantName": {
@@ -271,7 +271,7 @@
       },
       "startDateOfTheEvent": {
         "type": "string",
-        "examples": ["example"],
+        "examples": ["2025-01-10T00:00:00.000Z"],
         "description": "description"
       },
       "inspectorName": {

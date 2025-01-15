@@ -5,9 +5,7 @@
   "description": "Schema defining the data returned by the DaRT API",
   "type": "object",
   "additionalProperties": true,
-  "required": [
-    
-  ],
+  "required": [],
   "properties": {
       "caseId": {
         "type": "integer",

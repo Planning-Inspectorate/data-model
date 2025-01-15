@@ -23,13 +23,13 @@ Event Identifier
 
 `eventId`
 
-*   is required
+* is required
 
-*   Type: `integer`
+* Type: `integer`
 
-*   cannot be null
+* cannot be null
 
-*   defined in: [Examination Timetable](nsip-exam-timetable-defs-event-properties-eventid.md "nsip-exam-timetable.schema.json#/$defs/event/properties/eventId")
+* defined in: [Examination Timetable](nsip-exam-timetable-defs-event-properties-eventid.md "nsip-exam-timetable.schema.json#/$defs/event/properties/eventId")
 
 ### eventId Type
 
@@ -41,13 +41,13 @@ Compulsory Acquisition Hearing/Deadline/Issue Specific Hearing etc
 
 `type`
 
-*   is required
+* is required
 
-*   Type: `string`
+* Type: `string`
 
-*   cannot be null
+* cannot be null
 
-*   defined in: [Examination Timetable](nsip-exam-timetable-defs-event-properties-type.md "nsip-exam-timetable.schema.json#/$defs/event/properties/type")
+* defined in: [Examination Timetable](nsip-exam-timetable-defs-event-properties-type.md "nsip-exam-timetable.schema.json#/$defs/event/properties/type")
 
 ### type Type
 
@@ -78,13 +78,13 @@ Title Of Examination Timetable Event
 
 `eventTitle`
 
-*   is required
+* is required
 
-*   Type: `string`
+* Type: `string`
 
-*   cannot be null
+* cannot be null
 
-*   defined in: [Examination Timetable](nsip-exam-timetable-defs-event-properties-eventtitle.md "nsip-exam-timetable.schema.json#/$defs/event/properties/eventTitle")
+* defined in: [Examination Timetable](nsip-exam-timetable-defs-event-properties-eventtitle.md "nsip-exam-timetable.schema.json#/$defs/event/properties/eventTitle")
 
 ### eventTitle Type
 
@@ -96,13 +96,13 @@ Title Of Examination Timetable Event In Welsh
 
 `eventTitleWelsh`
 
-*   is optional
+* is optional
 
-*   Type: `string`
+* Type: `string`
 
-*   can be null
+* can be null
 
-*   defined in: [Examination Timetable](nsip-exam-timetable-defs-event-properties-eventtitlewelsh.md "nsip-exam-timetable.schema.json#/$defs/event/properties/eventTitleWelsh")
+* defined in: [Examination Timetable](nsip-exam-timetable-defs-event-properties-eventtitlewelsh.md "nsip-exam-timetable.schema.json#/$defs/event/properties/eventTitleWelsh")
 
 ### eventTitleWelsh Type
 
@@ -114,13 +114,13 @@ Title Of Examination Timetable Event In Welsh
 
 `description`
 
-*   is required
+* is required
 
-*   Type: `string`
+* Type: `string`
 
-*   cannot be null
+* cannot be null
 
-*   defined in: [Examination Timetable](nsip-exam-timetable-defs-event-properties-description.md "nsip-exam-timetable.schema.json#/$defs/event/properties/description")
+* defined in: [Examination Timetable](nsip-exam-timetable-defs-event-properties-description.md "nsip-exam-timetable.schema.json#/$defs/event/properties/description")
 
 ### description Type
 
@@ -132,13 +132,13 @@ Title Of Examination Timetable Event In Welsh
 
 `descriptionWelsh`
 
-*   is optional
+* is optional
 
-*   Type: `string`
+* Type: `string`
 
-*   can be null
+* can be null
 
-*   defined in: [Examination Timetable](nsip-exam-timetable-defs-event-properties-descriptionwelsh.md "nsip-exam-timetable.schema.json#/$defs/event/properties/descriptionWelsh")
+* defined in: [Examination Timetable](nsip-exam-timetable-defs-event-properties-descriptionwelsh.md "nsip-exam-timetable.schema.json#/$defs/event/properties/descriptionWelsh")
 
 ### descriptionWelsh Type
 
@@ -150,13 +150,13 @@ Optional start date for event window
 
 `eventDeadlineStartDate`
 
-*   is optional
+* is optional
 
-*   Type: `string`
+* Type: `string`
 
-*   can be null
+* can be null
 
-*   defined in: [Examination Timetable](nsip-exam-timetable-defs-event-properties-eventdeadlinestartdate.md "nsip-exam-timetable.schema.json#/$defs/event/properties/eventDeadlineStartDate")
+* defined in: [Examination Timetable](nsip-exam-timetable-defs-event-properties-eventdeadlinestartdate.md "nsip-exam-timetable.schema.json#/$defs/event/properties/eventDeadlineStartDate")
 
 ### eventDeadlineStartDate Type
 
@@ -178,13 +178,13 @@ Event Date = effective deadline (end) date
 
 `date`
 
-*   is required
+* is required
 
-*   Type: `string`
+* Type: `string`
 
-*   cannot be null
+* cannot be null
 
-*   defined in: [Examination Timetable](nsip-exam-timetable-defs-event-properties-date.md "nsip-exam-timetable.schema.json#/$defs/event/properties/date")
+* defined in: [Examination Timetable](nsip-exam-timetable-defs-event-properties-date.md "nsip-exam-timetable.schema.json#/$defs/event/properties/date")
 
 ### date Type
 
@@ -206,13 +206,13 @@ Event Date = effective deadline (end) date
 
 `eventLineItems`
 
-*   is required
+* is required
 
-*   Type: `object[]` ([Details](nsip-exam-timetable-defs-line-item.md))
+* Type: `object[]` ([Details](nsip-exam-timetable-defs-line-item.md))
 
-*   cannot be null
+* cannot be null
 
-*   defined in: [Examination Timetable](nsip-exam-timetable-defs-event-properties-eventlineitems.md "nsip-exam-timetable.schema.json#/$defs/event/properties/eventLineItems")
+* defined in: [Examination Timetable](nsip-exam-timetable-defs-event-properties-eventlineitems.md "nsip-exam-timetable.schema.json#/$defs/event/properties/eventLineItems")
 
 ### eventLineItems Type
 

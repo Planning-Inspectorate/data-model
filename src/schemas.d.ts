@@ -1120,6 +1120,237 @@ export interface AppealS78Case {
 }
 
 /**
+ * Schema defining the data returned by the DaRT API
+ */
+export interface DaRTAPIResponse {
+  /**
+   * description
+   */
+  caseId?: number;
+  /**
+   * description
+   */
+  caseReference?: number;
+  /**
+   * description
+   */
+  caseStatus?: string;
+  /**
+   * description
+   */
+  caseType?: string;
+  /**
+   * description
+   */
+  caseProcedure?: string;
+  /**
+   * description
+   */
+  lpaCode?: string;
+  /**
+   * description
+   */
+  lpaName?: string;
+  /**
+   * description
+   */
+  allocationLevel?: string;
+  /**
+   * description
+   */
+  allocationBand?: string;
+  /**
+   * description
+   */
+  caseSpecialisms?: unknown[];
+  /**
+   * description
+   */
+  caseSubmittedDate?: string;
+  /**
+   * description
+   */
+  caseCreatedDate?: string;
+  /**
+   * description
+   */
+  caseUpdatedDate?: string;
+  /**
+   * description
+   */
+  caseValidDate?: string;
+  /**
+   * description
+   */
+  caseValidationDate?: string;
+  /**
+   * description
+   */
+  caseValidationOutcome?: string;
+  /**
+   * description
+   */
+  caseValidationInvalidDetails?: unknown[];
+  /**
+   * description
+   */
+  caseValidationIncompleteDetails?: unknown[];
+  /**
+   * description
+   */
+  caseExtensionDate?: string;
+  /**
+   * description
+   */
+  caseStartedDate?: string;
+  /**
+   * description
+   */
+  casePublishedDate?: string;
+  /**
+   * description
+   */
+  linkedCaseStatus?: string;
+  /**
+   * description
+   */
+  leadCaseReference?: string;
+  /**
+   * description
+   */
+  caseWithdrawnDate?: string;
+  /**
+   * description
+   */
+  caseTransferredDate?: string;
+  /**
+   * description
+   */
+  transferredCaseClosedDate?: string;
+  /**
+   * description
+   */
+  caseDecisionOutcomeDate?: string;
+  /**
+   * description
+   */
+  caseDecisionPublishedDate?: string;
+  /**
+   * description
+   */
+  caseDecisionOutcome?: string;
+  /**
+   * description
+   */
+  caseCompletedDate?: string;
+  /**
+   * description
+   */
+  enforcementNotice?: string;
+  /**
+   * description
+   */
+  applicationReference?: string;
+  /**
+   * description
+   */
+  applicationDate?: string;
+  /**
+   * description
+   */
+  applicationDecision?: string;
+  /**
+   * description
+   */
+  lpaDecisionDate?: string;
+  /**
+   * description
+   */
+  caseSubmissionDueDate?: string;
+  /**
+   * description
+   */
+  siteAddressLine1?: string;
+  /**
+   * description
+   */
+  siteAddressLine2?: string;
+  /**
+   * description
+   */
+  siteAddressTown?: string;
+  /**
+   * description
+   */
+  siteAddressCounty?: string;
+  /**
+   * description
+   */
+  siteAddressPostcode?: string;
+  /**
+   * description
+   */
+  isCorrectAppealType?: boolean;
+  /**
+   * description
+   */
+  originalDevelopmentDescription?: string;
+  /**
+   * description
+   */
+  changedDevelopmentDescription?: boolean;
+  /**
+   * description
+   */
+  newConditionDetails?: string;
+  /**
+   * description
+   */
+  nearbyCaseReferences?: unknown[];
+  /**
+   * description
+   */
+  neighbouringSiteAddresses?: unknown[];
+  /**
+   * description
+   */
+  affectedListedBuildingNumbers?: unknown[];
+  /**
+   * description
+   */
+  appellantCostsAppliedFor?: boolean;
+  /**
+   * description
+   */
+  lpaCostsAppliedFor?: boolean;
+  /**
+   * description
+   */
+  appellantName?: string;
+  /**
+   * description
+   */
+  typeOfEvent?: string;
+  /**
+   * description
+   */
+  startDateOfTheEvent?: string;
+  /**
+   * description
+   */
+  inspectorName?: string;
+  /**
+   * description
+   */
+  caseOfficerName?: string;
+  /**
+   * description
+   */
+  inspectorQualifications?: string;
+  [k: string]: unknown;
+}
+
+/**
  * A list of users from EntraID
  */
 export interface EntraIDUserObjects {
@@ -1184,6 +1415,41 @@ export interface Folder {
     | 'correspondence'
     | '0'
     | null;
+  [k: string]: unknown;
+}
+
+/**
+ * Schema defining the data returned by the DaRT API
+ */
+export interface GetTimesheetsAPIResponse {
+  /**
+   * description
+   */
+  caseReference?: number;
+  /**
+   * description
+   */
+  applicationReference?: string;
+  /**
+   * description
+   */
+  siteAddressLine1?: string;
+  /**
+   * description
+   */
+  siteAddressLine2?: string;
+  /**
+   * description
+   */
+  siteAddressTown?: string;
+  /**
+   * description
+   */
+  siteAddressCounty?: string;
+  /**
+   * description
+   */
+  siteAddressPostcode?: string;
   [k: string]: unknown;
 }
 

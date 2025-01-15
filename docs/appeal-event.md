@@ -31,13 +31,13 @@ The unique identifier for the event
 
 `eventId`
 
-*   is required
+* is required
 
-*   Type: `string`
+* Type: `string`
 
-*   cannot be null
+* cannot be null
 
-*   defined in: [Appeal Event](appeal-event-properties-eventid.md "appeal-event.schema.json#/properties/eventId")
+* defined in: [Appeal Event](appeal-event-properties-eventid.md "appeal-event.schema.json#/properties/eventId")
 
 ### eventId Type
 
@@ -55,13 +55,13 @@ External case identifier
 
 `caseReference`
 
-*   is required
+* is required
 
-*   Type: `string`
+* Type: `string`
 
-*   cannot be null
+* cannot be null
 
-*   defined in: [Appeal Event](appeal-event-properties-casereference.md "appeal-event.schema.json#/properties/caseReference")
+* defined in: [Appeal Event](appeal-event-properties-casereference.md "appeal-event.schema.json#/properties/caseReference")
 
 ### caseReference Type
 
@@ -79,13 +79,13 @@ The type of event
 
 `eventType`
 
-*   is required
+* is required
 
-*   Type: `string`
+* Type: `string`
 
-*   cannot be null
+* cannot be null
 
-*   defined in: [Appeal Event](appeal-event-properties-eventtype.md "appeal-event.schema.json#/properties/eventType")
+* defined in: [Appeal Event](appeal-event-properties-eventtype.md "appeal-event.schema.json#/properties/eventType")
 
 ### eventType Type
 
@@ -114,13 +114,13 @@ An optional description / name for the event
 
 `eventName`
 
-*   is required
+* is required
 
-*   Type: `string`
+* Type: `string`
 
-*   can be null
+* can be null
 
-*   defined in: [Appeal Event](appeal-event-properties-eventname.md "appeal-event.schema.json#/properties/eventName")
+* defined in: [Appeal Event](appeal-event-properties-eventname.md "appeal-event.schema.json#/properties/eventName")
 
 ### eventName Type
 
@@ -138,13 +138,13 @@ Status of the event
 
 `eventStatus`
 
-*   is required
+* is required
 
-*   Type: `string`
+* Type: `string`
 
-*   cannot be null
+* cannot be null
 
-*   defined in: [Appeal Event](appeal-event-properties-eventstatus.md "appeal-event.schema.json#/properties/eventStatus")
+* defined in: [Appeal Event](appeal-event-properties-eventstatus.md "appeal-event.schema.json#/properties/eventStatus")
 
 ### eventStatus Type
 
@@ -171,13 +171,13 @@ Indicates if the event is urgent
 
 `isUrgent`
 
-*   is required
+* is required
 
-*   Type: `boolean`
+* Type: `boolean`
 
-*   cannot be null
+* cannot be null
 
-*   defined in: [Appeal Event](appeal-event-properties-isurgent.md "appeal-event.schema.json#/properties/isUrgent")
+* defined in: [Appeal Event](appeal-event-properties-isurgent.md "appeal-event.schema.json#/properties/isUrgent")
 
 ### isUrgent Type
 
@@ -189,13 +189,13 @@ Indicates if the event has been published
 
 `eventPublished`
 
-*   is required
+* is required
 
-*   Type: `boolean`
+* Type: `boolean`
 
-*   can be null
+* can be null
 
-*   defined in: [Appeal Event](appeal-event-properties-eventpublished.md "appeal-event.schema.json#/properties/eventPublished")
+* defined in: [Appeal Event](appeal-event-properties-eventpublished.md "appeal-event.schema.json#/properties/eventPublished")
 
 ### eventPublished Type
 
@@ -207,13 +207,13 @@ Event start date and time
 
 `eventStartDateTime`
 
-*   is required
+* is required
 
-*   Type: `string`
+* Type: `string`
 
-*   cannot be null
+* cannot be null
 
-*   defined in: [Appeal Event](appeal-event-properties-eventstartdatetime.md "appeal-event.schema.json#/properties/eventStartDateTime")
+* defined in: [Appeal Event](appeal-event-properties-eventstartdatetime.md "appeal-event.schema.json#/properties/eventStartDateTime")
 
 ### eventStartDateTime Type
 
@@ -235,13 +235,13 @@ Event end date and time
 
 `eventEndDateTime`
 
-*   is required
+* is required
 
-*   Type: `string`
+* Type: `string`
 
-*   can be null
+* can be null
 
-*   defined in: [Appeal Event](appeal-event-properties-eventenddatetime.md "appeal-event.schema.json#/properties/eventEndDateTime")
+* defined in: [Appeal Event](appeal-event-properties-eventenddatetime.md "appeal-event.schema.json#/properties/eventEndDateTime")
 
 ### eventEndDateTime Type
 
@@ -263,13 +263,13 @@ The date third-parties were informed of the site visit event
 
 `notificationOfSiteVisit`
 
-*   is required
+* is required
 
-*   Type: `string`
+* Type: `string`
 
-*   can be null
+* can be null
 
-*   defined in: [Appeal Event](appeal-event-properties-notificationofsitevisit.md "appeal-event.schema.json#/properties/notificationOfSiteVisit")
+* defined in: [Appeal Event](appeal-event-properties-notificationofsitevisit.md "appeal-event.schema.json#/properties/notificationOfSiteVisit")
 
 ### notificationOfSiteVisit Type
 
@@ -291,13 +291,13 @@ First line of address for the event site
 
 `addressLine1`
 
-*   is required
+* is required
 
-*   Type: `string`
+* Type: `string`
 
-*   cannot be null
+* cannot be null
 
-*   defined in: [Appeal Event](appeal-event-properties-addressline1.md "appeal-event.schema.json#/properties/addressLine1")
+* defined in: [Appeal Event](appeal-event-properties-addressline1.md "appeal-event.schema.json#/properties/addressLine1")
 
 ### addressLine1 Type
 
@@ -315,13 +315,13 @@ Second line of address for the event site
 
 `addressLine2`
 
-*   is required
+* is required
 
-*   Type: `string`
+* Type: `string`
 
-*   can be null
+* can be null
 
-*   defined in: [Appeal Event](appeal-event-properties-addressline2.md "appeal-event.schema.json#/properties/addressLine2")
+* defined in: [Appeal Event](appeal-event-properties-addressline2.md "appeal-event.schema.json#/properties/addressLine2")
 
 ### addressLine2 Type
 
@@ -333,13 +333,13 @@ Town / City of the event address
 
 `addressTown`
 
-*   is required
+* is required
 
-*   Type: `string`
+* Type: `string`
 
-*   cannot be null
+* cannot be null
 
-*   defined in: [Appeal Event](appeal-event-properties-addresstown.md "appeal-event.schema.json#/properties/addressTown")
+* defined in: [Appeal Event](appeal-event-properties-addresstown.md "appeal-event.schema.json#/properties/addressTown")
 
 ### addressTown Type
 
@@ -357,13 +357,13 @@ County of the event address
 
 `addressCounty`
 
-*   is required
+* is required
 
-*   Type: `string`
+* Type: `string`
 
-*   can be null
+* can be null
 
-*   defined in: [Appeal Event](appeal-event-properties-addresscounty.md "appeal-event.schema.json#/properties/addressCounty")
+* defined in: [Appeal Event](appeal-event-properties-addresscounty.md "appeal-event.schema.json#/properties/addressCounty")
 
 ### addressCounty Type
 
@@ -381,13 +381,13 @@ Postal code of the event address
 
 `addressPostcode`
 
-*   is required
+* is required
 
-*   Type: `string`
+* Type: `string`
 
-*   cannot be null
+* cannot be null
 
-*   defined in: [Appeal Event](appeal-event-properties-addresspostcode.md "appeal-event.schema.json#/properties/addressPostcode")
+* defined in: [Appeal Event](appeal-event-properties-addresspostcode.md "appeal-event.schema.json#/properties/addressPostcode")
 
 ### addressPostcode Type
 

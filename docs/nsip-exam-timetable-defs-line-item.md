@@ -16,13 +16,13 @@
 
 `description`
 
-*   is required
+* is required
 
-*   Type: `string`
+* Type: `string`
 
-*   cannot be null
+* cannot be null
 
-*   defined in: [Examination Timetable](nsip-exam-timetable-defs-line-item-properties-description.md "nsip-exam-timetable.schema.json#/$defs/line-item/properties/description")
+* defined in: [Examination Timetable](nsip-exam-timetable-defs-line-item-properties-description.md "nsip-exam-timetable.schema.json#/$defs/line-item/properties/description")
 
 ### description Type
 
@@ -34,13 +34,13 @@
 
 `descriptionWelsh`
 
-*   is optional
+* is optional
 
-*   Type: `string`
+* Type: `string`
 
-*   can be null
+* can be null
 
-*   defined in: [Examination Timetable](nsip-exam-timetable-defs-line-item-properties-descriptionwelsh.md "nsip-exam-timetable.schema.json#/$defs/line-item/properties/descriptionWelsh")
+* defined in: [Examination Timetable](nsip-exam-timetable-defs-line-item-properties-descriptionwelsh.md "nsip-exam-timetable.schema.json#/$defs/line-item/properties/descriptionWelsh")
 
 ### descriptionWelsh Type
 

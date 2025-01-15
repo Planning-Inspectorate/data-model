@@ -14,7 +14,7 @@
 | [lpaCode](#lpacode)                                                 | `string`  | Optional | cannot be null | [DaRT API response](dart-response-properties-lpacode.md "dart-response.schema.json#/properties/lpaCode")                                                 |
 | [lpaName](#lpaname)                                                 | `string`  | Optional | cannot be null | [DaRT API response](dart-response-properties-lpaname.md "dart-response.schema.json#/properties/lpaName")                                                 |
 | [allocationLevel](#allocationlevel)                                 | `string`  | Optional | cannot be null | [DaRT API response](dart-response-properties-allocationlevel.md "dart-response.schema.json#/properties/allocationLevel")                                 |
-| [allocationBand](#allocationband)                                   | `string`  | Optional | cannot be null | [DaRT API response](dart-response-properties-allocationband.md "dart-response.schema.json#/properties/allocationBand")                                   |
+| [allocationBand](#allocationband)                                   | `integer` | Optional | cannot be null | [DaRT API response](dart-response-properties-allocationband.md "dart-response.schema.json#/properties/allocationBand")                                   |
 | [caseSpecialisms](#casespecialisms)                                 | `array`   | Optional | cannot be null | [DaRT API response](dart-response-properties-casespecialisms.md "dart-response.schema.json#/properties/caseSpecialisms")                                 |
 | [caseSubmittedDate](#casesubmitteddate)                             | `string`  | Optional | cannot be null | [DaRT API response](dart-response-properties-casesubmitteddate.md "dart-response.schema.json#/properties/caseSubmittedDate")                             |
 | [caseCreatedDate](#casecreateddate)                                 | `string`  | Optional | cannot be null | [DaRT API response](dart-response-properties-casecreateddate.md "dart-response.schema.json#/properties/caseCreatedDate")                                 |
@@ -264,7 +264,7 @@ description
 
 * is optional
 
-* Type: `string`
+* Type: `integer`
 
 * cannot be null
 
@@ -272,7 +272,7 @@ description
 
 ### allocationBand Type
 
-`string`
+`integer`
 
 ### allocationBand Examples
 

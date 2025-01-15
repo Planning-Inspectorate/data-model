@@ -1158,7 +1158,7 @@ export interface DaRTAPIResponse {
   /**
    * description
    */
-  allocationBand?: string;
+  allocationBand?: number;
   /**
    * description
    */

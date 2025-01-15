@@ -48,7 +48,7 @@
         "description": "description"
       },
       "allocationBand": {
-        "type": "string",
+        "type": "integer",
         "examples": ["1"],
         "description": "description"
       },

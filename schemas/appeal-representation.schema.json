@@ -9,7 +9,7 @@
     "representationId",
     "caseId",
     "caseReference",
-    "status",
+    "representationStatus",
     "originalRepresentation",
     "redacted",
     "redactedRepresentation",
@@ -38,7 +38,7 @@
       "examples": ["7002471"],
       "description": "External case identifier"
     },
-    "status": {
+    "representationStatus": {
       "type": ["string", "null"],
       "enum": [
         "awaiting_review",

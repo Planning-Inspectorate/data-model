@@ -628,7 +628,7 @@ export interface AppealRepresentation {
   /**
    * Status of the representation
    */
-  status:
+  representationStatus:
     | 'awaiting_review'
     | 'referred'
     | 'valid'
@@ -2170,12 +2170,7 @@ export interface ServiceUser {
 /**
  * Schema defining the data produced by the Front-Office when a representation is created on an appeal
  */
-export type AppealRepresentationSubmission = AppealRepresentationSubmission1 & AppealRepresentationSubmission2;
-export type AppealRepresentationSubmission2 = {
-  [k: string]: unknown;
-};
-
-export interface AppealRepresentationSubmission1 {
+export type AppealRepresentationSubmission = {
   /**
    * External case identifier
    */
@@ -2274,7 +2269,9 @@ export interface AppealRepresentationSubmission1 {
     [k: string]: unknown;
   };
   [k: string]: unknown;
-}
+} & {
+  [k: string]: unknown;
+};
 
 /**
  * Schema defining the data produced by the Front-Office when an appeal is requested

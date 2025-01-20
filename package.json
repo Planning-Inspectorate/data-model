@@ -1,6 +1,6 @@
 {
   "name": "pins-data-model",
-  "version": "1.9.5",
+  "version": "1.9.6",
   "description": "JSON Schemas for the Planning Inspectorate's Data Model",
   "main": "src/index.js",
   "type": "module",
@@ -25,6 +25,8 @@
   },
   "devDependencies": {
     "@adobe/jsonschema2md": "^8.0.2",
+    "ajv": "^8.17.1",
+    "ajv-formats": "^3.0.1",
     "json-schema-to-typescript": "^14.1.0",
     "lodash.snakecase": "^4.1.1",
     "rollup": "^4.24.0"

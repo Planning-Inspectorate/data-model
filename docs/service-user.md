@@ -489,6 +489,8 @@ Type or category of the service user.
 | `"Applicant"`             |             |
 | `"Appellant"`             |             |
 | `"Agent"`                 |             |
+| `"Rule6Party"`            |             |
+| `"InterestedParty"`       |             |
 | `"RepresentationContact"` |             |
 | `"Subscriber"`            |             |
 

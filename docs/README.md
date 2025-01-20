@@ -10,6 +10,8 @@
 
 * [Appeal S78 Case](./appeal-s78.md "Schema defining the metadata for an appeal (S78)") – `appeal-s78.schema.json`
 
+* [Appeal Representation](./appeal-representation.md "Schema defining the metadata for appeal representations, such as statements, third-party comments and final comments") – `appeal-representation.schema.json`
+
 * [DaRT API response](./dart-response.md "Schema defining the data returned by the DaRT API") – `dart-response.schema.json`
 
 * [Entra ID User Objects](./entraid.md "A list of users from EntraID") – `entraid.schema.json`
@@ -56,7 +58,9 @@
 
 ### Arrays
 
-* [Untitled array in Examination Timetable](./nsip-exam-timetable-properties-events.md) – `nsip-exam-timetable.schema.json#/properties/events`
+*   [Untitled array in Appeal Representation](./appeal-representation-properties-documentids.md "An array of documentIds") – `appeal-representation.schema.json#/properties/documentIds`
+
+*   [Untitled array in Examination Timetable](./nsip-exam-timetable-properties-events.md) – `nsip-exam-timetable.schema.json#/properties/events`
 
 * [Untitled array in Examination Timetable](./nsip-exam-timetable-defs-event-properties-eventlineitems.md) – `nsip-exam-timetable.schema.json#/$defs/event/properties/eventLineItems`
 

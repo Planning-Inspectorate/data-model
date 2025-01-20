@@ -123,7 +123,7 @@
 		"serviceUserType": {
 			"type": "string",
 			"description": "Type or category of the service user.",
-			"enum": ["Applicant", "Appellant", "Agent", "RepresentationContact", "Subscriber"]
+			"enum": ["Applicant", "Appellant", "Agent", "Rule6Party", "InterestedParty", "RepresentationContact", "Subscriber"]
 		},
 		"caseReference": {
 			"type": "string",

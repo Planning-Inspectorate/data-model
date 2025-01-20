@@ -100,6 +100,17 @@ class DocumentType(Enum):
     eiaScreeningOpinion = "eiaScreeningOpinion"
     definitiveMapStatement = "definitiveMapStatement"
     treePreservationPlan = "treePreservationPlan"
+    interestedPartyComment = "interestedPartyComment"
+    lpaStatement = "lpaStatement"
+    rule6Statement = "rule6Statement"
+    appellantFinalComment = "appellantFinalComment"
+    lpaFinalComment = "lpaFinalComment"
+    appellantProofOfEvidence = "appellantProofOfEvidence"
+    appellantWitnessesEvidence = "appellantWitnessesEvidence"
+    lpaProofOfEvidence = "lpaProofOfEvidence"
+    lpaWitnessesEvidence = "lpaWitnessesEvidence"
+    rule6ProofOfEvidence = "rule6ProofOfEvidence"
+    environmentalAssessment = "environmentalAssessment"
     NoneType_None = None
 
 

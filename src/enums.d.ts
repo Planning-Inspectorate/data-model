@@ -93,7 +93,10 @@ export const APPEAL_DOCUMENT_TYPE = {
   APPELLANT_COSTS_APPLICATION: 'appellantCostsApplication',
   APPELLANT_COSTS_CORRESPONDENCE: 'appellantCostsCorrespondence',
   APPELLANT_COSTS_WITHDRAWAL: 'appellantCostsWithdrawal',
+  APPELLANT_FINAL_COMMENT: 'appellantFinalComment',
+  APPELLANT_PROOF_OF_EVIDENCE: 'appellantProofOfEvidence',
   APPELLANT_STATEMENT: 'appellantStatement',
+  APPELLANT_WITNESSES_EVIDENCE: 'appellantWitnessesEvidence',
   APPLICATION_DECISION_LETTER: 'applicationDecisionLetter',
   CASE_DECISION_LETTER: 'caseDecisionLetter',
   CHANGED_DESCRIPTION: 'changedDescription',
@@ -109,11 +112,17 @@ export const APPEAL_DOCUMENT_TYPE = {
   EIA_SCREENING_DIRECTION: 'eiaScreeningDirection',
   EIA_SCREENING_OPINION: 'eiaScreeningOpinion',
   EMERGING_PLAN: 'emergingPlan',
+  ENVIRONMENTAL_ASSESSMENT: 'environmentalAssessment',
   INSPECTOR_CORRESPONDENCE: 'inspectorCorrespondence',
+  INTERESTED_PARTY_COMMENT: 'interestedPartyComment',
   LPA_CASE_CORRESPONDENCE: 'lpaCaseCorrespondence',
   LPA_COSTS_APPLICATION: 'lpaCostsApplication',
   LPA_COSTS_CORRESPONDENCE: 'lpaCostsCorrespondence',
   LPA_COSTS_WITHDRAWAL: 'lpaCostsWithdrawal',
+  LPA_FINAL_COMMENT: 'lpaFinalComment',
+  LPA_PROOF_OF_EVIDENCE: 'lpaProofOfEvidence',
+  LPA_STATEMENT: 'lpaStatement',
+  LPA_WITNESSES_EVIDENCE: 'lpaWitnessesEvidence',
   NEW_PLANS_DRAWINGS: 'newPlansDrawings',
   ORIGINAL_APPLICATION_FORM: 'originalApplicationForm',
   OTHER_NEW_DOCUMENTS: 'otherNewDocuments',
@@ -123,6 +132,8 @@ export const APPEAL_DOCUMENT_TYPE = {
   PLANNING_OBLIGATION: 'planningObligation',
   PLANNING_OFFICER_REPORT: 'planningOfficerReport',
   PLANS_DRAWINGS: 'plansDrawings',
+  RULE_6_PROOF_OF_EVIDENCE: 'rule6ProofOfEvidence',
+  RULE_6_STATEMENT: 'rule6Statement',
   STATEMENT_COMMON_GROUND: 'statementCommonGround',
   SUPPLEMENTARY_PLANNING: 'supplementaryPlanning',
   TREE_PRESERVATION_PLAN: 'treePreservationPlan',
@@ -219,11 +230,35 @@ export const APPEAL_REDACTED_STATUS = {
   REDACTED: 'redacted',
 };
 
+export const APPEAL_REPRESENTATION_TYPE = {
+  COMMENT: 'comment',
+  FINAL_COMMENT: 'final_comment',
+  PROOFS_EVIDENCE: 'proofs_evidence',
+  STATEMENT: 'statement',
+};
+
+export const APPEAL_SOURCE = {
+  CITIZEN: 'citizen',
+  LPA: 'lpa',
+};
+
 export const APPEAL_SOURCE_SYSTEM = {
   ACP: 'acp',
   BACK_OFFICE_APPEALS: 'back-office-appeals',
   HORIZON: 'horizon',
   SHAREPOINT: 'sharepoint',
+};
+
+export const APPEAL_STATUS = {
+  ARCHIVED: 'archived',
+  AWAITING_REVIEW: 'awaiting_review',
+  DRAFT: 'draft',
+  INVALID: 'invalid',
+  INVALID_INCOMPLETE: 'invalid_incomplete',
+  PUBLISHED: 'published',
+  REFERRED: 'referred',
+  VALID: 'valid',
+  WITHDRAWN: 'withdrawn',
 };
 
 export const APPEAL_VIRUS_CHECK_STATUS = {
@@ -453,7 +488,9 @@ export const SERVICE_USER_TYPE = {
   AGENT: 'Agent',
   APPELLANT: 'Appellant',
   APPLICANT: 'Applicant',
+  INTERESTED_PARTY: 'InterestedParty',
   REPRESENTATION_CONTACT: 'RepresentationContact',
+  RULE_6_PARTY: 'Rule6Party',
   SUBSCRIBER: 'Subscriber',
 };
 

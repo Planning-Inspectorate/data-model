@@ -178,7 +178,10 @@ const APPEAL_DOCUMENT_TYPE = Object.freeze({
   APPELLANT_COSTS_APPLICATION: 'appellantCostsApplication',
   APPELLANT_COSTS_CORRESPONDENCE: 'appellantCostsCorrespondence',
   APPELLANT_COSTS_WITHDRAWAL: 'appellantCostsWithdrawal',
+  APPELLANT_FINAL_COMMENT: 'appellantFinalComment',
+  APPELLANT_PROOF_OF_EVIDENCE: 'appellantProofOfEvidence',
   APPELLANT_STATEMENT: 'appellantStatement',
+  APPELLANT_WITNESSES_EVIDENCE: 'appellantWitnessesEvidence',
   APPLICATION_DECISION_LETTER: 'applicationDecisionLetter',
   CASE_DECISION_LETTER: 'caseDecisionLetter',
   CHANGED_DESCRIPTION: 'changedDescription',
@@ -194,11 +197,17 @@ const APPEAL_DOCUMENT_TYPE = Object.freeze({
   EIA_SCREENING_DIRECTION: 'eiaScreeningDirection',
   EIA_SCREENING_OPINION: 'eiaScreeningOpinion',
   EMERGING_PLAN: 'emergingPlan',
+  ENVIRONMENTAL_ASSESSMENT: 'environmentalAssessment',
   INSPECTOR_CORRESPONDENCE: 'inspectorCorrespondence',
+  INTERESTED_PARTY_COMMENT: 'interestedPartyComment',
   LPA_CASE_CORRESPONDENCE: 'lpaCaseCorrespondence',
   LPA_COSTS_APPLICATION: 'lpaCostsApplication',
   LPA_COSTS_CORRESPONDENCE: 'lpaCostsCorrespondence',
   LPA_COSTS_WITHDRAWAL: 'lpaCostsWithdrawal',
+  LPA_FINAL_COMMENT: 'lpaFinalComment',
+  LPA_PROOF_OF_EVIDENCE: 'lpaProofOfEvidence',
+  LPA_STATEMENT: 'lpaStatement',
+  LPA_WITNESSES_EVIDENCE: 'lpaWitnessesEvidence',
   NEW_PLANS_DRAWINGS: 'newPlansDrawings',
   ORIGINAL_APPLICATION_FORM: 'originalApplicationForm',
   OTHER_NEW_DOCUMENTS: 'otherNewDocuments',
@@ -208,6 +217,8 @@ const APPEAL_DOCUMENT_TYPE = Object.freeze({
   PLANNING_OBLIGATION: 'planningObligation',
   PLANNING_OFFICER_REPORT: 'planningOfficerReport',
   PLANS_DRAWINGS: 'plansDrawings',
+  RULE_6_PROOF_OF_EVIDENCE: 'rule6ProofOfEvidence',
+  RULE_6_STATEMENT: 'rule6Statement',
   STATEMENT_COMMON_GROUND: 'statementCommonGround',
   SUPPLEMENTARY_PLANNING: 'supplementaryPlanning',
   TREE_PRESERVATION_PLAN: 'treePreservationPlan',
@@ -304,11 +315,35 @@ const APPEAL_REDACTED_STATUS = Object.freeze({
   REDACTED: 'redacted',
 });
 
+const APPEAL_REPRESENTATION_TYPE = Object.freeze({
+  COMMENT: 'comment',
+  FINAL_COMMENT: 'final_comment',
+  PROOFS_EVIDENCE: 'proofs_evidence',
+  STATEMENT: 'statement',
+});
+
+const APPEAL_SOURCE = Object.freeze({
+  CITIZEN: 'citizen',
+  LPA: 'lpa',
+});
+
 const APPEAL_SOURCE_SYSTEM = Object.freeze({
   ACP: 'acp',
   BACK_OFFICE_APPEALS: 'back-office-appeals',
   HORIZON: 'horizon',
   SHAREPOINT: 'sharepoint',
+});
+
+const APPEAL_STATUS = Object.freeze({
+  ARCHIVED: 'archived',
+  AWAITING_REVIEW: 'awaiting_review',
+  DRAFT: 'draft',
+  INVALID: 'invalid',
+  INVALID_INCOMPLETE: 'invalid_incomplete',
+  PUBLISHED: 'published',
+  REFERRED: 'referred',
+  VALID: 'valid',
+  WITHDRAWN: 'withdrawn',
 });
 
 const APPEAL_VIRUS_CHECK_STATUS = Object.freeze({
@@ -538,7 +573,9 @@ const SERVICE_USER_TYPE = Object.freeze({
   AGENT: 'Agent',
   APPELLANT: 'Appellant',
   APPLICANT: 'Applicant',
+  INTERESTED_PARTY: 'InterestedParty',
   REPRESENTATION_CONTACT: 'RepresentationContact',
+  RULE_6_PARTY: 'Rule6Party',
   SUBSCRIBER: 'Subscriber',
 });
 
@@ -600,7 +637,10 @@ exports.APPEAL_LPA_PROCEDURE_PREFERENCE = APPEAL_LPA_PROCEDURE_PREFERENCE;
 exports.APPEAL_LPA_QUESTIONNAIRE_VALIDATION_OUTCOME = APPEAL_LPA_QUESTIONNAIRE_VALIDATION_OUTCOME;
 exports.APPEAL_ORIGIN = APPEAL_ORIGIN;
 exports.APPEAL_REDACTED_STATUS = APPEAL_REDACTED_STATUS;
+exports.APPEAL_REPRESENTATION_TYPE = APPEAL_REPRESENTATION_TYPE;
+exports.APPEAL_SOURCE = APPEAL_SOURCE;
 exports.APPEAL_SOURCE_SYSTEM = APPEAL_SOURCE_SYSTEM;
+exports.APPEAL_STATUS = APPEAL_STATUS;
 exports.APPEAL_VIRUS_CHECK_STATUS = APPEAL_VIRUS_CHECK_STATUS;
 exports.CASE_STAGE = CASE_STAGE;
 exports.METHOD = METHOD;

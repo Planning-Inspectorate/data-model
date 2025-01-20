@@ -128,6 +128,17 @@ export interface AppealDocument {
     | 'eiaScreeningOpinion'
     | 'definitiveMapStatement'
     | 'treePreservationPlan'
+    | 'interestedPartyComment'
+    | 'lpaStatement'
+    | 'rule6Statement'
+    | 'appellantFinalComment'
+    | 'lpaFinalComment'
+    | 'appellantProofOfEvidence'
+    | 'appellantWitnessesEvidence'
+    | 'lpaProofOfEvidence'
+    | 'lpaWitnessesEvidence'
+    | 'rule6ProofOfEvidence'
+    | 'environmentalAssessment'
     | null;
   /**
    * The system mastering the metadata for the current document
@@ -595,6 +606,80 @@ export interface AppealHASCase {
    * Indicates if the appellant has applied for costs
    */
   lpaCostsAppliedFor: boolean | null;
+  [k: string]: unknown;
+}
+
+/**
+ * Schema defining the metadata for appeal representations, such as statements, third-party comments and final comments
+ */
+export interface AppealRepresentation {
+  /**
+   * The unique identifier for the representation
+   */
+  representationId: string;
+  /**
+   * Internal case identifier
+   */
+  caseId: number | null;
+  /**
+   * External case identifier
+   */
+  caseReference: string;
+  /**
+   * Status of the representation
+   */
+  status:
+    | 'awaiting_review'
+    | 'referred'
+    | 'valid'
+    | 'invalid'
+    | 'invalid_incomplete'
+    | 'published'
+    | 'archived'
+    | 'draft'
+    | 'withdrawn'
+    | null;
+  /**
+   * The original representation
+   */
+  originalRepresentation: string | null;
+  /**
+   * Indicates if the representation is redacted
+   */
+  redacted: boolean | null;
+  /**
+   * The redacted version of the representation
+   */
+  redactedRepresentation: string | null;
+  /**
+   * Unique identifier for the case team member that performed the redaction
+   */
+  redactedBy: string | null;
+  /**
+   * A list of reasons why the representation has been marked as invalid or incomplete.
+   */
+  invalidOrIncompleteDetails?: string[];
+  /**
+   * A list of free text reasons why the representation has been marked as invalid or incomplete
+   */
+  otherInvalidOrIncompleteDetails?: string[] | null;
+  /**
+   * Source of the representation (citizen or LPA)
+   */
+  source: 'lpa' | 'citizen' | null;
+  /**
+   * Service User Id of the person or organisation making the representation
+   */
+  serviceUserId: string | null;
+  /**
+   * The type of representation
+   */
+  representationType: 'statement' | 'comment' | 'final_comment' | 'proofs_evidence' | null;
+  dateReceived: string;
+  /**
+   * An array of documentIds
+   */
+  documentIds: string[];
   [k: string]: unknown;
 }
 
@@ -2349,7 +2434,14 @@ export interface ServiceUser {
   /**
    * Type or category of the service user.
    */
-  serviceUserType: 'Applicant' | 'Appellant' | 'Agent' | 'RepresentationContact' | 'Subscriber';
+  serviceUserType:
+    | 'Applicant'
+    | 'Appellant'
+    | 'Agent'
+    | 'Rule6Party'
+    | 'InterestedParty'
+    | 'RepresentationContact'
+    | 'Subscriber';
   /**
    * Reference number for a particular case or incident.
    */
@@ -2362,6 +2454,115 @@ export interface ServiceUser {
    * Unique identifier from the source system.
    */
   sourceSuid: string;
+  [k: string]: unknown;
+}
+
+/**
+ * Schema defining the data produced by the Front-Office when a representation is created on an appeal
+ */
+export type AppealRepresentationSubmission = AppealRepresentationSubmission1 & AppealRepresentationSubmission2;
+export type AppealRepresentationSubmission2 = {
+  [k: string]: unknown;
+};
+
+export interface AppealRepresentationSubmission1 {
+  /**
+   * External case identifier
+   */
+  caseReference: string;
+  /**
+   * The date the representation was submitted
+   */
+  representationSubmittedDate: string | null;
+  /**
+   * The original representation
+   */
+  representation: string | null;
+  documents: {
+    /**
+     * The unique identifier for the document
+     */
+    documentId: string;
+    /**
+     * Current stored name of the document
+     */
+    filename: string;
+    /**
+     * Original name of document
+     */
+    originalFilename: string;
+    /**
+     * The file size, in bytes
+     */
+    size: number;
+    /**
+     * The mime type for the current version of the file
+     */
+    mime: string;
+    /**
+     * The internal location of the document
+     */
+    documentURI: string;
+    /**
+     * The creation date for the document
+     */
+    dateCreated: string;
+    /**
+     * The type of document, used for exchange, migrations and consumption from the appeal back-office system
+     */
+    documentType:
+      | 'interestedPartyComment'
+      | 'lpaStatement'
+      | 'rule6Statement'
+      | 'appellantFinalComment'
+      | 'lpaFinalComment'
+      | 'appellantProofOfEvidence'
+      | 'appellantWitnessesEvidence'
+      | 'lpaProofOfEvidence'
+      | 'lpaWitnessesEvidence'
+      | 'rule6ProofOfEvidence'
+      | null;
+    [k: string]: unknown;
+  }[];
+  /**
+   * Service User Id of the person or organisation making the representation
+   */
+  serviceUserId?: string | null;
+  /**
+   * A unique identifier for the Local Planning Authority
+   */
+  lpaCode?: string | null;
+  newUser?: {
+    /**
+     * A formal greeting, e.g., Mr, Mrs, Ms.
+     */
+    salutation: string | null;
+    /**
+     * The first name of the individual.
+     */
+    firstName: string | null;
+    /**
+     * The last name of the individual.
+     */
+    lastName: string | null;
+    /**
+     * The primary email address for contact.
+     */
+    emailAddress: string | null;
+    /**
+     * The primary telephone contact number.
+     */
+    telephoneNumber: string | null;
+    /**
+     * The name of the organisation associated with the individual.
+     */
+    organisation: string | null;
+    /**
+     * Type or category of the service user.
+     */
+    serviceUserType: 'InterestedParty';
+    [k: string]: unknown;
+  };
   [k: string]: unknown;
 }
 
@@ -2609,7 +2810,7 @@ export interface AppellantSubmissionCommand {
       /**
        * Type or category of the service user.
        */
-      serviceUserType: 'Applicant' | 'Appellant' | 'Agent' | 'RepresentationContact' | 'Subscriber';
+      serviceUserType: 'Appellant' | 'Agent';
       [k: string]: unknown;
     },
     ...{
@@ -2640,7 +2841,7 @@ export interface AppellantSubmissionCommand {
       /**
        * Type or category of the service user.
        */
-      serviceUserType: 'Applicant' | 'Appellant' | 'Agent' | 'RepresentationContact' | 'Subscriber';
+      serviceUserType: 'Appellant' | 'Agent';
       [k: string]: unknown;
     }[]
   ];

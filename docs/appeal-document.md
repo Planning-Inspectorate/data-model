@@ -578,6 +578,17 @@ The type of document, used for exchange, migrations and consumption from the app
 | `"eiaScreeningOpinion"`           |             |
 | `"definitiveMapStatement"`        |             |
 | `"treePreservationPlan"`          |             |
+| `"interestedPartyComment"`        |             |
+| `"lpaStatement"`                  |             |
+| `"rule6Statement"`                |             |
+| `"appellantFinalComment"`         |             |
+| `"lpaFinalComment"`               |             |
+| `"appellantProofOfEvidence"`      |             |
+| `"appellantWitnessesEvidence"`    |             |
+| `"lpaProofOfEvidence"`            |             |
+| `"lpaWitnessesEvidence"`          |             |
+| `"rule6ProofOfEvidence"`          |             |
+| `"environmentalAssessment"`       |             |
 | `null`                            |             |
 
 ## sourceSystem

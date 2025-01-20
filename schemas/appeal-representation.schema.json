@@ -1,0 +1,140 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "appeal-representation.schema.json",
+  "title": "Appeal Representation",
+  "description": "Schema defining the metadata for appeal representations, such as statements, third-party comments and final comments",
+  "type": "object",
+  "additionalProperties": true,
+  "required": [
+    "representationId",
+    "caseId",
+    "caseReference",
+    "status",
+    "originalRepresentation",
+    "redacted",
+    "redactedRepresentation",
+    "redactedBy",
+    "invalidDetails",
+    "source",
+    "serviceUserId",
+    "representationType",
+    "dateReceived",
+    "documentIds"
+  ],
+  "properties": {
+    "representationId": {
+      "type": "string",
+      "examples": ["7000000-1"],
+      "description": "The unique identifier for the representation",
+      "$comment": "This is a composite key with the caseReference and a representation counter"
+    },
+    "caseId": {
+      "type": ["integer", "null"],
+      "examples": [1200],
+      "description": "Internal case identifier"
+    },
+    "caseReference": {
+      "type": "string",
+      "examples": ["7002471"],
+      "description": "External case identifier"
+    },
+    "status": {
+      "type": ["string", "null"],
+      "enum": [
+        "awaiting_review",
+        "referred",
+        "valid",
+        "invalid",
+        "invalid_incomplete",
+        "published",
+        "archived",
+        "draft",
+        "withdrawn",
+        null
+      ],
+      "description": "Status of the representation",
+      "$comment": "BO workflow should validate or withdraw a representation.Enumerated list expected to change."
+    },
+    "originalRepresentation": {
+      "type": ["string", "null"],
+      "description": "The original representation"
+    },
+    "redacted": {
+      "type": ["boolean", "null"],
+      "description": "Indicates if the representation is redacted"
+    },
+    "redactedRepresentation": {
+      "type": ["string", "null"],
+      "description": "The redacted version of the representation"
+    },
+    "redactedBy": {
+      "type": ["string", "null"],
+      "description": "Unique identifier for the case team member that performed the redaction",
+      "$comment": "This is the user in Entra ID"
+    },
+    "invalidOrIncompleteDetails": {
+      "type": ["array", "null"],
+      "enum": [
+        "Received after deadline",
+        "Includes personal and/or medical information",
+        "Includes inflammatory content",
+        "Duplicated comment",
+        "Not relevant to this appeal",
+        "Contains links to web pages",
+        "No list of suggested conditions",
+        "other_reason",
+        null
+      ],
+      "items": {
+        "type": "string",
+        "examples": ["Received after deadline", "Not relevant to this appeal"]
+      },
+      "description": "A list of reasons why the representation has been marked as invalid or incomplete.",
+      "$comment": "The list will contain items only if the status is `invalid` or `invalid_incomplete`"
+    },
+    "otherInvalidOrIncompleteDetails": {
+      "type": ["array", "null"],
+      "items": {
+        "type": "string",
+        "examples": [
+          "Other: reason",
+          "Supporting documents missing: document 2"
+        ]
+      },
+      "description": "A list of free text reasons why the representation has been marked as invalid or incomplete",
+      "$comment": "The list will contain items only if the status is `invalid` or `invalid_incomplete` and if invalidOrIncompleteDetails list includes 'other_reason'"
+    },
+    "source": {
+      "type": ["string", "null"],
+      "enum": ["lpa", "citizen", null],
+      "description": "Source of the representation (citizen or LPA)"
+    },
+    "serviceUserId": {
+      "type": ["string", "null"],
+      "description": "Service User Id of the person or organisation making the representation"
+    },
+    "representationType": {
+      "type": ["string", "null"],
+      "enum": [
+        "statement",
+        "comment",
+        "final_comment",
+        "proofs_evidence",
+        null
+      ],
+      "description": "The type of representation"
+    },
+    "dateReceived": {
+      "type": "string",
+      "format": "date-time",
+      "examples": ["2023-07-27T20:30:00.000Z"]
+    },
+    "documentIds": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "An array of documentIds"
+    }
+  }
+}

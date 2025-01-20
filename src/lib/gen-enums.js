@@ -1,46 +1,7 @@
-import fs from 'fs/promises';
-import path from 'path';
-import url from 'url';
-import { loadAllSchemas } from '../index.js';
 import snakeCase from 'lodash.snakecase';
-import { loadSchema } from './load.js';
-
-const __dirname = path.dirname(url.fileURLToPath(import.meta.url));
-
-export const constPath = path.join(__dirname, '..', 'enums.js');
-export const constTsPath = path.join(__dirname, '..', 'enums.d.ts');
 
 const SPACING = '  ';
 const NEW_LINE = '\n';
-
-/**
- * Load all schemas and generate JS constant definitions
- */
-async function run() {
-	const s = await loadAllSchemas();
-
-	/** @type {Object<string, string[]>} */
-	const enumProps = {};
-
-	for (const schemaName of Object.keys(s.schemas).sort()) {
-		const schema = s.schemas[schemaName];
-		collectEnumProps(enumProps, schema.properties, schemaPrefix(schemaName));
-	}
-
-	const staticEnums = await loadSchema(path.join(__dirname, 'enums-static.schema.json'));
-	collectEnumProps(enumProps, staticEnums.properties, 'message');
-
-	let output = '';
-	let tsOutput = '';
-
-	for (const name of Object.keys(enumProps).sort()) {
-		output += generateConstants(name, enumProps[name]) + NEW_LINE.repeat(2);
-		tsOutput += generateConstants(name, enumProps[name], { ts: true }) + NEW_LINE.repeat(2);
-	}
-
-	await fs.writeFile(constPath, output);
-	await fs.writeFile(constTsPath, tsOutput);
-}
 
 /**
  * Generate JS code to define exported constants for the given enum values
@@ -51,7 +12,7 @@ async function run() {
  * @param {boolean} [opts.ts] - whether to generate the TS type or JS code
  * @returns {string}
  */
-function generateConstants(name, values, { ts = false } = {}) {
+export function generateConstants(name, values, { ts = false } = {}) {
 	const freezeStart = ts ? '' : 'Object.freeze(';
 	const freezeEnd = ts ? ' as const' : ')';
 	const exportPrefix = 'export ';
@@ -77,7 +38,7 @@ function generateConstants(name, values, { ts = false } = {}) {
  * @param {string} name
  * @returns {string}
  */
-function formatName(name) {
+export function formatName(name) {
 	return snakeCase(name).toUpperCase();
 }
 
@@ -87,7 +48,7 @@ function formatName(name) {
  * @param {Object<string, {type?: string|string[], enum?: string[]}>} properties
  * @param {string} [prefix]
  */
-function collectEnumProps(map, properties = {}, prefix) {
+export function collectEnumProps(map, properties = {}, prefix) {
 	for (const [key, prop] of Object.entries(properties)) {
 		const name = prefix ? prefix + '_' + key : key;
 
@@ -96,7 +57,13 @@ function collectEnumProps(map, properties = {}, prefix) {
 		const getEnumValues = (p) => p.filter((e) => e !== null);
 		const collectEnumFromProp = (p) => {
 			if (hasStringEnum(p)) {
-				map[name] = getEnumValues(p.enum);
+				const enumValues = getEnumValues(p.enum);
+				if (map[name] && JSON.stringify(map[name]) !== JSON.stringify(enumValues)) {
+					console.log(map[name]);
+					console.log(enumValues);
+					throw new Error(`${name} already has an enum`);
+				}
+				map[name] = enumValues;
 			}
 		};
 
@@ -111,7 +78,7 @@ function collectEnumProps(map, properties = {}, prefix) {
  * @param {string} schemaName
  * @returns {string|undefined}
  */
-function schemaPrefix(schemaName) {
+export function schemaPrefix(schemaName) {
 	if (schemaName.toLowerCase().includes('appeal')) {
 		return 'appeal';
 	}
@@ -119,5 +86,3 @@ function schemaPrefix(schemaName) {
 		return 'nsip';
 	}
 }
-
-run().catch(console.error);

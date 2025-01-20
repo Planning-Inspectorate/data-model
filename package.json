@@ -12,7 +12,7 @@
     "commitlint": "commitlint --from=$(git rev-parse $(git cherry origin/main | head -n 1 | cut -c 3-)^1)",
     "gen": "npm run gen-docs && npm run gen-enums && npm run gen-types && npm run gen-cjs",
     "gen-docs": "node src/lib/gen-docs.js",
-    "gen-enums": "node src/lib/gen-enums.js",
+    "gen-enums": "node src/lib/gen-enums-run.js",
     "gen-types": "node src/lib/gen-types.js",
     "gen-cjs": "npx rollup ./src/index.js --file ./src/index.cjs --format cjs && npx rollup ./src/enums.js --file ./src/enums.cjs --format cjs",
     "lint": "npx eslint .",

@@ -1130,7 +1130,7 @@ export interface DaRTAPIResponse {
   /**
    * External case identifier
    */
-  caseReference?: number;
+  caseReference: number;
   /**
    * The processing state for the case
    */
@@ -1250,7 +1250,7 @@ export interface DaRTAPIResponse {
   /**
    * The unique identifier of the LPA application
    */
-  applicationReference?: string;
+  applicationReference: string;
   /**
    * The date of the original LPA application
    */
@@ -1449,11 +1449,11 @@ export interface GetTimesheetsAPIResponse {
   /**
    * External case identifier
    */
-  caseReference?: number;
+  caseReference: number;
   /**
    * The unique identifier of the application
    */
-  applicationReference?: string;
+  applicationReference: string;
   /**
    * First line of case site address
    */

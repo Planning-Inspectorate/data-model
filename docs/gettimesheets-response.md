@@ -6,8 +6,8 @@
 
 | Property                                      | Type      | Required | Nullable       | Defined by                                                                                                                                                     |
 | :-------------------------------------------- | :-------- | :------- | :------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [caseReference](#casereference)               | `integer` | Optional | cannot be null | [Get Timesheets API response](gettimesheets-response-properties-casereference.md "gettimesheets-response.schema.json#/properties/caseReference")               |
-| [applicationReference](#applicationreference) | `string`  | Optional | cannot be null | [Get Timesheets API response](gettimesheets-response-properties-applicationreference.md "gettimesheets-response.schema.json#/properties/applicationReference") |
+| [caseReference](#casereference)               | `integer` | Required | cannot be null | [Get Timesheets API response](gettimesheets-response-properties-casereference.md "gettimesheets-response.schema.json#/properties/caseReference")               |
+| [applicationReference](#applicationreference) | `string`  | Required | cannot be null | [Get Timesheets API response](gettimesheets-response-properties-applicationreference.md "gettimesheets-response.schema.json#/properties/applicationReference") |
 | [siteAddressLine1](#siteaddressline1)         | `string`  | Optional | cannot be null | [Get Timesheets API response](gettimesheets-response-properties-siteaddressline1.md "gettimesheets-response.schema.json#/properties/siteAddressLine1")         |
 | [siteAddressLine2](#siteaddressline2)         | `string`  | Optional | cannot be null | [Get Timesheets API response](gettimesheets-response-properties-siteaddressline2.md "gettimesheets-response.schema.json#/properties/siteAddressLine2")         |
 | [siteAddressTown](#siteaddresstown)           | `string`  | Optional | cannot be null | [Get Timesheets API response](gettimesheets-response-properties-siteaddresstown.md "gettimesheets-response.schema.json#/properties/siteAddressTown")           |
@@ -21,7 +21,7 @@ External case identifier
 
 `caseReference`
 
-* is optional
+* is required
 
 * Type: `integer`
 
@@ -45,7 +45,7 @@ The unique identifier of the application
 
 `applicationReference`
 
-* is optional
+* is required
 
 * Type: `string`
 

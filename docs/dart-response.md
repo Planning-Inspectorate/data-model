@@ -7,7 +7,7 @@
 | Property                                                            | Type      | Required | Nullable       | Defined by                                                                                                                                               |
 | :------------------------------------------------------------------ | :-------- | :------- | :------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | [caseId](#caseid)                                                   | `integer` | Optional | cannot be null | [DaRT API response](dart-response-properties-caseid.md "dart-response.schema.json#/properties/caseId")                                                   |
-| [caseReference](#casereference)                                     | `integer` | Optional | cannot be null | [DaRT API response](dart-response-properties-casereference.md "dart-response.schema.json#/properties/caseReference")                                     |
+| [caseReference](#casereference)                                     | `integer` | Required | cannot be null | [DaRT API response](dart-response-properties-casereference.md "dart-response.schema.json#/properties/caseReference")                                     |
 | [caseStatus](#casestatus)                                           | `string`  | Optional | cannot be null | [DaRT API response](dart-response-properties-casestatus.md "dart-response.schema.json#/properties/caseStatus")                                           |
 | [caseType](#casetype)                                               | `string`  | Optional | cannot be null | [DaRT API response](dart-response-properties-casetype.md "dart-response.schema.json#/properties/caseType")                                               |
 | [caseProcedure](#caseprocedure)                                     | `string`  | Optional | can be null    | [DaRT API response](dart-response-properties-caseprocedure.md "dart-response.schema.json#/properties/caseProcedure")                                     |
@@ -37,7 +37,7 @@
 | [caseDecisionOutcome](#casedecisionoutcome)                         | `string`  | Optional | can be null    | [DaRT API response](dart-response-properties-casedecisionoutcome.md "dart-response.schema.json#/properties/caseDecisionOutcome")                         |
 | [caseCompletedDate](#casecompleteddate)                             | `string`  | Optional | can be null    | [DaRT API response](dart-response-properties-casecompleteddate.md "dart-response.schema.json#/properties/caseCompletedDate")                             |
 | [enforcementNotice](#enforcementnotice)                             | `boolean` | Optional | can be null    | [DaRT API response](dart-response-properties-enforcementnotice.md "dart-response.schema.json#/properties/enforcementNotice")                             |
-| [applicationReference](#applicationreference)                       | `string`  | Optional | cannot be null | [DaRT API response](dart-response-properties-applicationreference.md "dart-response.schema.json#/properties/applicationReference")                       |
+| [applicationReference](#applicationreference)                       | `string`  | Required | cannot be null | [DaRT API response](dart-response-properties-applicationreference.md "dart-response.schema.json#/properties/applicationReference")                       |
 | [applicationDate](#applicationdate)                                 | `string`  | Optional | cannot be null | [DaRT API response](dart-response-properties-applicationdate.md "dart-response.schema.json#/properties/applicationDate")                                 |
 | [applicationDecision](#applicationdecision)                         | `string`  | Optional | cannot be null | [DaRT API response](dart-response-properties-applicationdecision.md "dart-response.schema.json#/properties/applicationDecision")                         |
 | [lpaDecisionDate](#lpadecisiondate)                                 | `string`  | Optional | can be null    | [DaRT API response](dart-response-properties-lpadecisiondate.md "dart-response.schema.json#/properties/lpaDecisionDate")                                 |
@@ -94,7 +94,7 @@ External case identifier
 
 `caseReference`
 
-* is optional
+* is required
 
 * Type: `integer`
 
@@ -832,7 +832,7 @@ The unique identifier of the LPA application
 
 `applicationReference`
 
-* is optional
+* is required
 
 * Type: `string`
 

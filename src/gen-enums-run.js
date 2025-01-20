@@ -38,4 +38,7 @@ async function run() {
     await fs.writeFile(constTsPath, tsOutput);
 }
 
-run().catch(console.error);
+run().catch((error) => {
+    console.error(error);
+    process.exit(1);
+});

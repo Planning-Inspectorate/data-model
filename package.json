@@ -13,7 +13,7 @@
     "gen-docs": "node src/gen-docs.js",
     "gen-enums": "node src/gen-enums.js",
     "gen-types": "node src/gen-types.js",
-    "gen-cjs": "npx rollup ./src/index.js --file ./src/index.cjs --format cjs"
+    "gen-cjs": "npx rollup ./src/index.js --file ./src/index.cjs --format cjs && npx rollup ./src/enums.js --file ./src/enums.cjs --format cjs"
   },
   "repository": {
     "type": "git",

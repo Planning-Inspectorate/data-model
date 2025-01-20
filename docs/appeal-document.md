@@ -40,13 +40,13 @@ The unique identifier for the document
 
 `documentId`
 
-*   is required
+* is required
 
-*   Type: `string`
+* Type: `string`
 
-*   cannot be null
+* cannot be null
 
-*   defined in: [Appeal Document](appeal-document-properties-documentid.md "appeal-document.schema.json#/properties/documentId")
+* defined in: [Appeal Document](appeal-document-properties-documentid.md "appeal-document.schema.json#/properties/documentId")
 
 ### documentId Type
 
@@ -64,13 +64,13 @@ Internal case identifier
 
 `caseId`
 
-*   is required
+* is required
 
-*   Type: `integer`
+* Type: `integer`
 
-*   can be null
+* can be null
 
-*   defined in: [Appeal Document](appeal-document-properties-caseid.md "appeal-document.schema.json#/properties/caseId")
+* defined in: [Appeal Document](appeal-document-properties-caseid.md "appeal-document.schema.json#/properties/caseId")
 
 ### caseId Type
 
@@ -88,13 +88,13 @@ External case identifier
 
 `caseReference`
 
-*   is required
+* is required
 
-*   Type: `string`
+* Type: `string`
 
-*   cannot be null
+* cannot be null
 
-*   defined in: [Appeal Document](appeal-document-properties-casereference.md "appeal-document.schema.json#/properties/caseReference")
+* defined in: [Appeal Document](appeal-document-properties-casereference.md "appeal-document.schema.json#/properties/caseReference")
 
 ### caseReference Type
 
@@ -112,13 +112,13 @@ A document can have multiple versions, and this indicates the latest version
 
 `version`
 
-*   is required
+* is required
 
-*   Type: `integer`
+* Type: `integer`
 
-*   cannot be null
+* cannot be null
 
-*   defined in: [Appeal Document](appeal-document-properties-version.md "appeal-document.schema.json#/properties/version")
+* defined in: [Appeal Document](appeal-document-properties-version.md "appeal-document.schema.json#/properties/version")
 
 ### version Type
 
@@ -136,13 +136,13 @@ Current stored name of the document
 
 `filename`
 
-*   is required
+* is required
 
-*   Type: `string`
+* Type: `string`
 
-*   cannot be null
+* cannot be null
 
-*   defined in: [Appeal Document](appeal-document-properties-filename.md "appeal-document.schema.json#/properties/filename")
+* defined in: [Appeal Document](appeal-document-properties-filename.md "appeal-document.schema.json#/properties/filename")
 
 ### filename Type
 
@@ -160,13 +160,13 @@ Original name of document
 
 `originalFilename`
 
-*   is required
+* is required
 
-*   Type: `string`
+* Type: `string`
 
-*   cannot be null
+* cannot be null
 
-*   defined in: [Appeal Document](appeal-document-properties-originalfilename.md "appeal-document.schema.json#/properties/originalFilename")
+* defined in: [Appeal Document](appeal-document-properties-originalfilename.md "appeal-document.schema.json#/properties/originalFilename")
 
 ### originalFilename Type
 
@@ -184,13 +184,13 @@ The file size, in bytes
 
 `size`
 
-*   is required
+* is required
 
-*   Type: `integer`
+* Type: `integer`
 
-*   cannot be null
+* cannot be null
 
-*   defined in: [Appeal Document](appeal-document-properties-size.md "appeal-document.schema.json#/properties/size")
+* defined in: [Appeal Document](appeal-document-properties-size.md "appeal-document.schema.json#/properties/size")
 
 ### size Type
 
@@ -208,13 +208,13 @@ The mime type for the current version of the file
 
 `mime`
 
-*   is required
+* is required
 
-*   Type: `string`
+* Type: `string`
 
-*   cannot be null
+* cannot be null
 
-*   defined in: [Appeal Document](appeal-document-properties-mime.md "appeal-document.schema.json#/properties/mime")
+* defined in: [Appeal Document](appeal-document-properties-mime.md "appeal-document.schema.json#/properties/mime")
 
 ### mime Type
 
@@ -234,13 +234,13 @@ The internal location of the document
 
 `documentURI`
 
-*   is required
+* is required
 
-*   Type: `string`
+* Type: `string`
 
-*   cannot be null
+* cannot be null
 
-*   defined in: [Appeal Document](appeal-document-properties-documenturi.md "appeal-document.schema.json#/properties/documentURI")
+* defined in: [Appeal Document](appeal-document-properties-documenturi.md "appeal-document.schema.json#/properties/documentURI")
 
 ### documentURI Type
 
@@ -258,13 +258,13 @@ The location of the published document, will be null if the datePublished is not
 
 `publishedDocumentURI`
 
-*   is required
+* is required
 
-*   Type: `string`
+* Type: `string`
 
-*   can be null
+* can be null
 
-*   defined in: [Appeal Document](appeal-document-properties-publisheddocumenturi.md "appeal-document.schema.json#/properties/publishedDocumentURI")
+* defined in: [Appeal Document](appeal-document-properties-publisheddocumenturi.md "appeal-document.schema.json#/properties/publishedDocumentURI")
 
 ### publishedDocumentURI Type
 
@@ -282,13 +282,13 @@ Indicates the virus check status for the current document
 
 `virusCheckStatus`
 
-*   is required
+* is required
 
-*   Type: `string`
+* Type: `string`
 
-*   can be null
+* can be null
 
-*   defined in: [Appeal Document](appeal-document-properties-viruscheckstatus.md "appeal-document.schema.json#/properties/virusCheckStatus")
+* defined in: [Appeal Document](appeal-document-properties-viruscheckstatus.md "appeal-document.schema.json#/properties/virusCheckStatus")
 
 ### virusCheckStatus Type
 
@@ -311,13 +311,13 @@ A MD5 hash to check the validity of the file
 
 `fileMD5`
 
-*   is required
+* is required
 
-*   Type: `string`
+* Type: `string`
 
-*   can be null
+* can be null
 
-*   defined in: [Appeal Document](appeal-document-properties-filemd5.md "appeal-document.schema.json#/properties/fileMD5")
+* defined in: [Appeal Document](appeal-document-properties-filemd5.md "appeal-document.schema.json#/properties/fileMD5")
 
 ### fileMD5 Type
 
@@ -335,13 +335,13 @@ The creation date for the document
 
 `dateCreated`
 
-*   is required
+* is required
 
-*   Type: `string`
+* Type: `string`
 
-*   cannot be null
+* cannot be null
 
-*   defined in: [Appeal Document](appeal-document-properties-datecreated.md "appeal-document.schema.json#/properties/dateCreated")
+* defined in: [Appeal Document](appeal-document-properties-datecreated.md "appeal-document.schema.json#/properties/dateCreated")
 
 ### dateCreated Type
 
@@ -365,13 +365,13 @@ The date the document was received
 
 `dateReceived`
 
-*   is required
+* is required
 
-*   Type: `string`
+* Type: `string`
 
-*   can be null
+* can be null
 
-*   defined in: [Appeal Document](appeal-document-properties-datereceived.md "appeal-document.schema.json#/properties/dateReceived")
+* defined in: [Appeal Document](appeal-document-properties-datereceived.md "appeal-document.schema.json#/properties/dateReceived")
 
 ### dateReceived Type
 
@@ -393,13 +393,13 @@ The date the document was published
 
 `datePublished`
 
-*   is required
+* is required
 
-*   Type: `string`
+* Type: `string`
 
-*   can be null
+* can be null
 
-*   defined in: [Appeal Document](appeal-document-properties-datepublished.md "appeal-document.schema.json#/properties/datePublished")
+* defined in: [Appeal Document](appeal-document-properties-datepublished.md "appeal-document.schema.json#/properties/datePublished")
 
 ### datePublished Type
 
@@ -421,13 +421,13 @@ The last update date for the document
 
 `lastModified`
 
-*   is required
+* is required
 
-*   Type: `string`
+* Type: `string`
 
-*   can be null
+* can be null
 
-*   defined in: [Appeal Document](appeal-document-properties-lastmodified.md "appeal-document.schema.json#/properties/lastModified")
+* defined in: [Appeal Document](appeal-document-properties-lastmodified.md "appeal-document.schema.json#/properties/lastModified")
 
 ### lastModified Type
 
@@ -449,13 +449,13 @@ The internal code for an appeal type, e.g. Householder (D)
 
 `caseType`
 
-*   is required
+* is required
 
-*   Type: `string`
+* Type: `string`
 
-*   can be null
+* can be null
 
-*   defined in: [Appeal Document](appeal-document-properties-casetype.md "appeal-document.schema.json#/properties/caseType")
+* defined in: [Appeal Document](appeal-document-properties-casetype.md "appeal-document.schema.json#/properties/caseType")
 
 ### caseType Type
 
@@ -488,13 +488,13 @@ Indicates the redaction status for the document
 
 `redactedStatus`
 
-*   is required
+* is required
 
-*   Type: `string`
+* Type: `string`
 
-*   can be null
+* can be null
 
-*   defined in: [Appeal Document](appeal-document-properties-redactedstatus.md "appeal-document.schema.json#/properties/redactedStatus")
+* defined in: [Appeal Document](appeal-document-properties-redactedstatus.md "appeal-document.schema.json#/properties/redactedStatus")
 
 ### redactedStatus Type
 
@@ -517,13 +517,13 @@ The type of document, used for exchange, migrations and consumption from the app
 
 `documentType`
 
-*   is required
+* is required
 
-*   Type: `string`
+* Type: `string`
 
-*   can be null
+* can be null
 
-*   defined in: [Appeal Document](appeal-document-properties-documenttype.md "appeal-document.schema.json#/properties/documentType")
+* defined in: [Appeal Document](appeal-document-properties-documenttype.md "appeal-document.schema.json#/properties/documentType")
 
 ### documentType Type
 
@@ -597,13 +597,13 @@ The system mastering the metadata for the current document
 
 `sourceSystem`
 
-*   is required
+* is required
 
-*   Type: `string`
+* Type: `string`
 
-*   can be null
+* can be null
 
-*   defined in: [Appeal Document](appeal-document-properties-sourcesystem.md "appeal-document.schema.json#/properties/sourceSystem")
+* defined in: [Appeal Document](appeal-document-properties-sourcesystem.md "appeal-document.schema.json#/properties/sourceSystem")
 
 ### sourceSystem Type
 
@@ -627,13 +627,13 @@ Indicates where the documents originates from
 
 `origin`
 
-*   is required
+* is required
 
-*   Type: `string`
+* Type: `string`
 
-*   can be null
+* can be null
 
-*   defined in: [Appeal Document](appeal-document-properties-origin.md "appeal-document.schema.json#/properties/origin")
+* defined in: [Appeal Document](appeal-document-properties-origin.md "appeal-document.schema.json#/properties/origin")
 
 ### origin Type
 
@@ -657,13 +657,13 @@ Owner of the current document
 
 `owner`
 
-*   is required
+* is required
 
-*   Type: `string`
+* Type: `string`
 
-*   can be null
+* can be null
 
-*   defined in: [Appeal Document](appeal-document-properties-owner.md "appeal-document.schema.json#/properties/owner")
+* defined in: [Appeal Document](appeal-document-properties-owner.md "appeal-document.schema.json#/properties/owner")
 
 ### owner Type
 
@@ -675,13 +675,13 @@ Name of person who authored document
 
 `author`
 
-*   is required
+* is required
 
-*   Type: `string`
+* Type: `string`
 
-*   can be null
+* can be null
 
-*   defined in: [Appeal Document](appeal-document-properties-author.md "appeal-document.schema.json#/properties/author")
+* defined in: [Appeal Document](appeal-document-properties-author.md "appeal-document.schema.json#/properties/author")
 
 ### author Type
 
@@ -693,13 +693,13 @@ A custom description for the document
 
 `description`
 
-*   is required
+* is required
 
-*   Type: `string`
+* Type: `string`
 
-*   can be null
+* can be null
 
-*   defined in: [Appeal Document](appeal-document-properties-description.md "appeal-document.schema.json#/properties/description")
+* defined in: [Appeal Document](appeal-document-properties-description.md "appeal-document.schema.json#/properties/description")
 
 ### description Type
 
@@ -713,13 +713,13 @@ The stage in the appeal process that has created the document
 
 `caseStage`
 
-*   is required
+* is required
 
-*   Type: `string`
+* Type: `string`
 
-*   can be null
+* can be null
 
-*   defined in: [Appeal Document](appeal-document-properties-casestage.md "appeal-document.schema.json#/properties/caseStage")
+* defined in: [Appeal Document](appeal-document-properties-casestage.md "appeal-document.schema.json#/properties/caseStage")
 
 ### caseStage Type
 
@@ -751,13 +751,13 @@ The folder ID containing the document in Horizon
 
 `horizonFolderId`
 
-*   is required
+* is required
 
-*   Type: `string`
+* Type: `string`
 
-*   can be null
+* can be null
 
-*   defined in: [Appeal Document](appeal-document-properties-horizonfolderid.md "appeal-document.schema.json#/properties/horizonFolderId")
+* defined in: [Appeal Document](appeal-document-properties-horizonfolderid.md "appeal-document.schema.json#/properties/horizonFolderId")
 
 ### horizonFolderId Type
 

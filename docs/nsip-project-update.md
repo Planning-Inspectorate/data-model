@@ -21,13 +21,13 @@ The unique identifier within the Back Office.
 
 `id`
 
-*   is required
+* is required
 
-*   Type: `integer`
+* Type: `integer`
 
-*   cannot be null
+* cannot be null
 
-*   defined in: [NSIP Project Update](nsip-project-update-properties-id.md "nsip-project-update.schema.json#/properties/id")
+* defined in: [NSIP Project Update](nsip-project-update-properties-id.md "nsip-project-update.schema.json#/properties/id")
 
 ### id Type
 
@@ -39,13 +39,13 @@ the case reference this update relates to
 
 `caseReference`
 
-*   is required
+* is required
 
-*   Type: `string`
+* Type: `string`
 
-*   cannot be null
+* cannot be null
 
-*   defined in: [NSIP Project Update](nsip-project-update-properties-casereference.md "nsip-project-update.schema.json#/properties/caseReference")
+* defined in: [NSIP Project Update](nsip-project-update-properties-casereference.md "nsip-project-update.schema.json#/properties/caseReference")
 
 ### caseReference Type
 
@@ -57,13 +57,13 @@ The date the update was published
 
 `updateDate`
 
-*   is required
+* is required
 
-*   Type: `string`
+* Type: `string`
 
-*   can be null
+* can be null
 
-*   defined in: [NSIP Project Update](nsip-project-update-properties-updatedate.md "nsip-project-update.schema.json#/properties/updateDate")
+* defined in: [NSIP Project Update](nsip-project-update-properties-updatedate.md "nsip-project-update.schema.json#/properties/updateDate")
 
 ### updateDate Type
 
@@ -79,13 +79,13 @@ Internal title or name of the update
 
 `updateName`
 
-*   is required
+* is required
 
-*   Type: `string`
+* Type: `string`
 
-*   can be null
+* can be null
 
-*   defined in: [NSIP Project Update](nsip-project-update-properties-updatename.md "nsip-project-update.schema.json#/properties/updateName")
+* defined in: [NSIP Project Update](nsip-project-update-properties-updatename.md "nsip-project-update.schema.json#/properties/updateName")
 
 ### updateName Type
 
@@ -97,13 +97,13 @@ HTML content of the update in English. Can only include `<a> <b> <ul> <li>` tags
 
 `updateContentEnglish`
 
-*   is required
+* is required
 
-*   Type: `string`
+* Type: `string`
 
-*   cannot be null
+* cannot be null
 
-*   defined in: [NSIP Project Update](nsip-project-update-properties-updatecontentenglish.md "nsip-project-update.schema.json#/properties/updateContentEnglish")
+* defined in: [NSIP Project Update](nsip-project-update-properties-updatecontentenglish.md "nsip-project-update.schema.json#/properties/updateContentEnglish")
 
 ### updateContentEnglish Type
 
@@ -115,13 +115,13 @@ HTML content of the update in Welsh. Can only include `<a> <b> <ul> <li>` tags.
 
 `updateContentWelsh`
 
-*   is required
+* is required
 
-*   Type: `string`
+* Type: `string`
 
-*   can be null
+* can be null
 
-*   defined in: [NSIP Project Update](nsip-project-update-properties-updatecontentwelsh.md "nsip-project-update.schema.json#/properties/updateContentWelsh")
+* defined in: [NSIP Project Update](nsip-project-update-properties-updatecontentwelsh.md "nsip-project-update.schema.json#/properties/updateContentWelsh")
 
 ### updateContentWelsh Type
 
@@ -133,13 +133,13 @@ The current status of this update
 
 `updateStatus`
 
-*   is required
+* is required
 
-*   Type: `string`
+* Type: `string`
 
-*   cannot be null
+* cannot be null
 
-*   defined in: [NSIP Project Update](nsip-project-update-properties-updatestatus.md "nsip-project-update.schema.json#/properties/updateStatus")
+* defined in: [NSIP Project Update](nsip-project-update-properties-updatestatus.md "nsip-project-update.schema.json#/properties/updateStatus")
 
 ### updateStatus Type
 

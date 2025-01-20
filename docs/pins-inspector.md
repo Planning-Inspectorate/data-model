@@ -23,13 +23,13 @@ The PINS-generated unique horizon ID
 
 `horizonId`
 
-*   is required
+* is required
 
-*   Type: `string`
+* Type: `string`
 
-*   cannot be null
+* cannot be null
 
-*   defined in: [PINS Inspector](pins-inspector-properties-horizonid.md "pins-inspectors.schema.json#/properties/horizonId")
+* defined in: [PINS Inspector](pins-inspector-properties-horizonid.md "pins-inspectors.schema.json#/properties/horizonId")
 
 ### horizonId Type
 
@@ -41,13 +41,13 @@ The first name of the inspector
 
 `firstName`
 
-*   is required
+* is required
 
-*   Type: `string`
+* Type: `string`
 
-*   cannot be null
+* cannot be null
 
-*   defined in: [PINS Inspector](pins-inspector-properties-firstname.md "pins-inspectors.schema.json#/properties/firstName")
+* defined in: [PINS Inspector](pins-inspector-properties-firstname.md "pins-inspectors.schema.json#/properties/firstName")
 
 ### firstName Type
 
@@ -59,13 +59,13 @@ The last name of the inspector
 
 `lastName`
 
-*   is required
+* is required
 
-*   Type: `string`
+* Type: `string`
 
-*   cannot be null
+* cannot be null
 
-*   defined in: [PINS Inspector](pins-inspector-properties-lastname.md "pins-inspectors.schema.json#/properties/lastName")
+* defined in: [PINS Inspector](pins-inspector-properties-lastname.md "pins-inspectors.schema.json#/properties/lastName")
 
 ### lastName Type
 
@@ -77,13 +77,13 @@ The post name of the inspector
 
 `postName`
 
-*   is optional
+* is optional
 
-*   Type: `string`
+* Type: `string`
 
-*   can be null
+* can be null
 
-*   defined in: [PINS Inspector](pins-inspector-properties-postname.md "pins-inspectors.schema.json#/properties/postName")
+* defined in: [PINS Inspector](pins-inspector-properties-postname.md "pins-inspectors.schema.json#/properties/postName")
 
 ### postName Type
 
@@ -95,13 +95,13 @@ The organisation name of the inspector
 
 `organisationName`
 
-*   is optional
+* is optional
 
-*   Type: `string`
+* Type: `string`
 
-*   can be null
+* can be null
 
-*   defined in: [PINS Inspector](pins-inspector-properties-organisationname.md "pins-inspectors.schema.json#/properties/organisationName")
+* defined in: [PINS Inspector](pins-inspector-properties-organisationname.md "pins-inspectors.schema.json#/properties/organisationName")
 
 ### organisationName Type
 
@@ -113,13 +113,13 @@ The title of the inspector
 
 `title`
 
-*   is optional
+* is optional
 
-*   Type: `string`
+* Type: `string`
 
-*   can be null
+* can be null
 
-*   defined in: [PINS Inspector](pins-inspector-properties-title.md "pins-inspectors.schema.json#/properties/title")
+* defined in: [PINS Inspector](pins-inspector-properties-title.md "pins-inspectors.schema.json#/properties/title")
 
 ### title Type
 
@@ -131,13 +131,13 @@ The salutation of the inspector
 
 `salutation`
 
-*   is optional
+* is optional
 
-*   Type: `string`
+* Type: `string`
 
-*   can be null
+* can be null
 
-*   defined in: [PINS Inspector](pins-inspector-properties-salutation.md "pins-inspectors.schema.json#/properties/salutation")
+* defined in: [PINS Inspector](pins-inspector-properties-salutation.md "pins-inspectors.schema.json#/properties/salutation")
 
 ### salutation Type
 
@@ -149,13 +149,13 @@ The qualifications of the inspector
 
 `qualifications`
 
-*   is optional
+* is optional
 
-*   Type: `string`
+* Type: `string`
 
-*   can be null
+* can be null
 
-*   defined in: [PINS Inspector](pins-inspector-properties-qualifications.md "pins-inspectors.schema.json#/properties/qualifications")
+* defined in: [PINS Inspector](pins-inspector-properties-qualifications.md "pins-inspectors.schema.json#/properties/qualifications")
 
 ### qualifications Type
 
@@ -167,13 +167,13 @@ The email address of the inspector
 
 `email`
 
-*   is required
+* is required
 
-*   Type: `string`
+* Type: `string`
 
-*   can be null
+* can be null
 
-*   defined in: [PINS Inspector](pins-inspector-properties-email.md "pins-inspectors.schema.json#/properties/email")
+* defined in: [PINS Inspector](pins-inspector-properties-email.md "pins-inspectors.schema.json#/properties/email")
 
 ### email Type
 

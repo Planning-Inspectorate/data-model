@@ -87,13 +87,13 @@ Internal case identifier
 
 `caseId`
 
-*   is required
+* is required
 
-*   Type: `integer`
+* Type: `integer`
 
-*   can be null
+* can be null
 
-*   defined in: [Appeal HAS Case](appeal-has-properties-caseid.md "appeal-has.schema.json#/properties/caseId")
+* defined in: [Appeal HAS Case](appeal-has-properties-caseid.md "appeal-has.schema.json#/properties/caseId")
 
 ### caseId Type
 
@@ -111,13 +111,13 @@ External case identifier
 
 `caseReference`
 
-*   is required
+* is required
 
-*   Type: `string`
+* Type: `string`
 
-*   cannot be null
+* cannot be null
 
-*   defined in: [Appeal HAS Case](appeal-has-properties-casereference.md "appeal-has.schema.json#/properties/caseReference")
+* defined in: [Appeal HAS Case](appeal-has-properties-casereference.md "appeal-has.schema.json#/properties/caseReference")
 
 ### caseReference Type
 
@@ -135,13 +135,13 @@ Case submission id - link to draft submission created by appellant
 
 `submissionId`
 
-*   is optional
+* is optional
 
-*   Type: `string`
+* Type: `string`
 
-*   can be null
+* can be null
 
-*   defined in: [Appeal HAS Case](appeal-has-properties-submissionid.md "appeal-has.schema.json#/properties/submissionId")
+* defined in: [Appeal HAS Case](appeal-has-properties-submissionid.md "appeal-has.schema.json#/properties/submissionId")
 
 ### submissionId Type
 
@@ -163,13 +163,13 @@ The processing status for the appeal
 
 `caseStatus`
 
-*   is required
+* is required
 
-*   Type: `string`
+* Type: `string`
 
-*   cannot be null
+* cannot be null
 
-*   defined in: [Appeal HAS Case](appeal-has-properties-casestatus.md "appeal-has.schema.json#/properties/caseStatus")
+* defined in: [Appeal HAS Case](appeal-has-properties-casestatus.md "appeal-has.schema.json#/properties/caseStatus")
 
 ### caseStatus Type
 
@@ -199,13 +199,13 @@ The internal code for an appeal type, e.g. D (Householder)
 
 `caseType`
 
-*   is required
+* is required
 
-*   Type: `string`
+* Type: `string`
 
-*   cannot be null
+* cannot be null
 
-*   defined in: [Appeal HAS Case](appeal-has-properties-casetype.md "appeal-has.schema.json#/properties/caseType")
+* defined in: [Appeal HAS Case](appeal-has-properties-casetype.md "appeal-has.schema.json#/properties/caseType")
 
 ### caseType Type
 
@@ -237,13 +237,13 @@ The type of procedure for the appeal
 
 `caseProcedure`
 
-*   is required
+* is required
 
-*   Type: `string`
+* Type: `string`
 
-*   cannot be null
+* cannot be null
 
-*   defined in: [Appeal HAS Case](appeal-has-properties-caseprocedure.md "appeal-has.schema.json#/properties/caseProcedure")
+* defined in: [Appeal HAS Case](appeal-has-properties-caseprocedure.md "appeal-has.schema.json#/properties/caseProcedure")
 
 ### caseProcedure Type
 
@@ -267,13 +267,13 @@ A unique identifier for the Local Planning Authority
 
 `lpaCode`
 
-*   is required
+* is required
 
-*   Type: `string`
+* Type: `string`
 
-*   cannot be null
+* cannot be null
 
-*   defined in: [Appeal HAS Case](appeal-has-properties-lpacode.md "appeal-has.schema.json#/properties/lpaCode")
+* defined in: [Appeal HAS Case](appeal-has-properties-lpacode.md "appeal-has.schema.json#/properties/lpaCode")
 
 ### lpaCode Type
 
@@ -293,13 +293,13 @@ Unique identifier for the case officer assigned to the case
 
 `caseOfficerId`
 
-*   is required
+* is required
 
-*   Type: `string`
+* Type: `string`
 
-*   can be null
+* can be null
 
-*   defined in: [Appeal HAS Case](appeal-has-properties-caseofficerid.md "appeal-has.schema.json#/properties/caseOfficerId")
+* defined in: [Appeal HAS Case](appeal-has-properties-caseofficerid.md "appeal-has.schema.json#/properties/caseOfficerId")
 
 ### caseOfficerId Type
 
@@ -313,13 +313,13 @@ Unique identifier for the inspector assigned to the case
 
 `inspectorId`
 
-*   is required
+* is required
 
-*   Type: `string`
+* Type: `string`
 
-*   can be null
+* can be null
 
-*   defined in: [Appeal HAS Case](appeal-has-properties-inspectorid.md "appeal-has.schema.json#/properties/inspectorId")
+* defined in: [Appeal HAS Case](appeal-has-properties-inspectorid.md "appeal-has.schema.json#/properties/inspectorId")
 
 ### inspectorId Type
 
@@ -331,13 +331,13 @@ A level used for allocation purposes
 
 `allocationLevel`
 
-*   is required
+* is required
 
-*   Type: `string`
+* Type: `string`
 
-*   can be null
+* can be null
 
-*   defined in: [Appeal HAS Case](appeal-has-properties-allocationlevel.md "appeal-has.schema.json#/properties/allocationLevel")
+* defined in: [Appeal HAS Case](appeal-has-properties-allocationlevel.md "appeal-has.schema.json#/properties/allocationLevel")
 
 ### allocationLevel Type
 
@@ -367,13 +367,13 @@ A band used for allocation purposes
 
 `allocationBand`
 
-*   is required
+* is required
 
-*   Type: `number`
+* Type: `number`
 
-*   can be null
+* can be null
 
-*   defined in: [Appeal HAS Case](appeal-has-properties-allocationband.md "appeal-has.schema.json#/properties/allocationBand")
+* defined in: [Appeal HAS Case](appeal-has-properties-allocationband.md "appeal-has.schema.json#/properties/allocationBand")
 
 ### allocationBand Type
 
@@ -396,13 +396,13 @@ A list of specialisms for allocation purposes
 
 `caseSpecialisms`
 
-*   is required
+* is required
 
-*   Type: `string[]`
+* Type: `string[]`
 
-*   can be null
+* can be null
 
-*   defined in: [Appeal HAS Case](appeal-has-properties-casespecialisms.md "appeal-has.schema.json#/properties/caseSpecialisms")
+* defined in: [Appeal HAS Case](appeal-has-properties-casespecialisms.md "appeal-has.schema.json#/properties/caseSpecialisms")
 
 ### caseSpecialisms Type
 
@@ -436,13 +436,13 @@ The date the appeal was submitted by the appellant
 
 `caseSubmittedDate`
 
-*   is required
+* is required
 
-*   Type: `string`
+* Type: `string`
 
-*   cannot be null
+* cannot be null
 
-*   defined in: [Appeal HAS Case](appeal-has-properties-casesubmitteddate.md "appeal-has.schema.json#/properties/caseSubmittedDate")
+* defined in: [Appeal HAS Case](appeal-has-properties-casesubmitteddate.md "appeal-has.schema.json#/properties/caseSubmittedDate")
 
 ### caseSubmittedDate Type
 
@@ -464,13 +464,13 @@ The date the appeal was received
 
 `caseCreatedDate`
 
-*   is required
+* is required
 
-*   Type: `string`
+* Type: `string`
 
-*   cannot be null
+* cannot be null
 
-*   defined in: [Appeal HAS Case](appeal-has-properties-casecreateddate.md "appeal-has.schema.json#/properties/caseCreatedDate")
+* defined in: [Appeal HAS Case](appeal-has-properties-casecreateddate.md "appeal-has.schema.json#/properties/caseCreatedDate")
 
 ### caseCreatedDate Type
 
@@ -492,13 +492,13 @@ The date the appeal was last updated in the back-office
 
 `caseUpdatedDate`
 
-*   is required
+* is required
 
-*   Type: `string`
+* Type: `string`
 
-*   cannot be null
+* cannot be null
 
-*   defined in: [Appeal HAS Case](appeal-has-properties-caseupdateddate.md "appeal-has.schema.json#/properties/caseUpdatedDate")
+* defined in: [Appeal HAS Case](appeal-has-properties-caseupdateddate.md "appeal-has.schema.json#/properties/caseUpdatedDate")
 
 ### caseUpdatedDate Type
 
@@ -520,13 +520,13 @@ The date since when the appeal was considered valid
 
 `caseValidDate`
 
-*   is required
+* is required
 
-*   Type: `string`
+* Type: `string`
 
-*   can be null
+* can be null
 
-*   defined in: [Appeal HAS Case](appeal-has-properties-casevaliddate.md "appeal-has.schema.json#/properties/caseValidDate")
+* defined in: [Appeal HAS Case](appeal-has-properties-casevaliddate.md "appeal-has.schema.json#/properties/caseValidDate")
 
 ### caseValidDate Type
 
@@ -548,13 +548,13 @@ The date the appeal was validated in the back-office
 
 `caseValidationDate`
 
-*   is required
+* is required
 
-*   Type: `string`
+* Type: `string`
 
-*   can be null
+* can be null
 
-*   defined in: [Appeal HAS Case](appeal-has-properties-casevalidationdate.md "appeal-has.schema.json#/properties/caseValidationDate")
+* defined in: [Appeal HAS Case](appeal-has-properties-casevalidationdate.md "appeal-has.schema.json#/properties/caseValidationDate")
 
 ### caseValidationDate Type
 
@@ -576,13 +576,13 @@ The outcome of the validation action
 
 `caseValidationOutcome`
 
-*   is required
+* is required
 
-*   Type: `string`
+* Type: `string`
 
-*   can be null
+* can be null
 
-*   defined in: [Appeal HAS Case](appeal-has-properties-casevalidationoutcome.md "appeal-has.schema.json#/properties/caseValidationOutcome")
+* defined in: [Appeal HAS Case](appeal-has-properties-casevalidationoutcome.md "appeal-has.schema.json#/properties/caseValidationOutcome")
 
 ### caseValidationOutcome Type
 
@@ -607,13 +607,13 @@ A list of reasons why the appeal is invalid
 
 `caseValidationInvalidDetails`
 
-*   is required
+* is required
 
-*   Type: `string[]`
+* Type: `string[]`
 
-*   can be null
+* can be null
 
-*   defined in: [Appeal HAS Case](appeal-has-properties-casevalidationinvaliddetails.md "appeal-has.schema.json#/properties/caseValidationInvalidDetails")
+* defined in: [Appeal HAS Case](appeal-has-properties-casevalidationinvaliddetails.md "appeal-has.schema.json#/properties/caseValidationInvalidDetails")
 
 ### caseValidationInvalidDetails Type
 
@@ -627,13 +627,13 @@ A list of reasons why the appeal is incomplete
 
 `caseValidationIncompleteDetails`
 
-*   is required
+* is required
 
-*   Type: `string[]`
+* Type: `string[]`
 
-*   can be null
+* can be null
 
-*   defined in: [Appeal HAS Case](appeal-has-properties-casevalidationincompletedetails.md "appeal-has.schema.json#/properties/caseValidationIncompleteDetails")
+* defined in: [Appeal HAS Case](appeal-has-properties-casevalidationincompletedetails.md "appeal-has.schema.json#/properties/caseValidationIncompleteDetails")
 
 ### caseValidationIncompleteDetails Type
 
@@ -645,13 +645,13 @@ When the validation outcome is incomplete, an extension may be granted to provid
 
 `caseExtensionDate`
 
-*   is required
+* is required
 
-*   Type: `string`
+* Type: `string`
 
-*   can be null
+* can be null
 
-*   defined in: [Appeal HAS Case](appeal-has-properties-caseextensiondate.md "appeal-has.schema.json#/properties/caseExtensionDate")
+* defined in: [Appeal HAS Case](appeal-has-properties-caseextensiondate.md "appeal-has.schema.json#/properties/caseExtensionDate")
 
 ### caseExtensionDate Type
 
@@ -673,13 +673,13 @@ A date indicating when the case was started, resulting in the creation of a time
 
 `caseStartedDate`
 
-*   is required
+* is required
 
-*   Type: `string`
+* Type: `string`
 
-*   can be null
+* can be null
 
-*   defined in: [Appeal HAS Case](appeal-has-properties-casestarteddate.md "appeal-has.schema.json#/properties/caseStartedDate")
+* defined in: [Appeal HAS Case](appeal-has-properties-casestarteddate.md "appeal-has.schema.json#/properties/caseStartedDate")
 
 ### caseStartedDate Type
 
@@ -701,13 +701,13 @@ A date indicating when the case was published
 
 `casePublishedDate`
 
-*   is required
+* is required
 
-*   Type: `string`
+* Type: `string`
 
-*   can be null
+* can be null
 
-*   defined in: [Appeal HAS Case](appeal-has-properties-casepublisheddate.md "appeal-has.schema.json#/properties/casePublishedDate")
+* defined in: [Appeal HAS Case](appeal-has-properties-casepublisheddate.md "appeal-has.schema.json#/properties/casePublishedDate")
 
 ### casePublishedDate Type
 
@@ -729,13 +729,13 @@ Indicates if the case is linked, and the type of relationship
 
 `linkedCaseStatus`
 
-*   is required
+* is required
 
-*   Type: `string`
+* Type: `string`
 
-*   can be null
+* can be null
 
-*   defined in: [Appeal HAS Case](appeal-has-properties-linkedcasestatus.md "appeal-has.schema.json#/properties/linkedCaseStatus")
+* defined in: [Appeal HAS Case](appeal-has-properties-linkedcasestatus.md "appeal-has.schema.json#/properties/linkedCaseStatus")
 
 ### linkedCaseStatus Type
 
@@ -757,13 +757,13 @@ The reference of the lead case, if the case is a child case
 
 `leadCaseReference`
 
-*   is required
+* is required
 
-*   Type: `string`
+* Type: `string`
 
-*   can be null
+* can be null
 
-*   defined in: [Appeal HAS Case](appeal-has-properties-leadcasereference.md "appeal-has.schema.json#/properties/leadCaseReference")
+* defined in: [Appeal HAS Case](appeal-has-properties-leadcasereference.md "appeal-has.schema.json#/properties/leadCaseReference")
 
 ### leadCaseReference Type
 
@@ -781,13 +781,13 @@ If the case is started and has a timetable, a deadline for the LPA to provide a 
 
 `lpaQuestionnaireDueDate`
 
-*   is required
+* is required
 
-*   Type: `string`
+* Type: `string`
 
-*   can be null
+* can be null
 
-*   defined in: [Appeal HAS Case](appeal-has-properties-lpaquestionnaireduedate.md "appeal-has.schema.json#/properties/lpaQuestionnaireDueDate")
+* defined in: [Appeal HAS Case](appeal-has-properties-lpaquestionnaireduedate.md "appeal-has.schema.json#/properties/lpaQuestionnaireDueDate")
 
 ### lpaQuestionnaireDueDate Type
 
@@ -809,13 +809,13 @@ The date the LPA provided a response to the case
 
 `lpaQuestionnaireSubmittedDate`
 
-*   is required
+* is required
 
-*   Type: `string`
+* Type: `string`
 
-*   can be null
+* can be null
 
-*   defined in: [Appeal HAS Case](appeal-has-properties-lpaquestionnairesubmitteddate.md "appeal-has.schema.json#/properties/lpaQuestionnaireSubmittedDate")
+* defined in: [Appeal HAS Case](appeal-has-properties-lpaquestionnairesubmitteddate.md "appeal-has.schema.json#/properties/lpaQuestionnaireSubmittedDate")
 
 ### lpaQuestionnaireSubmittedDate Type
 
@@ -837,13 +837,13 @@ The date the LPA response was receeived
 
 `lpaQuestionnaireCreatedDate`
 
-*   is required
+* is required
 
-*   Type: `string`
+* Type: `string`
 
-*   can be null
+* can be null
 
-*   defined in: [Appeal HAS Case](appeal-has-properties-lpaquestionnairecreateddate.md "appeal-has.schema.json#/properties/lpaQuestionnaireCreatedDate")
+* defined in: [Appeal HAS Case](appeal-has-properties-lpaquestionnairecreateddate.md "appeal-has.schema.json#/properties/lpaQuestionnaireCreatedDate")
 
 ### lpaQuestionnaireCreatedDate Type
 
@@ -865,13 +865,13 @@ The date indicating when the questionnaire review was completed and the question
 
 `lpaQuestionnairePublishedDate`
 
-*   is required
+* is required
 
-*   Type: `string`
+* Type: `string`
 
-*   can be null
+* can be null
 
-*   defined in: [Appeal HAS Case](appeal-has-properties-lpaquestionnairepublisheddate.md "appeal-has.schema.json#/properties/lpaQuestionnairePublishedDate")
+* defined in: [Appeal HAS Case](appeal-has-properties-lpaquestionnairepublisheddate.md "appeal-has.schema.json#/properties/lpaQuestionnairePublishedDate")
 
 ### lpaQuestionnairePublishedDate Type
 
@@ -893,13 +893,13 @@ The outcome of the validation action
 
 `lpaQuestionnaireValidationOutcome`
 
-*   is required
+* is required
 
-*   Type: `string`
+* Type: `string`
 
-*   can be null
+* can be null
 
-*   defined in: [Appeal HAS Case](appeal-has-properties-lpaquestionnairevalidationoutcome.md "appeal-has.schema.json#/properties/lpaQuestionnaireValidationOutcome")
+* defined in: [Appeal HAS Case](appeal-has-properties-lpaquestionnairevalidationoutcome.md "appeal-has.schema.json#/properties/lpaQuestionnaireValidationOutcome")
 
 ### lpaQuestionnaireValidationOutcome Type
 
@@ -921,13 +921,13 @@ The date the LPA response was validated
 
 `lpaQuestionnaireValidationOutcomeDate`
 
-*   is required
+* is required
 
-*   Type: `string`
+* Type: `string`
 
-*   can be null
+* can be null
 
-*   defined in: [Appeal HAS Case](appeal-has-properties-lpaquestionnairevalidationoutcomedate.md "appeal-has.schema.json#/properties/lpaQuestionnaireValidationOutcomeDate")
+* defined in: [Appeal HAS Case](appeal-has-properties-lpaquestionnairevalidationoutcomedate.md "appeal-has.schema.json#/properties/lpaQuestionnaireValidationOutcomeDate")
 
 ### lpaQuestionnaireValidationOutcomeDate Type
 
@@ -951,13 +951,13 @@ A list of reasons why the questionnaire is incomplete
 
 `lpaQuestionnaireValidationDetails`
 
-*   is required
+* is required
 
-*   Type: `string[]`
+* Type: `string[]`
 
-*   can be null
+* can be null
 
-*   defined in: [Appeal HAS Case](appeal-has-properties-lpaquestionnairevalidationdetails.md "appeal-has.schema.json#/properties/lpaQuestionnaireValidationDetails")
+* defined in: [Appeal HAS Case](appeal-has-properties-lpaquestionnairevalidationdetails.md "appeal-has.schema.json#/properties/lpaQuestionnaireValidationDetails")
 
 ### lpaQuestionnaireValidationDetails Type
 
@@ -969,13 +969,13 @@ A statement provided by the LPA
 
 `lpaStatement`
 
-*   is required
+* is required
 
-*   Type: `string`
+* Type: `string`
 
-*   can be null
+* can be null
 
-*   defined in: [Appeal HAS Case](appeal-has-properties-lpastatement.md "appeal-has.schema.json#/properties/lpaStatement")
+* defined in: [Appeal HAS Case](appeal-has-properties-lpastatement.md "appeal-has.schema.json#/properties/lpaStatement")
 
 ### lpaStatement Type
 
@@ -993,13 +993,13 @@ The date the appeal was withdrawn by the appellant
 
 `caseWithdrawnDate`
 
-*   is required
+* is required
 
-*   Type: `string`
+* Type: `string`
 
-*   can be null
+* can be null
 
-*   defined in: [Appeal HAS Case](appeal-has-properties-casewithdrawndate.md "appeal-has.schema.json#/properties/caseWithdrawnDate")
+* defined in: [Appeal HAS Case](appeal-has-properties-casewithdrawndate.md "appeal-has.schema.json#/properties/caseWithdrawnDate")
 
 ### caseWithdrawnDate Type
 
@@ -1021,13 +1021,13 @@ The date the appeal was transferred to a new case of a different type
 
 `caseTransferredDate`
 
-*   is required
+* is required
 
-*   Type: `string`
+* Type: `string`
 
-*   can be null
+* can be null
 
-*   defined in: [Appeal HAS Case](appeal-has-properties-casetransferreddate.md "appeal-has.schema.json#/properties/caseTransferredDate")
+* defined in: [Appeal HAS Case](appeal-has-properties-casetransferreddate.md "appeal-has.schema.json#/properties/caseTransferredDate")
 
 ### caseTransferredDate Type
 
@@ -1049,13 +1049,13 @@ The date the appeal was closed and the appellant requested to resubmit
 
 `transferredCaseClosedDate`
 
-*   is required
+* is required
 
-*   Type: `string`
+* Type: `string`
 
-*   can be null
+* can be null
 
-*   defined in: [Appeal HAS Case](appeal-has-properties-transferredcasecloseddate.md "appeal-has.schema.json#/properties/transferredCaseClosedDate")
+* defined in: [Appeal HAS Case](appeal-has-properties-transferredcasecloseddate.md "appeal-has.schema.json#/properties/transferredCaseClosedDate")
 
 ### transferredCaseClosedDate Type
 
@@ -1077,13 +1077,13 @@ The date of the appeal decision
 
 `caseDecisionOutcomeDate`
 
-*   is required
+* is required
 
-*   Type: `string`
+* Type: `string`
 
-*   can be null
+* can be null
 
-*   defined in: [Appeal HAS Case](appeal-has-properties-casedecisionoutcomedate.md "appeal-has.schema.json#/properties/caseDecisionOutcomeDate")
+* defined in: [Appeal HAS Case](appeal-has-properties-casedecisionoutcomedate.md "appeal-has.schema.json#/properties/caseDecisionOutcomeDate")
 
 ### caseDecisionOutcomeDate Type
 
@@ -1105,13 +1105,13 @@ The date the appeal decision was published
 
 `caseDecisionPublishedDate`
 
-*   is required
+* is required
 
-*   Type: `string`
+* Type: `string`
 
-*   can be null
+* can be null
 
-*   defined in: [Appeal HAS Case](appeal-has-properties-casedecisionpublisheddate.md "appeal-has.schema.json#/properties/caseDecisionPublishedDate")
+* defined in: [Appeal HAS Case](appeal-has-properties-casedecisionpublisheddate.md "appeal-has.schema.json#/properties/caseDecisionPublishedDate")
 
 ### caseDecisionPublishedDate Type
 
@@ -1133,13 +1133,13 @@ The final outcome for the decision
 
 `caseDecisionOutcome`
 
-*   is required
+* is required
 
-*   Type: `string`
+* Type: `string`
 
-*   can be null
+* can be null
 
-*   defined in: [Appeal HAS Case](appeal-has-properties-casedecisionoutcome.md "appeal-has.schema.json#/properties/caseDecisionOutcome")
+* defined in: [Appeal HAS Case](appeal-has-properties-casedecisionoutcome.md "appeal-has.schema.json#/properties/caseDecisionOutcome")
 
 ### caseDecisionOutcome Type
 
@@ -1163,13 +1163,13 @@ The date the appeal decision letter
 
 `caseCompletedDate`
 
-*   is required
+* is required
 
-*   Type: `string`
+* Type: `string`
 
-*   can be null
+* can be null
 
-*   defined in: [Appeal HAS Case](appeal-has-properties-casecompleteddate.md "appeal-has.schema.json#/properties/caseCompletedDate")
+* defined in: [Appeal HAS Case](appeal-has-properties-casecompleteddate.md "appeal-has.schema.json#/properties/caseCompletedDate")
 
 ### caseCompletedDate Type
 
@@ -1191,13 +1191,13 @@ Indicates if an enforcement notice is the reason for the appeal
 
 `enforcementNotice`
 
-*   is required
+* is required
 
-*   Type: `boolean`
+* Type: `boolean`
 
-*   can be null
+* can be null
 
-*   defined in: [Appeal HAS Case](appeal-has-properties-enforcementnotice.md "appeal-has.schema.json#/properties/enforcementNotice")
+* defined in: [Appeal HAS Case](appeal-has-properties-enforcementnotice.md "appeal-has.schema.json#/properties/enforcementNotice")
 
 ### enforcementNotice Type
 
@@ -1209,13 +1209,13 @@ The unique identifier of the LPA application
 
 `applicationReference`
 
-*   is required
+* is required
 
-*   Type: `string`
+* Type: `string`
 
-*   cannot be null
+* cannot be null
 
-*   defined in: [Appeal HAS Case](appeal-has-properties-applicationreference.md "appeal-has.schema.json#/properties/applicationReference")
+* defined in: [Appeal HAS Case](appeal-has-properties-applicationreference.md "appeal-has.schema.json#/properties/applicationReference")
 
 ### applicationReference Type
 
@@ -1233,13 +1233,13 @@ The date of the original LPA application
 
 `applicationDate`
 
-*   is required
+* is required
 
-*   Type: `string`
+* Type: `string`
 
-*   cannot be null
+* cannot be null
 
-*   defined in: [Appeal HAS Case](appeal-has-properties-applicationdate.md "appeal-has.schema.json#/properties/applicationDate")
+* defined in: [Appeal HAS Case](appeal-has-properties-applicationdate.md "appeal-has.schema.json#/properties/applicationDate")
 
 ### applicationDate Type
 
@@ -1261,13 +1261,13 @@ The outcome of the original LPA decision
 
 `applicationDecision`
 
-*   is required
+* is required
 
-*   Type: `string`
+* Type: `string`
 
-*   cannot be null
+* cannot be null
 
-*   defined in: [Appeal HAS Case](appeal-has-properties-applicationdecision.md "appeal-has.schema.json#/properties/applicationDecision")
+* defined in: [Appeal HAS Case](appeal-has-properties-applicationdecision.md "appeal-has.schema.json#/properties/applicationDecision")
 
 ### applicationDecision Type
 
@@ -1289,13 +1289,13 @@ The date of the original LPA decision
 
 `applicationDecisionDate`
 
-*   is required
+* is required
 
-*   Type: `string`
+* Type: `string`
 
-*   can be null
+* can be null
 
-*   defined in: [Appeal HAS Case](appeal-has-properties-applicationdecisiondate.md "appeal-has.schema.json#/properties/applicationDecisionDate")
+* defined in: [Appeal HAS Case](appeal-has-properties-applicationdecisiondate.md "appeal-has.schema.json#/properties/applicationDecisionDate")
 
 ### applicationDecisionDate Type
 
@@ -1319,13 +1319,13 @@ The statutory deadline for submitting an appeal from the original LPA decision d
 
 `caseSubmissionDueDate`
 
-*   is required
+* is required
 
-*   Type: `string`
+* Type: `string`
 
-*   can be null
+* can be null
 
-*   defined in: [Appeal HAS Case](appeal-has-properties-casesubmissionduedate.md "appeal-has.schema.json#/properties/caseSubmissionDueDate")
+* defined in: [Appeal HAS Case](appeal-has-properties-casesubmissionduedate.md "appeal-has.schema.json#/properties/caseSubmissionDueDate")
 
 ### caseSubmissionDueDate Type
 
@@ -1347,13 +1347,13 @@ First line of address for the appeal site
 
 `siteAddressLine1`
 
-*   is required
+* is required
 
-*   Type: `string`
+* Type: `string`
 
-*   cannot be null
+* cannot be null
 
-*   defined in: [Appeal HAS Case](appeal-has-properties-siteaddressline1.md "appeal-has.schema.json#/properties/siteAddressLine1")
+* defined in: [Appeal HAS Case](appeal-has-properties-siteaddressline1.md "appeal-has.schema.json#/properties/siteAddressLine1")
 
 ### siteAddressLine1 Type
 
@@ -1371,13 +1371,13 @@ Second line of address for the appeal site
 
 `siteAddressLine2`
 
-*   is required
+* is required
 
-*   Type: `string`
+* Type: `string`
 
-*   can be null
+* can be null
 
-*   defined in: [Appeal HAS Case](appeal-has-properties-siteaddressline2.md "appeal-has.schema.json#/properties/siteAddressLine2")
+* defined in: [Appeal HAS Case](appeal-has-properties-siteaddressline2.md "appeal-has.schema.json#/properties/siteAddressLine2")
 
 ### siteAddressLine2 Type
 
@@ -1389,13 +1389,13 @@ Town / City of the site address
 
 `siteAddressTown`
 
-*   is required
+* is required
 
-*   Type: `string`
+* Type: `string`
 
-*   cannot be null
+* cannot be null
 
-*   defined in: [Appeal HAS Case](appeal-has-properties-siteaddresstown.md "appeal-has.schema.json#/properties/siteAddressTown")
+* defined in: [Appeal HAS Case](appeal-has-properties-siteaddresstown.md "appeal-has.schema.json#/properties/siteAddressTown")
 
 ### siteAddressTown Type
 
@@ -1413,13 +1413,13 @@ County of the site address
 
 `siteAddressCounty`
 
-*   is required
+* is required
 
-*   Type: `string`
+* Type: `string`
 
-*   can be null
+* can be null
 
-*   defined in: [Appeal HAS Case](appeal-has-properties-siteaddresscounty.md "appeal-has.schema.json#/properties/siteAddressCounty")
+* defined in: [Appeal HAS Case](appeal-has-properties-siteaddresscounty.md "appeal-has.schema.json#/properties/siteAddressCounty")
 
 ### siteAddressCounty Type
 
@@ -1437,13 +1437,13 @@ Postal code of the site address
 
 `siteAddressPostcode`
 
-*   is required
+* is required
 
-*   Type: `string`
+* Type: `string`
 
-*   cannot be null
+* cannot be null
 
-*   defined in: [Appeal HAS Case](appeal-has-properties-siteaddresspostcode.md "appeal-has.schema.json#/properties/siteAddressPostcode")
+* defined in: [Appeal HAS Case](appeal-has-properties-siteaddresspostcode.md "appeal-has.schema.json#/properties/siteAddressPostcode")
 
 ### siteAddressPostcode Type
 
@@ -1461,13 +1461,13 @@ Provided information on site accessibility
 
 `siteAccessDetails`
 
-*   is required
+* is required
 
-*   Type: `string[]`
+* Type: `string[]`
 
-*   can be null
+* can be null
 
-*   defined in: [Appeal HAS Case](appeal-has-properties-siteaccessdetails.md "appeal-has.schema.json#/properties/siteAccessDetails")
+* defined in: [Appeal HAS Case](appeal-has-properties-siteaccessdetails.md "appeal-has.schema.json#/properties/siteAccessDetails")
 
 ### siteAccessDetails Type
 
@@ -1479,13 +1479,13 @@ Provided information on site health and safety
 
 `siteSafetyDetails`
 
-*   is required
+* is required
 
-*   Type: `string[]`
+* Type: `string[]`
 
-*   can be null
+* can be null
 
-*   defined in: [Appeal HAS Case](appeal-has-properties-sitesafetydetails.md "appeal-has.schema.json#/properties/siteSafetyDetails")
+* defined in: [Appeal HAS Case](appeal-has-properties-sitesafetydetails.md "appeal-has.schema.json#/properties/siteSafetyDetails")
 
 ### siteSafetyDetails Type
 
@@ -1497,13 +1497,13 @@ The site area, in square meters
 
 `siteAreaSquareMetres`
 
-*   is required
+* is required
 
-*   Type: `number`
+* Type: `number`
 
-*   can be null
+* can be null
 
-*   defined in: [Appeal HAS Case](appeal-has-properties-siteareasquaremetres.md "appeal-has.schema.json#/properties/siteAreaSquareMetres")
+* defined in: [Appeal HAS Case](appeal-has-properties-siteareasquaremetres.md "appeal-has.schema.json#/properties/siteAreaSquareMetres")
 
 ### siteAreaSquareMetres Type
 
@@ -1521,13 +1521,13 @@ The floor space, in square meters
 
 `floorSpaceSquareMetres`
 
-*   is required
+* is required
 
-*   Type: `number`
+* Type: `number`
 
-*   can be null
+* can be null
 
-*   defined in: [Appeal HAS Case](appeal-has-properties-floorspacesquaremetres.md "appeal-has.schema.json#/properties/floorSpaceSquareMetres")
+* defined in: [Appeal HAS Case](appeal-has-properties-floorspacesquaremetres.md "appeal-has.schema.json#/properties/floorSpaceSquareMetres")
 
 ### floorSpaceSquareMetres Type
 
@@ -1545,13 +1545,13 @@ Indicates if the LPA considers the appeal type appropriate
 
 `isCorrectAppealType`
 
-*   is required
+* is required
 
-*   Type: `boolean`
+* Type: `boolean`
 
-*   can be null
+* can be null
 
-*   defined in: [Appeal HAS Case](appeal-has-properties-iscorrectappealtype.md "appeal-has.schema.json#/properties/isCorrectAppealType")
+* defined in: [Appeal HAS Case](appeal-has-properties-iscorrectappealtype.md "appeal-has.schema.json#/properties/isCorrectAppealType")
 
 ### isCorrectAppealType Type
 
@@ -1563,13 +1563,13 @@ Indicates if the site is in a green belt
 
 `isGreenBelt`
 
-*   is required
+* is required
 
-*   Type: `boolean`
+* Type: `boolean`
 
-*   can be null
+* can be null
 
-*   defined in: [Appeal HAS Case](appeal-has-properties-isgreenbelt.md "appeal-has.schema.json#/properties/isGreenBelt")
+* defined in: [Appeal HAS Case](appeal-has-properties-isgreenbelt.md "appeal-has.schema.json#/properties/isGreenBelt")
 
 ### isGreenBelt Type
 
@@ -1581,13 +1581,13 @@ Indicates if the site is in a conservation area
 
 `inConservationArea`
 
-*   is required
+* is required
 
-*   Type: `boolean`
+* Type: `boolean`
 
-*   can be null
+* can be null
 
-*   defined in: [Appeal HAS Case](appeal-has-properties-inconservationarea.md "appeal-has.schema.json#/properties/inConservationArea")
+* defined in: [Appeal HAS Case](appeal-has-properties-inconservationarea.md "appeal-has.schema.json#/properties/inConservationArea")
 
 ### inConservationArea Type
 
@@ -1599,13 +1599,13 @@ Indicates if the appellant has complete ownership of the site
 
 `ownsAllLand`
 
-*   is required
+* is required
 
-*   Type: `boolean`
+* Type: `boolean`
 
-*   can be null
+* can be null
 
-*   defined in: [Appeal HAS Case](appeal-has-properties-ownsallland.md "appeal-has.schema.json#/properties/ownsAllLand")
+* defined in: [Appeal HAS Case](appeal-has-properties-ownsallland.md "appeal-has.schema.json#/properties/ownsAllLand")
 
 ### ownsAllLand Type
 
@@ -1617,13 +1617,13 @@ Indicates if the appellant has partial ownership of the site
 
 `ownsSomeLand`
 
-*   is required
+* is required
 
-*   Type: `boolean`
+* Type: `boolean`
 
-*   can be null
+* can be null
 
-*   defined in: [Appeal HAS Case](appeal-has-properties-ownssomeland.md "appeal-has.schema.json#/properties/ownsSomeLand")
+* defined in: [Appeal HAS Case](appeal-has-properties-ownssomeland.md "appeal-has.schema.json#/properties/ownsSomeLand")
 
 ### ownsSomeLand Type
 
@@ -1635,13 +1635,13 @@ Indicates if the appellant knows other owners of the site
 
 `knowsOtherOwners`
 
-*   is required
+* is required
 
-*   Type: `string`
+* Type: `string`
 
-*   can be null
+* can be null
 
-*   defined in: [Appeal HAS Case](appeal-has-properties-knowsotherowners.md "appeal-has.schema.json#/properties/knowsOtherOwners")
+* defined in: [Appeal HAS Case](appeal-has-properties-knowsotherowners.md "appeal-has.schema.json#/properties/knowsOtherOwners")
 
 ### knowsOtherOwners Type
 
@@ -1664,13 +1664,13 @@ Indicates if the appellant knows all owners of the site
 
 `knowsAllOwners`
 
-*   is required
+* is required
 
-*   Type: `string`
+* Type: `string`
 
-*   can be null
+* can be null
 
-*   defined in: [Appeal HAS Case](appeal-has-properties-knowsallowners.md "appeal-has.schema.json#/properties/knowsAllOwners")
+* defined in: [Appeal HAS Case](appeal-has-properties-knowsallowners.md "appeal-has.schema.json#/properties/knowsAllOwners")
 
 ### knowsAllOwners Type
 
@@ -1693,13 +1693,13 @@ Indicates if the appellant has advertised the appeal to the LPA decision
 
 `advertisedAppeal`
 
-*   is required
+* is required
 
-*   Type: `boolean`
+* Type: `boolean`
 
-*   can be null
+* can be null
 
-*   defined in: [Appeal HAS Case](appeal-has-properties-advertisedappeal.md "appeal-has.schema.json#/properties/advertisedAppeal")
+* defined in: [Appeal HAS Case](appeal-has-properties-advertisedappeal.md "appeal-has.schema.json#/properties/advertisedAppeal")
 
 ### advertisedAppeal Type
 
@@ -1711,13 +1711,13 @@ The methods used to notify relevant parties
 
 `notificationMethod`
 
-*   is required
+* is required
 
-*   Type: `string[]`
+* Type: `string[]`
 
-*   can be null
+* can be null
 
-*   defined in: [Appeal HAS Case](appeal-has-properties-notificationmethod.md "appeal-has.schema.json#/properties/notificationMethod")
+* defined in: [Appeal HAS Case](appeal-has-properties-notificationmethod.md "appeal-has.schema.json#/properties/notificationMethod")
 
 ### notificationMethod Type
 
@@ -1729,13 +1729,13 @@ Indicates if the appellant has informed other owners of the site
 
 `ownersInformed`
 
-*   is required
+* is required
 
-*   Type: `boolean`
+* Type: `boolean`
 
-*   can be null
+* can be null
 
-*   defined in: [Appeal HAS Case](appeal-has-properties-ownersinformed.md "appeal-has.schema.json#/properties/ownersInformed")
+* defined in: [Appeal HAS Case](appeal-has-properties-ownersinformed.md "appeal-has.schema.json#/properties/ownersInformed")
 
 ### ownersInformed Type
 
@@ -1747,13 +1747,13 @@ The original description of the development, as provided by the appellant
 
 `originalDevelopmentDescription`
 
-*   is required
+* is required
 
-*   Type: `string`
+* Type: `string`
 
-*   can be null
+* can be null
 
-*   defined in: [Appeal HAS Case](appeal-has-properties-originaldevelopmentdescription.md "appeal-has.schema.json#/properties/originalDevelopmentDescription")
+* defined in: [Appeal HAS Case](appeal-has-properties-originaldevelopmentdescription.md "appeal-has.schema.json#/properties/originalDevelopmentDescription")
 
 ### originalDevelopmentDescription Type
 
@@ -1771,13 +1771,13 @@ Indicates that the LPA has changed the development description
 
 `changedDevelopmentDescription`
 
-*   is required
+* is required
 
-*   Type: `boolean`
+* Type: `boolean`
 
-*   can be null
+* can be null
 
-*   defined in: [Appeal HAS Case](appeal-has-properties-changeddevelopmentdescription.md "appeal-has.schema.json#/properties/changedDevelopmentDescription")
+* defined in: [Appeal HAS Case](appeal-has-properties-changeddevelopmentdescription.md "appeal-has.schema.json#/properties/changedDevelopmentDescription")
 
 ### changedDevelopmentDescription Type
 
@@ -1789,13 +1789,13 @@ New conditions details provided by the LPA
 
 `newConditionDetails`
 
-*   is required
+* is required
 
-*   Type: `string`
+* Type: `string`
 
-*   can be null
+* can be null
 
-*   defined in: [Appeal HAS Case](appeal-has-properties-newconditiondetails.md "appeal-has.schema.json#/properties/newConditionDetails")
+* defined in: [Appeal HAS Case](appeal-has-properties-newconditiondetails.md "appeal-has.schema.json#/properties/newConditionDetails")
 
 ### newConditionDetails Type
 
@@ -1813,13 +1813,13 @@ A list of related case references known to the appellant and the LPA
 
 `nearbyCaseReferences`
 
-*   is required
+* is required
 
-*   Type: `string[]`
+* Type: `string[]`
 
-*   can be null
+* can be null
 
-*   defined in: [Appeal HAS Case](appeal-has-properties-nearbycasereferences.md "appeal-has.schema.json#/properties/nearbyCaseReferences")
+* defined in: [Appeal HAS Case](appeal-has-properties-nearbycasereferences.md "appeal-has.schema.json#/properties/nearbyCaseReferences")
 
 ### nearbyCaseReferences Type
 
@@ -1831,13 +1831,13 @@ A list of neighbouring site addresses
 
 `neighbouringSiteAddresses`
 
-*   is required
+* is required
 
-*   Type: `object[]` ([Details](appeal-has-properties-neighbouringsiteaddresses-items.md))
+* Type: `object[]` ([Details](appeal-has-properties-neighbouringsiteaddresses-items.md))
 
-*   can be null
+* can be null
 
-*   defined in: [Appeal HAS Case](appeal-has-properties-neighbouringsiteaddresses.md "appeal-has.schema.json#/properties/neighbouringSiteAddresses")
+* defined in: [Appeal HAS Case](appeal-has-properties-neighbouringsiteaddresses.md "appeal-has.schema.json#/properties/neighbouringSiteAddresses")
 
 ### neighbouringSiteAddresses Type
 
@@ -1849,13 +1849,13 @@ A list of affected listed building IDs from Historic England
 
 `affectedListedBuildingNumbers`
 
-*   is required
+* is required
 
-*   Type: `string[]`
+* Type: `string[]`
 
-*   can be null
+* can be null
 
-*   defined in: [Appeal HAS Case](appeal-has-properties-affectedlistedbuildingnumbers.md "appeal-has.schema.json#/properties/affectedListedBuildingNumbers")
+* defined in: [Appeal HAS Case](appeal-has-properties-affectedlistedbuildingnumbers.md "appeal-has.schema.json#/properties/affectedListedBuildingNumbers")
 
 ### affectedListedBuildingNumbers Type
 
@@ -1867,13 +1867,13 @@ Indicates if the appellant has applied for costs
 
 `appellantCostsAppliedFor`
 
-*   is required
+* is required
 
-*   Type: `boolean`
+* Type: `boolean`
 
-*   can be null
+* can be null
 
-*   defined in: [Appeal HAS Case](appeal-has-properties-appellantcostsappliedfor.md "appeal-has.schema.json#/properties/appellantCostsAppliedFor")
+* defined in: [Appeal HAS Case](appeal-has-properties-appellantcostsappliedfor.md "appeal-has.schema.json#/properties/appellantCostsAppliedFor")
 
 ### appellantCostsAppliedFor Type
 
@@ -1885,13 +1885,13 @@ Indicates if the appellant has applied for costs
 
 `lpaCostsAppliedFor`
 
-*   is required
+* is required
 
-*   Type: `boolean`
+* Type: `boolean`
 
-*   can be null
+* can be null
 
-*   defined in: [Appeal HAS Case](appeal-has-properties-lpacostsappliedfor.md "appeal-has.schema.json#/properties/lpaCostsAppliedFor")
+* defined in: [Appeal HAS Case](appeal-has-properties-lpacostsappliedfor.md "appeal-has.schema.json#/properties/lpaCostsAppliedFor")
 
 ### lpaCostsAppliedFor Type
 

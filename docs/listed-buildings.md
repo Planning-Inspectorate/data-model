@@ -18,13 +18,13 @@ A unique identifier for the listed building.
 
 `entity`
 
-*   is required
+* is required
 
-*   Type: `integer`
+* Type: `integer`
 
-*   cannot be null
+* cannot be null
 
-*   defined in: [Listed Building](listed-buildings-properties-entity.md "listed-building.schema.json#/properties/entity")
+* defined in: [Listed Building](listed-buildings-properties-entity.md "listed-building.schema.json#/properties/entity")
 
 ### entity Type
 
@@ -42,13 +42,13 @@ Reference number for the listed buildign
 
 `reference`
 
-*   is required
+* is required
 
-*   Type: `string`
+* Type: `string`
 
-*   cannot be null
+* cannot be null
 
-*   defined in: [Listed Building](listed-buildings-properties-reference.md "listed-building.schema.json#/properties/reference")
+* defined in: [Listed Building](listed-buildings-properties-reference.md "listed-building.schema.json#/properties/reference")
 
 ### reference Type
 
@@ -66,13 +66,13 @@ Name of listed building
 
 `name`
 
-*   is required
+* is required
 
-*   Type: `string`
+* Type: `string`
 
-*   cannot be null
+* cannot be null
 
-*   defined in: [Listed Building](listed-buildings-properties-name.md "listed-building.schema.json#/properties/name")
+* defined in: [Listed Building](listed-buildings-properties-name.md "listed-building.schema.json#/properties/name")
 
 ### name Type
 
@@ -90,13 +90,13 @@ Grade assigned to the listing.
 
 `listedBuildingGrade`
 
-*   is required
+* is required
 
-*   Type: `string`
+* Type: `string`
 
-*   cannot be null
+* cannot be null
 
-*   defined in: [Listed Building](listed-buildings-properties-listedbuildinggrade.md "listed-building.schema.json#/properties/listedBuildingGrade")
+* defined in: [Listed Building](listed-buildings-properties-listedbuildinggrade.md "listed-building.schema.json#/properties/listedBuildingGrade")
 
 ### listedBuildingGrade Type
 

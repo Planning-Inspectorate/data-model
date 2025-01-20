@@ -51,13 +51,13 @@ The unique identifier for the file. This will be different to documentReference
 
 `documentId`
 
-*   is required
+* is required
 
-*   Type: `string`
+* Type: `string`
 
-*   cannot be null
+* cannot be null
 
-*   defined in: [NSIP Document](nsip-document-properties-documentid.md "nsip-document.schema.json#/properties/documentId")
+* defined in: [NSIP Document](nsip-document-properties-documentid.md "nsip-document.schema.json#/properties/documentId")
 
 ### documentId Type
 
@@ -75,13 +75,13 @@ Internal case identifier
 
 `caseId`
 
-*   is required
+* is required
 
-*   Type: `integer`
+* Type: `integer`
 
-*   can be null
+* can be null
 
-*   defined in: [NSIP Document](nsip-document-properties-caseid.md "nsip-document.schema.json#/properties/caseId")
+* defined in: [NSIP Document](nsip-document-properties-caseid.md "nsip-document.schema.json#/properties/caseId")
 
 ### caseId Type
 
@@ -99,13 +99,13 @@ Internal case identifier
 
 `caseRef`
 
-*   is required
+* is required
 
-*   Type: `string`
+* Type: `string`
 
-*   can be null
+* can be null
 
-*   defined in: [NSIP Document](nsip-document-properties-caseref.md "nsip-document.schema.json#/properties/caseRef")
+* defined in: [NSIP Document](nsip-document-properties-caseref.md "nsip-document.schema.json#/properties/caseRef")
 
 ### caseRef Type
 
@@ -123,13 +123,13 @@ Reference used throughout ODT <CaseRef>-<SequenceNo>
 
 `documentReference`
 
-*   is required
+* is required
 
-*   Type: `string`
+* Type: `string`
 
-*   can be null
+* can be null
 
-*   defined in: [NSIP Document](nsip-document-properties-documentreference.md "nsip-document.schema.json#/properties/documentReference")
+* defined in: [NSIP Document](nsip-document-properties-documentreference.md "nsip-document.schema.json#/properties/documentReference")
 
 ### documentReference Type
 
@@ -147,13 +147,13 @@ Reference used throughout ODT <CaseRef>-<SequenceNo>
 
 `version`
 
-*   is required
+* is required
 
-*   Type: `integer`
+* Type: `integer`
 
-*   cannot be null
+* cannot be null
 
-*   defined in: [NSIP Document](nsip-document-properties-version.md "nsip-document.schema.json#/properties/version")
+* defined in: [NSIP Document](nsip-document-properties-version.md "nsip-document.schema.json#/properties/version")
 
 ### version Type
 
@@ -171,13 +171,13 @@ Reference used throughout ODT <CaseRef>-<SequenceNo>
 
 `examinationRefNo`
 
-*   is required
+* is required
 
-*   Type: `string`
+* Type: `string`
 
-*   can be null
+* can be null
 
-*   defined in: [NSIP Document](nsip-document-properties-examinationrefno.md "nsip-document.schema.json#/properties/examinationRefNo")
+* defined in: [NSIP Document](nsip-document-properties-examinationrefno.md "nsip-document.schema.json#/properties/examinationRefNo")
 
 ### examinationRefNo Type
 
@@ -195,13 +195,13 @@ Current stored filename of the file
 
 `filename`
 
-*   is required
+* is required
 
-*   Type: `string`
+* Type: `string`
 
-*   cannot be null
+* cannot be null
 
-*   defined in: [NSIP Document](nsip-document-properties-filename.md "nsip-document.schema.json#/properties/filename")
+* defined in: [NSIP Document](nsip-document-properties-filename.md "nsip-document.schema.json#/properties/filename")
 
 ### filename Type
 
@@ -219,13 +219,13 @@ Original filename of file
 
 `originalFilename`
 
-*   is required
+* is required
 
-*   Type: `string`
+* Type: `string`
 
-*   cannot be null
+* cannot be null
 
-*   defined in: [NSIP Document](nsip-document-properties-originalfilename.md "nsip-document.schema.json#/properties/originalFilename")
+* defined in: [NSIP Document](nsip-document-properties-originalfilename.md "nsip-document.schema.json#/properties/originalFilename")
 
 ### originalFilename Type
 
@@ -243,13 +243,13 @@ Original filename of file
 
 `size`
 
-*   is required
+* is required
 
-*   Type: `integer`
+* Type: `integer`
 
-*   cannot be null
+* cannot be null
 
-*   defined in: [NSIP Document](nsip-document-properties-size.md "nsip-document.schema.json#/properties/size")
+* defined in: [NSIP Document](nsip-document-properties-size.md "nsip-document.schema.json#/properties/size")
 
 ### size Type
 
@@ -267,13 +267,13 @@ Original filename of file
 
 `mime`
 
-*   is required
+* is required
 
-*   Type: `string`
+* Type: `string`
 
-*   can be null
+* can be null
 
-*   defined in: [NSIP Document](nsip-document-properties-mime.md "nsip-document.schema.json#/properties/mime")
+* defined in: [NSIP Document](nsip-document-properties-mime.md "nsip-document.schema.json#/properties/mime")
 
 ### mime Type
 
@@ -291,13 +291,13 @@ The internal location of the document
 
 `documentURI`
 
-*   is required
+* is required
 
-*   Type: `string`
+* Type: `string`
 
-*   cannot be null
+* cannot be null
 
-*   defined in: [NSIP Document](nsip-document-properties-documenturi.md "nsip-document.schema.json#/properties/documentURI")
+* defined in: [NSIP Document](nsip-document-properties-documenturi.md "nsip-document.schema.json#/properties/documentURI")
 
 ### documentURI Type
 
@@ -315,13 +315,13 @@ The location of the published document. Only applicable to documents which are p
 
 `publishedDocumentURI`
 
-*   is required
+* is required
 
-*   Type: `string`
+* Type: `string`
 
-*   can be null
+* can be null
 
-*   defined in: [NSIP Document](nsip-document-properties-publisheddocumenturi.md "nsip-document.schema.json#/properties/publishedDocumentURI")
+* defined in: [NSIP Document](nsip-document-properties-publisheddocumenturi.md "nsip-document.schema.json#/properties/publishedDocumentURI")
 
 ### publishedDocumentURI Type
 
@@ -339,13 +339,13 @@ The location of the published document. Only applicable to documents which are p
 
 `path`
 
-*   is required
+* is required
 
-*   Type: `string`
+* Type: `string`
 
-*   can be null
+* can be null
 
-*   defined in: [NSIP Document](nsip-document-properties-path.md "nsip-document.schema.json#/properties/path")
+* defined in: [NSIP Document](nsip-document-properties-path.md "nsip-document.schema.json#/properties/path")
 
 ### path Type
 
@@ -363,13 +363,13 @@ The location of the published document. Only applicable to documents which are p
 
 `virusCheckStatus`
 
-*   is required
+* is required
 
-*   Type: `string`
+* Type: `string`
 
-*   can be null
+* can be null
 
-*   defined in: [NSIP Document](nsip-document-properties-viruscheckstatus.md "nsip-document.schema.json#/properties/virusCheckStatus")
+* defined in: [NSIP Document](nsip-document-properties-viruscheckstatus.md "nsip-document.schema.json#/properties/virusCheckStatus")
 
 ### virusCheckStatus Type
 
@@ -392,13 +392,13 @@ The location of the published document. Only applicable to documents which are p
 
 `fileMD5`
 
-*   is required
+* is required
 
-*   Type: `string`
+* Type: `string`
 
-*   can be null
+* can be null
 
-*   defined in: [NSIP Document](nsip-document-properties-filemd5.md "nsip-document.schema.json#/properties/fileMD5")
+* defined in: [NSIP Document](nsip-document-properties-filemd5.md "nsip-document.schema.json#/properties/fileMD5")
 
 ### fileMD5 Type
 
@@ -416,13 +416,13 @@ The location of the published document. Only applicable to documents which are p
 
 `dateCreated`
 
-*   is required
+* is required
 
-*   Type: `string`
+* Type: `string`
 
-*   cannot be null
+* cannot be null
 
-*   defined in: [NSIP Document](nsip-document-properties-datecreated.md "nsip-document.schema.json#/properties/dateCreated")
+* defined in: [NSIP Document](nsip-document-properties-datecreated.md "nsip-document.schema.json#/properties/dateCreated")
 
 ### dateCreated Type
 
@@ -444,13 +444,13 @@ The location of the published document. Only applicable to documents which are p
 
 `lastModified`
 
-*   is required
+* is required
 
-*   Type: `string`
+* Type: `string`
 
-*   can be null
+* can be null
 
-*   defined in: [NSIP Document](nsip-document-properties-lastmodified.md "nsip-document.schema.json#/properties/lastModified")
+* defined in: [NSIP Document](nsip-document-properties-lastmodified.md "nsip-document.schema.json#/properties/lastModified")
 
 ### lastModified Type
 
@@ -472,13 +472,13 @@ The location of the published document. Only applicable to documents which are p
 
 `caseType`
 
-*   is required
+* is required
 
-*   Type: `string`
+* Type: `string`
 
-*   can be null
+* can be null
 
-*   defined in: [NSIP Document](nsip-document-properties-casetype.md "nsip-document.schema.json#/properties/caseType")
+* defined in: [NSIP Document](nsip-document-properties-casetype.md "nsip-document.schema.json#/properties/caseType")
 
 ### caseType Type
 
@@ -500,13 +500,13 @@ The location of the published document. Only applicable to documents which are p
 
 `redactedStatus`
 
-*   is required
+* is required
 
-*   Type: `string`
+* Type: `string`
 
-*   can be null
+* can be null
 
-*   defined in: [NSIP Document](nsip-document-properties-redactedstatus.md "nsip-document.schema.json#/properties/redactedStatus")
+* defined in: [NSIP Document](nsip-document-properties-redactedstatus.md "nsip-document.schema.json#/properties/redactedStatus")
 
 ### redactedStatus Type
 
@@ -528,13 +528,13 @@ The location of the published document. Only applicable to documents which are p
 
 `publishedStatus`
 
-*   is required
+* is required
 
-*   Type: `string`
+* Type: `string`
 
-*   can be null
+* can be null
 
-*   defined in: [NSIP Document](nsip-document-properties-publishedstatus.md "nsip-document.schema.json#/properties/publishedStatus")
+* defined in: [NSIP Document](nsip-document-properties-publishedstatus.md "nsip-document.schema.json#/properties/publishedStatus")
 
 ### publishedStatus Type
 
@@ -564,13 +564,13 @@ The location of the published document. Only applicable to documents which are p
 
 `datePublished`
 
-*   is required
+* is required
 
-*   Type: `string`
+* Type: `string`
 
-*   can be null
+* can be null
 
-*   defined in: [NSIP Document](nsip-document-properties-datepublished.md "nsip-document.schema.json#/properties/datePublished")
+* defined in: [NSIP Document](nsip-document-properties-datepublished.md "nsip-document.schema.json#/properties/datePublished")
 
 ### datePublished Type
 
@@ -592,13 +592,13 @@ The location of the published document. Only applicable to documents which are p
 
 `documentType`
 
-*   is required
+* is required
 
-*   Type: `string`
+* Type: `string`
 
-*   can be null
+* can be null
 
-*   defined in: [NSIP Document](nsip-document-properties-documenttype.md "nsip-document.schema.json#/properties/documentType")
+* defined in: [NSIP Document](nsip-document-properties-documenttype.md "nsip-document.schema.json#/properties/documentType")
 
 ### documentType Type
 
@@ -616,13 +616,13 @@ The location of the published document. Only applicable to documents which are p
 
 `securityClassification`
 
-*   is required
+* is required
 
-*   Type: `string`
+* Type: `string`
 
-*   can be null
+* can be null
 
-*   defined in: [NSIP Document](nsip-document-properties-securityclassification.md "nsip-document.schema.json#/properties/securityClassification")
+* defined in: [NSIP Document](nsip-document-properties-securityclassification.md "nsip-document.schema.json#/properties/securityClassification")
 
 ### securityClassification Type
 
@@ -646,13 +646,13 @@ The location of the published document. Only applicable to documents which are p
 
 `sourceSystem`
 
-*   is required
+* is required
 
-*   Type: `string`
+* Type: `string`
 
-*   can be null
+* can be null
 
-*   defined in: [NSIP Document](nsip-document-properties-sourcesystem.md "nsip-document.schema.json#/properties/sourceSystem")
+* defined in: [NSIP Document](nsip-document-properties-sourcesystem.md "nsip-document.schema.json#/properties/sourceSystem")
 
 ### sourceSystem Type
 
@@ -677,13 +677,13 @@ The location of the published document. Only applicable to documents which are p
 
 `origin`
 
-*   is required
+* is required
 
-*   Type: `string`
+* Type: `string`
 
-*   can be null
+* can be null
 
-*   defined in: [NSIP Document](nsip-document-properties-origin.md "nsip-document.schema.json#/properties/origin")
+* defined in: [NSIP Document](nsip-document-properties-origin.md "nsip-document.schema.json#/properties/origin")
 
 ### origin Type
 
@@ -707,13 +707,13 @@ The location of the published document. Only applicable to documents which are p
 
 `owner`
 
-*   is required
+* is required
 
-*   Type: `string`
+* Type: `string`
 
-*   can be null
+* can be null
 
-*   defined in: [NSIP Document](nsip-document-properties-owner.md "nsip-document.schema.json#/properties/owner")
+* defined in: [NSIP Document](nsip-document-properties-owner.md "nsip-document.schema.json#/properties/owner")
 
 ### owner Type
 
@@ -725,13 +725,13 @@ Name of person who authored document
 
 `author`
 
-*   is required
+* is required
 
-*   Type: `string`
+* Type: `string`
 
-*   can be null
+* can be null
 
-*   defined in: [NSIP Document](nsip-document-properties-author.md "nsip-document.schema.json#/properties/author")
+* defined in: [NSIP Document](nsip-document-properties-author.md "nsip-document.schema.json#/properties/author")
 
 ### author Type
 
@@ -743,13 +743,13 @@ Welsh name of person who authored document
 
 `authorWelsh`
 
-*   is optional
+* is optional
 
-*   Type: `string`
+* Type: `string`
 
-*   can be null
+* can be null
 
-*   defined in: [NSIP Document](nsip-document-properties-authorwelsh.md "nsip-document.schema.json#/properties/authorWelsh")
+* defined in: [NSIP Document](nsip-document-properties-authorwelsh.md "nsip-document.schema.json#/properties/authorWelsh")
 
 ### authorWelsh Type
 
@@ -761,13 +761,13 @@ The on behalf of or agent submitter of document
 
 `representative`
 
-*   is required
+* is required
 
-*   Type: `string`
+* Type: `string`
 
-*   can be null
+* can be null
 
-*   defined in: [NSIP Document](nsip-document-properties-representative.md "nsip-document.schema.json#/properties/representative")
+* defined in: [NSIP Document](nsip-document-properties-representative.md "nsip-document.schema.json#/properties/representative")
 
 ### representative Type
 
@@ -785,13 +785,13 @@ The on behalf of or agent submitter of document
 
 `description`
 
-*   is required
+* is required
 
-*   Type: `string`
+* Type: `string`
 
-*   can be null
+* can be null
 
-*   defined in: [NSIP Document](nsip-document-properties-description.md "nsip-document.schema.json#/properties/description")
+* defined in: [NSIP Document](nsip-document-properties-description.md "nsip-document.schema.json#/properties/description")
 
 ### description Type
 
@@ -809,13 +809,13 @@ The on behalf of or agent submitter of document
 
 `descriptionWelsh`
 
-*   is optional
+* is optional
 
-*   Type: `string`
+* Type: `string`
 
-*   can be null
+* can be null
 
-*   defined in: [NSIP Document](nsip-document-properties-descriptionwelsh.md "nsip-document.schema.json#/properties/descriptionWelsh")
+* defined in: [NSIP Document](nsip-document-properties-descriptionwelsh.md "nsip-document.schema.json#/properties/descriptionWelsh")
 
 ### descriptionWelsh Type
 
@@ -827,13 +827,13 @@ The on behalf of or agent submitter of document
 
 `documentCaseStage`
 
-*   is required
+* is required
 
-*   Type: `string`
+* Type: `string`
 
-*   can be null
+* can be null
 
-*   defined in: [NSIP Document](nsip-document-properties-documentcasestage.md "nsip-document.schema.json#/properties/documentCaseStage")
+* defined in: [NSIP Document](nsip-document-properties-documentcasestage.md "nsip-document.schema.json#/properties/documentCaseStage")
 
 ### documentCaseStage Type
 
@@ -865,13 +865,13 @@ Filter field to provide additional filtering
 
 `filter1`
 
-*   is required
+* is required
 
-*   Type: `string`
+* Type: `string`
 
-*   can be null
+* can be null
 
-*   defined in: [NSIP Document](nsip-document-properties-filter1.md "nsip-document.schema.json#/properties/filter1")
+* defined in: [NSIP Document](nsip-document-properties-filter1.md "nsip-document.schema.json#/properties/filter1")
 
 ### filter1 Type
 
@@ -889,13 +889,13 @@ Filter field in Welsh
 
 `filter1Welsh`
 
-*   is optional
+* is optional
 
-*   Type: `string`
+* Type: `string`
 
-*   can be null
+* can be null
 
-*   defined in: [NSIP Document](nsip-document-properties-filter1welsh.md "nsip-document.schema.json#/properties/filter1Welsh")
+* defined in: [NSIP Document](nsip-document-properties-filter1welsh.md "nsip-document.schema.json#/properties/filter1Welsh")
 
 ### filter1Welsh Type
 
@@ -907,13 +907,13 @@ Filter field to provide additional filtering
 
 `filter2`
 
-*   is required
+* is required
 
-*   Type: `string`
+* Type: `string`
 
-*   can be null
+* can be null
 
-*   defined in: [NSIP Document](nsip-document-properties-filter2.md "nsip-document.schema.json#/properties/filter2")
+* defined in: [NSIP Document](nsip-document-properties-filter2.md "nsip-document.schema.json#/properties/filter2")
 
 ### filter2 Type
 
@@ -931,13 +931,13 @@ The folder where the document exists
 
 `horizonFolderId`
 
-*   is required
+* is required
 
-*   Type: `string`
+* Type: `string`
 
-*   can be null
+* can be null
 
-*   defined in: [NSIP Document](nsip-document-properties-horizonfolderid.md "nsip-document.schema.json#/properties/horizonFolderId")
+* defined in: [NSIP Document](nsip-document-properties-horizonfolderid.md "nsip-document.schema.json#/properties/horizonFolderId")
 
 ### horizonFolderId Type
 
@@ -949,13 +949,13 @@ The GUID of the transcript document (if one was provided).
 
 `transcriptId`
 
-*   is required
+* is required
 
-*   Type: `string`
+* Type: `string`
 
-*   can be null
+* can be null
 
-*   defined in: [NSIP Document](nsip-document-properties-transcriptid.md "nsip-document.schema.json#/properties/transcriptId")
+* defined in: [NSIP Document](nsip-document-properties-transcriptid.md "nsip-document.schema.json#/properties/transcriptId")
 
 ### transcriptId Type
 

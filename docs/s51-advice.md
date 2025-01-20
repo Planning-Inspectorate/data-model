@@ -33,13 +33,13 @@
 
 `adviceId`
 
-*   is required
+* is required
 
-*   Type: `integer`
+* Type: `integer`
 
-*   cannot be null
+* cannot be null
 
-*   defined in: [S51 Advice](s51-advice-properties-adviceid.md "s51-advice.schema.json#/properties/adviceId")
+* defined in: [S51 Advice](s51-advice-properties-adviceid.md "s51-advice.schema.json#/properties/adviceId")
 
 ### adviceId Type
 
@@ -57,13 +57,13 @@
 
 `adviceReference`
 
-*   is required
+* is required
 
-*   Type: `string`
+* Type: `string`
 
-*   cannot be null
+* cannot be null
 
-*   defined in: [S51 Advice](s51-advice-properties-advicereference.md "s51-advice.schema.json#/properties/adviceReference")
+* defined in: [S51 Advice](s51-advice-properties-advicereference.md "s51-advice.schema.json#/properties/adviceReference")
 
 ### adviceReference Type
 
@@ -81,13 +81,13 @@
 
 `caseId`
 
-*   is required
+* is required
 
-*   Type: `integer`
+* Type: `integer`
 
-*   can be null
+* can be null
 
-*   defined in: [S51 Advice](s51-advice-properties-caseid.md "s51-advice.schema.json#/properties/caseId")
+* defined in: [S51 Advice](s51-advice-properties-caseid.md "s51-advice.schema.json#/properties/caseId")
 
 ### caseId Type
 
@@ -105,13 +105,13 @@
 
 `caseReference`
 
-*   is required
+* is required
 
-*   Type: `string`
+* Type: `string`
 
-*   can be null
+* can be null
 
-*   defined in: [S51 Advice](s51-advice-properties-casereference.md "s51-advice.schema.json#/properties/caseReference")
+* defined in: [S51 Advice](s51-advice-properties-casereference.md "s51-advice.schema.json#/properties/caseReference")
 
 ### caseReference Type
 
@@ -129,13 +129,13 @@ Title of the advice
 
 `title`
 
-*   is required
+* is required
 
-*   Type: `string`
+* Type: `string`
 
-*   cannot be null
+* cannot be null
 
-*   defined in: [S51 Advice](s51-advice-properties-title.md "s51-advice.schema.json#/properties/title")
+* defined in: [S51 Advice](s51-advice-properties-title.md "s51-advice.schema.json#/properties/title")
 
 ### title Type
 
@@ -153,13 +153,13 @@ Title of the advice in Welsh
 
 `titleWelsh`
 
-*   is optional
+* is optional
 
-*   Type: `string`
+* Type: `string`
 
-*   can be null
+* can be null
 
-*   defined in: [S51 Advice](s51-advice-properties-titlewelsh.md "s51-advice.schema.json#/properties/titleWelsh")
+* defined in: [S51 Advice](s51-advice-properties-titlewelsh.md "s51-advice.schema.json#/properties/titleWelsh")
 
 ### titleWelsh Type
 
@@ -171,13 +171,13 @@ Who the enquiry is from
 
 `from`
 
-*   is required
+* is required
 
-*   Type: `string`
+* Type: `string`
 
-*   can be null
+* can be null
 
-*   defined in: [S51 Advice](s51-advice-properties-from.md "s51-advice.schema.json#/properties/from")
+* defined in: [S51 Advice](s51-advice-properties-from.md "s51-advice.schema.json#/properties/from")
 
 ### from Type
 
@@ -189,13 +189,13 @@ Who the enquiry is on behalf of
 
 `agent`
 
-*   is required
+* is required
 
-*   Type: `string`
+* Type: `string`
 
-*   can be null
+* can be null
 
-*   defined in: [S51 Advice](s51-advice-properties-agent.md "s51-advice.schema.json#/properties/agent")
+* defined in: [S51 Advice](s51-advice-properties-agent.md "s51-advice.schema.json#/properties/agent")
 
 ### agent Type
 
@@ -207,13 +207,13 @@ How the enquiry was made
 
 `method`
 
-*   is required
+* is required
 
-*   Type: `string`
+* Type: `string`
 
-*   can be null
+* can be null
 
-*   defined in: [S51 Advice](s51-advice-properties-method.md "s51-advice.schema.json#/properties/method")
+* defined in: [S51 Advice](s51-advice-properties-method.md "s51-advice.schema.json#/properties/method")
 
 ### method Type
 
@@ -238,13 +238,13 @@ Date the enquiry was made
 
 `enquiryDate`
 
-*   is required
+* is required
 
-*   Type: `string`
+* Type: `string`
 
-*   can be null
+* can be null
 
-*   defined in: [S51 Advice](s51-advice-properties-enquirydate.md "s51-advice.schema.json#/properties/enquiryDate")
+* defined in: [S51 Advice](s51-advice-properties-enquirydate.md "s51-advice.schema.json#/properties/enquiryDate")
 
 ### enquiryDate Type
 
@@ -266,13 +266,13 @@ Details of the enquiry
 
 `enquiryDetails`
 
-*   is required
+* is required
 
-*   Type: `string`
+* Type: `string`
 
-*   can be null
+* can be null
 
-*   defined in: [S51 Advice](s51-advice-properties-enquirydetails.md "s51-advice.schema.json#/properties/enquiryDetails")
+* defined in: [S51 Advice](s51-advice-properties-enquirydetails.md "s51-advice.schema.json#/properties/enquiryDetails")
 
 ### enquiryDetails Type
 
@@ -284,13 +284,13 @@ Details of the enquiry in Welsh
 
 `enquiryDetailsWelsh`
 
-*   is optional
+* is optional
 
-*   Type: `string`
+* Type: `string`
 
-*   can be null
+* can be null
 
-*   defined in: [S51 Advice](s51-advice-properties-enquirydetailswelsh.md "s51-advice.schema.json#/properties/enquiryDetailsWelsh")
+* defined in: [S51 Advice](s51-advice-properties-enquirydetailswelsh.md "s51-advice.schema.json#/properties/enquiryDetailsWelsh")
 
 ### enquiryDetailsWelsh Type
 
@@ -302,13 +302,13 @@ Who issued the advice
 
 `adviceGivenBy`
 
-*   is required
+* is required
 
-*   Type: `string`
+* Type: `string`
 
-*   can be null
+* can be null
 
-*   defined in: [S51 Advice](s51-advice-properties-advicegivenby.md "s51-advice.schema.json#/properties/adviceGivenBy")
+* defined in: [S51 Advice](s51-advice-properties-advicegivenby.md "s51-advice.schema.json#/properties/adviceGivenBy")
 
 ### adviceGivenBy Type
 
@@ -320,13 +320,13 @@ Date the advice was given
 
 `adviceDate`
 
-*   is required
+* is required
 
-*   Type: `string`
+* Type: `string`
 
-*   can be null
+* can be null
 
-*   defined in: [S51 Advice](s51-advice-properties-advicedate.md "s51-advice.schema.json#/properties/adviceDate")
+* defined in: [S51 Advice](s51-advice-properties-advicedate.md "s51-advice.schema.json#/properties/adviceDate")
 
 ### adviceDate Type
 
@@ -348,13 +348,13 @@ Details of the advice
 
 `adviceDetails`
 
-*   is required
+* is required
 
-*   Type: `string`
+* Type: `string`
 
-*   can be null
+* can be null
 
-*   defined in: [S51 Advice](s51-advice-properties-advicedetails.md "s51-advice.schema.json#/properties/adviceDetails")
+* defined in: [S51 Advice](s51-advice-properties-advicedetails.md "s51-advice.schema.json#/properties/adviceDetails")
 
 ### adviceDetails Type
 
@@ -366,13 +366,13 @@ Details of the advice in Welsh
 
 `adviceDetailsWelsh`
 
-*   is optional
+* is optional
 
-*   Type: `string`
+* Type: `string`
 
-*   can be null
+* can be null
 
-*   defined in: [S51 Advice](s51-advice-properties-advicedetailswelsh.md "s51-advice.schema.json#/properties/adviceDetailsWelsh")
+* defined in: [S51 Advice](s51-advice-properties-advicedetailswelsh.md "s51-advice.schema.json#/properties/adviceDetailsWelsh")
 
 ### adviceDetailsWelsh Type
 
@@ -384,13 +384,13 @@ Details of the advice in Welsh
 
 `status`
 
-*   is required
+* is required
 
-*   Type: `string`
+* Type: `string`
 
-*   can be null
+* can be null
 
-*   defined in: [S51 Advice](s51-advice-properties-status.md "s51-advice.schema.json#/properties/status")
+* defined in: [S51 Advice](s51-advice-properties-status.md "s51-advice.schema.json#/properties/status")
 
 ### status Type
 
@@ -415,13 +415,13 @@ Details of the advice in Welsh
 
 `redactionStatus`
 
-*   is required
+* is required
 
-*   Type: `string`
+* Type: `string`
 
-*   can be null
+* can be null
 
-*   defined in: [S51 Advice](s51-advice-properties-redactionstatus.md "s51-advice.schema.json#/properties/redactionStatus")
+* defined in: [S51 Advice](s51-advice-properties-redactionstatus.md "s51-advice.schema.json#/properties/redactionStatus")
 
 ### redactionStatus Type
 
@@ -443,13 +443,13 @@ Details of the advice in Welsh
 
 `attachmentIds`
 
-*   is required
+* is required
 
-*   Type: `string[]`
+* Type: `string[]`
 
-*   cannot be null
+* cannot be null
 
-*   defined in: [S51 Advice](s51-advice-properties-attachmentids.md "s51-advice.schema.json#/properties/attachmentIds")
+* defined in: [S51 Advice](s51-advice-properties-attachmentids.md "s51-advice.schema.json#/properties/attachmentIds")
 
 ### attachmentIds Type
 

@@ -31,13 +31,13 @@ The unique identifier for the representation
 
 `representationId`
 
-*   is required
+* is required
 
-*   Type: `string`
+* Type: `string`
 
-*   cannot be null
+* cannot be null
 
-*   defined in: [Appeal Representation](appeal-representation-properties-representationid.md "appeal-representation.schema.json#/properties/representationId")
+* defined in: [Appeal Representation](appeal-representation-properties-representationid.md "appeal-representation.schema.json#/properties/representationId")
 
 ### representationId Type
 
@@ -55,13 +55,13 @@ Internal case identifier
 
 `caseId`
 
-*   is required
+* is required
 
-*   Type: `integer`
+* Type: `integer`
 
-*   can be null
+* can be null
 
-*   defined in: [Appeal Representation](appeal-representation-properties-caseid.md "appeal-representation.schema.json#/properties/caseId")
+* defined in: [Appeal Representation](appeal-representation-properties-caseid.md "appeal-representation.schema.json#/properties/caseId")
 
 ### caseId Type
 
@@ -79,13 +79,13 @@ External case identifier
 
 `caseReference`
 
-*   is required
+* is required
 
-*   Type: `string`
+* Type: `string`
 
-*   cannot be null
+* cannot be null
 
-*   defined in: [Appeal Representation](appeal-representation-properties-casereference.md "appeal-representation.schema.json#/properties/caseReference")
+* defined in: [Appeal Representation](appeal-representation-properties-casereference.md "appeal-representation.schema.json#/properties/caseReference")
 
 ### caseReference Type
 
@@ -105,13 +105,13 @@ Status of the representation
 
 `status`
 
-*   is required
+* is required
 
-*   Type: `string`
+* Type: `string`
 
-*   can be null
+* can be null
 
-*   defined in: [Appeal Representation](appeal-representation-properties-status.md "appeal-representation.schema.json#/properties/status")
+* defined in: [Appeal Representation](appeal-representation-properties-status.md "appeal-representation.schema.json#/properties/status")
 
 ### status Type
 
@@ -140,13 +140,13 @@ The original representation
 
 `originalRepresentation`
 
-*   is required
+* is required
 
-*   Type: `string`
+* Type: `string`
 
-*   can be null
+* can be null
 
-*   defined in: [Appeal Representation](appeal-representation-properties-originalrepresentation.md "appeal-representation.schema.json#/properties/originalRepresentation")
+* defined in: [Appeal Representation](appeal-representation-properties-originalrepresentation.md "appeal-representation.schema.json#/properties/originalRepresentation")
 
 ### originalRepresentation Type
 
@@ -158,13 +158,13 @@ Indicates if the representation is redacted
 
 `redacted`
 
-*   is required
+* is required
 
-*   Type: `boolean`
+* Type: `boolean`
 
-*   can be null
+* can be null
 
-*   defined in: [Appeal Representation](appeal-representation-properties-redacted.md "appeal-representation.schema.json#/properties/redacted")
+* defined in: [Appeal Representation](appeal-representation-properties-redacted.md "appeal-representation.schema.json#/properties/redacted")
 
 ### redacted Type
 
@@ -176,13 +176,13 @@ The redacted version of the representation
 
 `redactedRepresentation`
 
-*   is required
+* is required
 
-*   Type: `string`
+* Type: `string`
 
-*   can be null
+* can be null
 
-*   defined in: [Appeal Representation](appeal-representation-properties-redactedrepresentation.md "appeal-representation.schema.json#/properties/redactedRepresentation")
+* defined in: [Appeal Representation](appeal-representation-properties-redactedrepresentation.md "appeal-representation.schema.json#/properties/redactedRepresentation")
 
 ### redactedRepresentation Type
 
@@ -196,13 +196,13 @@ Unique identifier for the case team member that performed the redaction
 
 `redactedBy`
 
-*   is required
+* is required
 
-*   Type: `string`
+* Type: `string`
 
-*   can be null
+* can be null
 
-*   defined in: [Appeal Representation](appeal-representation-properties-redactedby.md "appeal-representation.schema.json#/properties/redactedBy")
+* defined in: [Appeal Representation](appeal-representation-properties-redactedby.md "appeal-representation.schema.json#/properties/redactedBy")
 
 ### redactedBy Type
 
@@ -216,13 +216,13 @@ A list of reasons why the representation has been marked as invalid or incomplet
 
 `invalidOrIncompleteDetails`
 
-*   is optional
+* is optional
 
-*   Type: `string[]`
+* Type: `string[]`
 
-*   can be null
+* can be null
 
-*   defined in: [Appeal Representation](appeal-representation-properties-invalidorincompletedetails.md "appeal-representation.schema.json#/properties/invalidOrIncompleteDetails")
+* defined in: [Appeal Representation](appeal-representation-properties-invalidorincompletedetails.md "appeal-representation.schema.json#/properties/invalidOrIncompleteDetails")
 
 ### invalidOrIncompleteDetails Type
 
@@ -252,13 +252,13 @@ A list of free text reasons why the representation has been marked as invalid or
 
 `otherInvalidOrIncompleteDetails`
 
-*   is optional
+* is optional
 
-*   Type: `string[]`
+* Type: `string[]`
 
-*   can be null
+* can be null
 
-*   defined in: [Appeal Representation](appeal-representation-properties-otherinvalidorincompletedetails.md "appeal-representation.schema.json#/properties/otherInvalidOrIncompleteDetails")
+* defined in: [Appeal Representation](appeal-representation-properties-otherinvalidorincompletedetails.md "appeal-representation.schema.json#/properties/otherInvalidOrIncompleteDetails")
 
 ### otherInvalidOrIncompleteDetails Type
 
@@ -270,13 +270,13 @@ Source of the representation (citizen or LPA)
 
 `source`
 
-*   is required
+* is required
 
-*   Type: `string`
+* Type: `string`
 
-*   can be null
+* can be null
 
-*   defined in: [Appeal Representation](appeal-representation-properties-source.md "appeal-representation.schema.json#/properties/source")
+* defined in: [Appeal Representation](appeal-representation-properties-source.md "appeal-representation.schema.json#/properties/source")
 
 ### source Type
 
@@ -298,13 +298,13 @@ Service User Id of the person or organisation making the representation
 
 `serviceUserId`
 
-*   is required
+* is required
 
-*   Type: `string`
+* Type: `string`
 
-*   can be null
+* can be null
 
-*   defined in: [Appeal Representation](appeal-representation-properties-serviceuserid.md "appeal-representation.schema.json#/properties/serviceUserId")
+* defined in: [Appeal Representation](appeal-representation-properties-serviceuserid.md "appeal-representation.schema.json#/properties/serviceUserId")
 
 ### serviceUserId Type
 
@@ -316,13 +316,13 @@ The type of representation
 
 `representationType`
 
-*   is required
+* is required
 
-*   Type: `string`
+* Type: `string`
 
-*   can be null
+* can be null
 
-*   defined in: [Appeal Representation](appeal-representation-properties-representationtype.md "appeal-representation.schema.json#/properties/representationType")
+* defined in: [Appeal Representation](appeal-representation-properties-representationtype.md "appeal-representation.schema.json#/properties/representationType")
 
 ### representationType Type
 
@@ -346,13 +346,13 @@ The type of representation
 
 `dateReceived`
 
-*   is required
+* is required
 
-*   Type: `string`
+* Type: `string`
 
-*   cannot be null
+* cannot be null
 
-*   defined in: [Appeal Representation](appeal-representation-properties-datereceived.md "appeal-representation.schema.json#/properties/dateReceived")
+* defined in: [Appeal Representation](appeal-representation-properties-datereceived.md "appeal-representation.schema.json#/properties/dateReceived")
 
 ### dateReceived Type
 
@@ -374,13 +374,13 @@ An array of documentIds
 
 `documentIds`
 
-*   is required
+* is required
 
-*   Type: `string[]`
+* Type: `string[]`
 
-*   cannot be null
+* cannot be null
 
-*   defined in: [Appeal Representation](appeal-representation-properties-documentids.md "appeal-representation.schema.json#/properties/documentIds")
+* defined in: [Appeal Representation](appeal-representation-properties-documentids.md "appeal-representation.schema.json#/properties/documentIds")
 
 ### documentIds Type
 

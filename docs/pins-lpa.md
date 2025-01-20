@@ -27,13 +27,13 @@ The PINS name of the LPA
 
 `lpaName`
 
-*   is required
+* is required
 
-*   Type: `string`
+* Type: `string`
 
-*   cannot be null
+* cannot be null
 
-*   defined in: [PINS LPA](pins-lpa-properties-lpaname.md "pins-lpa.schema.json#/properties/lpaName")
+* defined in: [PINS LPA](pins-lpa-properties-lpaname.md "pins-lpa.schema.json#/properties/lpaName")
 
 ### lpaName Type
 
@@ -45,13 +45,13 @@ The organisation type of the LPA
 
 `organisationType`
 
-*   is optional
+* is optional
 
-*   Type: `string`
+* Type: `string`
 
-*   cannot be null
+* cannot be null
 
-*   defined in: [PINS LPA](pins-lpa-properties-organisationtype.md "pins-lpa.schema.json#/properties/organisationType")
+* defined in: [PINS LPA](pins-lpa-properties-organisationtype.md "pins-lpa.schema.json#/properties/organisationType")
 
 ### organisationType Type
 
@@ -63,13 +63,13 @@ The PINS-generated unqiue LPA code
 
 `pinsLpaCode`
 
-*   is required
+* is required
 
-*   Type: `string`
+* Type: `string`
 
-*   cannot be null
+* cannot be null
 
-*   defined in: [PINS LPA](pins-lpa-properties-pinslpacode.md "pins-lpa.schema.json#/properties/pinsLpaCode")
+* defined in: [PINS LPA](pins-lpa-properties-pinslpacode.md "pins-lpa.schema.json#/properties/pinsLpaCode")
 
 ### pinsLpaCode Type
 
@@ -81,13 +81,13 @@ LPA address Post Office Box
 
 `poBox`
 
-*   is optional
+* is optional
 
-*   Type: `string`
+* Type: `string`
 
-*   can be null
+* can be null
 
-*   defined in: [PINS LPA](pins-lpa-properties-pobox.md "pins-lpa.schema.json#/properties/poBox")
+* defined in: [PINS LPA](pins-lpa-properties-pobox.md "pins-lpa.schema.json#/properties/poBox")
 
 ### poBox Type
 
@@ -99,13 +99,13 @@ First line of LPA address
 
 `address1`
 
-*   is optional
+* is optional
 
-*   Type: `string`
+* Type: `string`
 
-*   can be null
+* can be null
 
-*   defined in: [PINS LPA](pins-lpa-properties-address1.md "pins-lpa.schema.json#/properties/address1")
+* defined in: [PINS LPA](pins-lpa-properties-address1.md "pins-lpa.schema.json#/properties/address1")
 
 ### address1 Type
 
@@ -117,13 +117,13 @@ Second line of LPA address
 
 `address2`
 
-*   is optional
+* is optional
 
-*   Type: `string`
+* Type: `string`
 
-*   can be null
+* can be null
 
-*   defined in: [PINS LPA](pins-lpa-properties-address2.md "pins-lpa.schema.json#/properties/address2")
+* defined in: [PINS LPA](pins-lpa-properties-address2.md "pins-lpa.schema.json#/properties/address2")
 
 ### address2 Type
 
@@ -135,13 +135,13 @@ LPA address city or town
 
 `city`
 
-*   is optional
+* is optional
 
-*   Type: `string`
+* Type: `string`
 
-*   can be null
+* can be null
 
-*   defined in: [PINS LPA](pins-lpa-properties-city.md "pins-lpa.schema.json#/properties/city")
+* defined in: [PINS LPA](pins-lpa-properties-city.md "pins-lpa.schema.json#/properties/city")
 
 ### city Type
 
@@ -153,13 +153,13 @@ LPA address county
 
 `county`
 
-*   is optional
+* is optional
 
-*   Type: `string`
+* Type: `string`
 
-*   can be null
+* can be null
 
-*   defined in: [PINS LPA](pins-lpa-properties-county.md "pins-lpa.schema.json#/properties/county")
+* defined in: [PINS LPA](pins-lpa-properties-county.md "pins-lpa.schema.json#/properties/county")
 
 ### county Type
 
@@ -171,13 +171,13 @@ LPA address postcode
 
 `postcode`
 
-*   is optional
+* is optional
 
-*   Type: `string`
+* Type: `string`
 
-*   can be null
+* can be null
 
-*   defined in: [PINS LPA](pins-lpa-properties-postcode.md "pins-lpa.schema.json#/properties/postcode")
+* defined in: [PINS LPA](pins-lpa-properties-postcode.md "pins-lpa.schema.json#/properties/postcode")
 
 ### postcode Type
 
@@ -189,13 +189,13 @@ LPA address country
 
 `country`
 
-*   is optional
+* is optional
 
-*   Type: `string`
+* Type: `string`
 
-*   can be null
+* can be null
 
-*   defined in: [PINS LPA](pins-lpa-properties-country.md "pins-lpa.schema.json#/properties/country")
+* defined in: [PINS LPA](pins-lpa-properties-country.md "pins-lpa.schema.json#/properties/country")
 
 ### country Type
 
@@ -207,13 +207,13 @@ LPA telephine number
 
 `telephoneNumber`
 
-*   is optional
+* is optional
 
-*   Type: `string`
+* Type: `string`
 
-*   can be null
+* can be null
 
-*   defined in: [PINS LPA](pins-lpa-properties-telephonenumber.md "pins-lpa.schema.json#/properties/telephoneNumber")
+* defined in: [PINS LPA](pins-lpa-properties-telephonenumber.md "pins-lpa.schema.json#/properties/telephoneNumber")
 
 ### telephoneNumber Type
 
@@ -225,13 +225,13 @@ LPA fax number
 
 `fax`
 
-*   is optional
+* is optional
 
-*   Type: `string`
+* Type: `string`
 
-*   can be null
+* can be null
 
-*   defined in: [PINS LPA](pins-lpa-properties-fax.md "pins-lpa.schema.json#/properties/fax")
+* defined in: [PINS LPA](pins-lpa-properties-fax.md "pins-lpa.schema.json#/properties/fax")
 
 ### fax Type
 
@@ -243,13 +243,13 @@ LPA email address
 
 `emailAddress`
 
-*   is optional
+* is optional
 
-*   Type: `string`
+* Type: `string`
 
-*   can be null
+* can be null
 
-*   defined in: [PINS LPA](pins-lpa-properties-emailaddress.md "pins-lpa.schema.json#/properties/emailAddress")
+* defined in: [PINS LPA](pins-lpa-properties-emailaddress.md "pins-lpa.schema.json#/properties/emailAddress")
 
 ### emailAddress Type
 

@@ -1,0 +1,49 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "gettimesheets-response.schema.json",
+  "title": "Get Timesheets API response",
+  "description": "Schema defining the data returned by the DaRT API",
+  "type": "object",
+  "additionalProperties": true,
+  "required": [
+    "caseReference",
+    "applicationReference"
+  ],
+  "properties": {
+      "caseReference": {
+        "type": "integer",
+        "examples": ["6002744"],
+        "description": "External case identifier"
+      },
+      "applicationReference": {
+        "type": "string",
+        "examples": ["12345"],
+        "description": "The unique identifier of the application"
+      },
+      "siteAddressLine1": {
+        "type": "string",
+        "examples": ["21 The Pavement"],
+        "description": "First line of case site address"
+      },
+      "siteAddressLine2": {
+        "type": "string",
+        "examples": ["Shotesham Road"],
+        "description": "Second line of case site address"
+      },
+      "siteAddressTown": {
+        "type": "string",
+        "examples": ["Bristol"],
+        "description": "Town / City of the site address"
+      },
+      "siteAddressCounty": {
+        "type": "string",
+        "examples": ["Wandsworth"],
+        "description": "County of the site address"
+      },
+      "siteAddressPostcode": {
+        "type": "string",
+        "examples": ["SW4 0HY"],
+        "description": "Postal code of the site address"
+      }
+    }
+}

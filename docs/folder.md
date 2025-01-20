@@ -20,13 +20,13 @@ The unique identifier within the Back Office.
 
 `id`
 
-*   is required
+* is required
 
-*   Type: `integer`
+* Type: `integer`
 
-*   cannot be null
+* cannot be null
 
-*   defined in: [Folder](folder-properties-id.md "folder.schema.json#/properties/id")
+* defined in: [Folder](folder-properties-id.md "folder.schema.json#/properties/id")
 
 ### id Type
 
@@ -38,13 +38,13 @@ The case reference this folder belongs to.
 
 `caseReference`
 
-*   is required
+* is required
 
-*   Type: `string`
+* Type: `string`
 
-*   cannot be null
+* cannot be null
 
-*   defined in: [Folder](folder-properties-casereference.md "folder.schema.json#/properties/caseReference")
+* defined in: [Folder](folder-properties-casereference.md "folder.schema.json#/properties/caseReference")
 
 ### caseReference Type
 
@@ -56,13 +56,13 @@ Folder display name in English.
 
 `displayNameEnglish`
 
-*   is required
+* is required
 
-*   Type: `string`
+* Type: `string`
 
-*   cannot be null
+* cannot be null
 
-*   defined in: [Folder](folder-properties-displaynameenglish.md "folder.schema.json#/properties/displayNameEnglish")
+* defined in: [Folder](folder-properties-displaynameenglish.md "folder.schema.json#/properties/displayNameEnglish")
 
 ### displayNameEnglish Type
 
@@ -74,13 +74,13 @@ Folder display name in Welsh.
 
 `displayNameWelsh`
 
-*   is required
+* is required
 
-*   Type: `string`
+* Type: `string`
 
-*   can be null
+* can be null
 
-*   defined in: [Folder](folder-properties-displaynamewelsh.md "folder.schema.json#/properties/displayNameWelsh")
+* defined in: [Folder](folder-properties-displaynamewelsh.md "folder.schema.json#/properties/displayNameWelsh")
 
 ### displayNameWelsh Type
 
@@ -92,13 +92,13 @@ Optional parent folder ID.
 
 `parentFolderId`
 
-*   is required
+* is required
 
-*   Type: `integer`
+* Type: `integer`
 
-*   can be null
+* can be null
 
-*   defined in: [Folder](folder-properties-parentfolderid.md "folder.schema.json#/properties/parentFolderId")
+* defined in: [Folder](folder-properties-parentfolderid.md "folder.schema.json#/properties/parentFolderId")
 
 ### parentFolderId Type
 
@@ -110,13 +110,13 @@ Optional parent folder ID.
 
 `caseStage`
 
-*   is required
+* is required
 
-*   Type: `string`
+* Type: `string`
 
-*   can be null
+* can be null
 
-*   defined in: [Folder](folder-properties-casestage.md "folder.schema.json#/properties/caseStage")
+* defined in: [Folder](folder-properties-casestage.md "folder.schema.json#/properties/caseStage")
 
 ### caseStage Type
 

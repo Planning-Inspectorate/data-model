@@ -21,13 +21,13 @@ The unique identifier within the Back Office. Ignored as part of register-nsip-s
 
 `subscriptionId`
 
-*   is required
+* is required
 
-*   Type: `integer`
+* Type: `integer`
 
-*   can be null
+* can be null
 
-*   defined in: [nsip-subscription](nsip-subscription-properties-subscriptionid.md "nsip-subscription.schema.json#/properties/subscriptionId")
+* defined in: [nsip-subscription](nsip-subscription-properties-subscriptionid.md "nsip-subscription.schema.json#/properties/subscriptionId")
 
 ### subscriptionId Type
 
@@ -39,13 +39,13 @@ the case reference the subscription relates to
 
 `caseReference`
 
-*   is required
+* is required
 
-*   Type: `string`
+* Type: `string`
 
-*   cannot be null
+* cannot be null
 
-*   defined in: [nsip-subscription](nsip-subscription-properties-casereference.md "nsip-subscription.schema.json#/properties/caseReference")
+* defined in: [nsip-subscription](nsip-subscription-properties-casereference.md "nsip-subscription.schema.json#/properties/caseReference")
 
 ### caseReference Type
 
@@ -57,13 +57,13 @@ the case reference the subscription relates to
 
 `emailAddress`
 
-*   is required
+* is required
 
-*   Type: `string`
+* Type: `string`
 
-*   cannot be null
+* cannot be null
 
-*   defined in: [nsip-subscription](nsip-subscription-properties-emailaddress.md "nsip-subscription.schema.json#/properties/emailAddress")
+* defined in: [nsip-subscription](nsip-subscription-properties-emailaddress.md "nsip-subscription.schema.json#/properties/emailAddress")
 
 ### emailAddress Type
 
@@ -85,13 +85,13 @@ which update does the subscriber want to get notified of. For multiple types, us
 
 `subscriptionType`
 
-*   is required
+* is required
 
-*   Type: `string`
+* Type: `string`
 
-*   cannot be null
+* cannot be null
 
-*   defined in: [nsip-subscription](nsip-subscription-properties-subscriptiontype.md "nsip-subscription.schema.json#/properties/subscriptionType")
+* defined in: [nsip-subscription](nsip-subscription-properties-subscriptiontype.md "nsip-subscription.schema.json#/properties/subscriptionType")
 
 ### subscriptionType Type
 
@@ -114,13 +114,13 @@ The date to start getting updates
 
 `startDate`
 
-*   is required
+* is required
 
-*   Type: `string`
+* Type: `string`
 
-*   can be null
+* can be null
 
-*   defined in: [nsip-subscription](nsip-subscription-properties-startdate.md "nsip-subscription.schema.json#/properties/startDate")
+* defined in: [nsip-subscription](nsip-subscription-properties-startdate.md "nsip-subscription.schema.json#/properties/startDate")
 
 ### startDate Type
 
@@ -136,13 +136,13 @@ The date to stop getting updates
 
 `endDate`
 
-*   is required
+* is required
 
-*   Type: `string`
+* Type: `string`
 
-*   can be null
+* can be null
 
-*   defined in: [nsip-subscription](nsip-subscription-properties-enddate.md "nsip-subscription.schema.json#/properties/endDate")
+* defined in: [nsip-subscription](nsip-subscription-properties-enddate.md "nsip-subscription.schema.json#/properties/endDate")
 
 ### endDate Type
 
@@ -158,13 +158,13 @@ The date to stop getting updates
 
 `language`
 
-*   is required
+* is required
 
-*   Type: `string`
+* Type: `string`
 
-*   can be null
+* can be null
 
-*   defined in: [nsip-subscription](nsip-subscription-properties-language.md "nsip-subscription.schema.json#/properties/language")
+* defined in: [nsip-subscription](nsip-subscription-properties-language.md "nsip-subscription.schema.json#/properties/language")
 
 ### language Type
 

@@ -19,13 +19,13 @@ The employee's unique identifier
 
 `employeeId`
 
-*   is required
+* is required
 
-*   Type: `string`
+* Type: `string`
 
-*   cannot be null
+* cannot be null
 
-*   defined in: [Entra ID User Objects](entraid-properties-employeeid.md "entraid.schema.json#/properties/employeeId")
+* defined in: [Entra ID User Objects](entraid-properties-employeeid.md "entraid.schema.json#/properties/employeeId")
 
 ### employeeId Type
 
@@ -37,13 +37,13 @@ The unique identifier within the EntraID
 
 `id`
 
-*   is required
+* is required
 
-*   Type: `string`
+* Type: `string`
 
-*   cannot be null
+* cannot be null
 
-*   defined in: [Entra ID User Objects](entraid-properties-id.md "entraid.schema.json#/properties/id")
+* defined in: [Entra ID User Objects](entraid-properties-id.md "entraid.schema.json#/properties/id")
 
 ### id Type
 
@@ -55,13 +55,13 @@ The employee's given name
 
 `givenName`
 
-*   is required
+* is required
 
-*   Type: `string`
+* Type: `string`
 
-*   cannot be null
+* cannot be null
 
-*   defined in: [Entra ID User Objects](entraid-properties-givenname.md "entraid.schema.json#/properties/givenName")
+* defined in: [Entra ID User Objects](entraid-properties-givenname.md "entraid.schema.json#/properties/givenName")
 
 ### givenName Type
 
@@ -73,13 +73,13 @@ The employee's surname
 
 `surname`
 
-*   is required
+* is required
 
-*   Type: `string`
+* Type: `string`
 
-*   cannot be null
+* cannot be null
 
-*   defined in: [Entra ID User Objects](entraid-properties-surname.md "entraid.schema.json#/properties/surname")
+* defined in: [Entra ID User Objects](entraid-properties-surname.md "entraid.schema.json#/properties/surname")
 
 ### surname Type
 
@@ -91,13 +91,13 @@ The employee's email address
 
 `userPrincipalName`
 
-*   is required
+* is required
 
-*   Type: `string`
+* Type: `string`
 
-*   cannot be null
+* cannot be null
 
-*   defined in: [Entra ID User Objects](entraid-properties-userprincipalname.md "entraid.schema.json#/properties/userPrincipalName")
+* defined in: [Entra ID User Objects](entraid-properties-userprincipalname.md "entraid.schema.json#/properties/userPrincipalName")
 
 ### userPrincipalName Type
 

@@ -32,13 +32,13 @@
 
 `representationId`
 
-*   is required
+* is required
 
-*   Type: `integer`
+* Type: `integer`
 
-*   cannot be null
+* cannot be null
 
-*   defined in: [Representation](nsip-representation-properties-representationid.md "nsip-representation.schema.json#/properties/representationId")
+* defined in: [Representation](nsip-representation-properties-representationid.md "nsip-representation.schema.json#/properties/representationId")
 
 ### representationId Type
 
@@ -50,13 +50,13 @@
 
 `referenceId`
 
-*   is required
+* is required
 
-*   Type: `string`
+* Type: `string`
 
-*   can be null
+* can be null
 
-*   defined in: [Representation](nsip-representation-properties-referenceid.md "nsip-representation.schema.json#/properties/referenceId")
+* defined in: [Representation](nsip-representation-properties-referenceid.md "nsip-representation.schema.json#/properties/referenceId")
 
 ### referenceId Type
 
@@ -74,13 +74,13 @@
 
 `examinationLibraryRef`
 
-*   is required
+* is required
 
-*   Type: `string`
+* Type: `string`
 
-*   can be null
+* can be null
 
-*   defined in: [Representation](nsip-representation-properties-examinationlibraryref.md "nsip-representation.schema.json#/properties/examinationLibraryRef")
+* defined in: [Representation](nsip-representation-properties-examinationlibraryref.md "nsip-representation.schema.json#/properties/examinationLibraryRef")
 
 ### examinationLibraryRef Type
 
@@ -98,13 +98,13 @@
 
 `caseRef`
 
-*   is required
+* is required
 
-*   Type: `string`
+* Type: `string`
 
-*   cannot be null
+* cannot be null
 
-*   defined in: [Representation](nsip-representation-properties-caseref.md "nsip-representation.schema.json#/properties/caseRef")
+* defined in: [Representation](nsip-representation-properties-caseref.md "nsip-representation.schema.json#/properties/caseRef")
 
 ### caseRef Type
 
@@ -116,13 +116,13 @@ The unique identifier within the Back Office. This is not the same as the case r
 
 `caseId`
 
-*   is required
+* is required
 
-*   Type: `integer`
+* Type: `integer`
 
-*   can be null
+* can be null
 
-*   defined in: [Representation](nsip-representation-properties-caseid.md "nsip-representation.schema.json#/properties/caseId")
+* defined in: [Representation](nsip-representation-properties-caseid.md "nsip-representation.schema.json#/properties/caseId")
 
 ### caseId Type
 
@@ -140,13 +140,13 @@ The unique identifier within the Back Office. This is not the same as the case r
 
 `status`
 
-*   is required
+* is required
 
-*   Type: `string`
+* Type: `string`
 
-*   can be null
+* can be null
 
-*   defined in: [Representation](nsip-representation-properties-status.md "nsip-representation.schema.json#/properties/status")
+* defined in: [Representation](nsip-representation-properties-status.md "nsip-representation.schema.json#/properties/status")
 
 ### status Type
 
@@ -174,13 +174,13 @@ The unique identifier within the Back Office. This is not the same as the case r
 
 `originalRepresentation`
 
-*   is required
+* is required
 
-*   Type: `string`
+* Type: `string`
 
-*   cannot be null
+* cannot be null
 
-*   defined in: [Representation](nsip-representation-properties-originalrepresentation.md "nsip-representation.schema.json#/properties/originalRepresentation")
+* defined in: [Representation](nsip-representation-properties-originalrepresentation.md "nsip-representation.schema.json#/properties/originalRepresentation")
 
 ### originalRepresentation Type
 
@@ -192,13 +192,13 @@ The unique identifier within the Back Office. This is not the same as the case r
 
 `redacted`
 
-*   is required
+* is required
 
-*   Type: `boolean`
+* Type: `boolean`
 
-*   can be null
+* can be null
 
-*   defined in: [Representation](nsip-representation-properties-redacted.md "nsip-representation.schema.json#/properties/redacted")
+* defined in: [Representation](nsip-representation-properties-redacted.md "nsip-representation.schema.json#/properties/redacted")
 
 ### redacted Type
 
@@ -210,13 +210,13 @@ The unique identifier within the Back Office. This is not the same as the case r
 
 `redactedRepresentation`
 
-*   is required
+* is required
 
-*   Type: `string`
+* Type: `string`
 
-*   can be null
+* can be null
 
-*   defined in: [Representation](nsip-representation-properties-redactedrepresentation.md "nsip-representation.schema.json#/properties/redactedRepresentation")
+* defined in: [Representation](nsip-representation-properties-redactedrepresentation.md "nsip-representation.schema.json#/properties/redactedRepresentation")
 
 ### redactedRepresentation Type
 
@@ -228,13 +228,13 @@ The unique identifier within the Back Office. This is not the same as the case r
 
 `redactedBy`
 
-*   is required
+* is required
 
-*   Type: `string`
+* Type: `string`
 
-*   can be null
+* can be null
 
-*   defined in: [Representation](nsip-representation-properties-redactedby.md "nsip-representation.schema.json#/properties/redactedBy")
+* defined in: [Representation](nsip-representation-properties-redactedby.md "nsip-representation.schema.json#/properties/redactedBy")
 
 ### redactedBy Type
 
@@ -252,13 +252,13 @@ The unique identifier within the Back Office. This is not the same as the case r
 
 `redactedNotes`
 
-*   is required
+* is required
 
-*   Type: `string`
+* Type: `string`
 
-*   can be null
+* can be null
 
-*   defined in: [Representation](nsip-representation-properties-redactednotes.md "nsip-representation.schema.json#/properties/redactedNotes")
+* defined in: [Representation](nsip-representation-properties-redactednotes.md "nsip-representation.schema.json#/properties/redactedNotes")
 
 ### redactedNotes Type
 
@@ -276,13 +276,13 @@ The unique identifier within the Back Office. This is not the same as the case r
 
 `representationFrom`
 
-*   is required
+* is required
 
-*   Type: `string`
+* Type: `string`
 
-*   can be null
+* can be null
 
-*   defined in: [Representation](nsip-representation-properties-representationfrom.md "nsip-representation.schema.json#/properties/representationFrom")
+* defined in: [Representation](nsip-representation-properties-representationfrom.md "nsip-representation.schema.json#/properties/representationFrom")
 
 ### representationFrom Type
 
@@ -305,13 +305,13 @@ ServiceUser Id of the person or organisation being represented
 
 `representedId`
 
-*   is required
+* is required
 
-*   Type: `string`
+* Type: `string`
 
-*   cannot be null
+* cannot be null
 
-*   defined in: [Representation](nsip-representation-properties-representedid.md "nsip-representation.schema.json#/properties/representedId")
+* defined in: [Representation](nsip-representation-properties-representedid.md "nsip-representation.schema.json#/properties/representedId")
 
 ### representedId Type
 
@@ -323,13 +323,13 @@ ServiceUser Id of the person or organisation submitting representation in the ca
 
 `representativeId`
 
-*   is required
+* is required
 
-*   Type: `string`
+* Type: `string`
 
-*   can be null
+* can be null
 
-*   defined in: [Representation](nsip-representation-properties-representativeid.md "nsip-representation.schema.json#/properties/representativeId")
+* defined in: [Representation](nsip-representation-properties-representativeid.md "nsip-representation.schema.json#/properties/representativeId")
 
 ### representativeId Type
 
@@ -341,13 +341,13 @@ ServiceUser Id of the person or organisation submitting representation in the ca
 
 `registerFor`
 
-*   is required
+* is required
 
-*   Type: `string`
+* Type: `string`
 
-*   can be null
+* can be null
 
-*   defined in: [Representation](nsip-representation-properties-registerfor.md "nsip-representation.schema.json#/properties/registerFor")
+* defined in: [Representation](nsip-representation-properties-registerfor.md "nsip-representation.schema.json#/properties/registerFor")
 
 ### registerFor Type
 
@@ -370,13 +370,13 @@ ServiceUser Id of the person or organisation submitting representation in the ca
 
 `representationType`
 
-*   is required
+* is required
 
-*   Type: `string`
+* Type: `string`
 
-*   can be null
+* can be null
 
-*   defined in: [Representation](nsip-representation-properties-representationtype.md "nsip-representation.schema.json#/properties/representationType")
+* defined in: [Representation](nsip-representation-properties-representationtype.md "nsip-representation.schema.json#/properties/representationType")
 
 ### representationType Type
 
@@ -403,13 +403,13 @@ ServiceUser Id of the person or organisation submitting representation in the ca
 
 `dateReceived`
 
-*   is required
+* is required
 
-*   Type: `string`
+* Type: `string`
 
-*   cannot be null
+* cannot be null
 
-*   defined in: [Representation](nsip-representation-properties-datereceived.md "nsip-representation.schema.json#/properties/dateReceived")
+* defined in: [Representation](nsip-representation-properties-datereceived.md "nsip-representation.schema.json#/properties/dateReceived")
 
 ### dateReceived Type
 
@@ -431,13 +431,13 @@ ServiceUser Id of the person or organisation submitting representation in the ca
 
 `attachmentIds`
 
-*   is required
+* is required
 
-*   Type: `string[]`
+* Type: `string[]`
 
-*   cannot be null
+* cannot be null
 
-*   defined in: [Representation](nsip-representation-properties-attachmentids.md "nsip-representation.schema.json#/properties/attachmentIds")
+* defined in: [Representation](nsip-representation-properties-attachmentids.md "nsip-representation.schema.json#/properties/attachmentIds")
 
 ### attachmentIds Type
 

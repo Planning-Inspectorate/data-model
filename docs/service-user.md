@@ -36,13 +36,13 @@ A unique identifier for the entity.
 
 `id`
 
-*   is required
+* is required
 
-*   Type: `string`
+* Type: `string`
 
-*   cannot be null
+* cannot be null
 
-*   defined in: [Service User](service-user-properties-id.md "service-user.schema.json#/properties/id")
+* defined in: [Service User](service-user-properties-id.md "service-user.schema.json#/properties/id")
 
 ### id Type
 
@@ -60,13 +60,13 @@ A formal greeting, e.g., Mr, Mrs, Ms.
 
 `salutation`
 
-*   is required
+* is required
 
-*   Type: `string`
+* Type: `string`
 
-*   can be null
+* can be null
 
-*   defined in: [Service User](service-user-properties-salutation.md "service-user.schema.json#/properties/salutation")
+* defined in: [Service User](service-user-properties-salutation.md "service-user.schema.json#/properties/salutation")
 
 ### salutation Type
 
@@ -84,13 +84,13 @@ The first name of the individual.
 
 `firstName`
 
-*   is required
+* is required
 
-*   Type: `string`
+* Type: `string`
 
-*   can be null
+* can be null
 
-*   defined in: [Service User](service-user-properties-firstname.md "service-user.schema.json#/properties/firstName")
+* defined in: [Service User](service-user-properties-firstname.md "service-user.schema.json#/properties/firstName")
 
 ### firstName Type
 
@@ -108,13 +108,13 @@ The last name of the individual.
 
 `lastName`
 
-*   is required
+* is required
 
-*   Type: `string`
+* Type: `string`
 
-*   can be null
+* can be null
 
-*   defined in: [Service User](service-user-properties-lastname.md "service-user.schema.json#/properties/lastName")
+* defined in: [Service User](service-user-properties-lastname.md "service-user.schema.json#/properties/lastName")
 
 ### lastName Type
 
@@ -132,13 +132,13 @@ The first line of the address.
 
 `addressLine1`
 
-*   is required
+* is required
 
-*   Type: `string`
+* Type: `string`
 
-*   can be null
+* can be null
 
-*   defined in: [Service User](service-user-properties-addressline1.md "service-user.schema.json#/properties/addressLine1")
+* defined in: [Service User](service-user-properties-addressline1.md "service-user.schema.json#/properties/addressLine1")
 
 ### addressLine1 Type
 
@@ -156,13 +156,13 @@ The second line of the address, usually includes suite or apartment number.
 
 `addressLine2`
 
-*   is required
+* is required
 
-*   Type: `string`
+* Type: `string`
 
-*   can be null
+* can be null
 
-*   defined in: [Service User](service-user-properties-addressline2.md "service-user.schema.json#/properties/addressLine2")
+* defined in: [Service User](service-user-properties-addressline2.md "service-user.schema.json#/properties/addressLine2")
 
 ### addressLine2 Type
 
@@ -180,13 +180,13 @@ The town or city of the address.
 
 `addressTown`
 
-*   is required
+* is required
 
-*   Type: `string`
+* Type: `string`
 
-*   can be null
+* can be null
 
-*   defined in: [Service User](service-user-properties-addresstown.md "service-user.schema.json#/properties/addressTown")
+* defined in: [Service User](service-user-properties-addresstown.md "service-user.schema.json#/properties/addressTown")
 
 ### addressTown Type
 
@@ -204,13 +204,13 @@ The county in which the town or city is located.
 
 `addressCounty`
 
-*   is required
+* is required
 
-*   Type: `string`
+* Type: `string`
 
-*   can be null
+* can be null
 
-*   defined in: [Service User](service-user-properties-addresscounty.md "service-user.schema.json#/properties/addressCounty")
+* defined in: [Service User](service-user-properties-addresscounty.md "service-user.schema.json#/properties/addressCounty")
 
 ### addressCounty Type
 
@@ -228,13 +228,13 @@ The postal code for the address.
 
 `postcode`
 
-*   is required
+* is required
 
-*   Type: `string`
+* Type: `string`
 
-*   can be null
+* can be null
 
-*   defined in: [Service User](service-user-properties-postcode.md "service-user.schema.json#/properties/postcode")
+* defined in: [Service User](service-user-properties-postcode.md "service-user.schema.json#/properties/postcode")
 
 ### postcode Type
 
@@ -252,13 +252,13 @@ The country of the address.
 
 `addressCountry`
 
-*   is required
+* is required
 
-*   Type: `string`
+* Type: `string`
 
-*   can be null
+* can be null
 
-*   defined in: [Service User](service-user-properties-addresscountry.md "service-user.schema.json#/properties/addressCountry")
+* defined in: [Service User](service-user-properties-addresscountry.md "service-user.schema.json#/properties/addressCountry")
 
 ### addressCountry Type
 
@@ -276,13 +276,13 @@ The name of the organisation associated with the individual.
 
 `organisation`
 
-*   is required
+* is required
 
-*   Type: `string`
+* Type: `string`
 
-*   can be null
+* can be null
 
-*   defined in: [Service User](service-user-properties-organisation.md "service-user.schema.json#/properties/organisation")
+* defined in: [Service User](service-user-properties-organisation.md "service-user.schema.json#/properties/organisation")
 
 ### organisation Type
 
@@ -300,13 +300,13 @@ The type or nature of the organisation.
 
 `organisationType`
 
-*   is required
+* is required
 
-*   Type: `string`
+* Type: `string`
 
-*   can be null
+* can be null
 
-*   defined in: [Service User](service-user-properties-organisationtype.md "service-user.schema.json#/properties/organisationType")
+* defined in: [Service User](service-user-properties-organisationtype.md "service-user.schema.json#/properties/organisationType")
 
 ### organisationType Type
 
@@ -324,13 +324,13 @@ The individual's role or position within the organisation.
 
 `role`
 
-*   is required
+* is required
 
-*   Type: `string`
+* Type: `string`
 
-*   can be null
+* can be null
 
-*   defined in: [Service User](service-user-properties-role.md "service-user.schema.json#/properties/role")
+* defined in: [Service User](service-user-properties-role.md "service-user.schema.json#/properties/role")
 
 ### role Type
 
@@ -348,13 +348,13 @@ The primary telephone contact number.
 
 `telephoneNumber`
 
-*   is required
+* is required
 
-*   Type: `string`
+* Type: `string`
 
-*   can be null
+* can be null
 
-*   defined in: [Service User](service-user-properties-telephonenumber.md "service-user.schema.json#/properties/telephoneNumber")
+* defined in: [Service User](service-user-properties-telephonenumber.md "service-user.schema.json#/properties/telephoneNumber")
 
 ### telephoneNumber Type
 
@@ -372,13 +372,13 @@ An alternate or secondary phone number.
 
 `otherPhoneNumber`
 
-*   is required
+* is required
 
-*   Type: `string`
+* Type: `string`
 
-*   can be null
+* can be null
 
-*   defined in: [Service User](service-user-properties-otherphonenumber.md "service-user.schema.json#/properties/otherPhoneNumber")
+* defined in: [Service User](service-user-properties-otherphonenumber.md "service-user.schema.json#/properties/otherPhoneNumber")
 
 ### otherPhoneNumber Type
 
@@ -396,13 +396,13 @@ A fax contact number.
 
 `faxNumber`
 
-*   is required
+* is required
 
-*   Type: `string`
+* Type: `string`
 
-*   can be null
+* can be null
 
-*   defined in: [Service User](service-user-properties-faxnumber.md "service-user.schema.json#/properties/faxNumber")
+* defined in: [Service User](service-user-properties-faxnumber.md "service-user.schema.json#/properties/faxNumber")
 
 ### faxNumber Type
 
@@ -420,13 +420,13 @@ The primary email address for contact.
 
 `emailAddress`
 
-*   is required
+* is required
 
-*   Type: `string`
+* Type: `string`
 
-*   can be null
+* can be null
 
-*   defined in: [Service User](service-user-properties-emailaddress.md "service-user.schema.json#/properties/emailAddress")
+* defined in: [Service User](service-user-properties-emailaddress.md "service-user.schema.json#/properties/emailAddress")
 
 ### emailAddress Type
 
@@ -444,13 +444,13 @@ Website address or URL.
 
 `webAddress`
 
-*   is required
+* is required
 
-*   Type: `string`
+* Type: `string`
 
-*   can be null
+* can be null
 
-*   defined in: [Service User](service-user-properties-webaddress.md "service-user.schema.json#/properties/webAddress")
+* defined in: [Service User](service-user-properties-webaddress.md "service-user.schema.json#/properties/webAddress")
 
 ### webAddress Type
 
@@ -468,13 +468,13 @@ Type or category of the service user.
 
 `serviceUserType`
 
-*   is required
+* is required
 
-*   Type: `string`
+* Type: `string`
 
-*   cannot be null
+* cannot be null
 
-*   defined in: [Service User](service-user-properties-serviceusertype.md "service-user.schema.json#/properties/serviceUserType")
+* defined in: [Service User](service-user-properties-serviceusertype.md "service-user.schema.json#/properties/serviceUserType")
 
 ### serviceUserType Type
 
@@ -500,13 +500,13 @@ Reference number for a particular case or incident.
 
 `caseReference`
 
-*   is required
+* is required
 
-*   Type: `string`
+* Type: `string`
 
-*   cannot be null
+* cannot be null
 
-*   defined in: [Service User](service-user-properties-casereference.md "service-user.schema.json#/properties/caseReference")
+* defined in: [Service User](service-user-properties-casereference.md "service-user.schema.json#/properties/caseReference")
 
 ### caseReference Type
 
@@ -524,13 +524,13 @@ The originating system from where the data was sourced.
 
 `sourceSystem`
 
-*   is required
+* is required
 
-*   Type: `string`
+* Type: `string`
 
-*   cannot be null
+* cannot be null
 
-*   defined in: [Service User](service-user-properties-sourcesystem.md "service-user.schema.json#/properties/sourceSystem")
+* defined in: [Service User](service-user-properties-sourcesystem.md "service-user.schema.json#/properties/sourceSystem")
 
 ### sourceSystem Type
 
@@ -552,13 +552,13 @@ Unique identifier from the source system.
 
 `sourceSuid`
 
-*   is required
+* is required
 
-*   Type: `string`
+* Type: `string`
 
-*   cannot be null
+* cannot be null
 
-*   defined in: [Service User](service-user-properties-sourcesuid.md "service-user.schema.json#/properties/sourceSuid")
+* defined in: [Service User](service-user-properties-sourcesuid.md "service-user.schema.json#/properties/sourceSuid")
 
 ### sourceSuid Type
 

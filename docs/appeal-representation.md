@@ -9,7 +9,7 @@
 | [representationId](#representationid)                               | `string`  | Required | cannot be null | [Appeal Representation](appeal-representation-properties-representationid.md "appeal-representation.schema.json#/properties/representationId")                               |
 | [caseId](#caseid)                                                   | `integer` | Required | can be null    | [Appeal Representation](appeal-representation-properties-caseid.md "appeal-representation.schema.json#/properties/caseId")                                                   |
 | [caseReference](#casereference)                                     | `string`  | Required | cannot be null | [Appeal Representation](appeal-representation-properties-casereference.md "appeal-representation.schema.json#/properties/caseReference")                                     |
-| [status](#status)                                                   | `string`  | Required | can be null    | [Appeal Representation](appeal-representation-properties-status.md "appeal-representation.schema.json#/properties/status")                                                   |
+| [representationStatus](#representationstatus)                       | `string`  | Required | can be null    | [Appeal Representation](appeal-representation-properties-representationstatus.md "appeal-representation.schema.json#/properties/representationStatus")                       |
 | [originalRepresentation](#originalrepresentation)                   | `string`  | Required | can be null    | [Appeal Representation](appeal-representation-properties-originalrepresentation.md "appeal-representation.schema.json#/properties/originalRepresentation")                   |
 | [redacted](#redacted)                                               | `boolean` | Required | can be null    | [Appeal Representation](appeal-representation-properties-redacted.md "appeal-representation.schema.json#/properties/redacted")                                               |
 | [redactedRepresentation](#redactedrepresentation)                   | `string`  | Required | can be null    | [Appeal Representation](appeal-representation-properties-redactedrepresentation.md "appeal-representation.schema.json#/properties/redactedRepresentation")                   |
@@ -97,13 +97,13 @@ External case identifier
 "7002471"
 ```
 
-## status
+## representationStatus
 
 Status of the representation
 
 > BO workflow should validate or withdraw a representation.Enumerated list expected to change.
 
-`status`
+`representationStatus`
 
 * is required
 
@@ -111,13 +111,13 @@ Status of the representation
 
 * can be null
 
-* defined in: [Appeal Representation](appeal-representation-properties-status.md "appeal-representation.schema.json#/properties/status")
+* defined in: [Appeal Representation](appeal-representation-properties-representationstatus.md "appeal-representation.schema.json#/properties/representationStatus")
 
-### status Type
+### representationStatus Type
 
 `string`
 
-### status Constraints
+### representationStatus Constraints
 
 **enum**: the value of this property must be equal to one of the following values:
 

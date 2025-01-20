@@ -628,7 +628,7 @@ export interface AppealRepresentation {
   /**
    * Status of the representation
    */
-  status:
+  representationStatus:
     | 'awaiting_review'
     | 'referred'
     | 'valid'

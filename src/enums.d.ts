@@ -230,6 +230,18 @@ export const APPEAL_REDACTED_STATUS = {
   REDACTED: 'redacted',
 };
 
+export const APPEAL_REPRESENTATION_STATUS = {
+  ARCHIVED: 'archived',
+  AWAITING_REVIEW: 'awaiting_review',
+  DRAFT: 'draft',
+  INVALID: 'invalid',
+  INVALID_INCOMPLETE: 'invalid_incomplete',
+  PUBLISHED: 'published',
+  REFERRED: 'referred',
+  VALID: 'valid',
+  WITHDRAWN: 'withdrawn',
+};
+
 export const APPEAL_REPRESENTATION_TYPE = {
   COMMENT: 'comment',
   FINAL_COMMENT: 'final_comment',
@@ -247,18 +259,6 @@ export const APPEAL_SOURCE_SYSTEM = {
   BACK_OFFICE_APPEALS: 'back-office-appeals',
   HORIZON: 'horizon',
   SHAREPOINT: 'sharepoint',
-};
-
-export const APPEAL_STATUS = {
-  ARCHIVED: 'archived',
-  AWAITING_REVIEW: 'awaiting_review',
-  DRAFT: 'draft',
-  INVALID: 'invalid',
-  INVALID_INCOMPLETE: 'invalid_incomplete',
-  PUBLISHED: 'published',
-  REFERRED: 'referred',
-  VALID: 'valid',
-  WITHDRAWN: 'withdrawn',
 };
 
 export const APPEAL_VIRUS_CHECK_STATUS = {

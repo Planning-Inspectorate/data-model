@@ -10,37 +10,37 @@
       "caseReference": {
         "type": "integer",
         "examples": ["6002744"],
-        "description": "description"
+        "description": "External case identifier"
       },
       "applicationReference": {
         "type": "string",
         "examples": ["12345"],
-        "description": "description"
+        "description": "The unique identifier of the application"
       },
       "siteAddressLine1": {
         "type": "string",
         "examples": ["21 The Pavement"],
-        "description": "description"
+        "description": "First line of case site address"
       },
       "siteAddressLine2": {
         "type": "string",
         "examples": ["Shotesham Road"],
-        "description": "description"
+        "description": "Second line of case site address"
       },
       "siteAddressTown": {
         "type": "string",
         "examples": ["Bristol"],
-        "description": "description"
+        "description": "Town / City of the site address"
       },
       "siteAddressCounty": {
         "type": "string",
         "examples": ["Wandsworth"],
-        "description": "description"
+        "description": "County of the site address"
       },
       "siteAddressPostcode": {
         "type": "string",
         "examples": ["SW4 0HY"],
-        "description": "description"
+        "description": "Postal code of the site address"
       }
     }
 }

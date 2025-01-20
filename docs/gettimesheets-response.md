@@ -17,7 +17,7 @@
 
 ## caseReference
 
-description
+External case identifier
 
 `caseReference`
 
@@ -41,7 +41,7 @@ description
 
 ## applicationReference
 
-description
+The unique identifier of the application
 
 `applicationReference`
 
@@ -65,7 +65,7 @@ description
 
 ## siteAddressLine1
 
-description
+First line of case site address
 
 `siteAddressLine1`
 
@@ -89,7 +89,7 @@ description
 
 ## siteAddressLine2
 
-description
+Second line of case site address
 
 `siteAddressLine2`
 
@@ -113,7 +113,7 @@ description
 
 ## siteAddressTown
 
-description
+Town / City of the site address
 
 `siteAddressTown`
 
@@ -137,7 +137,7 @@ description
 
 ## siteAddressCounty
 
-description
+County of the site address
 
 `siteAddressCounty`
 
@@ -161,7 +161,7 @@ description
 
 ## siteAddressPostcode
 
-description
+Postal code of the site address
 
 `siteAddressPostcode`
 

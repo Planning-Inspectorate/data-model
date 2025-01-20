@@ -10,63 +10,63 @@
 | [caseReference](#casereference)                                     | `integer` | Optional | cannot be null | [DaRT API response](dart-response-properties-casereference.md "dart-response.schema.json#/properties/caseReference")                                     |
 | [caseStatus](#casestatus)                                           | `string`  | Optional | cannot be null | [DaRT API response](dart-response-properties-casestatus.md "dart-response.schema.json#/properties/caseStatus")                                           |
 | [caseType](#casetype)                                               | `string`  | Optional | cannot be null | [DaRT API response](dart-response-properties-casetype.md "dart-response.schema.json#/properties/caseType")                                               |
-| [caseProcedure](#caseprocedure)                                     | `string`  | Optional | cannot be null | [DaRT API response](dart-response-properties-caseprocedure.md "dart-response.schema.json#/properties/caseProcedure")                                     |
-| [lpaCode](#lpacode)                                                 | `string`  | Optional | cannot be null | [DaRT API response](dart-response-properties-lpacode.md "dart-response.schema.json#/properties/lpaCode")                                                 |
-| [lpaName](#lpaname)                                                 | `string`  | Optional | cannot be null | [DaRT API response](dart-response-properties-lpaname.md "dart-response.schema.json#/properties/lpaName")                                                 |
-| [allocationLevel](#allocationlevel)                                 | `string`  | Optional | cannot be null | [DaRT API response](dart-response-properties-allocationlevel.md "dart-response.schema.json#/properties/allocationLevel")                                 |
-| [allocationBand](#allocationband)                                   | `integer` | Optional | cannot be null | [DaRT API response](dart-response-properties-allocationband.md "dart-response.schema.json#/properties/allocationBand")                                   |
-| [caseSpecialisms](#casespecialisms)                                 | `array`   | Optional | cannot be null | [DaRT API response](dart-response-properties-casespecialisms.md "dart-response.schema.json#/properties/caseSpecialisms")                                 |
+| [caseProcedure](#caseprocedure)                                     | `string`  | Optional | can be null    | [DaRT API response](dart-response-properties-caseprocedure.md "dart-response.schema.json#/properties/caseProcedure")                                     |
+| [lpaCode](#lpacode)                                                 | `string`  | Optional | can be null    | [DaRT API response](dart-response-properties-lpacode.md "dart-response.schema.json#/properties/lpaCode")                                                 |
+| [lpaName](#lpaname)                                                 | `string`  | Optional | can be null    | [DaRT API response](dart-response-properties-lpaname.md "dart-response.schema.json#/properties/lpaName")                                                 |
+| [allocationLevel](#allocationlevel)                                 | `string`  | Optional | can be null    | [DaRT API response](dart-response-properties-allocationlevel.md "dart-response.schema.json#/properties/allocationLevel")                                 |
+| [allocationBand](#allocationband)                                   | `string`  | Optional | can be null    | [DaRT API response](dart-response-properties-allocationband.md "dart-response.schema.json#/properties/allocationBand")                                   |
+| [caseSpecialisms](#casespecialisms)                                 | `array`   | Optional | can be null    | [DaRT API response](dart-response-properties-casespecialisms.md "dart-response.schema.json#/properties/caseSpecialisms")                                 |
 | [caseSubmittedDate](#casesubmitteddate)                             | `string`  | Optional | cannot be null | [DaRT API response](dart-response-properties-casesubmitteddate.md "dart-response.schema.json#/properties/caseSubmittedDate")                             |
 | [caseCreatedDate](#casecreateddate)                                 | `string`  | Optional | cannot be null | [DaRT API response](dart-response-properties-casecreateddate.md "dart-response.schema.json#/properties/caseCreatedDate")                                 |
 | [caseUpdatedDate](#caseupdateddate)                                 | `string`  | Optional | cannot be null | [DaRT API response](dart-response-properties-caseupdateddate.md "dart-response.schema.json#/properties/caseUpdatedDate")                                 |
-| [caseValidDate](#casevaliddate)                                     | `string`  | Optional | cannot be null | [DaRT API response](dart-response-properties-casevaliddate.md "dart-response.schema.json#/properties/caseValidDate")                                     |
-| [caseValidationDate](#casevalidationdate)                           | `string`  | Optional | cannot be null | [DaRT API response](dart-response-properties-casevalidationdate.md "dart-response.schema.json#/properties/caseValidationDate")                           |
-| [caseValidationOutcome](#casevalidationoutcome)                     | `string`  | Optional | cannot be null | [DaRT API response](dart-response-properties-casevalidationoutcome.md "dart-response.schema.json#/properties/caseValidationOutcome")                     |
-| [caseValidationInvalidDetails](#casevalidationinvaliddetails)       | `array`   | Optional | cannot be null | [DaRT API response](dart-response-properties-casevalidationinvaliddetails.md "dart-response.schema.json#/properties/caseValidationInvalidDetails")       |
-| [caseValidationIncompleteDetails](#casevalidationincompletedetails) | `array`   | Optional | cannot be null | [DaRT API response](dart-response-properties-casevalidationincompletedetails.md "dart-response.schema.json#/properties/caseValidationIncompleteDetails") |
-| [caseExtensionDate](#caseextensiondate)                             | `string`  | Optional | cannot be null | [DaRT API response](dart-response-properties-caseextensiondate.md "dart-response.schema.json#/properties/caseExtensionDate")                             |
-| [caseStartedDate](#casestarteddate)                                 | `string`  | Optional | cannot be null | [DaRT API response](dart-response-properties-casestarteddate.md "dart-response.schema.json#/properties/caseStartedDate")                                 |
-| [casePublishedDate](#casepublisheddate)                             | `string`  | Optional | cannot be null | [DaRT API response](dart-response-properties-casepublisheddate.md "dart-response.schema.json#/properties/casePublishedDate")                             |
-| [linkedCaseStatus](#linkedcasestatus)                               | `string`  | Optional | cannot be null | [DaRT API response](dart-response-properties-linkedcasestatus.md "dart-response.schema.json#/properties/linkedCaseStatus")                               |
-| [leadCaseReference](#leadcasereference)                             | `string`  | Optional | cannot be null | [DaRT API response](dart-response-properties-leadcasereference.md "dart-response.schema.json#/properties/leadCaseReference")                             |
-| [caseWithdrawnDate](#casewithdrawndate)                             | `string`  | Optional | cannot be null | [DaRT API response](dart-response-properties-casewithdrawndate.md "dart-response.schema.json#/properties/caseWithdrawnDate")                             |
-| [caseTransferredDate](#casetransferreddate)                         | `string`  | Optional | cannot be null | [DaRT API response](dart-response-properties-casetransferreddate.md "dart-response.schema.json#/properties/caseTransferredDate")                         |
-| [transferredCaseClosedDate](#transferredcasecloseddate)             | `string`  | Optional | cannot be null | [DaRT API response](dart-response-properties-transferredcasecloseddate.md "dart-response.schema.json#/properties/transferredCaseClosedDate")             |
-| [caseDecisionOutcomeDate](#casedecisionoutcomedate)                 | `string`  | Optional | cannot be null | [DaRT API response](dart-response-properties-casedecisionoutcomedate.md "dart-response.schema.json#/properties/caseDecisionOutcomeDate")                 |
-| [caseDecisionPublishedDate](#casedecisionpublisheddate)             | `string`  | Optional | cannot be null | [DaRT API response](dart-response-properties-casedecisionpublisheddate.md "dart-response.schema.json#/properties/caseDecisionPublishedDate")             |
-| [caseDecisionOutcome](#casedecisionoutcome)                         | `string`  | Optional | cannot be null | [DaRT API response](dart-response-properties-casedecisionoutcome.md "dart-response.schema.json#/properties/caseDecisionOutcome")                         |
-| [caseCompletedDate](#casecompleteddate)                             | `string`  | Optional | cannot be null | [DaRT API response](dart-response-properties-casecompleteddate.md "dart-response.schema.json#/properties/caseCompletedDate")                             |
-| [enforcementNotice](#enforcementnotice)                             | `string`  | Optional | cannot be null | [DaRT API response](dart-response-properties-enforcementnotice.md "dart-response.schema.json#/properties/enforcementNotice")                             |
+| [caseValidDate](#casevaliddate)                                     | `string`  | Optional | can be null    | [DaRT API response](dart-response-properties-casevaliddate.md "dart-response.schema.json#/properties/caseValidDate")                                     |
+| [caseValidationDate](#casevalidationdate)                           | `string`  | Optional | can be null    | [DaRT API response](dart-response-properties-casevalidationdate.md "dart-response.schema.json#/properties/caseValidationDate")                           |
+| [caseValidationOutcome](#casevalidationoutcome)                     | `string`  | Optional | can be null    | [DaRT API response](dart-response-properties-casevalidationoutcome.md "dart-response.schema.json#/properties/caseValidationOutcome")                     |
+| [caseValidationInvalidDetails](#casevalidationinvaliddetails)       | `array`   | Optional | can be null    | [DaRT API response](dart-response-properties-casevalidationinvaliddetails.md "dart-response.schema.json#/properties/caseValidationInvalidDetails")       |
+| [caseValidationIncompleteDetails](#casevalidationincompletedetails) | `array`   | Optional | can be null    | [DaRT API response](dart-response-properties-casevalidationincompletedetails.md "dart-response.schema.json#/properties/caseValidationIncompleteDetails") |
+| [caseExtensionDate](#caseextensiondate)                             | `string`  | Optional | can be null    | [DaRT API response](dart-response-properties-caseextensiondate.md "dart-response.schema.json#/properties/caseExtensionDate")                             |
+| [caseStartedDate](#casestarteddate)                                 | `string`  | Optional | can be null    | [DaRT API response](dart-response-properties-casestarteddate.md "dart-response.schema.json#/properties/caseStartedDate")                                 |
+| [casePublishedDate](#casepublisheddate)                             | `string`  | Optional | can be null    | [DaRT API response](dart-response-properties-casepublisheddate.md "dart-response.schema.json#/properties/casePublishedDate")                             |
+| [linkedCaseStatus](#linkedcasestatus)                               | `string`  | Optional | can be null    | [DaRT API response](dart-response-properties-linkedcasestatus.md "dart-response.schema.json#/properties/linkedCaseStatus")                               |
+| [leadCaseReference](#leadcasereference)                             | `string`  | Optional | can be null    | [DaRT API response](dart-response-properties-leadcasereference.md "dart-response.schema.json#/properties/leadCaseReference")                             |
+| [caseWithdrawnDate](#casewithdrawndate)                             | `string`  | Optional | can be null    | [DaRT API response](dart-response-properties-casewithdrawndate.md "dart-response.schema.json#/properties/caseWithdrawnDate")                             |
+| [caseTransferredDate](#casetransferreddate)                         | `string`  | Optional | can be null    | [DaRT API response](dart-response-properties-casetransferreddate.md "dart-response.schema.json#/properties/caseTransferredDate")                         |
+| [transferredCaseClosedDate](#transferredcasecloseddate)             | `string`  | Optional | can be null    | [DaRT API response](dart-response-properties-transferredcasecloseddate.md "dart-response.schema.json#/properties/transferredCaseClosedDate")             |
+| [caseDecisionOutcomeDate](#casedecisionoutcomedate)                 | `string`  | Optional | can be null    | [DaRT API response](dart-response-properties-casedecisionoutcomedate.md "dart-response.schema.json#/properties/caseDecisionOutcomeDate")                 |
+| [caseDecisionPublishedDate](#casedecisionpublisheddate)             | `string`  | Optional | can be null    | [DaRT API response](dart-response-properties-casedecisionpublisheddate.md "dart-response.schema.json#/properties/caseDecisionPublishedDate")             |
+| [caseDecisionOutcome](#casedecisionoutcome)                         | `string`  | Optional | can be null    | [DaRT API response](dart-response-properties-casedecisionoutcome.md "dart-response.schema.json#/properties/caseDecisionOutcome")                         |
+| [caseCompletedDate](#casecompleteddate)                             | `string`  | Optional | can be null    | [DaRT API response](dart-response-properties-casecompleteddate.md "dart-response.schema.json#/properties/caseCompletedDate")                             |
+| [enforcementNotice](#enforcementnotice)                             | `boolean` | Optional | can be null    | [DaRT API response](dart-response-properties-enforcementnotice.md "dart-response.schema.json#/properties/enforcementNotice")                             |
 | [applicationReference](#applicationreference)                       | `string`  | Optional | cannot be null | [DaRT API response](dart-response-properties-applicationreference.md "dart-response.schema.json#/properties/applicationReference")                       |
 | [applicationDate](#applicationdate)                                 | `string`  | Optional | cannot be null | [DaRT API response](dart-response-properties-applicationdate.md "dart-response.schema.json#/properties/applicationDate")                                 |
 | [applicationDecision](#applicationdecision)                         | `string`  | Optional | cannot be null | [DaRT API response](dart-response-properties-applicationdecision.md "dart-response.schema.json#/properties/applicationDecision")                         |
-| [lpaDecisionDate](#lpadecisiondate)                                 | `string`  | Optional | cannot be null | [DaRT API response](dart-response-properties-lpadecisiondate.md "dart-response.schema.json#/properties/lpaDecisionDate")                                 |
-| [caseSubmissionDueDate](#casesubmissionduedate)                     | `string`  | Optional | cannot be null | [DaRT API response](dart-response-properties-casesubmissionduedate.md "dart-response.schema.json#/properties/caseSubmissionDueDate")                     |
-| [siteAddressLine1](#siteaddressline1)                               | `string`  | Optional | cannot be null | [DaRT API response](dart-response-properties-siteaddressline1.md "dart-response.schema.json#/properties/siteAddressLine1")                               |
-| [siteAddressLine2](#siteaddressline2)                               | `string`  | Optional | cannot be null | [DaRT API response](dart-response-properties-siteaddressline2.md "dart-response.schema.json#/properties/siteAddressLine2")                               |
-| [siteAddressTown](#siteaddresstown)                                 | `string`  | Optional | cannot be null | [DaRT API response](dart-response-properties-siteaddresstown.md "dart-response.schema.json#/properties/siteAddressTown")                                 |
-| [siteAddressCounty](#siteaddresscounty)                             | `string`  | Optional | cannot be null | [DaRT API response](dart-response-properties-siteaddresscounty.md "dart-response.schema.json#/properties/siteAddressCounty")                             |
-| [siteAddressPostcode](#siteaddresspostcode)                         | `string`  | Optional | cannot be null | [DaRT API response](dart-response-properties-siteaddresspostcode.md "dart-response.schema.json#/properties/siteAddressPostcode")                         |
-| [isCorrectAppealType](#iscorrectappealtype)                         | `boolean` | Optional | cannot be null | [DaRT API response](dart-response-properties-iscorrectappealtype.md "dart-response.schema.json#/properties/isCorrectAppealType")                         |
-| [originalDevelopmentDescription](#originaldevelopmentdescription)   | `string`  | Optional | cannot be null | [DaRT API response](dart-response-properties-originaldevelopmentdescription.md "dart-response.schema.json#/properties/originalDevelopmentDescription")   |
-| [changedDevelopmentDescription](#changeddevelopmentdescription)     | `boolean` | Optional | cannot be null | [DaRT API response](dart-response-properties-changeddevelopmentdescription.md "dart-response.schema.json#/properties/changedDevelopmentDescription")     |
-| [newConditionDetails](#newconditiondetails)                         | `string`  | Optional | cannot be null | [DaRT API response](dart-response-properties-newconditiondetails.md "dart-response.schema.json#/properties/newConditionDetails")                         |
-| [nearbyCaseReferences](#nearbycasereferences)                       | `array`   | Optional | cannot be null | [DaRT API response](dart-response-properties-nearbycasereferences.md "dart-response.schema.json#/properties/nearbyCaseReferences")                       |
-| [neighbouringSiteAddresses](#neighbouringsiteaddresses)             | `array`   | Optional | cannot be null | [DaRT API response](dart-response-properties-neighbouringsiteaddresses.md "dart-response.schema.json#/properties/neighbouringSiteAddresses")             |
-| [affectedListedBuildingNumbers](#affectedlistedbuildingnumbers)     | `array`   | Optional | cannot be null | [DaRT API response](dart-response-properties-affectedlistedbuildingnumbers.md "dart-response.schema.json#/properties/affectedListedBuildingNumbers")     |
-| [appellantCostsAppliedFor](#appellantcostsappliedfor)               | `boolean` | Optional | cannot be null | [DaRT API response](dart-response-properties-appellantcostsappliedfor.md "dart-response.schema.json#/properties/appellantCostsAppliedFor")               |
-| [lpaCostsAppliedFor](#lpacostsappliedfor)                           | `boolean` | Optional | cannot be null | [DaRT API response](dart-response-properties-lpacostsappliedfor.md "dart-response.schema.json#/properties/lpaCostsAppliedFor")                           |
+| [lpaDecisionDate](#lpadecisiondate)                                 | `string`  | Optional | can be null    | [DaRT API response](dart-response-properties-lpadecisiondate.md "dart-response.schema.json#/properties/lpaDecisionDate")                                 |
+| [caseSubmissionDueDate](#casesubmissionduedate)                     | `string`  | Optional | can be null    | [DaRT API response](dart-response-properties-casesubmissionduedate.md "dart-response.schema.json#/properties/caseSubmissionDueDate")                     |
+| [siteAddressLine1](#siteaddressline1)                               | `string`  | Optional | can be null    | [DaRT API response](dart-response-properties-siteaddressline1.md "dart-response.schema.json#/properties/siteAddressLine1")                               |
+| [siteAddressLine2](#siteaddressline2)                               | `string`  | Optional | can be null    | [DaRT API response](dart-response-properties-siteaddressline2.md "dart-response.schema.json#/properties/siteAddressLine2")                               |
+| [siteAddressTown](#siteaddresstown)                                 | `string`  | Optional | can be null    | [DaRT API response](dart-response-properties-siteaddresstown.md "dart-response.schema.json#/properties/siteAddressTown")                                 |
+| [siteAddressCounty](#siteaddresscounty)                             | `string`  | Optional | can be null    | [DaRT API response](dart-response-properties-siteaddresscounty.md "dart-response.schema.json#/properties/siteAddressCounty")                             |
+| [siteAddressPostcode](#siteaddresspostcode)                         | `string`  | Optional | can be null    | [DaRT API response](dart-response-properties-siteaddresspostcode.md "dart-response.schema.json#/properties/siteAddressPostcode")                         |
+| [isCorrectAppealType](#iscorrectappealtype)                         | `boolean` | Optional | can be null    | [DaRT API response](dart-response-properties-iscorrectappealtype.md "dart-response.schema.json#/properties/isCorrectAppealType")                         |
+| [originalDevelopmentDescription](#originaldevelopmentdescription)   | `string`  | Optional | can be null    | [DaRT API response](dart-response-properties-originaldevelopmentdescription.md "dart-response.schema.json#/properties/originalDevelopmentDescription")   |
+| [changedDevelopmentDescription](#changeddevelopmentdescription)     | `boolean` | Optional | can be null    | [DaRT API response](dart-response-properties-changeddevelopmentdescription.md "dart-response.schema.json#/properties/changedDevelopmentDescription")     |
+| [newConditionDetails](#newconditiondetails)                         | `string`  | Optional | can be null    | [DaRT API response](dart-response-properties-newconditiondetails.md "dart-response.schema.json#/properties/newConditionDetails")                         |
+| [nearbyCaseReferences](#nearbycasereferences)                       | `array`   | Optional | can be null    | [DaRT API response](dart-response-properties-nearbycasereferences.md "dart-response.schema.json#/properties/nearbyCaseReferences")                       |
+| [neighbouringSiteAddresses](#neighbouringsiteaddresses)             | `array`   | Optional | can be null    | [DaRT API response](dart-response-properties-neighbouringsiteaddresses.md "dart-response.schema.json#/properties/neighbouringSiteAddresses")             |
+| [affectedListedBuildingNumbers](#affectedlistedbuildingnumbers)     | `array`   | Optional | can be null    | [DaRT API response](dart-response-properties-affectedlistedbuildingnumbers.md "dart-response.schema.json#/properties/affectedListedBuildingNumbers")     |
+| [appellantCostsAppliedFor](#appellantcostsappliedfor)               | `boolean` | Optional | can be null    | [DaRT API response](dart-response-properties-appellantcostsappliedfor.md "dart-response.schema.json#/properties/appellantCostsAppliedFor")               |
+| [lpaCostsAppliedFor](#lpacostsappliedfor)                           | `boolean` | Optional | can be null    | [DaRT API response](dart-response-properties-lpacostsappliedfor.md "dart-response.schema.json#/properties/lpaCostsAppliedFor")                           |
 | [appellantName](#appellantname)                                     | `string`  | Optional | cannot be null | [DaRT API response](dart-response-properties-appellantname.md "dart-response.schema.json#/properties/appellantName")                                     |
-| [typeOfEvent](#typeofevent)                                         | `string`  | Optional | cannot be null | [DaRT API response](dart-response-properties-typeofevent.md "dart-response.schema.json#/properties/typeOfEvent")                                         |
-| [startDateOfTheEvent](#startdateoftheevent)                         | `string`  | Optional | cannot be null | [DaRT API response](dart-response-properties-startdateoftheevent.md "dart-response.schema.json#/properties/startDateOfTheEvent")                         |
-| [inspectorName](#inspectorname)                                     | `string`  | Optional | cannot be null | [DaRT API response](dart-response-properties-inspectorname.md "dart-response.schema.json#/properties/inspectorName")                                     |
-| [caseOfficerName](#caseofficername)                                 | `string`  | Optional | cannot be null | [DaRT API response](dart-response-properties-caseofficername.md "dart-response.schema.json#/properties/caseOfficerName")                                 |
-| [inspectorQualifications](#inspectorqualifications)                 | `string`  | Optional | cannot be null | [DaRT API response](dart-response-properties-inspectorqualifications.md "dart-response.schema.json#/properties/inspectorQualifications")                 |
+| [typeOfEvent](#typeofevent)                                         | `string`  | Optional | can be null    | [DaRT API response](dart-response-properties-typeofevent.md "dart-response.schema.json#/properties/typeOfEvent")                                         |
+| [startDateOfTheEvent](#startdateoftheevent)                         | `string`  | Optional | can be null    | [DaRT API response](dart-response-properties-startdateoftheevent.md "dart-response.schema.json#/properties/startDateOfTheEvent")                         |
+| [inspectorName](#inspectorname)                                     | `string`  | Optional | can be null    | [DaRT API response](dart-response-properties-inspectorname.md "dart-response.schema.json#/properties/inspectorName")                                     |
+| [caseOfficerName](#caseofficername)                                 | `string`  | Optional | can be null    | [DaRT API response](dart-response-properties-caseofficername.md "dart-response.schema.json#/properties/caseOfficerName")                                 |
+| [inspectorQualifications](#inspectorqualifications)                 | `string`  | Optional | can be null    | [DaRT API response](dart-response-properties-inspectorqualifications.md "dart-response.schema.json#/properties/inspectorQualifications")                 |
 | Additional Properties                                               | Any       | Optional | can be null    |                                                                                                                                                          |
 
 ## caseId
 
-description
+Internal case identifier
 
 `caseId`
 
@@ -90,7 +90,7 @@ description
 
 ## caseReference
 
-description
+External case identifier
 
 `caseReference`
 
@@ -114,7 +114,7 @@ description
 
 ## caseStatus
 
-description
+The processing state for the case
 
 `caseStatus`
 
@@ -138,7 +138,7 @@ description
 
 ## caseType
 
-description
+The internal code for a type of case
 
 `caseType`
 
@@ -162,7 +162,7 @@ description
 
 ## caseProcedure
 
-description
+The type of procedure for the case
 
 `caseProcedure`
 
@@ -170,7 +170,7 @@ description
 
 * Type: `string`
 
-* cannot be null
+* can be null
 
 * defined in: [DaRT API response](dart-response-properties-caseprocedure.md "dart-response.schema.json#/properties/caseProcedure")
 
@@ -186,7 +186,7 @@ description
 
 ## lpaCode
 
-description
+PINS internal code for LPA
 
 `lpaCode`
 
@@ -194,7 +194,7 @@ description
 
 * Type: `string`
 
-* cannot be null
+* can be null
 
 * defined in: [DaRT API response](dart-response-properties-lpacode.md "dart-response.schema.json#/properties/lpaCode")
 
@@ -210,7 +210,7 @@ description
 
 ## lpaName
 
-description
+Name of the LPA
 
 `lpaName`
 
@@ -218,7 +218,7 @@ description
 
 * Type: `string`
 
-* cannot be null
+* can be null
 
 * defined in: [DaRT API response](dart-response-properties-lpaname.md "dart-response.schema.json#/properties/lpaName")
 
@@ -234,7 +234,7 @@ description
 
 ## allocationLevel
 
-description
+A case level used for allocation purposes
 
 `allocationLevel`
 
@@ -242,7 +242,7 @@ description
 
 * Type: `string`
 
-* cannot be null
+* can be null
 
 * defined in: [DaRT API response](dart-response-properties-allocationlevel.md "dart-response.schema.json#/properties/allocationLevel")
 
@@ -258,21 +258,21 @@ description
 
 ## allocationBand
 
-description
+A band used for allocation purposes
 
 `allocationBand`
 
 * is optional
 
-* Type: `integer`
+* Type: `string`
 
-* cannot be null
+* can be null
 
 * defined in: [DaRT API response](dart-response-properties-allocationband.md "dart-response.schema.json#/properties/allocationBand")
 
 ### allocationBand Type
 
-`integer`
+`string`
 
 ### allocationBand Examples
 
@@ -282,21 +282,21 @@ description
 
 ## caseSpecialisms
 
-description
+A list of case specialisms for allocation purposes
 
 `caseSpecialisms`
 
 * is optional
 
-* Type: `array`
+* Type: `string[]`
 
-* cannot be null
+* can be null
 
 * defined in: [DaRT API response](dart-response-properties-casespecialisms.md "dart-response.schema.json#/properties/caseSpecialisms")
 
 ### caseSpecialisms Type
 
-`array`
+`string[]`
 
 ### caseSpecialisms Examples
 
@@ -314,7 +314,7 @@ description
 
 ## caseSubmittedDate
 
-description
+The date the case was submitted by the appellant
 
 `caseSubmittedDate`
 
@@ -338,7 +338,7 @@ description
 
 ## caseCreatedDate
 
-description
+The date the case was received
 
 `caseCreatedDate`
 
@@ -362,7 +362,7 @@ description
 
 ## caseUpdatedDate
 
-description
+The date the case was last updated in the back-office
 
 `caseUpdatedDate`
 
@@ -386,7 +386,7 @@ description
 
 ## caseValidDate
 
-description
+The date since when the case was considered valid
 
 `caseValidDate`
 
@@ -394,7 +394,7 @@ description
 
 * Type: `string`
 
-* cannot be null
+* can be null
 
 * defined in: [DaRT API response](dart-response-properties-casevaliddate.md "dart-response.schema.json#/properties/caseValidDate")
 
@@ -410,7 +410,7 @@ description
 
 ## caseValidationDate
 
-description
+The date the case was validated in the back-office
 
 `caseValidationDate`
 
@@ -418,7 +418,7 @@ description
 
 * Type: `string`
 
-* cannot be null
+* can be null
 
 * defined in: [DaRT API response](dart-response-properties-casevalidationdate.md "dart-response.schema.json#/properties/caseValidationDate")
 
@@ -434,7 +434,7 @@ description
 
 ## caseValidationOutcome
 
-description
+The outcome of the validation action
 
 `caseValidationOutcome`
 
@@ -442,7 +442,7 @@ description
 
 * Type: `string`
 
-* cannot be null
+* can be null
 
 * defined in: [DaRT API response](dart-response-properties-casevalidationoutcome.md "dart-response.schema.json#/properties/caseValidationOutcome")
 
@@ -458,21 +458,23 @@ description
 
 ## caseValidationInvalidDetails
 
-description
+A list of reasons why the appeal is invalid
+
+> The list will contain items only if the caseValidationOutcome is invalid
 
 `caseValidationInvalidDetails`
 
 * is optional
 
-* Type: `array`
+* Type: `string[]`
 
-* cannot be null
+* can be null
 
 * defined in: [DaRT API response](dart-response-properties-casevalidationinvaliddetails.md "dart-response.schema.json#/properties/caseValidationInvalidDetails")
 
 ### caseValidationInvalidDetails Type
 
-`array`
+`string[]`
 
 ### caseValidationInvalidDetails Examples
 
@@ -490,47 +492,37 @@ description
 
 ## caseValidationIncompleteDetails
 
-description
+A list of reasons why the appeal is incomplete
+
+> The list will contain items only if the caseValidationOutcome is incomplete
 
 `caseValidationIncompleteDetails`
 
 * is optional
 
-* Type: `array`
+* Type: `string[]`
 
-* cannot be null
+* can be null
 
 * defined in: [DaRT API response](dart-response-properties-casevalidationincompletedetails.md "dart-response.schema.json#/properties/caseValidationIncompleteDetails")
 
 ### caseValidationIncompleteDetails Type
 
-`array`
+`string[]`
 
 ### caseValidationIncompleteDetails Examples
 
 ```json
-"Duis sunt ut in voluptate"
+"Appellant name is not the same on the application form and appeal form"
 ```
 
 ```json
-"nulla proident tempor do Ut"
-```
-
-```json
-"Excepteur et ut"
-```
-
-```json
-"dolore elit"
-```
-
-```json
-"elit adipisicing exercitation"
+"LPA's decision notice is missing"
 ```
 
 ## caseExtensionDate
 
-description
+When the validation outcome is incomplete, an extension may be granted to provide missing information
 
 `caseExtensionDate`
 
@@ -538,7 +530,7 @@ description
 
 * Type: `string`
 
-* cannot be null
+* can be null
 
 * defined in: [DaRT API response](dart-response-properties-caseextensiondate.md "dart-response.schema.json#/properties/caseExtensionDate")
 
@@ -554,7 +546,7 @@ description
 
 ## caseStartedDate
 
-description
+A date indicating when the case was started, resulting in the creation of a timetable
 
 `caseStartedDate`
 
@@ -562,7 +554,7 @@ description
 
 * Type: `string`
 
-* cannot be null
+* can be null
 
 * defined in: [DaRT API response](dart-response-properties-casestarteddate.md "dart-response.schema.json#/properties/caseStartedDate")
 
@@ -578,7 +570,7 @@ description
 
 ## casePublishedDate
 
-description
+A date indicating when the case was published
 
 `casePublishedDate`
 
@@ -586,7 +578,7 @@ description
 
 * Type: `string`
 
-* cannot be null
+* can be null
 
 * defined in: [DaRT API response](dart-response-properties-casepublisheddate.md "dart-response.schema.json#/properties/casePublishedDate")
 
@@ -602,7 +594,7 @@ description
 
 ## linkedCaseStatus
 
-description
+Indicates if the case is linked, and the type of relationship
 
 `linkedCaseStatus`
 
@@ -610,7 +602,7 @@ description
 
 * Type: `string`
 
-* cannot be null
+* can be null
 
 * defined in: [DaRT API response](dart-response-properties-linkedcasestatus.md "dart-response.schema.json#/properties/linkedCaseStatus")
 
@@ -626,7 +618,7 @@ description
 
 ## leadCaseReference
 
-description
+The reference of the lead case, if the case is a child case
 
 `leadCaseReference`
 
@@ -634,7 +626,7 @@ description
 
 * Type: `string`
 
-* cannot be null
+* can be null
 
 * defined in: [DaRT API response](dart-response-properties-leadcasereference.md "dart-response.schema.json#/properties/leadCaseReference")
 
@@ -650,7 +642,7 @@ description
 
 ## caseWithdrawnDate
 
-description
+The date the case was withdrawn by the appellant
 
 `caseWithdrawnDate`
 
@@ -658,7 +650,7 @@ description
 
 * Type: `string`
 
-* cannot be null
+* can be null
 
 * defined in: [DaRT API response](dart-response-properties-casewithdrawndate.md "dart-response.schema.json#/properties/caseWithdrawnDate")
 
@@ -674,7 +666,7 @@ description
 
 ## caseTransferredDate
 
-description
+The date the case was transferred to a new case of a different type
 
 `caseTransferredDate`
 
@@ -682,7 +674,7 @@ description
 
 * Type: `string`
 
-* cannot be null
+* can be null
 
 * defined in: [DaRT API response](dart-response-properties-casetransferreddate.md "dart-response.schema.json#/properties/caseTransferredDate")
 
@@ -698,7 +690,7 @@ description
 
 ## transferredCaseClosedDate
 
-description
+The date the case was closed and the appellant requested to resubmit
 
 `transferredCaseClosedDate`
 
@@ -706,7 +698,7 @@ description
 
 * Type: `string`
 
-* cannot be null
+* can be null
 
 * defined in: [DaRT API response](dart-response-properties-transferredcasecloseddate.md "dart-response.schema.json#/properties/transferredCaseClosedDate")
 
@@ -722,7 +714,7 @@ description
 
 ## caseDecisionOutcomeDate
 
-description
+The date of the case decision
 
 `caseDecisionOutcomeDate`
 
@@ -730,7 +722,7 @@ description
 
 * Type: `string`
 
-* cannot be null
+* can be null
 
 * defined in: [DaRT API response](dart-response-properties-casedecisionoutcomedate.md "dart-response.schema.json#/properties/caseDecisionOutcomeDate")
 
@@ -746,7 +738,7 @@ description
 
 ## caseDecisionPublishedDate
 
-description
+The date the case decision was published
 
 `caseDecisionPublishedDate`
 
@@ -754,7 +746,7 @@ description
 
 * Type: `string`
 
-* cannot be null
+* can be null
 
 * defined in: [DaRT API response](dart-response-properties-casedecisionpublisheddate.md "dart-response.schema.json#/properties/caseDecisionPublishedDate")
 
@@ -770,7 +762,7 @@ description
 
 ## caseDecisionOutcome
 
-description
+The final outcome for the decision
 
 `caseDecisionOutcome`
 
@@ -778,7 +770,7 @@ description
 
 * Type: `string`
 
-* cannot be null
+* can be null
 
 * defined in: [DaRT API response](dart-response-properties-casedecisionoutcome.md "dart-response.schema.json#/properties/caseDecisionOutcome")
 
@@ -794,7 +786,7 @@ description
 
 ## caseCompletedDate
 
-description
+The date the case decision letter
 
 `caseCompletedDate`
 
@@ -802,7 +794,7 @@ description
 
 * Type: `string`
 
-* cannot be null
+* can be null
 
 * defined in: [DaRT API response](dart-response-properties-casecompleteddate.md "dart-response.schema.json#/properties/caseCompletedDate")
 
@@ -818,31 +810,25 @@ description
 
 ## enforcementNotice
 
-description
+Indicates if an enforcement notice is the reason for the appeal
 
 `enforcementNotice`
 
 * is optional
 
-* Type: `string`
+* Type: `boolean`
 
-* cannot be null
+* can be null
 
 * defined in: [DaRT API response](dart-response-properties-enforcementnotice.md "dart-response.schema.json#/properties/enforcementNotice")
 
 ### enforcementNotice Type
 
-`string`
-
-### enforcementNotice Examples
-
-```json
-"example"
-```
+`boolean`
 
 ## applicationReference
 
-description
+The unique identifier of the LPA application
 
 `applicationReference`
 
@@ -866,7 +852,7 @@ description
 
 ## applicationDate
 
-description
+The date of the original LPA application
 
 `applicationDate`
 
@@ -890,7 +876,7 @@ description
 
 ## applicationDecision
 
-description
+The outcome of the original LPA decision
 
 `applicationDecision`
 
@@ -914,7 +900,7 @@ description
 
 ## lpaDecisionDate
 
-description
+The date of the original LPA decision
 
 `lpaDecisionDate`
 
@@ -922,7 +908,7 @@ description
 
 * Type: `string`
 
-* cannot be null
+* can be null
 
 * defined in: [DaRT API response](dart-response-properties-lpadecisiondate.md "dart-response.schema.json#/properties/lpaDecisionDate")
 
@@ -938,7 +924,7 @@ description
 
 ## caseSubmissionDueDate
 
-description
+The statutory deadline for submitting an appeal from the original LPA decision date
 
 `caseSubmissionDueDate`
 
@@ -946,7 +932,7 @@ description
 
 * Type: `string`
 
-* cannot be null
+* can be null
 
 * defined in: [DaRT API response](dart-response-properties-casesubmissionduedate.md "dart-response.schema.json#/properties/caseSubmissionDueDate")
 
@@ -962,7 +948,7 @@ description
 
 ## siteAddressLine1
 
-description
+First line of case site address
 
 `siteAddressLine1`
 
@@ -970,7 +956,7 @@ description
 
 * Type: `string`
 
-* cannot be null
+* can be null
 
 * defined in: [DaRT API response](dart-response-properties-siteaddressline1.md "dart-response.schema.json#/properties/siteAddressLine1")
 
@@ -986,7 +972,7 @@ description
 
 ## siteAddressLine2
 
-description
+Second line of case site address
 
 `siteAddressLine2`
 
@@ -994,7 +980,7 @@ description
 
 * Type: `string`
 
-* cannot be null
+* can be null
 
 * defined in: [DaRT API response](dart-response-properties-siteaddressline2.md "dart-response.schema.json#/properties/siteAddressLine2")
 
@@ -1010,7 +996,7 @@ description
 
 ## siteAddressTown
 
-description
+Town / City of the site address
 
 `siteAddressTown`
 
@@ -1018,7 +1004,7 @@ description
 
 * Type: `string`
 
-* cannot be null
+* can be null
 
 * defined in: [DaRT API response](dart-response-properties-siteaddresstown.md "dart-response.schema.json#/properties/siteAddressTown")
 
@@ -1034,7 +1020,7 @@ description
 
 ## siteAddressCounty
 
-description
+County of the site address
 
 `siteAddressCounty`
 
@@ -1042,7 +1028,7 @@ description
 
 * Type: `string`
 
-* cannot be null
+* can be null
 
 * defined in: [DaRT API response](dart-response-properties-siteaddresscounty.md "dart-response.schema.json#/properties/siteAddressCounty")
 
@@ -1058,7 +1044,7 @@ description
 
 ## siteAddressPostcode
 
-description
+Postal code of the site address
 
 `siteAddressPostcode`
 
@@ -1066,7 +1052,7 @@ description
 
 * Type: `string`
 
-* cannot be null
+* can be null
 
 * defined in: [DaRT API response](dart-response-properties-siteaddresspostcode.md "dart-response.schema.json#/properties/siteAddressPostcode")
 
@@ -1082,7 +1068,7 @@ description
 
 ## isCorrectAppealType
 
-description
+Indicates if the LPA considers the appeal type appropriate
 
 `isCorrectAppealType`
 
@@ -1090,7 +1076,7 @@ description
 
 * Type: `boolean`
 
-* cannot be null
+* can be null
 
 * defined in: [DaRT API response](dart-response-properties-iscorrectappealtype.md "dart-response.schema.json#/properties/isCorrectAppealType")
 
@@ -1106,7 +1092,7 @@ description
 
 ## originalDevelopmentDescription
 
-description
+The original description of the development, as provided by the appellant
 
 `originalDevelopmentDescription`
 
@@ -1114,7 +1100,7 @@ description
 
 * Type: `string`
 
-* cannot be null
+* can be null
 
 * defined in: [DaRT API response](dart-response-properties-originaldevelopmentdescription.md "dart-response.schema.json#/properties/originalDevelopmentDescription")
 
@@ -1125,12 +1111,12 @@ description
 ### originalDevelopmentDescription Examples
 
 ```json
-"mollit esse ipsum"
+"Replacement of an existing gate to access the property"
 ```
 
 ## changedDevelopmentDescription
 
-description
+Indicates that the LPA has changed the development description
 
 `changedDevelopmentDescription`
 
@@ -1138,7 +1124,7 @@ description
 
 * Type: `boolean`
 
-* cannot be null
+* can be null
 
 * defined in: [DaRT API response](dart-response-properties-changeddevelopmentdescription.md "dart-response.schema.json#/properties/changedDevelopmentDescription")
 
@@ -1154,7 +1140,7 @@ description
 
 ## newConditionDetails
 
-description
+Since the original application, a number of things have changed.
 
 `newConditionDetails`
 
@@ -1162,7 +1148,7 @@ description
 
 * Type: `string`
 
-* cannot be null
+* can be null
 
 * defined in: [DaRT API response](dart-response-properties-newconditiondetails.md "dart-response.schema.json#/properties/newConditionDetails")
 
@@ -1178,133 +1164,61 @@ description
 
 ## nearbyCaseReferences
 
-description
+A list of related case references known to the appellant and the LPA
 
 `nearbyCaseReferences`
 
 * is optional
 
-* Type: `array`
+* Type: `string[]`
 
-* cannot be null
+* can be null
 
 * defined in: [DaRT API response](dart-response-properties-nearbycasereferences.md "dart-response.schema.json#/properties/nearbyCaseReferences")
 
 ### nearbyCaseReferences Type
 
-`array`
-
-### nearbyCaseReferences Examples
-
-```json
-"123"
-```
-
-```json
-"456"
-```
-
-```json
-"678"
-```
-
-```json
-"789"
-```
+`string[]`
 
 ## neighbouringSiteAddresses
 
-description
+A list of neighbouring site addresses
 
 `neighbouringSiteAddresses`
 
 * is optional
 
-* Type: `array`
+* Type: `object[]` ([Details](dart-response-properties-neighbouringsiteaddresses-items.md))
 
-* cannot be null
+* can be null
 
 * defined in: [DaRT API response](dart-response-properties-neighbouringsiteaddresses.md "dart-response.schema.json#/properties/neighbouringSiteAddresses")
 
 ### neighbouringSiteAddresses Type
 
-`array`
-
-### neighbouringSiteAddresses Examples
-
-```json
-{
-  "neighbouringSiteAddressLine1": "officia qui",
-  "neighbouringSiteAddressLine2": "ea ipsum",
-  "neighbouringSiteAddressTown": "culpa mollit eu",
-  "neighbouringSiteAddressCounty": "do voluptate",
-  "neighbouringSiteAddressPostcode": "proident dolore sit cillum",
-  "neighbouringSiteSafetyDetails": "ullamco veniam nostrud"
-}
-```
-
-```json
-{
-  "neighbouringSiteAddressLine1": "dolore aliqua fugiat quis commodo",
-  "neighbouringSiteAddressLine2": "minim nisi in eu ut",
-  "neighbouringSiteAddressTown": "non aute",
-  "neighbouringSiteAddressPostcode": "eiusmod",
-  "neighbouringSiteAccessDetails": "non"
-}
-```
-
-```json
-{
-  "neighbouringSiteAddressLine1": "ut dolore Ut eu est",
-  "neighbouringSiteAddressLine2": "ea eiusmod nostrud pariatur esse",
-  "neighbouringSiteAddressTown": "nulla qui aliqua",
-  "neighbouringSiteAddressPostcode": "fugiat Ut labore",
-  "neighbouringSiteAccessDetails": "quis pariatur est"
-}
-```
-
-```json
-{
-  "neighbouringSiteAddressLine1": "do laboris Ut",
-  "neighbouringSiteAddressLine2": "cillum Ut",
-  "neighbouringSiteAddressTown": "consectetur occaecat eiusmod sit",
-  "neighbouringSiteAddressCounty": "ex tempor irure",
-  "neighbouringSiteAddressPostcode": "ea Excepteur",
-  "neighbouringSiteSafetyDetails": "Ut qui voluptate"
-}
-```
+`object[]` ([Details](dart-response-properties-neighbouringsiteaddresses-items.md))
 
 ## affectedListedBuildingNumbers
 
-description
+A list of affected listed building IDs from Historic England
 
 `affectedListedBuildingNumbers`
 
 * is optional
 
-* Type: `array`
+* Type: `string[]`
 
-* cannot be null
+* can be null
 
 * defined in: [DaRT API response](dart-response-properties-affectedlistedbuildingnumbers.md "dart-response.schema.json#/properties/affectedListedBuildingNumbers")
 
 ### affectedListedBuildingNumbers Type
 
-`array`
-
-### affectedListedBuildingNumbers Examples
-
-```json
-"1202152"
-```
-
-```json
-"1356318"
-```
+`string[]`
 
 ## appellantCostsAppliedFor
 
-description
+Indicates if the appellant has applied for costs
 
 `appellantCostsAppliedFor`
 
@@ -1312,7 +1226,7 @@ description
 
 * Type: `boolean`
 
-* cannot be null
+* can be null
 
 * defined in: [DaRT API response](dart-response-properties-appellantcostsappliedfor.md "dart-response.schema.json#/properties/appellantCostsAppliedFor")
 
@@ -1328,7 +1242,7 @@ description
 
 ## lpaCostsAppliedFor
 
-description
+Indicates if the LPA has applied for costs
 
 `lpaCostsAppliedFor`
 
@@ -1336,7 +1250,7 @@ description
 
 * Type: `boolean`
 
-* cannot be null
+* can be null
 
 * defined in: [DaRT API response](dart-response-properties-lpacostsappliedfor.md "dart-response.schema.json#/properties/lpaCostsAppliedFor")
 
@@ -1352,7 +1266,7 @@ description
 
 ## appellantName
 
-description
+Name of the appellant
 
 `appellantName`
 
@@ -1376,7 +1290,7 @@ description
 
 ## typeOfEvent
 
-description
+The type of event
 
 `typeOfEvent`
 
@@ -1384,7 +1298,7 @@ description
 
 * Type: `string`
 
-* cannot be null
+* can be null
 
 * defined in: [DaRT API response](dart-response-properties-typeofevent.md "dart-response.schema.json#/properties/typeOfEvent")
 
@@ -1395,12 +1309,12 @@ description
 ### typeOfEvent Examples
 
 ```json
-"example"
+"site_visit_access_required"
 ```
 
 ## startDateOfTheEvent
 
-description
+Event start date and time
 
 `startDateOfTheEvent`
 
@@ -1408,7 +1322,7 @@ description
 
 * Type: `string`
 
-* cannot be null
+* can be null
 
 * defined in: [DaRT API response](dart-response-properties-startdateoftheevent.md "dart-response.schema.json#/properties/startDateOfTheEvent")
 
@@ -1424,7 +1338,7 @@ description
 
 ## inspectorName
 
-description
+Name of inspector allocated to case
 
 `inspectorName`
 
@@ -1432,7 +1346,7 @@ description
 
 * Type: `string`
 
-* cannot be null
+* can be null
 
 * defined in: [DaRT API response](dart-response-properties-inspectorname.md "dart-response.schema.json#/properties/inspectorName")
 
@@ -1443,12 +1357,12 @@ description
 ### inspectorName Examples
 
 ```json
-"example"
+"In Spector"
 ```
 
 ## caseOfficerName
 
-description
+name of case officer assigned to case
 
 `caseOfficerName`
 
@@ -1456,7 +1370,7 @@ description
 
 * Type: `string`
 
-* cannot be null
+* can be null
 
 * defined in: [DaRT API response](dart-response-properties-caseofficername.md "dart-response.schema.json#/properties/caseOfficerName")
 
@@ -1472,7 +1386,7 @@ description
 
 ## inspectorQualifications
 
-description
+The qualifications of the inspector
 
 `inspectorQualifications`
 
@@ -1480,7 +1394,7 @@ description
 
 * Type: `string`
 
-* cannot be null
+* can be null
 
 * defined in: [DaRT API response](dart-response-properties-inspectorqualifications.md "dart-response.schema.json#/properties/inspectorQualifications")
 

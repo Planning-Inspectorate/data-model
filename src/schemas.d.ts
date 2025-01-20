@@ -1124,229 +1124,253 @@ export interface AppealS78Case {
  */
 export interface DaRTAPIResponse {
   /**
-   * description
+   * Internal case identifier
    */
   caseId?: number;
   /**
-   * description
+   * External case identifier
    */
   caseReference?: number;
   /**
-   * description
+   * The processing state for the case
    */
   caseStatus?: string;
   /**
-   * description
+   * The internal code for a type of case
    */
   caseType?: string;
   /**
-   * description
+   * The type of procedure for the case
    */
-  caseProcedure?: string;
+  caseProcedure?: string | null;
   /**
-   * description
+   * PINS internal code for LPA
    */
-  lpaCode?: string;
+  lpaCode?: string | null;
   /**
-   * description
+   * Name of the LPA
    */
-  lpaName?: string;
+  lpaName?: string | null;
   /**
-   * description
+   * A case level used for allocation purposes
    */
-  allocationLevel?: string;
+  allocationLevel?: string | null;
   /**
-   * description
+   * A band used for allocation purposes
    */
-  allocationBand?: number;
+  allocationBand?: string | null;
   /**
-   * description
+   * A list of case specialisms for allocation purposes
    */
-  caseSpecialisms?: unknown[];
+  caseSpecialisms?: string[] | null;
   /**
-   * description
+   * The date the case was submitted by the appellant
    */
   caseSubmittedDate?: string;
   /**
-   * description
+   * The date the case was received
    */
   caseCreatedDate?: string;
   /**
-   * description
+   * The date the case was last updated in the back-office
    */
   caseUpdatedDate?: string;
   /**
-   * description
+   * The date since when the case was considered valid
    */
-  caseValidDate?: string;
+  caseValidDate?: string | null;
   /**
-   * description
+   * The date the case was validated in the back-office
    */
-  caseValidationDate?: string;
+  caseValidationDate?: string | null;
   /**
-   * description
+   * The outcome of the validation action
    */
-  caseValidationOutcome?: string;
+  caseValidationOutcome?: string | null;
   /**
-   * description
+   * A list of reasons why the appeal is invalid
    */
-  caseValidationInvalidDetails?: unknown[];
+  caseValidationInvalidDetails?: string[] | null;
   /**
-   * description
+   * A list of reasons why the appeal is incomplete
    */
-  caseValidationIncompleteDetails?: unknown[];
+  caseValidationIncompleteDetails?: string[] | null;
   /**
-   * description
+   * When the validation outcome is incomplete, an extension may be granted to provide missing information
    */
-  caseExtensionDate?: string;
+  caseExtensionDate?: string | null;
   /**
-   * description
+   * A date indicating when the case was started, resulting in the creation of a timetable
    */
-  caseStartedDate?: string;
+  caseStartedDate?: string | null;
   /**
-   * description
+   * A date indicating when the case was published
    */
-  casePublishedDate?: string;
+  casePublishedDate?: string | null;
   /**
-   * description
+   * Indicates if the case is linked, and the type of relationship
    */
-  linkedCaseStatus?: string;
+  linkedCaseStatus?: string | null;
   /**
-   * description
+   * The reference of the lead case, if the case is a child case
    */
-  leadCaseReference?: string;
+  leadCaseReference?: string | null;
   /**
-   * description
+   * The date the case was withdrawn by the appellant
    */
-  caseWithdrawnDate?: string;
+  caseWithdrawnDate?: string | null;
   /**
-   * description
+   * The date the case was transferred to a new case of a different type
    */
-  caseTransferredDate?: string;
+  caseTransferredDate?: string | null;
   /**
-   * description
+   * The date the case was closed and the appellant requested to resubmit
    */
-  transferredCaseClosedDate?: string;
+  transferredCaseClosedDate?: string | null;
   /**
-   * description
+   * The date of the case decision
    */
-  caseDecisionOutcomeDate?: string;
+  caseDecisionOutcomeDate?: string | null;
   /**
-   * description
+   * The date the case decision was published
    */
-  caseDecisionPublishedDate?: string;
+  caseDecisionPublishedDate?: string | null;
   /**
-   * description
+   * The final outcome for the decision
    */
-  caseDecisionOutcome?: string;
+  caseDecisionOutcome?: string | null;
   /**
-   * description
+   * The date the case decision letter
    */
-  caseCompletedDate?: string;
+  caseCompletedDate?: string | null;
   /**
-   * description
+   * Indicates if an enforcement notice is the reason for the appeal
    */
-  enforcementNotice?: string;
+  enforcementNotice?: boolean | null;
   /**
-   * description
+   * The unique identifier of the LPA application
    */
   applicationReference?: string;
   /**
-   * description
+   * The date of the original LPA application
    */
   applicationDate?: string;
   /**
-   * description
+   * The outcome of the original LPA decision
    */
   applicationDecision?: string;
   /**
-   * description
+   * The date of the original LPA decision
    */
-  lpaDecisionDate?: string;
+  lpaDecisionDate?: string | null;
   /**
-   * description
+   * The statutory deadline for submitting an appeal from the original LPA decision date
    */
-  caseSubmissionDueDate?: string;
+  caseSubmissionDueDate?: string | null;
   /**
-   * description
+   * First line of case site address
    */
-  siteAddressLine1?: string;
+  siteAddressLine1?: string | null;
   /**
-   * description
+   * Second line of case site address
    */
-  siteAddressLine2?: string;
+  siteAddressLine2?: string | null;
   /**
-   * description
+   * Town / City of the site address
    */
-  siteAddressTown?: string;
+  siteAddressTown?: string | null;
   /**
-   * description
+   * County of the site address
    */
-  siteAddressCounty?: string;
+  siteAddressCounty?: string | null;
   /**
-   * description
+   * Postal code of the site address
    */
-  siteAddressPostcode?: string;
+  siteAddressPostcode?: string | null;
   /**
-   * description
+   * Indicates if the LPA considers the appeal type appropriate
    */
-  isCorrectAppealType?: boolean;
+  isCorrectAppealType?: boolean | null;
   /**
-   * description
+   * The original description of the development, as provided by the appellant
    */
-  originalDevelopmentDescription?: string;
+  originalDevelopmentDescription?: string | null;
   /**
-   * description
+   * Indicates that the LPA has changed the development description
    */
-  changedDevelopmentDescription?: boolean;
+  changedDevelopmentDescription?: boolean | null;
   /**
-   * description
+   * Since the original application, a number of things have changed.
    */
-  newConditionDetails?: string;
+  newConditionDetails?: string | null;
   /**
-   * description
+   * A list of related case references known to the appellant and the LPA
    */
-  nearbyCaseReferences?: unknown[];
+  nearbyCaseReferences?: string[] | null;
   /**
-   * description
+   * A list of neighbouring site addresses
    */
-  neighbouringSiteAddresses?: unknown[];
+  neighbouringSiteAddresses?:
+    | {
+        /**
+         * First line of address of the neighbouring site
+         */
+        neighbouringSiteAddressLine1: string | null;
+        /**
+         * Second line of address of the neighbouring site
+         */
+        neighbouringSiteAddressLine2: string | null;
+        /**
+         * Town / City of the neighbouring site address
+         */
+        neighbouringSiteAddressTown: string | null;
+        /**
+         * County of the neighbouring site address
+         */
+        neighbouringSiteAddressCounty: string | null;
+        /**
+         * Postal code of the neighbouring site address
+         */
+        neighbouringSiteAddressPostcode: string | null;
+        [k: string]: unknown;
+      }[]
+    | null;
   /**
-   * description
+   * A list of affected listed building IDs from Historic England
    */
-  affectedListedBuildingNumbers?: unknown[];
+  affectedListedBuildingNumbers?: string[] | null;
   /**
-   * description
+   * Indicates if the appellant has applied for costs
    */
-  appellantCostsAppliedFor?: boolean;
+  appellantCostsAppliedFor?: boolean | null;
   /**
-   * description
+   * Indicates if the LPA has applied for costs
    */
-  lpaCostsAppliedFor?: boolean;
+  lpaCostsAppliedFor?: boolean | null;
   /**
-   * description
+   * Name of the appellant
    */
   appellantName?: string;
   /**
-   * description
+   * The type of event
    */
-  typeOfEvent?: string;
+  typeOfEvent?: string | null;
   /**
-   * description
+   * Event start date and time
    */
-  startDateOfTheEvent?: string;
+  startDateOfTheEvent?: string | null;
   /**
-   * description
+   * Name of inspector allocated to case
    */
-  inspectorName?: string;
+  inspectorName?: string | null;
   /**
-   * description
+   * name of case officer assigned to case
    */
-  caseOfficerName?: string;
+  caseOfficerName?: string | null;
   /**
-   * description
+   * The qualifications of the inspector
    */
-  inspectorQualifications?: string;
+  inspectorQualifications?: string | null;
   [k: string]: unknown;
 }
 
@@ -1423,31 +1447,31 @@ export interface Folder {
  */
 export interface GetTimesheetsAPIResponse {
   /**
-   * description
+   * External case identifier
    */
   caseReference?: number;
   /**
-   * description
+   * The unique identifier of the application
    */
   applicationReference?: string;
   /**
-   * description
+   * First line of case site address
    */
   siteAddressLine1?: string;
   /**
-   * description
+   * Second line of case site address
    */
   siteAddressLine2?: string;
   /**
-   * description
+   * Town / City of the site address
    */
   siteAddressTown?: string;
   /**
-   * description
+   * County of the site address
    */
   siteAddressCounty?: string;
   /**
-   * description
+   * Postal code of the site address
    */
   siteAddressPostcode?: string;
   [k: string]: unknown;

@@ -48,23 +48,13 @@
 
 * [Untitled object in Appeal S78 Case](./appeal-s78-properties-neighbouringsiteaddresses-items.md) – `appeal-s78.schema.json#/properties/neighbouringSiteAddresses/items`
 
+* [Untitled object in DaRT API response](./dart-response-properties-neighbouringsiteaddresses-items.md) – `dart-response.schema.json#/properties/neighbouringSiteAddresses/items`
+
 * [Untitled object in Examination Timetable](./nsip-exam-timetable-defs-event.md) – `nsip-exam-timetable.schema.json#/$defs/event`
 
 * [Untitled object in Examination Timetable](./nsip-exam-timetable-defs-line-item.md) – `nsip-exam-timetable.schema.json#/$defs/line-item`
 
 ### Arrays
-
-* [Untitled array in DaRT API response](./dart-response-properties-casespecialisms.md "description") – `dart-response.schema.json#/properties/caseSpecialisms`
-
-* [Untitled array in DaRT API response](./dart-response-properties-casevalidationinvaliddetails.md "description") – `dart-response.schema.json#/properties/caseValidationInvalidDetails`
-
-* [Untitled array in DaRT API response](./dart-response-properties-casevalidationincompletedetails.md "description") – `dart-response.schema.json#/properties/caseValidationIncompleteDetails`
-
-* [Untitled array in DaRT API response](./dart-response-properties-nearbycasereferences.md "description") – `dart-response.schema.json#/properties/nearbyCaseReferences`
-
-* [Untitled array in DaRT API response](./dart-response-properties-neighbouringsiteaddresses.md "description") – `dart-response.schema.json#/properties/neighbouringSiteAddresses`
-
-* [Untitled array in DaRT API response](./dart-response-properties-affectedlistedbuildingnumbers.md "description") – `dart-response.schema.json#/properties/affectedListedBuildingNumbers`
 
 * [Untitled array in Examination Timetable](./nsip-exam-timetable-properties-events.md) – `nsip-exam-timetable.schema.json#/properties/events`
 

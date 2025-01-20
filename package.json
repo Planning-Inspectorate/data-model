@@ -11,7 +11,7 @@
   "scripts": {
     "gen": "npm run gen-docs && npm run gen-enums && npm run gen-types && npm run gen-cjs",
     "gen-docs": "node src/gen-docs.js",
-    "gen-enums": "node src/gen-enums.js",
+    "gen-enums": "node src/gen-enums-run.js",
     "gen-types": "node src/gen-types.js",
     "gen-cjs": "npx rollup ./src/index.js --file ./src/index.cjs --format cjs && npx rollup ./src/enums.js --file ./src/enums.cjs --format cjs"
   },

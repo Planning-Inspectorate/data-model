@@ -139,6 +139,7 @@ export interface AppealDocument {
     | 'lpaWitnessesEvidence'
     | 'rule6ProofOfEvidence'
     | 'environmentalAssessment'
+    | 'appealNotification'
     | null;
   /**
    * The system mastering the metadata for the current document
@@ -4054,6 +4055,7 @@ export interface LPAQuestionnaireCommand {
       | 'developmentPlanPolicies'
       | 'supplementaryPlanning'
       | 'emergingPlan'
+      | 'appealNotification'
       | null;
     [k: string]: unknown;
   }[];

@@ -175,6 +175,7 @@ const APPEAL_CASE_VALIDATION_OUTCOME = Object.freeze({
 });
 
 const APPEAL_DOCUMENT_TYPE = Object.freeze({
+  APPEAL_NOTIFICATION: 'appealNotification',
   APPELLANT_CASE_CORRESPONDENCE: 'appellantCaseCorrespondence',
   APPELLANT_CASE_WITHDRAWAL_LETTER: 'appellantCaseWithdrawalLetter',
   APPELLANT_COSTS_APPLICATION: 'appellantCostsApplication',

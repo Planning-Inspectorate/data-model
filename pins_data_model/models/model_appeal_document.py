@@ -111,6 +111,7 @@ class DocumentType(Enum):
     lpaWitnessesEvidence = "lpaWitnessesEvidence"
     rule6ProofOfEvidence = "rule6ProofOfEvidence"
     environmentalAssessment = "environmentalAssessment"
+    appealNotification = "appealNotification"
     NoneType_None = None
 
 

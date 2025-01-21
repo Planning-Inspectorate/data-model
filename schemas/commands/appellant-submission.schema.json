@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "$id": "appellant-submission.schema.json",
+  "$id": "commands/appellant-submission.schema.json",
   "title": "Appellant Submission Command",
   "description": "Schema defining the data produced by the Front-Office when an appeal is requested",
   "$comment": "This is a combination of Appeal, Documents and Service user data",
@@ -19,11 +19,11 @@
       "oneOf": [
         { "allOf": [
           {"properties": { "caseType": { "const": "D" } }},
-          { "$ref": "appeal-has.schema.json"}
+          { "$ref": "appeal-has-submission.schema.json"}
         ]},
         { "allOf": [
           {"properties": { "caseType": { "const": "W" } }},
-          { "$ref": "appeal-s78.schema.json"}
+          { "$ref": "appeal-s78-submission.schema.json"}
         ]}
       ]
     },

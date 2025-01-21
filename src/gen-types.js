@@ -28,7 +28,7 @@ async function run() {
     for (const commandName of Object.keys(s.commands).sort()) {
         const schema = s.commands[commandName];
         
-        if (commandName.startsWith('appeal') || commandName.startsWith('lpa-questionnaire')) {
+        if (commandName.startsWith('appeal') || commandName.startsWith('appellant') || commandName.startsWith('lpa-questionnaire')) {
             // hack to allow nested $ref links to function in tests and gen types,
             // can we leverage a better means to resolve $refs that aligns with how tests/appeals references this 
             types += await compile(schema, schema['$id'], options(first, commandsPath));

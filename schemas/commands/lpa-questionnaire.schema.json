@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "$id": "lpa-questionnaire.schema.json",
+  "$id": "commands/lpa-questionnaire.schema.json",
   "title": "LPA Questionnaire Command",
   "description": "Schema defining the data produced by the Front-Office when an LPA Questionnaire is submitted",
   "$comment": "This is a combination of an LPA Questionnaire and Documents",

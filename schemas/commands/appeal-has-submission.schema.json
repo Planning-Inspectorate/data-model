@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "$id": "commands/appeal-has.schema.json",
+  "$id": "commands/appeal-has-submission.schema.json",
   "title": "Appellant HAS submission properties",
   "description": "Schema defining any HAS specific properties for submissions",
   "type": "object",
@@ -20,7 +20,7 @@
     "appellantCostsAppliedFor"
   ],
   "allOf": [
-    { "$ref": "appeal-common.schema.json"},
+    { "$ref": "appeal-common-submission.schema.json"},
     {
       "properties": {
         "isGreenBelt": {

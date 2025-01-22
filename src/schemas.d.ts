@@ -660,7 +660,19 @@ export interface AppealRepresentation {
   /**
    * A list of reasons why the representation has been marked as invalid or incomplete.
    */
-  invalidOrIncompleteDetails: string[];
+  invalidOrIncompleteDetails:
+    | (
+        | 'Received after deadline'
+        | 'Includes personal or medical information'
+        | 'Includes inflammatory content'
+        | 'Duplicated or repeated comment'
+        | 'Not relevant to this appeal'
+        | 'Contains links to web pages'
+        | 'No list of suggested conditions'
+        | 'other_reason'
+        | null
+      )[]
+    | null;
   /**
    * A list of free text reasons why the representation has been marked as invalid or incomplete
    */

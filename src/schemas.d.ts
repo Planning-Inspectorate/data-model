@@ -658,11 +658,11 @@ export interface AppealRepresentation {
   /**
    * A list of reasons why the representation has been marked as invalid or incomplete.
    */
-  invalidOrIncompleteDetails?: string[];
+  invalidOrIncompleteDetails: string[];
   /**
    * A list of free text reasons why the representation has been marked as invalid or incomplete
    */
-  otherInvalidOrIncompleteDetails?: string[] | null;
+  otherInvalidOrIncompleteDetails: string[] | null;
   /**
    * Source of the representation (citizen or LPA)
    */

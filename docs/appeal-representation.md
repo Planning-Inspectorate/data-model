@@ -14,8 +14,8 @@
 | [redacted](#redacted)                                               | `boolean` | Required | can be null    | [Appeal Representation](appeal-representation-properties-redacted.md "appeal-representation.schema.json#/properties/redacted")                                               |
 | [redactedRepresentation](#redactedrepresentation)                   | `string`  | Required | can be null    | [Appeal Representation](appeal-representation-properties-redactedrepresentation.md "appeal-representation.schema.json#/properties/redactedRepresentation")                   |
 | [redactedBy](#redactedby)                                           | `string`  | Required | can be null    | [Appeal Representation](appeal-representation-properties-redactedby.md "appeal-representation.schema.json#/properties/redactedBy")                                           |
-| [invalidOrIncompleteDetails](#invalidorincompletedetails)           | `array`   | Optional | can be null    | [Appeal Representation](appeal-representation-properties-invalidorincompletedetails.md "appeal-representation.schema.json#/properties/invalidOrIncompleteDetails")           |
-| [otherInvalidOrIncompleteDetails](#otherinvalidorincompletedetails) | `array`   | Optional | can be null    | [Appeal Representation](appeal-representation-properties-otherinvalidorincompletedetails.md "appeal-representation.schema.json#/properties/otherInvalidOrIncompleteDetails") |
+| [invalidOrIncompleteDetails](#invalidorincompletedetails)           | `array`   | Required | can be null    | [Appeal Representation](appeal-representation-properties-invalidorincompletedetails.md "appeal-representation.schema.json#/properties/invalidOrIncompleteDetails")           |
+| [otherInvalidOrIncompleteDetails](#otherinvalidorincompletedetails) | `array`   | Required | can be null    | [Appeal Representation](appeal-representation-properties-otherinvalidorincompletedetails.md "appeal-representation.schema.json#/properties/otherInvalidOrIncompleteDetails") |
 | [source](#source)                                                   | `string`  | Required | can be null    | [Appeal Representation](appeal-representation-properties-source.md "appeal-representation.schema.json#/properties/source")                                                   |
 | [serviceUserId](#serviceuserid)                                     | `string`  | Required | can be null    | [Appeal Representation](appeal-representation-properties-serviceuserid.md "appeal-representation.schema.json#/properties/serviceUserId")                                     |
 | [representationType](#representationtype)                           | `string`  | Required | can be null    | [Appeal Representation](appeal-representation-properties-representationtype.md "appeal-representation.schema.json#/properties/representationType")                           |
@@ -216,7 +216,7 @@ A list of reasons why the representation has been marked as invalid or incomplet
 
 `invalidOrIncompleteDetails`
 
-* is optional
+* is required
 
 * Type: `string[]`
 
@@ -252,7 +252,7 @@ A list of free text reasons why the representation has been marked as invalid or
 
 `otherInvalidOrIncompleteDetails`
 
-* is optional
+* is required
 
 * Type: `string[]`
 

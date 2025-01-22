@@ -263,6 +263,8 @@ The processing status for the appeal
 | `"withdrawn"`           |             |
 | `"awaiting_transfer"`   |             |
 | `"transferred"`         |             |
+| `"event"`               |             |
+| `"awaiting_event"`      |             |
 
 ## caseType
 

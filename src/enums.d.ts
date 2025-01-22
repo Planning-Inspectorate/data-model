@@ -191,6 +191,17 @@ export const APPEAL_EVENT_TYPE = {
   SITE_VISIT_UNACCOMPANIED: 'site_visit_unaccompanied',
 };
 
+export const APPEAL_INVALID_OR_INCOMPLETE_DETAILS = {
+  CONTAINS_LINKS_TO_WEB_PAGES: 'Contains links to web pages',
+  DUPLICATED_OR_REPEATED_COMMENT: 'Duplicated or repeated comment',
+  INCLUDES_INFLAMMATORY_CONTENT: 'Includes inflammatory content',
+  INCLUDES_PERSONAL_OR_MEDICAL_INFORMATION: 'Includes personal or medical information',
+  NO_LIST_OF_SUGGESTED_CONDITIONS: 'No list of suggested conditions',
+  NOT_RELEVANT_TO_THIS_APPEAL: 'Not relevant to this appeal',
+  RECEIVED_AFTER_DEADLINE: 'Received after deadline',
+  OTHER_REASON: 'other_reason',
+};
+
 export const APPEAL_KNOWS_ALL_OWNERS = {
   NO: 'No',
   SOME: 'Some',
@@ -217,6 +228,12 @@ export const APPEAL_LPA_PROCEDURE_PREFERENCE = {
 export const APPEAL_LPA_QUESTIONNAIRE_VALIDATION_OUTCOME = {
   COMPLETE: 'complete',
   INCOMPLETE: 'incomplete',
+};
+
+export const APPEAL_NOTIFICATION_METHOD = {
+  ADVERT: 'advert',
+  LETTER: 'letter',
+  NOTICE: 'notice',
 };
 
 export const APPEAL_ORIGIN = {
@@ -391,6 +408,19 @@ export const NSIP_PUBLISHED_STATUS = {
 export const NSIP_REDACTED_STATUS = {
   NOT_REDACTED: 'not_redacted',
   REDACTED: 'redacted',
+};
+
+export const NSIP_REGIONS = {
+  EAST_MIDLANDS: 'east_midlands',
+  EASTERN: 'eastern',
+  LONDON: 'london',
+  NORTH_EAST: 'north_east',
+  NORTH_WEST: 'north_west',
+  SOUTH_EAST: 'south_east',
+  SOUTH_WEST: 'south_west',
+  WALES: 'wales',
+  WEST_MIDLANDS: 'west_midlands',
+  YORKSHIRE_AND_THE_HUMBER: 'yorkshire_and_the_humber',
 };
 
 export const NSIP_REGISTER_FOR = {

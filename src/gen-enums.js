@@ -87,14 +87,22 @@ function formatName(name) {
  */
 function collectEnumProps(map, properties = {}, prefix) {
     for (const [key, prop] of Object.entries(properties)) {
-        if (!prop.type || (prop.type !== 'string' && !prop.type.includes('string'))) {
-            continue
-        }
-        if (!Array.isArray(prop.enum)) {
-            continue;
-        }
         const name = prefix ? (prefix + '_' + key) : key;
-        map[name] = prop.enum.filter(e => e !== null);
+
+        const hasStringEnum = (p) => p 
+            && p.enum 
+            && Array.isArray(p.enum) 
+            && p.type 
+            && (p.type === 'string' || p.type.includes('string'));
+        const getEnumValues = (p) => p.filter(e => e !== null);
+        const collectEnumFromProp = (p) => { 
+            if (hasStringEnum(p)) {
+                map[name] = getEnumValues(p.enum); 
+            }
+        };
+        
+        collectEnumFromProp(prop);
+        collectEnumFromProp(prop.items);
     }
 }
 

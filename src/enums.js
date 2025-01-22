@@ -49,9 +49,11 @@ export const APPEAL_CASE_STAGE = Object.freeze({
 
 export const APPEAL_CASE_STATUS = Object.freeze({
   ASSIGN_CASE_OFFICER: 'assign_case_officer',
+  AWAITING_EVENT: 'awaiting_event',
   AWAITING_TRANSFER: 'awaiting_transfer',
   CLOSED: 'closed',
   COMPLETE: 'complete',
+  EVENT: 'event',
   EVIDENCE: 'evidence',
   FINAL_COMMENTS: 'final_comments',
   INVALID: 'invalid',

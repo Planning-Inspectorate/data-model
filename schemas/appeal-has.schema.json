@@ -109,7 +109,9 @@
         "closed",
         "withdrawn",
         "awaiting_transfer",
-        "transferred"
+        "transferred",
+        "event",
+        "awaiting_event"
       ],
       "description": "The processing status for the appeal"
     },

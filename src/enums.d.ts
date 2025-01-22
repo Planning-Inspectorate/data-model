@@ -49,9 +49,11 @@ export const APPEAL_CASE_STAGE = {
 
 export const APPEAL_CASE_STATUS = {
   ASSIGN_CASE_OFFICER: 'assign_case_officer',
+  AWAITING_EVENT: 'awaiting_event',
   AWAITING_TRANSFER: 'awaiting_transfer',
   CLOSED: 'closed',
   COMPLETE: 'complete',
+  EVENT: 'event',
   EVIDENCE: 'evidence',
   FINAL_COMMENTS: 'final_comments',
   INVALID: 'invalid',

@@ -297,7 +297,9 @@ export interface AppealHASCase {
     | 'closed'
     | 'withdrawn'
     | 'awaiting_transfer'
-    | 'transferred';
+    | 'transferred'
+    | 'event'
+    | 'awaiting_event';
   /**
    * The internal code for an appeal type, e.g. D (Householder)
    */
@@ -717,7 +719,9 @@ export interface AppealS78Case {
     | 'closed'
     | 'withdrawn'
     | 'awaiting_transfer'
-    | 'transferred';
+    | 'transferred'
+    | 'event'
+    | 'awaiting_event';
   /**
    * The internal code for an appeal type, e.g. D (Householder)
    */

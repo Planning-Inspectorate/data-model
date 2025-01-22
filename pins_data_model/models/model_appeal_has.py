@@ -26,6 +26,8 @@ class CaseStatus(Enum):
     withdrawn = "withdrawn"
     awaiting_transfer = "awaiting_transfer"
     transferred = "transferred"
+    event = "event"
+    awaiting_event = "awaiting_event"
 
 
 class CaseType(Enum):

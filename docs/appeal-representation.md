@@ -228,22 +228,6 @@ A list of reasons why the representation has been marked as invalid or incomplet
 
 `string[]`
 
-### invalidOrIncompleteDetails Constraints
-
-**enum**: the value of this property must be equal to one of the following values:
-
-| Value                                            | Explanation |
-| :----------------------------------------------- | :---------- |
-| `"Received after deadline"`                      |             |
-| `"Includes personal and/or medical information"` |             |
-| `"Includes inflammatory content"`                |             |
-| `"Duplicated comment"`                           |             |
-| `"Not relevant to this appeal"`                  |             |
-| `"Contains links to web pages"`                  |             |
-| `"No list of suggested conditions"`              |             |
-| `"other_reason"`                                 |             |
-| `null`                                           |             |
-
 ## otherInvalidOrIncompleteDetails
 
 A list of free text reasons why the representation has been marked as invalid or incomplete

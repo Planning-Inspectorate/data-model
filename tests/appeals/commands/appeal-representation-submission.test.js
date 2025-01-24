@@ -30,7 +30,8 @@ const newUser = {
 const representation = {
     "caseReference": "123",
     "representationSubmittedDate": "1990-12-28T22:49:47.0Z",
-    "representation": "This is a text based representation"
+    "representation": "This is a text based representation",
+    "representationType": "comment"
 };
 
 describe("appeal-representation-submission.schema", () => {

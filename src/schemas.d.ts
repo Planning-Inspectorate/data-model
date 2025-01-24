@@ -2771,6 +2771,10 @@ export type AppealRepresentationSubmission = {
    */
   representationSubmittedDate: string | null;
   /**
+   * The type of representation
+   */
+  representationType: 'statement' | 'comment' | 'final_comment' | 'proofs_evidence' | null;
+  /**
    * The original representation
    */
   representation: string | null;

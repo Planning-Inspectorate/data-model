@@ -9,6 +9,7 @@
       "caseReference",
       "representationSubmittedDate",
       "representation",
+      "representationType",
       "documents"
     ],
     "oneOf": [
@@ -27,6 +28,17 @@
         "format": "date-time",
         "examples": ["2023-07-27T20:30:00.000Z"],
         "description": "The date the representation was submitted"
+      },
+      "representationType": {
+        "type": "string",
+        "enum": [
+          "statement",
+          "comment",
+          "final_comment",
+          "proofs_evidence",
+          null
+        ],
+        "description": "The type of representation"
       },
       "representation": {
         "type": ["string", "null"],

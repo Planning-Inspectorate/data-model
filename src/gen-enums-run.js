@@ -23,7 +23,7 @@ async function run() {
 
     for (const schemaName of Object.keys(s.schemas).sort()) {
         const schema = s.schemas[schemaName];
-        collectEnumProps(enumProps, schema.properties, schemaPrefix(schemaName));
+        collectEnumProps(enumProps, schema.properties, schemaName);
     }
 
     let output = '';

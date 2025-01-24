@@ -48,11 +48,17 @@ export function formatName(name) {
  *
  * @param {Object<string, string[]>} map
  * @param {Object<string, {type?: string|string[], enum?: string[]}>} properties
- * @param {string} [prefix]
+ * @param {string} schemaName
  */
-export function collectEnumProps(map, properties = {}, prefix) {
+export function collectEnumProps(map, properties = {}, schemaName) {
     for (const [key, prop] of Object.entries(properties)) {
-        const name = prefix ? (prefix + '_' + key) : key;
+        let name = key;
+        if (schemaPrefix(schemaName)) {
+            name = schemaPrefix(schemaName) + '_' + key;
+        }
+        if (Object.hasOwn(map, name)) {
+            name = schemaName + '_' + key;
+        }
 
         const hasStringEnum = (p) => p 
             && p.enum 

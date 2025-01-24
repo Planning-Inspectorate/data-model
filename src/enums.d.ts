@@ -1,3 +1,119 @@
+export const APPEAL_HAS_SCHEMA_JSON_CASE_TYPE = {
+  C: 'C',
+  D: 'D',
+  F: 'F',
+  G: 'G',
+  H: 'H',
+  L: 'L',
+  Q: 'Q',
+  S: 'S',
+  V: 'V',
+  W: 'W',
+  X: 'X',
+  Y: 'Y',
+  Z: 'Z',
+};
+
+export const APPEAL_S_78_SCHEMA_JSON_ALLOCATION_LEVEL = {
+  A: 'A',
+  B: 'B',
+  C: 'C',
+  D: 'D',
+  E: 'E',
+  F: 'F',
+  G: 'G',
+  H: 'H',
+};
+
+export const APPEAL_S_78_SCHEMA_JSON_APPLICATION_DECISION = {
+  GRANTED: 'granted',
+  NOT_RECEIVED: 'not_received',
+  REFUSED: 'refused',
+};
+
+export const APPEAL_S_78_SCHEMA_JSON_CASE_DECISION_OUTCOME = {
+  ALLOWED: 'allowed',
+  DISMISSED: 'dismissed',
+  INVALID: 'invalid',
+  SPLIT_DECISION: 'split_decision',
+};
+
+export const APPEAL_S_78_SCHEMA_JSON_CASE_PROCEDURE = {
+  HEARING: 'hearing',
+  INQUIRY: 'inquiry',
+  WRITTEN: 'written',
+};
+
+export const APPEAL_S_78_SCHEMA_JSON_CASE_STATUS = {
+  ASSIGN_CASE_OFFICER: 'assign_case_officer',
+  AWAITING_EVENT: 'awaiting_event',
+  AWAITING_TRANSFER: 'awaiting_transfer',
+  CLOSED: 'closed',
+  COMPLETE: 'complete',
+  EVENT: 'event',
+  EVIDENCE: 'evidence',
+  FINAL_COMMENTS: 'final_comments',
+  INVALID: 'invalid',
+  ISSUE_DETERMINATION: 'issue_determination',
+  LPA_QUESTIONNAIRE: 'lpa_questionnaire',
+  READY_TO_START: 'ready_to_start',
+  STATEMENTS: 'statements',
+  TRANSFERRED: 'transferred',
+  VALIDATION: 'validation',
+  WITHDRAWN: 'withdrawn',
+  WITNESSES: 'witnesses',
+};
+
+export const APPEAL_S_78_SCHEMA_JSON_CASE_TYPE = {
+  C: 'C',
+  D: 'D',
+  F: 'F',
+  G: 'G',
+  H: 'H',
+  L: 'L',
+  Q: 'Q',
+  S: 'S',
+  V: 'V',
+  W: 'W',
+  X: 'X',
+  Y: 'Y',
+  Z: 'Z',
+};
+
+export const APPEAL_S_78_SCHEMA_JSON_CASE_VALIDATION_OUTCOME = {
+  INCOMPLETE: 'incomplete',
+  INVALID: 'invalid',
+  VALID: 'valid',
+};
+
+export const APPEAL_S_78_SCHEMA_JSON_KNOWS_ALL_OWNERS = {
+  NO: 'No',
+  SOME: 'Some',
+  YES: 'Yes',
+};
+
+export const APPEAL_S_78_SCHEMA_JSON_KNOWS_OTHER_OWNERS = {
+  NO: 'No',
+  SOME: 'Some',
+  YES: 'Yes',
+};
+
+export const APPEAL_S_78_SCHEMA_JSON_LINKED_CASE_STATUS = {
+  CHILD: 'child',
+  LEAD: 'lead',
+};
+
+export const APPEAL_S_78_SCHEMA_JSON_LPA_QUESTIONNAIRE_VALIDATION_OUTCOME = {
+  COMPLETE: 'complete',
+  INCOMPLETE: 'incomplete',
+};
+
+export const APPEAL_S_78_SCHEMA_JSON_NOTIFICATION_METHOD = {
+  ADVERT: 'advert',
+  LETTER: 'letter',
+  NOTICE: 'notice',
+};
+
 export const APPEAL_ALLOCATION_LEVEL = {
   A: 'A',
   B: 'B',
@@ -54,17 +170,13 @@ export const APPEAL_CASE_STATUS = {
   CLOSED: 'closed',
   COMPLETE: 'complete',
   EVENT: 'event',
-  EVIDENCE: 'evidence',
-  FINAL_COMMENTS: 'final_comments',
   INVALID: 'invalid',
   ISSUE_DETERMINATION: 'issue_determination',
   LPA_QUESTIONNAIRE: 'lpa_questionnaire',
   READY_TO_START: 'ready_to_start',
-  STATEMENTS: 'statements',
   TRANSFERRED: 'transferred',
   VALIDATION: 'validation',
   WITHDRAWN: 'withdrawn',
-  WITNESSES: 'witnesses',
 };
 
 export const APPEAL_CASE_TYPE = {
@@ -309,6 +421,11 @@ export const METHOD = {
   POST: 'post',
 };
 
+export const NSIP_PROJECT_SCHEMA_JSON_SOURCE_SYSTEM = {
+  BACK_OFFICE_APPLICATIONS: 'back-office-applications',
+  HORIZON: 'horizon',
+};
+
 export const NSIP_CASE_TYPE = {
   HAS: 'has',
   NSIP: 'nsip',
@@ -462,8 +579,11 @@ export const NSIP_SECURITY_CLASSIFICATION = {
 };
 
 export const NSIP_SOURCE_SYSTEM = {
+  BACK_OFFICE_APPEALS: 'back-office-appeals',
   BACK_OFFICE_APPLICATIONS: 'back-office-applications',
   HORIZON: 'horizon',
+  NI_FILE: 'ni_file',
+  SHAREPOINT: 'sharepoint',
 };
 
 export const NSIP_STAGE = {

@@ -1,5 +1,121 @@
 'use strict';
 
+const APPEAL_HAS_SCHEMA_JSON_CASE_TYPE = Object.freeze({
+  C: 'C',
+  D: 'D',
+  F: 'F',
+  G: 'G',
+  H: 'H',
+  L: 'L',
+  Q: 'Q',
+  S: 'S',
+  V: 'V',
+  W: 'W',
+  X: 'X',
+  Y: 'Y',
+  Z: 'Z',
+});
+
+const APPEAL_S_78_SCHEMA_JSON_ALLOCATION_LEVEL = Object.freeze({
+  A: 'A',
+  B: 'B',
+  C: 'C',
+  D: 'D',
+  E: 'E',
+  F: 'F',
+  G: 'G',
+  H: 'H',
+});
+
+const APPEAL_S_78_SCHEMA_JSON_APPLICATION_DECISION = Object.freeze({
+  GRANTED: 'granted',
+  NOT_RECEIVED: 'not_received',
+  REFUSED: 'refused',
+});
+
+const APPEAL_S_78_SCHEMA_JSON_CASE_DECISION_OUTCOME = Object.freeze({
+  ALLOWED: 'allowed',
+  DISMISSED: 'dismissed',
+  INVALID: 'invalid',
+  SPLIT_DECISION: 'split_decision',
+});
+
+const APPEAL_S_78_SCHEMA_JSON_CASE_PROCEDURE = Object.freeze({
+  HEARING: 'hearing',
+  INQUIRY: 'inquiry',
+  WRITTEN: 'written',
+});
+
+const APPEAL_S_78_SCHEMA_JSON_CASE_STATUS = Object.freeze({
+  ASSIGN_CASE_OFFICER: 'assign_case_officer',
+  AWAITING_EVENT: 'awaiting_event',
+  AWAITING_TRANSFER: 'awaiting_transfer',
+  CLOSED: 'closed',
+  COMPLETE: 'complete',
+  EVENT: 'event',
+  EVIDENCE: 'evidence',
+  FINAL_COMMENTS: 'final_comments',
+  INVALID: 'invalid',
+  ISSUE_DETERMINATION: 'issue_determination',
+  LPA_QUESTIONNAIRE: 'lpa_questionnaire',
+  READY_TO_START: 'ready_to_start',
+  STATEMENTS: 'statements',
+  TRANSFERRED: 'transferred',
+  VALIDATION: 'validation',
+  WITHDRAWN: 'withdrawn',
+  WITNESSES: 'witnesses',
+});
+
+const APPEAL_S_78_SCHEMA_JSON_CASE_TYPE = Object.freeze({
+  C: 'C',
+  D: 'D',
+  F: 'F',
+  G: 'G',
+  H: 'H',
+  L: 'L',
+  Q: 'Q',
+  S: 'S',
+  V: 'V',
+  W: 'W',
+  X: 'X',
+  Y: 'Y',
+  Z: 'Z',
+});
+
+const APPEAL_S_78_SCHEMA_JSON_CASE_VALIDATION_OUTCOME = Object.freeze({
+  INCOMPLETE: 'incomplete',
+  INVALID: 'invalid',
+  VALID: 'valid',
+});
+
+const APPEAL_S_78_SCHEMA_JSON_KNOWS_ALL_OWNERS = Object.freeze({
+  NO: 'No',
+  SOME: 'Some',
+  YES: 'Yes',
+});
+
+const APPEAL_S_78_SCHEMA_JSON_KNOWS_OTHER_OWNERS = Object.freeze({
+  NO: 'No',
+  SOME: 'Some',
+  YES: 'Yes',
+});
+
+const APPEAL_S_78_SCHEMA_JSON_LINKED_CASE_STATUS = Object.freeze({
+  CHILD: 'child',
+  LEAD: 'lead',
+});
+
+const APPEAL_S_78_SCHEMA_JSON_LPA_QUESTIONNAIRE_VALIDATION_OUTCOME = Object.freeze({
+  COMPLETE: 'complete',
+  INCOMPLETE: 'incomplete',
+});
+
+const APPEAL_S_78_SCHEMA_JSON_NOTIFICATION_METHOD = Object.freeze({
+  ADVERT: 'advert',
+  LETTER: 'letter',
+  NOTICE: 'notice',
+});
+
 const APPEAL_ALLOCATION_LEVEL = Object.freeze({
   A: 'A',
   B: 'B',
@@ -56,17 +172,13 @@ const APPEAL_CASE_STATUS = Object.freeze({
   CLOSED: 'closed',
   COMPLETE: 'complete',
   EVENT: 'event',
-  EVIDENCE: 'evidence',
-  FINAL_COMMENTS: 'final_comments',
   INVALID: 'invalid',
   ISSUE_DETERMINATION: 'issue_determination',
   LPA_QUESTIONNAIRE: 'lpa_questionnaire',
   READY_TO_START: 'ready_to_start',
-  STATEMENTS: 'statements',
   TRANSFERRED: 'transferred',
   VALIDATION: 'validation',
   WITHDRAWN: 'withdrawn',
-  WITNESSES: 'witnesses',
 });
 
 const APPEAL_CASE_TYPE = Object.freeze({
@@ -311,6 +423,11 @@ const METHOD = Object.freeze({
   POST: 'post',
 });
 
+const NSIP_PROJECT_SCHEMA_JSON_SOURCE_SYSTEM = Object.freeze({
+  BACK_OFFICE_APPLICATIONS: 'back-office-applications',
+  HORIZON: 'horizon',
+});
+
 const NSIP_CASE_TYPE = Object.freeze({
   HAS: 'has',
   NSIP: 'nsip',
@@ -464,8 +581,11 @@ const NSIP_SECURITY_CLASSIFICATION = Object.freeze({
 });
 
 const NSIP_SOURCE_SYSTEM = Object.freeze({
+  BACK_OFFICE_APPEALS: 'back-office-appeals',
   BACK_OFFICE_APPLICATIONS: 'back-office-applications',
   HORIZON: 'horizon',
+  NI_FILE: 'ni_file',
+  SHAREPOINT: 'sharepoint',
 });
 
 const NSIP_STAGE = Object.freeze({
@@ -550,6 +670,7 @@ exports.APPEAL_EIA_DEVELOPMENT_DESCRIPTION = APPEAL_EIA_DEVELOPMENT_DESCRIPTION;
 exports.APPEAL_EIA_ENVIRONMENTAL_IMPACT_SCHEDULE = APPEAL_EIA_ENVIRONMENTAL_IMPACT_SCHEDULE;
 exports.APPEAL_EVENT_STATUS = APPEAL_EVENT_STATUS;
 exports.APPEAL_EVENT_TYPE = APPEAL_EVENT_TYPE;
+exports.APPEAL_HAS_SCHEMA_JSON_CASE_TYPE = APPEAL_HAS_SCHEMA_JSON_CASE_TYPE;
 exports.APPEAL_INVALID_OR_INCOMPLETE_DETAILS = APPEAL_INVALID_OR_INCOMPLETE_DETAILS;
 exports.APPEAL_KNOWS_ALL_OWNERS = APPEAL_KNOWS_ALL_OWNERS;
 exports.APPEAL_KNOWS_OTHER_OWNERS = APPEAL_KNOWS_OTHER_OWNERS;
@@ -563,6 +684,18 @@ exports.APPEAL_REPRESENTATION_STATUS = APPEAL_REPRESENTATION_STATUS;
 exports.APPEAL_REPRESENTATION_TYPE = APPEAL_REPRESENTATION_TYPE;
 exports.APPEAL_SOURCE = APPEAL_SOURCE;
 exports.APPEAL_SOURCE_SYSTEM = APPEAL_SOURCE_SYSTEM;
+exports.APPEAL_S_78_SCHEMA_JSON_ALLOCATION_LEVEL = APPEAL_S_78_SCHEMA_JSON_ALLOCATION_LEVEL;
+exports.APPEAL_S_78_SCHEMA_JSON_APPLICATION_DECISION = APPEAL_S_78_SCHEMA_JSON_APPLICATION_DECISION;
+exports.APPEAL_S_78_SCHEMA_JSON_CASE_DECISION_OUTCOME = APPEAL_S_78_SCHEMA_JSON_CASE_DECISION_OUTCOME;
+exports.APPEAL_S_78_SCHEMA_JSON_CASE_PROCEDURE = APPEAL_S_78_SCHEMA_JSON_CASE_PROCEDURE;
+exports.APPEAL_S_78_SCHEMA_JSON_CASE_STATUS = APPEAL_S_78_SCHEMA_JSON_CASE_STATUS;
+exports.APPEAL_S_78_SCHEMA_JSON_CASE_TYPE = APPEAL_S_78_SCHEMA_JSON_CASE_TYPE;
+exports.APPEAL_S_78_SCHEMA_JSON_CASE_VALIDATION_OUTCOME = APPEAL_S_78_SCHEMA_JSON_CASE_VALIDATION_OUTCOME;
+exports.APPEAL_S_78_SCHEMA_JSON_KNOWS_ALL_OWNERS = APPEAL_S_78_SCHEMA_JSON_KNOWS_ALL_OWNERS;
+exports.APPEAL_S_78_SCHEMA_JSON_KNOWS_OTHER_OWNERS = APPEAL_S_78_SCHEMA_JSON_KNOWS_OTHER_OWNERS;
+exports.APPEAL_S_78_SCHEMA_JSON_LINKED_CASE_STATUS = APPEAL_S_78_SCHEMA_JSON_LINKED_CASE_STATUS;
+exports.APPEAL_S_78_SCHEMA_JSON_LPA_QUESTIONNAIRE_VALIDATION_OUTCOME = APPEAL_S_78_SCHEMA_JSON_LPA_QUESTIONNAIRE_VALIDATION_OUTCOME;
+exports.APPEAL_S_78_SCHEMA_JSON_NOTIFICATION_METHOD = APPEAL_S_78_SCHEMA_JSON_NOTIFICATION_METHOD;
 exports.APPEAL_VIRUS_CHECK_STATUS = APPEAL_VIRUS_CHECK_STATUS;
 exports.CASE_STAGE = CASE_STAGE;
 exports.METHOD = METHOD;
@@ -572,6 +705,7 @@ exports.NSIP_DOCUMENT_CASE_STAGE = NSIP_DOCUMENT_CASE_STAGE;
 exports.NSIP_LANGUAGE = NSIP_LANGUAGE;
 exports.NSIP_MAP_ZOOM_LEVEL = NSIP_MAP_ZOOM_LEVEL;
 exports.NSIP_ORIGIN = NSIP_ORIGIN;
+exports.NSIP_PROJECT_SCHEMA_JSON_SOURCE_SYSTEM = NSIP_PROJECT_SCHEMA_JSON_SOURCE_SYSTEM;
 exports.NSIP_PROJECT_TYPE = NSIP_PROJECT_TYPE;
 exports.NSIP_PUBLISHED_STATUS = NSIP_PUBLISHED_STATUS;
 exports.NSIP_PUBLISH_STATUS = NSIP_PUBLISH_STATUS;

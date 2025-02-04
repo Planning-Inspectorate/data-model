@@ -205,6 +205,7 @@
         "lpaProofOfEvidence",
         "lpaWitnessesEvidence",
         "rule6ProofOfEvidence",
+        "rule6WitnessesEvidence",
         "environmentalAssessment",
         "appealNotification",
         null

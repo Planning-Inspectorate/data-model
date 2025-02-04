@@ -138,6 +138,7 @@ export interface AppealDocument {
     | 'lpaProofOfEvidence'
     | 'lpaWitnessesEvidence'
     | 'rule6ProofOfEvidence'
+    | 'rule6WitnessesEvidence'
     | 'environmentalAssessment'
     | 'appealNotification'
     | null;
@@ -2821,6 +2822,7 @@ export type AppealRepresentationSubmission = {
       | 'lpaProofOfEvidence'
       | 'lpaWitnessesEvidence'
       | 'rule6ProofOfEvidence'
+      | 'rule6WitnessesEvidence'
       | null;
     [k: string]: unknown;
   }[];

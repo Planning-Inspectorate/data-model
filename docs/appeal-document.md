@@ -588,6 +588,7 @@ The type of document, used for exchange, migrations and consumption from the app
 | `"lpaProofOfEvidence"`            |             |
 | `"lpaWitnessesEvidence"`          |             |
 | `"rule6ProofOfEvidence"`          |             |
+| `"rule6WitnessesEvidence"`        |             |
 | `"environmentalAssessment"`       |             |
 | `"appealNotification"`            |             |
 | `null`                            |             |

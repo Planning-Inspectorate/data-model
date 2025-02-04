@@ -137,6 +137,7 @@ export const APPEAL_DOCUMENT_TYPE = {
   PLANS_DRAWINGS: 'plansDrawings',
   RULE_6_PROOF_OF_EVIDENCE: 'rule6ProofOfEvidence',
   RULE_6_STATEMENT: 'rule6Statement',
+  RULE_6_WITNESSES_EVIDENCE: 'rule6WitnessesEvidence',
   STATEMENT_COMMON_GROUND: 'statementCommonGround',
   SUPPLEMENTARY_PLANNING: 'supplementaryPlanning',
   TREE_PRESERVATION_PLAN: 'treePreservationPlan',

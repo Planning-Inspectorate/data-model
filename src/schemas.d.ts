@@ -3236,6 +3236,13 @@ export interface AppellantSubmissionCommand {
       | 'applicationDecisionLetter'
       | 'changedDescription'
       | 'originalApplicationForm'
+      | 'planningObligation'
+      | 'ownershipCertificate'
+      | 'statementCommonGround'
+      | 'designAccessStatement'
+      | 'plansDrawings'
+      | 'newPlansDrawings'
+      | 'otherNewDocuments'
       | null;
     [k: string]: unknown;
   }[];

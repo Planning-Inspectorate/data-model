@@ -3637,7 +3637,7 @@ export type LPAQS78SubmissionProperties = LPAQHASSubmissionProperties & {
   /**
    * The designated site names
    */
-  designatedSitesNames?: string | null;
+  designatedSitesNames?: string[] | null;
   /**
    * Indicates a TPO (tree preservation order)
    */
@@ -3898,7 +3898,7 @@ export type LPAQS78SubmissionProperties = LPAQHASSubmissionProperties & {
   /**
    * The designated site names
    */
-  designatedSitesNames?: string | null;
+  designatedSitesNames?: string[] | null;
   /**
    * Indicates a TPO (tree preservation order)
    */

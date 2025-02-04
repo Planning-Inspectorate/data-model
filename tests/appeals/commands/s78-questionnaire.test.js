@@ -53,7 +53,7 @@ const exampleS78QuestionnaireSchema = {
         "affectsScheduledMonument": true,
         "hasProtectedSpecies": false,
         "isAonbNationalLandscape": true,
-        "designatedSitesNames": "quis nulla eu officia exercitation",
+        "designatedSitesNames": ["quis nulla eu officia exercitation"],
         "hasTreePreservationOrder": null,
         "isGypsyOrTravellerSite": true,
         "isPublicRightOfWay": null,

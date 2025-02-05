@@ -29,6 +29,7 @@
     "hasInfrastructureLevy",
     "isInfrastructureLevyFormallyAdopted",
     "infrastructureLevyAdoptedDate",
+    "infrastructureLevyExpectedDate",
     "lpaProcedurePreference",
     "lpaProcedurePreferenceDetails",
     "lpaProcedurePreferenceDuration"
@@ -161,6 +162,13 @@
           "format": "date-time",
           "examples": ["2023-07-27T20:30:00.000Z"],
           "description": "The date of the infrastructure levy adoption",
+          "$comment": "Only available in S78 cases"
+        },
+        "infrastructureLevyExpectedDate": {
+          "type": ["string", "null"],
+          "format": "date-time",
+          "examples": ["2023-07-27T20:30:00.000Z"],
+          "description": "The expected date of the infrastructure levy",
           "$comment": "Only available in S78 cases"
         },
         "lpaProcedurePreference": {

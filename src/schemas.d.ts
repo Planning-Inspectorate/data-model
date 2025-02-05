@@ -3732,6 +3732,10 @@ export type LPAQS78SubmissionProperties = LPAQHASSubmissionProperties & {
    */
   infrastructureLevyAdoptedDate?: string | null;
   /**
+   * The expected date of the infrastructure levy
+   */
+  infrastructureLevyExpectedDate?: string | null;
+  /**
    * The procedure preference indicated by the LPA
    */
   lpaProcedurePreference?: 'written' | 'hearing' | 'inquiry' | null;
@@ -3992,6 +3996,10 @@ export type LPAQS78SubmissionProperties = LPAQHASSubmissionProperties & {
    * The date of the infrastructure levy adoption
    */
   infrastructureLevyAdoptedDate?: string | null;
+  /**
+   * The expected date of the infrastructure levy
+   */
+  infrastructureLevyExpectedDate?: string | null;
   /**
    * The procedure preference indicated by the LPA
    */

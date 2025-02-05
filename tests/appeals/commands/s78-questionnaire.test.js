@@ -72,6 +72,7 @@ const exampleS78QuestionnaireSchema = {
         "hasInfrastructureLevy": true,
         "isInfrastructureLevyFormallyAdopted": false,
         "infrastructureLevyAdoptedDate": "1913-06-14T10:40:33.0Z",
+        "infrastructureLevyExpectedDate": "1912-06-14T10:40:33.0Z",
         "lpaProcedurePreference": null,
         "lpaProcedurePreferenceDetails": "in reprehenderit",
         "lpaProcedurePreferenceDuration": -34480053.16630782

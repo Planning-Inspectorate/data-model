@@ -20,9 +20,9 @@
     "eiaColumnTwoThreshold",
     "eiaScreeningOpinion",
     "eiaRequiresEnvironmentalStatement",
-    "eiaCompletedEnvironmentalStatement",
-    "eiaConsultedBodiesDetails",
+    "eiaCompletedEnvironmentalStatement",    
     "hasStatutoryConsultees",
+    "consultedBodiesDetails",
     "hasConsultationResponses",
     "hasEmergingPlan",
     "hasSupplementaryPlanningDocs",
@@ -121,15 +121,15 @@
           "type": ["boolean", "null"],
           "description": "EIA completed environmental statement required",
           "$comment": "Only available in S78 cases"
-        },
-        "eiaConsultedBodiesDetails": {
-          "type": ["string", "null"],
-          "description": "The details of the bodies consulted by EIA"
-        },
+        },        
         "hasStatutoryConsultees": {
           "type": ["boolean", "null"],
           "description": "Indicates statutory consultees",
           "$comment": "Only available in S78 cases"
+        },
+        "consultedBodiesDetails": {
+          "type": ["string", "null"],
+          "description": "The details of the bodies consulted"
         },
         "hasConsultationResponses": {
           "type": ["boolean", "null"],

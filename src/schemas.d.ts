@@ -1151,13 +1151,13 @@ export interface AppealS78Case {
    */
   eiaCompletedEnvironmentalStatement: boolean | null;
   /**
-   * The details of the bodies consulted by EIA
-   */
-  eiaConsultedBodiesDetails: string | null;
-  /**
    * Indicates statutory consultees
    */
   hasStatutoryConsultees: boolean | null;
+  /**
+   * The details of the bodies consulted
+   */
+  consultedBodiesDetails: string | null;
   /**
    * Indicates the existence of an infrastructure levy
    */
@@ -3700,13 +3700,13 @@ export type LPAQS78SubmissionProperties = LPAQHASSubmissionProperties & {
    */
   eiaCompletedEnvironmentalStatement?: boolean | null;
   /**
-   * The details of the bodies consulted by EIA
-   */
-  eiaConsultedBodiesDetails?: string | null;
-  /**
    * Indicates statutory consultees
    */
   hasStatutoryConsultees?: boolean | null;
+  /**
+   * The details of the bodies consulted
+   */
+  consultedBodiesDetails?: string | null;
   /**
    * Indicates consultation responses
    */
@@ -3961,13 +3961,13 @@ export type LPAQS78SubmissionProperties = LPAQHASSubmissionProperties & {
    */
   eiaCompletedEnvironmentalStatement?: boolean | null;
   /**
-   * The details of the bodies consulted by EIA
-   */
-  eiaConsultedBodiesDetails?: string | null;
-  /**
    * Indicates statutory consultees
    */
   hasStatutoryConsultees?: boolean | null;
+  /**
+   * The details of the bodies consulted
+   */
+  consultedBodiesDetails?: string | null;
   /**
    * Indicates consultation responses
    */

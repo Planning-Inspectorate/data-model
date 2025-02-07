@@ -102,8 +102,8 @@
 | [eiaScreeningOpinion](#eiascreeningopinion)                                           | `boolean` | Required | can be null    | [Appeal S78 Case](appeal-s78-properties-eiascreeningopinion.md "appeal-s78.schema.json#/properties/eiaScreeningOpinion")                                           |
 | [eiaRequiresEnvironmentalStatement](#eiarequiresenvironmentalstatement)               | `boolean` | Required | can be null    | [Appeal S78 Case](appeal-s78-properties-eiarequiresenvironmentalstatement.md "appeal-s78.schema.json#/properties/eiaRequiresEnvironmentalStatement")               |
 | [eiaCompletedEnvironmentalStatement](#eiacompletedenvironmentalstatement)             | `boolean` | Required | can be null    | [Appeal S78 Case](appeal-s78-properties-eiacompletedenvironmentalstatement.md "appeal-s78.schema.json#/properties/eiaCompletedEnvironmentalStatement")             |
-| [eiaConsultedBodiesDetails](#eiaconsultedbodiesdetails)                               | `string`  | Required | can be null    | [Appeal S78 Case](appeal-s78-properties-eiaconsultedbodiesdetails.md "appeal-s78.schema.json#/properties/eiaConsultedBodiesDetails")                               |
 | [hasStatutoryConsultees](#hasstatutoryconsultees)                                     | `boolean` | Required | can be null    | [Appeal S78 Case](appeal-s78-properties-hasstatutoryconsultees.md "appeal-s78.schema.json#/properties/hasStatutoryConsultees")                                     |
+| [consultedBodiesDetails](#consultedbodiesdetails)                                     | `string`  | Required | can be null    | [Appeal S78 Case](appeal-s78-properties-consultedbodiesdetails.md "appeal-s78.schema.json#/properties/consultedBodiesDetails")                                     |
 | [hasInfrastructureLevy](#hasinfrastructurelevy)                                       | `boolean` | Required | can be null    | [Appeal S78 Case](appeal-s78-properties-hasinfrastructurelevy.md "appeal-s78.schema.json#/properties/hasInfrastructureLevy")                                       |
 | [isInfrastructureLevyFormallyAdopted](#isinfrastructurelevyformallyadopted)           | `boolean` | Required | can be null    | [Appeal S78 Case](appeal-s78-properties-isinfrastructurelevyformallyadopted.md "appeal-s78.schema.json#/properties/isInfrastructureLevyFormallyAdopted")           |
 | [infrastructureLevyAdoptedDate](#infrastructurelevyadopteddate)                       | `string`  | Required | can be null    | [Appeal S78 Case](appeal-s78-properties-infrastructurelevyadopteddate.md "appeal-s78.schema.json#/properties/infrastructureLevyAdoptedDate")                       |
@@ -2595,24 +2595,6 @@ EIA completed environmental statement required
 
 `boolean`
 
-## eiaConsultedBodiesDetails
-
-The details of the bodies consulted by EIA
-
-`eiaConsultedBodiesDetails`
-
-* is required
-
-* Type: `string`
-
-* can be null
-
-* defined in: [Appeal S78 Case](appeal-s78-properties-eiaconsultedbodiesdetails.md "appeal-s78.schema.json#/properties/eiaConsultedBodiesDetails")
-
-### eiaConsultedBodiesDetails Type
-
-`string`
-
 ## hasStatutoryConsultees
 
 Indicates statutory consultees
@@ -2632,6 +2614,24 @@ Indicates statutory consultees
 ### hasStatutoryConsultees Type
 
 `boolean`
+
+## consultedBodiesDetails
+
+The details of the bodies consulted
+
+`consultedBodiesDetails`
+
+* is required
+
+* Type: `string`
+
+* can be null
+
+* defined in: [Appeal S78 Case](appeal-s78-properties-consultedbodiesdetails.md "appeal-s78.schema.json#/properties/consultedBodiesDetails")
+
+### consultedBodiesDetails Type
+
+`string`
 
 ## hasInfrastructureLevy
 

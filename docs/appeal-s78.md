@@ -112,7 +112,6 @@
 | [lpaProcedurePreferenceDetails](#lpaprocedurepreferencedetails)                       | `string`  | Required | can be null    | [Appeal S78 Case](appeal-s78-properties-lpaprocedurepreferencedetails.md "appeal-s78.schema.json#/properties/lpaProcedurePreferenceDetails")                       |
 | [lpaProcedurePreferenceDuration](#lpaprocedurepreferenceduration)                     | `number`  | Required | can be null    | [Appeal S78 Case](appeal-s78-properties-lpaprocedurepreferenceduration.md "appeal-s78.schema.json#/properties/lpaProcedurePreferenceDuration")                     |
 | [caseworkReason](#caseworkreason)                                                     | `string`  | Required | can be null    | [Appeal S78 Case](appeal-s78-properties-caseworkreason.md "appeal-s78.schema.json#/properties/caseworkReason")                                                     |
-| [developmentType](#developmenttype)                                                   | `string`  | Required | can be null    | [Appeal S78 Case](appeal-s78-properties-developmenttype.md "appeal-s78.schema.json#/properties/developmentType")                                                   |
 | [importantInformation](#importantinformation)                                         | `string`  | Required | can be null    | [Appeal S78 Case](appeal-s78-properties-importantinformation.md "appeal-s78.schema.json#/properties/importantInformation")                                         |
 | [jurisdiction](#jurisdiction)                                                         | `string`  | Required | can be null    | [Appeal S78 Case](appeal-s78-properties-jurisdiction.md "appeal-s78.schema.json#/properties/jurisdiction")                                                         |
 | [redeterminedIndicator](#redeterminedindicator)                                       | `string`  | Required | can be null    | [Appeal S78 Case](appeal-s78-properties-redeterminedindicator.md "appeal-s78.schema.json#/properties/redeterminedIndicator")                                       |
@@ -138,6 +137,7 @@
 | [siteViewableFromRoad](#siteviewablefromroad)                                         | `boolean` | Required | can be null    | [Appeal S78 Case](appeal-s78-properties-siteviewablefromroad.md "appeal-s78.schema.json#/properties/siteViewableFromRoad")                                         |
 | [siteWithinSSSI](#sitewithinsssi)                                                     | `boolean` | Required | can be null    | [Appeal S78 Case](appeal-s78-properties-sitewithinsssi.md "appeal-s78.schema.json#/properties/siteWithinSSSI")                                                     |
 | [typeOfPlanningApplication](#typeofplanningapplication)                               | `string`  | Required | can be null    | [Appeal S78 Case](appeal-s78-properties-typeofplanningapplication.md "appeal-s78.schema.json#/properties/typeOfPlanningApplication")                               |
+| [developmentType](#developmenttype)                                                   | `string`  | Required | can be null    | [Appeal S78 Case](appeal-s78-properties-developmenttype.md "appeal-s78.schema.json#/properties/developmentType")                                                   |
 | Additional Properties                                                                 | Any       | Optional | can be null    |                                                                                                                                                                    |
 
 ## caseId
@@ -2824,26 +2824,6 @@ The duration of enquiry indicated by the LPA
 
 `string`
 
-## developmentType
-
-
-
-> Only available in S78 cases
-
-`developmentType`
-
-* is required
-
-* Type: `string`
-
-* can be null
-
-* defined in: [Appeal S78 Case](appeal-s78-properties-developmenttype.md "appeal-s78.schema.json#/properties/developmentType")
-
-### developmentType Type
-
-`string`
-
 ## importantInformation
 
 
@@ -3504,6 +3484,46 @@ The net gain in residences of the proposed development
 | `"prior-approval"`                     |             |
 | `"reserved-matters"`                   |             |
 | `"removal-or-variation-of-conditions"` |             |
+
+## developmentType
+
+
+
+`developmentType`
+
+* is required
+
+* Type: `string`
+
+* can be null
+
+* defined in: [Appeal S78 Case](appeal-s78-properties-developmenttype.md "appeal-s78.schema.json#/properties/developmentType")
+
+### developmentType Type
+
+`string`
+
+### developmentType Constraints
+
+**enum**: the value of this property must be equal to one of the following values:
+
+| Value                       | Explanation |
+| :-------------------------- | :---------- |
+| `"householder"`             |             |
+| `"change-of-use"`           |             |
+| `"major-dwellings"`         |             |
+| `"major-industry-storage"`  |             |
+| `"major-offices"`           |             |
+| `"major-retail-services"`   |             |
+| `"major-traveller-caravan"` |             |
+| `"mineral-workings"`        |             |
+| `"minor-dwellings"`         |             |
+| `"minor-industry-storage"`  |             |
+| `"minor-offices"`           |             |
+| `"minor-retail-services"`   |             |
+| `"minor-traveller-caravan"` |             |
+| `"other-major"`             |             |
+| `"other-minor"`             |             |
 
 ## Additional Properties
 

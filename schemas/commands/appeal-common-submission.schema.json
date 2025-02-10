@@ -186,7 +186,34 @@
     },
     "typeOfPlanningApplication": {
       "type": ["string", "null"],
-      "enum": ["full-appeal", "householder-planning", "outline-planning", "prior-approval", "reserved-matters", "removal-or-variation-of-conditions"]
+      "enum": [
+        "full-appeal", 
+        "householder-planning", 
+        "outline-planning", 
+        "prior-approval", 
+        "reserved-matters", 
+        "removal-or-variation-of-conditions"
+      ]
+    },
+    "developmentType": {
+      "type": ["string", "null"],
+      "enum": [
+        "householder", 
+        "change-of-use", 
+        "major-dwellings", 
+        "major-industry-storage", 
+        "major-offices", 
+        "major-retail-services", 
+        "major-traveller-caravan",
+        "mineral-workings",
+        "minor-dwellings",
+        "minor-industry-storage",
+        "minor-offices",
+        "minor-retail-services",
+        "minor-traveller-caravan",
+        "other-major",
+        "other-minor"
+      ]
     }
   }
 }

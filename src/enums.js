@@ -89,6 +89,24 @@ export const APPEAL_CASE_VALIDATION_OUTCOME = Object.freeze({
   VALID: 'valid',
 });
 
+export const APPEAL_DEVELOPMENT_TYPE = Object.freeze({
+  CHANGE_OF_USE: 'change-of-use',
+  HOUSEHOLDER: 'householder',
+  MAJOR_DWELLINGS: 'major-dwellings',
+  MAJOR_INDUSTRY_STORAGE: 'major-industry-storage',
+  MAJOR_OFFICES: 'major-offices',
+  MAJOR_RETAIL_SERVICES: 'major-retail-services',
+  MAJOR_TRAVELLER_CARAVAN: 'major-traveller-caravan',
+  MINERAL_WORKINGS: 'mineral-workings',
+  MINOR_DWELLINGS: 'minor-dwellings',
+  MINOR_INDUSTRY_STORAGE: 'minor-industry-storage',
+  MINOR_OFFICES: 'minor-offices',
+  MINOR_RETAIL_SERVICES: 'minor-retail-services',
+  MINOR_TRAVELLER_CARAVAN: 'minor-traveller-caravan',
+  OTHER_MAJOR: 'other-major',
+  OTHER_MINOR: 'other-minor',
+});
+
 export const APPEAL_DOCUMENT_TYPE = Object.freeze({
   APPEAL_NOTIFICATION: 'appealNotification',
   APPELLANT_CASE_CORRESPONDENCE: 'appellantCaseCorrespondence',

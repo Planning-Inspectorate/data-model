@@ -80,6 +80,7 @@
 | [appellantCostsAppliedFor](#appellantcostsappliedfor)                           | `boolean` | Required | can be null    | [Appeal HAS Case](appeal-has-properties-appellantcostsappliedfor.md "appeal-has.schema.json#/properties/appellantCostsAppliedFor")                           |
 | [lpaCostsAppliedFor](#lpacostsappliedfor)                                       | `boolean` | Required | can be null    | [Appeal HAS Case](appeal-has-properties-lpacostsappliedfor.md "appeal-has.schema.json#/properties/lpaCostsAppliedFor")                                       |
 | [typeOfPlanningApplication](#typeofplanningapplication)                         | `string`  | Optional | can be null    | [Appeal HAS Case](appeal-has-properties-typeofplanningapplication.md "appeal-has.schema.json#/properties/typeOfPlanningApplication")                         |
+| [developmentType](#developmenttype)                                             | `string`  | Optional | can be null    | [Appeal HAS Case](appeal-has-properties-developmenttype.md "appeal-has.schema.json#/properties/developmentType")                                             |
 | Additional Properties                                                           | Any       | Optional | can be null    |                                                                                                                                                              |
 
 ## caseId
@@ -1930,6 +1931,46 @@ Indicates if the appellant has applied for costs
 | `"prior-approval"`                     |             |
 | `"reserved-matters"`                   |             |
 | `"removal-or-variation-of-conditions"` |             |
+
+## developmentType
+
+
+
+`developmentType`
+
+* is optional
+
+* Type: `string`
+
+* can be null
+
+* defined in: [Appeal HAS Case](appeal-has-properties-developmenttype.md "appeal-has.schema.json#/properties/developmentType")
+
+### developmentType Type
+
+`string`
+
+### developmentType Constraints
+
+**enum**: the value of this property must be equal to one of the following values:
+
+| Value                       | Explanation |
+| :-------------------------- | :---------- |
+| `"householder"`             |             |
+| `"change-of-use"`           |             |
+| `"major-dwellings"`         |             |
+| `"major-industry-storage"`  |             |
+| `"major-offices"`           |             |
+| `"major-retail-services"`   |             |
+| `"major-traveller-caravan"` |             |
+| `"mineral-workings"`        |             |
+| `"minor-dwellings"`         |             |
+| `"minor-industry-storage"`  |             |
+| `"minor-offices"`           |             |
+| `"minor-retail-services"`   |             |
+| `"minor-traveller-caravan"` |             |
+| `"other-major"`             |             |
+| `"other-minor"`             |             |
 
 ## Additional Properties
 

@@ -123,6 +123,7 @@
 | [targetDate](#targetdate)                                                             | `string`  | Required | can be null    | [Appeal S78 Case](appeal-s78-properties-targetdate.md "appeal-s78.schema.json#/properties/targetDate")                                                             |
 | [appellantCommentsSubmittedDate](#appellantcommentssubmitteddate)                     | `string`  | Required | can be null    | [Appeal S78 Case](appeal-s78-properties-appellantcommentssubmitteddate.md "appeal-s78.schema.json#/properties/appellantCommentsSubmittedDate")                     |
 | [appellantStatementSubmittedDate](#appellantstatementsubmitteddate)                   | `string`  | Required | can be null    | [Appeal S78 Case](appeal-s78-properties-appellantstatementsubmitteddate.md "appeal-s78.schema.json#/properties/appellantStatementSubmittedDate")                   |
+| [appellantProofsSubmittedDate](#appellantproofssubmitteddate)                         | `string`  | Required | can be null    | [Appeal S78 Case](appeal-s78-properties-appellantproofssubmitteddate.md "appeal-s78.schema.json#/properties/appellantProofsSubmittedDate")                         |
 | [finalCommentsDueDate](#finalcommentsduedate)                                         | `string`  | Required | can be null    | [Appeal S78 Case](appeal-s78-properties-finalcommentsduedate.md "appeal-s78.schema.json#/properties/finalCommentsDueDate")                                         |
 | [interestedPartyRepsDueDate](#interestedpartyrepsduedate)                             | `string`  | Required | can be null    | [Appeal S78 Case](appeal-s78-properties-interestedpartyrepsduedate.md "appeal-s78.schema.json#/properties/interestedPartyRepsDueDate")                             |
 | [lpaCommentsSubmittedDate](#lpacommentssubmitteddate)                                 | `string`  | Required | can be null    | [Appeal S78 Case](appeal-s78-properties-lpacommentssubmitteddate.md "appeal-s78.schema.json#/properties/lpaCommentsSubmittedDate")                                 |
@@ -3107,6 +3108,36 @@ The date of the cost report
 **date time**: the string must be a date time string, according to [RFC 3339, section 5.6](https://tools.ietf.org/html/rfc3339 "check the specification")
 
 ### appellantStatementSubmittedDate Examples
+
+```json
+"2023-07-27T20:30:00.000Z"
+```
+
+## appellantProofsSubmittedDate
+
+
+
+> Only available in S78 cases
+
+`appellantProofsSubmittedDate`
+
+* is required
+
+* Type: `string`
+
+* can be null
+
+* defined in: [Appeal S78 Case](appeal-s78-properties-appellantproofssubmitteddate.md "appeal-s78.schema.json#/properties/appellantProofsSubmittedDate")
+
+### appellantProofsSubmittedDate Type
+
+`string`
+
+### appellantProofsSubmittedDate Constraints
+
+**date time**: the string must be a date time string, according to [RFC 3339, section 5.6](https://tools.ietf.org/html/rfc3339 "check the specification")
+
+### appellantProofsSubmittedDate Examples
 
 ```json
 "2023-07-27T20:30:00.000Z"

@@ -1237,6 +1237,7 @@ export interface AppealS78Case {
   targetDate: string | null;
   appellantCommentsSubmittedDate: string | null;
   appellantStatementSubmittedDate: string | null;
+  appellantProofsSubmittedDate: string | null;
   finalCommentsDueDate: string | null;
   interestedPartyRepsDueDate: string | null;
   lpaCommentsSubmittedDate: string | null;

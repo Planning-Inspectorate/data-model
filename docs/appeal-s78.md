@@ -3478,8 +3478,6 @@ The net gain in residences of the proposed development
 
 
 
-> Only available in S78 cases
-
 `typeOfPlanningApplication`
 
 * is required
@@ -3493,6 +3491,19 @@ The net gain in residences of the proposed development
 ### typeOfPlanningApplication Type
 
 `string`
+
+### typeOfPlanningApplication Constraints
+
+**enum**: the value of this property must be equal to one of the following values:
+
+| Value                                  | Explanation |
+| :------------------------------------- | :---------- |
+| `"full-appeal"`                        |             |
+| `"householder-planning"`               |             |
+| `"outline-planning"`                   |             |
+| `"prior-approval"`                     |             |
+| `"reserved-matters"`                   |             |
+| `"removal-or-variation-of-conditions"` |             |
 
 ## Additional Properties
 

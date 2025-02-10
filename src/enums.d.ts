@@ -282,6 +282,15 @@ export const APPEAL_SOURCE_SYSTEM = {
   SHAREPOINT: 'sharepoint',
 };
 
+export const APPEAL_TYPE_OF_PLANNING_APPLICATION = {
+  FULL_APPEAL: 'full-appeal',
+  HOUSEHOLDER_PLANNING: 'householder-planning',
+  OUTLINE_PLANNING: 'outline-planning',
+  PRIOR_APPROVAL: 'prior-approval',
+  REMOVAL_OR_VARIATION_OF_CONDITIONS: 'removal-or-variation-of-conditions',
+  RESERVED_MATTERS: 'reserved-matters',
+};
+
 export const APPEAL_VIRUS_CHECK_STATUS = {
   AFFECTED: 'affected',
   NOT_SCANNED: 'not_scanned',

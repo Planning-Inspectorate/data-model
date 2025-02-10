@@ -610,6 +610,16 @@ export interface AppealHASCase {
    * Indicates if the appellant has applied for costs
    */
   lpaCostsAppliedFor: boolean | null;
+  typeOfPlanningApplication?:
+    | (
+        | 'full-appeal'
+        | 'householder-planning'
+        | 'outline-planning'
+        | 'prior-approval'
+        | 'reserved-matters'
+        | 'removal-or-variation-of-conditions'
+      )
+    | null;
   [k: string]: unknown;
 }
 
@@ -1218,7 +1228,16 @@ export interface AppealS78Case {
   siteGridReferenceNorthing: string | null;
   siteViewableFromRoad: boolean | null;
   siteWithinSSSI: boolean | null;
-  typeOfPlanningApplication: string | null;
+  typeOfPlanningApplication:
+    | (
+        | 'full-appeal'
+        | 'householder-planning'
+        | 'outline-planning'
+        | 'prior-approval'
+        | 'reserved-matters'
+        | 'removal-or-variation-of-conditions'
+      )
+    | null;
   [k: string]: unknown;
 }
 
@@ -2587,6 +2606,16 @@ export interface AppellantCommonSubmissionProperties {
    * A list of related case references known to the appellant and the LPA
    */
   nearbyCaseReferences: string[] | null;
+  typeOfPlanningApplication?:
+    | (
+        | 'full-appeal'
+        | 'householder-planning'
+        | 'outline-planning'
+        | 'prior-approval'
+        | 'reserved-matters'
+        | 'removal-or-variation-of-conditions'
+      )
+    | null;
   [k: string]: unknown;
 }
 
@@ -2756,6 +2785,16 @@ export interface AppellantCommonSubmissionProperties {
    * A list of related case references known to the appellant and the LPA
    */
   nearbyCaseReferences: string[] | null;
+  typeOfPlanningApplication?:
+    | (
+        | 'full-appeal'
+        | 'householder-planning'
+        | 'outline-planning'
+        | 'prior-approval'
+        | 'reserved-matters'
+        | 'removal-or-variation-of-conditions'
+      )
+    | null;
   [k: string]: unknown;
 }
 
@@ -3081,6 +3120,16 @@ export interface AppellantCommonSubmissionProperties {
    * A list of related case references known to the appellant and the LPA
    */
   nearbyCaseReferences: string[] | null;
+  typeOfPlanningApplication?:
+    | (
+        | 'full-appeal'
+        | 'householder-planning'
+        | 'outline-planning'
+        | 'prior-approval'
+        | 'reserved-matters'
+        | 'removal-or-variation-of-conditions'
+      )
+    | null;
   [k: string]: unknown;
 }
 
@@ -3427,6 +3476,16 @@ export interface AppellantCommonSubmissionProperties {
    * A list of related case references known to the appellant and the LPA
    */
   nearbyCaseReferences: string[] | null;
+  typeOfPlanningApplication?:
+    | (
+        | 'full-appeal'
+        | 'householder-planning'
+        | 'outline-planning'
+        | 'prior-approval'
+        | 'reserved-matters'
+        | 'removal-or-variation-of-conditions'
+      )
+    | null;
   [k: string]: unknown;
 }
 

@@ -1007,7 +1007,7 @@
     },
     "typeOfPlanningApplication": {
       "type": ["string", "null"],
-      "$comment": "Only available in S78 cases"
+      "enum": ["full-appeal", "householder-planning", "outline-planning", "prior-approval", "reserved-matters", "removal-or-variation-of-conditions"]
     }
   }
 }

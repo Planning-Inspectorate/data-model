@@ -675,6 +675,10 @@
       "description": "A list of neighbouring site addresses",
       "$comment": "Also available on HAS cases"
     },
+    "reasonForNeighbourVisits": {
+      "type": ["string", "null"],
+      "description": "A general reason given for the need to visit any neighbours"
+    },
     "affectedListedBuildingNumbers": {
       "type": ["array", "null"],
       "items": {
@@ -974,10 +978,6 @@
       "type": ["string", "null"],
       "format": "date-time",
       "examples": ["2023-07-27T20:30:00.000Z"],
-      "$comment": "Only available in S78 cases"
-    },
-    "reasonForNeighbourVisits": {
-      "type": ["string", "null"],
       "$comment": "Only available in S78 cases"
     },
     "numberOfResidencesNetChange": {

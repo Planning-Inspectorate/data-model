@@ -76,6 +76,7 @@
 | [newConditionDetails](#newconditiondetails)                                     | `string`  | Required | can be null    | [Appeal HAS Case](appeal-has-properties-newconditiondetails.md "appeal-has.schema.json#/properties/newConditionDetails")                                     |
 | [nearbyCaseReferences](#nearbycasereferences)                                   | `array`   | Required | can be null    | [Appeal HAS Case](appeal-has-properties-nearbycasereferences.md "appeal-has.schema.json#/properties/nearbyCaseReferences")                                   |
 | [neighbouringSiteAddresses](#neighbouringsiteaddresses)                         | `array`   | Required | can be null    | [Appeal HAS Case](appeal-has-properties-neighbouringsiteaddresses.md "appeal-has.schema.json#/properties/neighbouringSiteAddresses")                         |
+| [reasonForNeighbourVisits](#reasonforneighbourvisits)                           | `string`  | Optional | can be null    | [Appeal HAS Case](appeal-has-properties-reasonforneighbourvisits.md "appeal-has.schema.json#/properties/reasonForNeighbourVisits")                           |
 | [affectedListedBuildingNumbers](#affectedlistedbuildingnumbers)                 | `array`   | Required | can be null    | [Appeal HAS Case](appeal-has-properties-affectedlistedbuildingnumbers.md "appeal-has.schema.json#/properties/affectedListedBuildingNumbers")                 |
 | [appellantCostsAppliedFor](#appellantcostsappliedfor)                           | `boolean` | Required | can be null    | [Appeal HAS Case](appeal-has-properties-appellantcostsappliedfor.md "appeal-has.schema.json#/properties/appellantCostsAppliedFor")                           |
 | [lpaCostsAppliedFor](#lpacostsappliedfor)                                       | `boolean` | Required | can be null    | [Appeal HAS Case](appeal-has-properties-lpacostsappliedfor.md "appeal-has.schema.json#/properties/lpaCostsAppliedFor")                                       |
@@ -1846,6 +1847,24 @@ A list of neighbouring site addresses
 ### neighbouringSiteAddresses Type
 
 `object[]` ([Details](appeal-has-properties-neighbouringsiteaddresses-items.md))
+
+## reasonForNeighbourVisits
+
+A general reason given for the need to visit any neighbours
+
+`reasonForNeighbourVisits`
+
+* is optional
+
+* Type: `string`
+
+* can be null
+
+* defined in: [Appeal HAS Case](appeal-has-properties-reasonforneighbourvisits.md "appeal-has.schema.json#/properties/reasonForNeighbourVisits")
+
+### reasonForNeighbourVisits Type
+
+`string`
 
 ## affectedListedBuildingNumbers
 

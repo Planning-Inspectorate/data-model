@@ -76,6 +76,7 @@
 | [newConditionDetails](#newconditiondetails)                                           | `string`  | Required | can be null    | [Appeal S78 Case](appeal-s78-properties-newconditiondetails.md "appeal-s78.schema.json#/properties/newConditionDetails")                                           |
 | [nearbyCaseReferences](#nearbycasereferences)                                         | `array`   | Required | can be null    | [Appeal S78 Case](appeal-s78-properties-nearbycasereferences.md "appeal-s78.schema.json#/properties/nearbyCaseReferences")                                         |
 | [neighbouringSiteAddresses](#neighbouringsiteaddresses)                               | `array`   | Required | can be null    | [Appeal S78 Case](appeal-s78-properties-neighbouringsiteaddresses.md "appeal-s78.schema.json#/properties/neighbouringSiteAddresses")                               |
+| [reasonForNeighbourVisits](#reasonforneighbourvisits)                                 | `string`  | Required | can be null    | [Appeal S78 Case](appeal-s78-properties-reasonforneighbourvisits.md "appeal-s78.schema.json#/properties/reasonForNeighbourVisits")                                 |
 | [affectedListedBuildingNumbers](#affectedlistedbuildingnumbers)                       | `array`   | Required | can be null    | [Appeal S78 Case](appeal-s78-properties-affectedlistedbuildingnumbers.md "appeal-s78.schema.json#/properties/affectedListedBuildingNumbers")                       |
 | [changedListedBuildingNumbers](#changedlistedbuildingnumbers)                         | `array`   | Required | can be null    | [Appeal S78 Case](appeal-s78-properties-changedlistedbuildingnumbers.md "appeal-s78.schema.json#/properties/changedListedBuildingNumbers")                         |
 | [appellantCostsAppliedFor](#appellantcostsappliedfor)                                 | `boolean` | Required | can be null    | [Appeal S78 Case](appeal-s78-properties-appellantcostsappliedfor.md "appeal-s78.schema.json#/properties/appellantCostsAppliedFor")                                 |
@@ -130,7 +131,6 @@
 | [proofsOfEvidenceDueDate](#proofsofevidenceduedate)                                   | `string`  | Required | can be null    | [Appeal S78 Case](appeal-s78-properties-proofsofevidenceduedate.md "appeal-s78.schema.json#/properties/proofsOfEvidenceDueDate")                                   |
 | [siteNoticesSentDate](#sitenoticessentdate)                                           | `string`  | Required | can be null    | [Appeal S78 Case](appeal-s78-properties-sitenoticessentdate.md "appeal-s78.schema.json#/properties/siteNoticesSentDate")                                           |
 | [statementDueDate](#statementduedate)                                                 | `string`  | Required | can be null    | [Appeal S78 Case](appeal-s78-properties-statementduedate.md "appeal-s78.schema.json#/properties/statementDueDate")                                                 |
-| [reasonForNeighbourVisits](#reasonforneighbourvisits)                                 | `string`  | Required | can be null    | [Appeal S78 Case](appeal-s78-properties-reasonforneighbourvisits.md "appeal-s78.schema.json#/properties/reasonForNeighbourVisits")                                 |
 | [numberOfResidencesNetChange](#numberofresidencesnetchange)                           | `number`  | Required | can be null    | [Appeal S78 Case](appeal-s78-properties-numberofresidencesnetchange.md "appeal-s78.schema.json#/properties/numberOfResidencesNetChange")                           |
 | [siteGridReferenceEasting](#sitegridreferenceeasting)                                 | `string`  | Required | can be null    | [Appeal S78 Case](appeal-s78-properties-sitegridreferenceeasting.md "appeal-s78.schema.json#/properties/siteGridReferenceEasting")                                 |
 | [siteGridReferenceNorthing](#sitegridreferencenorthing)                               | `string`  | Required | can be null    | [Appeal S78 Case](appeal-s78-properties-sitegridreferencenorthing.md "appeal-s78.schema.json#/properties/siteGridReferenceNorthing")                               |
@@ -2033,6 +2033,24 @@ A list of neighbouring site addresses
 
 `object[]` ([Details](appeal-s78-properties-neighbouringsiteaddresses-items.md))
 
+## reasonForNeighbourVisits
+
+A general reason given for the need to visit any neighbours
+
+`reasonForNeighbourVisits`
+
+* is required
+
+* Type: `string`
+
+* can be null
+
+* defined in: [Appeal S78 Case](appeal-s78-properties-reasonforneighbourvisits.md "appeal-s78.schema.json#/properties/reasonForNeighbourVisits")
+
+### reasonForNeighbourVisits Type
+
+`string`
+
 ## affectedListedBuildingNumbers
 
 A list of affected listed building IDs from Historic England
@@ -3333,26 +3351,6 @@ The date of the cost report
 ```json
 "2023-07-27T20:30:00.000Z"
 ```
-
-## reasonForNeighbourVisits
-
-
-
-> Only available in S78 cases
-
-`reasonForNeighbourVisits`
-
-* is required
-
-* Type: `string`
-
-* can be null
-
-* defined in: [Appeal S78 Case](appeal-s78-properties-reasonforneighbourvisits.md "appeal-s78.schema.json#/properties/reasonForNeighbourVisits")
-
-### reasonForNeighbourVisits Type
-
-`string`
 
 ## numberOfResidencesNetChange
 

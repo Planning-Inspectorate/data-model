@@ -599,6 +599,10 @@ export interface AppealHASCase {
       }[]
     | null;
   /**
+   * A general reason given for the need to visit any neighbours
+   */
+  reasonForNeighbourVisits?: string | null;
+  /**
    * A list of affected listed building IDs from Historic England
    */
   affectedListedBuildingNumbers: string[] | null;
@@ -1062,6 +1066,10 @@ export interface AppealS78Case {
       }[]
     | null;
   /**
+   * A general reason given for the need to visit any neighbours
+   */
+  reasonForNeighbourVisits: string | null;
+  /**
    * A list of affected listed building IDs from Historic England
    */
   affectedListedBuildingNumbers: string[] | null;
@@ -1237,7 +1245,6 @@ export interface AppealS78Case {
   proofsOfEvidenceDueDate: string | null;
   siteNoticesSentDate: string | null;
   statementDueDate: string | null;
-  reasonForNeighbourVisits: string | null;
   /**
    * The net gain in residences of the proposed development
    */
@@ -2640,6 +2647,10 @@ export interface AppellantCommonSubmissionProperties {
       }[]
     | null;
   /**
+   * A general reason given for the need to visit any neighbours
+   */
+  reasonForNeighbourVisits?: string | null;
+  /**
    * A list of related case references known to the appellant and the LPA
    */
   nearbyCaseReferences: string[] | null;
@@ -2837,6 +2848,10 @@ export interface AppellantCommonSubmissionProperties {
         [k: string]: unknown;
       }[]
     | null;
+  /**
+   * A general reason given for the need to visit any neighbours
+   */
+  reasonForNeighbourVisits?: string | null;
   /**
    * A list of related case references known to the appellant and the LPA
    */
@@ -3191,6 +3206,10 @@ export interface AppellantCommonSubmissionProperties {
         [k: string]: unknown;
       }[]
     | null;
+  /**
+   * A general reason given for the need to visit any neighbours
+   */
+  reasonForNeighbourVisits?: string | null;
   /**
    * A list of related case references known to the appellant and the LPA
    */
@@ -3566,6 +3585,10 @@ export interface AppellantCommonSubmissionProperties {
         [k: string]: unknown;
       }[]
     | null;
+  /**
+   * A general reason given for the need to visit any neighbours
+   */
+  reasonForNeighbourVisits?: string | null;
   /**
    * A list of related case references known to the appellant and the LPA
    */

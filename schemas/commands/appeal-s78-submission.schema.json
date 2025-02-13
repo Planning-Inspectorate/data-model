@@ -15,7 +15,8 @@
     "appellantProcedurePreferenceDuration",
     "inquiryHowManyWitnesses",
     "planningObligation",
-    "statusPlanningObligation"
+    "statusPlanningObligation",
+    "developmentType"
   ],
   "allOf": [
     { "$ref": "appeal-has-submission.schema.json"},
@@ -71,6 +72,27 @@
           "type": ["string", "null"],
           "description": "The planning obligation information, if available",
           "$comment": "Only available in S78 cases"
+        },
+        "developmentType": {
+          "type": ["string", "null"],
+          "enum": [
+            "householder", 
+            "change-of-use", 
+            "major-dwellings", 
+            "major-industry-storage", 
+            "major-offices", 
+            "major-retail-services", 
+            "major-traveller-caravan",
+            "mineral-workings",
+            "minor-dwellings",
+            "minor-industry-storage",
+            "minor-offices",
+            "minor-retail-services",
+            "minor-traveller-caravan",
+            "other-major",
+            "other-minor",
+            null
+          ]
         }
       }
     }

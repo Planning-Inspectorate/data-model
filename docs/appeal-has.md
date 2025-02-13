@@ -1950,6 +1950,7 @@ Indicates if the appellant has applied for costs
 | `"prior-approval"`                     |             |
 | `"reserved-matters"`                   |             |
 | `"removal-or-variation-of-conditions"` |             |
+| `null`                                 |             |
 
 ## developmentType
 
@@ -1990,6 +1991,7 @@ Indicates if the appellant has applied for costs
 | `"minor-traveller-caravan"` |             |
 | `"other-major"`             |             |
 | `"other-minor"`             |             |
+| `null`                      |             |
 
 ## Additional Properties
 

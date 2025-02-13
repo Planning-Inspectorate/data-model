@@ -3513,6 +3513,7 @@ The net gain in residences of the proposed development
 | `"prior-approval"`                     |             |
 | `"reserved-matters"`                   |             |
 | `"removal-or-variation-of-conditions"` |             |
+| `null`                                 |             |
 
 ## developmentType
 
@@ -3553,6 +3554,7 @@ The net gain in residences of the proposed development
 | `"minor-traveller-caravan"` |             |
 | `"other-major"`             |             |
 | `"other-minor"`             |             |
+| `null`                      |             |
 
 ## Additional Properties
 

@@ -582,7 +582,8 @@
         "outline-planning", 
         "prior-approval", 
         "reserved-matters", 
-        "removal-or-variation-of-conditions"
+        "removal-or-variation-of-conditions",
+        null
       ]
     },
     "developmentType": {
@@ -602,7 +603,8 @@
         "minor-retail-services",
         "minor-traveller-caravan",
         "other-major",
-        "other-minor"
+        "other-minor",
+        null
       ]
     }
   }

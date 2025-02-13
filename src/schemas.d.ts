@@ -615,33 +615,29 @@ export interface AppealHASCase {
    */
   lpaCostsAppliedFor: boolean | null;
   typeOfPlanningApplication?:
-    | (
-        | 'full-appeal'
-        | 'householder-planning'
-        | 'outline-planning'
-        | 'prior-approval'
-        | 'reserved-matters'
-        | 'removal-or-variation-of-conditions'
-      )
+    | 'full-appeal'
+    | 'householder-planning'
+    | 'outline-planning'
+    | 'prior-approval'
+    | 'reserved-matters'
+    | 'removal-or-variation-of-conditions'
     | null;
   developmentType?:
-    | (
-        | 'householder'
-        | 'change-of-use'
-        | 'major-dwellings'
-        | 'major-industry-storage'
-        | 'major-offices'
-        | 'major-retail-services'
-        | 'major-traveller-caravan'
-        | 'mineral-workings'
-        | 'minor-dwellings'
-        | 'minor-industry-storage'
-        | 'minor-offices'
-        | 'minor-retail-services'
-        | 'minor-traveller-caravan'
-        | 'other-major'
-        | 'other-minor'
-      )
+    | 'householder'
+    | 'change-of-use'
+    | 'major-dwellings'
+    | 'major-industry-storage'
+    | 'major-offices'
+    | 'major-retail-services'
+    | 'major-traveller-caravan'
+    | 'mineral-workings'
+    | 'minor-dwellings'
+    | 'minor-industry-storage'
+    | 'minor-offices'
+    | 'minor-retail-services'
+    | 'minor-traveller-caravan'
+    | 'other-major'
+    | 'other-minor'
     | null;
   [k: string]: unknown;
 }
@@ -1255,33 +1251,29 @@ export interface AppealS78Case {
   siteViewableFromRoad: boolean | null;
   siteWithinSSSI: boolean | null;
   typeOfPlanningApplication:
-    | (
-        | 'full-appeal'
-        | 'householder-planning'
-        | 'outline-planning'
-        | 'prior-approval'
-        | 'reserved-matters'
-        | 'removal-or-variation-of-conditions'
-      )
+    | 'full-appeal'
+    | 'householder-planning'
+    | 'outline-planning'
+    | 'prior-approval'
+    | 'reserved-matters'
+    | 'removal-or-variation-of-conditions'
     | null;
   developmentType:
-    | (
-        | 'householder'
-        | 'change-of-use'
-        | 'major-dwellings'
-        | 'major-industry-storage'
-        | 'major-offices'
-        | 'major-retail-services'
-        | 'major-traveller-caravan'
-        | 'mineral-workings'
-        | 'minor-dwellings'
-        | 'minor-industry-storage'
-        | 'minor-offices'
-        | 'minor-retail-services'
-        | 'minor-traveller-caravan'
-        | 'other-major'
-        | 'other-minor'
-      )
+    | 'householder'
+    | 'change-of-use'
+    | 'major-dwellings'
+    | 'major-industry-storage'
+    | 'major-offices'
+    | 'major-retail-services'
+    | 'major-traveller-caravan'
+    | 'mineral-workings'
+    | 'minor-dwellings'
+    | 'minor-industry-storage'
+    | 'minor-offices'
+    | 'minor-retail-services'
+    | 'minor-traveller-caravan'
+    | 'other-major'
+    | 'other-minor'
     | null;
   [k: string]: unknown;
 }
@@ -2656,33 +2648,29 @@ export interface AppellantCommonSubmissionProperties {
    */
   nearbyCaseReferences: string[] | null;
   typeOfPlanningApplication?:
-    | (
-        | 'full-appeal'
-        | 'householder-planning'
-        | 'outline-planning'
-        | 'prior-approval'
-        | 'reserved-matters'
-        | 'removal-or-variation-of-conditions'
-      )
+    | 'full-appeal'
+    | 'householder-planning'
+    | 'outline-planning'
+    | 'prior-approval'
+    | 'reserved-matters'
+    | 'removal-or-variation-of-conditions'
     | null;
   developmentType?:
-    | (
-        | 'householder'
-        | 'change-of-use'
-        | 'major-dwellings'
-        | 'major-industry-storage'
-        | 'major-offices'
-        | 'major-retail-services'
-        | 'major-traveller-caravan'
-        | 'mineral-workings'
-        | 'minor-dwellings'
-        | 'minor-industry-storage'
-        | 'minor-offices'
-        | 'minor-retail-services'
-        | 'minor-traveller-caravan'
-        | 'other-major'
-        | 'other-minor'
-      )
+    | 'householder'
+    | 'change-of-use'
+    | 'major-dwellings'
+    | 'major-industry-storage'
+    | 'major-offices'
+    | 'major-retail-services'
+    | 'major-traveller-caravan'
+    | 'mineral-workings'
+    | 'minor-dwellings'
+    | 'minor-industry-storage'
+    | 'minor-offices'
+    | 'minor-retail-services'
+    | 'minor-traveller-caravan'
+    | 'other-major'
+    | 'other-minor'
     | null;
   [k: string]: unknown;
 }
@@ -2858,33 +2846,29 @@ export interface AppellantCommonSubmissionProperties {
    */
   nearbyCaseReferences: string[] | null;
   typeOfPlanningApplication?:
-    | (
-        | 'full-appeal'
-        | 'householder-planning'
-        | 'outline-planning'
-        | 'prior-approval'
-        | 'reserved-matters'
-        | 'removal-or-variation-of-conditions'
-      )
+    | 'full-appeal'
+    | 'householder-planning'
+    | 'outline-planning'
+    | 'prior-approval'
+    | 'reserved-matters'
+    | 'removal-or-variation-of-conditions'
     | null;
   developmentType?:
-    | (
-        | 'householder'
-        | 'change-of-use'
-        | 'major-dwellings'
-        | 'major-industry-storage'
-        | 'major-offices'
-        | 'major-retail-services'
-        | 'major-traveller-caravan'
-        | 'mineral-workings'
-        | 'minor-dwellings'
-        | 'minor-industry-storage'
-        | 'minor-offices'
-        | 'minor-retail-services'
-        | 'minor-traveller-caravan'
-        | 'other-major'
-        | 'other-minor'
-      )
+    | 'householder'
+    | 'change-of-use'
+    | 'major-dwellings'
+    | 'major-industry-storage'
+    | 'major-offices'
+    | 'major-retail-services'
+    | 'major-traveller-caravan'
+    | 'mineral-workings'
+    | 'minor-dwellings'
+    | 'minor-industry-storage'
+    | 'minor-offices'
+    | 'minor-retail-services'
+    | 'minor-traveller-caravan'
+    | 'other-major'
+    | 'other-minor'
     | null;
   [k: string]: unknown;
 }
@@ -3216,33 +3200,29 @@ export interface AppellantCommonSubmissionProperties {
    */
   nearbyCaseReferences: string[] | null;
   typeOfPlanningApplication?:
-    | (
-        | 'full-appeal'
-        | 'householder-planning'
-        | 'outline-planning'
-        | 'prior-approval'
-        | 'reserved-matters'
-        | 'removal-or-variation-of-conditions'
-      )
+    | 'full-appeal'
+    | 'householder-planning'
+    | 'outline-planning'
+    | 'prior-approval'
+    | 'reserved-matters'
+    | 'removal-or-variation-of-conditions'
     | null;
   developmentType?:
-    | (
-        | 'householder'
-        | 'change-of-use'
-        | 'major-dwellings'
-        | 'major-industry-storage'
-        | 'major-offices'
-        | 'major-retail-services'
-        | 'major-traveller-caravan'
-        | 'mineral-workings'
-        | 'minor-dwellings'
-        | 'minor-industry-storage'
-        | 'minor-offices'
-        | 'minor-retail-services'
-        | 'minor-traveller-caravan'
-        | 'other-major'
-        | 'other-minor'
-      )
+    | 'householder'
+    | 'change-of-use'
+    | 'major-dwellings'
+    | 'major-industry-storage'
+    | 'major-offices'
+    | 'major-retail-services'
+    | 'major-traveller-caravan'
+    | 'mineral-workings'
+    | 'minor-dwellings'
+    | 'minor-industry-storage'
+    | 'minor-offices'
+    | 'minor-retail-services'
+    | 'minor-traveller-caravan'
+    | 'other-major'
+    | 'other-minor'
     | null;
   [k: string]: unknown;
 }
@@ -3595,33 +3575,29 @@ export interface AppellantCommonSubmissionProperties {
    */
   nearbyCaseReferences: string[] | null;
   typeOfPlanningApplication?:
-    | (
-        | 'full-appeal'
-        | 'householder-planning'
-        | 'outline-planning'
-        | 'prior-approval'
-        | 'reserved-matters'
-        | 'removal-or-variation-of-conditions'
-      )
+    | 'full-appeal'
+    | 'householder-planning'
+    | 'outline-planning'
+    | 'prior-approval'
+    | 'reserved-matters'
+    | 'removal-or-variation-of-conditions'
     | null;
   developmentType?:
-    | (
-        | 'householder'
-        | 'change-of-use'
-        | 'major-dwellings'
-        | 'major-industry-storage'
-        | 'major-offices'
-        | 'major-retail-services'
-        | 'major-traveller-caravan'
-        | 'mineral-workings'
-        | 'minor-dwellings'
-        | 'minor-industry-storage'
-        | 'minor-offices'
-        | 'minor-retail-services'
-        | 'minor-traveller-caravan'
-        | 'other-major'
-        | 'other-minor'
-      )
+    | 'householder'
+    | 'change-of-use'
+    | 'major-dwellings'
+    | 'major-industry-storage'
+    | 'major-offices'
+    | 'major-retail-services'
+    | 'major-traveller-caravan'
+    | 'mineral-workings'
+    | 'minor-dwellings'
+    | 'minor-industry-storage'
+    | 'minor-offices'
+    | 'minor-retail-services'
+    | 'minor-traveller-caravan'
+    | 'other-major'
+    | 'other-minor'
     | null;
   [k: string]: unknown;
 }

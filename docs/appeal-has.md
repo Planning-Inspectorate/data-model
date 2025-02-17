@@ -76,9 +76,11 @@
 | [newConditionDetails](#newconditiondetails)                                     | `string`  | Required | can be null    | [Appeal HAS Case](appeal-has-properties-newconditiondetails.md "appeal-has.schema.json#/properties/newConditionDetails")                                     |
 | [nearbyCaseReferences](#nearbycasereferences)                                   | `array`   | Required | can be null    | [Appeal HAS Case](appeal-has-properties-nearbycasereferences.md "appeal-has.schema.json#/properties/nearbyCaseReferences")                                   |
 | [neighbouringSiteAddresses](#neighbouringsiteaddresses)                         | `array`   | Required | can be null    | [Appeal HAS Case](appeal-has-properties-neighbouringsiteaddresses.md "appeal-has.schema.json#/properties/neighbouringSiteAddresses")                         |
+| [reasonForNeighbourVisits](#reasonforneighbourvisits)                           | `string`  | Optional | can be null    | [Appeal HAS Case](appeal-has-properties-reasonforneighbourvisits.md "appeal-has.schema.json#/properties/reasonForNeighbourVisits")                           |
 | [affectedListedBuildingNumbers](#affectedlistedbuildingnumbers)                 | `array`   | Required | can be null    | [Appeal HAS Case](appeal-has-properties-affectedlistedbuildingnumbers.md "appeal-has.schema.json#/properties/affectedListedBuildingNumbers")                 |
 | [appellantCostsAppliedFor](#appellantcostsappliedfor)                           | `boolean` | Required | can be null    | [Appeal HAS Case](appeal-has-properties-appellantcostsappliedfor.md "appeal-has.schema.json#/properties/appellantCostsAppliedFor")                           |
 | [lpaCostsAppliedFor](#lpacostsappliedfor)                                       | `boolean` | Required | can be null    | [Appeal HAS Case](appeal-has-properties-lpacostsappliedfor.md "appeal-has.schema.json#/properties/lpaCostsAppliedFor")                                       |
+| [typeOfPlanningApplication](#typeofplanningapplication)                         | `string`  | Optional | can be null    | [Appeal HAS Case](appeal-has-properties-typeofplanningapplication.md "appeal-has.schema.json#/properties/typeOfPlanningApplication")                         |
 | Additional Properties                                                           | Any       | Optional | can be null    |                                                                                                                                                              |
 
 ## caseId
@@ -1845,6 +1847,24 @@ A list of neighbouring site addresses
 
 `object[]` ([Details](appeal-has-properties-neighbouringsiteaddresses-items.md))
 
+## reasonForNeighbourVisits
+
+A general reason given for the need to visit any neighbours
+
+`reasonForNeighbourVisits`
+
+* is optional
+
+* Type: `string`
+
+* can be null
+
+* defined in: [Appeal HAS Case](appeal-has-properties-reasonforneighbourvisits.md "appeal-has.schema.json#/properties/reasonForNeighbourVisits")
+
+### reasonForNeighbourVisits Type
+
+`string`
+
 ## affectedListedBuildingNumbers
 
 A list of affected listed building IDs from Historic England
@@ -1898,6 +1918,38 @@ Indicates if the appellant has applied for costs
 ### lpaCostsAppliedFor Type
 
 `boolean`
+
+## typeOfPlanningApplication
+
+
+
+`typeOfPlanningApplication`
+
+* is optional
+
+* Type: `string`
+
+* can be null
+
+* defined in: [Appeal HAS Case](appeal-has-properties-typeofplanningapplication.md "appeal-has.schema.json#/properties/typeOfPlanningApplication")
+
+### typeOfPlanningApplication Type
+
+`string`
+
+### typeOfPlanningApplication Constraints
+
+**enum**: the value of this property must be equal to one of the following values:
+
+| Value                                  | Explanation |
+| :------------------------------------- | :---------- |
+| `"full-appeal"`                        |             |
+| `"householder-planning"`               |             |
+| `"outline-planning"`                   |             |
+| `"prior-approval"`                     |             |
+| `"reserved-matters"`                   |             |
+| `"removal-or-variation-of-conditions"` |             |
+| `null`                                 |             |
 
 ## Additional Properties
 

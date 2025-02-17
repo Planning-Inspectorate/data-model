@@ -101,8 +101,8 @@
     "eiaScreeningOpinion",
     "eiaRequiresEnvironmentalStatement",
     "eiaCompletedEnvironmentalStatement",
-    "eiaConsultedBodiesDetails",
     "hasStatutoryConsultees",
+    "consultedBodiesDetails",
     "hasInfrastructureLevy",
     "isInfrastructureLevyFormallyAdopted",
     "infrastructureLevyAdoptedDate",
@@ -122,6 +122,7 @@
     "targetDate",
     "appellantCommentsSubmittedDate",
     "appellantStatementSubmittedDate",
+    "appellantProofsSubmittedDate",
     "finalCommentsDueDate",
     "interestedPartyRepsDueDate",
     "lpaCommentsSubmittedDate",
@@ -675,6 +676,10 @@
       "description": "A list of neighbouring site addresses",
       "$comment": "Also available on HAS cases"
     },
+    "reasonForNeighbourVisits": {
+      "type": ["string", "null"],
+      "description": "A general reason given for the need to visit any neighbours"
+    },
     "affectedListedBuildingNumbers": {
       "type": ["array", "null"],
       "items": {
@@ -819,15 +824,15 @@
       "type": ["boolean", "null"],
       "description": "EIA completed environmental statement required",
       "$comment": "Only available in S78 cases"
-    },
-    "eiaConsultedBodiesDetails": {
-      "type": ["string", "null"],
-      "description": "The details of the bodies consulted by EIA"
-    },
+    },    
     "hasStatutoryConsultees": {
       "type": ["boolean", "null"],
       "description": "Indicates statutory consultees",
       "$comment": "Only available in S78 cases"
+    },
+    "consultedBodiesDetails": {
+      "type": ["string", "null"],
+      "description": "The details of the bodies consulted"
     },
     "hasInfrastructureLevy": {
       "type": ["boolean", "null"],
@@ -872,11 +877,7 @@
     "caseworkReason": {
       "type": ["string", "null"],
       "$comment": "Only available in S78 cases"
-    },
-    "developmentType": {
-      "type": ["string", "null"],
-      "$comment": "Only available in S78 cases"
-    },
+    },    
     "importantInformation": {
       "type": ["string", "null"],
       "$comment": "Only available in S78 cases"
@@ -932,6 +933,12 @@
       "examples": ["2023-07-27T20:30:00.000Z"],
       "$comment": "Only available in S78 cases"
     },
+    "appellantProofsSubmittedDate": {
+      "type": ["string", "null"],
+      "format": "date-time",
+      "examples": ["2023-07-27T20:30:00.000Z"],
+      "$comment": "Only available in S78 cases"
+    },
     "finalCommentsDueDate": {
       "type": ["string", "null"],
       "format": "date-time",
@@ -980,10 +987,6 @@
       "examples": ["2023-07-27T20:30:00.000Z"],
       "$comment": "Only available in S78 cases"
     },
-    "reasonForNeighbourVisits": {
-      "type": ["string", "null"],
-      "$comment": "Only available in S78 cases"
-    },
     "numberOfResidencesNetChange": {
       "type": ["number", "null"],
       "description": "The net gain in residences of the proposed development",
@@ -1007,7 +1010,36 @@
     },
     "typeOfPlanningApplication": {
       "type": ["string", "null"],
-      "$comment": "Only available in S78 cases"
+      "enum": [
+        "full-appeal", 
+        "householder-planning", 
+        "outline-planning", 
+        "prior-approval", 
+        "reserved-matters", 
+        "removal-or-variation-of-conditions",
+        null
+      ]
+    },
+    "developmentType": {
+      "type": ["string", "null"],
+      "enum": [
+        "householder", 
+        "change-of-use", 
+        "major-dwellings", 
+        "major-industry-storage", 
+        "major-offices", 
+        "major-retail-services", 
+        "major-traveller-caravan",
+        "mineral-workings",
+        "minor-dwellings",
+        "minor-industry-storage",
+        "minor-offices",
+        "minor-retail-services",
+        "minor-traveller-caravan",
+        "other-major",
+        "other-minor",
+        null
+      ]
     }
   }
 }

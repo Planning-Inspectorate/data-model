@@ -20,15 +20,16 @@
     "eiaColumnTwoThreshold",
     "eiaScreeningOpinion",
     "eiaRequiresEnvironmentalStatement",
-    "eiaCompletedEnvironmentalStatement",
-    "eiaConsultedBodiesDetails",
+    "eiaCompletedEnvironmentalStatement",    
     "hasStatutoryConsultees",
+    "consultedBodiesDetails",
     "hasConsultationResponses",
     "hasEmergingPlan",
     "hasSupplementaryPlanningDocs",
     "hasInfrastructureLevy",
     "isInfrastructureLevyFormallyAdopted",
     "infrastructureLevyAdoptedDate",
+    "infrastructureLevyExpectedDate",
     "lpaProcedurePreference",
     "lpaProcedurePreferenceDetails",
     "lpaProcedurePreferenceDuration"
@@ -121,15 +122,15 @@
           "type": ["boolean", "null"],
           "description": "EIA completed environmental statement required",
           "$comment": "Only available in S78 cases"
-        },
-        "eiaConsultedBodiesDetails": {
-          "type": ["string", "null"],
-          "description": "The details of the bodies consulted by EIA"
-        },
+        },        
         "hasStatutoryConsultees": {
           "type": ["boolean", "null"],
           "description": "Indicates statutory consultees",
           "$comment": "Only available in S78 cases"
+        },
+        "consultedBodiesDetails": {
+          "type": ["string", "null"],
+          "description": "The details of the bodies consulted"
         },
         "hasConsultationResponses": {
           "type": ["boolean", "null"],
@@ -161,6 +162,13 @@
           "format": "date-time",
           "examples": ["2023-07-27T20:30:00.000Z"],
           "description": "The date of the infrastructure levy adoption",
+          "$comment": "Only available in S78 cases"
+        },
+        "infrastructureLevyExpectedDate": {
+          "type": ["string", "null"],
+          "format": "date-time",
+          "examples": ["2023-07-27T20:30:00.000Z"],
+          "description": "The expected date of the infrastructure levy",
           "$comment": "Only available in S78 cases"
         },
         "lpaProcedurePreference": {

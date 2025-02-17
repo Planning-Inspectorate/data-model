@@ -599,6 +599,10 @@ export interface AppealHASCase {
       }[]
     | null;
   /**
+   * A general reason given for the need to visit any neighbours
+   */
+  reasonForNeighbourVisits?: string | null;
+  /**
    * A list of affected listed building IDs from Historic England
    */
   affectedListedBuildingNumbers: string[] | null;
@@ -610,6 +614,14 @@ export interface AppealHASCase {
    * Indicates if the appellant has applied for costs
    */
   lpaCostsAppliedFor: boolean | null;
+  typeOfPlanningApplication?:
+    | 'full-appeal'
+    | 'householder-planning'
+    | 'outline-planning'
+    | 'prior-approval'
+    | 'reserved-matters'
+    | 'removal-or-variation-of-conditions'
+    | null;
   [k: string]: unknown;
 }
 
@@ -1033,6 +1045,10 @@ export interface AppealS78Case {
       }[]
     | null;
   /**
+   * A general reason given for the need to visit any neighbours
+   */
+  reasonForNeighbourVisits: string | null;
+  /**
    * A list of affected listed building IDs from Historic England
    */
   affectedListedBuildingNumbers: string[] | null;
@@ -1151,13 +1167,13 @@ export interface AppealS78Case {
    */
   eiaCompletedEnvironmentalStatement: boolean | null;
   /**
-   * The details of the bodies consulted by EIA
-   */
-  eiaConsultedBodiesDetails: string | null;
-  /**
    * Indicates statutory consultees
    */
   hasStatutoryConsultees: boolean | null;
+  /**
+   * The details of the bodies consulted
+   */
+  consultedBodiesDetails: string | null;
   /**
    * Indicates the existence of an infrastructure levy
    */
@@ -1187,7 +1203,6 @@ export interface AppealS78Case {
    */
   lpaProcedurePreferenceDuration: number | null;
   caseworkReason: string | null;
-  developmentType: string | null;
   importantInformation: string | null;
   jurisdiction: string | null;
   redeterminedIndicator: string | null;
@@ -1201,6 +1216,7 @@ export interface AppealS78Case {
   targetDate: string | null;
   appellantCommentsSubmittedDate: string | null;
   appellantStatementSubmittedDate: string | null;
+  appellantProofsSubmittedDate: string | null;
   finalCommentsDueDate: string | null;
   interestedPartyRepsDueDate: string | null;
   lpaCommentsSubmittedDate: string | null;
@@ -1209,7 +1225,6 @@ export interface AppealS78Case {
   proofsOfEvidenceDueDate: string | null;
   siteNoticesSentDate: string | null;
   statementDueDate: string | null;
-  reasonForNeighbourVisits: string | null;
   /**
    * The net gain in residences of the proposed development
    */
@@ -1218,7 +1233,31 @@ export interface AppealS78Case {
   siteGridReferenceNorthing: string | null;
   siteViewableFromRoad: boolean | null;
   siteWithinSSSI: boolean | null;
-  typeOfPlanningApplication: string | null;
+  typeOfPlanningApplication:
+    | 'full-appeal'
+    | 'householder-planning'
+    | 'outline-planning'
+    | 'prior-approval'
+    | 'reserved-matters'
+    | 'removal-or-variation-of-conditions'
+    | null;
+  developmentType:
+    | 'householder'
+    | 'change-of-use'
+    | 'major-dwellings'
+    | 'major-industry-storage'
+    | 'major-offices'
+    | 'major-retail-services'
+    | 'major-traveller-caravan'
+    | 'mineral-workings'
+    | 'minor-dwellings'
+    | 'minor-industry-storage'
+    | 'minor-offices'
+    | 'minor-retail-services'
+    | 'minor-traveller-caravan'
+    | 'other-major'
+    | 'other-minor'
+    | null;
   [k: string]: unknown;
 }
 
@@ -2584,9 +2623,21 @@ export interface AppellantCommonSubmissionProperties {
       }[]
     | null;
   /**
+   * A general reason given for the need to visit any neighbours
+   */
+  reasonForNeighbourVisits?: string | null;
+  /**
    * A list of related case references known to the appellant and the LPA
    */
   nearbyCaseReferences: string[] | null;
+  typeOfPlanningApplication?:
+    | 'full-appeal'
+    | 'householder-planning'
+    | 'outline-planning'
+    | 'prior-approval'
+    | 'reserved-matters'
+    | 'removal-or-variation-of-conditions'
+    | null;
   [k: string]: unknown;
 }
 
@@ -2753,9 +2804,21 @@ export interface AppellantCommonSubmissionProperties {
       }[]
     | null;
   /**
+   * A general reason given for the need to visit any neighbours
+   */
+  reasonForNeighbourVisits?: string | null;
+  /**
    * A list of related case references known to the appellant and the LPA
    */
   nearbyCaseReferences: string[] | null;
+  typeOfPlanningApplication?:
+    | 'full-appeal'
+    | 'householder-planning'
+    | 'outline-planning'
+    | 'prior-approval'
+    | 'reserved-matters'
+    | 'removal-or-variation-of-conditions'
+    | null;
   [k: string]: unknown;
 }
 
@@ -2914,6 +2977,23 @@ export type AppellantS78SubmissionProperties = AppellantHASSubmissionProperties 
    * The planning obligation information, if available
    */
   statusPlanningObligation?: string | null;
+  developmentType?:
+    | 'householder'
+    | 'change-of-use'
+    | 'major-dwellings'
+    | 'major-industry-storage'
+    | 'major-offices'
+    | 'major-retail-services'
+    | 'major-traveller-caravan'
+    | 'mineral-workings'
+    | 'minor-dwellings'
+    | 'minor-industry-storage'
+    | 'minor-offices'
+    | 'minor-retail-services'
+    | 'minor-traveller-caravan'
+    | 'other-major'
+    | 'other-minor'
+    | null;
 };
 /**
  * Schema defining any HAS specific properties for submissions
@@ -3078,9 +3158,21 @@ export interface AppellantCommonSubmissionProperties {
       }[]
     | null;
   /**
+   * A general reason given for the need to visit any neighbours
+   */
+  reasonForNeighbourVisits?: string | null;
+  /**
    * A list of related case references known to the appellant and the LPA
    */
   nearbyCaseReferences: string[] | null;
+  typeOfPlanningApplication?:
+    | 'full-appeal'
+    | 'householder-planning'
+    | 'outline-planning'
+    | 'prior-approval'
+    | 'reserved-matters'
+    | 'removal-or-variation-of-conditions'
+    | null;
   [k: string]: unknown;
 }
 
@@ -3181,6 +3273,23 @@ export type AppellantS78SubmissionProperties = AppellantHASSubmissionProperties 
    * The planning obligation information, if available
    */
   statusPlanningObligation?: string | null;
+  developmentType?:
+    | 'householder'
+    | 'change-of-use'
+    | 'major-dwellings'
+    | 'major-industry-storage'
+    | 'major-offices'
+    | 'major-retail-services'
+    | 'major-traveller-caravan'
+    | 'mineral-workings'
+    | 'minor-dwellings'
+    | 'minor-industry-storage'
+    | 'minor-offices'
+    | 'minor-retail-services'
+    | 'minor-traveller-caravan'
+    | 'other-major'
+    | 'other-minor'
+    | null;
 };
 
 /**
@@ -3424,9 +3533,21 @@ export interface AppellantCommonSubmissionProperties {
       }[]
     | null;
   /**
+   * A general reason given for the need to visit any neighbours
+   */
+  reasonForNeighbourVisits?: string | null;
+  /**
    * A list of related case references known to the appellant and the LPA
    */
   nearbyCaseReferences: string[] | null;
+  typeOfPlanningApplication?:
+    | 'full-appeal'
+    | 'householder-planning'
+    | 'outline-planning'
+    | 'prior-approval'
+    | 'reserved-matters'
+    | 'removal-or-variation-of-conditions'
+    | null;
   [k: string]: unknown;
 }
 
@@ -3700,13 +3821,13 @@ export type LPAQS78SubmissionProperties = LPAQHASSubmissionProperties & {
    */
   eiaCompletedEnvironmentalStatement?: boolean | null;
   /**
-   * The details of the bodies consulted by EIA
-   */
-  eiaConsultedBodiesDetails?: string | null;
-  /**
    * Indicates statutory consultees
    */
   hasStatutoryConsultees?: boolean | null;
+  /**
+   * The details of the bodies consulted
+   */
+  consultedBodiesDetails?: string | null;
   /**
    * Indicates consultation responses
    */
@@ -3731,6 +3852,10 @@ export type LPAQS78SubmissionProperties = LPAQHASSubmissionProperties & {
    * The date of the infrastructure levy adoption
    */
   infrastructureLevyAdoptedDate?: string | null;
+  /**
+   * The expected date of the infrastructure levy
+   */
+  infrastructureLevyExpectedDate?: string | null;
   /**
    * The procedure preference indicated by the LPA
    */
@@ -3961,13 +4086,13 @@ export type LPAQS78SubmissionProperties = LPAQHASSubmissionProperties & {
    */
   eiaCompletedEnvironmentalStatement?: boolean | null;
   /**
-   * The details of the bodies consulted by EIA
-   */
-  eiaConsultedBodiesDetails?: string | null;
-  /**
    * Indicates statutory consultees
    */
   hasStatutoryConsultees?: boolean | null;
+  /**
+   * The details of the bodies consulted
+   */
+  consultedBodiesDetails?: string | null;
   /**
    * Indicates consultation responses
    */
@@ -3992,6 +4117,10 @@ export type LPAQS78SubmissionProperties = LPAQHASSubmissionProperties & {
    * The date of the infrastructure levy adoption
    */
   infrastructureLevyAdoptedDate?: string | null;
+  /**
+   * The expected date of the infrastructure levy
+   */
+  infrastructureLevyExpectedDate?: string | null;
   /**
    * The procedure preference indicated by the LPA
    */

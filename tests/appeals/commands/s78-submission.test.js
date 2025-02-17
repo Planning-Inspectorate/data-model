@@ -82,7 +82,8 @@ const exampleS78SubmissionSchema = {
         "appellantProcedurePreferenceDuration": 10816414.941069126,
         "inquiryHowManyWitnesses": -91300569.36444478,
         "planningObligation": false,
-        "statusPlanningObligation": "proident aute"
+        "statusPlanningObligation": "proident aute",
+        "developmentType": "change-of-use"
     },
     "documents": [ document ],
     "users": [ user ]

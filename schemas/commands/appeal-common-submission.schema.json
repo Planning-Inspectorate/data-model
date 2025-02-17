@@ -176,6 +176,10 @@
       },
       "description": "A list of neighbouring site addresses"
     },
+    "reasonForNeighbourVisits": {
+      "type": ["string", "null"],
+      "description": "A general reason given for the need to visit any neighbours"
+    },
     "nearbyCaseReferences": {
       "type": ["array", "null"],
       "items": {
@@ -183,6 +187,18 @@
         "examples": ["6000456", "8004567"]
       },
       "description": "A list of related case references known to the appellant and the LPA"
+    },
+    "typeOfPlanningApplication": {
+      "type": ["string", "null"],
+      "enum": [
+        "full-appeal", 
+        "householder-planning", 
+        "outline-planning", 
+        "prior-approval", 
+        "reserved-matters", 
+        "removal-or-variation-of-conditions",
+        null
+      ]
     }
   }
 }

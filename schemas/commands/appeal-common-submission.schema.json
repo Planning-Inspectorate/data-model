@@ -176,10 +176,6 @@
       },
       "description": "A list of neighbouring site addresses"
     },
-    "reasonForNeighbourVisits": {
-      "type": ["string", "null"],
-      "description": "A general reason given for the need to visit any neighbours"
-    },
     "nearbyCaseReferences": {
       "type": ["array", "null"],
       "items": {

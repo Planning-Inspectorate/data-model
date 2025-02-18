@@ -2623,10 +2623,6 @@ export interface AppellantCommonSubmissionProperties {
       }[]
     | null;
   /**
-   * A general reason given for the need to visit any neighbours
-   */
-  reasonForNeighbourVisits?: string | null;
-  /**
    * A list of related case references known to the appellant and the LPA
    */
   nearbyCaseReferences: string[] | null;
@@ -2803,10 +2799,6 @@ export interface AppellantCommonSubmissionProperties {
         [k: string]: unknown;
       }[]
     | null;
-  /**
-   * A general reason given for the need to visit any neighbours
-   */
-  reasonForNeighbourVisits?: string | null;
   /**
    * A list of related case references known to the appellant and the LPA
    */
@@ -3157,10 +3149,6 @@ export interface AppellantCommonSubmissionProperties {
         [k: string]: unknown;
       }[]
     | null;
-  /**
-   * A general reason given for the need to visit any neighbours
-   */
-  reasonForNeighbourVisits?: string | null;
   /**
    * A list of related case references known to the appellant and the LPA
    */
@@ -3533,10 +3521,6 @@ export interface AppellantCommonSubmissionProperties {
       }[]
     | null;
   /**
-   * A general reason given for the need to visit any neighbours
-   */
-  reasonForNeighbourVisits?: string | null;
-  /**
    * A list of related case references known to the appellant and the LPA
    */
   nearbyCaseReferences: string[] | null;
@@ -3638,6 +3622,10 @@ export interface LPAQCommonSubmissionProperties {
         [k: string]: unknown;
       }[]
     | null;
+  /**
+   * A general reason given for the need to visit any neighbours
+   */
+  reasonForNeighbourVisits?: string | null;
   [k: string]: unknown;
 }
 
@@ -3739,6 +3727,10 @@ export interface LPAQCommonSubmissionProperties {
         [k: string]: unknown;
       }[]
     | null;
+  /**
+   * A general reason given for the need to visit any neighbours
+   */
+  reasonForNeighbourVisits?: string | null;
   [k: string]: unknown;
 }
 
@@ -3967,6 +3959,10 @@ export interface LPAQCommonSubmissionProperties {
         [k: string]: unknown;
       }[]
     | null;
+  /**
+   * A general reason given for the need to visit any neighbours
+   */
+  reasonForNeighbourVisits?: string | null;
   [k: string]: unknown;
 }
 
@@ -4263,6 +4259,10 @@ export interface LPAQCommonSubmissionProperties {
         [k: string]: unknown;
       }[]
     | null;
+  /**
+   * A general reason given for the need to visit any neighbours
+   */
+  reasonForNeighbourVisits?: string | null;
   [k: string]: unknown;
 }
 

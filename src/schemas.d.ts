@@ -3340,7 +3340,8 @@ export interface AppellantSubmissionCommand {
       | 'plansDrawings'
       | 'newPlansDrawings'
       | 'otherNewDocuments'
-      | null;
+      | null
+      | 'environmentalAssessment';
     [k: string]: unknown;
   }[];
   /**
@@ -4194,7 +4195,15 @@ export interface LPAQuestionnaireCommand {
       | 'supplementaryPlanning'
       | 'emergingPlan'
       | 'appealNotification'
-      | null;
+      | null
+      | 'otherRelevantPolicies'
+      | 'treePreservationPlan'
+      | 'consultationResponses'
+      | 'eiaEnvironmentalStatement'
+      | 'eiaScreeningDirection'
+      | 'eiaScreeningOpinion'
+      | 'communityInfrastructureLevy'
+      | 'definitiveMapStatement';
     [k: string]: unknown;
   }[];
   [k: string]: unknown;

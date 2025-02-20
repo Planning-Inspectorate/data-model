@@ -91,7 +91,8 @@
               "plansDrawings",
               "newPlansDrawings",
               "otherNewDocuments",
-              null
+              null,
+              "environmentalAssessment"
             ],
             "description": "The type of document, used for exchange, migrations and consumption from the appeal back-office system"
           }

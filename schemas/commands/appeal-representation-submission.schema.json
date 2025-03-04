@@ -137,6 +137,7 @@
           "salutation",
           "firstName",
           "lastName",
+          "anonymised",
           "emailAddress",
           "telephoneNumber",
           "organisation",
@@ -157,6 +158,11 @@
             "type": ["string", "null"],
             "description": "The last name of the individual.",
             "examples": ["Doe"]
+          },
+          "anonymised": {
+            "type": ["boolean", "null"],
+            "description": "Whether the user's name should be anonymised",
+            "examples": [true, false]
           },
           "emailAddress": {
             "type": ["string", "null"],
@@ -182,4 +188,3 @@
       }
     }
   }
-  

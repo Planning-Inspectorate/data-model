@@ -2907,6 +2907,10 @@ export type AppealRepresentationSubmission = {
      */
     lastName: string | null;
     /**
+     * Whether the user's name should be anonymised
+     */
+    anonymised: boolean | null;
+    /**
      * The primary email address for contact.
      */
     emailAddress: string | null;

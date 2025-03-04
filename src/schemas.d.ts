@@ -2433,6 +2433,10 @@ export interface ServiceUser {
    */
   lastName: string | null;
   /**
+   * Whether the the user's name should be anonymised
+   */
+  anonymised: boolean | null;
+  /**
    * The first line of the address.
    */
   addressLine1: string | null;

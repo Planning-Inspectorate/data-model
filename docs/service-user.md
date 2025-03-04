@@ -4,31 +4,32 @@
 
 # Service User Properties
 
-| Property                              | Type     | Required | Nullable       | Defined by                                                                                                          |
-| :------------------------------------ | :------- | :------- | :------------- | :------------------------------------------------------------------------------------------------------------------ |
-| [id](#id)                             | `string` | Required | cannot be null | [Service User](service-user-properties-id.md "service-user.schema.json#/properties/id")                             |
-| [salutation](#salutation)             | `string` | Required | can be null    | [Service User](service-user-properties-salutation.md "service-user.schema.json#/properties/salutation")             |
-| [firstName](#firstname)               | `string` | Required | can be null    | [Service User](service-user-properties-firstname.md "service-user.schema.json#/properties/firstName")               |
-| [lastName](#lastname)                 | `string` | Required | can be null    | [Service User](service-user-properties-lastname.md "service-user.schema.json#/properties/lastName")                 |
-| [addressLine1](#addressline1)         | `string` | Required | can be null    | [Service User](service-user-properties-addressline1.md "service-user.schema.json#/properties/addressLine1")         |
-| [addressLine2](#addressline2)         | `string` | Required | can be null    | [Service User](service-user-properties-addressline2.md "service-user.schema.json#/properties/addressLine2")         |
-| [addressTown](#addresstown)           | `string` | Required | can be null    | [Service User](service-user-properties-addresstown.md "service-user.schema.json#/properties/addressTown")           |
-| [addressCounty](#addresscounty)       | `string` | Required | can be null    | [Service User](service-user-properties-addresscounty.md "service-user.schema.json#/properties/addressCounty")       |
-| [postcode](#postcode)                 | `string` | Required | can be null    | [Service User](service-user-properties-postcode.md "service-user.schema.json#/properties/postcode")                 |
-| [addressCountry](#addresscountry)     | `string` | Required | can be null    | [Service User](service-user-properties-addresscountry.md "service-user.schema.json#/properties/addressCountry")     |
-| [organisation](#organisation)         | `string` | Required | can be null    | [Service User](service-user-properties-organisation.md "service-user.schema.json#/properties/organisation")         |
-| [organisationType](#organisationtype) | `string` | Required | can be null    | [Service User](service-user-properties-organisationtype.md "service-user.schema.json#/properties/organisationType") |
-| [role](#role)                         | `string` | Required | can be null    | [Service User](service-user-properties-role.md "service-user.schema.json#/properties/role")                         |
-| [telephoneNumber](#telephonenumber)   | `string` | Required | can be null    | [Service User](service-user-properties-telephonenumber.md "service-user.schema.json#/properties/telephoneNumber")   |
-| [otherPhoneNumber](#otherphonenumber) | `string` | Required | can be null    | [Service User](service-user-properties-otherphonenumber.md "service-user.schema.json#/properties/otherPhoneNumber") |
-| [faxNumber](#faxnumber)               | `string` | Required | can be null    | [Service User](service-user-properties-faxnumber.md "service-user.schema.json#/properties/faxNumber")               |
-| [emailAddress](#emailaddress)         | `string` | Required | can be null    | [Service User](service-user-properties-emailaddress.md "service-user.schema.json#/properties/emailAddress")         |
-| [webAddress](#webaddress)             | `string` | Required | can be null    | [Service User](service-user-properties-webaddress.md "service-user.schema.json#/properties/webAddress")             |
-| [serviceUserType](#serviceusertype)   | `string` | Required | cannot be null | [Service User](service-user-properties-serviceusertype.md "service-user.schema.json#/properties/serviceUserType")   |
-| [caseReference](#casereference)       | `string` | Required | cannot be null | [Service User](service-user-properties-casereference.md "service-user.schema.json#/properties/caseReference")       |
-| [sourceSystem](#sourcesystem)         | `string` | Required | cannot be null | [Service User](service-user-properties-sourcesystem.md "service-user.schema.json#/properties/sourceSystem")         |
-| [sourceSuid](#sourcesuid)             | `string` | Required | cannot be null | [Service User](service-user-properties-sourcesuid.md "service-user.schema.json#/properties/sourceSuid")             |
-| Additional Properties                 | Any      | Optional | can be null    |                                                                                                                     |
+| Property                              | Type      | Required | Nullable       | Defined by                                                                                                          |
+| :------------------------------------ | :-------- | :------- | :------------- | :------------------------------------------------------------------------------------------------------------------ |
+| [id](#id)                             | `string`  | Required | cannot be null | [Service User](service-user-properties-id.md "service-user.schema.json#/properties/id")                             |
+| [salutation](#salutation)             | `string`  | Required | can be null    | [Service User](service-user-properties-salutation.md "service-user.schema.json#/properties/salutation")             |
+| [firstName](#firstname)               | `string`  | Required | can be null    | [Service User](service-user-properties-firstname.md "service-user.schema.json#/properties/firstName")               |
+| [lastName](#lastname)                 | `string`  | Required | can be null    | [Service User](service-user-properties-lastname.md "service-user.schema.json#/properties/lastName")                 |
+| [anonymised](#anonymised)             | `boolean` | Required | can be null    | [Service User](service-user-properties-anonymised.md "service-user.schema.json#/properties/anonymised")             |
+| [addressLine1](#addressline1)         | `string`  | Required | can be null    | [Service User](service-user-properties-addressline1.md "service-user.schema.json#/properties/addressLine1")         |
+| [addressLine2](#addressline2)         | `string`  | Required | can be null    | [Service User](service-user-properties-addressline2.md "service-user.schema.json#/properties/addressLine2")         |
+| [addressTown](#addresstown)           | `string`  | Required | can be null    | [Service User](service-user-properties-addresstown.md "service-user.schema.json#/properties/addressTown")           |
+| [addressCounty](#addresscounty)       | `string`  | Required | can be null    | [Service User](service-user-properties-addresscounty.md "service-user.schema.json#/properties/addressCounty")       |
+| [postcode](#postcode)                 | `string`  | Required | can be null    | [Service User](service-user-properties-postcode.md "service-user.schema.json#/properties/postcode")                 |
+| [addressCountry](#addresscountry)     | `string`  | Required | can be null    | [Service User](service-user-properties-addresscountry.md "service-user.schema.json#/properties/addressCountry")     |
+| [organisation](#organisation)         | `string`  | Required | can be null    | [Service User](service-user-properties-organisation.md "service-user.schema.json#/properties/organisation")         |
+| [organisationType](#organisationtype) | `string`  | Required | can be null    | [Service User](service-user-properties-organisationtype.md "service-user.schema.json#/properties/organisationType") |
+| [role](#role)                         | `string`  | Required | can be null    | [Service User](service-user-properties-role.md "service-user.schema.json#/properties/role")                         |
+| [telephoneNumber](#telephonenumber)   | `string`  | Required | can be null    | [Service User](service-user-properties-telephonenumber.md "service-user.schema.json#/properties/telephoneNumber")   |
+| [otherPhoneNumber](#otherphonenumber) | `string`  | Required | can be null    | [Service User](service-user-properties-otherphonenumber.md "service-user.schema.json#/properties/otherPhoneNumber") |
+| [faxNumber](#faxnumber)               | `string`  | Required | can be null    | [Service User](service-user-properties-faxnumber.md "service-user.schema.json#/properties/faxNumber")               |
+| [emailAddress](#emailaddress)         | `string`  | Required | can be null    | [Service User](service-user-properties-emailaddress.md "service-user.schema.json#/properties/emailAddress")         |
+| [webAddress](#webaddress)             | `string`  | Required | can be null    | [Service User](service-user-properties-webaddress.md "service-user.schema.json#/properties/webAddress")             |
+| [serviceUserType](#serviceusertype)   | `string`  | Required | cannot be null | [Service User](service-user-properties-serviceusertype.md "service-user.schema.json#/properties/serviceUserType")   |
+| [caseReference](#casereference)       | `string`  | Required | cannot be null | [Service User](service-user-properties-casereference.md "service-user.schema.json#/properties/caseReference")       |
+| [sourceSystem](#sourcesystem)         | `string`  | Required | cannot be null | [Service User](service-user-properties-sourcesystem.md "service-user.schema.json#/properties/sourceSystem")         |
+| [sourceSuid](#sourcesuid)             | `string`  | Required | cannot be null | [Service User](service-user-properties-sourcesuid.md "service-user.schema.json#/properties/sourceSuid")             |
+| Additional Properties                 | Any       | Optional | can be null    |                                                                                                                     |
 
 ## id
 
@@ -124,6 +125,34 @@ The last name of the individual.
 
 ```json
 "Doe"
+```
+
+## anonymised
+
+Whether the the user's name should be anonymised
+
+`anonymised`
+
+* is required
+
+* Type: `boolean`
+
+* can be null
+
+* defined in: [Service User](service-user-properties-anonymised.md "service-user.schema.json#/properties/anonymised")
+
+### anonymised Type
+
+`boolean`
+
+### anonymised Examples
+
+```json
+true
+```
+
+```json
+false
 ```
 
 ## addressLine1

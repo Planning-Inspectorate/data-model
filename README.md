@@ -13,6 +13,8 @@ All messages over the enterprise service bus are in Data Model compliant formats
 
 ## Schema Changes
 
+**Always consult a Data Architect about the proposed change - who will consider the change in terms of affect on other services and continuity with the overall data model.**
+
 Since we are using these schemas across a distributed system we must ensure backwards and forwards compatibility. This enables systems to adopt new schema versions independently of one another. Also, consumers don't need to know the schema version of the messages they have received, as it should validate against any version.
 
 Backwards compatibility ensures that messages using a newer schema version can be understood and processed by consumers that have not been updated to support the new version.

@@ -2918,6 +2918,26 @@ export type AppealRepresentationSubmission = {
      * Type or category of the service user.
      */
     serviceUserType: 'InterestedParty';
+    /**
+     * First line of address of the represented
+     */
+    siteAddressLine1?: string;
+    /**
+     * Second line of address of the represented
+     */
+    siteAddressLine2?: string | null;
+    /**
+     * Town / City of the represented
+     */
+    siteAddressTown?: string;
+    /**
+     * County of the represented
+     */
+    siteAddressCounty?: string | null;
+    /**
+     * Postal code of the represented
+     */
+    siteAddressPostcode?: string;
     [k: string]: unknown;
   };
   [k: string]: unknown;

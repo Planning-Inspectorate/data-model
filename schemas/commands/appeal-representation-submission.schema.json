@@ -178,29 +178,29 @@
             "description": "Type or category of the service user.",
             "enum": ["InterestedParty"]
           },
-          "siteAddressLine1": {
+          "addressLine1": {
             "type": "string",
             "examples": ["96 The Avenue"],
-            "description": "First line of address of the represented"
+            "description": "First line of address of the user making the representation"
           },
-          "siteAddressLine2": {
+          "addressLine2": {
             "type": ["string", "null"],
-            "description": "Second line of address of the represented"
+            "description": "Second line of address of the user making the representation"
           },
-          "siteAddressTown": {
+          "addressTown": {
             "type": "string",
             "examples": ["Maidstone"],
-            "description": "Town / City of the represented"
+            "description": "Town / City of the user making the representation"
           },
-          "siteAddressCounty": {
+          "addressCounty": {
             "type": ["string", "null"],
             "examples": ["Kent"],
-            "description": "County of the represented"
+            "description": "County of the user making the representation"
           },
-          "siteAddressPostcode": {
+          "addressPostcode": {
             "type": "string",
             "examples": ["MD21 5XY"],
-            "description": "Postal code of the represented"
+            "description": "Postal code of the user making the representation"
           }
         }
       }

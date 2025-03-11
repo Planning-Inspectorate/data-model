@@ -2919,25 +2919,25 @@ export type AppealRepresentationSubmission = {
      */
     serviceUserType: 'InterestedParty';
     /**
-     * First line of address of the represented
+     * First line of address of the user making the representation
      */
-    siteAddressLine1?: string;
+    addressLine1?: string;
     /**
-     * Second line of address of the represented
+     * Second line of address of the user making the representation
      */
-    siteAddressLine2?: string | null;
+    addressLine2?: string | null;
     /**
-     * Town / City of the represented
+     * Town / City of the user making the representation
      */
-    siteAddressTown?: string;
+    addressTown?: string;
     /**
-     * County of the represented
+     * County of the user making the representation
      */
-    siteAddressCounty?: string | null;
+    addressCounty?: string | null;
     /**
-     * Postal code of the represented
+     * Postal code of the user making the representation
      */
-    siteAddressPostcode?: string;
+    addressPostcode?: string;
     [k: string]: unknown;
   };
   [k: string]: unknown;

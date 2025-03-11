@@ -177,6 +177,30 @@
             "type": "string",
             "description": "Type or category of the service user.",
             "enum": ["InterestedParty"]
+          },
+          "addressLine1": {
+            "type": "string",
+            "examples": ["96 The Avenue"],
+            "description": "First line of address of the user making the representation"
+          },
+          "addressLine2": {
+            "type": ["string", "null"],
+            "description": "Second line of address of the user making the representation"
+          },
+          "addressTown": {
+            "type": "string",
+            "examples": ["Maidstone"],
+            "description": "Town / City of the user making the representation"
+          },
+          "addressCounty": {
+            "type": ["string", "null"],
+            "examples": ["Kent"],
+            "description": "County of the user making the representation"
+          },
+          "addressPostcode": {
+            "type": "string",
+            "examples": ["MD21 5XY"],
+            "description": "Postal code of the user making the representation"
           }
         }
       }

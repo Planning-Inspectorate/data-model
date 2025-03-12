@@ -21,6 +21,7 @@ const newUser = {
     "salutation": null,
     "firstName": null,
     "lastName": null,
+    "anonymised": null,
     "emailAddress": null,
     "telephoneNumber": null,
     "organisation": null,

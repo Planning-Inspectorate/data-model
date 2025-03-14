@@ -2980,7 +2980,7 @@ export type AppellantS78SubmissionProperties = AppellantHASSubmissionProperties 
   /**
    * The number of witnesses in inquiries
    */
-  inquiryHowManyWitnesses?: number | null;
+  appellantProcedurePreferenceWitnessCount?: number | null;
   /**
    * Indicates the existence of a planning obligation
    */
@@ -3272,7 +3272,7 @@ export type AppellantS78SubmissionProperties = AppellantHASSubmissionProperties 
   /**
    * The number of witnesses in inquiries
    */
-  inquiryHowManyWitnesses?: number | null;
+  appellantProcedurePreferenceWitnessCount?: number | null;
   /**
    * Indicates the existence of a planning obligation
    */

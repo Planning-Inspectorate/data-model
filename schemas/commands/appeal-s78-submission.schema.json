@@ -58,7 +58,7 @@
           "description": "The duration of the procedure indicated by the appellant",
           "$comment": "Only available in S78 cases"
         },
-        "inquiryHowManyWitnesses": {
+        "appellantProcedurePreferenceWitnessCount": {
           "type": ["number", "null"],
           "description": "The number of witnesses in inquiries",
           "$comment": "Only available in S78 cases"

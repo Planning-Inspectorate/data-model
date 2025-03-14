@@ -80,7 +80,7 @@ const exampleS78SubmissionSchema = {
         "appellantProcedurePreference": null,
         "appellantProcedurePreferenceDetails": "eiusmod ex exercitation",
         "appellantProcedurePreferenceDuration": 10816414.941069126,
-        "inquiryHowManyWitnesses": -91300569.36444478,
+        "appellantProcedurePreferenceWitnessCount": -91300569.36444478,
         "planningObligation": false,
         "statusPlanningObligation": "proident aute",
         "developmentType": "change-of-use"

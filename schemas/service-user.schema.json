@@ -10,6 +10,7 @@
 		"salutation",
 		"firstName",
 		"lastName",
+		"anonymised",
 		"addressLine1",
 		"addressLine2",
 		"addressTown",
@@ -49,6 +50,11 @@
 			"type": ["string", "null"],
 			"description": "The last name of the individual.",
 			"examples": ["Doe"]
+		},
+		"anonymised": {
+			"type": ["boolean", "null"],
+			"description": "Whether the the user's name should be anonymised",
+			"examples": [true, false]
 		},
 		"addressLine1": {
 			"type": ["string", "null"],

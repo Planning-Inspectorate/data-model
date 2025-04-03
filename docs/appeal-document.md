@@ -591,6 +591,7 @@ The type of document, used for exchange, migrations and consumption from the app
 | `"rule6WitnessesEvidence"`        |             |
 | `"environmentalAssessment"`       |             |
 | `"appealNotification"`            |             |
+| `"mainPartyCorrespondence"`       |             |
 | `null`                            |             |
 
 ## sourceSystem

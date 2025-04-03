@@ -229,6 +229,7 @@ const APPEAL_DOCUMENT_TYPE = Object.freeze({
   LPA_PROOF_OF_EVIDENCE: 'lpaProofOfEvidence',
   LPA_STATEMENT: 'lpaStatement',
   LPA_WITNESSES_EVIDENCE: 'lpaWitnessesEvidence',
+  MAIN_PARTY_CORRESPONDENCE: 'mainPartyCorrespondence',
   NEW_PLANS_DRAWINGS: 'newPlansDrawings',
   ORIGINAL_APPLICATION_FORM: 'originalApplicationForm',
   OTHER_NEW_DOCUMENTS: 'otherNewDocuments',

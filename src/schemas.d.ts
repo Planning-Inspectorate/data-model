@@ -126,6 +126,7 @@ export interface AppealDocument {
     | 'eiaEnvironmentalStatement'
     | 'eiaScreeningDirection'
     | 'eiaScreeningOpinion'
+    | 'eiaScopingOpinion'
     | 'definitiveMapStatement'
     | 'treePreservationPlan'
     | 'interestedPartyComment'
@@ -4222,6 +4223,7 @@ export interface LPAQuestionnaireCommand {
       | 'eiaEnvironmentalStatement'
       | 'eiaScreeningDirection'
       | 'eiaScreeningOpinion'
+      | 'eiaScopingOpinion'
       | 'communityInfrastructureLevy'
       | 'definitiveMapStatement';
     [k: string]: unknown;

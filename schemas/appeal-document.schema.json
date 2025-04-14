@@ -193,6 +193,7 @@
         "eiaEnvironmentalStatement",
         "eiaScreeningDirection",
         "eiaScreeningOpinion",
+        "eiaScopingOpinion",
         "definitiveMapStatement",
         "treePreservationPlan",
         "interestedPartyComment",

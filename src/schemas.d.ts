@@ -249,23 +249,23 @@ export interface AppealEvent {
   /**
    * First line of address for the event site
    */
-  addressLine1: string;
+  addressLine1?: string | null;
   /**
    * Second line of address for the event site
    */
-  addressLine2: string | null;
+  addressLine2?: string | null;
   /**
    * Town / City of the event address
    */
-  addressTown: string;
+  addressTown?: string | null;
   /**
    * County of the event address
    */
-  addressCounty: string | null;
+  addressCounty?: string | null;
   /**
    * Postal code of the event address
    */
-  addressPostcode: string;
+  addressPostcode?: string | null;
   [k: string]: unknown;
 }
 

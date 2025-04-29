@@ -1,0 +1,42 @@
+import {describe, it} from 'node:test';
+import Ajv from 'ajv';
+import addFormats from 'ajv-formats';
+import {loadAllSchemasSync} from '../src/index.js';
+
+describe('schemas', () => {
+    it('should only include valid JSON schemas', () => {
+        // validate that all schemas are valid JSON schema documents
+        // by default AJV uses draft-07 which is the same as the schemas
+        // https://ajv.js.org/json-schema.html#json-schema-versions
+
+        const ajv = new Ajv({ allErrors: true, strict: true });
+        addFormats(ajv);
+
+        const allSchemas = loadAllSchemasSync();
+        const schemas = Object.values(allSchemas).reduce((a, c) => ({ ...a, ...c }), {});
+        const errorsBySchema = {};
+        for (const schema of Object.values(schemas)) {
+            ajv.validateSchema(schema);
+            if (ajv.errors) {
+                errorsBySchema[schema.$id] = ajv.errors.map(e => {
+                    let error = `${e.instancePath} ${e.message}`;
+                    if (e.params) {
+                        error += ` ${JSON.stringify(e.params)}`;
+                    }
+                    return error;
+                });
+            }
+        }
+        if (Object.keys(errorsBySchema).length) {
+            console.log('*'.repeat(50));
+            console.log('ERRORS:');
+            for (const [schema, errors] of Object.entries(errorsBySchema)) {
+                console.log(schema);
+                for (const error of errors) {
+                    console.log('  ', error);
+                }
+            }
+            throw new Error(`${Object.keys(errorsBySchema).join(', ')} schemas are invalid (count: ${Object.keys(errorsBySchema).length}), see console output`);
+        }
+    });
+});

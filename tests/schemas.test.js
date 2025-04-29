@@ -39,4 +39,30 @@ describe('schemas', () => {
             throw new Error(`${Object.keys(errorsBySchema).join(', ')} schemas are invalid (count: ${Object.keys(errorsBySchema).length}), see console output`);
         }
     });
+    it('should have matching $id and filenames', () => {
+        const allSchemas = loadAllSchemasSync();
+        const errorsBySchema = {};
+        for (let [name, schema] of Object.entries(allSchemas.schemas)) {
+            if (name.includes('/')) {
+                name = name.split('/').pop();
+            }
+            if (name !== schema.$id) {
+                errorsBySchema[schema.$id] = name;
+            }
+        }
+        for (let [name, schema] of Object.entries(allSchemas.commands)) {
+            // ID includes the commands/ prefix
+            if (('commands/' + name) !== schema.$id) {
+                errorsBySchema[schema.$id] = name;
+            }
+        }
+        if (Object.keys(errorsBySchema).length) {
+            console.log('*'.repeat(50));
+            console.log('ERRORS:');
+            for (const [schema, filename] of Object.entries(errorsBySchema)) {
+                console.log(schema, filename);
+            }
+            throw new Error(`${Object.keys(errorsBySchema).join(', ')} schemas have mismatched $id and filenames (count: ${Object.keys(errorsBySchema).length}), see console output`);
+        }
+    });
 });

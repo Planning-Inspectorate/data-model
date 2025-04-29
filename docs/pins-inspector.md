@@ -4,18 +4,18 @@
 
 # PINS Inspector Properties
 
-| Property                              | Type     | Required | Nullable       | Defined by                                                                                                                 |
-| :------------------------------------ | :------- | :------- | :------------- | :------------------------------------------------------------------------------------------------------------------------- |
-| [horizonId](#horizonid)               | `string` | Required | cannot be null | [PINS Inspector](pins-inspector-properties-horizonid.md "pins-inspectors.schema.json#/properties/horizonId")               |
-| [firstName](#firstname)               | `string` | Required | cannot be null | [PINS Inspector](pins-inspector-properties-firstname.md "pins-inspectors.schema.json#/properties/firstName")               |
-| [lastName](#lastname)                 | `string` | Required | cannot be null | [PINS Inspector](pins-inspector-properties-lastname.md "pins-inspectors.schema.json#/properties/lastName")                 |
-| [postName](#postname)                 | `string` | Optional | can be null    | [PINS Inspector](pins-inspector-properties-postname.md "pins-inspectors.schema.json#/properties/postName")                 |
-| [organisationName](#organisationname) | `string` | Optional | can be null    | [PINS Inspector](pins-inspector-properties-organisationname.md "pins-inspectors.schema.json#/properties/organisationName") |
-| [title](#title)                       | `string` | Optional | can be null    | [PINS Inspector](pins-inspector-properties-title.md "pins-inspectors.schema.json#/properties/title")                       |
-| [salutation](#salutation)             | `string` | Optional | can be null    | [PINS Inspector](pins-inspector-properties-salutation.md "pins-inspectors.schema.json#/properties/salutation")             |
-| [qualifications](#qualifications)     | `string` | Optional | can be null    | [PINS Inspector](pins-inspector-properties-qualifications.md "pins-inspectors.schema.json#/properties/qualifications")     |
-| [email](#email)                       | `string` | Required | can be null    | [PINS Inspector](pins-inspector-properties-email.md "pins-inspectors.schema.json#/properties/email")                       |
-| Additional Properties                 | Any      | Optional | can be null    |                                                                                                                            |
+| Property                              | Type     | Required | Nullable       | Defined by                                                                                                                |
+| :------------------------------------ | :------- | :------- | :------------- | :------------------------------------------------------------------------------------------------------------------------ |
+| [horizonId](#horizonid)               | `string` | Required | cannot be null | [PINS Inspector](pins-inspector-properties-horizonid.md "pins-inspector.schema.json#/properties/horizonId")               |
+| [firstName](#firstname)               | `string` | Required | cannot be null | [PINS Inspector](pins-inspector-properties-firstname.md "pins-inspector.schema.json#/properties/firstName")               |
+| [lastName](#lastname)                 | `string` | Required | cannot be null | [PINS Inspector](pins-inspector-properties-lastname.md "pins-inspector.schema.json#/properties/lastName")                 |
+| [postName](#postname)                 | `string` | Optional | can be null    | [PINS Inspector](pins-inspector-properties-postname.md "pins-inspector.schema.json#/properties/postName")                 |
+| [organisationName](#organisationname) | `string` | Optional | can be null    | [PINS Inspector](pins-inspector-properties-organisationname.md "pins-inspector.schema.json#/properties/organisationName") |
+| [title](#title)                       | `string` | Optional | can be null    | [PINS Inspector](pins-inspector-properties-title.md "pins-inspector.schema.json#/properties/title")                       |
+| [salutation](#salutation)             | `string` | Optional | can be null    | [PINS Inspector](pins-inspector-properties-salutation.md "pins-inspector.schema.json#/properties/salutation")             |
+| [qualifications](#qualifications)     | `string` | Optional | can be null    | [PINS Inspector](pins-inspector-properties-qualifications.md "pins-inspector.schema.json#/properties/qualifications")     |
+| [email](#email)                       | `string` | Required | can be null    | [PINS Inspector](pins-inspector-properties-email.md "pins-inspector.schema.json#/properties/email")                       |
+| Additional Properties                 | Any      | Optional | can be null    |                                                                                                                           |
 
 ## horizonId
 
@@ -29,7 +29,7 @@ The PINS-generated unique horizon ID
 
 * cannot be null
 
-* defined in: [PINS Inspector](pins-inspector-properties-horizonid.md "pins-inspectors.schema.json#/properties/horizonId")
+* defined in: [PINS Inspector](pins-inspector-properties-horizonid.md "pins-inspector.schema.json#/properties/horizonId")
 
 ### horizonId Type
 
@@ -47,7 +47,7 @@ The first name of the inspector
 
 * cannot be null
 
-* defined in: [PINS Inspector](pins-inspector-properties-firstname.md "pins-inspectors.schema.json#/properties/firstName")
+* defined in: [PINS Inspector](pins-inspector-properties-firstname.md "pins-inspector.schema.json#/properties/firstName")
 
 ### firstName Type
 
@@ -65,7 +65,7 @@ The last name of the inspector
 
 * cannot be null
 
-* defined in: [PINS Inspector](pins-inspector-properties-lastname.md "pins-inspectors.schema.json#/properties/lastName")
+* defined in: [PINS Inspector](pins-inspector-properties-lastname.md "pins-inspector.schema.json#/properties/lastName")
 
 ### lastName Type
 
@@ -83,7 +83,7 @@ The post name of the inspector
 
 * can be null
 
-* defined in: [PINS Inspector](pins-inspector-properties-postname.md "pins-inspectors.schema.json#/properties/postName")
+* defined in: [PINS Inspector](pins-inspector-properties-postname.md "pins-inspector.schema.json#/properties/postName")
 
 ### postName Type
 
@@ -101,7 +101,7 @@ The organisation name of the inspector
 
 * can be null
 
-* defined in: [PINS Inspector](pins-inspector-properties-organisationname.md "pins-inspectors.schema.json#/properties/organisationName")
+* defined in: [PINS Inspector](pins-inspector-properties-organisationname.md "pins-inspector.schema.json#/properties/organisationName")
 
 ### organisationName Type
 
@@ -119,7 +119,7 @@ The title of the inspector
 
 * can be null
 
-* defined in: [PINS Inspector](pins-inspector-properties-title.md "pins-inspectors.schema.json#/properties/title")
+* defined in: [PINS Inspector](pins-inspector-properties-title.md "pins-inspector.schema.json#/properties/title")
 
 ### title Type
 
@@ -137,7 +137,7 @@ The salutation of the inspector
 
 * can be null
 
-* defined in: [PINS Inspector](pins-inspector-properties-salutation.md "pins-inspectors.schema.json#/properties/salutation")
+* defined in: [PINS Inspector](pins-inspector-properties-salutation.md "pins-inspector.schema.json#/properties/salutation")
 
 ### salutation Type
 
@@ -155,7 +155,7 @@ The qualifications of the inspector
 
 * can be null
 
-* defined in: [PINS Inspector](pins-inspector-properties-qualifications.md "pins-inspectors.schema.json#/properties/qualifications")
+* defined in: [PINS Inspector](pins-inspector-properties-qualifications.md "pins-inspector.schema.json#/properties/qualifications")
 
 ### qualifications Type
 
@@ -173,7 +173,7 @@ The email address of the inspector
 
 * can be null
 
-* defined in: [PINS Inspector](pins-inspector-properties-email.md "pins-inspectors.schema.json#/properties/email")
+* defined in: [PINS Inspector](pins-inspector-properties-email.md "pins-inspector.schema.json#/properties/email")
 
 ### email Type
 

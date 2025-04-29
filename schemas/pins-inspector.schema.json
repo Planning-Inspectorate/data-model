@@ -1,6 +1,6 @@
 {
     "$schema": "http://json-schema.org/draft-07/schema#",
-    "$id": "pins-inspectors.schema.json",
+    "$id": "pins-inspector.schema.json",
     "title": "PINS Inspector",
     "description": "Inspector attributes as per Horizon. This will be extended with SAP/Entra data",
     "type": "object",

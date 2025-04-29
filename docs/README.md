@@ -22,7 +22,7 @@
 
 * [Get Timesheets API response](./gettimesheets-response.md "Schema defining the data returned by the DaRT API") – `gettimesheets-response.schema.json`
 
-* [Listed Building](./listed-buildings.md "Delta of listed building data pushed by the ODW") – `listed-building.schema.json`
+* [Listed Building](./listed-building.md "Delta of listed building data pushed by the ODW") – `listed-building.schema.json`
 
 * [NSIP Document](./nsip-document.md "NSIP document schema") – `nsip-document.schema.json`
 

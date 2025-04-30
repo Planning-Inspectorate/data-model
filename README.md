@@ -5,6 +5,7 @@ JSON Schemas for the Planning Inspectorate's Data Model.
 All messages over the enterprise service bus are in Data Model compliant formats, the schema's in this repository defined those formats.
 
 ## Rules of engagement
+* Schema names should use the singular form (for example, `service-user` rather than `service-users`).
 * Messages broadcast over the service bus must be pre-validated against the schema.
 * Each service bus topic corresponds to one schema. 
 * Each message encompasses the complete state of an entity (as defined by [ECST](https://blogs.mulesoft.com/api-integration/strategy/event-carried-state-messages/)) and does not delineate specific changes (the delta). 

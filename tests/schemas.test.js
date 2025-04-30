@@ -65,4 +65,29 @@ describe('schemas', () => {
             throw new Error(`${Object.keys(errorsBySchema).join(', ')} schemas have mismatched $id and filenames (count: ${Object.keys(errorsBySchema).length}), see console output`);
         }
     });
+    it('should use the singular form for $id', () => {
+        // very crude test to ensure schemas don't end in 's'...
+        const suffixExceptions = [
+            'has', // allow has suffix for appeals
+            'listed-buildings' // allow this temporary schema, to remove when this schema copy is removed
+        ];
+
+        const allSchemas = loadAllSchemasSync();
+        const schemas = Object.values(allSchemas).reduce((a, c) => ({ ...a, ...c }), {});
+        const errors = [];
+        for (const schema of Object.values(schemas)) {
+            const name = schema.$id.replace('.schema.json', '');
+            if (name.endsWith('s') && !suffixExceptions.some(suffix => name.endsWith(suffix))) {
+                errors.push(schema.$id);
+            }
+        }
+        if (errors.length > 0) {
+            console.log('*'.repeat(50));
+            console.log('ERRORS:');
+            for (const error of errors) {
+                console.log('  ' + error);
+            }
+            throw new Error(`${errors.join(', ')} schemas use plural names, see console output`);
+        }
+    });
 });

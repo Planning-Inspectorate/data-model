@@ -1,0 +1,36 @@
+{
+	"$schema": "http://json-schema.org/draft-07/schema#",
+	"$id": "listed-buildings.schema.json",
+	"title": "Listed Buildings",
+	"description": "Temporary copy of listed-building to ensure compatibility until ODW is updated",
+	"type": "object",
+	"additionalProperties": true,
+	"required": [
+		"entity",
+		"reference",
+		"name",
+		"listedBuildingGrade"
+	],
+	"properties": {
+		"entity": {
+			"type": "integer",
+			"description": "A unique identifier for the listed building.",
+			"examples": ["31717222"]
+		},
+		"reference": {
+			"type": ["string"],
+			"description": "Reference number for the listed buildign",
+			"examples": ["1260842"]
+		},
+		"name": {
+			"type": ["string"],
+			"description": "Name of listed building",
+			"examples": ["41A, NEWBIGGIN"]
+		},
+		"listedBuildingGrade": {
+			"type": ["string"],
+			"description": "Grade assigned to the listing.",
+			"examples": ["II"]
+		}
+	}
+}

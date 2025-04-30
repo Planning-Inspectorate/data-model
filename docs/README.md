@@ -24,6 +24,8 @@
 
 * [Listed Building](./listed-building.md "Delta of listed building data pushed by the ODW") – `listed-building.schema.json`
 
+* [Listed Buildings](./listed-buildings.md "Temporary copy of listed-building to ensure compatibility until ODW is updated") – `listed-buildings.schema.json`
+
 * [NSIP Document](./nsip-document.md "NSIP document schema") – `nsip-document.schema.json`
 
 * [NSIP Project](./nsip-project.md "Subset of Pins Data Model \[Case]") – `nsip-project.schema.json`

@@ -1643,6 +1643,29 @@ export interface ListedBuilding {
 }
 
 /**
+ * Temporary copy of listed-building to ensure compatibility until ODW is updated
+ */
+export interface ListedBuildings {
+  /**
+   * A unique identifier for the listed building.
+   */
+  entity: number;
+  /**
+   * Reference number for the listed buildign
+   */
+  reference: string;
+  /**
+   * Name of listed building
+   */
+  name: string;
+  /**
+   * Grade assigned to the listing.
+   */
+  listedBuildingGrade: string;
+  [k: string]: unknown;
+}
+
+/**
  * NSIP document schema
  */
 export interface NSIPDocument {

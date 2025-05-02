@@ -185,6 +185,33 @@ export interface AppealDocument {
 }
 
 /**
+ * All event estimates belong to a case. A case has only one event estimate.
+ */
+export interface AppealEventEstimate {
+  /**
+   * The unique identifier within the Back Office.
+   */
+  id: number;
+  /**
+   * The case reference the event estimate belongs to.
+   */
+  caseReference: string;
+  /**
+   * Estimated inspector time (days) to prepare for event.
+   */
+  preparationTime: number | null;
+  /**
+   * Estimated inspector time (days) for event.
+   */
+  sittingTime: number | null;
+  /**
+   * Estimated inspector time (days) for event reporting.
+   */
+  reportingTime: number | null;
+  [k: string]: unknown;
+}
+
+/**
  * Schema defining the metadata for appeal events, such as site visits, inquiries, hearings
  */
 export interface AppealEvent {

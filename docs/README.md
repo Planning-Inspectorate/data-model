@@ -6,6 +6,8 @@
 
 * [Appeal Event](./appeal-event.md "Schema defining the metadata for appeal events, such as site visits, inquiries, hearings") – `appeal-event.schema.json`
 
+* [Appeal Event Estimate](./appeal-event-estimate.md "All event estimates belong to a case") – `appeal-event-estimate.schema.json`
+
 * [Appeal HAS Case](./appeal-has.md "Schema defining the metadata for an appeal") – `appeal-has.schema.json`
 
 * [Appeal Representation](./appeal-representation.md "Schema defining the metadata for appeal representations, such as statements, third-party comments and final comments") – `appeal-representation.schema.json`

@@ -132,6 +132,7 @@ const APPEAL_DOCUMENT_TYPE = Object.freeze({
   DESIGN_ACCESS_STATEMENT: 'designAccessStatement',
   DEVELOPMENT_PLAN_POLICIES: 'developmentPlanPolicies',
   EIA_ENVIRONMENTAL_STATEMENT: 'eiaEnvironmentalStatement',
+  EIA_SCOPING_OPINION: 'eiaScopingOpinion',
   EIA_SCREENING_DIRECTION: 'eiaScreeningDirection',
   EIA_SCREENING_OPINION: 'eiaScreeningOpinion',
   EMERGING_PLAN: 'emergingPlan',

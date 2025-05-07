@@ -126,6 +126,7 @@ export interface AppealDocument {
     | 'eiaEnvironmentalStatement'
     | 'eiaScreeningDirection'
     | 'eiaScreeningOpinion'
+    | 'eiaScopingOpinion'
     | 'definitiveMapStatement'
     | 'treePreservationPlan'
     | 'interestedPartyComment'

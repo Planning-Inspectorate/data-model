@@ -555,10 +555,12 @@ The type of document, used for exchange, migrations and consumption from the app
 | `"lpaCostsWithdrawal"`            |             |
 | `"otherPartyRepresentations"`     |             |
 | `"planningOfficerReport"`         |             |
-| `"costsDecisionLetter"`           |             |
+| `"appellantCostsDecisionLetter"`  |             |
+| `"lpaCostsDecisionLetter"`        |             |
 | `"caseDecisionLetter"`            |             |
 | `"crossTeamCorrespondence"`       |             |
 | `"inspectorCorrespondence"`       |             |
+| `"mainPartyCorrespondence"`       |             |
 | `"uncategorised"`                 |             |
 | `"designAccessStatement"`         |             |
 | `"plansDrawings"`                 |             |
@@ -576,6 +578,7 @@ The type of document, used for exchange, migrations and consumption from the app
 | `"eiaEnvironmentalStatement"`     |             |
 | `"eiaScreeningDirection"`         |             |
 | `"eiaScreeningOpinion"`           |             |
+| `"eiaScopingOpinion"`             |             |
 | `"definitiveMapStatement"`        |             |
 | `"treePreservationPlan"`          |             |
 | `"interestedPartyComment"`        |             |

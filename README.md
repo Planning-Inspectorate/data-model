@@ -223,10 +223,20 @@ and generate a cjs version:
 `npm run gen-cjs`
 
 
-and also tag the repo with a new version (format TBC).
-
-> todo: run this on pre-commit or on a pipeline
-
 It is also important to update the Python pydantic models, by running:
 
 `python pins_data_model/gen_models.py`
+
+
+## Release tags
+
+Update the npm version and the tag.yml pipeline will git tag it for you after merging with main
+
+Use:
+
+`npm version patch`
+`npm version minor`
+`npm version major`
+`npm version 1.2.3`
+
+> todo: we could remove this manual step by using semantic release + enforced commit formats

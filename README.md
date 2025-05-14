@@ -187,11 +187,33 @@ To upgrade to a different version, simply doing npm command does not seem to get
 
 `npm uninstall pins-data-model && npm prune && npm i -s github:Planning-Inspectorate/data-model#some-tag-or-commit`
 
+### Tests
+
+We are starting to add js tests to the models using node test runner
+
+These are run automatically by the pipeline and can be run locally with:
+
+`node --test`
+
+Please continue to expand this test suite going forward to help avoid breaking changes impacting consumers of the model
+
 ## Python usage
 
 To use these schemas in a Python project, add this repo as a dependency (with a particular tag or commit as the version):
 
 `pip install git+https://github.com/Planning-Inspectorate/data-model@task/python-setup#egg=pins_data_model`
+
+install deps from requirements.txt: `pip install -r requirements.txt`
+
+> you may want to run python in a virtual environment (handle python version/deps separately from system installed)
+
+create a venv in a folder (.venv is git ignored): `python -m venv .venv` 
+
+you can specify a python version with: `python3.13.2 -m venv .venv`
+
+activate it before running any python script: `source .venv/bin/activate`
+
+deactivate once finished: `deactivate`
 
 ```python
 from pins_data_model.load_schemas import load_all_schemas

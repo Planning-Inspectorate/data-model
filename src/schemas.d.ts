@@ -279,7 +279,7 @@ export interface AppealEvent {
   /**
    * First line of address for the event site
    */
-  addressLine1: string;
+  addressLine1: string | null;
   /**
    * Second line of address for the event site
    */
@@ -287,7 +287,7 @@ export interface AppealEvent {
   /**
    * Town / City of the event address
    */
-  addressTown: string;
+  addressTown: string | null;
   /**
    * County of the event address
    */
@@ -295,7 +295,7 @@ export interface AppealEvent {
   /**
    * Postal code of the event address
    */
-  addressPostcode: string;
+  addressPostcode: string | null;
   [k: string]: unknown;
 }
 

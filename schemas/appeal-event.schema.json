@@ -96,7 +96,7 @@
       "description": "The date third-parties were informed of the site visit event"
     },
     "addressLine1": {
-      "type": "string",
+      "type": ["string", "null"],
       "examples": ["96 The Avenue"],
       "description": "First line of address for the event site"
     },
@@ -105,7 +105,7 @@
       "description": "Second line of address for the event site"
     },
     "addressTown": {
-      "type": "string",
+      "type": ["string", "null"],
       "examples": ["Maidstone"],
       "description": "Town / City of the event address"
     },
@@ -115,7 +115,7 @@
       "description": "County of the event address"
     },
     "addressPostcode": {
-      "type": "string",
+      "type": ["string", "null"],
       "examples": ["MD21 5XY"],
       "description": "Postal code of the event address"
     }

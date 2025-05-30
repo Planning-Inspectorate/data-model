@@ -135,6 +135,7 @@ export const APPEAL_DOCUMENT_TYPE = Object.freeze({
   EIA_SCREENING_OPINION: 'eiaScreeningOpinion',
   EMERGING_PLAN: 'emergingPlan',
   ENVIRONMENTAL_ASSESSMENT: 'environmentalAssessment',
+  HISTORIC_ENGLAND_CONSULTATION: 'historicEnglandConsultation',
   INSPECTOR_CORRESPONDENCE: 'inspectorCorrespondence',
   INTERESTED_PARTY_COMMENT: 'interestedPartyComment',
   LPA_CASE_CORRESPONDENCE: 'lpaCaseCorrespondence',

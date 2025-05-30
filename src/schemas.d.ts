@@ -144,6 +144,7 @@ export interface AppealDocument {
     | 'rule6WitnessesEvidence'
     | 'environmentalAssessment'
     | 'appealNotification'
+    | 'historicEnglandConsultation'
     | null;
   /**
    * The system mastering the metadata for the current document

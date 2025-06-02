@@ -116,6 +116,7 @@ class DocumentType(Enum):
     rule6WitnessesEvidence = "rule6WitnessesEvidence"
     environmentalAssessment = "environmentalAssessment"
     appealNotification = "appealNotification"
+    historicEnglandConsultation = "historicEnglandConsultation"
     NoneType_None = None
 
 

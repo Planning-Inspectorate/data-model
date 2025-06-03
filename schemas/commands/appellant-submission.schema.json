@@ -24,6 +24,10 @@
         { "allOf": [
           {"properties": { "caseType": { "const": "W" } }},
           { "$ref": "appeal-s78-submission.schema.json"}
+        ]},
+        { "allOf": [
+          {"properties": { "caseType": { "const": "Y" } }},
+          { "$ref": "appeal-s78-submission.schema.json"}
         ]}
       ]
     },

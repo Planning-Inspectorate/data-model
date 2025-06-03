@@ -79,6 +79,8 @@
 | [reasonForNeighbourVisits](#reasonforneighbourvisits)                                 | `string`  | Required | can be null    | [Appeal S78 Case](appeal-s78-properties-reasonforneighbourvisits.md "appeal-s78.schema.json#/properties/reasonForNeighbourVisits")                                 |
 | [affectedListedBuildingNumbers](#affectedlistedbuildingnumbers)                       | `array`   | Required | can be null    | [Appeal S78 Case](appeal-s78-properties-affectedlistedbuildingnumbers.md "appeal-s78.schema.json#/properties/affectedListedBuildingNumbers")                       |
 | [changedListedBuildingNumbers](#changedlistedbuildingnumbers)                         | `array`   | Required | can be null    | [Appeal S78 Case](appeal-s78-properties-changedlistedbuildingnumbers.md "appeal-s78.schema.json#/properties/changedListedBuildingNumbers")                         |
+| [preserveGrantLoan](#preservegrantloan)                                               | `boolean` | Optional | can be null    | [Appeal S78 Case](appeal-s78-properties-preservegrantloan.md "appeal-s78.schema.json#/properties/preserveGrantLoan")                                               |
+| [consultHistoricEngland](#consulthistoricengland)                                     | `boolean` | Optional | can be null    | [Appeal S78 Case](appeal-s78-properties-consulthistoricengland.md "appeal-s78.schema.json#/properties/consultHistoricEngland")                                     |
 | [appellantCostsAppliedFor](#appellantcostsappliedfor)                                 | `boolean` | Required | can be null    | [Appeal S78 Case](appeal-s78-properties-appellantcostsappliedfor.md "appeal-s78.schema.json#/properties/appellantCostsAppliedFor")                                 |
 | [lpaCostsAppliedFor](#lpacostsappliedfor)                                             | `boolean` | Required | can be null    | [Appeal S78 Case](appeal-s78-properties-lpacostsappliedfor.md "appeal-s78.schema.json#/properties/lpaCostsAppliedFor")                                             |
 | [agriculturalHolding](#agriculturalholding)                                           | `boolean` | Required | can be null    | [Appeal S78 Case](appeal-s78-properties-agriculturalholding.md "appeal-s78.schema.json#/properties/agriculturalHolding")                                           |
@@ -2091,6 +2093,46 @@ A list of changed listed building IDs from Historic England
 ### changedListedBuildingNumbers Type
 
 `string[]`
+
+## preserveGrantLoan
+
+A grant or loan has been made to preserve the listed building
+
+> Only available in S20 cases
+
+`preserveGrantLoan`
+
+* is optional
+
+* Type: `boolean`
+
+* can be null
+
+* defined in: [Appeal S78 Case](appeal-s78-properties-preservegrantloan.md "appeal-s78.schema.json#/properties/preserveGrantLoan")
+
+### preserveGrantLoan Type
+
+`boolean`
+
+## consultHistoricEngland
+
+Are Historic England to be consulted?
+
+> Only available in S20 cases
+
+`consultHistoricEngland`
+
+* is optional
+
+* Type: `boolean`
+
+* can be null
+
+* defined in: [Appeal S78 Case](appeal-s78-properties-consulthistoricengland.md "appeal-s78.schema.json#/properties/consultHistoricEngland")
+
+### consultHistoricEngland Type
+
+`boolean`
 
 ## appellantCostsAppliedFor
 

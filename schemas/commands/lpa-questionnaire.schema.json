@@ -22,6 +22,10 @@
           { "$ref": "lpa-questionnaire-s78.schema.json"}
         ]},
         { "allOf": [
+          {"properties": { "caseType": { "const": "Y" } }},
+          { "$ref": "lpa-questionnaire-s78.schema.json"}
+        ]},
+        { "allOf": [
           {"properties": { "caseType": { "const": "D" } }},
           { "$ref": "lpa-questionnaire-has.schema.json"}
         ]}

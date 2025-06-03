@@ -1088,6 +1088,14 @@ export interface AppealS78Case {
    */
   changedListedBuildingNumbers: string[] | null;
   /**
+   * A grant or loan has been made to preserve the listed building
+   */
+  preserveGrantLoan?: boolean | null;
+  /**
+   * Are Historic England to be consulted?
+   */
+  consultHistoricEngland?: boolean | null;
+  /**
    * Indicates if the appellant has applied for costs
    */
   appellantCostsAppliedFor: boolean | null;
@@ -3364,6 +3372,9 @@ export interface AppellantSubmissionCommand {
       } & AppellantHASSubmissionProperties)
     | ({
         caseType?: 'W';
+      } & AppellantS78SubmissionProperties)
+    | ({
+        caseType?: 'Y';
       } & AppellantS78SubmissionProperties);
   documents: {
     /**
@@ -3818,6 +3829,14 @@ export type LPAQS78SubmissionProperties = LPAQHASSubmissionProperties & {
    */
   changedListedBuildingNumbers?: string[] | null;
   /**
+   * A grant or loan has been made to preserve the listed building
+   */
+  preserveGrantLoan?: boolean | null;
+  /**
+   * Are Historic England to be consulted?
+   */
+  consultHistoricEngland?: boolean | null;
+  /**
    * Indicates that a scheduled monument is affected
    */
   affectsScheduledMonument?: boolean | null;
@@ -4087,6 +4106,14 @@ export type LPAQS78SubmissionProperties = LPAQHASSubmissionProperties & {
    */
   changedListedBuildingNumbers?: string[] | null;
   /**
+   * A grant or loan has been made to preserve the listed building
+   */
+  preserveGrantLoan?: boolean | null;
+  /**
+   * Are Historic England to be consulted?
+   */
+  consultHistoricEngland?: boolean | null;
+  /**
    * Indicates that a scheduled monument is affected
    */
   affectsScheduledMonument?: boolean | null;
@@ -4218,6 +4245,9 @@ export interface LPAQuestionnaireCommand {
         caseType?: 'W';
       } & LPAQS78SubmissionProperties)
     | ({
+        caseType?: 'Y';
+      } & LPAQS78SubmissionProperties)
+    | ({
         caseType?: 'D';
       } & LPAQHASSubmissionProperties);
   documents: {
@@ -4278,7 +4308,8 @@ export interface LPAQuestionnaireCommand {
       | 'eiaScreeningOpinion'
       | 'eiaScopingOpinion'
       | 'communityInfrastructureLevy'
-      | 'definitiveMapStatement';
+      | 'definitiveMapStatement'
+      | 'historicEnglandConsultation';
     [k: string]: unknown;
   }[];
   [k: string]: unknown;

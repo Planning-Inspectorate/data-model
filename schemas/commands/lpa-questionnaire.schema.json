@@ -100,7 +100,8 @@
               "eiaScreeningOpinion",
               "eiaScopingOpinion",
               "communityInfrastructureLevy",
-              "definitiveMapStatement"
+              "definitiveMapStatement",
+              "historicEnglandConsultation"
             ],
             "description": "The type of document, used for exchange, migrations and consumption from the appeal back-office system"
           }

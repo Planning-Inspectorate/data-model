@@ -47,6 +47,16 @@
           "description": "A list of changed listed building IDs from Historic England",
           "$comment": "Only available in S78 cases"
         },
+        "preserveGrantLoan": {
+          "type": ["boolean", "null"],
+          "description": "A grant or loan has been made to preserve the listed building",
+          "$comment": "Only available in S20 cases"
+        },
+        "consultHistoricEngland": {
+          "type": ["boolean", "null"],
+          "description": "Are Historic England to be consulted?",
+          "$comment": "Only available in S20 cases"
+        },
         "affectsScheduledMonument": {
           "type": ["boolean", "null"],
           "description": "Indicates that a scheduled monument is affected",

@@ -144,6 +144,7 @@ export interface AppealDocument {
     | 'rule6WitnessesEvidence'
     | 'environmentalAssessment'
     | 'appealNotification'
+    | 'historicEnglandConsultation'
     | null;
   /**
    * The system mastering the metadata for the current document
@@ -279,7 +280,7 @@ export interface AppealEvent {
   /**
    * First line of address for the event site
    */
-  addressLine1: string;
+  addressLine1: string | null;
   /**
    * Second line of address for the event site
    */
@@ -287,7 +288,7 @@ export interface AppealEvent {
   /**
    * Town / City of the event address
    */
-  addressTown: string;
+  addressTown: string | null;
   /**
    * County of the event address
    */
@@ -295,7 +296,7 @@ export interface AppealEvent {
   /**
    * Postal code of the event address
    */
-  addressPostcode: string;
+  addressPostcode: string | null;
   [k: string]: unknown;
 }
 
@@ -1086,6 +1087,14 @@ export interface AppealS78Case {
    * A list of changed listed building IDs from Historic England
    */
   changedListedBuildingNumbers: string[] | null;
+  /**
+   * A grant or loan has been made to preserve the listed building
+   */
+  preserveGrantLoan?: boolean | null;
+  /**
+   * Are Historic England to be consulted?
+   */
+  consultHistoricEngland?: boolean | null;
   /**
    * Indicates if the appellant has applied for costs
    */
@@ -3363,6 +3372,9 @@ export interface AppellantSubmissionCommand {
       } & AppellantHASSubmissionProperties)
     | ({
         caseType?: 'W';
+      } & AppellantS78SubmissionProperties)
+    | ({
+        caseType?: 'Y';
       } & AppellantS78SubmissionProperties);
   documents: {
     /**
@@ -3817,6 +3829,14 @@ export type LPAQS78SubmissionProperties = LPAQHASSubmissionProperties & {
    */
   changedListedBuildingNumbers?: string[] | null;
   /**
+   * A grant or loan has been made to preserve the listed building
+   */
+  preserveGrantLoan?: boolean | null;
+  /**
+   * Are Historic England to be consulted?
+   */
+  consultHistoricEngland?: boolean | null;
+  /**
    * Indicates that a scheduled monument is affected
    */
   affectsScheduledMonument?: boolean | null;
@@ -4086,6 +4106,14 @@ export type LPAQS78SubmissionProperties = LPAQHASSubmissionProperties & {
    */
   changedListedBuildingNumbers?: string[] | null;
   /**
+   * A grant or loan has been made to preserve the listed building
+   */
+  preserveGrantLoan?: boolean | null;
+  /**
+   * Are Historic England to be consulted?
+   */
+  consultHistoricEngland?: boolean | null;
+  /**
    * Indicates that a scheduled monument is affected
    */
   affectsScheduledMonument?: boolean | null;
@@ -4217,6 +4245,9 @@ export interface LPAQuestionnaireCommand {
         caseType?: 'W';
       } & LPAQS78SubmissionProperties)
     | ({
+        caseType?: 'Y';
+      } & LPAQS78SubmissionProperties)
+    | ({
         caseType?: 'D';
       } & LPAQHASSubmissionProperties);
   documents: {
@@ -4277,7 +4308,8 @@ export interface LPAQuestionnaireCommand {
       | 'eiaScreeningOpinion'
       | 'eiaScopingOpinion'
       | 'communityInfrastructureLevy'
-      | 'definitiveMapStatement';
+      | 'definitiveMapStatement'
+      | 'historicEnglandConsultation';
     [k: string]: unknown;
   }[];
   [k: string]: unknown;

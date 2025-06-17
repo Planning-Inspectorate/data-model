@@ -392,6 +392,8 @@ const APPEAL_SOURCE_SYSTEM = Object.freeze({
 const APPEAL_TYPE_OF_PLANNING_APPLICATION = Object.freeze({
   FULL_APPEAL: 'full-appeal',
   HOUSEHOLDER_PLANNING: 'householder-planning',
+  LISTED_BUILDING: 'listed-building',
+  MINOR_COMMERCIAL_DEVELOPMENT: 'minor-commercial-development',
   OUTLINE_PLANNING: 'outline-planning',
   PRIOR_APPROVAL: 'prior-approval',
   REMOVAL_OR_VARIATION_OF_CONDITIONS: 'removal-or-variation-of-conditions',

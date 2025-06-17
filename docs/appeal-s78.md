@@ -3555,6 +3555,8 @@ The net gain in residences of the proposed development
 | `"prior-approval"`                     |             |
 | `"reserved-matters"`                   |             |
 | `"removal-or-variation-of-conditions"` |             |
+| `"listed-building"`                    |             |
+| `"minor-commercial-development"`       |             |
 | `null`                                 |             |
 
 ## developmentType

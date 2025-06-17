@@ -652,6 +652,8 @@ export interface AppealHASCase {
     | 'prior-approval'
     | 'reserved-matters'
     | 'removal-or-variation-of-conditions'
+    | 'listed-building'
+    | 'minor-commercial-development'
     | null;
   [k: string]: unknown;
 }
@@ -1279,6 +1281,8 @@ export interface AppealS78Case {
     | 'prior-approval'
     | 'reserved-matters'
     | 'removal-or-variation-of-conditions'
+    | 'listed-building'
+    | 'minor-commercial-development'
     | null;
   developmentType:
     | 'householder'
@@ -2695,6 +2699,8 @@ export interface AppellantCommonSubmissionProperties {
     | 'prior-approval'
     | 'reserved-matters'
     | 'removal-or-variation-of-conditions'
+    | 'listed-building'
+    | 'minor-commercial-development'
     | null;
   [k: string]: unknown;
 }
@@ -2872,6 +2878,8 @@ export interface AppellantCommonSubmissionProperties {
     | 'prior-approval'
     | 'reserved-matters'
     | 'removal-or-variation-of-conditions'
+    | 'listed-building'
+    | 'minor-commercial-development'
     | null;
   [k: string]: unknown;
 }
@@ -3242,6 +3250,8 @@ export interface AppellantCommonSubmissionProperties {
     | 'prior-approval'
     | 'reserved-matters'
     | 'removal-or-variation-of-conditions'
+    | 'listed-building'
+    | 'minor-commercial-development'
     | null;
   [k: string]: unknown;
 }
@@ -3617,6 +3627,8 @@ export interface AppellantCommonSubmissionProperties {
     | 'prior-approval'
     | 'reserved-matters'
     | 'removal-or-variation-of-conditions'
+    | 'listed-building'
+    | 'minor-commercial-development'
     | null;
   [k: string]: unknown;
 }

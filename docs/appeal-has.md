@@ -1949,6 +1949,8 @@ Indicates if the appellant has applied for costs
 | `"prior-approval"`                     |             |
 | `"reserved-matters"`                   |             |
 | `"removal-or-variation-of-conditions"` |             |
+| `"listed-building"`                    |             |
+| `"minor-commercial-development"`       |             |
 | `null`                                 |             |
 
 ## Additional Properties

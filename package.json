@@ -27,7 +27,7 @@
     "@adobe/jsonschema2md": "^8.0.2",
     "ajv": "^8.17.1",
     "ajv-formats": "^3.0.1",
-    "json-schema-to-typescript": "^15.0.3",
+    "json-schema-to-typescript": "^15.0.4",
     "lodash.snakecase": "^4.1.1",
     "rollup": "^4.24.0"
   }

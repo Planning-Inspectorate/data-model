@@ -9,11 +9,16 @@
     "require": "./src/index.cjs"
   },
   "scripts": {
+    "commitlint": "commitlint --from=$(git cherry origin/main | head -n 1 | cut -c 3-)",
     "gen": "npm run gen-docs && npm run gen-enums && npm run gen-types && npm run gen-cjs",
     "gen-docs": "node src/gen-docs.js",
     "gen-enums": "node src/gen-enums.js",
     "gen-types": "node src/gen-types.js",
-    "gen-cjs": "npx rollup ./src/index.js --file ./src/index.cjs --format cjs && npx rollup ./src/enums.js --file ./src/enums.cjs --format cjs"
+    "gen-cjs": "npx rollup ./src/index.js --file ./src/index.cjs --format cjs && npx rollup ./src/enums.js --file ./src/enums.cjs --format cjs",
+    "lint": "npx eslint .",
+    "format": "prettier --write .",
+    "format-check": "prettier --check .",
+    "prepare": "node .husky/install.mjs"
   },
   "repository": {
     "type": "git",
@@ -25,10 +30,22 @@
   },
   "devDependencies": {
     "@adobe/jsonschema2md": "^8.0.3",
+    "@commitlint/cli": "^19.8.1",
+    "@commitlint/config-conventional": "^19.8.1",
     "ajv": "^8.17.1",
     "ajv-formats": "^3.0.1",
+    "eslint": "^9.29.0",
+    "eslint-config-prettier": "^10.1.5",
+    "husky": "^9.1.7",
     "json-schema-to-typescript": "^15.0.4",
+    "lint-staged": "^16.1.2",
     "lodash.snakecase": "^4.1.1",
+    "prettier": "^3.6.2",
     "rollup": "^4.44.1"
+  },
+  "lint-staged": {
+    "*.js": [
+      "eslint --fix"
+    ]
   }
 }

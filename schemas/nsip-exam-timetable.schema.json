@@ -1,101 +1,101 @@
 {
-	"$schema": "http://json-schema.org/draft-07/schema#",
-	"$id": "nsip-exam-timetable.schema.json",
-	"title": "Examination Timetable",
-	"description": "Examination Timetable for an NSIP Project",
-	"type": "object",
-	"additionalProperties": true,
-	"required": ["caseReference", "events"],
-	"properties": {
-		"caseReference": {
-			"type": "string",
-			"description": "Unique string reference of the associated Case"
-		},
-		"published": {
-			"type": ["boolean", "null"],
-			"description": "whether the Examination Timetable has been published or not"
-		},
-		"events": {
-			"type": "array",
-			"items": {
-				"$ref": "#/$defs/event"
-			}
-		}
-	},
-	"$defs": {
-		"event": {
-			"type": "object",
-			"additionalProperties": true,
-			"required": ["eventId", "type", "eventTitle", "description", "date", "eventLineItems"],
-			"properties": {
-				"eventId": {
-					"type": "integer",
-					"description": "Event Identifier"
-				},
-				"type": {
-					"type": "string",
-					"description": "Compulsory Acquisition Hearing/Deadline/Issue Specific Hearing etc",
-					"enum": [
-						"Accompanied Site Inspection",
-						"Compulsory Acquisition Hearing",
-						"Deadline",
-						"Deadline For Close Of Examination",
-						"Issued By",
-						"Issue Specific Hearing",
-						"Open Floor Hearing",
-						"Other Meeting",
-						"Preliminary Meeting",
-						"Procedural Deadline (Pre-Examination)",
-						"Procedural Decision",
-						"Publication Of"
-					]
-				},
-				"eventTitle": {
-					"type": "string",
-					"description": "Title Of Examination Timetable Event"
-				},
-				"eventTitleWelsh": {
-					"type": ["string", "null"],
-					"description": "Title Of Examination Timetable Event In Welsh"
-				},
-				"description": {
-					"type": "string"
-				},
-				"descriptionWelsh": {
-					"type": ["string", "null"]
-				},
-				"eventDeadlineStartDate": {
-					"type": ["string", "null"],
-					"description": "Optional start date for event window",
-					"format": "date-time",
-					"examples": ["2023-07-27T20:30:00.000Z"]
-				},
-				"date": {
-					"type": "string",
-					"description": "Event Date = effective deadline (end) date",
-					"format": "date-time",
-					"examples": ["2023-07-27T20:30:00.000Z"]
-				},
-				"eventLineItems": {
-					"type": "array",
-					"items": {
-						"$ref": "#/$defs/line-item"
-					}
-				}
-			}
-		},
-		"line-item": {
-			"type": "object",
-			"additionalProperties": true,
-			"required": ["description"],
-			"properties": {
-				"description": {
-					"type": "string"
-				},
-				"descriptionWelsh": {
-					"type": ["string", "null"]
-				}
-			}
-		}
-	}
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "nsip-exam-timetable.schema.json",
+  "title": "Examination Timetable",
+  "description": "Examination Timetable for an NSIP Project",
+  "type": "object",
+  "additionalProperties": true,
+  "required": ["caseReference", "events"],
+  "properties": {
+    "caseReference": {
+      "type": "string",
+      "description": "Unique string reference of the associated Case"
+    },
+    "published": {
+      "type": ["boolean", "null"],
+      "description": "whether the Examination Timetable has been published or not"
+    },
+    "events": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/event"
+      }
+    }
+  },
+  "$defs": {
+    "event": {
+      "type": "object",
+      "additionalProperties": true,
+      "required": ["eventId", "type", "eventTitle", "description", "date", "eventLineItems"],
+      "properties": {
+        "eventId": {
+          "type": "integer",
+          "description": "Event Identifier"
+        },
+        "type": {
+          "type": "string",
+          "description": "Compulsory Acquisition Hearing/Deadline/Issue Specific Hearing etc",
+          "enum": [
+            "Accompanied Site Inspection",
+            "Compulsory Acquisition Hearing",
+            "Deadline",
+            "Deadline For Close Of Examination",
+            "Issued By",
+            "Issue Specific Hearing",
+            "Open Floor Hearing",
+            "Other Meeting",
+            "Preliminary Meeting",
+            "Procedural Deadline (Pre-Examination)",
+            "Procedural Decision",
+            "Publication Of"
+          ]
+        },
+        "eventTitle": {
+          "type": "string",
+          "description": "Title Of Examination Timetable Event"
+        },
+        "eventTitleWelsh": {
+          "type": ["string", "null"],
+          "description": "Title Of Examination Timetable Event In Welsh"
+        },
+        "description": {
+          "type": "string"
+        },
+        "descriptionWelsh": {
+          "type": ["string", "null"]
+        },
+        "eventDeadlineStartDate": {
+          "type": ["string", "null"],
+          "description": "Optional start date for event window",
+          "format": "date-time",
+          "examples": ["2023-07-27T20:30:00.000Z"]
+        },
+        "date": {
+          "type": "string",
+          "description": "Event Date = effective deadline (end) date",
+          "format": "date-time",
+          "examples": ["2023-07-27T20:30:00.000Z"]
+        },
+        "eventLineItems": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/line-item"
+          }
+        }
+      }
+    },
+    "line-item": {
+      "type": "object",
+      "additionalProperties": true,
+      "required": ["description"],
+      "properties": {
+        "description": {
+          "type": "string"
+        },
+        "descriptionWelsh": {
+          "type": ["string", "null"]
+        }
+      }
+    }
+  }
 }

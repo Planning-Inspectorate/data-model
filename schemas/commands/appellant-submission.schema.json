@@ -6,29 +6,22 @@
   "$comment": "This is a combination of Appeal, Documents and Service user data",
   "type": "object",
   "additionalProperties": true,
-  "required": [
-    "casedata",
-    "documents",
-    "users"
-  ],
+  "required": ["casedata", "documents", "users"],
   "properties": {
     "casedata": {
       "type": "object",
       "additionalProperties": true,
       "required": ["caseType"],
       "oneOf": [
-        { "allOf": [
-          {"properties": { "caseType": { "const": "D" } }},
-          { "$ref": "appeal-has-submission.schema.json"}
-        ]},
-        { "allOf": [
-          {"properties": { "caseType": { "const": "W" } }},
-          { "$ref": "appeal-s78-submission.schema.json"}
-        ]},
-        { "allOf": [
-          {"properties": { "caseType": { "const": "Y" } }},
-          { "$ref": "appeal-s78-submission.schema.json"}
-        ]}
+        {
+          "allOf": [{ "properties": { "caseType": { "const": "D" } } }, { "$ref": "appeal-has-submission.schema.json" }]
+        },
+        {
+          "allOf": [{ "properties": { "caseType": { "const": "W" } } }, { "$ref": "appeal-s78-submission.schema.json" }]
+        },
+        {
+          "allOf": [{ "properties": { "caseType": { "const": "Y" } } }, { "$ref": "appeal-s78-submission.schema.json" }]
+        }
       ]
     },
     "documents": {

@@ -19,7 +19,7 @@
     "developmentType"
   ],
   "allOf": [
-    { "$ref": "appeal-has-submission.schema.json"},
+    { "$ref": "appeal-has-submission.schema.json" },
     {
       "properties": {
         "agriculturalHolding": {
@@ -76,12 +76,12 @@
         "developmentType": {
           "type": ["string", "null"],
           "enum": [
-            "householder", 
-            "change-of-use", 
-            "major-dwellings", 
-            "major-industry-storage", 
-            "major-offices", 
-            "major-retail-services", 
+            "householder",
+            "change-of-use",
+            "major-dwellings",
+            "major-industry-storage",
+            "major-offices",
+            "major-retail-services",
             "major-traveller-caravan",
             "mineral-workings",
             "minor-dwellings",

@@ -1,244 +1,235 @@
 {
-	"$schema": "http://json-schema.org/draft-07/schema#",
-	"$id": "nsip-document.schema.json",
-	"title": "NSIP Document",
-	"description": "NSIP document schema",
-	"type": "object",
-	"additionalProperties": true,
-	"required": [
-		"documentId",
-		"caseId",
-		"caseRef",
-		"documentReference",
-		"version",
-		"examinationRefNo",
-		"filename",
-		"originalFilename",
-		"size",
-		"mime",
-		"documentURI",
-		"publishedDocumentURI",
-		"path",
-		"virusCheckStatus",
-		"fileMD5",
-		"dateCreated",
-		"lastModified",
-		"caseType",
-		"redactedStatus",
-		"publishedStatus",
-		"datePublished",
-		"documentType",
-		"securityClassification",
-		"sourceSystem",
-		"origin",
-		"owner",
-		"author",
-		"representative",
-		"description",
-		"documentCaseStage",
-		"filter1",
-		"filter2",
-		"horizonFolderId",
-		"transcriptId"
-	],
-	"properties": {
-		"documentId": {
-			"type": "string",
-			"examples": ["01c958f2-4e9f-4ce2-adf9-81038702cafa"],
-			"description": "The unique identifier for the file. This will be different to documentReference"
-		},
-		"caseId": {
-			"type": ["integer", "null"],
-			"examples": [1],
-			"description": "Internal case identifier"
-		},
-		"caseRef": {
-			"type": ["string", "null"],
-			"examples": ["EN010120"]
-		},
-		"documentReference": {
-			"type": ["string", "null"],
-			"examples": ["WA0110015-000002"],
-			"description": "Reference used throughout ODT <CaseRef>-<SequenceNo>"
-		},
-		"version": {
-			"type": "integer",
-			"examples": [1]
-		},
-		"examinationRefNo": {
-			"type": ["string", "null"],
-			"examples": ["XXX-0000"]
-		},
-		"filename": {
-			"type": "string",
-			"examples": ["filename.pdf"],
-			"description": "Current stored filename of the file"
-		},
-		"originalFilename": {
-			"type": "string",
-			"examples": ["original_filename.pdf"],
-			"description": "Original filename of file"
-		},
-		"size": {
-			"type": "integer",
-			"examples": [23452]
-		},
-		"mime": {
-			"type": ["string", "null"],
-			"examples": ["application/pdf"]
-		},
-		"documentURI": {
-			"type": "string",
-			"examples": [
-				"https://pinsstdocsboprodukw001.blob.core.windows.net/document-service-uploads/application/BC0110001/01adeade-791a-483a-a51d-99df2122b5cc/1"
-			],
-			"description": "The internal location of the document"
-		},
-		"publishedDocumentURI": {
-			"type": ["string", "null"],
-			"examples": [
-				"https://pinsstdocsboprodukw001.blob.core.windows.net/published-documents/BC0110003-001-olive-oil.pdf"
-			],
-			"description": "The location of the published document. Only applicable to documents which are published."
-		},
-		"path": {
-			"type": ["string", "null"],
-			"examples": ["EN010011/2. Post-Submission/Application Documents/Application Form/Letter.PDF"]
-		},
-		"virusCheckStatus": {
-			"type": ["string", "null"],
-			"enum": ["not_scanned", "scanned", "affected", null]
-		},
-		"fileMD5": {
-			"type": ["string", "null"],
-			"examples": ["b1946ac92492d2347c6235b4d2611184"]
-		},
-		"dateCreated": {
-			"type": "string",
-			"format": "date-time",
-			"examples": ["2023-07-27T20:30:00.000Z"]
-		},
-		"lastModified": {
-			"type": ["string", "null"],
-			"format": "date-time",
-			"examples": ["2023-07-27T20:30:00.000Z"]
-		},
-		"caseType": {
-			"type": ["string", "null"],
-			"enum": ["nsip", "has", null]
-		},
-		"redactedStatus": {
-			"type": ["string", "null"],
-			"enum": ["not_redacted", "redacted", null]
-		},
-		"publishedStatus": {
-			"type": ["string", "null"],
-			"enum": [
-				"not_checked",
-				"checked",
-				"ready_to_publish",
-				"do_not_publish",
-				"publishing",
-				"published",
-				"archived",
-				"unpublished",
-				"unpublishing",
-				"awaiting_upload",
-				null
-			]
-		},
-		"datePublished": {
-			"type": ["string", "null"],
-			"format": "date-time",
-			"examples": ["2023-07-27T20:30:00.000Z"]
-		},
-		"documentType": {
-			"type": ["string", "null"],
-			"examples": ["Rule 8 letter"]
-		},
-		"securityClassification": {
-			"type": ["string", "null"],
-			"enum": ["public", "official", "secret", "top-secret", null]
-		},
-		"sourceSystem": {
-			"type": ["string", "null"],
-			"enum": [
-				"back-office-appeals",
-				"back-office-applications",
-				"horizon",
-				"ni_file",
-				"sharepoint",
-				null
-			]
-		},
-		"origin": {
-			"type": ["string", "null"],
-			"enum": ["pins", "citizen", "lpa", "ogd", null]
-		},
-		"owner": {
-			"type": ["string", "null"]
-		},
-		"author": {
-			"type": ["string", "null"],
-			"description": "Name of person who authored document"
-		},
-		"authorWelsh": {
-			"type": ["string", "null"],
-			"description": "Welsh name of person who authored document"
-		},
-		"representative": {
-			"type": ["string", "null"],
-			"examples": ["ZZZ Agency"],
-			"description": "The on behalf of or agent submitter of document"
-		},
-		"description": {
-			"type": ["string", "null"],
-			"examples": [
-				"Attachments to the letter to Department for Business, Energy & Industrial Strategy"
-			]
-		},
-		"descriptionWelsh": {
-			"type": ["string", "null"]
-		},
-		"documentCaseStage": {
-			"type": ["string", "null"],
-			"enum": [
-				"draft",
-				"pre-application",
-				"acceptance",
-				"pre-examination",
-				"examination",
-				"recommendation",
-				"decision",
-				"post_decision",
-				"withdrawn",
-				"developers_application",
-				"correspondence",
-				"0",
-				null
-			]
-		},
-		"filter1": {
-			"type": ["string", "null"],
-			"examples": ["Deadline 2"],
-			"description": "Filter field to provide additional filtering"
-		},
-		"filter1Welsh": {
-			"type": ["string", "null"],
-			"description": "Filter field in Welsh"
-		},
-		"filter2": {
-			"type": ["string", "null"],
-			"examples": ["Scoping Option Report"],
-			"description": "Filter field to provide additional filtering"
-		},
-		"horizonFolderId": {
-			"type": ["string", "null"],
-			"description": "The folder where the document exists"
-		},
-		"transcriptId": {
-			"type": ["string", "null"],
-			"description": "The GUID of the transcript document (if one was provided)."
-		}
-	}
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "nsip-document.schema.json",
+  "title": "NSIP Document",
+  "description": "NSIP document schema",
+  "type": "object",
+  "additionalProperties": true,
+  "required": [
+    "documentId",
+    "caseId",
+    "caseRef",
+    "documentReference",
+    "version",
+    "examinationRefNo",
+    "filename",
+    "originalFilename",
+    "size",
+    "mime",
+    "documentURI",
+    "publishedDocumentURI",
+    "path",
+    "virusCheckStatus",
+    "fileMD5",
+    "dateCreated",
+    "lastModified",
+    "caseType",
+    "redactedStatus",
+    "publishedStatus",
+    "datePublished",
+    "documentType",
+    "securityClassification",
+    "sourceSystem",
+    "origin",
+    "owner",
+    "author",
+    "representative",
+    "description",
+    "documentCaseStage",
+    "filter1",
+    "filter2",
+    "horizonFolderId",
+    "transcriptId"
+  ],
+  "properties": {
+    "documentId": {
+      "type": "string",
+      "examples": ["01c958f2-4e9f-4ce2-adf9-81038702cafa"],
+      "description": "The unique identifier for the file. This will be different to documentReference"
+    },
+    "caseId": {
+      "type": ["integer", "null"],
+      "examples": [1],
+      "description": "Internal case identifier"
+    },
+    "caseRef": {
+      "type": ["string", "null"],
+      "examples": ["EN010120"]
+    },
+    "documentReference": {
+      "type": ["string", "null"],
+      "examples": ["WA0110015-000002"],
+      "description": "Reference used throughout ODT <CaseRef>-<SequenceNo>"
+    },
+    "version": {
+      "type": "integer",
+      "examples": [1]
+    },
+    "examinationRefNo": {
+      "type": ["string", "null"],
+      "examples": ["XXX-0000"]
+    },
+    "filename": {
+      "type": "string",
+      "examples": ["filename.pdf"],
+      "description": "Current stored filename of the file"
+    },
+    "originalFilename": {
+      "type": "string",
+      "examples": ["original_filename.pdf"],
+      "description": "Original filename of file"
+    },
+    "size": {
+      "type": "integer",
+      "examples": [23452]
+    },
+    "mime": {
+      "type": ["string", "null"],
+      "examples": ["application/pdf"]
+    },
+    "documentURI": {
+      "type": "string",
+      "examples": [
+        "https://pinsstdocsboprodukw001.blob.core.windows.net/document-service-uploads/application/BC0110001/01adeade-791a-483a-a51d-99df2122b5cc/1"
+      ],
+      "description": "The internal location of the document"
+    },
+    "publishedDocumentURI": {
+      "type": ["string", "null"],
+      "examples": [
+        "https://pinsstdocsboprodukw001.blob.core.windows.net/published-documents/BC0110003-001-olive-oil.pdf"
+      ],
+      "description": "The location of the published document. Only applicable to documents which are published."
+    },
+    "path": {
+      "type": ["string", "null"],
+      "examples": ["EN010011/2. Post-Submission/Application Documents/Application Form/Letter.PDF"]
+    },
+    "virusCheckStatus": {
+      "type": ["string", "null"],
+      "enum": ["not_scanned", "scanned", "affected", null]
+    },
+    "fileMD5": {
+      "type": ["string", "null"],
+      "examples": ["b1946ac92492d2347c6235b4d2611184"]
+    },
+    "dateCreated": {
+      "type": "string",
+      "format": "date-time",
+      "examples": ["2023-07-27T20:30:00.000Z"]
+    },
+    "lastModified": {
+      "type": ["string", "null"],
+      "format": "date-time",
+      "examples": ["2023-07-27T20:30:00.000Z"]
+    },
+    "caseType": {
+      "type": ["string", "null"],
+      "enum": ["nsip", "has", null]
+    },
+    "redactedStatus": {
+      "type": ["string", "null"],
+      "enum": ["not_redacted", "redacted", null]
+    },
+    "publishedStatus": {
+      "type": ["string", "null"],
+      "enum": [
+        "not_checked",
+        "checked",
+        "ready_to_publish",
+        "do_not_publish",
+        "publishing",
+        "published",
+        "archived",
+        "unpublished",
+        "unpublishing",
+        "awaiting_upload",
+        null
+      ]
+    },
+    "datePublished": {
+      "type": ["string", "null"],
+      "format": "date-time",
+      "examples": ["2023-07-27T20:30:00.000Z"]
+    },
+    "documentType": {
+      "type": ["string", "null"],
+      "examples": ["Rule 8 letter"]
+    },
+    "securityClassification": {
+      "type": ["string", "null"],
+      "enum": ["public", "official", "secret", "top-secret", null]
+    },
+    "sourceSystem": {
+      "type": ["string", "null"],
+      "enum": ["back-office-appeals", "back-office-applications", "horizon", "ni_file", "sharepoint", null]
+    },
+    "origin": {
+      "type": ["string", "null"],
+      "enum": ["pins", "citizen", "lpa", "ogd", null]
+    },
+    "owner": {
+      "type": ["string", "null"]
+    },
+    "author": {
+      "type": ["string", "null"],
+      "description": "Name of person who authored document"
+    },
+    "authorWelsh": {
+      "type": ["string", "null"],
+      "description": "Welsh name of person who authored document"
+    },
+    "representative": {
+      "type": ["string", "null"],
+      "examples": ["ZZZ Agency"],
+      "description": "The on behalf of or agent submitter of document"
+    },
+    "description": {
+      "type": ["string", "null"],
+      "examples": ["Attachments to the letter to Department for Business, Energy & Industrial Strategy"]
+    },
+    "descriptionWelsh": {
+      "type": ["string", "null"]
+    },
+    "documentCaseStage": {
+      "type": ["string", "null"],
+      "enum": [
+        "draft",
+        "pre-application",
+        "acceptance",
+        "pre-examination",
+        "examination",
+        "recommendation",
+        "decision",
+        "post_decision",
+        "withdrawn",
+        "developers_application",
+        "correspondence",
+        "0",
+        null
+      ]
+    },
+    "filter1": {
+      "type": ["string", "null"],
+      "examples": ["Deadline 2"],
+      "description": "Filter field to provide additional filtering"
+    },
+    "filter1Welsh": {
+      "type": ["string", "null"],
+      "description": "Filter field in Welsh"
+    },
+    "filter2": {
+      "type": ["string", "null"],
+      "examples": ["Scoping Option Report"],
+      "description": "Filter field to provide additional filtering"
+    },
+    "horizonFolderId": {
+      "type": ["string", "null"],
+      "description": "The folder where the document exists"
+    },
+    "transcriptId": {
+      "type": ["string", "null"],
+      "description": "The GUID of the transcript document (if one was provided)."
+    }
+  }
 }

@@ -228,13 +228,7 @@
       "items": {
         "type": "string"
       },
-      "examples": [
-        "Access",
-        "Listed building and enforcement",
-        "Roads and traffics",
-        "Natural heritage",
-        "Schedule 1"
-      ],
+      "examples": ["Access", "Listed building and enforcement", "Roads and traffics", "Natural heritage", "Schedule 1"],
       "description": "A list of specialisms for allocation purposes",
       "$comment": "Also available on HAS cases"
     },
@@ -283,10 +277,7 @@
       "type": ["array", "null"],
       "items": {
         "type": "string",
-        "examples": [
-          "Appeal has not been submitted on time",
-          "The appellant doesn't have the right to appeal"
-        ]
+        "examples": ["Appeal has not been submitted on time", "The appellant doesn't have the right to appeal"]
       },
       "description": "A list of reasons why the appeal is invalid",
       "$comment": "Also available on HAS cases"
@@ -381,10 +372,7 @@
       "type": ["array", "null"],
       "items": {
         "type": "string",
-        "examples": [
-          "Policies are missing",
-          "Other documents or information are missing"
-        ]
+        "examples": ["Policies are missing", "Other documents or information are missing"]
       },
       "description": "A list of reasons why the questionnaire is incomplete",
       "$comment": "Also available on HAS cases"
@@ -583,7 +571,7 @@
       "$comment": "Also available on HAS cases"
     },
     "notificationMethod": {
-      "type":["array", "null"],
+      "type": ["array", "null"],
       "items": {
         "type": "string",
         "enum": ["notice", "letter", "advert", null]
@@ -806,7 +794,22 @@
     },
     "eiaDevelopmentDescription": {
       "type": ["string", "null"],
-      "enum": ["agriculture-aquaculture", "change-extensions", "chemical-industry", "energy-industry", "extractive-industry", "food-industry", "infrastructure-projects", "mineral-industry", "other-projects", "production-processing-of-metals", "rubber-industry", "textile-industries", "tourism-leisure", null],
+      "enum": [
+        "agriculture-aquaculture",
+        "change-extensions",
+        "chemical-industry",
+        "energy-industry",
+        "extractive-industry",
+        "food-industry",
+        "infrastructure-projects",
+        "mineral-industry",
+        "other-projects",
+        "production-processing-of-metals",
+        "rubber-industry",
+        "textile-industries",
+        "tourism-leisure",
+        null
+      ],
       "description": "The development description from EIA",
       "$comment": "Only available in S78 cases"
     },
@@ -834,7 +837,7 @@
       "type": ["boolean", "null"],
       "description": "EIA completed environmental statement required",
       "$comment": "Only available in S78 cases"
-    },    
+    },
     "hasStatutoryConsultees": {
       "type": ["boolean", "null"],
       "description": "Indicates statutory consultees",
@@ -887,7 +890,7 @@
     "caseworkReason": {
       "type": ["string", "null"],
       "$comment": "Only available in S78 cases"
-    },    
+    },
     "importantInformation": {
       "type": ["string", "null"],
       "$comment": "Only available in S78 cases"
@@ -1021,11 +1024,11 @@
     "typeOfPlanningApplication": {
       "type": ["string", "null"],
       "enum": [
-        "full-appeal", 
-        "householder-planning", 
-        "outline-planning", 
-        "prior-approval", 
-        "reserved-matters", 
+        "full-appeal",
+        "householder-planning",
+        "outline-planning",
+        "prior-approval",
+        "reserved-matters",
         "removal-or-variation-of-conditions",
         "listed-building",
         "minor-commercial-development",
@@ -1035,12 +1038,12 @@
     "developmentType": {
       "type": ["string", "null"],
       "enum": [
-        "householder", 
-        "change-of-use", 
-        "major-dwellings", 
-        "major-industry-storage", 
-        "major-offices", 
-        "major-retail-services", 
+        "householder",
+        "change-of-use",
+        "major-dwellings",
+        "major-industry-storage",
+        "major-offices",
+        "major-retail-services",
         "major-traveller-caravan",
         "mineral-workings",
         "minor-dwellings",

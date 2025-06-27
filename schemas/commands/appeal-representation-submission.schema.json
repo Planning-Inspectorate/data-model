@@ -1,209 +1,192 @@
 {
-    "$schema": "http://json-schema.org/draft-07/schema#",
-    "$id": "commands/appeal-representation-submission.schema.json",
-    "title": "appeal representation submission",
-    "description": "Schema defining the data produced by the Front-Office when a representation is created on an appeal",
-    "type": "object",
-    "additionalProperties": true,
-    "required": [
-      "caseReference",
-      "representationSubmittedDate",
-      "representation",
-      "representationType",
-      "documents"
-    ],
-    "oneOf": [
-      { "required": ["serviceUserId"] },
-      { "required": ["lpaCode"] },
-      { "required": ["newUser"] }
-    ],
-    "properties": {
-      "caseReference": {
-        "type": "string",
-        "examples": ["7002471"],
-        "description": "External case identifier"
-      },
-      "representationSubmittedDate": {
-        "type": ["string", "null"],
-        "format": "date-time",
-        "examples": ["2023-07-27T20:30:00.000Z"],
-        "description": "The date the representation was submitted"
-      },
-      "representationType": {
-        "type": "string",
-        "enum": [
-          "statement",
-          "comment",
-          "final_comment",
-          "proofs_evidence",
-          null
-        ],
-        "description": "The type of representation"
-      },
-      "representation": {
-        "type": ["string", "null"],
-        "description": "The original representation"
-      },
-      "documents": {
-        "type": "array",
-        "items": {
-          "type": "object",
-          "additionalProperties": true,
-          "properties": {
-            "documentId": {
-              "type": "string",
-              "examples": ["4547fec8-16b2-47bb-836d-4d0baac04079"],
-              "description": "The unique identifier for the document"
-            },
-            "filename": {
-              "type": "string",
-              "examples": ["filename.pdf"],
-              "description": "Current stored name of the document"
-            },
-            "originalFilename": {
-              "type": "string",
-              "examples": ["original_filename.pdf"],
-              "description": "Original name of document"
-            },
-            "size": {
-              "type": "integer",
-              "examples": [23452],
-              "description": "The file size, in bytes"
-            },
-            "mime": {
-              "type": ["string"],
-              "examples": ["application/pdf"],
-              "description": "The mime type for the current version of the file"
-            },
-            "documentURI": {
-              "type": "string",
-              "examples": [
-                "https://custom-domain.gov.uk/container-name/appeal/7002471/4547fec8-16b2-47bb-836d-4d0baac04079/v1/filename.pdf"
-              ],
-              "description": "The internal location of the document",
-              "$comment": "This property contains blob storage info (domain, container), caseReference, version and filename"
-            },
-            "dateCreated": {
-              "type": "string",
-              "format": "date-time",
-              "examples": ["2023-07-27T20:30:00.000Z"],
-              "description": "The creation date for the document"
-            },
-            "documentType": {
-              "type": ["string", "null"],
-              "enum": [
-                "interestedPartyComment",
-                "lpaStatement",
-                "rule6Statement",
-                "appellantFinalComment",
-                "lpaFinalComment",
-                "appellantProofOfEvidence",
-                "appellantWitnessesEvidence",
-                "lpaProofOfEvidence",
-                "lpaWitnessesEvidence",
-                "rule6ProofOfEvidence",
-                "rule6WitnessesEvidence",
-                null
-              ],
-              "description": "The type of document, used for exchange, migrations and consumption from the appeal back-office system"
-            }
-          },
-          "required": [
-            "documentId",
-            "filename",
-            "originalFilename",
-            "size",
-            "mime",
-            "documentURI",
-            "dateCreated",
-            "documentType"
-          ]
-        }
-      },
-      "serviceUserId": {
-        "type": ["string", "null"],
-        "description": "Service User Id of the person or organisation making the representation"
-      },
-      "lpaCode": {
-        "type": ["string", "null"],
-        "examples": ["Q9999"],
-        "description": "A unique identifier for the Local Planning Authority",
-        "$comment": "Uses the internal PINS code identifying LPAs"
-      },
-      "newUser": {
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "commands/appeal-representation-submission.schema.json",
+  "title": "appeal representation submission",
+  "description": "Schema defining the data produced by the Front-Office when a representation is created on an appeal",
+  "type": "object",
+  "additionalProperties": true,
+  "required": ["caseReference", "representationSubmittedDate", "representation", "representationType", "documents"],
+  "oneOf": [{ "required": ["serviceUserId"] }, { "required": ["lpaCode"] }, { "required": ["newUser"] }],
+  "properties": {
+    "caseReference": {
+      "type": "string",
+      "examples": ["7002471"],
+      "description": "External case identifier"
+    },
+    "representationSubmittedDate": {
+      "type": ["string", "null"],
+      "format": "date-time",
+      "examples": ["2023-07-27T20:30:00.000Z"],
+      "description": "The date the representation was submitted"
+    },
+    "representationType": {
+      "type": "string",
+      "enum": ["statement", "comment", "final_comment", "proofs_evidence", null],
+      "description": "The type of representation"
+    },
+    "representation": {
+      "type": ["string", "null"],
+      "description": "The original representation"
+    },
+    "documents": {
+      "type": "array",
+      "items": {
         "type": "object",
         "additionalProperties": true,
-        "required": [
-          "salutation",
-          "firstName",
-          "lastName",
-          "emailAddress",
-          "telephoneNumber",
-          "organisation",
-          "serviceUserType"
-        ],
         "properties": {
-          "salutation": {
-            "type": ["string", "null"],
-            "description": "A formal greeting, e.g., Mr, Mrs, Ms.",
-            "examples": ["Mr"]
-          },
-          "firstName": {
-            "type": ["string", "null"],
-            "description": "The first name of the individual.",
-            "examples": ["John"]
-          },
-          "lastName": {
-            "type": ["string", "null"],
-            "description": "The last name of the individual.",
-            "examples": ["Doe"]
-          },
-          "emailAddress": {
-            "type": ["string", "null"],
-            "description": "The primary email address for contact.",
-            "examples": ["john.doe@example.com"]
-          },
-          "telephoneNumber": {
-            "type": ["string", "null"],
-            "description": "The primary telephone contact number.",
-            "examples": ["+447123456789"]
-          },
-          "organisation": {
-            "type": ["string", "null"],
-            "description": "The name of the organisation associated with the individual.",
-            "examples": ["Tech Corp"]
-          },
-          "serviceUserType": {
+          "documentId": {
             "type": "string",
-            "description": "Type or category of the service user.",
-            "enum": ["InterestedParty"]
+            "examples": ["4547fec8-16b2-47bb-836d-4d0baac04079"],
+            "description": "The unique identifier for the document"
           },
-          "addressLine1": {
+          "filename": {
             "type": "string",
-            "examples": ["96 The Avenue"],
-            "description": "First line of address of the user making the representation"
+            "examples": ["filename.pdf"],
+            "description": "Current stored name of the document"
           },
-          "addressLine2": {
+          "originalFilename": {
+            "type": "string",
+            "examples": ["original_filename.pdf"],
+            "description": "Original name of document"
+          },
+          "size": {
+            "type": "integer",
+            "examples": [23452],
+            "description": "The file size, in bytes"
+          },
+          "mime": {
+            "type": ["string"],
+            "examples": ["application/pdf"],
+            "description": "The mime type for the current version of the file"
+          },
+          "documentURI": {
+            "type": "string",
+            "examples": [
+              "https://custom-domain.gov.uk/container-name/appeal/7002471/4547fec8-16b2-47bb-836d-4d0baac04079/v1/filename.pdf"
+            ],
+            "description": "The internal location of the document",
+            "$comment": "This property contains blob storage info (domain, container), caseReference, version and filename"
+          },
+          "dateCreated": {
+            "type": "string",
+            "format": "date-time",
+            "examples": ["2023-07-27T20:30:00.000Z"],
+            "description": "The creation date for the document"
+          },
+          "documentType": {
             "type": ["string", "null"],
-            "description": "Second line of address of the user making the representation"
-          },
-          "addressTown": {
-            "type": "string",
-            "examples": ["Maidstone"],
-            "description": "Town / City of the user making the representation"
-          },
-          "addressCounty": {
-            "type": ["string", "null"],
-            "examples": ["Kent"],
-            "description": "County of the user making the representation"
-          },
-          "addressPostcode": {
-            "type": "string",
-            "examples": ["MD21 5XY"],
-            "description": "Postal code of the user making the representation"
+            "enum": [
+              "interestedPartyComment",
+              "lpaStatement",
+              "rule6Statement",
+              "appellantFinalComment",
+              "lpaFinalComment",
+              "appellantProofOfEvidence",
+              "appellantWitnessesEvidence",
+              "lpaProofOfEvidence",
+              "lpaWitnessesEvidence",
+              "rule6ProofOfEvidence",
+              "rule6WitnessesEvidence",
+              null
+            ],
+            "description": "The type of document, used for exchange, migrations and consumption from the appeal back-office system"
           }
+        },
+        "required": [
+          "documentId",
+          "filename",
+          "originalFilename",
+          "size",
+          "mime",
+          "documentURI",
+          "dateCreated",
+          "documentType"
+        ]
+      }
+    },
+    "serviceUserId": {
+      "type": ["string", "null"],
+      "description": "Service User Id of the person or organisation making the representation"
+    },
+    "lpaCode": {
+      "type": ["string", "null"],
+      "examples": ["Q9999"],
+      "description": "A unique identifier for the Local Planning Authority",
+      "$comment": "Uses the internal PINS code identifying LPAs"
+    },
+    "newUser": {
+      "type": "object",
+      "additionalProperties": true,
+      "required": [
+        "salutation",
+        "firstName",
+        "lastName",
+        "emailAddress",
+        "telephoneNumber",
+        "organisation",
+        "serviceUserType"
+      ],
+      "properties": {
+        "salutation": {
+          "type": ["string", "null"],
+          "description": "A formal greeting, e.g., Mr, Mrs, Ms.",
+          "examples": ["Mr"]
+        },
+        "firstName": {
+          "type": ["string", "null"],
+          "description": "The first name of the individual.",
+          "examples": ["John"]
+        },
+        "lastName": {
+          "type": ["string", "null"],
+          "description": "The last name of the individual.",
+          "examples": ["Doe"]
+        },
+        "emailAddress": {
+          "type": ["string", "null"],
+          "description": "The primary email address for contact.",
+          "examples": ["john.doe@example.com"]
+        },
+        "telephoneNumber": {
+          "type": ["string", "null"],
+          "description": "The primary telephone contact number.",
+          "examples": ["+447123456789"]
+        },
+        "organisation": {
+          "type": ["string", "null"],
+          "description": "The name of the organisation associated with the individual.",
+          "examples": ["Tech Corp"]
+        },
+        "serviceUserType": {
+          "type": "string",
+          "description": "Type or category of the service user.",
+          "enum": ["InterestedParty"]
+        },
+        "addressLine1": {
+          "type": "string",
+          "examples": ["96 The Avenue"],
+          "description": "First line of address of the user making the representation"
+        },
+        "addressLine2": {
+          "type": ["string", "null"],
+          "description": "Second line of address of the user making the representation"
+        },
+        "addressTown": {
+          "type": "string",
+          "examples": ["Maidstone"],
+          "description": "Town / City of the user making the representation"
+        },
+        "addressCounty": {
+          "type": ["string", "null"],
+          "examples": ["Kent"],
+          "description": "County of the user making the representation"
+        },
+        "addressPostcode": {
+          "type": "string",
+          "examples": ["MD21 5XY"],
+          "description": "Postal code of the user making the representation"
         }
       }
     }
   }
-  
+}

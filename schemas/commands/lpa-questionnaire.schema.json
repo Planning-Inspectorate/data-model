@@ -12,23 +12,22 @@
       "type": "object",
       "additionalProperties": true,
       "anyOf": [
-        {"allOf": [
-          { "$comment": "backwards compatibility for no case type, when removed can update allOf to oneOf" },
-          {"not": { "required": [ "caseType" ] }},
-          { "$ref": "lpa-questionnaire-has.schema.json"}
-        ]},
-        { "allOf": [
-          {"properties": { "caseType": { "const": "W" } }},
-          { "$ref": "lpa-questionnaire-s78.schema.json"}
-        ]},
-        { "allOf": [
-          {"properties": { "caseType": { "const": "Y" } }},
-          { "$ref": "lpa-questionnaire-s78.schema.json"}
-        ]},
-        { "allOf": [
-          {"properties": { "caseType": { "const": "D" } }},
-          { "$ref": "lpa-questionnaire-has.schema.json"}
-        ]}
+        {
+          "allOf": [
+            { "$comment": "backwards compatibility for no case type, when removed can update allOf to oneOf" },
+            { "not": { "required": ["caseType"] } },
+            { "$ref": "lpa-questionnaire-has.schema.json" }
+          ]
+        },
+        {
+          "allOf": [{ "properties": { "caseType": { "const": "W" } } }, { "$ref": "lpa-questionnaire-s78.schema.json" }]
+        },
+        {
+          "allOf": [{ "properties": { "caseType": { "const": "Y" } } }, { "$ref": "lpa-questionnaire-s78.schema.json" }]
+        },
+        {
+          "allOf": [{ "properties": { "caseType": { "const": "D" } } }, { "$ref": "lpa-questionnaire-has.schema.json" }]
+        }
       ]
     },
     "documents": {

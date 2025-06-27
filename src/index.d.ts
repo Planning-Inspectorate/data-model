@@ -2,12 +2,12 @@ import * as Schemas from './schemas';
 export * from './enums';
 
 export interface LoadedSchemas {
-    schemas: {
-        [name: string]: any
-    }
-    commands: {
-        [name: string]: any
-    }
+	schemas: {
+		[name: string]: any;
+	};
+	commands: {
+		[name: string]: any;
+	};
 }
 
 export const schemasPath: string;

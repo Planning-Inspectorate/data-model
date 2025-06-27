@@ -5,251 +5,255 @@
   "description": "Schema defining the data returned by the DaRT API",
   "type": "object",
   "additionalProperties": true,
-  "required": [
-    "caseReference",
-    "applicationReference"
-  ],
+  "required": ["caseReference", "applicationReference"],
   "properties": {
-      "caseId": {
-        "type": "integer",
-        "examples": ["2744"],
-        "description": "Internal case identifier"
+    "caseId": {
+      "type": "integer",
+      "examples": ["2744"],
+      "description": "Internal case identifier"
+    },
+    "caseReference": {
+      "type": "integer",
+      "examples": ["6002744"],
+      "description": "External case identifier"
+    },
+    "caseStatus": {
+      "type": "string",
+      "examples": ["lpa_questionnaire"],
+      "description": "The processing state for the case"
+    },
+    "caseType": {
+      "type": "string",
+      "examples": ["w"],
+      "description": "The internal code for a type of case"
+    },
+    "caseProcedure": {
+      "type": ["string", "null"],
+      "examples": ["W"],
+      "description": "The type of procedure for the case"
+    },
+    "lpaCode": {
+      "type": ["string", "null"],
+      "examples": ["DORS"],
+      "description": "PINS internal code for LPA"
+    },
+    "lpaName": {
+      "type": ["string", "null"],
+      "examples": ["example"],
+      "description": "Name of the LPA"
+    },
+    "allocationLevel": {
+      "type": ["string", "null"],
+      "examples": ["H"],
+      "description": "A case level used for allocation purposes"
+    },
+    "allocationBand": {
+      "type": ["string", "null"],
+      "examples": ["1"],
+      "description": "A band used for allocation purposes"
+    },
+    "caseSpecialisms": {
+      "type": ["array", "null"],
+      "items": {
+        "type": "string"
       },
-      "caseReference": {
-        "type": "integer",
-        "examples": ["6002744"],
-        "description": "External case identifier"
+      "examples": ["General allocation", "Housing orders", "Waste"],
+      "description": "A list of case specialisms for allocation purposes"
+    },
+    "caseSubmittedDate": {
+      "type": "string",
+      "examples": ["025-01-02T16:20:07.753Z"],
+      "description": "The date the case was submitted by the appellant"
+    },
+    "caseCreatedDate": {
+      "type": "string",
+      "examples": ["025-01-02T16:20:07.753Z"],
+      "description": "The date the case was received"
+    },
+    "caseUpdatedDate": {
+      "type": "string",
+      "examples": ["025-01-02T16:20:07.753Z"],
+      "description": "The date the case was last updated in the back-office"
+    },
+    "caseValidDate": {
+      "type": ["string", "null"],
+      "examples": ["025-01-02T16:20:07.753Z"],
+      "description": "The date since when the case was considered valid"
+    },
+    "caseValidationDate": {
+      "type": ["string", "null"],
+      "examples": ["025-01-02T16:20:07.753Z"],
+      "description": "The date the case was validated in the back-office"
+    },
+    "caseValidationOutcome": {
+      "type": ["string", "null"],
+      "examples": ["valid"],
+      "description": "The outcome of the validation action"
+    },
+    "caseValidationInvalidDetails": {
+      "type": ["array", "null"],
+      "items": {
+        "type": "string"
       },
-      "caseStatus": {
+      "examples": [
+        "Appeal has not been submitted on time",
+        "Documents have not been submitted on time",
+        "Other: scddsfv"
+      ],
+      "description": "A list of reasons why the appeal is invalid",
+      "$comment": "The list will contain items only if the caseValidationOutcome is invalid"
+    },
+    "caseValidationIncompleteDetails": {
+      "type": ["array", "null"],
+      "items": {
+        "type": "string"
+      },
+      "examples": [
+        "Appellant name is not the same on the application form and appeal form",
+        "LPA's decision notice is missing"
+      ],
+      "description": "A list of reasons why the appeal is incomplete",
+      "$comment": "The list will contain items only if the caseValidationOutcome is incomplete"
+    },
+    "caseExtensionDate": {
+      "type": ["string", "null"],
+      "examples": ["2025-01-10T00:00:00.000Z"],
+      "description": "When the validation outcome is incomplete, an extension may be granted to provide missing information"
+    },
+    "caseStartedDate": {
+      "type": ["string", "null"],
+      "examples": ["2025-01-10T00:00:00.000Z"],
+      "description": "A date indicating when the case was started, resulting in the creation of a timetable"
+    },
+    "casePublishedDate": {
+      "type": ["string", "null"],
+      "examples": ["2025-01-10T00:00:00.000Z"],
+      "description": "A date indicating when the case was published"
+    },
+    "linkedCaseStatus": {
+      "type": ["string", "null"],
+      "examples": ["child"],
+      "description": "Indicates if the case is linked, and the type of relationship"
+    },
+    "leadCaseReference": {
+      "type": ["string", "null"],
+      "examples": ["6002745"],
+      "description": "The reference of the lead case, if the case is a child case"
+    },
+    "caseWithdrawnDate": {
+      "type": ["string", "null"],
+      "examples": ["2025-01-10T00:00:00.000Z"],
+      "description": "The date the case was withdrawn by the appellant"
+    },
+    "caseTransferredDate": {
+      "type": ["string", "null"],
+      "examples": ["2025-01-10T00:00:00.000Z"],
+      "description": "The date the case was transferred to a new case of a different type"
+    },
+    "transferredCaseClosedDate": {
+      "type": ["string", "null"],
+      "examples": ["2025-01-10T00:00:00.000Z"],
+      "description": "The date the case was closed and the appellant requested to resubmit"
+    },
+    "caseDecisionOutcomeDate": {
+      "type": ["string", "null"],
+      "examples": ["2025-01-10T00:00:00.000Z"],
+      "description": "The date of the case decision"
+    },
+    "caseDecisionPublishedDate": {
+      "type": ["string", "null"],
+      "examples": ["2025-01-10T00:00:00.000Z"],
+      "description": "The date the case decision was published"
+    },
+    "caseDecisionOutcome": {
+      "type": ["string", "null"],
+      "examples": ["allowed"],
+      "description": "The final outcome for the decision"
+    },
+    "caseCompletedDate": {
+      "type": ["string", "null"],
+      "examples": ["2025-01-10T00:00:00.000Z"],
+      "description": "The date the case decision letter"
+    },
+    "enforcementNotice": {
+      "type": ["boolean", "null"],
+      "description": "Indicates if an enforcement notice is the reason for the appeal"
+    },
+    "applicationReference": {
+      "type": "string",
+      "examples": ["21824/APP/0/203130"],
+      "description": "The unique identifier of the LPA application"
+    },
+    "applicationDate": {
+      "type": "string",
+      "examples": ["2025-01-10T00:00:00.000Z"],
+      "description": "The date of the original LPA application"
+    },
+    "applicationDecision": {
+      "type": "string",
+      "examples": ["refused"],
+      "description": "The outcome of the original LPA decision"
+    },
+    "lpaDecisionDate": {
+      "type": ["string", "null"],
+      "examples": ["2025-01-10T00:00:00.000Z"],
+      "description": "The date of the original LPA decision"
+    },
+    "caseSubmissionDueDate": {
+      "type": ["string", "null"],
+      "examples": ["2025-01-10T00:00:00.000Z"],
+      "description": "The statutory deadline for submitting an appeal from the original LPA decision date"
+    },
+    "siteAddressLine1": {
+      "type": ["string", "null"],
+      "examples": ["21 The Pavement"],
+      "description": "First line of case site address"
+    },
+    "siteAddressLine2": {
+      "type": ["string", "null"],
+      "examples": ["Shotesham Road"],
+      "description": "Second line of case site address"
+    },
+    "siteAddressTown": {
+      "type": ["string", "null"],
+      "examples": ["Bristol"],
+      "description": "Town / City of the site address"
+    },
+    "siteAddressCounty": {
+      "type": ["string", "null"],
+      "examples": ["Wandsworth"],
+      "description": "County of the site address"
+    },
+    "siteAddressPostcode": {
+      "type": ["string", "null"],
+      "examples": ["SW4 0HY"],
+      "description": "Postal code of the site address"
+    },
+    "isCorrectAppealType": {
+      "type": ["boolean", "null"],
+      "examples": ["True"],
+      "description": "Indicates if the LPA considers the appeal type appropriate"
+    },
+    "originalDevelopmentDescription": {
+      "type": ["string", "null"],
+      "examples": ["Replacement of an existing gate to access the property"],
+      "description": "The original description of the development, as provided by the appellant"
+    },
+    "changedDevelopmentDescription": {
+      "type": ["boolean", "null"],
+      "examples": ["True"],
+      "description": "Indicates that the LPA has changed the development description"
+    },
+    "newConditionDetails": {
+      "type": ["string", "null"],
+      "examples": ["example"],
+      "description": "Since the original application, a number of things have changed."
+    },
+    "nearbyCaseReferences": {
+      "type": ["array", "null"],
+      "items": {
         "type": "string",
-        "examples": ["lpa_questionnaire"],
-        "description": "The processing state for the case"
-      },
-      "caseType": {
-        "type": "string",
-        "examples": ["w"],
-        "description": "The internal code for a type of case"
-      },
-      "caseProcedure": {
-        "type": ["string", "null"],
-        "examples": ["W"],
-        "description": "The type of procedure for the case"
-      },
-      "lpaCode": {
-        "type":  ["string", "null"],
-        "examples": ["DORS"],
-        "description": "PINS internal code for LPA"
-      },
-      "lpaName": {
-        "type":  ["string", "null"],
-        "examples": ["example"],
-        "description": "Name of the LPA"
-      },
-      "allocationLevel": {
-        "type": ["string", "null"],
-        "examples": ["H"],
-        "description": "A case level used for allocation purposes"
-      },
-      "allocationBand": {
-        "type":  ["string", "null"],
-        "examples": ["1"],
-        "description": "A band used for allocation purposes"
-      },
-      "caseSpecialisms": {
-        "type": ["array", "null"],
-        "items": {
-          "type": "string"
-      },
-        "examples": ["General allocation","Housing orders","Waste"],
-        "description": "A list of case specialisms for allocation purposes"
-      },
-      "caseSubmittedDate": {
-        "type": "string",
-        "examples": ["025-01-02T16:20:07.753Z"],
-        "description": "The date the case was submitted by the appellant"
-      },
-      "caseCreatedDate": {
-        "type": "string",
-        "examples": ["025-01-02T16:20:07.753Z"],
-        "description": "The date the case was received"
-      },
-      "caseUpdatedDate": {
-        "type": "string",
-        "examples": ["025-01-02T16:20:07.753Z"],
-        "description": "The date the case was last updated in the back-office"
-      },
-      "caseValidDate": {
-        "type": ["string", "null"],
-        "examples": ["025-01-02T16:20:07.753Z"],
-        "description": "The date since when the case was considered valid"
-      },
-      "caseValidationDate": {
-        "type": ["string", "null"],
-        "examples": ["025-01-02T16:20:07.753Z"],
-        "description": "The date the case was validated in the back-office"
-      },
-      "caseValidationOutcome": {
-        "type": ["string", "null"],
-        "examples": ["valid"],
-        "description": "The outcome of the validation action"
-      },
-      "caseValidationInvalidDetails": {
-        "type": ["array", "null"],
-        "items": {
-          "type": "string"
-        },
-        "examples": ["Appeal has not been submitted on time","Documents have not been submitted on time","Other: scddsfv"],
-        "description": "A list of reasons why the appeal is invalid",
-        "$comment": "The list will contain items only if the caseValidationOutcome is invalid"
-      },
-      "caseValidationIncompleteDetails": {
-        "type": ["array", "null"],
-        "items": {
-          "type": "string"
-        },
-        "examples": ["Appellant name is not the same on the application form and appeal form","LPA's decision notice is missing"],
-        "description": "A list of reasons why the appeal is incomplete",
-        "$comment": "The list will contain items only if the caseValidationOutcome is incomplete"
-      },
-      "caseExtensionDate": {
-        "type": ["string", "null"],
-        "examples": ["2025-01-10T00:00:00.000Z"],
-        "description": "When the validation outcome is incomplete, an extension may be granted to provide missing information"
-      },
-      "caseStartedDate": {
-        "type": ["string", "null"],
-        "examples": ["2025-01-10T00:00:00.000Z"],
-        "description": "A date indicating when the case was started, resulting in the creation of a timetable"
-      },
-      "casePublishedDate": {
-        "type": ["string", "null"],
-        "examples": ["2025-01-10T00:00:00.000Z"],
-        "description": "A date indicating when the case was published"
-      },
-      "linkedCaseStatus": {
-        "type": ["string", "null"],
-        "examples": ["child"],
-        "description": "Indicates if the case is linked, and the type of relationship"
-      },
-      "leadCaseReference": {
-        "type": ["string", "null"],
-        "examples": ["6002745"],
-        "description": "The reference of the lead case, if the case is a child case"
-      },
-      "caseWithdrawnDate": {
-        "type": ["string", "null"],
-        "examples": ["2025-01-10T00:00:00.000Z"],
-        "description": "The date the case was withdrawn by the appellant"
-      },
-      "caseTransferredDate": {
-        "type": ["string", "null"],
-        "examples": ["2025-01-10T00:00:00.000Z"],
-        "description": "The date the case was transferred to a new case of a different type"
-      },
-      "transferredCaseClosedDate": {
-        "type": ["string", "null"],
-        "examples": ["2025-01-10T00:00:00.000Z"],
-        "description": "The date the case was closed and the appellant requested to resubmit"
-      },
-      "caseDecisionOutcomeDate": {
-        "type": ["string", "null"],
-        "examples": ["2025-01-10T00:00:00.000Z"],
-        "description": "The date of the case decision"
-      },
-      "caseDecisionPublishedDate": {
-        "type": ["string", "null"],
-        "examples": ["2025-01-10T00:00:00.000Z"],
-        "description": "The date the case decision was published"
-      },
-      "caseDecisionOutcome": {
-        "type": ["string", "null"],
-        "examples": ["allowed"],
-        "description": "The final outcome for the decision"
-      },
-      "caseCompletedDate": {
-        "type":  ["string", "null"],
-        "examples": ["2025-01-10T00:00:00.000Z"],
-        "description": "The date the case decision letter"
-      },
-      "enforcementNotice": {
-        "type": ["boolean", "null"],
-        "description": "Indicates if an enforcement notice is the reason for the appeal"
-      },
-      "applicationReference": {
-        "type": "string",
-        "examples": ["21824/APP/0/203130"],
-        "description": "The unique identifier of the LPA application"
-      },
-      "applicationDate": {
-        "type": "string",
-        "examples": ["2025-01-10T00:00:00.000Z"],
-        "description": "The date of the original LPA application"
-      },
-      "applicationDecision": {
-        "type": "string",
-        "examples": ["refused"],
-        "description": "The outcome of the original LPA decision"
-      },
-      "lpaDecisionDate": {
-        "type": ["string", "null"],
-        "examples": ["2025-01-10T00:00:00.000Z"],
-        "description": "The date of the original LPA decision"
-      },
-      "caseSubmissionDueDate": {
-        "type": ["string", "null"],
-        "examples": ["2025-01-10T00:00:00.000Z"],
-        "description": "The statutory deadline for submitting an appeal from the original LPA decision date"
-      },
-      "siteAddressLine1": {
-        "type": ["string", "null"],
-        "examples": ["21 The Pavement"],
-        "description": "First line of case site address"
-      },
-      "siteAddressLine2": {
-        "type": ["string", "null"],
-        "examples": ["Shotesham Road"],
-        "description": "Second line of case site address"
-      },
-      "siteAddressTown": {
-        "type": ["string", "null"],
-        "examples": ["Bristol"],
-        "description": "Town / City of the site address"
-      },
-      "siteAddressCounty": {
-        "type": ["string", "null"],
-        "examples": ["Wandsworth"],
-        "description": "County of the site address"
-      },
-      "siteAddressPostcode": {
-        "type":["string", "null"],
-        "examples": ["SW4 0HY"],
-        "description": "Postal code of the site address"
-      },
-      "isCorrectAppealType": {
-        "type": ["boolean", "null"],
-        "examples": ["True"],
-        "description": "Indicates if the LPA considers the appeal type appropriate"
-      },
-      "originalDevelopmentDescription": {
-        "type": ["string", "null"],
-        "examples": ["Replacement of an existing gate to access the property"],
-        "description": "The original description of the development, as provided by the appellant"
-      },
-      "changedDevelopmentDescription": {
-        "type": ["boolean", "null"],
-        "examples": ["True"],
-        "description": "Indicates that the LPA has changed the development description"
-      },
-      "newConditionDetails": {
-        "type": ["string", "null"],
-        "examples": ["example"],
-        "description": "Since the original application, a number of things have changed."
-      },
-     "nearbyCaseReferences": {
-       "type": ["array", "null"],
-       "items": {
-         "type": "string",
-         "examples": ["6000456", "8004567"]
+        "examples": ["6000456", "8004567"]
       },
       "description": "A list of related case references known to the appellant and the LPA"
     },
@@ -294,53 +298,53 @@
       },
       "description": "A list of neighbouring site addresses"
     },
-      "affectedListedBuildingNumbers": {
-        "type": ["array", "null"],
-        "items": {
-          "type": "string",
-          "examples": ["10023", "17824"]
-      },
-        "description": "A list of affected listed building IDs from Historic England"
-      },
-      "appellantCostsAppliedFor": {
-        "type": ["boolean", "null"],
-        "examples": ["True"],
-        "description": "Indicates if the appellant has applied for costs"
-      },
-      "lpaCostsAppliedFor": {
-        "type": ["boolean", "null"],
-        "examples": ["False"],
-        "description": "Indicates if the LPA has applied for costs"
-      },
-      "appellantName": {
+    "affectedListedBuildingNumbers": {
+      "type": ["array", "null"],
+      "items": {
         "type": "string",
-        "examples": ["example"],
-        "description": "Name of the appellant"
+        "examples": ["10023", "17824"]
       },
-      "typeOfEvent": {
-        "type": ["string", "null"],
-        "examples": ["site_visit_access_required"],
-        "description": "The type of event"
-      },
-      "startDateOfTheEvent": {
-        "type": ["string", "null"],
-        "examples": ["2025-01-10T00:00:00.000Z"],
-        "description": "Event start date and time"
-      },
-      "inspectorName": {
-        "type": ["string", "null"],
-        "examples": ["In Spector"],
-        "description": "Name of inspector allocated to case"
-      },
-      "caseOfficerName": {
-        "type": ["string", "null"],
-        "examples": ["example"],
-        "description": "name of case officer assigned to case"
-      },
-      "inspectorQualifications": {
-        "type": ["string", "null"],
-        "examples": ["example"],
-        "description": "The qualifications of the inspector"
-      }
+      "description": "A list of affected listed building IDs from Historic England"
+    },
+    "appellantCostsAppliedFor": {
+      "type": ["boolean", "null"],
+      "examples": ["True"],
+      "description": "Indicates if the appellant has applied for costs"
+    },
+    "lpaCostsAppliedFor": {
+      "type": ["boolean", "null"],
+      "examples": ["False"],
+      "description": "Indicates if the LPA has applied for costs"
+    },
+    "appellantName": {
+      "type": "string",
+      "examples": ["example"],
+      "description": "Name of the appellant"
+    },
+    "typeOfEvent": {
+      "type": ["string", "null"],
+      "examples": ["site_visit_access_required"],
+      "description": "The type of event"
+    },
+    "startDateOfTheEvent": {
+      "type": ["string", "null"],
+      "examples": ["2025-01-10T00:00:00.000Z"],
+      "description": "Event start date and time"
+    },
+    "inspectorName": {
+      "type": ["string", "null"],
+      "examples": ["In Spector"],
+      "description": "Name of inspector allocated to case"
+    },
+    "caseOfficerName": {
+      "type": ["string", "null"],
+      "examples": ["example"],
+      "description": "name of case officer assigned to case"
+    },
+    "inspectorQualifications": {
+      "type": ["string", "null"],
+      "examples": ["example"],
+      "description": "The qualifications of the inspector"
     }
+  }
 }

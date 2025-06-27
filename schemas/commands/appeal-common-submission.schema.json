@@ -187,11 +187,11 @@
     "typeOfPlanningApplication": {
       "type": ["string", "null"],
       "enum": [
-        "full-appeal", 
-        "householder-planning", 
-        "outline-planning", 
-        "prior-approval", 
-        "reserved-matters", 
+        "full-appeal",
+        "householder-planning",
+        "outline-planning",
+        "prior-approval",
+        "reserved-matters",
         "removal-or-variation-of-conditions",
         "listed-building",
         "minor-commercial-development",

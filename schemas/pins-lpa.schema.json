@@ -1,96 +1,63 @@
 {
-    "$schema": "http://json-schema.org/draft-07/schema#",
-    "$id": "pins-lpa.schema.json",
-    "title": "PINS LPA",
-    "description": "Local Planning Authority (LPA) attributes as per Horizon. This will be extended with ONS data",
-    "type": "object",
-    "additionalProperties": true,
-    "required": [
-        "lpaName",
-        "pinsLpaCode"
-    ],
-    "properties": {
-        "lpaName": {
-            "type": "string",
-            "description": "The PINS name of the LPA"
-        },
-        "organisationType": {
-            "type": "string",
-            "description": "The organisation type of the LPA"
-        },        
-        "pinsLpaCode": {
-            "type": "string",
-            "description": "The PINS-generated unqiue LPA code"
-        },
-        "poBox": {
-            "type": [
-                "string",
-                "null"
-            ],
-            "description": "LPA address Post Office Box"
-        },
-        "address1": {
-            "type": [
-                "string",
-                "null"
-            ],
-            "description": "First line of LPA address"
-        },
-        "address2": {
-            "type": [
-                "string",
-                "null"
-            ],
-            "description": "Second line of LPA address"
-        },
-        "city": {
-            "type": [
-                "string",
-                "null"
-            ],
-            "description": "LPA address city or town"
-        },
-        "county": {
-            "type": [
-                "string",
-                "null"
-            ],
-            "description": "LPA address county"
-        },
-        "postcode": {
-            "type": [
-                "string",
-                "null"
-            ],
-            "description": "LPA address postcode"
-        },
-        "country": {
-            "type": [
-                "string",
-                "null"
-            ],
-            "description": "LPA address country"
-        },
-        "telephoneNumber": {
-            "type": [
-                "string",
-                "null"
-            ],
-            "description": "LPA telephine number"
-        },
-        "fax": {
-            "type": [
-                "string",
-                "null"
-            ],
-            "description": "LPA fax number"
-        },
-        "emailAddress": {
-            "type": [
-                "string",
-                "null"
-            ],
-            "description": "LPA email address"
-        }
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "pins-lpa.schema.json",
+  "title": "PINS LPA",
+  "description": "Local Planning Authority (LPA) attributes as per Horizon. This will be extended with ONS data",
+  "type": "object",
+  "additionalProperties": true,
+  "required": ["lpaName", "pinsLpaCode"],
+  "properties": {
+    "lpaName": {
+      "type": "string",
+      "description": "The PINS name of the LPA"
+    },
+    "organisationType": {
+      "type": "string",
+      "description": "The organisation type of the LPA"
+    },
+    "pinsLpaCode": {
+      "type": "string",
+      "description": "The PINS-generated unqiue LPA code"
+    },
+    "poBox": {
+      "type": ["string", "null"],
+      "description": "LPA address Post Office Box"
+    },
+    "address1": {
+      "type": ["string", "null"],
+      "description": "First line of LPA address"
+    },
+    "address2": {
+      "type": ["string", "null"],
+      "description": "Second line of LPA address"
+    },
+    "city": {
+      "type": ["string", "null"],
+      "description": "LPA address city or town"
+    },
+    "county": {
+      "type": ["string", "null"],
+      "description": "LPA address county"
+    },
+    "postcode": {
+      "type": ["string", "null"],
+      "description": "LPA address postcode"
+    },
+    "country": {
+      "type": ["string", "null"],
+      "description": "LPA address country"
+    },
+    "telephoneNumber": {
+      "type": ["string", "null"],
+      "description": "LPA telephine number"
+    },
+    "fax": {
+      "type": ["string", "null"],
+      "description": "LPA fax number"
+    },
+    "emailAddress": {
+      "type": ["string", "null"],
+      "description": "LPA email address"
     }
+  }
 }

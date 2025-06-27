@@ -35,7 +35,7 @@
     "lpaProcedurePreferenceDuration"
   ],
   "allOf": [
-    { "$ref": "lpa-questionnaire-has.schema.json"},
+    { "$ref": "lpa-questionnaire-has.schema.json" },
     {
       "properties": {
         "changedListedBuildingNumbers": {
@@ -104,7 +104,22 @@
         },
         "eiaDevelopmentDescription": {
           "type": ["string", "null"],
-          "enum": ["agriculture-aquaculture", "change-extensions", "chemical-industry", "energy-industry", "extractive-industry", "food-industry", "infrastructure-projects", "mineral-industry", "other-projects", "production-processing-of-metals", "rubber-industry", "textile-industries", "tourism-leisure", null],
+          "enum": [
+            "agriculture-aquaculture",
+            "change-extensions",
+            "chemical-industry",
+            "energy-industry",
+            "extractive-industry",
+            "food-industry",
+            "infrastructure-projects",
+            "mineral-industry",
+            "other-projects",
+            "production-processing-of-metals",
+            "rubber-industry",
+            "textile-industries",
+            "tourism-leisure",
+            null
+          ],
           "description": "The development description from EIA",
           "$comment": "Only available in S78 cases"
         },
@@ -132,7 +147,7 @@
           "type": ["boolean", "null"],
           "description": "EIA completed environmental statement required",
           "$comment": "Only available in S78 cases"
-        },        
+        },
         "hasStatutoryConsultees": {
           "type": ["boolean", "null"],
           "description": "Indicates statutory consultees",

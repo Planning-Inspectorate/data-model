@@ -1,27 +1,27 @@
 {
-	"$schema": "http://json-schema.org/draft-07/schema#",
-	"$id": "commands/nsip-exam-timetable-submission.schema.json",
-	"title": "nsip-exam-timetable-submission",
-	"description": "Result of processing a new exam timetable submission",
-	"type": "object",
-	"additionalProperties": true,
-	"required": ["status", "deadline", "submissionType", "blobGuid", "documentName"],
-	"properties": {
-		"status": {
-			"type": "string",
-			"enum": ["SUCCESS", "VIRUS_DETECTED", "FAILURE"]
-		},
-		"deadline": {
-			"type": "string"
-		},
-		"submissionType": {
-			"type": "string"
-		},
-		"blobGuid": {
-			"type": "string"
-		},
-		"documentName": {
-			"type": "string"
-		}
-	}
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "commands/nsip-exam-timetable-submission.schema.json",
+  "title": "nsip-exam-timetable-submission",
+  "description": "Result of processing a new exam timetable submission",
+  "type": "object",
+  "additionalProperties": true,
+  "required": ["status", "deadline", "submissionType", "blobGuid", "documentName"],
+  "properties": {
+    "status": {
+      "type": "string",
+      "enum": ["SUCCESS", "VIRUS_DETECTED", "FAILURE"]
+    },
+    "deadline": {
+      "type": "string"
+    },
+    "submissionType": {
+      "type": "string"
+    },
+    "blobGuid": {
+      "type": "string"
+    },
+    "documentName": {
+      "type": "string"
+    }
+  }
 }

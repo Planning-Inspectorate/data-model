@@ -20,7 +20,7 @@
     "appellantCostsAppliedFor"
   ],
   "allOf": [
-    { "$ref": "appeal-common-submission.schema.json"},
+    { "$ref": "appeal-common-submission.schema.json" },
     {
       "properties": {
         "isGreenBelt": {

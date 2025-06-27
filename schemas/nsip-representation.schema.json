@@ -1,110 +1,110 @@
 {
-	"$schema": "http://json-schema.org/draft-07/schema#",
-	"$id": "nsip-representation.schema.json",
-	"title": "Representation",
-	"description": "NSIP Representation schema",
-	"type": "object",
-	"additionalProperties": true,
-	"required": [
-		"representationId",
-		"referenceId",
-		"examinationLibraryRef",
-		"caseRef",
-		"caseId",
-		"status",
-		"originalRepresentation",
-		"redacted",
-		"redactedRepresentation",
-		"redactedBy",
-		"redactedNotes",
-		"representationFrom",
-		"representedId",
-		"representativeId",
-		"registerFor",
-		"representationType",
-		"dateReceived",
-		"attachmentIds"
-	],
-	"properties": {
-		"representationId": {
-			"type": "integer"
-		},
-		"referenceId": {
-			"examples": ["TR043003-000010"],
-			"type": ["string", "null"]
-		},
-		"examinationLibraryRef": {
-			"examples": ["RR-0001"],
-			"type": ["string", "null"]
-		},
-		"caseRef": {
-			"type": "string"
-		},
-		"caseId": {
-			"type": ["integer", "null"],
-			"examples": [1242],
-			"description": "The unique identifier within the Back Office. This is not the same as the case reference"
-		},
-		"status": {
-			"type": ["string", "null"],
-			"enum": ["awaiting_review", "referred", "valid", "invalid", "published", "archived", "draft", "withdrawn", null]
-		},
-		"originalRepresentation": {
-			"type": "string"
-		},
-		"redacted": {
-			"type": ["boolean", "null"]
-		},
-		"redactedRepresentation": {
-			"type": ["string", "null"]
-		},
-		"redactedBy": {
-			"type": ["string", "null"],
-			"examples": ["Joe Blogs"]
-		},
-		"redactedNotes": {
-			"type": ["string", "null"],
-			"examples": ["Removed names of family members"]
-		},
-		"representationFrom": {
-			"type": ["string", "null"],
-			"enum": ["PERSON", "ORGANISATION", "AGENT", null]
-		},
-		"representedId": {
-			"type": "string",
-			"description": "ServiceUser Id of the person or organisation being represented"
-		},
-		"representativeId": {
-			"type": ["string", "null"],
-			"description": "ServiceUser Id of the person or organisation submitting representation in the case of Agent representationFrom"
-		},
-		"registerFor": {
-			"type": ["string", "null"],
-			"enum": ["PERSON", "ORGANISATION", "FAMILY_GROUP", null]
-		},
-		"representationType": {
-			"type": ["string", "null"],
-			"enum": [
-				"Local Authorities",
-				"Parish Councils",
-				"Members of the Public/Businesses",
-				"Public & Businesses",
-				"Statutory Consultees",
-				"Non-Statutory Organisations",
-				"Another Individual",
-				null
-			]
-		},
-		"dateReceived": {
-			"type": "string",
-			"format": "date-time",
-			"examples": ["2023-07-27T20:30:00.000Z"]
-		},
-		"attachmentIds": {
-			"type": "array",
-			"items": {
-				"type": "string"
-			}
-		}
-	}
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "nsip-representation.schema.json",
+  "title": "Representation",
+  "description": "NSIP Representation schema",
+  "type": "object",
+  "additionalProperties": true,
+  "required": [
+    "representationId",
+    "referenceId",
+    "examinationLibraryRef",
+    "caseRef",
+    "caseId",
+    "status",
+    "originalRepresentation",
+    "redacted",
+    "redactedRepresentation",
+    "redactedBy",
+    "redactedNotes",
+    "representationFrom",
+    "representedId",
+    "representativeId",
+    "registerFor",
+    "representationType",
+    "dateReceived",
+    "attachmentIds"
+  ],
+  "properties": {
+    "representationId": {
+      "type": "integer"
+    },
+    "referenceId": {
+      "examples": ["TR043003-000010"],
+      "type": ["string", "null"]
+    },
+    "examinationLibraryRef": {
+      "examples": ["RR-0001"],
+      "type": ["string", "null"]
+    },
+    "caseRef": {
+      "type": "string"
+    },
+    "caseId": {
+      "type": ["integer", "null"],
+      "examples": [1242],
+      "description": "The unique identifier within the Back Office. This is not the same as the case reference"
+    },
+    "status": {
+      "type": ["string", "null"],
+      "enum": ["awaiting_review", "referred", "valid", "invalid", "published", "archived", "draft", "withdrawn", null]
+    },
+    "originalRepresentation": {
+      "type": "string"
+    },
+    "redacted": {
+      "type": ["boolean", "null"]
+    },
+    "redactedRepresentation": {
+      "type": ["string", "null"]
+    },
+    "redactedBy": {
+      "type": ["string", "null"],
+      "examples": ["Joe Blogs"]
+    },
+    "redactedNotes": {
+      "type": ["string", "null"],
+      "examples": ["Removed names of family members"]
+    },
+    "representationFrom": {
+      "type": ["string", "null"],
+      "enum": ["PERSON", "ORGANISATION", "AGENT", null]
+    },
+    "representedId": {
+      "type": "string",
+      "description": "ServiceUser Id of the person or organisation being represented"
+    },
+    "representativeId": {
+      "type": ["string", "null"],
+      "description": "ServiceUser Id of the person or organisation submitting representation in the case of Agent representationFrom"
+    },
+    "registerFor": {
+      "type": ["string", "null"],
+      "enum": ["PERSON", "ORGANISATION", "FAMILY_GROUP", null]
+    },
+    "representationType": {
+      "type": ["string", "null"],
+      "enum": [
+        "Local Authorities",
+        "Parish Councils",
+        "Members of the Public/Businesses",
+        "Public & Businesses",
+        "Statutory Consultees",
+        "Non-Statutory Organisations",
+        "Another Individual",
+        null
+      ]
+    },
+    "dateReceived": {
+      "type": "string",
+      "format": "date-time",
+      "examples": ["2023-07-27T20:30:00.000Z"]
+    },
+    "attachmentIds": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  }
 }

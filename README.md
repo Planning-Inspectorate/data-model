@@ -222,33 +222,16 @@ schemas = load_all_schemas()
 print(schemas)
 ```
 
-## Updates
+## Contributing
 
-Once a schema is updated, it is important to run
+Once you have updated the schemas, before committing, ensure the generated code/documentation is up to date by running:
 
 `npm run gen`
 
-This runs the following scripts, update the TypeScript definitions:
-
-`npm run gen-types`
-
-and update the generated JavaScript enum constants:
-
-`npm run gen-enums`
-
-and update the generated markdown:
-
-`npm run gen-docs`
-
-and generate a cjs version:
-
-`npm run gen-cjs`
-
-
-and also tag the repo with a new version (format TBC).
-
-> todo: run this on pre-commit or on a pipeline
-
-It is also important to update the Python pydantic models, by running:
+and
 
 `python pins_data_model/gen_models.py`
+
+Commits must follow conventional commits, and the commit types will be used by semantic-release to determine the next version number. For example `feat` commits will result in a minor version bump, while `fix` commits will result in a patch version bump.
+
+The package will be released automatically using semantic-release, on merge to main. This will include a git tag for the release, and publishing to NPM.

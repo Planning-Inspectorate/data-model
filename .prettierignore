@@ -1,0 +1,11 @@
+node_modules
+package.json
+package-lock.json
+README.md
+*.njk
+.env*
+docs/
+src/enums.d.ts
+src/enums.js
+src/schemas.d.ts
+*.cjs

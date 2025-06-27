@@ -157,13 +157,7 @@
       "items": {
         "type": "string"
       },
-      "examples": [
-        "Access",
-        "Listed building and enforcement",
-        "Roads and traffics",
-        "Natural heritage",
-        "Schedule 1"
-      ],
+      "examples": ["Access", "Listed building and enforcement", "Roads and traffics", "Natural heritage", "Schedule 1"],
       "description": "A list of specialisms for allocation purposes"
     },
     "caseSubmittedDate": {
@@ -205,10 +199,7 @@
       "type": ["array", "null"],
       "items": {
         "type": "string",
-        "examples": [
-          "Appeal has not been submitted on time",
-          "The appellant doesn't have the right to appeal"
-        ]
+        "examples": ["Appeal has not been submitted on time", "The appellant doesn't have the right to appeal"]
       },
       "description": "A list of reasons why the appeal is invalid",
       "$comment": "The list will contain items only if the caseValidationOutcome is invalid"
@@ -292,10 +283,7 @@
       "type": ["array", "null"],
       "items": {
         "type": "string",
-        "examples": [
-          "Policies are missing",
-          "Other documents or information are missing"
-        ]
+        "examples": ["Policies are missing", "Other documents or information are missing"]
       },
       "description": "A list of reasons why the questionnaire is incomplete",
       "$comment": "The list will contain items only if the lpaQuestionnaireValidationOutcome is incomplete"
@@ -407,9 +395,7 @@
       "type": ["array", "null"],
       "items": {
         "type": "string",
-        "examples": [
-          "The site is accessible through the small gate on the left of the property"
-        ]
+        "examples": ["The site is accessible through the small gate on the left of the property"]
       },
       "description": "Provided information on site accessibility"
     },
@@ -488,9 +474,7 @@
     },
     "newConditionDetails": {
       "type": ["string", "null"],
-      "examples": [
-        "Since the original application, a number of things have changed..."
-      ],
+      "examples": ["Since the original application, a number of things have changed..."],
       "description": "New conditions details provided by the LPA"
     },
     "nearbyCaseReferences": {
@@ -577,11 +561,11 @@
     "typeOfPlanningApplication": {
       "type": ["string", "null"],
       "enum": [
-        "full-appeal", 
-        "householder-planning", 
-        "outline-planning", 
-        "prior-approval", 
-        "reserved-matters", 
+        "full-appeal",
+        "householder-planning",
+        "outline-planning",
+        "prior-approval",
+        "reserved-matters",
         "removal-or-variation-of-conditions",
         "listed-building",
         "minor-commercial-development",

@@ -96,10 +96,7 @@
       "type": ["array", "null"],
       "items": {
         "type": "string",
-        "examples": [
-          "Other: reason",
-          "Supporting documents missing: document 2"
-        ]
+        "examples": ["Other: reason", "Supporting documents missing: document 2"]
       },
       "description": "A list of free text reasons why the representation has been marked as invalid or incomplete",
       "$comment": "The list will contain items only if the status is `invalid` or `invalid_incomplete` and if invalidOrIncompleteDetails list includes 'other_reason'"
@@ -115,13 +112,7 @@
     },
     "representationType": {
       "type": ["string", "null"],
-      "enum": [
-        "statement",
-        "comment",
-        "final_comment",
-        "proofs_evidence",
-        null
-      ],
+      "enum": ["statement", "comment", "final_comment", "proofs_evidence", null],
       "description": "The type of representation"
     },
     "dateReceived": {

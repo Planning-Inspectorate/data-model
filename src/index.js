@@ -15,10 +15,10 @@ export const commandsPath = path.join(schemasPath, 'commands');
  * @returns {Promise<import('./index.js').LoadedSchemas>}
  */
 export async function loadAllSchemas() {
-  return {
-    schemas: await loadSchemas(schemasPath),
-    commands: await loadSchemas(commandsPath),
-  };
+	return {
+		schemas: await loadSchemas(schemasPath),
+		commands: await loadSchemas(commandsPath)
+	};
 }
 
 /**
@@ -27,8 +27,8 @@ export async function loadAllSchemas() {
  * @returns {import('./index.js').LoadedSchemas}
  */
 export function loadAllSchemasSync() {
-  return {
-    schemas: loadSchemasSync(schemasPath),
-    commands: loadSchemasSync(commandsPath),
-  };
+	return {
+		schemas: loadSchemasSync(schemasPath),
+		commands: loadSchemasSync(commandsPath)
+	};
 }

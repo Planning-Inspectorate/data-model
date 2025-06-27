@@ -1,6 +1,6 @@
 {
-  "name": "pins-data-model",
-  "version": "1.10.3",
+  "name": "@planning-inspectorate/data-model",
+  "version": "0.0.0-semantically-released",
   "description": "JSON Schemas for the Planning Inspectorate's Data Model",
   "main": "src/index.js",
   "type": "module",
@@ -41,7 +41,11 @@
     "lint-staged": "^16.1.2",
     "lodash.snakecase": "^4.1.1",
     "prettier": "^3.6.2",
-    "rollup": "^4.44.1"
+    "rollup": "^4.44.1",
+    "semantic-release": "^24.2.5"
+  },
+  "publishConfig": {
+    "access": "public"
   },
   "lint-staged": {
     "*.js": [

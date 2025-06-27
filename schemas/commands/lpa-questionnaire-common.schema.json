@@ -29,9 +29,7 @@
       "type": ["array", "null"],
       "items": {
         "type": "string",
-        "examples": [
-          "The site is accessible through the small gate on the left of the property"
-        ]
+        "examples": ["The site is accessible through the small gate on the left of the property"]
       },
       "description": "Provided information on site accessibility"
     },

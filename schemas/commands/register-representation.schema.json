@@ -1,51 +1,51 @@
 {
-	"$schema": "http://json-schema.org/draft-07/schema#",
-	"$id": "commands/register-representation.schema.json",
-	"title": "Register Representation",
-	"type": "object",
-	"additionalProperties": true,
-	"required": [
-		"referenceId",
-		"caseReference",
-		"originalRepresentation",
-		"representationFrom",
-		"registerFor",
-		"represented"
-	],
-	"properties": {
-		"referenceId": {
-			"type": "string",
-			"description": "registration identification number"
-		},
-		"caseReference": {
-			"type": "string",
-			"description": "The unique reference of the case"
-		},
-		"representationType": {
-			"type": "string",
-			"description": "Type of representation"
-		},
-		"originalRepresentation": {
-			"type": "string"
-		},
-		"representationFrom": {
-			"type": "string",
-			"enum": ["PERSON", "ORGANISATION", "AGENT"]
-		},
-		"registerFor": {
-			"type": "string",
-			"enum": ["PERSON", "ORGANISATION", "FAMILY_GROUP"]
-		},
-		"represented": {
-			"$ref": "commands/interested-party.schema.json",
-			"description": "Person or organisation being represented"
-		},
-		"representative": {
-			"$ref": "commands/interested-party.schema.json",
-			"description": "Person or organisation submitting representation in the case of Agent representationFrom"
-		},
-		"dateReceived": {
-			"type": "string"
-		}
-	}
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "commands/register-representation.schema.json",
+  "title": "Register Representation",
+  "type": "object",
+  "additionalProperties": true,
+  "required": [
+    "referenceId",
+    "caseReference",
+    "originalRepresentation",
+    "representationFrom",
+    "registerFor",
+    "represented"
+  ],
+  "properties": {
+    "referenceId": {
+      "type": "string",
+      "description": "registration identification number"
+    },
+    "caseReference": {
+      "type": "string",
+      "description": "The unique reference of the case"
+    },
+    "representationType": {
+      "type": "string",
+      "description": "Type of representation"
+    },
+    "originalRepresentation": {
+      "type": "string"
+    },
+    "representationFrom": {
+      "type": "string",
+      "enum": ["PERSON", "ORGANISATION", "AGENT"]
+    },
+    "registerFor": {
+      "type": "string",
+      "enum": ["PERSON", "ORGANISATION", "FAMILY_GROUP"]
+    },
+    "represented": {
+      "$ref": "commands/interested-party.schema.json",
+      "description": "Person or organisation being represented"
+    },
+    "representative": {
+      "$ref": "commands/interested-party.schema.json",
+      "description": "Person or organisation submitting representation in the case of Agent representationFrom"
+    },
+    "dateReceived": {
+      "type": "string"
+    }
+  }
 }

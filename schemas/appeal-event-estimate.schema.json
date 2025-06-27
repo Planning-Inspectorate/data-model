@@ -1,37 +1,31 @@
 {
-    "$schema": "http://json-schema.org/draft-07/schema#",
-    "$id": "appeal-event-estimate.schema.json",
-    "title": "Appeal Event Estimate",
-    "description": "All event estimates belong to a case. A case has only one event estimate.",
-    "type": "object",
-    "additionalProperties": true,
-    "required": [
-        "id",
-        "caseReference",
-        "preparationTime",
-        "sittingTime",
-        "reportingTime"
-    ],
-    "properties": {
-        "id": {
-            "type": "integer",
-            "description": "The unique identifier within the Back Office."
-        },
-        "caseReference": {
-            "type": "string",
-            "description": "The case reference the event estimate belongs to."
-        },
-        "preparationTime": {
-            "type": ["number", "null"],
-            "description": "Estimated inspector time (days) to prepare for event."
-        },
-        "sittingTime": {
-            "type": ["number", "null"],
-            "description": "Estimated inspector time (days) for event."
-        },
-        "reportingTime": {
-            "type": ["number", "null"],
-            "description": "Estimated inspector time (days) for event reporting."
-        }
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "appeal-event-estimate.schema.json",
+  "title": "Appeal Event Estimate",
+  "description": "All event estimates belong to a case. A case has only one event estimate.",
+  "type": "object",
+  "additionalProperties": true,
+  "required": ["id", "caseReference", "preparationTime", "sittingTime", "reportingTime"],
+  "properties": {
+    "id": {
+      "type": "integer",
+      "description": "The unique identifier within the Back Office."
+    },
+    "caseReference": {
+      "type": "string",
+      "description": "The case reference the event estimate belongs to."
+    },
+    "preparationTime": {
+      "type": ["number", "null"],
+      "description": "Estimated inspector time (days) to prepare for event."
+    },
+    "sittingTime": {
+      "type": ["number", "null"],
+      "description": "Estimated inspector time (days) for event."
+    },
+    "reportingTime": {
+      "type": ["number", "null"],
+      "description": "Estimated inspector time (days) for event reporting."
     }
+  }
 }

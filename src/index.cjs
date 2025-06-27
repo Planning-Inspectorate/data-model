@@ -14,19 +14,17 @@ var _documentCurrentScript = typeof document !== 'undefined' ? document.currentS
  * @returns {Promise<Object<string,any>>}
  */
 async function loadSchemas(dirPath) {
-  const entries = await promises.readdir(dirPath);
-  const schemaFiles = entries.filter(isSchemaFile);
+	const entries = await promises.readdir(dirPath);
+	const schemaFiles = entries.filter(isSchemaFile);
 
-  /** @type {Object<string,any>} */
-  const schemaMap = {};
-  await Promise.all(
-    schemaFiles.map(async (filePath) => {
-      schemaMap[path.basename(filePath)] = await loadSchema(
-        path.join(dirPath, filePath)
-      );
-    })
-  );
-  return schemaMap;
+	/** @type {Object<string,any>} */
+	const schemaMap = {};
+	await Promise.all(
+		schemaFiles.map(async (filePath) => {
+			schemaMap[path.basename(filePath)] = await loadSchema(path.join(dirPath, filePath));
+		})
+	);
+	return schemaMap;
 }
 
 /**
@@ -36,8 +34,8 @@ async function loadSchemas(dirPath) {
  * @returns {Promise<any>}
  */
 async function loadSchema(filePath) {
-  const content = await promises.readFile(filePath);
-  return jsoncParser.parse(content.toString());
+	const content = await promises.readFile(filePath);
+	return jsoncParser.parse(content.toString());
 }
 
 /**
@@ -47,8 +45,8 @@ async function loadSchema(filePath) {
  * @returns {boolean}
  */
 function isSchemaFile(filePath) {
-  const fileName = path.basename(filePath);
-  return fileName.endsWith('schema.jsonc') || fileName.endsWith('schema.json');
+	const fileName = path.basename(filePath);
+	return fileName.endsWith('schema.jsonc') || fileName.endsWith('schema.json');
 }
 
 /**
@@ -58,18 +56,18 @@ function isSchemaFile(filePath) {
  * @returns {Object<string,any>}
  */
 function loadSchemasSync(dirPath) {
-  const entries = fs.readdirSync(dirPath);
-  const schemaFiles = entries.filter(isSchemaFile);
+	const entries = fs.readdirSync(dirPath);
+	const schemaFiles = entries.filter(isSchemaFile);
 
-  /** @type {Object<string,any>} */
-  const initialSchemaMap = {};
+	/** @type {Object<string,any>} */
+	const initialSchemaMap = {};
 
-  return schemaFiles.reduce((acc, filePath) => {
-    return {
-      ...acc,
-      [path.basename(filePath)]: loadSchemaSync(path.join(dirPath, filePath)),
-    };
-  }, initialSchemaMap);
+	return schemaFiles.reduce((acc, filePath) => {
+		return {
+			...acc,
+			[path.basename(filePath)]: loadSchemaSync(path.join(dirPath, filePath))
+		};
+	}, initialSchemaMap);
 }
 
 /**
@@ -79,8 +77,8 @@ function loadSchemasSync(dirPath) {
  * @returns {any}
  */
 function loadSchemaSync(filePath) {
-  const content = fs.readFileSync(filePath);
-  return jsoncParser.parse(content.toString());
+	const content = fs.readFileSync(filePath);
+	return jsoncParser.parse(content.toString());
 }
 
 const APPEAL_ALLOCATION_LEVEL = Object.freeze({
@@ -665,10 +663,10 @@ const commandsPath = path.join(schemasPath, 'commands');
  * @returns {Promise<import('./index.js').LoadedSchemas>}
  */
 async function loadAllSchemas() {
-  return {
-    schemas: await loadSchemas(schemasPath),
-    commands: await loadSchemas(commandsPath),
-  };
+	return {
+		schemas: await loadSchemas(schemasPath),
+		commands: await loadSchemas(commandsPath)
+	};
 }
 
 /**
@@ -677,10 +675,10 @@ async function loadAllSchemas() {
  * @returns {import('./index.js').LoadedSchemas}
  */
 function loadAllSchemasSync() {
-  return {
-    schemas: loadSchemasSync(schemasPath),
-    commands: loadSchemasSync(commandsPath),
-  };
+	return {
+		schemas: loadSchemasSync(schemasPath),
+		commands: loadSchemasSync(commandsPath)
+	};
 }
 
 exports.APPEAL_ALLOCATION_LEVEL = APPEAL_ALLOCATION_LEVEL;

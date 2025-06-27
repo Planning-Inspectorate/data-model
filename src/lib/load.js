@@ -10,19 +10,17 @@ import path from 'path';
  * @returns {Promise<Object<string,any>>}
  */
 export async function loadSchemas(dirPath) {
-  const entries = await readdir(dirPath);
-  const schemaFiles = entries.filter(isSchemaFile);
+	const entries = await readdir(dirPath);
+	const schemaFiles = entries.filter(isSchemaFile);
 
-  /** @type {Object<string,any>} */
-  const schemaMap = {};
-  await Promise.all(
-    schemaFiles.map(async (filePath) => {
-      schemaMap[path.basename(filePath)] = await loadSchema(
-        path.join(dirPath, filePath)
-      );
-    })
-  );
-  return schemaMap;
+	/** @type {Object<string,any>} */
+	const schemaMap = {};
+	await Promise.all(
+		schemaFiles.map(async (filePath) => {
+			schemaMap[path.basename(filePath)] = await loadSchema(path.join(dirPath, filePath));
+		})
+	);
+	return schemaMap;
 }
 
 /**
@@ -32,8 +30,8 @@ export async function loadSchemas(dirPath) {
  * @returns {Promise<any>}
  */
 async function loadSchema(filePath) {
-  const content = await readFile(filePath);
-  return parse(content.toString());
+	const content = await readFile(filePath);
+	return parse(content.toString());
 }
 
 /**
@@ -43,8 +41,8 @@ async function loadSchema(filePath) {
  * @returns {boolean}
  */
 function isSchemaFile(filePath) {
-  const fileName = path.basename(filePath);
-  return fileName.endsWith('schema.jsonc') || fileName.endsWith('schema.json');
+	const fileName = path.basename(filePath);
+	return fileName.endsWith('schema.jsonc') || fileName.endsWith('schema.json');
 }
 
 /**
@@ -54,18 +52,18 @@ function isSchemaFile(filePath) {
  * @returns {Object<string,any>}
  */
 export function loadSchemasSync(dirPath) {
-  const entries = readdirSync(dirPath);
-  const schemaFiles = entries.filter(isSchemaFile);
+	const entries = readdirSync(dirPath);
+	const schemaFiles = entries.filter(isSchemaFile);
 
-  /** @type {Object<string,any>} */
-  const initialSchemaMap = {};
+	/** @type {Object<string,any>} */
+	const initialSchemaMap = {};
 
-  return schemaFiles.reduce((acc, filePath) => {
-    return {
-      ...acc,
-      [path.basename(filePath)]: loadSchemaSync(path.join(dirPath, filePath)),
-    };
-  }, initialSchemaMap);
+	return schemaFiles.reduce((acc, filePath) => {
+		return {
+			...acc,
+			[path.basename(filePath)]: loadSchemaSync(path.join(dirPath, filePath))
+		};
+	}, initialSchemaMap);
 }
 
 /**
@@ -75,6 +73,6 @@ export function loadSchemasSync(dirPath) {
  * @returns {any}
  */
 function loadSchemaSync(filePath) {
-  const content = readFileSync(filePath);
-  return parse(content.toString());
+	const content = readFileSync(filePath);
+	return parse(content.toString());
 }

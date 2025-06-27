@@ -16,7 +16,7 @@
     "lpaStatement"
   ],
   "allOf": [
-    { "$ref": "lpa-questionnaire-common.schema.json"},
+    { "$ref": "lpa-questionnaire-common.schema.json" },
     {
       "properties": {
         "isCorrectAppealType": {
@@ -42,9 +42,7 @@
         },
         "newConditionDetails": {
           "type": ["string", "null"],
-          "examples": [
-            "Since the original application, a number of things have changed..."
-          ],
+          "examples": ["Since the original application, a number of things have changed..."],
           "description": "New conditions details provided by the LPA"
         },
         "notificationMethod": {

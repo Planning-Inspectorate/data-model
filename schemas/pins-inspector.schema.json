@@ -1,70 +1,47 @@
 {
-    "$schema": "http://json-schema.org/draft-07/schema#",
-    "$id": "pins-inspector.schema.json",
-    "title": "PINS Inspector",
-    "description": "Inspector attributes as per Horizon. This will be extended with SAP/Entra data",
-    "type": "object",
-    "additionalProperties": true,
-    "required": [
-        "firstName",
-        "lastName",
-        "horizonId",
-        "email"
-    ],
-    "properties": {
-        "horizonId": {
-            "type": "string",
-            "description": "The PINS-generated unique horizon ID"
-        },
-        "firstName": {
-            "type": "string",
-            "description": "The first name of the inspector"
-        },        
-        "lastName": {
-            "type": "string",
-            "description": "The last name of the inspector"
-        },
-        "postName": {
-            "type": [
-                "string",
-                "null"
-            ],
-            "description": "The post name of the inspector"
-        },
-        "organisationName": {
-            "type": [
-                "string",
-                "null"
-            ],
-            "description": "The organisation name of the inspector"
-        },
-        "title": {
-            "type": [
-                "string",
-                "null"
-            ],
-            "description": "The title of the inspector"
-        },
-        "salutation": {
-            "type": [
-                "string",
-                "null"
-            ],
-            "description": "The salutation of the inspector"
-        },
-        "qualifications": {
-            "type": [
-                "string",
-                "null"
-            ],
-            "description": "The qualifications of the inspector"
-        },
-        "email": {
-            "type": [
-                "string",
-                "null"
-            ],
-            "description": "The email address of the inspector"
-        }
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "pins-inspector.schema.json",
+  "title": "PINS Inspector",
+  "description": "Inspector attributes as per Horizon. This will be extended with SAP/Entra data",
+  "type": "object",
+  "additionalProperties": true,
+  "required": ["firstName", "lastName", "horizonId", "email"],
+  "properties": {
+    "horizonId": {
+      "type": "string",
+      "description": "The PINS-generated unique horizon ID"
+    },
+    "firstName": {
+      "type": "string",
+      "description": "The first name of the inspector"
+    },
+    "lastName": {
+      "type": "string",
+      "description": "The last name of the inspector"
+    },
+    "postName": {
+      "type": ["string", "null"],
+      "description": "The post name of the inspector"
+    },
+    "organisationName": {
+      "type": ["string", "null"],
+      "description": "The organisation name of the inspector"
+    },
+    "title": {
+      "type": ["string", "null"],
+      "description": "The title of the inspector"
+    },
+    "salutation": {
+      "type": ["string", "null"],
+      "description": "The salutation of the inspector"
+    },
+    "qualifications": {
+      "type": ["string", "null"],
+      "description": "The qualifications of the inspector"
+    },
+    "email": {
+      "type": ["string", "null"],
+      "description": "The email address of the inspector"
     }
+  }
 }

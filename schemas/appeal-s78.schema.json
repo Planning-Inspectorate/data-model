@@ -185,7 +185,7 @@
     },
     "caseType": {
       "type": "string",
-      "enum": ["C", "D", "F", "G", "H", "L", "Q", "S", "V", "W", "X", "Y", "Z"],
+      "enum": ["C", "D", "F", "G", "H", "L", "Q", "S", "V", "W", "X", "Y", "Z", "ZA", "ZP"],
       "description": "The internal code for an appeal type, e.g. D (Householder)",
       "$comment": "Also available on HAS cases"
     },

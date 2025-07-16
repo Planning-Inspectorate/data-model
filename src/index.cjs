@@ -164,6 +164,8 @@ const APPEAL_CASE_TYPE = Object.freeze({
   X: 'X',
   Y: 'Y',
   Z: 'Z',
+  ZA: 'ZA',
+  ZP: 'ZP',
 });
 
 const APPEAL_CASE_VALIDATION_OUTCOME = Object.freeze({

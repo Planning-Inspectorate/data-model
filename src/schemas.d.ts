@@ -76,7 +76,7 @@ export interface AppealDocument {
   /**
    * The internal code for an appeal type, e.g. Householder (D)
    */
-  caseType: 'C' | 'D' | 'F' | 'G' | 'H' | 'L' | 'Q' | 'S' | 'V' | 'W' | 'X' | 'Y' | 'Z' | null;
+  caseType: 'C' | 'D' | 'F' | 'G' | 'H' | 'L' | 'Q' | 'S' | 'V' | 'W' | 'X' | 'Y' | 'Z' | 'ZA' | 'ZP' | null;
   /**
    * Indicates the redaction status for the document
    */
@@ -336,7 +336,7 @@ export interface AppealHASCase {
   /**
    * The internal code for an appeal type, e.g. D (Householder)
    */
-  caseType: 'C' | 'D' | 'F' | 'G' | 'H' | 'L' | 'Q' | 'S' | 'V' | 'W' | 'X' | 'Y' | 'Z';
+  caseType: 'C' | 'D' | 'F' | 'G' | 'H' | 'L' | 'Q' | 'S' | 'V' | 'W' | 'X' | 'Y' | 'Z' | 'ZA' | 'ZP';
   /**
    * The type of procedure for the appeal
    */
@@ -784,7 +784,7 @@ export interface AppealS78Case {
   /**
    * The internal code for an appeal type, e.g. D (Householder)
    */
-  caseType: 'C' | 'D' | 'F' | 'G' | 'H' | 'L' | 'Q' | 'S' | 'V' | 'W' | 'X' | 'Y' | 'Z';
+  caseType: 'C' | 'D' | 'F' | 'G' | 'H' | 'L' | 'Q' | 'S' | 'V' | 'W' | 'X' | 'Y' | 'Z' | 'ZA' | 'ZP';
   /**
    * The type of procedure for the appeal
    */

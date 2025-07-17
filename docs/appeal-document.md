@@ -480,6 +480,8 @@ The internal code for an appeal type, e.g. Householder (D)
 | `"X"`  |             |
 | `"Y"`  |             |
 | `"Z"`  |             |
+| `"ZA"` |             |
+| `"ZP"` |             |
 | `null` |             |
 
 ## redactedStatus

@@ -126,7 +126,7 @@
     },
     "caseType": {
       "type": ["string", "null"],
-      "enum": ["C", "D", "F", "G", "H", "L", "Q", "S", "V", "W", "X", "Y", "Z", null],
+      "enum": ["C", "D", "F", "G", "H", "L", "Q", "S", "V", "W", "X", "Y", "Z", "ZA", "ZP", null],
       "description": "The internal code for an appeal type, e.g. Householder (D)"
     },
     "redactedStatus": {

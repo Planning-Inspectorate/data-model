@@ -219,21 +219,23 @@ The internal code for an appeal type, e.g. D (Householder)
 
 **enum**: the value of this property must be equal to one of the following values:
 
-| Value | Explanation |
-| :---- | :---------- |
-| `"C"` |             |
-| `"D"` |             |
-| `"F"` |             |
-| `"G"` |             |
-| `"H"` |             |
-| `"L"` |             |
-| `"Q"` |             |
-| `"S"` |             |
-| `"V"` |             |
-| `"W"` |             |
-| `"X"` |             |
-| `"Y"` |             |
-| `"Z"` |             |
+| Value  | Explanation |
+| :----- | :---------- |
+| `"C"`  |             |
+| `"D"`  |             |
+| `"F"`  |             |
+| `"G"`  |             |
+| `"H"`  |             |
+| `"L"`  |             |
+| `"Q"`  |             |
+| `"S"`  |             |
+| `"V"`  |             |
+| `"W"`  |             |
+| `"X"`  |             |
+| `"Y"`  |             |
+| `"Z"`  |             |
+| `"ZA"` |             |
+| `"ZP"` |             |
 
 ## caseProcedure
 

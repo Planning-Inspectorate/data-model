@@ -524,6 +524,7 @@ const NSIP_STATUS = Object.freeze({
   INVALID: 'invalid',
   PUBLISHED: 'published',
   REFERRED: 'referred',
+  UNPUBLISHED: 'unpublished',
   VALID: 'valid',
   WITHDRAWN: 'withdrawn',
 });

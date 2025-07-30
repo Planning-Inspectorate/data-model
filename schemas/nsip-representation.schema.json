@@ -47,7 +47,18 @@
     },
     "status": {
       "type": ["string", "null"],
-      "enum": ["awaiting_review", "referred", "valid", "invalid", "published", "archived", "draft", "withdrawn", "unpublished", null]
+      "enum": [
+        "awaiting_review",
+        "referred",
+        "valid",
+        "invalid",
+        "published",
+        "archived",
+        "draft",
+        "withdrawn",
+        "unpublished",
+        null
+      ]
     },
     "originalRepresentation": {
       "type": "string"

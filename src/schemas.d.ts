@@ -2255,6 +2255,7 @@ export interface Representation {
     | 'archived'
     | 'draft'
     | 'withdrawn'
+    | 'unpublished'
     | null;
   originalRepresentation: string;
   redacted: boolean | null;

@@ -522,6 +522,7 @@ export const NSIP_STATUS = {
   INVALID: 'invalid',
   PUBLISHED: 'published',
   REFERRED: 'referred',
+  UNPUBLISHED: 'unpublished',
   VALID: 'valid',
   WITHDRAWN: 'withdrawn',
 };

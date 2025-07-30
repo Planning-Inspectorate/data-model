@@ -166,7 +166,6 @@ The unique identifier within the Back Office. This is not the same as the case r
 | `"archived"`        |             |
 | `"draft"`           |             |
 | `"withdrawn"`       |             |
-| `"unpublished"`     |             |
 | `null`              |             |
 
 ## originalRepresentation

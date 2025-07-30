@@ -18,7 +18,6 @@ class Status(Enum):
     archived = "archived"
     draft = "draft"
     withdrawn = "withdrawn"
-    unpublished = "unpublished"
     NoneType_None = None
 
 

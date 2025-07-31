@@ -3382,6 +3382,9 @@ export interface AppellantSubmissionCommand {
         caseType?: 'D';
       } & AppellantHASSubmissionProperties)
     | ({
+        caseType?: 'ZP';
+      } & AppellantHASSubmissionProperties)
+    | ({
         caseType?: 'W';
       } & AppellantS78SubmissionProperties)
     | ({
@@ -4262,6 +4265,9 @@ export interface LPAQuestionnaireCommand {
       } & LPAQS78SubmissionProperties)
     | ({
         caseType?: 'D';
+      } & LPAQHASSubmissionProperties)
+    | ({
+        caseType?: 'ZP';
       } & LPAQHASSubmissionProperties);
   documents: {
     /**

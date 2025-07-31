@@ -27,6 +27,12 @@
         },
         {
           "allOf": [{ "properties": { "caseType": { "const": "D" } } }, { "$ref": "lpa-questionnaire-has.schema.json" }]
+        },
+        {
+          "allOf": [
+            { "properties": { "caseType": { "const": "ZP" } } },
+            { "$ref": "lpa-questionnaire-has.schema.json" }
+          ]
         }
       ]
     },

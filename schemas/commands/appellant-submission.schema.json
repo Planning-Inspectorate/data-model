@@ -17,6 +17,12 @@
           "allOf": [{ "properties": { "caseType": { "const": "D" } } }, { "$ref": "appeal-has-submission.schema.json" }]
         },
         {
+          "allOf": [
+            { "properties": { "caseType": { "const": "ZP" } } },
+            { "$ref": "appeal-has-submission.schema.json" }
+          ]
+        },
+        {
           "allOf": [{ "properties": { "caseType": { "const": "W" } } }, { "$ref": "appeal-s78-submission.schema.json" }]
         },
         {

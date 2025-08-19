@@ -29,7 +29,7 @@ export async function loadSchemas(dirPath) {
  * @param {string} filePath
  * @returns {Promise<any>}
  */
-async function loadSchema(filePath) {
+export async function loadSchema(filePath) {
 	const content = await readFile(filePath);
 	return parse(content.toString());
 }

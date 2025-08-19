@@ -3,6 +3,7 @@ import path from 'path';
 import url from 'url';
 import { loadAllSchemas } from '../index.js';
 import snakeCase from 'lodash.snakecase';
+import { loadSchema } from './load.js';
 
 const __dirname = path.dirname(url.fileURLToPath(import.meta.url));
 
@@ -25,6 +26,9 @@ async function run() {
 		const schema = s.schemas[schemaName];
 		collectEnumProps(enumProps, schema.properties, schemaPrefix(schemaName));
 	}
+
+	const staticEnums = await loadSchema(path.join(__dirname, 'enums-static.schema.json'));
+	collectEnumProps(enumProps, staticEnums.properties, 'message');
 
 	let output = '';
 	let tsOutput = '';

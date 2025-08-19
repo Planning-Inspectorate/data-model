@@ -421,6 +421,14 @@ const CASE_STAGE = Object.freeze({
   WITHDRAWN: 'withdrawn',
 });
 
+const MESSAGE_EVENT_TYPE = Object.freeze({
+  CREATE: 'Create',
+  DELETE: 'Delete',
+  PUBLISH: 'Publish',
+  UNPUBLISH: 'Unpublish',
+  UPDATE: 'Update',
+});
+
 const METHOD = Object.freeze({
   EMAIL: 'email',
   FAX: 'fax',
@@ -715,6 +723,7 @@ exports.APPEAL_SOURCE_SYSTEM = APPEAL_SOURCE_SYSTEM;
 exports.APPEAL_TYPE_OF_PLANNING_APPLICATION = APPEAL_TYPE_OF_PLANNING_APPLICATION;
 exports.APPEAL_VIRUS_CHECK_STATUS = APPEAL_VIRUS_CHECK_STATUS;
 exports.CASE_STAGE = CASE_STAGE;
+exports.MESSAGE_EVENT_TYPE = MESSAGE_EVENT_TYPE;
 exports.METHOD = METHOD;
 exports.NSIP_CASE_TYPE = NSIP_CASE_TYPE;
 exports.NSIP_DECISION = NSIP_DECISION;

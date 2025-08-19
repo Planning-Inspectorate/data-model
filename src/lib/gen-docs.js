@@ -1,5 +1,5 @@
 import { jsonschema2md } from '@adobe/jsonschema2md';
-import { loadAllSchemas } from './index.js';
+import { loadAllSchemas } from '../index.js';
 import fs from 'fs/promises';
 
 /**

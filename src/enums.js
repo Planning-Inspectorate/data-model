@@ -338,6 +338,14 @@ export const CASE_STAGE = Object.freeze({
   WITHDRAWN: 'withdrawn',
 });
 
+export const MESSAGE_EVENT_TYPE = Object.freeze({
+  CREATE: 'Create',
+  DELETE: 'Delete',
+  PUBLISH: 'Publish',
+  UNPUBLISH: 'Unpublish',
+  UPDATE: 'Update',
+});
+
 export const METHOD = Object.freeze({
   EMAIL: 'email',
   FAX: 'fax',

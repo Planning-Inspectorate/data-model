@@ -338,6 +338,14 @@ export const CASE_STAGE = {
   WITHDRAWN: 'withdrawn',
 };
 
+export const MESSAGE_EVENT_TYPE = {
+  CREATE: 'Create',
+  DELETE: 'Delete',
+  PUBLISH: 'Publish',
+  UNPUBLISH: 'Unpublish',
+  UPDATE: 'Update',
+};
+
 export const METHOD = {
   EMAIL: 'email',
   FAX: 'fax',

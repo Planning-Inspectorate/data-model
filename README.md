@@ -9,6 +9,7 @@ All messages over the enterprise service bus are in Data Model compliant formats
 * Messages broadcast over the service bus must be pre-validated against the schema.
 * Each service bus topic corresponds to one schema. 
 * Each message encompasses the complete state of an entity (as defined by [ECST](https://blogs.mulesoft.com/api-integration/strategy/event-carried-state-messages/)) and does not delineate specific changes (the delta). 
+* Each message will include a message event type, which is sent as `applicationProperties.type` (see [applicationProperties](https://learn.microsoft.com/en-us/javascript/api/%40azure/service-bus/servicebusmessage?view=azure-node-latest#@azure-service-bus-servicebusmessage-applicationproperties)), and is one of the values defined by the `eventType` enum in [enums-static.schema.json](./src/lib/enums-static.schema.json)
 * Consumers must support processing related messages received through different topics regardless of the order in which they are sent.
 * Values required by the Data Model cannot be null, while optional values must be null if they have no value. 
 

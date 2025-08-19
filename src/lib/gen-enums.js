@@ -1,13 +1,13 @@
 import fs from 'fs/promises';
 import path from 'path';
 import url from 'url';
-import { loadAllSchemas } from './index.js';
+import { loadAllSchemas } from '../index.js';
 import snakeCase from 'lodash.snakecase';
 
 const __dirname = path.dirname(url.fileURLToPath(import.meta.url));
 
-export const constPath = path.join(__dirname, 'enums.js');
-export const constTsPath = path.join(__dirname, 'enums.d.ts');
+export const constPath = path.join(__dirname, '..', 'enums.js');
+export const constTsPath = path.join(__dirname, '..', 'enums.d.ts');
 
 const SPACING = '  ';
 const NEW_LINE = '\r\n';

@@ -1,13 +1,13 @@
 import fs from 'fs/promises';
 import path from 'path';
 import url from 'url';
-import { loadAllSchemas } from './index.js';
+import { loadAllSchemas } from '../index.js';
 import { compile } from 'json-schema-to-typescript';
-import { schemasPath, commandsPath } from './index.js';
+import { schemasPath, commandsPath } from '../index.js';
 
 const __dirname = path.dirname(url.fileURLToPath(import.meta.url));
 
-export const typesPath = path.join(__dirname, 'schemas.d.ts');
+export const typesPath = path.join(__dirname, '..', 'schemas.d.ts');
 
 /**
  * Load all schemas and generate TypeScript definitions

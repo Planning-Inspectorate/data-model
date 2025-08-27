@@ -1055,6 +1055,18 @@
         "other-minor",
         null
       ]
+    },
+    "statementOfCommonGroundDueDate": {
+      "type": ["string", "null"],
+      "format": "date-time",
+      "examples": ["2023-07-27T20:30:00.000Z"],
+      "$comment": "Only available in S78 cases"
+    },
+    "planningObligationDueDate": {
+      "type": ["string", "null"],
+      "format": "date-time",
+      "examples": ["2023-07-27T20:30:00.000Z"],
+      "$comment": "Only available in S78 cases"
     }
   }
 }

@@ -141,6 +141,8 @@
 | [siteWithinSSSI](#sitewithinsssi)                                                     | `boolean` | Required | can be null    | [Appeal S78 Case](appeal-s78-properties-sitewithinsssi.md "appeal-s78.schema.json#/properties/siteWithinSSSI")                                                     |
 | [typeOfPlanningApplication](#typeofplanningapplication)                               | `string`  | Required | can be null    | [Appeal S78 Case](appeal-s78-properties-typeofplanningapplication.md "appeal-s78.schema.json#/properties/typeOfPlanningApplication")                               |
 | [developmentType](#developmenttype)                                                   | `string`  | Required | can be null    | [Appeal S78 Case](appeal-s78-properties-developmenttype.md "appeal-s78.schema.json#/properties/developmentType")                                                   |
+| [statementOfCommonGroundDueDate](#statementofcommongroundduedate)                     | `string`  | Optional | can be null    | [Appeal S78 Case](appeal-s78-properties-statementofcommongroundduedate.md "appeal-s78.schema.json#/properties/statementOfCommonGroundDueDate")                     |
+| [planningObligationDueDate](#planningobligationduedate)                               | `string`  | Optional | can be null    | [Appeal S78 Case](appeal-s78-properties-planningobligationduedate.md "appeal-s78.schema.json#/properties/planningObligationDueDate")                               |
 | Additional Properties                                                                 | Any       | Optional | can be null    |                                                                                                                                                                    |
 
 ## caseId
@@ -3601,6 +3603,66 @@ The net gain in residences of the proposed development
 | `"other-major"`             |             |
 | `"other-minor"`             |             |
 | `null`                      |             |
+
+## statementOfCommonGroundDueDate
+
+
+
+> Only available in S78 cases
+
+`statementOfCommonGroundDueDate`
+
+* is optional
+
+* Type: `string`
+
+* can be null
+
+* defined in: [Appeal S78 Case](appeal-s78-properties-statementofcommongroundduedate.md "appeal-s78.schema.json#/properties/statementOfCommonGroundDueDate")
+
+### statementOfCommonGroundDueDate Type
+
+`string`
+
+### statementOfCommonGroundDueDate Constraints
+
+**date time**: the string must be a date time string, according to [RFC 3339, section 5.6](https://tools.ietf.org/html/rfc3339 "check the specification")
+
+### statementOfCommonGroundDueDate Examples
+
+```json
+"2023-07-27T20:30:00.000Z"
+```
+
+## planningObligationDueDate
+
+
+
+> Only available in S78 cases
+
+`planningObligationDueDate`
+
+* is optional
+
+* Type: `string`
+
+* can be null
+
+* defined in: [Appeal S78 Case](appeal-s78-properties-planningobligationduedate.md "appeal-s78.schema.json#/properties/planningObligationDueDate")
+
+### planningObligationDueDate Type
+
+`string`
+
+### planningObligationDueDate Constraints
+
+**date time**: the string must be a date time string, according to [RFC 3339, section 5.6](https://tools.ietf.org/html/rfc3339 "check the specification")
+
+### planningObligationDueDate Examples
+
+```json
+"2023-07-27T20:30:00.000Z"
+```
 
 ## Additional Properties
 

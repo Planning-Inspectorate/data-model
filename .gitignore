@@ -17,6 +17,7 @@ __pycache__/
 *.py[cod]
 *$py.class
 .venv
+.python-version
 
 # Python Distribution / packaging
 .Python

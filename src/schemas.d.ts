@@ -1301,6 +1301,8 @@ export interface AppealS78Case {
     | 'other-major'
     | 'other-minor'
     | null;
+  statementOfCommonGroundDueDate?: string | null;
+  planningObligationDueDate?: string | null;
   [k: string]: unknown;
 }
 

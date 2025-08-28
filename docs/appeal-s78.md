@@ -3561,6 +3561,7 @@ The net gain in residences of the proposed development
 | `"removal-or-variation-of-conditions"` |             |
 | `"listed-building"`                    |             |
 | `"minor-commercial-development"`       |             |
+| `"advertisement"`                      |             |
 | `null`                                 |             |
 
 ## developmentType

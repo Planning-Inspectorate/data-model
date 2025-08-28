@@ -307,6 +307,7 @@ export const APPEAL_SOURCE_SYSTEM = {
 };
 
 export const APPEAL_TYPE_OF_PLANNING_APPLICATION = {
+  ADVERTISEMENT: 'advertisement',
   FULL_APPEAL: 'full-appeal',
   HOUSEHOLDER_PLANNING: 'householder-planning',
   LISTED_BUILDING: 'listed-building',

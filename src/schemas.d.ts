@@ -654,6 +654,7 @@ export interface AppealHASCase {
     | 'removal-or-variation-of-conditions'
     | 'listed-building'
     | 'minor-commercial-development'
+    | 'advertisement'
     | null;
   [k: string]: unknown;
 }
@@ -1283,6 +1284,7 @@ export interface AppealS78Case {
     | 'removal-or-variation-of-conditions'
     | 'listed-building'
     | 'minor-commercial-development'
+    | 'advertisement'
     | null;
   developmentType:
     | 'householder'
@@ -2704,6 +2706,7 @@ export interface AppellantCommonSubmissionProperties {
     | 'removal-or-variation-of-conditions'
     | 'listed-building'
     | 'minor-commercial-development'
+    | 'advertisement'
     | null;
   [k: string]: unknown;
 }
@@ -2883,6 +2886,7 @@ export interface AppellantCommonSubmissionProperties {
     | 'removal-or-variation-of-conditions'
     | 'listed-building'
     | 'minor-commercial-development'
+    | 'advertisement'
     | null;
   [k: string]: unknown;
 }
@@ -3255,6 +3259,7 @@ export interface AppellantCommonSubmissionProperties {
     | 'removal-or-variation-of-conditions'
     | 'listed-building'
     | 'minor-commercial-development'
+    | 'advertisement'
     | null;
   [k: string]: unknown;
 }
@@ -3635,6 +3640,7 @@ export interface AppellantCommonSubmissionProperties {
     | 'removal-or-variation-of-conditions'
     | 'listed-building'
     | 'minor-commercial-development'
+    | 'advertisement'
     | null;
   [k: string]: unknown;
 }

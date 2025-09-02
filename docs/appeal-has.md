@@ -1953,6 +1953,7 @@ Indicates if the appellant has applied for costs
 | `"removal-or-variation-of-conditions"` |             |
 | `"listed-building"`                    |             |
 | `"minor-commercial-development"`       |             |
+| `"advertisement"`                      |             |
 | `null`                                 |             |
 
 ## Additional Properties

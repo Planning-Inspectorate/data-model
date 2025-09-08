@@ -2,6 +2,12 @@
 
 `object` ([Appeal S78 Case](appeal-s78.md))
 
+any of
+
+* [Untitled undefined type in Appeal S78 Case](appeal-s78-anyof-0.md "check type definition")
+
+* [Untitled undefined type in Appeal S78 Case](appeal-s78-anyof-1.md "check type definition")
+
 # Appeal S78 Case Properties
 
 | Property                                                                              | Type      | Required | Nullable       | Defined by                                                                                                                                                         |
@@ -52,11 +58,11 @@
 | [applicationDecision](#applicationdecision)                                           | `string`  | Required | cannot be null | [Appeal S78 Case](appeal-s78-properties-applicationdecision.md "appeal-s78.schema.json#/properties/applicationDecision")                                           |
 | [applicationDecisionDate](#applicationdecisiondate)                                   | `string`  | Required | can be null    | [Appeal S78 Case](appeal-s78-properties-applicationdecisiondate.md "appeal-s78.schema.json#/properties/applicationDecisionDate")                                   |
 | [caseSubmissionDueDate](#casesubmissionduedate)                                       | `string`  | Required | can be null    | [Appeal S78 Case](appeal-s78-properties-casesubmissionduedate.md "appeal-s78.schema.json#/properties/caseSubmissionDueDate")                                       |
-| [siteAddressLine1](#siteaddressline1)                                                 | `string`  | Required | cannot be null | [Appeal S78 Case](appeal-s78-properties-siteaddressline1.md "appeal-s78.schema.json#/properties/siteAddressLine1")                                                 |
-| [siteAddressLine2](#siteaddressline2)                                                 | `string`  | Required | can be null    | [Appeal S78 Case](appeal-s78-properties-siteaddressline2.md "appeal-s78.schema.json#/properties/siteAddressLine2")                                                 |
-| [siteAddressTown](#siteaddresstown)                                                   | `string`  | Required | cannot be null | [Appeal S78 Case](appeal-s78-properties-siteaddresstown.md "appeal-s78.schema.json#/properties/siteAddressTown")                                                   |
-| [siteAddressCounty](#siteaddresscounty)                                               | `string`  | Required | can be null    | [Appeal S78 Case](appeal-s78-properties-siteaddresscounty.md "appeal-s78.schema.json#/properties/siteAddressCounty")                                               |
-| [siteAddressPostcode](#siteaddresspostcode)                                           | `string`  | Required | cannot be null | [Appeal S78 Case](appeal-s78-properties-siteaddresspostcode.md "appeal-s78.schema.json#/properties/siteAddressPostcode")                                           |
+| [siteAddressLine1](#siteaddressline1)                                                 | `string`  | Optional | can be null    | [Appeal S78 Case](appeal-s78-properties-siteaddressline1.md "appeal-s78.schema.json#/properties/siteAddressLine1")                                                 |
+| [siteAddressLine2](#siteaddressline2)                                                 | `string`  | Optional | can be null    | [Appeal S78 Case](appeal-s78-properties-siteaddressline2.md "appeal-s78.schema.json#/properties/siteAddressLine2")                                                 |
+| [siteAddressTown](#siteaddresstown)                                                   | `string`  | Optional | can be null    | [Appeal S78 Case](appeal-s78-properties-siteaddresstown.md "appeal-s78.schema.json#/properties/siteAddressTown")                                                   |
+| [siteAddressCounty](#siteaddresscounty)                                               | `string`  | Optional | can be null    | [Appeal S78 Case](appeal-s78-properties-siteaddresscounty.md "appeal-s78.schema.json#/properties/siteAddressCounty")                                               |
+| [siteAddressPostcode](#siteaddresspostcode)                                           | `string`  | Optional | can be null    | [Appeal S78 Case](appeal-s78-properties-siteaddresspostcode.md "appeal-s78.schema.json#/properties/siteAddressPostcode")                                           |
 | [siteAccessDetails](#siteaccessdetails)                                               | `array`   | Required | can be null    | [Appeal S78 Case](appeal-s78-properties-siteaccessdetails.md "appeal-s78.schema.json#/properties/siteAccessDetails")                                               |
 | [siteSafetyDetails](#sitesafetydetails)                                               | `array`   | Required | can be null    | [Appeal S78 Case](appeal-s78-properties-sitesafetydetails.md "appeal-s78.schema.json#/properties/siteSafetyDetails")                                               |
 | [siteAreaSquareMetres](#siteareasquaremetres)                                         | `number`  | Required | can be null    | [Appeal S78 Case](appeal-s78-properties-siteareasquaremetres.md "appeal-s78.schema.json#/properties/siteAreaSquareMetres")                                         |
@@ -135,8 +141,8 @@
 | [siteNoticesSentDate](#sitenoticessentdate)                                           | `string`  | Required | can be null    | [Appeal S78 Case](appeal-s78-properties-sitenoticessentdate.md "appeal-s78.schema.json#/properties/siteNoticesSentDate")                                           |
 | [statementDueDate](#statementduedate)                                                 | `string`  | Required | can be null    | [Appeal S78 Case](appeal-s78-properties-statementduedate.md "appeal-s78.schema.json#/properties/statementDueDate")                                                 |
 | [numberOfResidencesNetChange](#numberofresidencesnetchange)                           | `number`  | Required | can be null    | [Appeal S78 Case](appeal-s78-properties-numberofresidencesnetchange.md "appeal-s78.schema.json#/properties/numberOfResidencesNetChange")                           |
-| [siteGridReferenceEasting](#sitegridreferenceeasting)                                 | `string`  | Required | can be null    | [Appeal S78 Case](appeal-s78-properties-sitegridreferenceeasting.md "appeal-s78.schema.json#/properties/siteGridReferenceEasting")                                 |
-| [siteGridReferenceNorthing](#sitegridreferencenorthing)                               | `string`  | Required | can be null    | [Appeal S78 Case](appeal-s78-properties-sitegridreferencenorthing.md "appeal-s78.schema.json#/properties/siteGridReferenceNorthing")                               |
+| [siteGridReferenceEasting](#sitegridreferenceeasting)                                 | `string`  | Optional | can be null    | [Appeal S78 Case](appeal-s78-properties-sitegridreferenceeasting.md "appeal-s78.schema.json#/properties/siteGridReferenceEasting")                                 |
+| [siteGridReferenceNorthing](#sitegridreferencenorthing)                               | `string`  | Optional | can be null    | [Appeal S78 Case](appeal-s78-properties-sitegridreferencenorthing.md "appeal-s78.schema.json#/properties/siteGridReferenceNorthing")                               |
 | [siteViewableFromRoad](#siteviewablefromroad)                                         | `boolean` | Required | can be null    | [Appeal S78 Case](appeal-s78-properties-siteviewablefromroad.md "appeal-s78.schema.json#/properties/siteViewableFromRoad")                                         |
 | [siteWithinSSSI](#sitewithinsssi)                                                     | `boolean` | Required | can be null    | [Appeal S78 Case](appeal-s78-properties-sitewithinsssi.md "appeal-s78.schema.json#/properties/siteWithinSSSI")                                                     |
 | [typeOfPlanningApplication](#typeofplanningapplication)                               | `string`  | Required | can be null    | [Appeal S78 Case](appeal-s78-properties-typeofplanningapplication.md "appeal-s78.schema.json#/properties/typeOfPlanningApplication")                               |
@@ -1498,11 +1504,11 @@ First line of address for the appeal site
 
 `siteAddressLine1`
 
-* is required
+* is optional
 
 * Type: `string`
 
-* cannot be null
+* can be null
 
 * defined in: [Appeal S78 Case](appeal-s78-properties-siteaddressline1.md "appeal-s78.schema.json#/properties/siteAddressLine1")
 
@@ -1524,7 +1530,7 @@ Second line of address for the appeal site
 
 `siteAddressLine2`
 
-* is required
+* is optional
 
 * Type: `string`
 
@@ -1544,11 +1550,11 @@ Town / City of the site address
 
 `siteAddressTown`
 
-* is required
+* is optional
 
 * Type: `string`
 
-* cannot be null
+* can be null
 
 * defined in: [Appeal S78 Case](appeal-s78-properties-siteaddresstown.md "appeal-s78.schema.json#/properties/siteAddressTown")
 
@@ -1570,7 +1576,7 @@ County of the site address
 
 `siteAddressCounty`
 
-* is required
+* is optional
 
 * Type: `string`
 
@@ -1596,11 +1602,11 @@ Postal code of the site address
 
 `siteAddressPostcode`
 
-* is required
+* is optional
 
 * Type: `string`
 
-* cannot be null
+* can be null
 
 * defined in: [Appeal S78 Case](appeal-s78-properties-siteaddresspostcode.md "appeal-s78.schema.json#/properties/siteAddressPostcode")
 
@@ -2082,8 +2088,6 @@ A list of affected listed building IDs from Historic England
 
 A list of changed listed building IDs from Historic England
 
-> Only available in S78 cases
-
 `changedListedBuildingNumbers`
 
 * is required
@@ -2182,8 +2186,6 @@ Indicates if the appellant has applied for costs
 
 Indicates if the site is an agricultural holding
 
-> Only available in S78 cases
-
 `agriculturalHolding`
 
 * is required
@@ -2201,8 +2203,6 @@ Indicates if the site is an agricultural holding
 ## tenantAgriculturalHolding
 
 Indicates if the site is a tenant agricultural holding
-
-> Only available in S78 cases
 
 `tenantAgriculturalHolding`
 
@@ -2222,8 +2222,6 @@ Indicates if the site is a tenant agricultural holding
 
 Indicates if the site is an agricultural holding with other tenants
 
-> Only available in S78 cases
-
 `otherTenantsAgriculturalHolding`
 
 * is required
@@ -2242,8 +2240,6 @@ Indicates if the site is an agricultural holding with other tenants
 
 If the site is an agricultural holding, indicates tenants are informed
 
-> Only available in S78 cases
-
 `informedTenantsAgriculturalHolding`
 
 * is required
@@ -2261,8 +2257,6 @@ If the site is an agricultural holding, indicates tenants are informed
 ## appellantProcedurePreference
 
 The procedure preference indicated by the appellant
-
-> Only available in S78 cases
 
 `appellantProcedurePreference`
 
@@ -2293,8 +2287,6 @@ The procedure preference indicated by the appellant
 
 The procedure details preference indicated by the appellant
 
-> Only available in S78 cases
-
 `appellantProcedurePreferenceDetails`
 
 * is required
@@ -2312,8 +2304,6 @@ The procedure details preference indicated by the appellant
 ## appellantProcedurePreferenceDuration
 
 The duration of the procedure indicated by the appellant
-
-> Only available in S78 cases
 
 `appellantProcedurePreferenceDuration`
 
@@ -2333,8 +2323,6 @@ The duration of the procedure indicated by the appellant
 
 The number of witnesses appellant has suggested for inquiries preference
 
-> Only available in S78 cases
-
 `appellantProcedurePreferenceWitnessCount`
 
 * is required
@@ -2352,8 +2340,6 @@ The number of witnesses appellant has suggested for inquiries preference
 ## statusPlanningObligation
 
 The planning obligation information, if available
-
-> Only available in S78 cases
 
 `statusPlanningObligation`
 
@@ -2373,8 +2359,6 @@ The planning obligation information, if available
 
 Indicates that a scheduled monument is affected
 
-> Only available in S78 cases
-
 `affectsScheduledMonument`
 
 * is required
@@ -2392,8 +2376,6 @@ Indicates that a scheduled monument is affected
 ## hasProtectedSpecies
 
 Indicates the existence of protected species
-
-> Only available in S78 cases
 
 `hasProtectedSpecies`
 
@@ -2413,8 +2395,6 @@ Indicates the existence of protected species
 
 Indicates an area of outstanding beauty (National Landscape)
 
-> Only available in S78 cases
-
 `isAonbNationalLandscape`
 
 * is required
@@ -2432,8 +2412,6 @@ Indicates an area of outstanding beauty (National Landscape)
 ## designatedSitesNames
 
 The designated site names
-
-> Only available in S78 cases
 
 `designatedSitesNames`
 
@@ -2453,8 +2431,6 @@ The designated site names
 
 Indicates a traveller site
 
-> Only available in S78 cases
-
 `isGypsyOrTravellerSite`
 
 * is required
@@ -2473,8 +2449,6 @@ Indicates a traveller site
 
 Indicates a PROW (public right of way)
 
-> Only available in S78 cases
-
 `isPublicRightOfWay`
 
 * is required
@@ -2492,8 +2466,6 @@ Indicates a PROW (public right of way)
 ## eiaEnvironmentalImpactSchedule
 
 The impact schedule from EIA
-
-> Only available in S78 cases
 
 `eiaEnvironmentalImpactSchedule`
 
@@ -2522,8 +2494,6 @@ The impact schedule from EIA
 ## eiaDevelopmentDescription
 
 The development description from EIA
-
-> Only available in S78 cases
 
 `eiaDevelopmentDescription`
 
@@ -2564,8 +2534,6 @@ The development description from EIA
 
 The sensitive area details from EIA
 
-> Only available in S78 cases
-
 `eiaSensitiveAreaDetails`
 
 * is required
@@ -2583,8 +2551,6 @@ The sensitive area details from EIA
 ## eiaColumnTwoThreshold
 
 EIA specific threshold
-
-> Only available in S78 cases
 
 `eiaColumnTwoThreshold`
 
@@ -2604,8 +2570,6 @@ EIA specific threshold
 
 EIA screening opinion
 
-> Only available in S78 cases
-
 `eiaScreeningOpinion`
 
 * is required
@@ -2623,8 +2587,6 @@ EIA screening opinion
 ## eiaRequiresEnvironmentalStatement
 
 EIA environmental statement required
-
-> Only available in S78 cases
 
 `eiaRequiresEnvironmentalStatement`
 
@@ -2644,8 +2606,6 @@ EIA environmental statement required
 
 EIA completed environmental statement required
 
-> Only available in S78 cases
-
 `eiaCompletedEnvironmentalStatement`
 
 * is required
@@ -2663,8 +2623,6 @@ EIA completed environmental statement required
 ## hasStatutoryConsultees
 
 Indicates statutory consultees
-
-> Only available in S78 cases
 
 `hasStatutoryConsultees`
 
@@ -2702,8 +2660,6 @@ The details of the bodies consulted
 
 Indicates the existence of an infrastructure levy
 
-> Only available in S78 cases
-
 `hasInfrastructureLevy`
 
 * is required
@@ -2722,8 +2678,6 @@ Indicates the existence of an infrastructure levy
 
 Indicates if the infrastructure levy is formally adopted
 
-> Only available in S78 cases
-
 `isInfrastructureLevyFormallyAdopted`
 
 * is required
@@ -2741,8 +2695,6 @@ Indicates if the infrastructure levy is formally adopted
 ## infrastructureLevyAdoptedDate
 
 The date of the infrastructure levy adoption
-
-> Only available in S78 cases
 
 `infrastructureLevyAdoptedDate`
 
@@ -2772,8 +2724,6 @@ The date of the infrastructure levy adoption
 
 The expected date of the infrastructure levy
 
-> Only available in S78 cases
-
 `infrastructureLevyExpectedDate`
 
 * is required
@@ -2801,8 +2751,6 @@ The expected date of the infrastructure levy
 ## lpaProcedurePreference
 
 The procedure preference indicated by the LPA
-
-> Only available in S78 cases
 
 `lpaProcedurePreference`
 
@@ -2833,8 +2781,6 @@ The procedure preference indicated by the LPA
 
 The procedure details preference indicated by the LPA
 
-> Only available in S78 cases
-
 `lpaProcedurePreferenceDetails`
 
 * is required
@@ -2852,8 +2798,6 @@ The procedure details preference indicated by the LPA
 ## lpaProcedurePreferenceDuration
 
 The duration of enquiry indicated by the LPA
-
-> Only available in S78 cases
 
 `lpaProcedurePreferenceDuration`
 
@@ -2873,8 +2817,6 @@ The duration of enquiry indicated by the LPA
 
 
 
-> Only available in S78 cases
-
 `caseworkReason`
 
 * is required
@@ -2892,8 +2834,6 @@ The duration of enquiry indicated by the LPA
 ## importantInformation
 
 
-
-> Only available in S78 cases
 
 `importantInformation`
 
@@ -2913,8 +2853,6 @@ The duration of enquiry indicated by the LPA
 
 
 
-> Only available in S78 cases
-
 `jurisdiction`
 
 * is required
@@ -2933,8 +2871,6 @@ The duration of enquiry indicated by the LPA
 
 
 
-> Only available in S78 cases
-
 `redeterminedIndicator`
 
 * is required
@@ -2952,8 +2888,6 @@ The duration of enquiry indicated by the LPA
 ## dateCostsReportDespatched
 
 The date of the cost report
-
-> Only available in S78 cases
 
 `dateCostsReportDespatched`
 
@@ -2983,8 +2917,6 @@ The date of the cost report
 
 
 
-> Only available in S78 cases
-
 `dateNotRecoveredOrDerecovered`
 
 * is required
@@ -3012,8 +2944,6 @@ The date of the cost report
 ## dateRecovered
 
 
-
-> Only available in S78 cases
 
 `dateRecovered`
 
@@ -3043,8 +2973,6 @@ The date of the cost report
 
 
 
-> Only available in S78 cases
-
 `originalCaseDecisionDate`
 
 * is required
@@ -3072,8 +3000,6 @@ The date of the cost report
 ## targetDate
 
 
-
-> Only available in S78 cases
 
 `targetDate`
 
@@ -3103,8 +3029,6 @@ The date of the cost report
 
 
 
-> Only available in S78 cases
-
 `appellantCommentsSubmittedDate`
 
 * is required
@@ -3132,8 +3056,6 @@ The date of the cost report
 ## appellantStatementSubmittedDate
 
 
-
-> Only available in S78 cases
 
 `appellantStatementSubmittedDate`
 
@@ -3163,8 +3085,6 @@ The date of the cost report
 
 
 
-> Only available in S78 cases
-
 `appellantProofsSubmittedDate`
 
 * is required
@@ -3192,8 +3112,6 @@ The date of the cost report
 ## finalCommentsDueDate
 
 
-
-> Only available in S78 cases
 
 `finalCommentsDueDate`
 
@@ -3223,8 +3141,6 @@ The date of the cost report
 
 
 
-> Only available in S78 cases
-
 `interestedPartyRepsDueDate`
 
 * is required
@@ -3252,8 +3168,6 @@ The date of the cost report
 ## lpaCommentsSubmittedDate
 
 
-
-> Only available in S78 cases
 
 `lpaCommentsSubmittedDate`
 
@@ -3283,8 +3197,6 @@ The date of the cost report
 
 
 
-> Only available in S78 cases
-
 `lpaProofsSubmittedDate`
 
 * is required
@@ -3312,8 +3224,6 @@ The date of the cost report
 ## lpaStatementSubmittedDate
 
 
-
-> Only available in S78 cases
 
 `lpaStatementSubmittedDate`
 
@@ -3343,8 +3253,6 @@ The date of the cost report
 
 
 
-> Only available in S78 cases
-
 `proofsOfEvidenceDueDate`
 
 * is required
@@ -3372,8 +3280,6 @@ The date of the cost report
 ## siteNoticesSentDate
 
 
-
-> Only available in S78 cases
 
 `siteNoticesSentDate`
 
@@ -3403,8 +3309,6 @@ The date of the cost report
 
 
 
-> Only available in S78 cases
-
 `statementDueDate`
 
 * is required
@@ -3433,8 +3337,6 @@ The date of the cost report
 
 The net gain in residences of the proposed development
 
-> Only available in S78 cases
-
 `numberOfResidencesNetChange`
 
 * is required
@@ -3453,11 +3355,9 @@ The net gain in residences of the proposed development
 
 
 
-> Only available in S78 cases
-
 `siteGridReferenceEasting`
 
-* is required
+* is optional
 
 * Type: `string`
 
@@ -3469,15 +3369,29 @@ The net gain in residences of the proposed development
 
 `string`
 
+### siteGridReferenceEasting Constraints
+
+**pattern**: the string must match the following regular expression:&#x20;
+
+```regexp
+^\d{6}$
+```
+
+[try pattern](https://regexr.com/?expression=%5E%5Cd%7B6%7D%24 "try regular expression with regexr.com")
+
+### siteGridReferenceEasting Examples
+
+```json
+"357144"
+```
+
 ## siteGridReferenceNorthing
 
 
 
-> Only available in S78 cases
-
 `siteGridReferenceNorthing`
 
-* is required
+* is optional
 
 * Type: `string`
 
@@ -3489,11 +3403,25 @@ The net gain in residences of the proposed development
 
 `string`
 
+### siteGridReferenceNorthing Constraints
+
+**pattern**: the string must match the following regular expression:&#x20;
+
+```regexp
+^\d{6}$
+```
+
+[try pattern](https://regexr.com/?expression=%5E%5Cd%7B6%7D%24 "try regular expression with regexr.com")
+
+### siteGridReferenceNorthing Examples
+
+```json
+"400534"
+```
+
 ## siteViewableFromRoad
 
 
-
-> Only available in S78 cases
 
 `siteViewableFromRoad`
 
@@ -3512,8 +3440,6 @@ The net gain in residences of the proposed development
 ## siteWithinSSSI
 
 
-
-> Only available in S78 cases
 
 `siteWithinSSSI`
 
@@ -3609,8 +3535,6 @@ The net gain in residences of the proposed development
 
 
 
-> Only available in S78 cases
-
 `statementOfCommonGroundDueDate`
 
 * is optional
@@ -3638,8 +3562,6 @@ The net gain in residences of the proposed development
 ## planningObligationDueDate
 
 
-
-> Only available in S78 cases
 
 `planningObligationDueDate`
 

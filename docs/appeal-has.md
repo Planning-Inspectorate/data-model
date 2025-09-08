@@ -2,86 +2,121 @@
 
 `object` ([Appeal HAS Case](appeal-has.md))
 
+any of
+
+* [Untitled undefined type in Appeal HAS Case](appeal-has-anyof-0.md "check type definition")
+
+* [Untitled undefined type in Appeal HAS Case](appeal-has-anyof-1.md "check type definition")
+
 # Appeal HAS Case Properties
 
-| Property                                                                        | Type      | Required | Nullable       | Defined by                                                                                                                                                   |
-| :------------------------------------------------------------------------------ | :-------- | :------- | :------------- | :----------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [caseId](#caseid)                                                               | `integer` | Required | can be null    | [Appeal HAS Case](appeal-has-properties-caseid.md "appeal-has.schema.json#/properties/caseId")                                                               |
-| [caseReference](#casereference)                                                 | `string`  | Required | cannot be null | [Appeal HAS Case](appeal-has-properties-casereference.md "appeal-has.schema.json#/properties/caseReference")                                                 |
-| [submissionId](#submissionid)                                                   | `string`  | Optional | can be null    | [Appeal HAS Case](appeal-has-properties-submissionid.md "appeal-has.schema.json#/properties/submissionId")                                                   |
-| [caseStatus](#casestatus)                                                       | `string`  | Required | cannot be null | [Appeal HAS Case](appeal-has-properties-casestatus.md "appeal-has.schema.json#/properties/caseStatus")                                                       |
-| [caseType](#casetype)                                                           | `string`  | Required | cannot be null | [Appeal HAS Case](appeal-has-properties-casetype.md "appeal-has.schema.json#/properties/caseType")                                                           |
-| [caseProcedure](#caseprocedure)                                                 | `string`  | Required | cannot be null | [Appeal HAS Case](appeal-has-properties-caseprocedure.md "appeal-has.schema.json#/properties/caseProcedure")                                                 |
-| [lpaCode](#lpacode)                                                             | `string`  | Required | cannot be null | [Appeal HAS Case](appeal-has-properties-lpacode.md "appeal-has.schema.json#/properties/lpaCode")                                                             |
-| [caseOfficerId](#caseofficerid)                                                 | `string`  | Required | can be null    | [Appeal HAS Case](appeal-has-properties-caseofficerid.md "appeal-has.schema.json#/properties/caseOfficerId")                                                 |
-| [inspectorId](#inspectorid)                                                     | `string`  | Required | can be null    | [Appeal HAS Case](appeal-has-properties-inspectorid.md "appeal-has.schema.json#/properties/inspectorId")                                                     |
-| [allocationLevel](#allocationlevel)                                             | `string`  | Required | can be null    | [Appeal HAS Case](appeal-has-properties-allocationlevel.md "appeal-has.schema.json#/properties/allocationLevel")                                             |
-| [allocationBand](#allocationband)                                               | `number`  | Required | can be null    | [Appeal HAS Case](appeal-has-properties-allocationband.md "appeal-has.schema.json#/properties/allocationBand")                                               |
-| [caseSpecialisms](#casespecialisms)                                             | `array`   | Required | can be null    | [Appeal HAS Case](appeal-has-properties-casespecialisms.md "appeal-has.schema.json#/properties/caseSpecialisms")                                             |
-| [caseSubmittedDate](#casesubmitteddate)                                         | `string`  | Required | cannot be null | [Appeal HAS Case](appeal-has-properties-casesubmitteddate.md "appeal-has.schema.json#/properties/caseSubmittedDate")                                         |
-| [caseCreatedDate](#casecreateddate)                                             | `string`  | Required | cannot be null | [Appeal HAS Case](appeal-has-properties-casecreateddate.md "appeal-has.schema.json#/properties/caseCreatedDate")                                             |
-| [caseUpdatedDate](#caseupdateddate)                                             | `string`  | Required | cannot be null | [Appeal HAS Case](appeal-has-properties-caseupdateddate.md "appeal-has.schema.json#/properties/caseUpdatedDate")                                             |
-| [caseValidDate](#casevaliddate)                                                 | `string`  | Required | can be null    | [Appeal HAS Case](appeal-has-properties-casevaliddate.md "appeal-has.schema.json#/properties/caseValidDate")                                                 |
-| [caseValidationDate](#casevalidationdate)                                       | `string`  | Required | can be null    | [Appeal HAS Case](appeal-has-properties-casevalidationdate.md "appeal-has.schema.json#/properties/caseValidationDate")                                       |
-| [caseValidationOutcome](#casevalidationoutcome)                                 | `string`  | Required | can be null    | [Appeal HAS Case](appeal-has-properties-casevalidationoutcome.md "appeal-has.schema.json#/properties/caseValidationOutcome")                                 |
-| [caseValidationInvalidDetails](#casevalidationinvaliddetails)                   | `array`   | Required | can be null    | [Appeal HAS Case](appeal-has-properties-casevalidationinvaliddetails.md "appeal-has.schema.json#/properties/caseValidationInvalidDetails")                   |
-| [caseValidationIncompleteDetails](#casevalidationincompletedetails)             | `array`   | Required | can be null    | [Appeal HAS Case](appeal-has-properties-casevalidationincompletedetails.md "appeal-has.schema.json#/properties/caseValidationIncompleteDetails")             |
-| [caseExtensionDate](#caseextensiondate)                                         | `string`  | Required | can be null    | [Appeal HAS Case](appeal-has-properties-caseextensiondate.md "appeal-has.schema.json#/properties/caseExtensionDate")                                         |
-| [caseStartedDate](#casestarteddate)                                             | `string`  | Required | can be null    | [Appeal HAS Case](appeal-has-properties-casestarteddate.md "appeal-has.schema.json#/properties/caseStartedDate")                                             |
-| [casePublishedDate](#casepublisheddate)                                         | `string`  | Required | can be null    | [Appeal HAS Case](appeal-has-properties-casepublisheddate.md "appeal-has.schema.json#/properties/casePublishedDate")                                         |
-| [linkedCaseStatus](#linkedcasestatus)                                           | `string`  | Required | can be null    | [Appeal HAS Case](appeal-has-properties-linkedcasestatus.md "appeal-has.schema.json#/properties/linkedCaseStatus")                                           |
-| [leadCaseReference](#leadcasereference)                                         | `string`  | Required | can be null    | [Appeal HAS Case](appeal-has-properties-leadcasereference.md "appeal-has.schema.json#/properties/leadCaseReference")                                         |
-| [lpaQuestionnaireDueDate](#lpaquestionnaireduedate)                             | `string`  | Required | can be null    | [Appeal HAS Case](appeal-has-properties-lpaquestionnaireduedate.md "appeal-has.schema.json#/properties/lpaQuestionnaireDueDate")                             |
-| [lpaQuestionnaireSubmittedDate](#lpaquestionnairesubmitteddate)                 | `string`  | Required | can be null    | [Appeal HAS Case](appeal-has-properties-lpaquestionnairesubmitteddate.md "appeal-has.schema.json#/properties/lpaQuestionnaireSubmittedDate")                 |
-| [lpaQuestionnaireCreatedDate](#lpaquestionnairecreateddate)                     | `string`  | Required | can be null    | [Appeal HAS Case](appeal-has-properties-lpaquestionnairecreateddate.md "appeal-has.schema.json#/properties/lpaQuestionnaireCreatedDate")                     |
-| [lpaQuestionnairePublishedDate](#lpaquestionnairepublisheddate)                 | `string`  | Required | can be null    | [Appeal HAS Case](appeal-has-properties-lpaquestionnairepublisheddate.md "appeal-has.schema.json#/properties/lpaQuestionnairePublishedDate")                 |
-| [lpaQuestionnaireValidationOutcome](#lpaquestionnairevalidationoutcome)         | `string`  | Required | can be null    | [Appeal HAS Case](appeal-has-properties-lpaquestionnairevalidationoutcome.md "appeal-has.schema.json#/properties/lpaQuestionnaireValidationOutcome")         |
-| [lpaQuestionnaireValidationOutcomeDate](#lpaquestionnairevalidationoutcomedate) | `string`  | Required | can be null    | [Appeal HAS Case](appeal-has-properties-lpaquestionnairevalidationoutcomedate.md "appeal-has.schema.json#/properties/lpaQuestionnaireValidationOutcomeDate") |
-| [lpaQuestionnaireValidationDetails](#lpaquestionnairevalidationdetails)         | `array`   | Required | can be null    | [Appeal HAS Case](appeal-has-properties-lpaquestionnairevalidationdetails.md "appeal-has.schema.json#/properties/lpaQuestionnaireValidationDetails")         |
-| [lpaStatement](#lpastatement)                                                   | `string`  | Required | can be null    | [Appeal HAS Case](appeal-has-properties-lpastatement.md "appeal-has.schema.json#/properties/lpaStatement")                                                   |
-| [caseWithdrawnDate](#casewithdrawndate)                                         | `string`  | Required | can be null    | [Appeal HAS Case](appeal-has-properties-casewithdrawndate.md "appeal-has.schema.json#/properties/caseWithdrawnDate")                                         |
-| [caseTransferredDate](#casetransferreddate)                                     | `string`  | Required | can be null    | [Appeal HAS Case](appeal-has-properties-casetransferreddate.md "appeal-has.schema.json#/properties/caseTransferredDate")                                     |
-| [transferredCaseClosedDate](#transferredcasecloseddate)                         | `string`  | Required | can be null    | [Appeal HAS Case](appeal-has-properties-transferredcasecloseddate.md "appeal-has.schema.json#/properties/transferredCaseClosedDate")                         |
-| [caseDecisionOutcomeDate](#casedecisionoutcomedate)                             | `string`  | Required | can be null    | [Appeal HAS Case](appeal-has-properties-casedecisionoutcomedate.md "appeal-has.schema.json#/properties/caseDecisionOutcomeDate")                             |
-| [caseDecisionPublishedDate](#casedecisionpublisheddate)                         | `string`  | Required | can be null    | [Appeal HAS Case](appeal-has-properties-casedecisionpublisheddate.md "appeal-has.schema.json#/properties/caseDecisionPublishedDate")                         |
-| [caseDecisionOutcome](#casedecisionoutcome)                                     | `string`  | Required | can be null    | [Appeal HAS Case](appeal-has-properties-casedecisionoutcome.md "appeal-has.schema.json#/properties/caseDecisionOutcome")                                     |
-| [caseCompletedDate](#casecompleteddate)                                         | `string`  | Required | can be null    | [Appeal HAS Case](appeal-has-properties-casecompleteddate.md "appeal-has.schema.json#/properties/caseCompletedDate")                                         |
-| [enforcementNotice](#enforcementnotice)                                         | `boolean` | Required | can be null    | [Appeal HAS Case](appeal-has-properties-enforcementnotice.md "appeal-has.schema.json#/properties/enforcementNotice")                                         |
-| [applicationReference](#applicationreference)                                   | `string`  | Required | cannot be null | [Appeal HAS Case](appeal-has-properties-applicationreference.md "appeal-has.schema.json#/properties/applicationReference")                                   |
-| [applicationDate](#applicationdate)                                             | `string`  | Required | cannot be null | [Appeal HAS Case](appeal-has-properties-applicationdate.md "appeal-has.schema.json#/properties/applicationDate")                                             |
-| [applicationDecision](#applicationdecision)                                     | `string`  | Required | cannot be null | [Appeal HAS Case](appeal-has-properties-applicationdecision.md "appeal-has.schema.json#/properties/applicationDecision")                                     |
-| [applicationDecisionDate](#applicationdecisiondate)                             | `string`  | Required | can be null    | [Appeal HAS Case](appeal-has-properties-applicationdecisiondate.md "appeal-has.schema.json#/properties/applicationDecisionDate")                             |
-| [caseSubmissionDueDate](#casesubmissionduedate)                                 | `string`  | Required | can be null    | [Appeal HAS Case](appeal-has-properties-casesubmissionduedate.md "appeal-has.schema.json#/properties/caseSubmissionDueDate")                                 |
-| [siteAddressLine1](#siteaddressline1)                                           | `string`  | Required | cannot be null | [Appeal HAS Case](appeal-has-properties-siteaddressline1.md "appeal-has.schema.json#/properties/siteAddressLine1")                                           |
-| [siteAddressLine2](#siteaddressline2)                                           | `string`  | Required | can be null    | [Appeal HAS Case](appeal-has-properties-siteaddressline2.md "appeal-has.schema.json#/properties/siteAddressLine2")                                           |
-| [siteAddressTown](#siteaddresstown)                                             | `string`  | Required | cannot be null | [Appeal HAS Case](appeal-has-properties-siteaddresstown.md "appeal-has.schema.json#/properties/siteAddressTown")                                             |
-| [siteAddressCounty](#siteaddresscounty)                                         | `string`  | Required | can be null    | [Appeal HAS Case](appeal-has-properties-siteaddresscounty.md "appeal-has.schema.json#/properties/siteAddressCounty")                                         |
-| [siteAddressPostcode](#siteaddresspostcode)                                     | `string`  | Required | cannot be null | [Appeal HAS Case](appeal-has-properties-siteaddresspostcode.md "appeal-has.schema.json#/properties/siteAddressPostcode")                                     |
-| [siteAccessDetails](#siteaccessdetails)                                         | `array`   | Required | can be null    | [Appeal HAS Case](appeal-has-properties-siteaccessdetails.md "appeal-has.schema.json#/properties/siteAccessDetails")                                         |
-| [siteSafetyDetails](#sitesafetydetails)                                         | `array`   | Required | can be null    | [Appeal HAS Case](appeal-has-properties-sitesafetydetails.md "appeal-has.schema.json#/properties/siteSafetyDetails")                                         |
-| [siteAreaSquareMetres](#siteareasquaremetres)                                   | `number`  | Required | can be null    | [Appeal HAS Case](appeal-has-properties-siteareasquaremetres.md "appeal-has.schema.json#/properties/siteAreaSquareMetres")                                   |
-| [floorSpaceSquareMetres](#floorspacesquaremetres)                               | `number`  | Required | can be null    | [Appeal HAS Case](appeal-has-properties-floorspacesquaremetres.md "appeal-has.schema.json#/properties/floorSpaceSquareMetres")                               |
-| [isCorrectAppealType](#iscorrectappealtype)                                     | `boolean` | Required | can be null    | [Appeal HAS Case](appeal-has-properties-iscorrectappealtype.md "appeal-has.schema.json#/properties/isCorrectAppealType")                                     |
-| [isGreenBelt](#isgreenbelt)                                                     | `boolean` | Required | can be null    | [Appeal HAS Case](appeal-has-properties-isgreenbelt.md "appeal-has.schema.json#/properties/isGreenBelt")                                                     |
-| [inConservationArea](#inconservationarea)                                       | `boolean` | Required | can be null    | [Appeal HAS Case](appeal-has-properties-inconservationarea.md "appeal-has.schema.json#/properties/inConservationArea")                                       |
-| [ownsAllLand](#ownsallland)                                                     | `boolean` | Required | can be null    | [Appeal HAS Case](appeal-has-properties-ownsallland.md "appeal-has.schema.json#/properties/ownsAllLand")                                                     |
-| [ownsSomeLand](#ownssomeland)                                                   | `boolean` | Required | can be null    | [Appeal HAS Case](appeal-has-properties-ownssomeland.md "appeal-has.schema.json#/properties/ownsSomeLand")                                                   |
-| [knowsOtherOwners](#knowsotherowners)                                           | `string`  | Required | can be null    | [Appeal HAS Case](appeal-has-properties-knowsotherowners.md "appeal-has.schema.json#/properties/knowsOtherOwners")                                           |
-| [knowsAllOwners](#knowsallowners)                                               | `string`  | Required | can be null    | [Appeal HAS Case](appeal-has-properties-knowsallowners.md "appeal-has.schema.json#/properties/knowsAllOwners")                                               |
-| [advertisedAppeal](#advertisedappeal)                                           | `boolean` | Required | can be null    | [Appeal HAS Case](appeal-has-properties-advertisedappeal.md "appeal-has.schema.json#/properties/advertisedAppeal")                                           |
-| [notificationMethod](#notificationmethod)                                       | `array`   | Required | can be null    | [Appeal HAS Case](appeal-has-properties-notificationmethod.md "appeal-has.schema.json#/properties/notificationMethod")                                       |
-| [ownersInformed](#ownersinformed)                                               | `boolean` | Required | can be null    | [Appeal HAS Case](appeal-has-properties-ownersinformed.md "appeal-has.schema.json#/properties/ownersInformed")                                               |
-| [originalDevelopmentDescription](#originaldevelopmentdescription)               | `string`  | Required | can be null    | [Appeal HAS Case](appeal-has-properties-originaldevelopmentdescription.md "appeal-has.schema.json#/properties/originalDevelopmentDescription")               |
-| [changedDevelopmentDescription](#changeddevelopmentdescription)                 | `boolean` | Required | can be null    | [Appeal HAS Case](appeal-has-properties-changeddevelopmentdescription.md "appeal-has.schema.json#/properties/changedDevelopmentDescription")                 |
-| [newConditionDetails](#newconditiondetails)                                     | `string`  | Required | can be null    | [Appeal HAS Case](appeal-has-properties-newconditiondetails.md "appeal-has.schema.json#/properties/newConditionDetails")                                     |
-| [nearbyCaseReferences](#nearbycasereferences)                                   | `array`   | Required | can be null    | [Appeal HAS Case](appeal-has-properties-nearbycasereferences.md "appeal-has.schema.json#/properties/nearbyCaseReferences")                                   |
-| [neighbouringSiteAddresses](#neighbouringsiteaddresses)                         | `array`   | Required | can be null    | [Appeal HAS Case](appeal-has-properties-neighbouringsiteaddresses.md "appeal-has.schema.json#/properties/neighbouringSiteAddresses")                         |
-| [reasonForNeighbourVisits](#reasonforneighbourvisits)                           | `string`  | Optional | can be null    | [Appeal HAS Case](appeal-has-properties-reasonforneighbourvisits.md "appeal-has.schema.json#/properties/reasonForNeighbourVisits")                           |
-| [affectedListedBuildingNumbers](#affectedlistedbuildingnumbers)                 | `array`   | Required | can be null    | [Appeal HAS Case](appeal-has-properties-affectedlistedbuildingnumbers.md "appeal-has.schema.json#/properties/affectedListedBuildingNumbers")                 |
-| [appellantCostsAppliedFor](#appellantcostsappliedfor)                           | `boolean` | Required | can be null    | [Appeal HAS Case](appeal-has-properties-appellantcostsappliedfor.md "appeal-has.schema.json#/properties/appellantCostsAppliedFor")                           |
-| [lpaCostsAppliedFor](#lpacostsappliedfor)                                       | `boolean` | Required | can be null    | [Appeal HAS Case](appeal-has-properties-lpacostsappliedfor.md "appeal-has.schema.json#/properties/lpaCostsAppliedFor")                                       |
-| [typeOfPlanningApplication](#typeofplanningapplication)                         | `string`  | Optional | can be null    | [Appeal HAS Case](appeal-has-properties-typeofplanningapplication.md "appeal-has.schema.json#/properties/typeOfPlanningApplication")                         |
-| Additional Properties                                                           | Any       | Optional | can be null    |                                                                                                                                                              |
+| Property                                                                                  | Type      | Required | Nullable       | Defined by                                                                                                                                                             |
+| :---------------------------------------------------------------------------------------- | :-------- | :------- | :------------- | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [caseId](#caseid)                                                                         | `integer` | Required | can be null    | [Appeal HAS Case](appeal-has-properties-caseid.md "appeal-has.schema.json#/properties/caseId")                                                                         |
+| [caseReference](#casereference)                                                           | `string`  | Required | cannot be null | [Appeal HAS Case](appeal-has-properties-casereference.md "appeal-has.schema.json#/properties/caseReference")                                                           |
+| [submissionId](#submissionid)                                                             | `string`  | Optional | can be null    | [Appeal HAS Case](appeal-has-properties-submissionid.md "appeal-has.schema.json#/properties/submissionId")                                                             |
+| [caseStatus](#casestatus)                                                                 | `string`  | Required | cannot be null | [Appeal HAS Case](appeal-has-properties-casestatus.md "appeal-has.schema.json#/properties/caseStatus")                                                                 |
+| [caseType](#casetype)                                                                     | `string`  | Required | cannot be null | [Appeal HAS Case](appeal-has-properties-casetype.md "appeal-has.schema.json#/properties/caseType")                                                                     |
+| [caseProcedure](#caseprocedure)                                                           | `string`  | Required | cannot be null | [Appeal HAS Case](appeal-has-properties-caseprocedure.md "appeal-has.schema.json#/properties/caseProcedure")                                                           |
+| [lpaCode](#lpacode)                                                                       | `string`  | Required | cannot be null | [Appeal HAS Case](appeal-has-properties-lpacode.md "appeal-has.schema.json#/properties/lpaCode")                                                                       |
+| [caseOfficerId](#caseofficerid)                                                           | `string`  | Required | can be null    | [Appeal HAS Case](appeal-has-properties-caseofficerid.md "appeal-has.schema.json#/properties/caseOfficerId")                                                           |
+| [inspectorId](#inspectorid)                                                               | `string`  | Required | can be null    | [Appeal HAS Case](appeal-has-properties-inspectorid.md "appeal-has.schema.json#/properties/inspectorId")                                                               |
+| [allocationLevel](#allocationlevel)                                                       | `string`  | Required | can be null    | [Appeal HAS Case](appeal-has-properties-allocationlevel.md "appeal-has.schema.json#/properties/allocationLevel")                                                       |
+| [allocationBand](#allocationband)                                                         | `number`  | Required | can be null    | [Appeal HAS Case](appeal-has-properties-allocationband.md "appeal-has.schema.json#/properties/allocationBand")                                                         |
+| [caseSpecialisms](#casespecialisms)                                                       | `array`   | Required | can be null    | [Appeal HAS Case](appeal-has-properties-casespecialisms.md "appeal-has.schema.json#/properties/caseSpecialisms")                                                       |
+| [caseSubmittedDate](#casesubmitteddate)                                                   | `string`  | Required | cannot be null | [Appeal HAS Case](appeal-has-properties-casesubmitteddate.md "appeal-has.schema.json#/properties/caseSubmittedDate")                                                   |
+| [caseCreatedDate](#casecreateddate)                                                       | `string`  | Required | cannot be null | [Appeal HAS Case](appeal-has-properties-casecreateddate.md "appeal-has.schema.json#/properties/caseCreatedDate")                                                       |
+| [caseUpdatedDate](#caseupdateddate)                                                       | `string`  | Required | cannot be null | [Appeal HAS Case](appeal-has-properties-caseupdateddate.md "appeal-has.schema.json#/properties/caseUpdatedDate")                                                       |
+| [caseValidDate](#casevaliddate)                                                           | `string`  | Required | can be null    | [Appeal HAS Case](appeal-has-properties-casevaliddate.md "appeal-has.schema.json#/properties/caseValidDate")                                                           |
+| [caseValidationDate](#casevalidationdate)                                                 | `string`  | Required | can be null    | [Appeal HAS Case](appeal-has-properties-casevalidationdate.md "appeal-has.schema.json#/properties/caseValidationDate")                                                 |
+| [caseValidationOutcome](#casevalidationoutcome)                                           | `string`  | Required | can be null    | [Appeal HAS Case](appeal-has-properties-casevalidationoutcome.md "appeal-has.schema.json#/properties/caseValidationOutcome")                                           |
+| [caseValidationInvalidDetails](#casevalidationinvaliddetails)                             | `array`   | Required | can be null    | [Appeal HAS Case](appeal-has-properties-casevalidationinvaliddetails.md "appeal-has.schema.json#/properties/caseValidationInvalidDetails")                             |
+| [caseValidationIncompleteDetails](#casevalidationincompletedetails)                       | `array`   | Required | can be null    | [Appeal HAS Case](appeal-has-properties-casevalidationincompletedetails.md "appeal-has.schema.json#/properties/caseValidationIncompleteDetails")                       |
+| [caseExtensionDate](#caseextensiondate)                                                   | `string`  | Required | can be null    | [Appeal HAS Case](appeal-has-properties-caseextensiondate.md "appeal-has.schema.json#/properties/caseExtensionDate")                                                   |
+| [caseStartedDate](#casestarteddate)                                                       | `string`  | Required | can be null    | [Appeal HAS Case](appeal-has-properties-casestarteddate.md "appeal-has.schema.json#/properties/caseStartedDate")                                                       |
+| [casePublishedDate](#casepublisheddate)                                                   | `string`  | Required | can be null    | [Appeal HAS Case](appeal-has-properties-casepublisheddate.md "appeal-has.schema.json#/properties/casePublishedDate")                                                   |
+| [linkedCaseStatus](#linkedcasestatus)                                                     | `string`  | Required | can be null    | [Appeal HAS Case](appeal-has-properties-linkedcasestatus.md "appeal-has.schema.json#/properties/linkedCaseStatus")                                                     |
+| [leadCaseReference](#leadcasereference)                                                   | `string`  | Required | can be null    | [Appeal HAS Case](appeal-has-properties-leadcasereference.md "appeal-has.schema.json#/properties/leadCaseReference")                                                   |
+| [lpaQuestionnaireDueDate](#lpaquestionnaireduedate)                                       | `string`  | Required | can be null    | [Appeal HAS Case](appeal-has-properties-lpaquestionnaireduedate.md "appeal-has.schema.json#/properties/lpaQuestionnaireDueDate")                                       |
+| [lpaQuestionnaireSubmittedDate](#lpaquestionnairesubmitteddate)                           | `string`  | Required | can be null    | [Appeal HAS Case](appeal-has-properties-lpaquestionnairesubmitteddate.md "appeal-has.schema.json#/properties/lpaQuestionnaireSubmittedDate")                           |
+| [lpaQuestionnaireCreatedDate](#lpaquestionnairecreateddate)                               | `string`  | Required | can be null    | [Appeal HAS Case](appeal-has-properties-lpaquestionnairecreateddate.md "appeal-has.schema.json#/properties/lpaQuestionnaireCreatedDate")                               |
+| [lpaQuestionnairePublishedDate](#lpaquestionnairepublisheddate)                           | `string`  | Required | can be null    | [Appeal HAS Case](appeal-has-properties-lpaquestionnairepublisheddate.md "appeal-has.schema.json#/properties/lpaQuestionnairePublishedDate")                           |
+| [lpaQuestionnaireValidationOutcome](#lpaquestionnairevalidationoutcome)                   | `string`  | Required | can be null    | [Appeal HAS Case](appeal-has-properties-lpaquestionnairevalidationoutcome.md "appeal-has.schema.json#/properties/lpaQuestionnaireValidationOutcome")                   |
+| [lpaQuestionnaireValidationOutcomeDate](#lpaquestionnairevalidationoutcomedate)           | `string`  | Required | can be null    | [Appeal HAS Case](appeal-has-properties-lpaquestionnairevalidationoutcomedate.md "appeal-has.schema.json#/properties/lpaQuestionnaireValidationOutcomeDate")           |
+| [lpaQuestionnaireValidationDetails](#lpaquestionnairevalidationdetails)                   | `array`   | Required | can be null    | [Appeal HAS Case](appeal-has-properties-lpaquestionnairevalidationdetails.md "appeal-has.schema.json#/properties/lpaQuestionnaireValidationDetails")                   |
+| [lpaStatement](#lpastatement)                                                             | `string`  | Required | can be null    | [Appeal HAS Case](appeal-has-properties-lpastatement.md "appeal-has.schema.json#/properties/lpaStatement")                                                             |
+| [caseWithdrawnDate](#casewithdrawndate)                                                   | `string`  | Required | can be null    | [Appeal HAS Case](appeal-has-properties-casewithdrawndate.md "appeal-has.schema.json#/properties/caseWithdrawnDate")                                                   |
+| [caseTransferredDate](#casetransferreddate)                                               | `string`  | Required | can be null    | [Appeal HAS Case](appeal-has-properties-casetransferreddate.md "appeal-has.schema.json#/properties/caseTransferredDate")                                               |
+| [transferredCaseClosedDate](#transferredcasecloseddate)                                   | `string`  | Required | can be null    | [Appeal HAS Case](appeal-has-properties-transferredcasecloseddate.md "appeal-has.schema.json#/properties/transferredCaseClosedDate")                                   |
+| [caseDecisionOutcomeDate](#casedecisionoutcomedate)                                       | `string`  | Required | can be null    | [Appeal HAS Case](appeal-has-properties-casedecisionoutcomedate.md "appeal-has.schema.json#/properties/caseDecisionOutcomeDate")                                       |
+| [caseDecisionPublishedDate](#casedecisionpublisheddate)                                   | `string`  | Required | can be null    | [Appeal HAS Case](appeal-has-properties-casedecisionpublisheddate.md "appeal-has.schema.json#/properties/caseDecisionPublishedDate")                                   |
+| [caseDecisionOutcome](#casedecisionoutcome)                                               | `string`  | Required | can be null    | [Appeal HAS Case](appeal-has-properties-casedecisionoutcome.md "appeal-has.schema.json#/properties/caseDecisionOutcome")                                               |
+| [caseCompletedDate](#casecompleteddate)                                                   | `string`  | Required | can be null    | [Appeal HAS Case](appeal-has-properties-casecompleteddate.md "appeal-has.schema.json#/properties/caseCompletedDate")                                                   |
+| [enforcementNotice](#enforcementnotice)                                                   | `boolean` | Required | can be null    | [Appeal HAS Case](appeal-has-properties-enforcementnotice.md "appeal-has.schema.json#/properties/enforcementNotice")                                                   |
+| [applicationReference](#applicationreference)                                             | `string`  | Required | cannot be null | [Appeal HAS Case](appeal-has-properties-applicationreference.md "appeal-has.schema.json#/properties/applicationReference")                                             |
+| [applicationDate](#applicationdate)                                                       | `string`  | Required | cannot be null | [Appeal HAS Case](appeal-has-properties-applicationdate.md "appeal-has.schema.json#/properties/applicationDate")                                                       |
+| [applicationDecision](#applicationdecision)                                               | `string`  | Required | cannot be null | [Appeal HAS Case](appeal-has-properties-applicationdecision.md "appeal-has.schema.json#/properties/applicationDecision")                                               |
+| [applicationDecisionDate](#applicationdecisiondate)                                       | `string`  | Required | can be null    | [Appeal HAS Case](appeal-has-properties-applicationdecisiondate.md "appeal-has.schema.json#/properties/applicationDecisionDate")                                       |
+| [caseSubmissionDueDate](#casesubmissionduedate)                                           | `string`  | Required | can be null    | [Appeal HAS Case](appeal-has-properties-casesubmissionduedate.md "appeal-has.schema.json#/properties/caseSubmissionDueDate")                                           |
+| [siteAddressLine1](#siteaddressline1)                                                     | `string`  | Optional | can be null    | [Appeal HAS Case](appeal-has-properties-siteaddressline1.md "appeal-has.schema.json#/properties/siteAddressLine1")                                                     |
+| [siteAddressLine2](#siteaddressline2)                                                     | `string`  | Optional | can be null    | [Appeal HAS Case](appeal-has-properties-siteaddressline2.md "appeal-has.schema.json#/properties/siteAddressLine2")                                                     |
+| [siteAddressTown](#siteaddresstown)                                                       | `string`  | Optional | can be null    | [Appeal HAS Case](appeal-has-properties-siteaddresstown.md "appeal-has.schema.json#/properties/siteAddressTown")                                                       |
+| [siteAddressCounty](#siteaddresscounty)                                                   | `string`  | Optional | can be null    | [Appeal HAS Case](appeal-has-properties-siteaddresscounty.md "appeal-has.schema.json#/properties/siteAddressCounty")                                                   |
+| [siteAddressPostcode](#siteaddresspostcode)                                               | `string`  | Optional | can be null    | [Appeal HAS Case](appeal-has-properties-siteaddresspostcode.md "appeal-has.schema.json#/properties/siteAddressPostcode")                                               |
+| [siteAccessDetails](#siteaccessdetails)                                                   | `array`   | Required | can be null    | [Appeal HAS Case](appeal-has-properties-siteaccessdetails.md "appeal-has.schema.json#/properties/siteAccessDetails")                                                   |
+| [siteSafetyDetails](#sitesafetydetails)                                                   | `array`   | Required | can be null    | [Appeal HAS Case](appeal-has-properties-sitesafetydetails.md "appeal-has.schema.json#/properties/siteSafetyDetails")                                                   |
+| [siteAreaSquareMetres](#siteareasquaremetres)                                             | `number`  | Required | can be null    | [Appeal HAS Case](appeal-has-properties-siteareasquaremetres.md "appeal-has.schema.json#/properties/siteAreaSquareMetres")                                             |
+| [floorSpaceSquareMetres](#floorspacesquaremetres)                                         | `number`  | Required | can be null    | [Appeal HAS Case](appeal-has-properties-floorspacesquaremetres.md "appeal-has.schema.json#/properties/floorSpaceSquareMetres")                                         |
+| [isCorrectAppealType](#iscorrectappealtype)                                               | `boolean` | Required | can be null    | [Appeal HAS Case](appeal-has-properties-iscorrectappealtype.md "appeal-has.schema.json#/properties/isCorrectAppealType")                                               |
+| [isGreenBelt](#isgreenbelt)                                                               | `boolean` | Required | can be null    | [Appeal HAS Case](appeal-has-properties-isgreenbelt.md "appeal-has.schema.json#/properties/isGreenBelt")                                                               |
+| [inConservationArea](#inconservationarea)                                                 | `boolean` | Required | can be null    | [Appeal HAS Case](appeal-has-properties-inconservationarea.md "appeal-has.schema.json#/properties/inConservationArea")                                                 |
+| [affectsScheduledMonument](#affectsscheduledmonument)                                     | `boolean` | Optional | can be null    | [Appeal HAS Case](appeal-has-properties-affectsscheduledmonument.md "appeal-has.schema.json#/properties/affectsScheduledMonument")                                     |
+| [hasProtectedSpecies](#hasprotectedspecies)                                               | `boolean` | Optional | can be null    | [Appeal HAS Case](appeal-has-properties-hasprotectedspecies.md "appeal-has.schema.json#/properties/hasProtectedSpecies")                                               |
+| [isAonbNationalLandscape](#isaonbnationallandscape)                                       | `boolean` | Optional | can be null    | [Appeal HAS Case](appeal-has-properties-isaonbnationallandscape.md "appeal-has.schema.json#/properties/isAonbNationalLandscape")                                       |
+| [isSiteOnHighwayLand](#issiteonhighwayland)                                               | `boolean` | Optional | can be null    | [Appeal HAS Case](appeal-has-properties-issiteonhighwayland.md "appeal-has.schema.json#/properties/isSiteOnHighwayLand")                                               |
+| [designatedSitesNames](#designatedsitesnames)                                             | `array`   | Optional | can be null    | [Appeal HAS Case](appeal-has-properties-designatedsitesnames.md "appeal-has.schema.json#/properties/designatedSitesNames")                                             |
+| [hasInfrastructureLevy](#hasinfrastructurelevy)                                           | `boolean` | Optional | can be null    | [Appeal HAS Case](appeal-has-properties-hasinfrastructurelevy.md "appeal-has.schema.json#/properties/hasInfrastructureLevy")                                           |
+| [isInfrastructureLevyFormallyAdopted](#isinfrastructurelevyformallyadopted)               | `boolean` | Optional | can be null    | [Appeal HAS Case](appeal-has-properties-isinfrastructurelevyformallyadopted.md "appeal-has.schema.json#/properties/isInfrastructureLevyFormallyAdopted")               |
+| [infrastructureLevyAdoptedDate](#infrastructurelevyadopteddate)                           | `string`  | Optional | can be null    | [Appeal HAS Case](appeal-has-properties-infrastructurelevyadopteddate.md "appeal-has.schema.json#/properties/infrastructureLevyAdoptedDate")                           |
+| [infrastructureLevyExpectedDate](#infrastructurelevyexpecteddate)                         | `string`  | Optional | can be null    | [Appeal HAS Case](appeal-has-properties-infrastructurelevyexpecteddate.md "appeal-has.schema.json#/properties/infrastructureLevyExpectedDate")                         |
+| [lpaProcedurePreference](#lpaprocedurepreference)                                         | `string`  | Optional | can be null    | [Appeal HAS Case](appeal-has-properties-lpaprocedurepreference.md "appeal-has.schema.json#/properties/lpaProcedurePreference")                                         |
+| [lpaProcedurePreferenceDetails](#lpaprocedurepreferencedetails)                           | `string`  | Optional | can be null    | [Appeal HAS Case](appeal-has-properties-lpaprocedurepreferencedetails.md "appeal-has.schema.json#/properties/lpaProcedurePreferenceDetails")                           |
+| [lpaProcedurePreferenceDuration](#lpaprocedurepreferenceduration)                         | `number`  | Optional | can be null    | [Appeal HAS Case](appeal-has-properties-lpaprocedurepreferenceduration.md "appeal-has.schema.json#/properties/lpaProcedurePreferenceDuration")                         |
+| [caseworkReason](#caseworkreason)                                                         | `string`  | Optional | can be null    | [Appeal HAS Case](appeal-has-properties-caseworkreason.md "appeal-has.schema.json#/properties/caseworkReason")                                                         |
+| [importantInformation](#importantinformation)                                             | `string`  | Optional | can be null    | [Appeal HAS Case](appeal-has-properties-importantinformation.md "appeal-has.schema.json#/properties/importantInformation")                                             |
+| [jurisdiction](#jurisdiction)                                                             | `string`  | Optional | can be null    | [Appeal HAS Case](appeal-has-properties-jurisdiction.md "appeal-has.schema.json#/properties/jurisdiction")                                                             |
+| [redeterminedIndicator](#redeterminedindicator)                                           | `boolean` | Optional | can be null    | [Appeal HAS Case](appeal-has-properties-redeterminedindicator.md "appeal-has.schema.json#/properties/redeterminedIndicator")                                           |
+| [dateCostsReportDespatched](#datecostsreportdespatched)                                   | `string`  | Optional | can be null    | [Appeal HAS Case](appeal-has-properties-datecostsreportdespatched.md "appeal-has.schema.json#/properties/dateCostsReportDespatched")                                   |
+| [dateNotRecoveredOrDerecovered](#datenotrecoveredorderecovered)                           | `string`  | Optional | can be null    | [Appeal HAS Case](appeal-has-properties-datenotrecoveredorderecovered.md "appeal-has.schema.json#/properties/dateNotRecoveredOrDerecovered")                           |
+| [dateRecovered](#daterecovered)                                                           | `string`  | Optional | can be null    | [Appeal HAS Case](appeal-has-properties-daterecovered.md "appeal-has.schema.json#/properties/dateRecovered")                                                           |
+| [originalCaseDecisionDate](#originalcasedecisiondate)                                     | `string`  | Optional | can be null    | [Appeal HAS Case](appeal-has-properties-originalcasedecisiondate.md "appeal-has.schema.json#/properties/originalCaseDecisionDate")                                     |
+| [targetDate](#targetdate)                                                                 | `string`  | Optional | can be null    | [Appeal HAS Case](appeal-has-properties-targetdate.md "appeal-has.schema.json#/properties/targetDate")                                                                 |
+| [ownsAllLand](#ownsallland)                                                               | `boolean` | Required | can be null    | [Appeal HAS Case](appeal-has-properties-ownsallland.md "appeal-has.schema.json#/properties/ownsAllLand")                                                               |
+| [ownsSomeLand](#ownssomeland)                                                             | `boolean` | Required | can be null    | [Appeal HAS Case](appeal-has-properties-ownssomeland.md "appeal-has.schema.json#/properties/ownsSomeLand")                                                             |
+| [knowsOtherOwners](#knowsotherowners)                                                     | `string`  | Required | can be null    | [Appeal HAS Case](appeal-has-properties-knowsotherowners.md "appeal-has.schema.json#/properties/knowsOtherOwners")                                                     |
+| [knowsAllOwners](#knowsallowners)                                                         | `string`  | Required | can be null    | [Appeal HAS Case](appeal-has-properties-knowsallowners.md "appeal-has.schema.json#/properties/knowsAllOwners")                                                         |
+| [advertisedAppeal](#advertisedappeal)                                                     | `boolean` | Required | can be null    | [Appeal HAS Case](appeal-has-properties-advertisedappeal.md "appeal-has.schema.json#/properties/advertisedAppeal")                                                     |
+| [notificationMethod](#notificationmethod)                                                 | `array`   | Required | can be null    | [Appeal HAS Case](appeal-has-properties-notificationmethod.md "appeal-has.schema.json#/properties/notificationMethod")                                                 |
+| [ownersInformed](#ownersinformed)                                                         | `boolean` | Required | can be null    | [Appeal HAS Case](appeal-has-properties-ownersinformed.md "appeal-has.schema.json#/properties/ownersInformed")                                                         |
+| [originalDevelopmentDescription](#originaldevelopmentdescription)                         | `string`  | Required | can be null    | [Appeal HAS Case](appeal-has-properties-originaldevelopmentdescription.md "appeal-has.schema.json#/properties/originalDevelopmentDescription")                         |
+| [changedDevelopmentDescription](#changeddevelopmentdescription)                           | `boolean` | Required | can be null    | [Appeal HAS Case](appeal-has-properties-changeddevelopmentdescription.md "appeal-has.schema.json#/properties/changedDevelopmentDescription")                           |
+| [newConditionDetails](#newconditiondetails)                                               | `string`  | Required | can be null    | [Appeal HAS Case](appeal-has-properties-newconditiondetails.md "appeal-has.schema.json#/properties/newConditionDetails")                                               |
+| [nearbyCaseReferences](#nearbycasereferences)                                             | `array`   | Required | can be null    | [Appeal HAS Case](appeal-has-properties-nearbycasereferences.md "appeal-has.schema.json#/properties/nearbyCaseReferences")                                             |
+| [neighbouringSiteAddresses](#neighbouringsiteaddresses)                                   | `array`   | Required | can be null    | [Appeal HAS Case](appeal-has-properties-neighbouringsiteaddresses.md "appeal-has.schema.json#/properties/neighbouringSiteAddresses")                                   |
+| [reasonForNeighbourVisits](#reasonforneighbourvisits)                                     | `string`  | Optional | can be null    | [Appeal HAS Case](appeal-has-properties-reasonforneighbourvisits.md "appeal-has.schema.json#/properties/reasonForNeighbourVisits")                                     |
+| [affectedListedBuildingNumbers](#affectedlistedbuildingnumbers)                           | `array`   | Required | can be null    | [Appeal HAS Case](appeal-has-properties-affectedlistedbuildingnumbers.md "appeal-has.schema.json#/properties/affectedListedBuildingNumbers")                           |
+| [appellantCostsAppliedFor](#appellantcostsappliedfor)                                     | `boolean` | Required | can be null    | [Appeal HAS Case](appeal-has-properties-appellantcostsappliedfor.md "appeal-has.schema.json#/properties/appellantCostsAppliedFor")                                     |
+| [lpaCostsAppliedFor](#lpacostsappliedfor)                                                 | `boolean` | Required | can be null    | [Appeal HAS Case](appeal-has-properties-lpacostsappliedfor.md "appeal-has.schema.json#/properties/lpaCostsAppliedFor")                                                 |
+| [typeOfPlanningApplication](#typeofplanningapplication)                                   | `string`  | Optional | can be null    | [Appeal HAS Case](appeal-has-properties-typeofplanningapplication.md "appeal-has.schema.json#/properties/typeOfPlanningApplication")                                   |
+| [siteGridReferenceEasting](#sitegridreferenceeasting)                                     | `string`  | Optional | can be null    | [Appeal HAS Case](appeal-has-properties-sitegridreferenceeasting.md "appeal-has.schema.json#/properties/siteGridReferenceEasting")                                     |
+| [siteGridReferenceNorthing](#sitegridreferencenorthing)                                   | `string`  | Optional | can be null    | [Appeal HAS Case](appeal-has-properties-sitegridreferencenorthing.md "appeal-has.schema.json#/properties/siteGridReferenceNorthing")                                   |
+| [hasLandownersPermission](#haslandownerspermission)                                       | `boolean` | Optional | can be null    | [Appeal HAS Case](appeal-has-properties-haslandownerspermission.md "appeal-has.schema.json#/properties/hasLandownersPermission")                                       |
+| [isAdvertInPosition](#isadvertinposition)                                                 | `boolean` | Optional | can be null    | [Appeal HAS Case](appeal-has-properties-isadvertinposition.md "appeal-has.schema.json#/properties/isAdvertInPosition")                                                 |
+| [isSiteInAreaOfSpecialControlAdverts](#issiteinareaofspecialcontroladverts)               | `boolean` | Optional | can be null    | [Appeal HAS Case](appeal-has-properties-issiteinareaofspecialcontroladverts.md "appeal-has.schema.json#/properties/isSiteInAreaOfSpecialControlAdverts")               |
+| [wasApplicationRefusedDueToHighwayOrTraffic](#wasapplicationrefusedduetohighwayortraffic) | `boolean` | Optional | can be null    | [Appeal HAS Case](appeal-has-properties-wasapplicationrefusedduetohighwayortraffic.md "appeal-has.schema.json#/properties/wasApplicationRefusedDueToHighwayOrTraffic") |
+| [didAppellantSubmitCompletePhotosAndPlans](#didappellantsubmitcompletephotosandplans)     | `boolean` | Optional | can be null    | [Appeal HAS Case](appeal-has-properties-didappellantsubmitcompletephotosandplans.md "appeal-has.schema.json#/properties/didAppellantSubmitCompletePhotosAndPlans")     |
+| [advertType](#adverttype)                                                                 | `string`  | Optional | can be null    | [Appeal HAS Case](appeal-has-properties-adverttype.md "appeal-has.schema.json#/properties/advertType")                                                                 |
+| Additional Properties                                                                     | Any       | Optional | can be null    |                                                                                                                                                                        |
 
 ## caseId
 
@@ -1353,11 +1388,11 @@ First line of address for the appeal site
 
 `siteAddressLine1`
 
-* is required
+* is optional
 
 * Type: `string`
 
-* cannot be null
+* can be null
 
 * defined in: [Appeal HAS Case](appeal-has-properties-siteaddressline1.md "appeal-has.schema.json#/properties/siteAddressLine1")
 
@@ -1377,7 +1412,7 @@ Second line of address for the appeal site
 
 `siteAddressLine2`
 
-* is required
+* is optional
 
 * Type: `string`
 
@@ -1395,11 +1430,11 @@ Town / City of the site address
 
 `siteAddressTown`
 
-* is required
+* is optional
 
 * Type: `string`
 
-* cannot be null
+* can be null
 
 * defined in: [Appeal HAS Case](appeal-has-properties-siteaddresstown.md "appeal-has.schema.json#/properties/siteAddressTown")
 
@@ -1419,7 +1454,7 @@ County of the site address
 
 `siteAddressCounty`
 
-* is required
+* is optional
 
 * Type: `string`
 
@@ -1443,11 +1478,11 @@ Postal code of the site address
 
 `siteAddressPostcode`
 
-* is required
+* is optional
 
 * Type: `string`
 
-* cannot be null
+* can be null
 
 * defined in: [Appeal HAS Case](appeal-has-properties-siteaddresspostcode.md "appeal-has.schema.json#/properties/siteAddressPostcode")
 
@@ -1598,6 +1633,471 @@ Indicates if the site is in a conservation area
 ### inConservationArea Type
 
 `boolean`
+
+## affectsScheduledMonument
+
+Indicates if the development affects a scheduled monument
+
+`affectsScheduledMonument`
+
+* is optional
+
+* Type: `boolean`
+
+* can be null
+
+* defined in: [Appeal HAS Case](appeal-has-properties-affectsscheduledmonument.md "appeal-has.schema.json#/properties/affectsScheduledMonument")
+
+### affectsScheduledMonument Type
+
+`boolean`
+
+## hasProtectedSpecies
+
+Indicates if the site hosts protected species
+
+`hasProtectedSpecies`
+
+* is optional
+
+* Type: `boolean`
+
+* can be null
+
+* defined in: [Appeal HAS Case](appeal-has-properties-hasprotectedspecies.md "appeal-has.schema.json#/properties/hasProtectedSpecies")
+
+### hasProtectedSpecies Type
+
+`boolean`
+
+## isAonbNationalLandscape
+
+Indicates an area of outstanding beauty (National Landscape)
+
+`isAonbNationalLandscape`
+
+* is optional
+
+* Type: `boolean`
+
+* can be null
+
+* defined in: [Appeal HAS Case](appeal-has-properties-isaonbnationallandscape.md "appeal-has.schema.json#/properties/isAonbNationalLandscape")
+
+### isAonbNationalLandscape Type
+
+`boolean`
+
+## isSiteOnHighwayLand
+
+Indicates if site is on highway land
+
+`isSiteOnHighwayLand`
+
+* is optional
+
+* Type: `boolean`
+
+* can be null
+
+* defined in: [Appeal HAS Case](appeal-has-properties-issiteonhighwayland.md "appeal-has.schema.json#/properties/isSiteOnHighwayLand")
+
+### isSiteOnHighwayLand Type
+
+`boolean`
+
+## designatedSitesNames
+
+The designated site names
+
+`designatedSitesNames`
+
+* is optional
+
+* Type: `string[]`
+
+* can be null
+
+* defined in: [Appeal HAS Case](appeal-has-properties-designatedsitesnames.md "appeal-has.schema.json#/properties/designatedSitesNames")
+
+### designatedSitesNames Type
+
+`string[]`
+
+## hasInfrastructureLevy
+
+Indicates the existence of an infrastructure levy
+
+`hasInfrastructureLevy`
+
+* is optional
+
+* Type: `boolean`
+
+* can be null
+
+* defined in: [Appeal HAS Case](appeal-has-properties-hasinfrastructurelevy.md "appeal-has.schema.json#/properties/hasInfrastructureLevy")
+
+### hasInfrastructureLevy Type
+
+`boolean`
+
+## isInfrastructureLevyFormallyAdopted
+
+Indicates if the infrastructure levy is formally adopted
+
+`isInfrastructureLevyFormallyAdopted`
+
+* is optional
+
+* Type: `boolean`
+
+* can be null
+
+* defined in: [Appeal HAS Case](appeal-has-properties-isinfrastructurelevyformallyadopted.md "appeal-has.schema.json#/properties/isInfrastructureLevyFormallyAdopted")
+
+### isInfrastructureLevyFormallyAdopted Type
+
+`boolean`
+
+## infrastructureLevyAdoptedDate
+
+The date of the infrastructure levy adoption
+
+`infrastructureLevyAdoptedDate`
+
+* is optional
+
+* Type: `string`
+
+* can be null
+
+* defined in: [Appeal HAS Case](appeal-has-properties-infrastructurelevyadopteddate.md "appeal-has.schema.json#/properties/infrastructureLevyAdoptedDate")
+
+### infrastructureLevyAdoptedDate Type
+
+`string`
+
+### infrastructureLevyAdoptedDate Constraints
+
+**date time**: the string must be a date time string, according to [RFC 3339, section 5.6](https://tools.ietf.org/html/rfc3339 "check the specification")
+
+### infrastructureLevyAdoptedDate Examples
+
+```json
+"2023-07-27T20:30:00.000Z"
+```
+
+## infrastructureLevyExpectedDate
+
+The expected date of the infrastructure levy
+
+`infrastructureLevyExpectedDate`
+
+* is optional
+
+* Type: `string`
+
+* can be null
+
+* defined in: [Appeal HAS Case](appeal-has-properties-infrastructurelevyexpecteddate.md "appeal-has.schema.json#/properties/infrastructureLevyExpectedDate")
+
+### infrastructureLevyExpectedDate Type
+
+`string`
+
+### infrastructureLevyExpectedDate Constraints
+
+**date time**: the string must be a date time string, according to [RFC 3339, section 5.6](https://tools.ietf.org/html/rfc3339 "check the specification")
+
+### infrastructureLevyExpectedDate Examples
+
+```json
+"2023-07-27T20:30:00.000Z"
+```
+
+## lpaProcedurePreference
+
+The procedure preference indicated by the LPA
+
+> Required for CAS Advert cases
+
+`lpaProcedurePreference`
+
+* is optional
+
+* Type: `string`
+
+* can be null
+
+* defined in: [Appeal HAS Case](appeal-has-properties-lpaprocedurepreference.md "appeal-has.schema.json#/properties/lpaProcedurePreference")
+
+### lpaProcedurePreference Type
+
+`string`
+
+### lpaProcedurePreference Constraints
+
+**enum**: the value of this property must be equal to one of the following values:
+
+| Value       | Explanation |
+| :---------- | :---------- |
+| `"written"` |             |
+| `"hearing"` |             |
+| `"inquiry"` |             |
+| `null`      |             |
+
+## lpaProcedurePreferenceDetails
+
+The procedure details preference indicated by the LPA
+
+> Required for CAS Advert cases
+
+`lpaProcedurePreferenceDetails`
+
+* is optional
+
+* Type: `string`
+
+* can be null
+
+* defined in: [Appeal HAS Case](appeal-has-properties-lpaprocedurepreferencedetails.md "appeal-has.schema.json#/properties/lpaProcedurePreferenceDetails")
+
+### lpaProcedurePreferenceDetails Type
+
+`string`
+
+## lpaProcedurePreferenceDuration
+
+The duration of enquiry indicated by the LPA
+
+> Required for CAS Advert cases
+
+`lpaProcedurePreferenceDuration`
+
+* is optional
+
+* Type: `number`
+
+* can be null
+
+* defined in: [Appeal HAS Case](appeal-has-properties-lpaprocedurepreferenceduration.md "appeal-has.schema.json#/properties/lpaProcedurePreferenceDuration")
+
+### lpaProcedurePreferenceDuration Type
+
+`number`
+
+## caseworkReason
+
+TBC
+
+`caseworkReason`
+
+* is optional
+
+* Type: `string`
+
+* can be null
+
+* defined in: [Appeal HAS Case](appeal-has-properties-caseworkreason.md "appeal-has.schema.json#/properties/caseworkReason")
+
+### caseworkReason Type
+
+`string`
+
+## importantInformation
+
+Information relevant to case...
+
+`importantInformation`
+
+* is optional
+
+* Type: `string`
+
+* can be null
+
+* defined in: [Appeal HAS Case](appeal-has-properties-importantinformation.md "appeal-has.schema.json#/properties/importantInformation")
+
+### importantInformation Type
+
+`string`
+
+## jurisdiction
+
+Under whose jurisdiction the decision falls
+
+`jurisdiction`
+
+* is optional
+
+* Type: `string`
+
+* can be null
+
+* defined in: [Appeal HAS Case](appeal-has-properties-jurisdiction.md "appeal-has.schema.json#/properties/jurisdiction")
+
+### jurisdiction Type
+
+`string`
+
+## redeterminedIndicator
+
+Has the case been selected for redetermination
+
+`redeterminedIndicator`
+
+* is optional
+
+* Type: `boolean`
+
+* can be null
+
+* defined in: [Appeal HAS Case](appeal-has-properties-redeterminedindicator.md "appeal-has.schema.json#/properties/redeterminedIndicator")
+
+### redeterminedIndicator Type
+
+`boolean`
+
+## dateCostsReportDespatched
+
+The date that the costs report was sent
+
+`dateCostsReportDespatched`
+
+* is optional
+
+* Type: `string`
+
+* can be null
+
+* defined in: [Appeal HAS Case](appeal-has-properties-datecostsreportdespatched.md "appeal-has.schema.json#/properties/dateCostsReportDespatched")
+
+### dateCostsReportDespatched Type
+
+`string`
+
+### dateCostsReportDespatched Constraints
+
+**date time**: the string must be a date time string, according to [RFC 3339, section 5.6](https://tools.ietf.org/html/rfc3339 "check the specification")
+
+### dateCostsReportDespatched Examples
+
+```json
+"2023-07-27T20:30:00.000Z"
+```
+
+## dateNotRecoveredOrDerecovered
+
+The date that is TBC
+
+`dateNotRecoveredOrDerecovered`
+
+* is optional
+
+* Type: `string`
+
+* can be null
+
+* defined in: [Appeal HAS Case](appeal-has-properties-datenotrecoveredorderecovered.md "appeal-has.schema.json#/properties/dateNotRecoveredOrDerecovered")
+
+### dateNotRecoveredOrDerecovered Type
+
+`string`
+
+### dateNotRecoveredOrDerecovered Constraints
+
+**date time**: the string must be a date time string, according to [RFC 3339, section 5.6](https://tools.ietf.org/html/rfc3339 "check the specification")
+
+### dateNotRecoveredOrDerecovered Examples
+
+```json
+"2023-07-27T20:30:00.000Z"
+```
+
+## dateRecovered
+
+The date that case was recovered
+
+`dateRecovered`
+
+* is optional
+
+* Type: `string`
+
+* can be null
+
+* defined in: [Appeal HAS Case](appeal-has-properties-daterecovered.md "appeal-has.schema.json#/properties/dateRecovered")
+
+### dateRecovered Type
+
+`string`
+
+### dateRecovered Constraints
+
+**date time**: the string must be a date time string, according to [RFC 3339, section 5.6](https://tools.ietf.org/html/rfc3339 "check the specification")
+
+### dateRecovered Examples
+
+```json
+"2023-07-27T20:30:00.000Z"
+```
+
+## originalCaseDecisionDate
+
+The original case decision date
+
+`originalCaseDecisionDate`
+
+* is optional
+
+* Type: `string`
+
+* can be null
+
+* defined in: [Appeal HAS Case](appeal-has-properties-originalcasedecisiondate.md "appeal-has.schema.json#/properties/originalCaseDecisionDate")
+
+### originalCaseDecisionDate Type
+
+`string`
+
+### originalCaseDecisionDate Constraints
+
+**date time**: the string must be a date time string, according to [RFC 3339, section 5.6](https://tools.ietf.org/html/rfc3339 "check the specification")
+
+### originalCaseDecisionDate Examples
+
+```json
+"2023-07-27T20:30:00.000Z"
+```
+
+## targetDate
+
+The target date for case completion
+
+`targetDate`
+
+* is optional
+
+* Type: `string`
+
+* can be null
+
+* defined in: [Appeal HAS Case](appeal-has-properties-targetdate.md "appeal-has.schema.json#/properties/targetDate")
+
+### targetDate Type
+
+`string`
+
+### targetDate Constraints
+
+**date time**: the string must be a date time string, according to [RFC 3339, section 5.6](https://tools.ietf.org/html/rfc3339 "check the specification")
+
+### targetDate Examples
+
+```json
+"2023-07-27T20:30:00.000Z"
+```
 
 ## ownsAllLand
 
@@ -1955,6 +2455,184 @@ Indicates if the appellant has applied for costs
 | `"minor-commercial-development"`       |             |
 | `"advertisement"`                      |             |
 | `null`                                 |             |
+
+## siteGridReferenceEasting
+
+
+
+`siteGridReferenceEasting`
+
+* is optional
+
+* Type: `string`
+
+* can be null
+
+* defined in: [Appeal HAS Case](appeal-has-properties-sitegridreferenceeasting.md "appeal-has.schema.json#/properties/siteGridReferenceEasting")
+
+### siteGridReferenceEasting Type
+
+`string`
+
+### siteGridReferenceEasting Constraints
+
+**pattern**: the string must match the following regular expression:&#x20;
+
+```regexp
+^\d{6}$
+```
+
+[try pattern](https://regexr.com/?expression=%5E%5Cd%7B6%7D%24 "try regular expression with regexr.com")
+
+### siteGridReferenceEasting Examples
+
+```json
+"357144"
+```
+
+## siteGridReferenceNorthing
+
+
+
+`siteGridReferenceNorthing`
+
+* is optional
+
+* Type: `string`
+
+* can be null
+
+* defined in: [Appeal HAS Case](appeal-has-properties-sitegridreferencenorthing.md "appeal-has.schema.json#/properties/siteGridReferenceNorthing")
+
+### siteGridReferenceNorthing Type
+
+`string`
+
+### siteGridReferenceNorthing Constraints
+
+**pattern**: the string must match the following regular expression:&#x20;
+
+```regexp
+^\d{6}$
+```
+
+[try pattern](https://regexr.com/?expression=%5E%5Cd%7B6%7D%24 "try regular expression with regexr.com")
+
+### siteGridReferenceNorthing Examples
+
+```json
+"400534"
+```
+
+## hasLandownersPermission
+
+Indicates if the appellant has land owners permission
+
+`hasLandownersPermission`
+
+* is optional
+
+* Type: `boolean`
+
+* can be null
+
+* defined in: [Appeal HAS Case](appeal-has-properties-haslandownerspermission.md "appeal-has.schema.json#/properties/hasLandownersPermission")
+
+### hasLandownersPermission Type
+
+`boolean`
+
+## isAdvertInPosition
+
+Indicates if the advert is already in position
+
+`isAdvertInPosition`
+
+* is optional
+
+* Type: `boolean`
+
+* can be null
+
+* defined in: [Appeal HAS Case](appeal-has-properties-isadvertinposition.md "appeal-has.schema.json#/properties/isAdvertInPosition")
+
+### isAdvertInPosition Type
+
+`boolean`
+
+## isSiteInAreaOfSpecialControlAdverts
+
+Indicates if the site is in an area of special control for adverts
+
+`isSiteInAreaOfSpecialControlAdverts`
+
+* is optional
+
+* Type: `boolean`
+
+* can be null
+
+* defined in: [Appeal HAS Case](appeal-has-properties-issiteinareaofspecialcontroladverts.md "appeal-has.schema.json#/properties/isSiteInAreaOfSpecialControlAdverts")
+
+### isSiteInAreaOfSpecialControlAdverts Type
+
+`boolean`
+
+## wasApplicationRefusedDueToHighwayOrTraffic
+
+Indicates if the application was refused because of highway or traffic public safety?
+
+`wasApplicationRefusedDueToHighwayOrTraffic`
+
+* is optional
+
+* Type: `boolean`
+
+* can be null
+
+* defined in: [Appeal HAS Case](appeal-has-properties-wasapplicationrefusedduetohighwayortraffic.md "appeal-has.schema.json#/properties/wasApplicationRefusedDueToHighwayOrTraffic")
+
+### wasApplicationRefusedDueToHighwayOrTraffic Type
+
+`boolean`
+
+## didAppellantSubmitCompletePhotosAndPlans
+
+Indicates if the appellant submitted complete and accurate photographs and plans
+
+`didAppellantSubmitCompletePhotosAndPlans`
+
+* is optional
+
+* Type: `boolean`
+
+* can be null
+
+* defined in: [Appeal HAS Case](appeal-has-properties-didappellantsubmitcompletephotosandplans.md "appeal-has.schema.json#/properties/didAppellantSubmitCompletePhotosAndPlans")
+
+### didAppellantSubmitCompletePhotosAndPlans Type
+
+`boolean`
+
+## advertType
+
+
+
+> Pick from a TBD list of reference data for advert type
+
+`advertType`
+
+* is optional
+
+* Type: `string`
+
+* can be null
+
+* defined in: [Appeal HAS Case](appeal-has-properties-adverttype.md "appeal-has.schema.json#/properties/advertType")
+
+### advertType Type
+
+`string`
 
 ## Additional Properties
 

@@ -22,9 +22,11 @@ async function genDocs() {
 		outDir: 'docs',
 		includeReadme: true
 	});
-	// remove all the "-properties-" files that aren't needed
+	// remove all irrelevant docs
+	const removePatterns = ['-properties-', '-properties.', '-anyof-'];
 	for (const md of out.markdown) {
-		if (md.fileName.includes('-properties-')) {
+		const shouldRemove = removePatterns.some((pattern) => md.fileName.includes(pattern));
+		if (shouldRemove) {
 			await fs.rm(md.fullPath);
 		}
 	}

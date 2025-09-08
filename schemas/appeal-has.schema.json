@@ -2,7 +2,7 @@
   "$schema": "http://json-schema.org/draft-07/schema#",
   "$id": "appeal-has.schema.json",
   "title": "Appeal HAS Case",
-  "description": "Schema defining the metadata for an appeal",
+  "description": "Group A - Schema defining the metadata for an appeal",
   "type": "object",
   "additionalProperties": true,
   "required": [
@@ -51,11 +51,6 @@
     "applicationDecision",
     "applicationDecisionDate",
     "caseSubmissionDueDate",
-    "siteAddressLine1",
-    "siteAddressLine2",
-    "siteAddressTown",
-    "siteAddressCounty",
-    "siteAddressPostcode",
     "siteAccessDetails",
     "siteSafetyDetails",
     "siteAreaSquareMetres",
@@ -78,6 +73,23 @@
     "affectedListedBuildingNumbers",
     "appellantCostsAppliedFor",
     "lpaCostsAppliedFor"
+  ],
+  "anyOf": [
+    {
+      "required": ["siteGridReferenceEasting", "siteGridReferenceNorthing"],
+      "properties": {
+        "siteGridReferenceEasting": { "not": { "type": "null" } },
+        "siteGridReferenceNorthing": { "not": { "type": "null" } }
+      }
+    },
+    {
+      "required": ["siteAddressLine1", "siteAddressTown", "siteAddressPostcode"],
+      "properties": {
+        "siteAddressLine1": { "not": { "type": "null" } },
+        "siteAddressTown": { "not": { "type": "null" } },
+        "siteAddressPostcode": { "not": { "type": "null" } }
+      }
+    }
   ],
   "properties": {
     "caseId": {
@@ -368,7 +380,7 @@
       "$comment": "Calculated from the applicationDecisionDate"
     },
     "siteAddressLine1": {
-      "type": "string",
+      "type": ["string", "null"],
       "examples": ["96 The Avenue"],
       "description": "First line of address for the appeal site"
     },
@@ -377,7 +389,7 @@
       "description": "Second line of address for the appeal site"
     },
     "siteAddressTown": {
-      "type": "string",
+      "type": ["string", "null"],
       "examples": ["Maidstone"],
       "description": "Town / City of the site address"
     },
@@ -387,7 +399,7 @@
       "description": "County of the site address"
     },
     "siteAddressPostcode": {
-      "type": "string",
+      "type": ["string", "null"],
       "examples": ["MD21 5XY"],
       "description": "Postal code of the site address"
     },
@@ -428,6 +440,112 @@
     "inConservationArea": {
       "type": ["boolean", "null"],
       "description": "Indicates if the site is in a conservation area"
+    },
+    "affectsScheduledMonument": {
+      "type": ["boolean", "null"],
+      "description": "Indicates if the development affects a scheduled monument"
+    },
+    "hasProtectedSpecies": {
+      "type": ["boolean", "null"],
+      "description": "Indicates if the site hosts protected species"
+    },
+    "isAonbNationalLandscape": {
+      "type": ["boolean", "null"],
+      "description": "Indicates an area of outstanding beauty (National Landscape)"
+    },
+    "isSiteOnHighwayLand": {
+      "type": ["boolean", "null"],
+      "description": "Indicates if site is on highway land"
+    },
+    "designatedSitesNames": {
+      "type": ["array", "null"],
+      "items": {
+        "type": "string",
+        "examples": ["SSSI", "cSAC", "SAC", "pSPA", "SPA", "user entered value"]
+      },
+      "description": "The designated site names"
+    },
+    "hasInfrastructureLevy": {
+      "type": ["boolean", "null"],
+      "description": "Indicates the existence of an infrastructure levy"
+    },
+    "isInfrastructureLevyFormallyAdopted": {
+      "type": ["boolean", "null"],
+      "description": "Indicates if the infrastructure levy is formally adopted"
+    },
+    "infrastructureLevyAdoptedDate": {
+      "type": ["string", "null"],
+      "format": "date-time",
+      "examples": ["2023-07-27T20:30:00.000Z"],
+      "description": "The date of the infrastructure levy adoption"
+    },
+    "infrastructureLevyExpectedDate": {
+      "type": ["string", "null"],
+      "format": "date-time",
+      "examples": ["2023-07-27T20:30:00.000Z"],
+      "description": "The expected date of the infrastructure levy"
+    },
+    "lpaProcedurePreference": {
+      "type": ["string", "null"],
+      "enum": ["written", "hearing", "inquiry", null],
+      "description": "The procedure preference indicated by the LPA",
+      "$comment": "Required for CAS Advert cases"
+    },
+    "lpaProcedurePreferenceDetails": {
+      "type": ["string", "null"],
+      "description": "The procedure details preference indicated by the LPA",
+      "$comment": "Required for CAS Advert cases"
+    },
+    "lpaProcedurePreferenceDuration": {
+      "type": ["number", "null"],
+      "description": "The duration of enquiry indicated by the LPA",
+      "$comment": "Required for CAS Advert cases"
+    },
+    "caseworkReason": {
+      "type": ["string", "null"],
+      "description": "TBC"
+    },
+    "importantInformation": {
+      "type": ["string", "null"],
+      "description": "Information relevant to case..."
+    },
+    "jurisdiction": {
+      "type": ["string", "null"],
+      "description": "Under whose jurisdiction the decision falls"
+    },
+    "redeterminedIndicator": {
+      "type": ["boolean", "null"],
+      "description": "Has the case been selected for redetermination"
+    },
+    "dateCostsReportDespatched": {
+      "type": ["string", "null"],
+      "format": "date-time",
+      "examples": ["2023-07-27T20:30:00.000Z"],
+      "description": "The date that the costs report was sent"
+    },
+    "dateNotRecoveredOrDerecovered": {
+      "type": ["string", "null"],
+      "format": "date-time",
+      "examples": ["2023-07-27T20:30:00.000Z"],
+      "description": "The date that is TBC"
+    },
+    "dateRecovered": {
+      "type": ["string", "null"],
+      "format": "date-time",
+      "examples": ["2023-07-27T20:30:00.000Z"],
+      "description": "The date that case was recovered"
+    },
+    "originalCaseDecisionDate": {
+      "type": ["string", "null"],
+      "format": "date-time",
+      "examples": ["2023-07-27T20:30:00.000Z"],
+      "description": "The original case decision date"
+    },
+    "targetDate": {
+      "type": ["string", "null"],
+      "format": "date-time",
+      "examples": ["2023-07-27T20:30:00.000Z"],
+      "description": "The target date for case completion"
     },
     "ownsAllLand": {
       "type": ["boolean", "null"],
@@ -572,6 +690,40 @@
         "advertisement",
         null
       ]
+    },
+    "siteGridReferenceEasting": {
+      "type": ["string", "null"],
+      "pattern": "^\\d{6}$",
+      "examples": ["357144"]
+    },
+    "siteGridReferenceNorthing": {
+      "type": ["string", "null"],
+      "pattern": "^\\d{6}$",
+      "examples": ["400534"]
+    },
+    "hasLandownersPermission": {
+      "type": ["boolean", "null"],
+      "description": "Indicates if the appellant has land owners permission"
+    },
+    "isAdvertInPosition": {
+      "type": ["boolean", "null"],
+      "description": "Indicates if the advert is already in position"
+    },
+    "isSiteInAreaOfSpecialControlAdverts": {
+      "type": ["boolean", "null"],
+      "description": "Indicates if the site is in an area of special control for adverts"
+    },
+    "wasApplicationRefusedDueToHighwayOrTraffic": {
+      "type": ["boolean", "null"],
+      "description": "Indicates if the application was refused because of highway or traffic public safety?"
+    },
+    "didAppellantSubmitCompletePhotosAndPlans": {
+      "type": ["boolean", "null"],
+      "description": "Indicates if the appellant submitted complete and accurate photographs and plans"
+    },
+    "advertType": {
+      "type": ["string", "null"],
+      "$comment": "Pick from a TBD list of reference data for advert type"
     }
   }
 }

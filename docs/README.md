@@ -8,11 +8,11 @@
 
 * [Appeal Event Estimate](./appeal-event-estimate.md "All event estimates belong to a case") – `appeal-event-estimate.schema.json`
 
-* [Appeal HAS Case](./appeal-has.md "Schema defining the metadata for an appeal") – `appeal-has.schema.json`
+* [Appeal HAS Case](./appeal-has.md "Group A - Schema defining the metadata for an appeal") – `appeal-has.schema.json`
 
 * [Appeal Representation](./appeal-representation.md "Schema defining the metadata for appeal representations, such as statements, third-party comments and final comments") – `appeal-representation.schema.json`
 
-* [Appeal S78 Case](./appeal-s78.md "Schema defining the metadata for an appeal (S78)") – `appeal-s78.schema.json`
+* [Appeal S78 Case](./appeal-s78.md "Group B - Schema defining the metadata for an appeal") – `appeal-s78.schema.json`
 
 * [DaRT API response](./dart-response.md "Schema defining the data returned by the DaRT API") – `dart-response.schema.json`
 

@@ -75,6 +75,18 @@
         "appellantCostsAppliedFor": {
           "type": ["boolean", "null"],
           "description": "Indicates if the appellant has applied for costs"
+        },
+        "highwayLand": {
+          "type": ["boolean", "null"],
+          "description": "Indicates if the advert is on highway land"
+        },
+        "advertInPosition": {
+          "type": ["boolean", "null"],
+          "description": "Indicates if the advert is in position"
+        },
+        "landownerPermission": {
+          "type": ["boolean", "null"],
+          "description": "Indicates if there is landowner permission for the advert"
         }
       }
     }

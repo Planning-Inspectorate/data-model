@@ -184,6 +184,14 @@
       },
       "description": "A list of related case references known to the appellant and the LPA"
     },
+    "siteGridReferenceEasting": {
+      "type": ["string", "null"],
+      "description": "Grid reference easting of the site"
+    },
+    "siteGridReferenceNorthing": {
+      "type": ["string", "null"],
+      "description": "Grid reference northing of the site"
+    },
     "typeOfPlanningApplication": {
       "type": ["string", "null"],
       "enum": [

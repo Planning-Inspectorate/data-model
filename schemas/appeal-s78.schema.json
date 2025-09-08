@@ -133,8 +133,6 @@
     "statementDueDate",
     "reasonForNeighbourVisits",
     "numberOfResidencesNetChange",
-    "siteGridReferenceEasting",
-    "siteGridReferenceNorthing",
     "siteViewableFromRoad",
     "siteWithinSSSI",
     "typeOfPlanningApplication"
@@ -1003,14 +1001,6 @@
     "numberOfResidencesNetChange": {
       "type": ["number", "null"],
       "description": "The net gain in residences of the proposed development",
-      "$comment": "Only available in S78 cases"
-    },
-    "siteGridReferenceEasting": {
-      "type": ["string", "null"],
-      "$comment": "Only available in S78 cases"
-    },
-    "siteGridReferenceNorthing": {
-      "type": ["string", "null"],
       "$comment": "Only available in S78 cases"
     },
     "siteViewableFromRoad": {

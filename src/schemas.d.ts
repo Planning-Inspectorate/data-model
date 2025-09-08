@@ -1271,8 +1271,6 @@ export interface AppealS78Case {
    * The net gain in residences of the proposed development
    */
   numberOfResidencesNetChange: number | null;
-  siteGridReferenceEasting: string | null;
-  siteGridReferenceNorthing: string | null;
   siteViewableFromRoad: boolean | null;
   siteWithinSSSI: boolean | null;
   typeOfPlanningApplication:
@@ -2697,6 +2695,14 @@ export interface AppellantCommonSubmissionProperties {
    * A list of related case references known to the appellant and the LPA
    */
   nearbyCaseReferences: string[] | null;
+  /**
+   * Grid reference easting of the site
+   */
+  siteGridReferenceEasting?: string | null;
+  /**
+   * Grid reference northing of the site
+   */
+  siteGridReferenceNorthing?: string | null;
   typeOfPlanningApplication?:
     | 'full-appeal'
     | 'householder-planning'
@@ -2763,6 +2769,18 @@ export type AppellantHASSubmissionProperties = AppellantCommonSubmissionProperti
    * Indicates if the appellant has applied for costs
    */
   appellantCostsAppliedFor?: boolean | null;
+  /**
+   * Indicates if the advert is on highway land
+   */
+  highwayLand?: boolean | null;
+  /**
+   * Indicates if the advert is in position
+   */
+  advertInPosition?: boolean | null;
+  /**
+   * Indicates if there is landowner permission for the advert
+   */
+  landownerPermission?: boolean | null;
 };
 
 /**
@@ -2877,6 +2895,14 @@ export interface AppellantCommonSubmissionProperties {
    * A list of related case references known to the appellant and the LPA
    */
   nearbyCaseReferences: string[] | null;
+  /**
+   * Grid reference easting of the site
+   */
+  siteGridReferenceEasting?: string | null;
+  /**
+   * Grid reference northing of the site
+   */
+  siteGridReferenceNorthing?: string | null;
   typeOfPlanningApplication?:
     | 'full-appeal'
     | 'householder-planning'
@@ -3136,6 +3162,18 @@ export type AppellantHASSubmissionProperties = AppellantCommonSubmissionProperti
    * Indicates if the appellant has applied for costs
    */
   appellantCostsAppliedFor?: boolean | null;
+  /**
+   * Indicates if the advert is on highway land
+   */
+  highwayLand?: boolean | null;
+  /**
+   * Indicates if the advert is in position
+   */
+  advertInPosition?: boolean | null;
+  /**
+   * Indicates if there is landowner permission for the advert
+   */
+  landownerPermission?: boolean | null;
 };
 
 /**
@@ -3250,6 +3288,14 @@ export interface AppellantCommonSubmissionProperties {
    * A list of related case references known to the appellant and the LPA
    */
   nearbyCaseReferences: string[] | null;
+  /**
+   * Grid reference easting of the site
+   */
+  siteGridReferenceEasting?: string | null;
+  /**
+   * Grid reference northing of the site
+   */
+  siteGridReferenceNorthing?: string | null;
   typeOfPlanningApplication?:
     | 'full-appeal'
     | 'householder-planning'
@@ -3316,6 +3362,18 @@ export type AppellantHASSubmissionProperties = AppellantCommonSubmissionProperti
    * Indicates if the appellant has applied for costs
    */
   appellantCostsAppliedFor?: boolean | null;
+  /**
+   * Indicates if the advert is on highway land
+   */
+  highwayLand?: boolean | null;
+  /**
+   * Indicates if the advert is in position
+   */
+  advertInPosition?: boolean | null;
+  /**
+   * Indicates if there is landowner permission for the advert
+   */
+  landownerPermission?: boolean | null;
 };
 /**
  * Schema defining any S78 specific properties for questionnaire submissions
@@ -3631,6 +3689,14 @@ export interface AppellantCommonSubmissionProperties {
    * A list of related case references known to the appellant and the LPA
    */
   nearbyCaseReferences: string[] | null;
+  /**
+   * Grid reference easting of the site
+   */
+  siteGridReferenceEasting?: string | null;
+  /**
+   * Grid reference northing of the site
+   */
+  siteGridReferenceNorthing?: string | null;
   typeOfPlanningApplication?:
     | 'full-appeal'
     | 'householder-planning'

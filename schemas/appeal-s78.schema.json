@@ -2,7 +2,7 @@
   "$schema": "http://json-schema.org/draft-07/schema#",
   "$id": "appeal-s78.schema.json",
   "title": "Appeal S78 Case",
-  "description": "Schema defining the metadata for an appeal (S78)",
+  "description": "Group B - Schema defining the metadata for an appeal",
   "type": "object",
   "additionalProperties": true,
   "required": [
@@ -51,11 +51,6 @@
     "applicationDecision",
     "applicationDecisionDate",
     "caseSubmissionDueDate",
-    "siteAddressLine1",
-    "siteAddressLine2",
-    "siteAddressTown",
-    "siteAddressCounty",
-    "siteAddressPostcode",
     "siteAccessDetails",
     "siteSafetyDetails",
     "siteAreaSquareMetres",
@@ -133,11 +128,26 @@
     "statementDueDate",
     "reasonForNeighbourVisits",
     "numberOfResidencesNetChange",
-    "siteGridReferenceEasting",
-    "siteGridReferenceNorthing",
     "siteViewableFromRoad",
     "siteWithinSSSI",
     "typeOfPlanningApplication"
+  ],
+  "anyOf": [
+    {
+      "required": ["siteGridReferenceEasting", "siteGridReferenceNorthing"],
+      "properties": {
+        "siteGridReferenceEasting": { "not": { "type": "null" } },
+        "siteGridReferenceNorthing": { "not": { "type": "null" } }
+      }
+    },
+    {
+      "required": ["siteAddressLine1", "siteAddressTown", "siteAddressPostcode"],
+      "properties": {
+        "siteAddressLine1": { "not": { "type": "null" } },
+        "siteAddressTown": { "not": { "type": "null" } },
+        "siteAddressPostcode": { "not": { "type": "null" } }
+      }
+    }
   ],
   "properties": {
     "caseId": {
@@ -470,7 +480,7 @@
       "$comment": "Also available on HAS cases"
     },
     "siteAddressLine1": {
-      "type": "string",
+      "type": ["string", "null"],
       "examples": ["96 The Avenue"],
       "description": "First line of address for the appeal site",
       "$comment": "Also available on HAS cases"
@@ -481,7 +491,7 @@
       "$comment": "Also available on HAS cases"
     },
     "siteAddressTown": {
-      "type": "string",
+      "type": ["string", "null"],
       "examples": ["Maidstone"],
       "description": "Town / City of the site address",
       "$comment": "Also available on HAS cases"
@@ -493,7 +503,7 @@
       "$comment": "Also available on HAS cases"
     },
     "siteAddressPostcode": {
-      "type": "string",
+      "type": ["string", "null"],
       "examples": ["MD21 5XY"],
       "description": "Postal code of the site address",
       "$comment": "Also available on HAS cases"
@@ -683,8 +693,7 @@
         "type": "string",
         "examples": ["10023", "17824"]
       },
-      "description": "A list of changed listed building IDs from Historic England",
-      "$comment": "Only available in S78 cases"
+      "description": "A list of changed listed building IDs from Historic England"
     },
     "preserveGrantLoan": {
       "type": ["boolean", "null"],
@@ -708,64 +717,52 @@
     },
     "agriculturalHolding": {
       "type": ["boolean", "null"],
-      "description": "Indicates if the site is an agricultural holding",
-      "$comment": "Only available in S78 cases"
+      "description": "Indicates if the site is an agricultural holding"
     },
     "tenantAgriculturalHolding": {
       "type": ["boolean", "null"],
-      "description": "Indicates if the site is a tenant agricultural holding",
-      "$comment": "Only available in S78 cases"
+      "description": "Indicates if the site is a tenant agricultural holding"
     },
     "otherTenantsAgriculturalHolding": {
       "type": ["boolean", "null"],
-      "description": "Indicates if the site is an agricultural holding with other tenants",
-      "$comment": "Only available in S78 cases"
+      "description": "Indicates if the site is an agricultural holding with other tenants"
     },
     "informedTenantsAgriculturalHolding": {
       "type": ["boolean", "null"],
-      "description": "If the site is an agricultural holding, indicates tenants are informed",
-      "$comment": "Only available in S78 cases"
+      "description": "If the site is an agricultural holding, indicates tenants are informed"
     },
     "appellantProcedurePreference": {
       "type": ["string", "null"],
       "enum": ["written", "hearing", "inquiry", null],
-      "description": "The procedure preference indicated by the appellant",
-      "$comment": "Only available in S78 cases"
+      "description": "The procedure preference indicated by the appellant"
     },
     "appellantProcedurePreferenceDetails": {
       "type": ["string", "null"],
-      "description": "The procedure details preference indicated by the appellant",
-      "$comment": "Only available in S78 cases"
+      "description": "The procedure details preference indicated by the appellant"
     },
     "appellantProcedurePreferenceDuration": {
       "type": ["number", "null"],
-      "description": "The duration of the procedure indicated by the appellant",
-      "$comment": "Only available in S78 cases"
+      "description": "The duration of the procedure indicated by the appellant"
     },
     "appellantProcedurePreferenceWitnessCount": {
       "type": ["number", "null"],
-      "description": "The number of witnesses appellant has suggested for inquiries preference",
-      "$comment": "Only available in S78 cases"
+      "description": "The number of witnesses appellant has suggested for inquiries preference"
     },
     "statusPlanningObligation": {
       "type": ["string", "null"],
-      "description": "The planning obligation information, if available",
-      "$comment": "Only available in S78 cases"
+      "description": "The planning obligation information, if available"
     },
     "affectsScheduledMonument": {
       "type": ["boolean", "null"],
-      "description": "Indicates that a scheduled monument is affected",
-      "$comment": "Only available in S78 cases"
+      "description": "Indicates that a scheduled monument is affected"
     },
     "hasProtectedSpecies": {
       "type": ["boolean", "null"],
-      "description": "Indicates the existence of protected species",
-      "$comment": "Only available in S78 cases"
+      "description": "Indicates the existence of protected species"
     },
     "isAonbNationalLandscape": {
       "type": ["boolean", "null"],
-      "description": "Indicates an area of outstanding beauty (National Landscape)",
-      "$comment": "Only available in S78 cases"
+      "description": "Indicates an area of outstanding beauty (National Landscape)"
     },
     "designatedSitesNames": {
       "type": ["array", "null"],
@@ -773,24 +770,20 @@
         "type": "string",
         "examples": ["SSSI", "cSAC", "SAC", "pSPA", "SPA", "user entered value"]
       },
-      "description": "The designated site names",
-      "$comment": "Only available in S78 cases"
+      "description": "The designated site names"
     },
     "isGypsyOrTravellerSite": {
       "type": ["boolean", "null"],
-      "description": "Indicates a traveller site",
-      "$comment": "Only available in S78 cases"
+      "description": "Indicates a traveller site"
     },
     "isPublicRightOfWay": {
       "type": ["boolean", "null"],
-      "description": "Indicates a PROW (public right of way)",
-      "$comment": "Only available in S78 cases"
+      "description": "Indicates a PROW (public right of way)"
     },
     "eiaEnvironmentalImpactSchedule": {
       "type": ["string", "null"],
       "enum": ["schedule-1", "schedule-2", null],
-      "description": "The impact schedule from EIA",
-      "$comment": "Only available in S78 cases"
+      "description": "The impact schedule from EIA"
     },
     "eiaDevelopmentDescription": {
       "type": ["string", "null"],
@@ -810,38 +803,31 @@
         "tourism-leisure",
         null
       ],
-      "description": "The development description from EIA",
-      "$comment": "Only available in S78 cases"
+      "description": "The development description from EIA"
     },
     "eiaSensitiveAreaDetails": {
       "type": ["string", "null"],
-      "description": "The sensitive area details from EIA",
-      "$comment": "Only available in S78 cases"
+      "description": "The sensitive area details from EIA"
     },
     "eiaColumnTwoThreshold": {
       "type": ["boolean", "null"],
-      "description": "EIA specific threshold",
-      "$comment": "Only available in S78 cases"
+      "description": "EIA specific threshold"
     },
     "eiaScreeningOpinion": {
       "type": ["boolean", "null"],
-      "description": "EIA screening opinion",
-      "$comment": "Only available in S78 cases"
+      "description": "EIA screening opinion"
     },
     "eiaRequiresEnvironmentalStatement": {
       "type": ["boolean", "null"],
-      "description": "EIA environmental statement required",
-      "$comment": "Only available in S78 cases"
+      "description": "EIA environmental statement required"
     },
     "eiaCompletedEnvironmentalStatement": {
       "type": ["boolean", "null"],
-      "description": "EIA completed environmental statement required",
-      "$comment": "Only available in S78 cases"
+      "description": "EIA completed environmental statement required"
     },
     "hasStatutoryConsultees": {
       "type": ["boolean", "null"],
-      "description": "Indicates statutory consultees",
-      "$comment": "Only available in S78 cases"
+      "description": "Indicates statutory consultees"
     },
     "consultedBodiesDetails": {
       "type": ["string", "null"],
@@ -849,177 +835,149 @@
     },
     "hasInfrastructureLevy": {
       "type": ["boolean", "null"],
-      "description": "Indicates the existence of an infrastructure levy",
-      "$comment": "Only available in S78 cases"
+      "description": "Indicates the existence of an infrastructure levy"
     },
     "isInfrastructureLevyFormallyAdopted": {
       "type": ["boolean", "null"],
-      "description": "Indicates if the infrastructure levy is formally adopted",
-      "$comment": "Only available in S78 cases"
+      "description": "Indicates if the infrastructure levy is formally adopted"
     },
     "infrastructureLevyAdoptedDate": {
       "type": ["string", "null"],
       "format": "date-time",
       "examples": ["2023-07-27T20:30:00.000Z"],
-      "description": "The date of the infrastructure levy adoption",
-      "$comment": "Only available in S78 cases"
+      "description": "The date of the infrastructure levy adoption"
     },
     "infrastructureLevyExpectedDate": {
       "type": ["string", "null"],
       "format": "date-time",
       "examples": ["2023-07-27T20:30:00.000Z"],
-      "description": "The expected date of the infrastructure levy",
-      "$comment": "Only available in S78 cases"
+      "description": "The expected date of the infrastructure levy"
     },
     "lpaProcedurePreference": {
       "type": ["string", "null"],
       "enum": ["written", "hearing", "inquiry", null],
-      "description": "The procedure preference indicated by the LPA",
-      "$comment": "Only available in S78 cases"
+      "description": "The procedure preference indicated by the LPA"
     },
     "lpaProcedurePreferenceDetails": {
       "type": ["string", "null"],
-      "description": "The procedure details preference indicated by the LPA",
-      "$comment": "Only available in S78 cases"
+      "description": "The procedure details preference indicated by the LPA"
     },
     "lpaProcedurePreferenceDuration": {
       "type": ["number", "null"],
-      "description": "The duration of enquiry indicated by the LPA",
-      "$comment": "Only available in S78 cases"
+      "description": "The duration of enquiry indicated by the LPA"
     },
     "caseworkReason": {
-      "type": ["string", "null"],
-      "$comment": "Only available in S78 cases"
+      "type": ["string", "null"]
     },
     "importantInformation": {
-      "type": ["string", "null"],
-      "$comment": "Only available in S78 cases"
+      "type": ["string", "null"]
     },
     "jurisdiction": {
-      "type": ["string", "null"],
-      "$comment": "Only available in S78 cases"
+      "type": ["string", "null"]
     },
     "redeterminedIndicator": {
-      "type": ["string", "null"],
-      "$comment": "Only available in S78 cases"
+      "type": ["string", "null"]
     },
     "dateCostsReportDespatched": {
       "type": ["string", "null"],
       "format": "date-time",
       "examples": ["2023-07-27T20:30:00.000Z"],
-      "description": "The date of the cost report",
-      "$comment": "Only available in S78 cases"
+      "description": "The date of the cost report"
     },
     "dateNotRecoveredOrDerecovered": {
       "type": ["string", "null"],
       "format": "date-time",
-      "examples": ["2023-07-27T20:30:00.000Z"],
-      "$comment": "Only available in S78 cases"
+      "examples": ["2023-07-27T20:30:00.000Z"]
     },
     "dateRecovered": {
       "type": ["string", "null"],
       "format": "date-time",
-      "examples": ["2023-07-27T20:30:00.000Z"],
-      "$comment": "Only available in S78 cases"
+      "examples": ["2023-07-27T20:30:00.000Z"]
     },
     "originalCaseDecisionDate": {
       "type": ["string", "null"],
       "format": "date-time",
-      "examples": ["2023-07-27T20:30:00.000Z"],
-      "$comment": "Only available in S78 cases"
+      "examples": ["2023-07-27T20:30:00.000Z"]
     },
     "targetDate": {
       "type": ["string", "null"],
       "format": "date-time",
-      "examples": ["2023-07-27T20:30:00.000Z"],
-      "$comment": "Only available in S78 cases"
+      "examples": ["2023-07-27T20:30:00.000Z"]
     },
     "appellantCommentsSubmittedDate": {
       "type": ["string", "null"],
       "format": "date-time",
-      "examples": ["2023-07-27T20:30:00.000Z"],
-      "$comment": "Only available in S78 cases"
+      "examples": ["2023-07-27T20:30:00.000Z"]
     },
     "appellantStatementSubmittedDate": {
       "type": ["string", "null"],
       "format": "date-time",
-      "examples": ["2023-07-27T20:30:00.000Z"],
-      "$comment": "Only available in S78 cases"
+      "examples": ["2023-07-27T20:30:00.000Z"]
     },
     "appellantProofsSubmittedDate": {
       "type": ["string", "null"],
       "format": "date-time",
-      "examples": ["2023-07-27T20:30:00.000Z"],
-      "$comment": "Only available in S78 cases"
+      "examples": ["2023-07-27T20:30:00.000Z"]
     },
     "finalCommentsDueDate": {
       "type": ["string", "null"],
       "format": "date-time",
-      "examples": ["2023-07-27T20:30:00.000Z"],
-      "$comment": "Only available in S78 cases"
+      "examples": ["2023-07-27T20:30:00.000Z"]
     },
     "interestedPartyRepsDueDate": {
       "type": ["string", "null"],
       "format": "date-time",
-      "examples": ["2023-07-27T20:30:00.000Z"],
-      "$comment": "Only available in S78 cases"
+      "examples": ["2023-07-27T20:30:00.000Z"]
     },
     "lpaCommentsSubmittedDate": {
       "type": ["string", "null"],
       "format": "date-time",
-      "examples": ["2023-07-27T20:30:00.000Z"],
-      "$comment": "Only available in S78 cases"
+      "examples": ["2023-07-27T20:30:00.000Z"]
     },
     "lpaProofsSubmittedDate": {
       "type": ["string", "null"],
       "format": "date-time",
-      "examples": ["2023-07-27T20:30:00.000Z"],
-      "$comment": "Only available in S78 cases"
+      "examples": ["2023-07-27T20:30:00.000Z"]
     },
     "lpaStatementSubmittedDate": {
       "type": ["string", "null"],
       "format": "date-time",
-      "examples": ["2023-07-27T20:30:00.000Z"],
-      "$comment": "Only available in S78 cases"
+      "examples": ["2023-07-27T20:30:00.000Z"]
     },
     "proofsOfEvidenceDueDate": {
       "type": ["string", "null"],
       "format": "date-time",
-      "examples": ["2023-07-27T20:30:00.000Z"],
-      "$comment": "Only available in S78 cases"
+      "examples": ["2023-07-27T20:30:00.000Z"]
     },
     "siteNoticesSentDate": {
       "type": ["string", "null"],
       "format": "date-time",
-      "examples": ["2023-07-27T20:30:00.000Z"],
-      "$comment": "Only available in S78 cases"
+      "examples": ["2023-07-27T20:30:00.000Z"]
     },
     "statementDueDate": {
       "type": ["string", "null"],
       "format": "date-time",
-      "examples": ["2023-07-27T20:30:00.000Z"],
-      "$comment": "Only available in S78 cases"
+      "examples": ["2023-07-27T20:30:00.000Z"]
     },
     "numberOfResidencesNetChange": {
       "type": ["number", "null"],
-      "description": "The net gain in residences of the proposed development",
-      "$comment": "Only available in S78 cases"
+      "description": "The net gain in residences of the proposed development"
     },
     "siteGridReferenceEasting": {
       "type": ["string", "null"],
-      "$comment": "Only available in S78 cases"
+      "pattern": "^\\d{6}$",
+      "examples": ["357144"]
     },
     "siteGridReferenceNorthing": {
       "type": ["string", "null"],
-      "$comment": "Only available in S78 cases"
+      "pattern": "^\\d{6}$",
+      "examples": ["400534"]
     },
     "siteViewableFromRoad": {
-      "type": ["boolean", "null"],
-      "$comment": "Only available in S78 cases"
+      "type": ["boolean", "null"]
     },
     "siteWithinSSSI": {
-      "type": ["boolean", "null"],
-      "$comment": "Only available in S78 cases"
+      "type": ["boolean", "null"]
     },
     "typeOfPlanningApplication": {
       "type": ["string", "null"],
@@ -1060,14 +1018,12 @@
     "statementOfCommonGroundDueDate": {
       "type": ["string", "null"],
       "format": "date-time",
-      "examples": ["2023-07-27T20:30:00.000Z"],
-      "$comment": "Only available in S78 cases"
+      "examples": ["2023-07-27T20:30:00.000Z"]
     },
     "planningObligationDueDate": {
       "type": ["string", "null"],
       "format": "date-time",
-      "examples": ["2023-07-27T20:30:00.000Z"],
-      "$comment": "Only available in S78 cases"
+      "examples": ["2023-07-27T20:30:00.000Z"]
     }
   }
 }

@@ -301,9 +301,29 @@ export interface AppealEvent {
 }
 
 /**
- * Schema defining the metadata for an appeal
+ * Group A - Schema defining the metadata for an appeal
  */
-export interface AppealHASCase {
+export type AppealHASCase = (
+  | {
+      siteGridReferenceEasting: {
+        [k: string]: unknown;
+      };
+      siteGridReferenceNorthing: {
+        [k: string]: unknown;
+      };
+    }
+  | {
+      siteAddressLine1: {
+        [k: string]: unknown;
+      };
+      siteAddressTown: {
+        [k: string]: unknown;
+      };
+      siteAddressPostcode: {
+        [k: string]: unknown;
+      };
+    }
+) & {
   /**
    * Internal case identifier
    */
@@ -504,23 +524,23 @@ export interface AppealHASCase {
   /**
    * First line of address for the appeal site
    */
-  siteAddressLine1: string;
+  siteAddressLine1?: string | null;
   /**
    * Second line of address for the appeal site
    */
-  siteAddressLine2: string | null;
+  siteAddressLine2?: string | null;
   /**
    * Town / City of the site address
    */
-  siteAddressTown: string;
+  siteAddressTown?: string | null;
   /**
    * County of the site address
    */
-  siteAddressCounty: string | null;
+  siteAddressCounty?: string | null;
   /**
    * Postal code of the site address
    */
-  siteAddressPostcode: string;
+  siteAddressPostcode?: string | null;
   /**
    * Provided information on site accessibility
    */
@@ -549,6 +569,90 @@ export interface AppealHASCase {
    * Indicates if the site is in a conservation area
    */
   inConservationArea: boolean | null;
+  /**
+   * Indicates if the development affects a scheduled monument
+   */
+  affectsScheduledMonument?: boolean | null;
+  /**
+   * Indicates if the site hosts protected species
+   */
+  hasProtectedSpecies?: boolean | null;
+  /**
+   * Indicates an area of outstanding beauty (National Landscape)
+   */
+  isAonbNationalLandscape?: boolean | null;
+  /**
+   * Indicates if site is on highway land
+   */
+  isSiteOnHighwayLand?: boolean | null;
+  /**
+   * The designated site names
+   */
+  designatedSitesNames?: string[] | null;
+  /**
+   * Indicates the existence of an infrastructure levy
+   */
+  hasInfrastructureLevy?: boolean | null;
+  /**
+   * Indicates if the infrastructure levy is formally adopted
+   */
+  isInfrastructureLevyFormallyAdopted?: boolean | null;
+  /**
+   * The date of the infrastructure levy adoption
+   */
+  infrastructureLevyAdoptedDate?: string | null;
+  /**
+   * The expected date of the infrastructure levy
+   */
+  infrastructureLevyExpectedDate?: string | null;
+  /**
+   * The procedure preference indicated by the LPA
+   */
+  lpaProcedurePreference?: 'written' | 'hearing' | 'inquiry' | null;
+  /**
+   * The procedure details preference indicated by the LPA
+   */
+  lpaProcedurePreferenceDetails?: string | null;
+  /**
+   * The duration of enquiry indicated by the LPA
+   */
+  lpaProcedurePreferenceDuration?: number | null;
+  /**
+   * TBC
+   */
+  caseworkReason?: string | null;
+  /**
+   * Information relevant to case...
+   */
+  importantInformation?: string | null;
+  /**
+   * Under whose jurisdiction the decision falls
+   */
+  jurisdiction?: string | null;
+  /**
+   * Has the case been selected for redetermination
+   */
+  redeterminedIndicator?: boolean | null;
+  /**
+   * The date that the costs report was sent
+   */
+  dateCostsReportDespatched?: string | null;
+  /**
+   * The date that is TBC
+   */
+  dateNotRecoveredOrDerecovered?: string | null;
+  /**
+   * The date that case was recovered
+   */
+  dateRecovered?: string | null;
+  /**
+   * The original case decision date
+   */
+  originalCaseDecisionDate?: string | null;
+  /**
+   * The target date for case completion
+   */
+  targetDate?: string | null;
   /**
    * Indicates if the appellant has complete ownership of the site
    */
@@ -656,8 +760,31 @@ export interface AppealHASCase {
     | 'minor-commercial-development'
     | 'advertisement'
     | null;
+  siteGridReferenceEasting?: string | null;
+  siteGridReferenceNorthing?: string | null;
+  /**
+   * Indicates if the appellant has land owners permission
+   */
+  hasLandownersPermission?: boolean | null;
+  /**
+   * Indicates if the advert is already in position
+   */
+  isAdvertInPosition?: boolean | null;
+  /**
+   * Indicates if the site is in an area of special control for adverts
+   */
+  isSiteInAreaOfSpecialControlAdverts?: boolean | null;
+  /**
+   * Indicates if the application was refused because of highway or traffic public safety?
+   */
+  wasApplicationRefusedDueToHighwayOrTraffic?: boolean | null;
+  /**
+   * Indicates if the appellant submitted complete and accurate photographs and plans
+   */
+  didAppellantSubmitCompletePhotosAndPlans?: boolean | null;
+  advertType?: string | null;
   [k: string]: unknown;
-}
+};
 
 /**
  * Schema defining the metadata for appeal representations, such as statements, third-party comments and final comments
@@ -746,9 +873,29 @@ export interface AppealRepresentation {
 }
 
 /**
- * Schema defining the metadata for an appeal (S78)
+ * Group B - Schema defining the metadata for an appeal
  */
-export interface AppealS78Case {
+export type AppealS78Case = (
+  | {
+      siteGridReferenceEasting: {
+        [k: string]: unknown;
+      };
+      siteGridReferenceNorthing: {
+        [k: string]: unknown;
+      };
+    }
+  | {
+      siteAddressLine1: {
+        [k: string]: unknown;
+      };
+      siteAddressTown: {
+        [k: string]: unknown;
+      };
+      siteAddressPostcode: {
+        [k: string]: unknown;
+      };
+    }
+) & {
   /**
    * Internal case identifier
    */
@@ -953,23 +1100,23 @@ export interface AppealS78Case {
   /**
    * First line of address for the appeal site
    */
-  siteAddressLine1: string;
+  siteAddressLine1?: string | null;
   /**
    * Second line of address for the appeal site
    */
-  siteAddressLine2: string | null;
+  siteAddressLine2?: string | null;
   /**
    * Town / City of the site address
    */
-  siteAddressTown: string;
+  siteAddressTown?: string | null;
   /**
    * County of the site address
    */
-  siteAddressCounty: string | null;
+  siteAddressCounty?: string | null;
   /**
    * Postal code of the site address
    */
-  siteAddressPostcode: string;
+  siteAddressPostcode?: string | null;
   /**
    * Provided information on site accessibility
    */
@@ -1271,8 +1418,8 @@ export interface AppealS78Case {
    * The net gain in residences of the proposed development
    */
   numberOfResidencesNetChange: number | null;
-  siteGridReferenceEasting: string | null;
-  siteGridReferenceNorthing: string | null;
+  siteGridReferenceEasting?: string | null;
+  siteGridReferenceNorthing?: string | null;
   siteViewableFromRoad: boolean | null;
   siteWithinSSSI: boolean | null;
   typeOfPlanningApplication:
@@ -1306,7 +1453,7 @@ export interface AppealS78Case {
   statementOfCommonGroundDueDate?: string | null;
   planningObligationDueDate?: string | null;
   [k: string]: unknown;
-}
+};
 
 /**
  * Schema defining the data returned by the DaRT API

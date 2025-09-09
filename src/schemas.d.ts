@@ -2735,7 +2735,27 @@ export interface ServiceUser {
 /**
  * Schema defining any properties common across all appeal types for appeal submissions
  */
-export interface AppellantCommonSubmissionProperties {
+export type AppellantCommonSubmissionProperties = (
+  | {
+      siteGridReferenceEasting: {
+        [k: string]: unknown;
+      };
+      siteGridReferenceNorthing: {
+        [k: string]: unknown;
+      };
+    }
+  | {
+      siteAddressLine1: {
+        [k: string]: unknown;
+      };
+      siteAddressTown: {
+        [k: string]: unknown;
+      };
+      siteAddressPostcode: {
+        [k: string]: unknown;
+      };
+    }
+) & {
   /**
    * Case submission id - link to draft submission created by appellant
    */
@@ -2779,23 +2799,25 @@ export interface AppellantCommonSubmissionProperties {
   /**
    * First line of address for the appeal site
    */
-  siteAddressLine1: string;
+  siteAddressLine1?: string | null;
   /**
    * Second line of address for the appeal site
    */
-  siteAddressLine2: string | null;
+  siteAddressLine2?: string | null;
   /**
    * Town / City of the site address
    */
-  siteAddressTown: string;
+  siteAddressTown?: string | null;
   /**
    * County of the site address
    */
-  siteAddressCounty: string | null;
+  siteAddressCounty?: string | null;
   /**
    * Postal code of the site address
    */
-  siteAddressPostcode: string;
+  siteAddressPostcode?: string | null;
+  siteGridReferenceEasting?: string | null;
+  siteGridReferenceNorthing?: string | null;
   /**
    * Provided information on site accessibility
    */
@@ -2856,7 +2878,7 @@ export interface AppellantCommonSubmissionProperties {
     | 'advertisement'
     | null;
   [k: string]: unknown;
-}
+};
 
 /**
  * Schema defining any HAS specific properties for submissions
@@ -2911,11 +2933,30 @@ export type AppellantHASSubmissionProperties = AppellantCommonSubmissionProperti
    */
   appellantCostsAppliedFor?: boolean | null;
 };
-
 /**
  * Schema defining any properties common across all appeal types for appeal submissions
  */
-export interface AppellantCommonSubmissionProperties {
+export type AppellantCommonSubmissionProperties = (
+  | {
+      siteGridReferenceEasting: {
+        [k: string]: unknown;
+      };
+      siteGridReferenceNorthing: {
+        [k: string]: unknown;
+      };
+    }
+  | {
+      siteAddressLine1: {
+        [k: string]: unknown;
+      };
+      siteAddressTown: {
+        [k: string]: unknown;
+      };
+      siteAddressPostcode: {
+        [k: string]: unknown;
+      };
+    }
+) & {
   /**
    * Case submission id - link to draft submission created by appellant
    */
@@ -2959,23 +3000,25 @@ export interface AppellantCommonSubmissionProperties {
   /**
    * First line of address for the appeal site
    */
-  siteAddressLine1: string;
+  siteAddressLine1?: string | null;
   /**
    * Second line of address for the appeal site
    */
-  siteAddressLine2: string | null;
+  siteAddressLine2?: string | null;
   /**
    * Town / City of the site address
    */
-  siteAddressTown: string;
+  siteAddressTown?: string | null;
   /**
    * County of the site address
    */
-  siteAddressCounty: string | null;
+  siteAddressCounty?: string | null;
   /**
    * Postal code of the site address
    */
-  siteAddressPostcode: string;
+  siteAddressPostcode?: string | null;
+  siteGridReferenceEasting?: string | null;
+  siteGridReferenceNorthing?: string | null;
   /**
    * Provided information on site accessibility
    */
@@ -3036,7 +3079,7 @@ export interface AppellantCommonSubmissionProperties {
     | 'advertisement'
     | null;
   [k: string]: unknown;
-}
+};
 
 /**
  * Schema defining the data produced by the Front-Office when a representation is created on an appeal
@@ -3284,11 +3327,30 @@ export type AppellantHASSubmissionProperties = AppellantCommonSubmissionProperti
    */
   appellantCostsAppliedFor?: boolean | null;
 };
-
 /**
  * Schema defining any properties common across all appeal types for appeal submissions
  */
-export interface AppellantCommonSubmissionProperties {
+export type AppellantCommonSubmissionProperties = (
+  | {
+      siteGridReferenceEasting: {
+        [k: string]: unknown;
+      };
+      siteGridReferenceNorthing: {
+        [k: string]: unknown;
+      };
+    }
+  | {
+      siteAddressLine1: {
+        [k: string]: unknown;
+      };
+      siteAddressTown: {
+        [k: string]: unknown;
+      };
+      siteAddressPostcode: {
+        [k: string]: unknown;
+      };
+    }
+) & {
   /**
    * Case submission id - link to draft submission created by appellant
    */
@@ -3332,23 +3394,25 @@ export interface AppellantCommonSubmissionProperties {
   /**
    * First line of address for the appeal site
    */
-  siteAddressLine1: string;
+  siteAddressLine1?: string | null;
   /**
    * Second line of address for the appeal site
    */
-  siteAddressLine2: string | null;
+  siteAddressLine2?: string | null;
   /**
    * Town / City of the site address
    */
-  siteAddressTown: string;
+  siteAddressTown?: string | null;
   /**
    * County of the site address
    */
-  siteAddressCounty: string | null;
+  siteAddressCounty?: string | null;
   /**
    * Postal code of the site address
    */
-  siteAddressPostcode: string;
+  siteAddressPostcode?: string | null;
+  siteGridReferenceEasting?: string | null;
+  siteGridReferenceNorthing?: string | null;
   /**
    * Provided information on site accessibility
    */
@@ -3409,7 +3473,7 @@ export interface AppellantCommonSubmissionProperties {
     | 'advertisement'
     | null;
   [k: string]: unknown;
-}
+};
 
 /**
  * Schema defining any HAS specific properties for submissions
@@ -3463,6 +3527,153 @@ export type AppellantHASSubmissionProperties = AppellantCommonSubmissionProperti
    * Indicates if the appellant has applied for costs
    */
   appellantCostsAppliedFor?: boolean | null;
+};
+/**
+ * Schema defining any properties common across all appeal types for appeal submissions
+ */
+export type AppellantCommonSubmissionProperties = (
+  | {
+      siteGridReferenceEasting: {
+        [k: string]: unknown;
+      };
+      siteGridReferenceNorthing: {
+        [k: string]: unknown;
+      };
+    }
+  | {
+      siteAddressLine1: {
+        [k: string]: unknown;
+      };
+      siteAddressTown: {
+        [k: string]: unknown;
+      };
+      siteAddressPostcode: {
+        [k: string]: unknown;
+      };
+    }
+) & {
+  /**
+   * Case submission id - link to draft submission created by appellant
+   */
+  submissionId: string;
+  /**
+   * The type of procedure for the appeal
+   */
+  caseProcedure: 'written' | 'hearing' | 'inquiry';
+  /**
+   * A unique identifier for the Local Planning Authority
+   */
+  lpaCode: string;
+  /**
+   * The date the appeal was submitted by the appellant
+   */
+  caseSubmittedDate: string;
+  /**
+   * Indicates if an enforcement notice is the reason for the appeal
+   */
+  enforcementNotice: boolean | null;
+  /**
+   * The unique identifier of the LPA application
+   */
+  applicationReference: string;
+  /**
+   * The date of the original LPA application
+   */
+  applicationDate: string;
+  /**
+   * The outcome of the original LPA decision
+   */
+  applicationDecision: 'granted' | 'refused' | 'not_received';
+  /**
+   * The date of the original LPA decision
+   */
+  applicationDecisionDate: string | null;
+  /**
+   * The statutory deadline for submitting an appeal from the original LPA decision date
+   */
+  caseSubmissionDueDate: string | null;
+  /**
+   * First line of address for the appeal site
+   */
+  siteAddressLine1?: string | null;
+  /**
+   * Second line of address for the appeal site
+   */
+  siteAddressLine2?: string | null;
+  /**
+   * Town / City of the site address
+   */
+  siteAddressTown?: string | null;
+  /**
+   * County of the site address
+   */
+  siteAddressCounty?: string | null;
+  /**
+   * Postal code of the site address
+   */
+  siteAddressPostcode?: string | null;
+  siteGridReferenceEasting?: string | null;
+  siteGridReferenceNorthing?: string | null;
+  /**
+   * Provided information on site accessibility
+   */
+  siteAccessDetails: string[] | null;
+  /**
+   * Provided information on site health and safety
+   */
+  siteSafetyDetails: string[] | null;
+  /**
+   * A list of neighbouring site addresses
+   */
+  neighbouringSiteAddresses:
+    | {
+        /**
+         * First line of address of the site
+         */
+        neighbouringSiteAddressLine1: string;
+        /**
+         * Second line of address of the site
+         */
+        neighbouringSiteAddressLine2: string | null;
+        /**
+         * Town / City of the site address
+         */
+        neighbouringSiteAddressTown: string;
+        /**
+         * County of the site address
+         */
+        neighbouringSiteAddressCounty: string | null;
+        /**
+         * Postal code of the site address
+         */
+        neighbouringSiteAddressPostcode: string;
+        /**
+         * Provided information on site accessibility on this address
+         */
+        neighbouringSiteAccessDetails: string | null;
+        /**
+         * Provided information on site health and safety on this address
+         */
+        neighbouringSiteSafetyDetails: string | null;
+        [k: string]: unknown;
+      }[]
+    | null;
+  /**
+   * A list of related case references known to the appellant and the LPA
+   */
+  nearbyCaseReferences: string[] | null;
+  typeOfPlanningApplication?:
+    | 'full-appeal'
+    | 'householder-planning'
+    | 'outline-planning'
+    | 'prior-approval'
+    | 'reserved-matters'
+    | 'removal-or-variation-of-conditions'
+    | 'listed-building'
+    | 'minor-commercial-development'
+    | 'advertisement'
+    | null;
+  [k: string]: unknown;
 };
 /**
  * Schema defining any S78 specific properties for questionnaire submissions
@@ -3664,131 +3875,6 @@ export interface AppellantSubmissionCommand {
       [k: string]: unknown;
     }[]
   ];
-  [k: string]: unknown;
-}
-/**
- * Schema defining any properties common across all appeal types for appeal submissions
- */
-export interface AppellantCommonSubmissionProperties {
-  /**
-   * Case submission id - link to draft submission created by appellant
-   */
-  submissionId: string;
-  /**
-   * The type of procedure for the appeal
-   */
-  caseProcedure: 'written' | 'hearing' | 'inquiry';
-  /**
-   * A unique identifier for the Local Planning Authority
-   */
-  lpaCode: string;
-  /**
-   * The date the appeal was submitted by the appellant
-   */
-  caseSubmittedDate: string;
-  /**
-   * Indicates if an enforcement notice is the reason for the appeal
-   */
-  enforcementNotice: boolean | null;
-  /**
-   * The unique identifier of the LPA application
-   */
-  applicationReference: string;
-  /**
-   * The date of the original LPA application
-   */
-  applicationDate: string;
-  /**
-   * The outcome of the original LPA decision
-   */
-  applicationDecision: 'granted' | 'refused' | 'not_received';
-  /**
-   * The date of the original LPA decision
-   */
-  applicationDecisionDate: string | null;
-  /**
-   * The statutory deadline for submitting an appeal from the original LPA decision date
-   */
-  caseSubmissionDueDate: string | null;
-  /**
-   * First line of address for the appeal site
-   */
-  siteAddressLine1: string;
-  /**
-   * Second line of address for the appeal site
-   */
-  siteAddressLine2: string | null;
-  /**
-   * Town / City of the site address
-   */
-  siteAddressTown: string;
-  /**
-   * County of the site address
-   */
-  siteAddressCounty: string | null;
-  /**
-   * Postal code of the site address
-   */
-  siteAddressPostcode: string;
-  /**
-   * Provided information on site accessibility
-   */
-  siteAccessDetails: string[] | null;
-  /**
-   * Provided information on site health and safety
-   */
-  siteSafetyDetails: string[] | null;
-  /**
-   * A list of neighbouring site addresses
-   */
-  neighbouringSiteAddresses:
-    | {
-        /**
-         * First line of address of the site
-         */
-        neighbouringSiteAddressLine1: string;
-        /**
-         * Second line of address of the site
-         */
-        neighbouringSiteAddressLine2: string | null;
-        /**
-         * Town / City of the site address
-         */
-        neighbouringSiteAddressTown: string;
-        /**
-         * County of the site address
-         */
-        neighbouringSiteAddressCounty: string | null;
-        /**
-         * Postal code of the site address
-         */
-        neighbouringSiteAddressPostcode: string;
-        /**
-         * Provided information on site accessibility on this address
-         */
-        neighbouringSiteAccessDetails: string | null;
-        /**
-         * Provided information on site health and safety on this address
-         */
-        neighbouringSiteSafetyDetails: string | null;
-        [k: string]: unknown;
-      }[]
-    | null;
-  /**
-   * A list of related case references known to the appellant and the LPA
-   */
-  nearbyCaseReferences: string[] | null;
-  typeOfPlanningApplication?:
-    | 'full-appeal'
-    | 'householder-planning'
-    | 'outline-planning'
-    | 'prior-approval'
-    | 'reserved-matters'
-    | 'removal-or-variation-of-conditions'
-    | 'listed-building'
-    | 'minor-commercial-development'
-    | 'advertisement'
-    | null;
   [k: string]: unknown;
 }
 

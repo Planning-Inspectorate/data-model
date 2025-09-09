@@ -16,15 +16,27 @@
     "applicationDecision",
     "applicationDecisionDate",
     "caseSubmissionDueDate",
-    "siteAddressLine1",
-    "siteAddressLine2",
-    "siteAddressTown",
-    "siteAddressCounty",
-    "siteAddressPostcode",
     "siteAccessDetails",
     "siteSafetyDetails",
     "neighbouringSiteAddresses",
     "nearbyCaseReferences"
+  ],
+  "anyOf": [
+    {
+      "required": ["siteGridReferenceEasting", "siteGridReferenceNorthing"],
+      "properties": {
+        "siteGridReferenceEasting": { "not": { "type": "null" } },
+        "siteGridReferenceNorthing": { "not": { "type": "null" } }
+      }
+    },
+    {
+      "required": ["siteAddressLine1", "siteAddressTown", "siteAddressPostcode"],
+      "properties": {
+        "siteAddressLine1": { "not": { "type": "null" } },
+        "siteAddressTown": { "not": { "type": "null" } },
+        "siteAddressPostcode": { "not": { "type": "null" } }
+      }
+    }
   ],
   "properties": {
     "submissionId": {
@@ -84,7 +96,7 @@
       "$comment": "Calculated from the applicationDecisionDate"
     },
     "siteAddressLine1": {
-      "type": "string",
+      "type": ["string", "null"],
       "examples": ["96 The Avenue"],
       "description": "First line of address for the appeal site"
     },
@@ -93,7 +105,7 @@
       "description": "Second line of address for the appeal site"
     },
     "siteAddressTown": {
-      "type": "string",
+      "type": ["string", "null"],
       "examples": ["Maidstone"],
       "description": "Town / City of the site address"
     },
@@ -103,9 +115,19 @@
       "description": "County of the site address"
     },
     "siteAddressPostcode": {
-      "type": "string",
+      "type": ["string", "null"],
       "examples": ["MD21 5XY"],
       "description": "Postal code of the site address"
+    },
+    "siteGridReferenceEasting": {
+      "type": ["string", "null"],
+      "pattern": "^\\d{6}$",
+      "examples": ["357144"]
+    },
+    "siteGridReferenceNorthing": {
+      "type": ["string", "null"],
+      "pattern": "^\\d{6}$",
+      "examples": ["400534"]
     },
     "siteAccessDetails": {
       "type": ["array", "null"],

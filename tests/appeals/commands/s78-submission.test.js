@@ -45,6 +45,8 @@ const exampleS78SubmissionSchema = {
 		siteAddressTown: 'et',
 		siteAddressCounty: 'velit',
 		siteAddressPostcode: 'nisi minim laboris sed',
+		siteGridReferenceEasting: '357144',
+		siteGridReferenceNorthing: '400534',
 		siteAccessDetails: ['laborum', 'aute velit quis', 'dolor'],
 		siteSafetyDetails: ['velit aliqua', 'qui', 'tempor Duis ut dolore', 'anim Ut in ea', 'eiusmod laborum'],
 		neighbouringSiteAddresses: null,
@@ -86,6 +88,56 @@ describe('S78 submission command schema', () => {
 	it('should allow valid S78 schema', () => {
 		const validationResult = ajv.validate(schema, exampleS78SubmissionSchema);
 		assert.strictEqual(validationResult, true);
+	});
+
+	it('should enforce eastings-northings pattern', () => {
+		const invalidPatterns = [
+			{ easting: 'abc123', northing: '400534', description: 'easting with letters' },
+			{ easting: '1234567', northing: '400534', description: 'easting too long' },
+			{ easting: '12345', northing: '400534', description: 'easting too short' },
+			{ easting: '357144', northing: 'xyz123', description: 'northing with letters' },
+			{ easting: '357144', northing: '1234567', description: 'northing too long' },
+			{ easting: '357144', northing: '12345', description: 'northing too short' },
+			{ easting: '', northing: '400534', description: 'empty easting' },
+			{ easting: '357144', northing: '', description: 'empty northing' }
+		];
+
+		for (const pattern of invalidPatterns) {
+			const test = structuredClone(exampleS78SubmissionSchema);
+			test.casedata.siteGridReferenceEasting = pattern.easting;
+			test.casedata.siteGridReferenceNorthing = pattern.northing;
+
+			const validationResult = ajv.validate(schema, test);
+			assert.strictEqual(validationResult, false, `Expected validation to fail for ${pattern.description}`);
+		}
+	});
+
+	it('should allow only eastings-northings', () => {
+		const test = structuredClone(exampleS78SubmissionSchema);
+		test.casedata.siteAddressPostcode = undefined;
+		test.casedata.siteAddressLine1 = null;
+		test.casedata.siteAddressTown = null;
+		const validationResult = ajv.validate(schema, test);
+		assert.strictEqual(validationResult, true);
+	});
+
+	it('should allow only site address', () => {
+		const test = structuredClone(exampleS78SubmissionSchema);
+		test.casedata.siteGridReferenceEasting = undefined;
+		test.casedata.siteGridReferenceNorthing = null;
+		const validationResult = ajv.validate(schema, test);
+		assert.strictEqual(validationResult, true);
+	});
+
+	it('should enforce either site address or easting-northing', () => {
+		const test = structuredClone(exampleS78SubmissionSchema);
+		test.casedata.siteAddressPostcode = undefined;
+		test.casedata.siteAddressLine1 = null;
+		test.casedata.siteAddressTown = null;
+		test.casedata.siteGridReferenceEasting = undefined;
+		test.casedata.siteGridReferenceNorthing = null;
+		const validationResult = ajv.validate(schema, test);
+		assert.strictEqual(validationResult, false);
 	});
 
 	it('should reject missing root property', () => {

@@ -71,8 +71,15 @@ describe('S78 questionnaire command schema', () => {
 	const ajv = new Ajv({ schemas: flatSchemas, allErrors: true });
 	addFormats(ajv);
 
-	it('should allow valid HAS schema', () => {
+	it('should allow valid schema for S78', () => {
 		const validationResult = ajv.validate(schema, exampleS78QuestionnaireSchema);
+		assert.strictEqual(validationResult, true);
+	});
+
+	it('should allow valid schema for S20', () => {
+		const test = structuredClone(exampleS78QuestionnaireSchema);
+		test.casedata.caseType = 'Y';
+		const validationResult = ajv.validate(schema, test);
 		assert.strictEqual(validationResult, true);
 	});
 

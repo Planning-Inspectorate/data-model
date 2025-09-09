@@ -11,27 +11,29 @@
     "casedata": {
       "type": "object",
       "additionalProperties": true,
-      "anyOf": [
+      "oneOf": [
         {
+          "$comment": "Householder + CAS Planning",
           "allOf": [
-            { "$comment": "backwards compatibility for no case type, when removed can update allOf to oneOf" },
-            { "not": { "required": ["caseType"] } },
+            { "properties": { "caseType": { "enum": ["D", "ZP"] } } },
+            { "$ref": "lpa-questionnaire-common.schema.json" },
             { "$ref": "lpa-questionnaire-has.schema.json" }
           ]
         },
         {
-          "allOf": [{ "properties": { "caseType": { "const": "W" } } }, { "$ref": "lpa-questionnaire-s78.schema.json" }]
-        },
-        {
-          "allOf": [{ "properties": { "caseType": { "const": "Y" } } }, { "$ref": "lpa-questionnaire-s78.schema.json" }]
-        },
-        {
-          "allOf": [{ "properties": { "caseType": { "const": "D" } } }, { "$ref": "lpa-questionnaire-has.schema.json" }]
-        },
-        {
+          "$comment": "S78 + S20",
           "allOf": [
-            { "properties": { "caseType": { "const": "ZP" } } },
-            { "$ref": "lpa-questionnaire-has.schema.json" }
+            { "properties": { "caseType": { "enum": ["W", "Y"] } } },
+            { "$ref": "lpa-questionnaire-common.schema.json" },
+            { "$ref": "lpa-questionnaire-has.schema.json" },
+            { "$ref": "lpa-questionnaire-s78.schema.json" }
+          ]
+        },
+        {
+          "$comment": "Adverts + CAS Adverts - TBD - may need separate schemas",
+          "allOf": [
+            { "properties": { "caseType": { "enum": ["H", "ZA"] } } },
+            { "$ref": "lpa-questionnaire-common.schema.json" }
           ]
         }
       ]

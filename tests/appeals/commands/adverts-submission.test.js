@@ -27,10 +27,10 @@ const document = {
 	documentType: 'appellantCaseWithdrawalLetter'
 };
 
-const exampleHasSubmissionSchema = {
+const exampleAdvertSubmissionSchema = {
 	casedata: {
 		submissionId: '072a9b08-0266-a291-ecd0-bb0ded9d7350',
-		caseType: 'D',
+		caseType: 'H',
 		caseProcedure: 'written',
 		lpaCode: 'in laborum pariatur cupidatat',
 		caseSubmittedDate: '1920-12-06T17:37:12.0Z',
@@ -67,30 +67,44 @@ const exampleHasSubmissionSchema = {
 			'aliqua pariatur consectetur eiusmod'
 		],
 		neighbouringSiteAddresses: null,
-		appellantCostsAppliedFor: true
+		appellantCostsAppliedFor: true,
+		hasLandownersPermission: true,
+		isAdvertInPosition: true,
+		isSiteOnHighwayLand: true
 	},
 	documents: [document],
 	users: [user]
 };
 
-describe('HAS submission command schema', () => {
+describe('Advert submission command schema', () => {
 	const schemas = loadAllSchemasSync();
 	const flatSchemas = Object.values(schemas).reduce((a, c) => ({ ...a, ...c }), {});
 	const ajv = new Ajv({ schemas: flatSchemas, allErrors: true });
 	addFormats(ajv);
 
-	it('should allow valid schema for HAS', () => {
-		const validationResult = ajv.validate(schema, exampleHasSubmissionSchema);
+	it('should allow valid schema for Advert', () => {
+		const validationResult = ajv.validate(schema, exampleAdvertSubmissionSchema);
 		assert.strictEqual(validationResult, true);
 	});
 
-	it('should allow valid schema for CAS planning', () => {
-		const test = structuredClone(exampleHasSubmissionSchema);
-		test.casedata.caseType = 'ZP';
+	it('should allow valid schema for CAS Advert', () => {
+		const test = structuredClone(exampleAdvertSubmissionSchema);
+		test.casedata.caseType = 'ZA';
 
 		const validationResult = ajv.validate(schema, test);
 
 		assert.strictEqual(validationResult, true);
+	});
+
+	it('should enforce advert specific props', () => {
+		const test = structuredClone(exampleAdvertSubmissionSchema);
+		delete test.casedata.hasLandownersPermission;
+		delete test.casedata.isAdvertInPosition;
+		delete test.casedata.isSiteOnHighwayLand;
+
+		const validationResult = ajv.validate(schema, test);
+
+		assert.strictEqual(validationResult, false);
 	});
 
 	it('should enforce eastings-northings pattern', () => {
@@ -106,7 +120,7 @@ describe('HAS submission command schema', () => {
 		];
 
 		for (const pattern of invalidPatterns) {
-			const test = structuredClone(exampleHasSubmissionSchema);
+			const test = structuredClone(exampleAdvertSubmissionSchema);
 			test.casedata.siteGridReferenceEasting = pattern.easting;
 			test.casedata.siteGridReferenceNorthing = pattern.northing;
 
@@ -116,7 +130,7 @@ describe('HAS submission command schema', () => {
 	});
 
 	it('should allow only eastings-northings', () => {
-		const test = structuredClone(exampleHasSubmissionSchema);
+		const test = structuredClone(exampleAdvertSubmissionSchema);
 		test.casedata.siteAddressPostcode = undefined;
 		test.casedata.siteAddressLine1 = null;
 		test.casedata.siteAddressTown = null;
@@ -125,7 +139,7 @@ describe('HAS submission command schema', () => {
 	});
 
 	it('should allow only site address', () => {
-		const test = structuredClone(exampleHasSubmissionSchema);
+		const test = structuredClone(exampleAdvertSubmissionSchema);
 		test.casedata.siteGridReferenceEasting = undefined;
 		test.casedata.siteGridReferenceNorthing = null;
 		const validationResult = ajv.validate(schema, test);
@@ -133,7 +147,7 @@ describe('HAS submission command schema', () => {
 	});
 
 	it('should enforce either site address or easting-northing', () => {
-		const test = structuredClone(exampleHasSubmissionSchema);
+		const test = structuredClone(exampleAdvertSubmissionSchema);
 		test.casedata.siteAddressPostcode = undefined;
 		test.casedata.siteAddressLine1 = null;
 		test.casedata.siteAddressTown = null;
@@ -144,7 +158,7 @@ describe('HAS submission command schema', () => {
 	});
 
 	it('should reject missing root property', () => {
-		const test = structuredClone(exampleHasSubmissionSchema);
+		const test = structuredClone(exampleAdvertSubmissionSchema);
 		delete test.casedata.caseType;
 		const validationResult = ajv.validate(schema, test);
 		assert.strictEqual(validationResult, false);
@@ -155,7 +169,7 @@ describe('HAS submission command schema', () => {
 	});
 
 	it('should reject missing nested property', () => {
-		const test = structuredClone(exampleHasSubmissionSchema);
+		const test = structuredClone(exampleAdvertSubmissionSchema);
 		delete test.casedata.caseProcedure;
 		const validationResult = ajv.validate(schema, test);
 		assert.strictEqual(validationResult, false);
@@ -166,7 +180,7 @@ describe('HAS submission command schema', () => {
 	});
 
 	it('should allow additional props', () => {
-		const test = structuredClone(exampleHasSubmissionSchema);
+		const test = structuredClone(exampleAdvertSubmissionSchema);
 		test.test = 1;
 		const validationResult = ajv.validate(schema, test);
 		assert.strictEqual(validationResult, true);

@@ -2733,6 +2733,25 @@ export interface ServiceUser {
 }
 
 /**
+ * Schema defining any properties for advertisement appeals
+ */
+export interface AdvertSpecificProperties {
+  /**
+   * Indicates if the appellant has land owners permission
+   */
+  hasLandownersPermission: boolean | null;
+  /**
+   * Indicates if the advert is already in position
+   */
+  isAdvertInPosition: boolean | null;
+  /**
+   * Indicates if site is on highway land
+   */
+  isSiteOnHighwayLand: boolean | null;
+  [k: string]: unknown;
+}
+
+/**
  * Schema defining any properties common across all appeal types for appeal submissions
  */
 export type AppellantCommonSubmissionProperties = (
@@ -2883,7 +2902,7 @@ export type AppellantCommonSubmissionProperties = (
 /**
  * Schema defining any HAS specific properties for submissions
  */
-export type AppellantHASSubmissionProperties = AppellantCommonSubmissionProperties & {
+export type AppellantHASSubmissionProperties = {
   /**
    * Indicates if the site is in a green belt
    */
@@ -2932,153 +2951,6 @@ export type AppellantHASSubmissionProperties = AppellantCommonSubmissionProperti
    * Indicates if the appellant has applied for costs
    */
   appellantCostsAppliedFor?: boolean | null;
-};
-/**
- * Schema defining any properties common across all appeal types for appeal submissions
- */
-export type AppellantCommonSubmissionProperties = (
-  | {
-      siteGridReferenceEasting: {
-        [k: string]: unknown;
-      };
-      siteGridReferenceNorthing: {
-        [k: string]: unknown;
-      };
-    }
-  | {
-      siteAddressLine1: {
-        [k: string]: unknown;
-      };
-      siteAddressTown: {
-        [k: string]: unknown;
-      };
-      siteAddressPostcode: {
-        [k: string]: unknown;
-      };
-    }
-) & {
-  /**
-   * Case submission id - link to draft submission created by appellant
-   */
-  submissionId: string;
-  /**
-   * The type of procedure for the appeal
-   */
-  caseProcedure: 'written' | 'hearing' | 'inquiry';
-  /**
-   * A unique identifier for the Local Planning Authority
-   */
-  lpaCode: string;
-  /**
-   * The date the appeal was submitted by the appellant
-   */
-  caseSubmittedDate: string;
-  /**
-   * Indicates if an enforcement notice is the reason for the appeal
-   */
-  enforcementNotice: boolean | null;
-  /**
-   * The unique identifier of the LPA application
-   */
-  applicationReference: string;
-  /**
-   * The date of the original LPA application
-   */
-  applicationDate: string;
-  /**
-   * The outcome of the original LPA decision
-   */
-  applicationDecision: 'granted' | 'refused' | 'not_received';
-  /**
-   * The date of the original LPA decision
-   */
-  applicationDecisionDate: string | null;
-  /**
-   * The statutory deadline for submitting an appeal from the original LPA decision date
-   */
-  caseSubmissionDueDate: string | null;
-  /**
-   * First line of address for the appeal site
-   */
-  siteAddressLine1?: string | null;
-  /**
-   * Second line of address for the appeal site
-   */
-  siteAddressLine2?: string | null;
-  /**
-   * Town / City of the site address
-   */
-  siteAddressTown?: string | null;
-  /**
-   * County of the site address
-   */
-  siteAddressCounty?: string | null;
-  /**
-   * Postal code of the site address
-   */
-  siteAddressPostcode?: string | null;
-  siteGridReferenceEasting?: string | null;
-  siteGridReferenceNorthing?: string | null;
-  /**
-   * Provided information on site accessibility
-   */
-  siteAccessDetails: string[] | null;
-  /**
-   * Provided information on site health and safety
-   */
-  siteSafetyDetails: string[] | null;
-  /**
-   * A list of neighbouring site addresses
-   */
-  neighbouringSiteAddresses:
-    | {
-        /**
-         * First line of address of the site
-         */
-        neighbouringSiteAddressLine1: string;
-        /**
-         * Second line of address of the site
-         */
-        neighbouringSiteAddressLine2: string | null;
-        /**
-         * Town / City of the site address
-         */
-        neighbouringSiteAddressTown: string;
-        /**
-         * County of the site address
-         */
-        neighbouringSiteAddressCounty: string | null;
-        /**
-         * Postal code of the site address
-         */
-        neighbouringSiteAddressPostcode: string;
-        /**
-         * Provided information on site accessibility on this address
-         */
-        neighbouringSiteAccessDetails: string | null;
-        /**
-         * Provided information on site health and safety on this address
-         */
-        neighbouringSiteSafetyDetails: string | null;
-        [k: string]: unknown;
-      }[]
-    | null;
-  /**
-   * A list of related case references known to the appellant and the LPA
-   */
-  nearbyCaseReferences: string[] | null;
-  typeOfPlanningApplication?:
-    | 'full-appeal'
-    | 'householder-planning'
-    | 'outline-planning'
-    | 'prior-approval'
-    | 'reserved-matters'
-    | 'removal-or-variation-of-conditions'
-    | 'listed-building'
-    | 'minor-commercial-development'
-    | 'advertisement'
-    | null;
-  [k: string]: unknown;
 };
 
 /**
@@ -3215,7 +3087,7 @@ export type AppealRepresentationSubmission = {
 /**
  * Schema defining any S78 specific properties for questionnaire submissions
  */
-export type AppellantS78SubmissionProperties = AppellantHASSubmissionProperties & {
+export type AppellantS78SubmissionProperties = {
   /**
    * Indicates if the site is an agricultural holding
    */
@@ -3274,261 +3146,8 @@ export type AppellantS78SubmissionProperties = AppellantHASSubmissionProperties 
     | 'other-minor'
     | null;
 };
-/**
- * Schema defining any HAS specific properties for submissions
- */
-export type AppellantHASSubmissionProperties = AppellantCommonSubmissionProperties & {
-  /**
-   * Indicates if the site is in a green belt
-   */
-  isGreenBelt?: boolean | null;
-  /**
-   * The site area, in square meters
-   */
-  siteAreaSquareMetres?: number | null;
-  /**
-   * The floor space, in square meters
-   */
-  floorSpaceSquareMetres?: number | null;
-  /**
-   * Indicates if the appellant has complete ownership of the site
-   */
-  ownsAllLand?: boolean | null;
-  /**
-   * Indicates if the appellant has partial ownership of the site
-   */
-  ownsSomeLand?: boolean | null;
-  /**
-   * Indicates if the appellant knows other owners of the site
-   */
-  knowsOtherOwners?: 'Yes' | 'No' | 'Some' | null;
-  /**
-   * Indicates if the appellant knows all owners of the site
-   */
-  knowsAllOwners?: 'Yes' | 'No' | 'Some' | null;
-  /**
-   * Indicates if the appellant has advertised the appeal to the LPA decision
-   */
-  advertisedAppeal?: boolean | null;
-  /**
-   * Indicates if the appellant has informed other owners of the site
-   */
-  ownersInformed?: boolean | null;
-  /**
-   * The original description of the development, as provided by the appellant
-   */
-  originalDevelopmentDescription?: string | null;
-  /**
-   * Indicates that the LPA has changed the development description
-   */
-  changedDevelopmentDescription?: boolean | null;
-  /**
-   * Indicates if the appellant has applied for costs
-   */
-  appellantCostsAppliedFor?: boolean | null;
-};
-/**
- * Schema defining any properties common across all appeal types for appeal submissions
- */
-export type AppellantCommonSubmissionProperties = (
-  | {
-      siteGridReferenceEasting: {
-        [k: string]: unknown;
-      };
-      siteGridReferenceNorthing: {
-        [k: string]: unknown;
-      };
-    }
-  | {
-      siteAddressLine1: {
-        [k: string]: unknown;
-      };
-      siteAddressTown: {
-        [k: string]: unknown;
-      };
-      siteAddressPostcode: {
-        [k: string]: unknown;
-      };
-    }
-) & {
-  /**
-   * Case submission id - link to draft submission created by appellant
-   */
-  submissionId: string;
-  /**
-   * The type of procedure for the appeal
-   */
-  caseProcedure: 'written' | 'hearing' | 'inquiry';
-  /**
-   * A unique identifier for the Local Planning Authority
-   */
-  lpaCode: string;
-  /**
-   * The date the appeal was submitted by the appellant
-   */
-  caseSubmittedDate: string;
-  /**
-   * Indicates if an enforcement notice is the reason for the appeal
-   */
-  enforcementNotice: boolean | null;
-  /**
-   * The unique identifier of the LPA application
-   */
-  applicationReference: string;
-  /**
-   * The date of the original LPA application
-   */
-  applicationDate: string;
-  /**
-   * The outcome of the original LPA decision
-   */
-  applicationDecision: 'granted' | 'refused' | 'not_received';
-  /**
-   * The date of the original LPA decision
-   */
-  applicationDecisionDate: string | null;
-  /**
-   * The statutory deadline for submitting an appeal from the original LPA decision date
-   */
-  caseSubmissionDueDate: string | null;
-  /**
-   * First line of address for the appeal site
-   */
-  siteAddressLine1?: string | null;
-  /**
-   * Second line of address for the appeal site
-   */
-  siteAddressLine2?: string | null;
-  /**
-   * Town / City of the site address
-   */
-  siteAddressTown?: string | null;
-  /**
-   * County of the site address
-   */
-  siteAddressCounty?: string | null;
-  /**
-   * Postal code of the site address
-   */
-  siteAddressPostcode?: string | null;
-  siteGridReferenceEasting?: string | null;
-  siteGridReferenceNorthing?: string | null;
-  /**
-   * Provided information on site accessibility
-   */
-  siteAccessDetails: string[] | null;
-  /**
-   * Provided information on site health and safety
-   */
-  siteSafetyDetails: string[] | null;
-  /**
-   * A list of neighbouring site addresses
-   */
-  neighbouringSiteAddresses:
-    | {
-        /**
-         * First line of address of the site
-         */
-        neighbouringSiteAddressLine1: string;
-        /**
-         * Second line of address of the site
-         */
-        neighbouringSiteAddressLine2: string | null;
-        /**
-         * Town / City of the site address
-         */
-        neighbouringSiteAddressTown: string;
-        /**
-         * County of the site address
-         */
-        neighbouringSiteAddressCounty: string | null;
-        /**
-         * Postal code of the site address
-         */
-        neighbouringSiteAddressPostcode: string;
-        /**
-         * Provided information on site accessibility on this address
-         */
-        neighbouringSiteAccessDetails: string | null;
-        /**
-         * Provided information on site health and safety on this address
-         */
-        neighbouringSiteSafetyDetails: string | null;
-        [k: string]: unknown;
-      }[]
-    | null;
-  /**
-   * A list of related case references known to the appellant and the LPA
-   */
-  nearbyCaseReferences: string[] | null;
-  typeOfPlanningApplication?:
-    | 'full-appeal'
-    | 'householder-planning'
-    | 'outline-planning'
-    | 'prior-approval'
-    | 'reserved-matters'
-    | 'removal-or-variation-of-conditions'
-    | 'listed-building'
-    | 'minor-commercial-development'
-    | 'advertisement'
-    | null;
-  [k: string]: unknown;
-};
 
 /**
- * Schema defining any HAS specific properties for submissions
- */
-export type AppellantHASSubmissionProperties = AppellantCommonSubmissionProperties & {
-  /**
-   * Indicates if the site is in a green belt
-   */
-  isGreenBelt?: boolean | null;
-  /**
-   * The site area, in square meters
-   */
-  siteAreaSquareMetres?: number | null;
-  /**
-   * The floor space, in square meters
-   */
-  floorSpaceSquareMetres?: number | null;
-  /**
-   * Indicates if the appellant has complete ownership of the site
-   */
-  ownsAllLand?: boolean | null;
-  /**
-   * Indicates if the appellant has partial ownership of the site
-   */
-  ownsSomeLand?: boolean | null;
-  /**
-   * Indicates if the appellant knows other owners of the site
-   */
-  knowsOtherOwners?: 'Yes' | 'No' | 'Some' | null;
-  /**
-   * Indicates if the appellant knows all owners of the site
-   */
-  knowsAllOwners?: 'Yes' | 'No' | 'Some' | null;
-  /**
-   * Indicates if the appellant has advertised the appeal to the LPA decision
-   */
-  advertisedAppeal?: boolean | null;
-  /**
-   * Indicates if the appellant has informed other owners of the site
-   */
-  ownersInformed?: boolean | null;
-  /**
-   * The original description of the development, as provided by the appellant
-   */
-  originalDevelopmentDescription?: string | null;
-  /**
-   * Indicates that the LPA has changed the development description
-   */
-  changedDevelopmentDescription?: boolean | null;
-  /**
-   * Indicates if the appellant has applied for costs
-   */
-  appellantCostsAppliedFor?: boolean | null;
-};
-/**
  * Schema defining any properties common across all appeal types for appeal submissions
  */
 export type AppellantCommonSubmissionProperties = (
@@ -3674,11 +3293,64 @@ export type AppellantCommonSubmissionProperties = (
     | 'advertisement'
     | null;
   [k: string]: unknown;
+};
+/**
+ * Schema defining any HAS specific properties for submissions
+ */
+export type AppellantHASSubmissionProperties = {
+  /**
+   * Indicates if the site is in a green belt
+   */
+  isGreenBelt?: boolean | null;
+  /**
+   * The site area, in square meters
+   */
+  siteAreaSquareMetres?: number | null;
+  /**
+   * The floor space, in square meters
+   */
+  floorSpaceSquareMetres?: number | null;
+  /**
+   * Indicates if the appellant has complete ownership of the site
+   */
+  ownsAllLand?: boolean | null;
+  /**
+   * Indicates if the appellant has partial ownership of the site
+   */
+  ownsSomeLand?: boolean | null;
+  /**
+   * Indicates if the appellant knows other owners of the site
+   */
+  knowsOtherOwners?: 'Yes' | 'No' | 'Some' | null;
+  /**
+   * Indicates if the appellant knows all owners of the site
+   */
+  knowsAllOwners?: 'Yes' | 'No' | 'Some' | null;
+  /**
+   * Indicates if the appellant has advertised the appeal to the LPA decision
+   */
+  advertisedAppeal?: boolean | null;
+  /**
+   * Indicates if the appellant has informed other owners of the site
+   */
+  ownersInformed?: boolean | null;
+  /**
+   * The original description of the development, as provided by the appellant
+   */
+  originalDevelopmentDescription?: string | null;
+  /**
+   * Indicates that the LPA has changed the development description
+   */
+  changedDevelopmentDescription?: boolean | null;
+  /**
+   * Indicates if the appellant has applied for costs
+   */
+  appellantCostsAppliedFor?: boolean | null;
 };
 /**
  * Schema defining any S78 specific properties for questionnaire submissions
  */
-export type AppellantS78SubmissionProperties = AppellantHASSubmissionProperties & {
+export type AppellantS78SubmissionProperties = {
   /**
    * Indicates if the site is an agricultural holding
    */
@@ -3744,17 +3416,19 @@ export type AppellantS78SubmissionProperties = AppellantHASSubmissionProperties 
 export interface AppellantSubmissionCommand {
   casedata:
     | ({
-        caseType?: 'D';
-      } & AppellantHASSubmissionProperties)
+        caseType?: 'D' | 'ZP';
+      } & AppellantCommonSubmissionProperties &
+        AppellantHASSubmissionProperties)
     | ({
-        caseType?: 'ZP';
-      } & AppellantHASSubmissionProperties)
+        caseType?: 'W' | 'Y';
+      } & AppellantCommonSubmissionProperties &
+        AppellantHASSubmissionProperties &
+        AppellantS78SubmissionProperties)
     | ({
-        caseType?: 'W';
-      } & AppellantS78SubmissionProperties)
-    | ({
-        caseType?: 'Y';
-      } & AppellantS78SubmissionProperties);
+        caseType?: 'H' | 'ZA';
+      } & AppellantCommonSubmissionProperties &
+        AppellantHASSubmissionProperties &
+        AdvertSpecificProperties);
   documents: {
     /**
      * The unique identifier for the document
@@ -3877,6 +3551,24 @@ export interface AppellantSubmissionCommand {
   ];
   [k: string]: unknown;
 }
+/**
+ * Schema defining any properties for advertisement appeals
+ */
+export interface AdvertSpecificProperties {
+  /**
+   * Indicates if the appellant has land owners permission
+   */
+  hasLandownersPermission: boolean | null;
+  /**
+   * Indicates if the advert is already in position
+   */
+  isAdvertInPosition: boolean | null;
+  /**
+   * Indicates if site is on highway land
+   */
+  isSiteOnHighwayLand: boolean | null;
+  [k: string]: unknown;
+}
 
 export type Name = string;
 
@@ -3975,7 +3667,7 @@ export interface LPAQCommonSubmissionProperties {
 /**
  * Schema defining any HAS specific properties for LPAQ submissions
  */
-export type LPAQHASSubmissionProperties = LPAQCommonSubmissionProperties & {
+export type LPAQHASSubmissionProperties = {
   /**
    * Indicates if the LPA considers the appeal type appropriate
    */
@@ -4011,76 +3703,9 @@ export type LPAQHASSubmissionProperties = LPAQCommonSubmissionProperties & {
 };
 
 /**
- * Schema defining any properties common across all appeal types for LPAQ submissions
- */
-export interface LPAQCommonSubmissionProperties {
-  /**
-   * External case identifier
-   */
-  caseReference: string;
-  /**
-   * The date the LPA provided a response to the case
-   */
-  lpaQuestionnaireSubmittedDate: string | null;
-  /**
-   * Provided information on site accessibility
-   */
-  siteAccessDetails: string[] | null;
-  /**
-   * Provided information on site health and safety
-   */
-  siteSafetyDetails: string[] | null;
-  /**
-   * A list of related case references known to the appellant and the LPA
-   */
-  nearbyCaseReferences: string[] | null;
-  /**
-   * A list of neighbouring site addresses
-   */
-  neighbouringSiteAddresses:
-    | {
-        /**
-         * First line of address of the site
-         */
-        neighbouringSiteAddressLine1: string;
-        /**
-         * Second line of address of the site
-         */
-        neighbouringSiteAddressLine2: string | null;
-        /**
-         * Town / City of the site address
-         */
-        neighbouringSiteAddressTown: string;
-        /**
-         * County of the site address
-         */
-        neighbouringSiteAddressCounty: string | null;
-        /**
-         * Postal code of the site address
-         */
-        neighbouringSiteAddressPostcode: string;
-        /**
-         * Provided information on site accessibility on this address
-         */
-        neighbouringSiteAccessDetails: string | null;
-        /**
-         * Provided information on site health and safety on this address
-         */
-        neighbouringSiteSafetyDetails: string | null;
-        [k: string]: unknown;
-      }[]
-    | null;
-  /**
-   * A general reason given for the need to visit any neighbours
-   */
-  reasonForNeighbourVisits?: string | null;
-  [k: string]: unknown;
-}
-
-/**
  * Schema defining any S78 specific properties for LPAQ submissions
  */
-export type LPAQS78SubmissionProperties = LPAQHASSubmissionProperties & {
+export type LPAQS78SubmissionProperties = {
   /**
    * A list of changed listed building IDs from Historic England
    */
@@ -4212,115 +3837,11 @@ export type LPAQS78SubmissionProperties = LPAQHASSubmissionProperties & {
    */
   lpaProcedurePreferenceDuration?: number | null;
 };
-/**
- * Schema defining any HAS specific properties for LPAQ submissions
- */
-export type LPAQHASSubmissionProperties = LPAQCommonSubmissionProperties & {
-  /**
-   * Indicates if the LPA considers the appeal type appropriate
-   */
-  isCorrectAppealType?: boolean | null;
-  /**
-   * A list of affected listed building IDs from Historic England
-   */
-  affectedListedBuildingNumbers?: string[] | null;
-  /**
-   * Indicates if the site is in a green belt
-   */
-  isGreenBelt?: boolean | null;
-  /**
-   * Indicates if the site is in a conservation area
-   */
-  inConservationArea?: boolean | null;
-  /**
-   * New conditions details provided by the LPA
-   */
-  newConditionDetails?: string | null;
-  /**
-   * The methods used to notify relevant parties
-   */
-  notificationMethod?: string[] | null;
-  /**
-   * Indicates if the LPA has applied for costs
-   */
-  lpaCostsAppliedFor?: boolean | null;
-  /**
-   * A statement provided by the LPA, unused?
-   */
-  lpaStatement?: string | null;
-};
-
-/**
- * Schema defining any properties common across all appeal types for LPAQ submissions
- */
-export interface LPAQCommonSubmissionProperties {
-  /**
-   * External case identifier
-   */
-  caseReference: string;
-  /**
-   * The date the LPA provided a response to the case
-   */
-  lpaQuestionnaireSubmittedDate: string | null;
-  /**
-   * Provided information on site accessibility
-   */
-  siteAccessDetails: string[] | null;
-  /**
-   * Provided information on site health and safety
-   */
-  siteSafetyDetails: string[] | null;
-  /**
-   * A list of related case references known to the appellant and the LPA
-   */
-  nearbyCaseReferences: string[] | null;
-  /**
-   * A list of neighbouring site addresses
-   */
-  neighbouringSiteAddresses:
-    | {
-        /**
-         * First line of address of the site
-         */
-        neighbouringSiteAddressLine1: string;
-        /**
-         * Second line of address of the site
-         */
-        neighbouringSiteAddressLine2: string | null;
-        /**
-         * Town / City of the site address
-         */
-        neighbouringSiteAddressTown: string;
-        /**
-         * County of the site address
-         */
-        neighbouringSiteAddressCounty: string | null;
-        /**
-         * Postal code of the site address
-         */
-        neighbouringSiteAddressPostcode: string;
-        /**
-         * Provided information on site accessibility on this address
-         */
-        neighbouringSiteAccessDetails: string | null;
-        /**
-         * Provided information on site health and safety on this address
-         */
-        neighbouringSiteSafetyDetails: string | null;
-        [k: string]: unknown;
-      }[]
-    | null;
-  /**
-   * A general reason given for the need to visit any neighbours
-   */
-  reasonForNeighbourVisits?: string | null;
-  [k: string]: unknown;
-}
 
 /**
  * Schema defining any HAS specific properties for LPAQ submissions
  */
-export type LPAQHASSubmissionProperties = LPAQCommonSubmissionProperties & {
+export type LPAQHASSubmissionProperties = {
   /**
    * Indicates if the LPA considers the appeal type appropriate
    */
@@ -4357,7 +3878,7 @@ export type LPAQHASSubmissionProperties = LPAQCommonSubmissionProperties & {
 /**
  * Schema defining any S78 specific properties for LPAQ submissions
  */
-export type LPAQS78SubmissionProperties = LPAQHASSubmissionProperties & {
+export type LPAQS78SubmissionProperties = {
   /**
    * A list of changed listed building IDs from Historic England
    */
@@ -4496,20 +4017,17 @@ export type LPAQS78SubmissionProperties = LPAQHASSubmissionProperties & {
 export interface LPAQuestionnaireCommand {
   casedata:
     | ({
-        [k: string]: unknown;
-      } & LPAQHASSubmissionProperties)
+        caseType?: 'D' | 'ZP';
+      } & LPAQCommonSubmissionProperties &
+        LPAQHASSubmissionProperties)
     | ({
-        caseType?: 'W';
-      } & LPAQS78SubmissionProperties)
+        caseType?: 'W' | 'Y';
+      } & LPAQCommonSubmissionProperties &
+        LPAQHASSubmissionProperties &
+        LPAQS78SubmissionProperties)
     | ({
-        caseType?: 'Y';
-      } & LPAQS78SubmissionProperties)
-    | ({
-        caseType?: 'D';
-      } & LPAQHASSubmissionProperties)
-    | ({
-        caseType?: 'ZP';
-      } & LPAQHASSubmissionProperties);
+        caseType?: 'H' | 'ZA';
+      } & LPAQCommonSubmissionProperties);
   documents: {
     /**
      * The unique identifier for the document

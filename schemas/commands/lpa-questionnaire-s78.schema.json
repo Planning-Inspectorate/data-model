@@ -35,7 +35,6 @@
     "lpaProcedurePreferenceDuration"
   ],
   "allOf": [
-    { "$ref": "lpa-questionnaire-has.schema.json" },
     {
       "properties": {
         "changedListedBuildingNumbers": {

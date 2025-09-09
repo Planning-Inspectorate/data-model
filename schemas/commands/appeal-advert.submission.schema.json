@@ -1,0 +1,23 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "commands/appeal-advert.submission.schema.json",
+  "title": "Advert specific properties",
+  "description": "Schema defining any properties for advertisement appeals",
+  "type": "object",
+  "additionalProperties": true,
+  "required": ["isSiteOnHighwayLand", "isAdvertInPosition", "hasLandownersPermission"],
+  "properties": {
+    "hasLandownersPermission": {
+      "type": ["boolean", "null"],
+      "description": "Indicates if the appellant has land owners permission"
+    },
+    "isAdvertInPosition": {
+      "type": ["boolean", "null"],
+      "description": "Indicates if the advert is already in position"
+    },
+    "isSiteOnHighwayLand": {
+      "type": ["boolean", "null"],
+      "description": "Indicates if site is on highway land"
+    }
+  }
+}

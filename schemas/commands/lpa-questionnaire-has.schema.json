@@ -16,7 +16,6 @@
     "lpaStatement"
   ],
   "allOf": [
-    { "$ref": "lpa-questionnaire-common.schema.json" },
     {
       "properties": {
         "isCorrectAppealType": {

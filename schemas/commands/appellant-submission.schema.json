@@ -14,19 +14,30 @@
       "required": ["caseType"],
       "oneOf": [
         {
-          "allOf": [{ "properties": { "caseType": { "const": "D" } } }, { "$ref": "appeal-has-submission.schema.json" }]
-        },
-        {
+          "$comment": "Householder + CAS Planning",
           "allOf": [
-            { "properties": { "caseType": { "const": "ZP" } } },
+            { "properties": { "caseType": { "enum": ["D", "ZP"] } } },
+            { "$ref": "appeal-common-submission.schema.json" },
             { "$ref": "appeal-has-submission.schema.json" }
           ]
         },
         {
-          "allOf": [{ "properties": { "caseType": { "const": "W" } } }, { "$ref": "appeal-s78-submission.schema.json" }]
+          "$comment": "S78 + S20",
+          "allOf": [
+            { "properties": { "caseType": { "enum": ["W", "Y"] } } },
+            { "$ref": "appeal-common-submission.schema.json" },
+            { "$ref": "appeal-has-submission.schema.json" },
+            { "$ref": "appeal-s78-submission.schema.json" }
+          ]
         },
         {
-          "allOf": [{ "properties": { "caseType": { "const": "Y" } } }, { "$ref": "appeal-s78-submission.schema.json" }]
+          "$comment": "Adverts + CAS Adverts",
+          "allOf": [
+            { "properties": { "caseType": { "enum": ["H", "ZA"] } } },
+            { "$ref": "appeal-common-submission.schema.json" },
+            { "$ref": "appeal-has-submission.schema.json" },
+            { "$ref": "appeal-advert.submission.schema.json" }
+          ]
         }
       ]
     },

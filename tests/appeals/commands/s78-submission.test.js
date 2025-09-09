@@ -85,8 +85,15 @@ describe('S78 submission command schema', () => {
 	const ajv = new Ajv({ schemas: flatSchemas, allErrors: true });
 	addFormats(ajv);
 
-	it('should allow valid S78 schema', () => {
+	it('should allow valid schema for S78', () => {
 		const validationResult = ajv.validate(schema, exampleS78SubmissionSchema);
+		assert.strictEqual(validationResult, true);
+	});
+
+	it('should allow valid schema for S20', () => {
+		const test = structuredClone(exampleS78SubmissionSchema);
+		test.casedata.caseType = 'Y';
+		const validationResult = ajv.validate(schema, test);
 		assert.strictEqual(validationResult, true);
 	});
 

@@ -17,9 +17,9 @@ const document = {
 	documentType: 'plansDrawings'
 };
 
-const exampleHasQuestionnaireSchema = {
+const exampleAdvertQuestionnaireSchema = {
 	casedata: {
-		caseType: 'D',
+		caseType: 'H',
 		caseReference: 'nisi incididunt cillum',
 		lpaQuestionnaireSubmittedDate: null,
 		lpaStatement: 'consequat ex',
@@ -60,20 +60,20 @@ describe('HAS questionnaire command schema', () => {
 	const ajv = new Ajv({ schemas: flatSchemas, allErrors: true });
 	addFormats(ajv);
 
-	it('should allow valid schema for HAS', () => {
-		const validationResult = ajv.validate(schema, exampleHasQuestionnaireSchema);
+	it('should allow valid schema for Advert', () => {
+		const validationResult = ajv.validate(schema, exampleAdvertQuestionnaireSchema);
 		assert.strictEqual(validationResult, true);
 	});
 
-	it('should allow valid schema for CAS planning', () => {
-		const test = structuredClone(exampleHasQuestionnaireSchema);
-		test.casedata.caseType = 'ZP';
+	it('should allow valid schema for CAS Advert', () => {
+		const test = structuredClone(exampleAdvertQuestionnaireSchema);
+		test.casedata.caseType = 'ZA';
 		const validationResult = ajv.validate(schema, test);
 		assert.strictEqual(validationResult, true);
 	});
 
 	it('should reject missing caseReference', () => {
-		const test = structuredClone(exampleHasQuestionnaireSchema);
+		const test = structuredClone(exampleAdvertQuestionnaireSchema);
 		delete test.casedata.caseReference;
 		const validationResult = ajv.validate(schema, test);
 		assert.strictEqual(validationResult, false);
@@ -84,7 +84,7 @@ describe('HAS questionnaire command schema', () => {
 	});
 
 	it('should allow additional props', () => {
-		const test = structuredClone(exampleHasQuestionnaireSchema);
+		const test = structuredClone(exampleAdvertQuestionnaireSchema);
 		test.test = 1;
 		const validationResult = ajv.validate(schema, test);
 		assert.strictEqual(validationResult, true);

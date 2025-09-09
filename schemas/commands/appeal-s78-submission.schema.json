@@ -19,7 +19,6 @@
     "developmentType"
   ],
   "allOf": [
-    { "$ref": "appeal-has-submission.schema.json" },
     {
       "properties": {
         "agriculturalHolding": {

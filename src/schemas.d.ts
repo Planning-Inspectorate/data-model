@@ -676,7 +676,7 @@ export type AppealHASCase = (
   /**
    * The methods used to notify relevant parties
    */
-  notificationMethod: ('notice' | 'letter' | 'advert' | null)[] | null;
+  notificationMethod: ('notice' | 'letter' | 'advert')[] | null;
   /**
    * Indicates if the appellant has informed other owners of the site
    */
@@ -1168,7 +1168,7 @@ export type AppealS78Case = (
   /**
    * The methods used to notify relevant parties
    */
-  notificationMethod: ('notice' | 'letter' | 'advert' | null)[] | null;
+  notificationMethod: ('notice' | 'letter' | 'advert')[] | null;
   /**
    * Indicates if the appellant has informed other owners of the site
    */
@@ -2968,7 +2968,7 @@ export type AppealRepresentationSubmission = {
   /**
    * The type of representation
    */
-  representationType: 'statement' | 'comment' | 'final_comment' | 'proofs_evidence' | null;
+  representationType: 'statement' | 'comment' | 'final_comment' | 'proofs_evidence';
   /**
    * The original representation
    */

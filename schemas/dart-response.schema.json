@@ -55,9 +55,10 @@
     "caseSpecialisms": {
       "type": ["array", "null"],
       "items": {
-        "type": "string"
+        "type": "string",
+        "examples": ["General allocation", "Housing orders", "Waste"]
       },
-      "examples": ["General allocation", "Housing orders", "Waste"],
+      "examples": [["General allocation", "Housing orders"], ["Waste"]],
       "description": "A list of case specialisms for allocation purposes"
     },
     "caseSubmittedDate": {

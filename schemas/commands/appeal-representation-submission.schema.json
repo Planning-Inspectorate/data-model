@@ -21,7 +21,7 @@
     },
     "representationType": {
       "type": "string",
-      "enum": ["statement", "comment", "final_comment", "proofs_evidence", null],
+      "enum": ["statement", "comment", "final_comment", "proofs_evidence"],
       "description": "The type of representation"
     },
     "representation": {

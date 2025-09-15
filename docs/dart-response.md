@@ -301,15 +301,16 @@ A list of case specialisms for allocation purposes
 ### caseSpecialisms Examples
 
 ```json
-"General allocation"
+[
+  "General allocation",
+  "Housing orders"
+]
 ```
 
 ```json
-"Housing orders"
-```
-
-```json
-"Waste"
+[
+  "Waste"
+]
 ```
 
 ## caseSubmittedDate

@@ -506,23 +506,16 @@ A list of specialisms for allocation purposes
 ### caseSpecialisms Examples
 
 ```json
-"Access"
+[
+  "Access",
+  "Listed building and enforcement"
+]
 ```
 
 ```json
-"Listed building and enforcement"
-```
-
-```json
-"Roads and traffics"
-```
-
-```json
-"Natural heritage"
-```
-
-```json
-"Schedule 1"
+[
+  "Schedule 1"
+]
 ```
 
 ## caseSubmittedDate
@@ -1913,6 +1906,21 @@ The methods used to notify relevant parties
 ### notificationMethod Type
 
 `string[]`
+
+### notificationMethod Examples
+
+```json
+[
+  "notice",
+  "letter"
+]
+```
+
+```json
+[
+  "advert"
+]
+```
 
 ## ownersInformed
 

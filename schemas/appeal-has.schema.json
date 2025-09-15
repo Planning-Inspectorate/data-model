@@ -167,9 +167,16 @@
     "caseSpecialisms": {
       "type": ["array", "null"],
       "items": {
-        "type": "string"
+        "type": "string",
+        "examples": [
+          "Access",
+          "Listed building and enforcement",
+          "Roads and traffics",
+          "Natural heritage",
+          "Schedule 1"
+        ]
       },
-      "examples": ["Access", "Listed building and enforcement", "Roads and traffics", "Natural heritage", "Schedule 1"],
+      "examples": [["Access", "Listed building and enforcement"], ["Schedule 1"]],
       "description": "A list of specialisms for allocation purposes"
     },
     "caseSubmittedDate": {
@@ -573,8 +580,9 @@
       "type": ["array", "null"],
       "items": {
         "type": "string",
-        "enum": ["notice", "letter", "advert", null]
+        "enum": ["notice", "letter", "advert"]
       },
+      "examples": [["notice", "letter"], ["advert"]],
       "description": "The methods used to notify relevant parties"
     },
     "ownersInformed": {

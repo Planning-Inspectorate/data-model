@@ -30,7 +30,7 @@
   },
   "devDependencies": {
     "@adobe/jsonschema2md": "^8.0.3",
-    "@commitlint/cli": "^19.8.1",
+    "@commitlint/cli": "^20.1.0",
     "@commitlint/config-conventional": "^20.0.0",
     "ajv": "^8.17.1",
     "ajv-formats": "^3.0.1",

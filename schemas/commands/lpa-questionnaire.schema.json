@@ -33,7 +33,9 @@
           "$comment": "Adverts + CAS Adverts - TBD - may need separate schemas",
           "allOf": [
             { "properties": { "caseType": { "enum": ["H", "ZA"] } } },
-            { "$ref": "lpa-questionnaire-common.schema.json" }
+            { "$ref": "lpa-questionnaire-common.schema.json" },
+            { "$ref": "lpa-questionnaire-has.schema.json" },
+            { "$ref": "lpa-questionnaire-cas-advert.schema.json" }
           ]
         }
       ]

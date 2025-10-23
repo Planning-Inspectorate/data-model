@@ -3598,6 +3598,64 @@ export interface Address {
 }
 
 /**
+ * Schema defining any cas advert specific properties for LPAQ submissions
+ */
+export type LPAQCasAdvertSubmissionProperties = {
+  /**
+   * Indicates that a scheduled monument is affected
+   */
+  affectsScheduledMonument?: boolean | null;
+  /**
+   * Indicates the existence of protected species
+   */
+  hasProtectedSpecies?: boolean | null;
+  /**
+   * Indicates an area of outstanding beauty (National Landscape)
+   */
+  isAonbNationalLandscape?: boolean | null;
+  /**
+   * The designated site names
+   */
+  designatedSitesNames?: string[] | null;
+  /**
+   * Indicates statutory consultees
+   */
+  hasStatutoryConsultees?: boolean | null;
+  /**
+   * The details of the bodies consulted
+   */
+  consultedBodiesDetails?: string | null;
+  /**
+   * Indicates emerging plans
+   */
+  hasEmergingPlan?: boolean | null;
+  /**
+   * The procedure preference indicated by the LPA
+   */
+  lpaProcedurePreference?: 'written' | 'hearing' | 'inquiry' | null;
+  /**
+   * The procedure details preference indicated by the LPA
+   */
+  lpaProcedurePreferenceDetails?: string | null;
+  /**
+   * The duration of enquiry indicated by the LPA
+   */
+  lpaProcedurePreferenceDuration?: number | null;
+  /**
+   * Indicates if the site is in an area of special control for adverts
+   */
+  isSiteInAreaOfSpecialControlAdverts?: boolean | null;
+  /**
+   * Indicates if the application was refused because of highway or traffic public safety?
+   */
+  wasApplicationRefusedDueToHighwayOrTraffic?: boolean | null;
+  /**
+   * Indicates if the appellant submitted complete and accurate photographs and plans
+   */
+  didAppellantSubmitCompletePhotosAndPlans?: boolean | null;
+};
+
+/**
  * Schema defining any properties common across all appeal types for LPAQ submissions
  */
 export interface LPAQCommonSubmissionProperties {
@@ -4010,6 +4068,63 @@ export type LPAQS78SubmissionProperties = {
    */
   lpaProcedurePreferenceDuration?: number | null;
 };
+/**
+ * Schema defining any cas advert specific properties for LPAQ submissions
+ */
+export type LPAQCasAdvertSubmissionProperties = {
+  /**
+   * Indicates that a scheduled monument is affected
+   */
+  affectsScheduledMonument?: boolean | null;
+  /**
+   * Indicates the existence of protected species
+   */
+  hasProtectedSpecies?: boolean | null;
+  /**
+   * Indicates an area of outstanding beauty (National Landscape)
+   */
+  isAonbNationalLandscape?: boolean | null;
+  /**
+   * The designated site names
+   */
+  designatedSitesNames?: string[] | null;
+  /**
+   * Indicates statutory consultees
+   */
+  hasStatutoryConsultees?: boolean | null;
+  /**
+   * The details of the bodies consulted
+   */
+  consultedBodiesDetails?: string | null;
+  /**
+   * Indicates emerging plans
+   */
+  hasEmergingPlan?: boolean | null;
+  /**
+   * The procedure preference indicated by the LPA
+   */
+  lpaProcedurePreference?: 'written' | 'hearing' | 'inquiry' | null;
+  /**
+   * The procedure details preference indicated by the LPA
+   */
+  lpaProcedurePreferenceDetails?: string | null;
+  /**
+   * The duration of enquiry indicated by the LPA
+   */
+  lpaProcedurePreferenceDuration?: number | null;
+  /**
+   * Indicates if the site is in an area of special control for adverts
+   */
+  isSiteInAreaOfSpecialControlAdverts?: boolean | null;
+  /**
+   * Indicates if the application was refused because of highway or traffic public safety?
+   */
+  wasApplicationRefusedDueToHighwayOrTraffic?: boolean | null;
+  /**
+   * Indicates if the appellant submitted complete and accurate photographs and plans
+   */
+  didAppellantSubmitCompletePhotosAndPlans?: boolean | null;
+};
 
 /**
  * Schema defining the data produced by the Front-Office when an LPA Questionnaire is submitted
@@ -4027,7 +4142,9 @@ export interface LPAQuestionnaireCommand {
         LPAQS78SubmissionProperties)
     | ({
         caseType?: 'H' | 'ZA';
-      } & LPAQCommonSubmissionProperties);
+      } & LPAQCommonSubmissionProperties &
+        LPAQHASSubmissionProperties &
+        LPAQCasAdvertSubmissionProperties);
   documents: {
     /**
      * The unique identifier for the document

@@ -17,8 +17,7 @@
           "$comment": "Householder + CAS Planning",
           "allOf": [
             { "properties": { "caseType": { "enum": ["D", "ZP"] } } },
-            { "$ref": "appeal-common-submission.schema.json" },
-            { "$ref": "appeal-has-submission.schema.json" }
+            { "$ref": "appeal-common-submission.schema.json" }
           ]
         },
         {
@@ -26,7 +25,6 @@
           "allOf": [
             { "properties": { "caseType": { "enum": ["W", "Y"] } } },
             { "$ref": "appeal-common-submission.schema.json" },
-            { "$ref": "appeal-has-submission.schema.json" },
             { "$ref": "appeal-s78-submission.schema.json" }
           ]
         },
@@ -35,7 +33,6 @@
           "allOf": [
             { "properties": { "caseType": { "enum": ["H", "ZA"] } } },
             { "$ref": "appeal-common-submission.schema.json" },
-            { "$ref": "appeal-has-submission.schema.json" },
             { "$ref": "appeal-advert.submission.schema.json" }
           ]
         }

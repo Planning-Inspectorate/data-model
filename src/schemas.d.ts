@@ -2896,61 +2896,55 @@ export type AppellantCommonSubmissionProperties = (
     | 'minor-commercial-development'
     | 'advertisement'
     | null;
-  [k: string]: unknown;
-};
-
-/**
- * Schema defining any HAS specific properties for submissions
- */
-export type AppellantHASSubmissionProperties = {
   /**
    * Indicates if the site is in a green belt
    */
-  isGreenBelt?: boolean | null;
+  isGreenBelt: boolean | null;
   /**
    * The site area, in square meters
    */
-  siteAreaSquareMetres?: number | null;
+  siteAreaSquareMetres: number | null;
   /**
    * The floor space, in square meters
    */
-  floorSpaceSquareMetres?: number | null;
+  floorSpaceSquareMetres: number | null;
   /**
    * Indicates if the appellant has complete ownership of the site
    */
-  ownsAllLand?: boolean | null;
+  ownsAllLand: boolean | null;
   /**
    * Indicates if the appellant has partial ownership of the site
    */
-  ownsSomeLand?: boolean | null;
+  ownsSomeLand: boolean | null;
   /**
    * Indicates if the appellant knows other owners of the site
    */
-  knowsOtherOwners?: 'Yes' | 'No' | 'Some' | null;
+  knowsOtherOwners: 'Yes' | 'No' | 'Some' | null;
   /**
    * Indicates if the appellant knows all owners of the site
    */
-  knowsAllOwners?: 'Yes' | 'No' | 'Some' | null;
+  knowsAllOwners: 'Yes' | 'No' | 'Some' | null;
   /**
    * Indicates if the appellant has advertised the appeal to the LPA decision
    */
-  advertisedAppeal?: boolean | null;
+  advertisedAppeal: boolean | null;
   /**
    * Indicates if the appellant has informed other owners of the site
    */
-  ownersInformed?: boolean | null;
+  ownersInformed: boolean | null;
   /**
    * The original description of the development, as provided by the appellant
    */
-  originalDevelopmentDescription?: string | null;
+  originalDevelopmentDescription: string | null;
   /**
    * Indicates that the LPA has changed the development description
    */
-  changedDevelopmentDescription?: boolean | null;
+  changedDevelopmentDescription: boolean | null;
   /**
    * Indicates if the appellant has applied for costs
    */
-  appellantCostsAppliedFor?: boolean | null;
+  appellantCostsAppliedFor: boolean | null;
+  [k: string]: unknown;
 };
 
 /**
@@ -3292,60 +3286,55 @@ export type AppellantCommonSubmissionProperties = (
     | 'minor-commercial-development'
     | 'advertisement'
     | null;
-  [k: string]: unknown;
-};
-/**
- * Schema defining any HAS specific properties for submissions
- */
-export type AppellantHASSubmissionProperties = {
   /**
    * Indicates if the site is in a green belt
    */
-  isGreenBelt?: boolean | null;
+  isGreenBelt: boolean | null;
   /**
    * The site area, in square meters
    */
-  siteAreaSquareMetres?: number | null;
+  siteAreaSquareMetres: number | null;
   /**
    * The floor space, in square meters
    */
-  floorSpaceSquareMetres?: number | null;
+  floorSpaceSquareMetres: number | null;
   /**
    * Indicates if the appellant has complete ownership of the site
    */
-  ownsAllLand?: boolean | null;
+  ownsAllLand: boolean | null;
   /**
    * Indicates if the appellant has partial ownership of the site
    */
-  ownsSomeLand?: boolean | null;
+  ownsSomeLand: boolean | null;
   /**
    * Indicates if the appellant knows other owners of the site
    */
-  knowsOtherOwners?: 'Yes' | 'No' | 'Some' | null;
+  knowsOtherOwners: 'Yes' | 'No' | 'Some' | null;
   /**
    * Indicates if the appellant knows all owners of the site
    */
-  knowsAllOwners?: 'Yes' | 'No' | 'Some' | null;
+  knowsAllOwners: 'Yes' | 'No' | 'Some' | null;
   /**
    * Indicates if the appellant has advertised the appeal to the LPA decision
    */
-  advertisedAppeal?: boolean | null;
+  advertisedAppeal: boolean | null;
   /**
    * Indicates if the appellant has informed other owners of the site
    */
-  ownersInformed?: boolean | null;
+  ownersInformed: boolean | null;
   /**
    * The original description of the development, as provided by the appellant
    */
-  originalDevelopmentDescription?: string | null;
+  originalDevelopmentDescription: string | null;
   /**
    * Indicates that the LPA has changed the development description
    */
-  changedDevelopmentDescription?: boolean | null;
+  changedDevelopmentDescription: boolean | null;
   /**
    * Indicates if the appellant has applied for costs
    */
-  appellantCostsAppliedFor?: boolean | null;
+  appellantCostsAppliedFor: boolean | null;
+  [k: string]: unknown;
 };
 /**
  * Schema defining any S78 specific properties for questionnaire submissions
@@ -3417,17 +3406,14 @@ export interface AppellantSubmissionCommand {
   casedata:
     | ({
         caseType?: 'D' | 'ZP';
-      } & AppellantCommonSubmissionProperties &
-        AppellantHASSubmissionProperties)
+      } & AppellantCommonSubmissionProperties)
     | ({
         caseType?: 'W' | 'Y';
       } & AppellantCommonSubmissionProperties &
-        AppellantHASSubmissionProperties &
         AppellantS78SubmissionProperties)
     | ({
         caseType?: 'H' | 'ZA';
       } & AppellantCommonSubmissionProperties &
-        AppellantHASSubmissionProperties &
         AdvertSpecificProperties);
   documents: {
     /**

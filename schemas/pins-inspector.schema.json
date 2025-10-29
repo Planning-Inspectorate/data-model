@@ -30,7 +30,7 @@
       "type": ["string", "null"],
       "description": "SAPID of the Inspector if available in ODW.",
       "example": "12345678"
-    },    
+    },
     "horizonId": {
       "type": "string",
       "description": "The PINS-generated unique horizon ID"
@@ -99,22 +99,16 @@
       "description": "Name of the Inspector's manager.",
       "example": "Dan Brown"
     },
-     "validFrom": {
-       "type": ["string", "null"],
-       "description": "Date the Inspector record was first recorded.",
-       "format": "date-time",
-       "examples": ["2023-07-27T20:30:00.000Z"]
+    "validFrom": {
+      "type": ["string", "null"],
+      "description": "Date the Inspector record was first recorded.",
+      "format": "date-time",
+      "examples": ["2023-07-27T20:30:00.000Z"]
     },
     "address": {
       "type": "object",
-      "additionalProperties": true,      
-      "required": [
-        "addressLine1",
-        "addressLine2",
-        "townCity",
-        "county",
-        "postcode"
-      ],
+      "additionalProperties": true,
+      "required": ["addressLine1", "addressLine2", "townCity", "county", "postcode"],
       "properties": {
         "addressLine1": { "type": ["string", "null"] },
         "addressLine2": { "type": ["string", "null"] },

@@ -1,8 +1,8 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "$id": "commands/appeal-s78-submission.schema.json",
+  "$id": "commands/appeals-components/appeal-s78-submission.schema.json",
   "title": "Appellant s78 submission properties",
-  "description": "Schema defining any S78 specific properties for questionnaire submissions",
+  "description": "Schema defining any S78 specific properties for appeal submissions",
   "type": "object",
   "additionalProperties": true,
   "required": [

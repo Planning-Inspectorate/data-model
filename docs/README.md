@@ -52,7 +52,11 @@
 
 * [Untitled object in Appeal HAS Case](./appeal-has-properties-neighbouringsiteaddresses-items.md) – `appeal-has.schema.json#/properties/neighbouringSiteAddresses/items`
 
+* [Untitled object in Appeal HAS Case](./appeal-has-properties-advertdetails-items.md) – `appeal-has.schema.json#/properties/advertDetails/items`
+
 * [Untitled object in Appeal S78 Case](./appeal-s78-properties-neighbouringsiteaddresses-items.md) – `appeal-s78.schema.json#/properties/neighbouringSiteAddresses/items`
+
+* [Untitled object in Appeal S78 Case](./appeal-s78-properties-advertdetails-items.md) – `appeal-s78.schema.json#/properties/advertDetails/items`
 
 * [Untitled object in DaRT API response](./dart-response-properties-neighbouringsiteaddresses-items.md) – `dart-response.schema.json#/properties/neighbouringSiteAddresses/items`
 

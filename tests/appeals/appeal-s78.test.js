@@ -153,7 +153,14 @@ const appealS78 = {
 	typeOfPlanningApplication: 'full-appeal',
 	developmentType: 'other-minor',
 	statementOfCommonGroundDueDate: '1919-10-16T12:35:55.0Z',
-	planningObligationDueDate: '1899-04-25T22:23:18.0Z'
+	planningObligationDueDate: '1899-04-25T22:23:18.0Z',
+	advertDetails: [
+		{
+			isAdvertInPosition: false,
+			isSiteOnHighwayLand: false,
+			advertType: 'Other'
+		}
+	]
 };
 
 describe(schema, () => {
@@ -223,5 +230,12 @@ describe(schema, () => {
 		test.test = 1; // additional unknown prop allowed
 		const validationResult = ajv.validate(schema, test);
 		assert.strictEqual(validationResult, true);
+	});
+
+	it('should not allow custom advertType', () => {
+		const test = structuredClone(appealS78);
+		test.advertDetails[0].advertType = 'something';
+		const validationResult = ajv.validate(schema, test);
+		assert.strictEqual(validationResult, false);
 	});
 });

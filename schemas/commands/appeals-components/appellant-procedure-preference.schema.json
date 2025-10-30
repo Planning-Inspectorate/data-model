@@ -1,0 +1,37 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "commands/appeals-components/appellant-procedure-preference.schema.json",
+  "title": "Appellant procedure preference properties",
+  "description": "Schema defining appellant procedure preference properties",
+  "type": "object",
+  "additionalProperties": true,
+  "required": [
+    "appellantProcedurePreference",
+    "appellantProcedurePreferenceDetails",
+    "appellantProcedurePreferenceDuration",
+    "appellantProcedurePreferenceWitnessCount"
+  ],
+  "allOf": [
+    {
+      "properties": {
+        "appellantProcedurePreference": {
+          "type": ["string", "null"],
+          "enum": ["written", "hearing", "inquiry", null],
+          "description": "The procedure preference indicated by the appellant"
+        },
+        "appellantProcedurePreferenceDetails": {
+          "type": ["string", "null"],
+          "description": "The procedure details preference indicated by the appellant"
+        },
+        "appellantProcedurePreferenceDuration": {
+          "type": ["number", "null"],
+          "description": "The duration of the procedure indicated by the appellant"
+        },
+        "appellantProcedurePreferenceWitnessCount": {
+          "type": ["number", "null"],
+          "description": "The number of witnesses in inquiries"
+        }
+      }
+    }
+  ]
+}

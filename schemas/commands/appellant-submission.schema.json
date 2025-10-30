@@ -17,26 +17,37 @@
           "$comment": "Householder + CAS Planning",
           "allOf": [
             { "properties": { "caseType": { "enum": ["D", "ZP"] } } },
-            { "$ref": "appeal-common-submission.schema.json" },
-            { "$ref": "appeal-has-submission.schema.json" }
+            { "$ref": "appeals-components/appeal-common-submission.schema.json" },
+            { "$ref": "appeals-components/appeal-has-submission.schema.json" }
           ]
         },
         {
           "$comment": "S78 + S20",
           "allOf": [
             { "properties": { "caseType": { "enum": ["W", "Y"] } } },
-            { "$ref": "appeal-common-submission.schema.json" },
-            { "$ref": "appeal-has-submission.schema.json" },
-            { "$ref": "appeal-s78-submission.schema.json" }
+            { "$ref": "appeals-components/appeal-common-submission.schema.json" },
+            { "$ref": "appeals-components/appeal-has-submission.schema.json" },
+            { "$ref": "appeals-components/appeal-s78-submission.schema.json" },
+            { "$ref": "appeals-components/appellant-procedure-preference.schema.json" }
           ]
         },
         {
-          "$comment": "Adverts + CAS Adverts",
+          "$comment": "CAS Adverts",
           "allOf": [
-            { "properties": { "caseType": { "enum": ["H", "ZA"] } } },
-            { "$ref": "appeal-common-submission.schema.json" },
-            { "$ref": "appeal-has-submission.schema.json" },
-            { "$ref": "appeal-advert.submission.schema.json" }
+            { "properties": { "caseType": { "enum": ["ZA"] } } },
+            { "$ref": "appeals-components/appeal-common-submission.schema.json" },
+            { "$ref": "appeals-components/appeal-has-submission.schema.json" },
+            { "$ref": "appeals-components/appeal-advert.submission.schema.json" }
+          ]
+        },
+        {
+          "$comment": "Adverts",
+          "allOf": [
+            { "properties": { "caseType": { "enum": ["H"] } } },
+            { "$ref": "appeals-components/appeal-common-submission.schema.json" },
+            { "$ref": "appeals-components/appeal-has-submission.schema.json" },
+            { "$ref": "appeals-components/appeal-advert.submission.schema.json" },
+            { "$ref": "appeals-components/appellant-procedure-preference.schema.json" }
           ]
         }
       ]

@@ -111,11 +111,10 @@ any of
 | [siteGridReferenceEasting](#sitegridreferenceeasting)                                     | `string`  | Optional | can be null    | [Appeal HAS Case](appeal-has-properties-sitegridreferenceeasting.md "appeal-has.schema.json#/properties/siteGridReferenceEasting")                                     |
 | [siteGridReferenceNorthing](#sitegridreferencenorthing)                                   | `string`  | Optional | can be null    | [Appeal HAS Case](appeal-has-properties-sitegridreferencenorthing.md "appeal-has.schema.json#/properties/siteGridReferenceNorthing")                                   |
 | [hasLandownersPermission](#haslandownerspermission)                                       | `boolean` | Optional | can be null    | [Appeal HAS Case](appeal-has-properties-haslandownerspermission.md "appeal-has.schema.json#/properties/hasLandownersPermission")                                       |
-| [isAdvertInPosition](#isadvertinposition)                                                 | `boolean` | Optional | can be null    | [Appeal HAS Case](appeal-has-properties-isadvertinposition.md "appeal-has.schema.json#/properties/isAdvertInPosition")                                                 |
-| [isSiteInAreaOfSpecialControlAdverts](#issiteinareaofspecialcontroladverts)               | `boolean` | Optional | can be null    | [Appeal HAS Case](appeal-has-properties-issiteinareaofspecialcontroladverts.md "appeal-has.schema.json#/properties/isSiteInAreaOfSpecialControlAdverts")               |
 | [wasApplicationRefusedDueToHighwayOrTraffic](#wasapplicationrefusedduetohighwayortraffic) | `boolean` | Optional | can be null    | [Appeal HAS Case](appeal-has-properties-wasapplicationrefusedduetohighwayortraffic.md "appeal-has.schema.json#/properties/wasApplicationRefusedDueToHighwayOrTraffic") |
 | [didAppellantSubmitCompletePhotosAndPlans](#didappellantsubmitcompletephotosandplans)     | `boolean` | Optional | can be null    | [Appeal HAS Case](appeal-has-properties-didappellantsubmitcompletephotosandplans.md "appeal-has.schema.json#/properties/didAppellantSubmitCompletePhotosAndPlans")     |
-| [advertType](#adverttype)                                                                 | `string`  | Optional | can be null    | [Appeal HAS Case](appeal-has-properties-adverttype.md "appeal-has.schema.json#/properties/advertType")                                                                 |
+| [isSiteInAreaOfSpecialControlAdverts](#issiteinareaofspecialcontroladverts)               | `boolean` | Optional | can be null    | [Appeal HAS Case](appeal-has-properties-issiteinareaofspecialcontroladverts.md "appeal-has.schema.json#/properties/isSiteInAreaOfSpecialControlAdverts")               |
+| [advertDetails](#advertdetails)                                                           | `array`   | Optional | can be null    | [Appeal HAS Case](appeal-has-properties-advertdetails.md "appeal-has.schema.json#/properties/advertDetails")                                                           |
 | Additional Properties                                                                     | Any       | Optional | can be null    |                                                                                                                                                                        |
 
 ## caseId
@@ -2534,7 +2533,7 @@ Indicates if the appellant has applied for costs
 
 ## hasLandownersPermission
 
-Indicates if the appellant has land owners permission
+Does the appellant have the landowners permission
 
 `hasLandownersPermission`
 
@@ -2550,45 +2549,9 @@ Indicates if the appellant has land owners permission
 
 `boolean`
 
-## isAdvertInPosition
-
-Indicates if the advert is already in position
-
-`isAdvertInPosition`
-
-* is optional
-
-* Type: `boolean`
-
-* can be null
-
-* defined in: [Appeal HAS Case](appeal-has-properties-isadvertinposition.md "appeal-has.schema.json#/properties/isAdvertInPosition")
-
-### isAdvertInPosition Type
-
-`boolean`
-
-## isSiteInAreaOfSpecialControlAdverts
-
-Indicates if the site is in an area of special control for adverts
-
-`isSiteInAreaOfSpecialControlAdverts`
-
-* is optional
-
-* Type: `boolean`
-
-* can be null
-
-* defined in: [Appeal HAS Case](appeal-has-properties-issiteinareaofspecialcontroladverts.md "appeal-has.schema.json#/properties/isSiteInAreaOfSpecialControlAdverts")
-
-### isSiteInAreaOfSpecialControlAdverts Type
-
-`boolean`
-
 ## wasApplicationRefusedDueToHighwayOrTraffic
 
-Indicates if the application was refused because of highway or traffic public safety?
+Did the LPA refuse the application because of highway or traffic public safety?
 
 `wasApplicationRefusedDueToHighwayOrTraffic`
 
@@ -2606,7 +2569,7 @@ Indicates if the application was refused because of highway or traffic public sa
 
 ## didAppellantSubmitCompletePhotosAndPlans
 
-Indicates if the appellant submitted complete and accurate photographs and plans
+Did the appellant submit complete photos and plans?
 
 `didAppellantSubmitCompletePhotosAndPlans`
 
@@ -2622,25 +2585,43 @@ Indicates if the appellant submitted complete and accurate photographs and plans
 
 `boolean`
 
-## advertType
+## isSiteInAreaOfSpecialControlAdverts
 
+Is the site in an area of special control of advertisements?
 
-
-> Pick from a TBD list of reference data for advert type
-
-`advertType`
+`isSiteInAreaOfSpecialControlAdverts`
 
 * is optional
 
-* Type: `string`
+* Type: `boolean`
 
 * can be null
 
-* defined in: [Appeal HAS Case](appeal-has-properties-adverttype.md "appeal-has.schema.json#/properties/advertType")
+* defined in: [Appeal HAS Case](appeal-has-properties-issiteinareaofspecialcontroladverts.md "appeal-has.schema.json#/properties/isSiteInAreaOfSpecialControlAdverts")
 
-### advertType Type
+### isSiteInAreaOfSpecialControlAdverts Type
 
-`string`
+`boolean`
+
+## advertDetails
+
+A list of advertisements for the appeal
+
+> Also available on CAS Adverts (ZA) cases
+
+`advertDetails`
+
+* is optional
+
+* Type: `object[]` ([Details](appeal-has-properties-advertdetails-items.md))
+
+* can be null
+
+* defined in: [Appeal HAS Case](appeal-has-properties-advertdetails.md "appeal-has.schema.json#/properties/advertDetails")
+
+### advertDetails Type
+
+`object[]` ([Details](appeal-has-properties-advertdetails-items.md))
 
 ## Additional Properties
 

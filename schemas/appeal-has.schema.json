@@ -711,27 +711,58 @@
     },
     "hasLandownersPermission": {
       "type": ["boolean", "null"],
-      "description": "Indicates if the appellant has land owners permission"
-    },
-    "isAdvertInPosition": {
-      "type": ["boolean", "null"],
-      "description": "Indicates if the advert is already in position"
-    },
-    "isSiteInAreaOfSpecialControlAdverts": {
-      "type": ["boolean", "null"],
-      "description": "Indicates if the site is in an area of special control for adverts"
+      "description": "Does the appellant have the landowners permission"
     },
     "wasApplicationRefusedDueToHighwayOrTraffic": {
       "type": ["boolean", "null"],
-      "description": "Indicates if the application was refused because of highway or traffic public safety?"
+      "description": "Did the LPA refuse the application because of highway or traffic public safety?"
     },
     "didAppellantSubmitCompletePhotosAndPlans": {
       "type": ["boolean", "null"],
-      "description": "Indicates if the appellant submitted complete and accurate photographs and plans"
+      "description": "Did the appellant submit complete photos and plans?"
     },
-    "advertType": {
-      "type": ["string", "null"],
-      "$comment": "Pick from a TBD list of reference data for advert type"
+    "isSiteInAreaOfSpecialControlAdverts": {
+      "type": ["boolean", "null"],
+      "description": "Is the site in an area of special control of advertisements?"
+    },
+    "advertDetails": {
+      "type": ["array", "null"],
+      "items": {
+        "type": "object",
+        "additionalProperties": true,
+        "properties": {
+          "advertType": {
+            "type": ["string", "null"],
+            "enum": [
+              "4-6 Sheet Non-Illuminated",
+              "4-6 Sheet Illuminated",
+              "12/16/32 Sheet Non-Illuminated",
+              "12/16/32 Sheet Illuminated",
+              "48/64/96 Sheet Non-Illuminated",
+              "48/64/96 Sheet Illuminated",
+              "Fascia Projecting Signs Non-Illuminated",
+              "Fascia Projecting Signs Illuminated",
+              "Directional & Others Non-Illuminated",
+              "Directional & Others Illuminated",
+              "Monolith/Totem Signs Non-Illuminated",
+              "Monolith/Totem Signs Illuminated",
+              "Other",
+              null
+            ]
+          },
+          "isAdvertInPosition": {
+            "type": ["boolean", "null"],
+            "description": "Is the advertisement in position?"
+          },
+          "isSiteOnHighwayLand": {
+            "type": ["boolean", "null"],
+            "description": "Is the site on highway land?"
+          }
+        },
+        "required": ["advertType", "isAdvertInPosition", "isSiteOnHighwayLand"]
+      },
+      "description": "A list of advertisements for the appeal",
+      "$comment": "Also available on CAS Adverts (ZA) cases"
     }
   }
 }

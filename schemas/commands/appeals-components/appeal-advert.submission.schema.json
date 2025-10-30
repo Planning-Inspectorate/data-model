@@ -1,0 +1,53 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "commands/appeals-components/appeal-advert.submission.schema.json",
+  "title": "Advert specific properties",
+  "description": "Schema defining any properties for advertisement appeals",
+  "type": "object",
+  "additionalProperties": true,
+  "required": ["hasLandownersPermission", "advertDetails"],
+  "properties": {
+    "hasLandownersPermission": {
+      "type": ["boolean", "null"],
+      "description": "Indicates if the appellant has land owners permission"
+    },
+    "advertDetails": {
+      "type": ["array", "null"],
+      "items": {
+        "type": "object",
+        "additionalProperties": true,
+        "required": ["advertType", "isAdvertInPosition", "isSiteOnHighwayLand"],
+        "properties": {
+          "advertType": {
+            "type": ["string", "null"],
+            "enum": [
+              "4-6 Sheet Non-Illuminated",
+              "4-6 Sheet Illuminated",
+              "12/16/32 Sheet Non-Illuminated",
+              "12/16/32 Sheet Illuminated",
+              "48/64/96 Sheet Non-Illuminated",
+              "48/64/96 Sheet Illuminated",
+              "Fascia Projecting Signs Non-Illuminated",
+              "Fascia Projecting Signs Illuminated",
+              "Directional & Others Non-Illuminated",
+              "Directional & Others Illuminated",
+              "Monolith/Totem Signs Non-Illuminated",
+              "Monolith/Totem Signs Illuminated",
+              "Other",
+              null
+            ]
+          },
+          "isAdvertInPosition": {
+            "type": ["boolean", "null"],
+            "description": "Is the advertisement in position?"
+          },
+          "isSiteOnHighwayLand": {
+            "type": ["boolean", "null"],
+            "description": "Is the site on highway land?"
+          }
+        }
+      },
+      "description": "A list of advertisements for the appeal"
+    }
+  }
+}

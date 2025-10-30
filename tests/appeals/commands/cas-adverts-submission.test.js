@@ -30,7 +30,7 @@ const document = {
 const exampleAdvertSubmissionSchema = {
 	casedata: {
 		submissionId: '072a9b08-0266-a291-ecd0-bb0ded9d7350',
-		caseType: 'H',
+		caseType: 'ZA',
 		caseProcedure: 'written',
 		lpaCode: 'in laborum pariatur cupidatat',
 		caseSubmittedDate: '1920-12-06T17:37:12.0Z',
@@ -75,11 +75,7 @@ const exampleAdvertSubmissionSchema = {
 				isSiteOnHighwayLand: false,
 				advertType: 'Other'
 			}
-		],
-		appellantProcedurePreference: 'hearing',
-		appellantProcedurePreferenceDetails: 'eiusmod ex exercitation',
-		appellantProcedurePreferenceDuration: 10816414.941069126,
-		appellantProcedurePreferenceWitnessCount: -91300569.36444478
+		]
 	},
 	documents: [document],
 	users: [user]

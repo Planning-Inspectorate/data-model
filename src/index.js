@@ -8,6 +8,7 @@ export * from './enums.js';
 
 export const schemasPath = path.join(__dirname, '..', 'schemas');
 export const commandsPath = path.join(schemasPath, 'commands');
+export const appealsCommandsComponentsPath = path.join(commandsPath, 'appeals-components');
 
 /**
  * Load all schemas from schemas and commands folders
@@ -17,7 +18,8 @@ export const commandsPath = path.join(schemasPath, 'commands');
 export async function loadAllSchemas() {
 	return {
 		schemas: await loadSchemas(schemasPath),
-		commands: await loadSchemas(commandsPath)
+		commands: await loadSchemas(commandsPath),
+		appealsComponents: await loadSchemas(appealsCommandsComponentsPath)
 	};
 }
 
@@ -29,6 +31,7 @@ export async function loadAllSchemas() {
 export function loadAllSchemasSync() {
 	return {
 		schemas: loadSchemasSync(schemasPath),
-		commands: loadSchemasSync(commandsPath)
+		commands: loadSchemasSync(commandsPath),
+		appealsComponents: loadSchemasSync(appealsCommandsComponentsPath)
 	};
 }

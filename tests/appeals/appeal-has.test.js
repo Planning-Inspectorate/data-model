@@ -80,7 +80,6 @@ const appealHas = {
 	affectsScheduledMonument: true,
 	hasProtectedSpecies: true,
 	isAonbNationalLandscape: null,
-	isSiteOnHighwayLand: null,
 	designatedSitesNames: null,
 	hasInfrastructureLevy: false,
 	isInfrastructureLevyFormallyAdopted: false,
@@ -164,11 +163,16 @@ const appealHas = {
 	siteGridReferenceEasting: '357144',
 	siteGridReferenceNorthing: '400534',
 	hasLandownersPermission: null,
-	isAdvertInPosition: false,
 	isSiteInAreaOfSpecialControlAdverts: false,
 	wasApplicationRefusedDueToHighwayOrTraffic: null,
 	didAppellantSubmitCompletePhotosAndPlans: null,
-	advertType: null
+	advertDetails: [
+		{
+			isAdvertInPosition: false,
+			isSiteOnHighwayLand: false,
+			advertType: 'Other'
+		}
+	]
 };
 
 describe(schema, () => {
@@ -239,5 +243,26 @@ describe(schema, () => {
 		test.test = 1; // additional unknown prop allowed
 		const validationResult = ajv.validate(schema, test);
 		assert.strictEqual(validationResult, true);
+	});
+
+	it('should not allow custom advertType', () => {
+		const test = structuredClone(appealHas);
+		test.advertDetails[0].advertType = 'something';
+		const validationResult = ajv.validate(schema, test);
+		assert.strictEqual(validationResult, false);
+	});
+
+	it('should not allow custom lpaProcedurePreference', () => {
+		const test = structuredClone(appealHas);
+		test.lpaProcedurePreference = 'something';
+		const validationResult = ajv.validate(schema, test);
+		assert.strictEqual(validationResult, false);
+	});
+
+	it('should enforce required props', () => {
+		const test = structuredClone(appealHas);
+		delete test.lpaCostsAppliedFor;
+		const validationResult = ajv.validate(schema, test);
+		assert.strictEqual(validationResult, false);
 	});
 });

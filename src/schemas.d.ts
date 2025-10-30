@@ -763,26 +763,52 @@ export type AppealHASCase = (
   siteGridReferenceEasting?: string | null;
   siteGridReferenceNorthing?: string | null;
   /**
-   * Indicates if the appellant has land owners permission
+   * Does the appellant have the landowners permission
    */
   hasLandownersPermission?: boolean | null;
   /**
-   * Indicates if the advert is already in position
-   */
-  isAdvertInPosition?: boolean | null;
-  /**
-   * Indicates if the site is in an area of special control for adverts
-   */
-  isSiteInAreaOfSpecialControlAdverts?: boolean | null;
-  /**
-   * Indicates if the application was refused because of highway or traffic public safety?
+   * Did the LPA refuse the application because of highway or traffic public safety?
    */
   wasApplicationRefusedDueToHighwayOrTraffic?: boolean | null;
   /**
-   * Indicates if the appellant submitted complete and accurate photographs and plans
+   * Did the appellant submit complete photos and plans?
    */
   didAppellantSubmitCompletePhotosAndPlans?: boolean | null;
-  advertType?: string | null;
+  /**
+   * Is the site in an area of special control of advertisements?
+   */
+  isSiteInAreaOfSpecialControlAdverts?: boolean | null;
+  /**
+   * A list of advertisements for the appeal
+   */
+  advertDetails?:
+    | {
+        advertType:
+          | '4-6 Sheet Non-Illuminated'
+          | '4-6 Sheet Illuminated'
+          | '12/16/32 Sheet Non-Illuminated'
+          | '12/16/32 Sheet Illuminated'
+          | '48/64/96 Sheet Non-Illuminated'
+          | '48/64/96 Sheet Illuminated'
+          | 'Fascia Projecting Signs Non-Illuminated'
+          | 'Fascia Projecting Signs Illuminated'
+          | 'Directional & Others Non-Illuminated'
+          | 'Directional & Others Illuminated'
+          | 'Monolith/Totem Signs Non-Illuminated'
+          | 'Monolith/Totem Signs Illuminated'
+          | 'Other'
+          | null;
+        /**
+         * Is the advertisement in position?
+         */
+        isAdvertInPosition: boolean | null;
+        /**
+         * Is the site on highway land?
+         */
+        isSiteOnHighwayLand: boolean | null;
+        [k: string]: unknown;
+      }[]
+    | null;
   [k: string]: unknown;
 };
 
@@ -1452,6 +1478,53 @@ export type AppealS78Case = (
     | null;
   statementOfCommonGroundDueDate?: string | null;
   planningObligationDueDate?: string | null;
+  /**
+   * Does the appellant have the landowners permission
+   */
+  hasLandownersPermission?: boolean | null;
+  /**
+   * Did the LPA refuse the application because of highway or traffic public safety?
+   */
+  wasApplicationRefusedDueToHighwayOrTraffic?: boolean | null;
+  /**
+   * Did the appellant submit complete photos and plans?
+   */
+  didAppellantSubmitCompletePhotosAndPlans?: boolean | null;
+  /**
+   * Is the site in an area of special control of advertisements?
+   */
+  isSiteInAreaOfSpecialControlAdverts?: boolean | null;
+  /**
+   * A list of advertisements for the appeal
+   */
+  advertDetails?:
+    | {
+        advertType:
+          | '4-6 Sheet Non-Illuminated'
+          | '4-6 Sheet Illuminated'
+          | '12/16/32 Sheet Non-Illuminated'
+          | '12/16/32 Sheet Illuminated'
+          | '48/64/96 Sheet Non-Illuminated'
+          | '48/64/96 Sheet Illuminated'
+          | 'Fascia Projecting Signs Non-Illuminated'
+          | 'Fascia Projecting Signs Illuminated'
+          | 'Directional & Others Non-Illuminated'
+          | 'Directional & Others Illuminated'
+          | 'Monolith/Totem Signs Non-Illuminated'
+          | 'Monolith/Totem Signs Illuminated'
+          | 'Other'
+          | null;
+        /**
+         * Is the advertisement in position?
+         */
+        isAdvertInPosition: boolean | null;
+        /**
+         * Is the site on highway land?
+         */
+        isSiteOnHighwayLand: boolean | null;
+        [k: string]: unknown;
+      }[]
+    | null;
   [k: string]: unknown;
 };
 
@@ -3080,227 +3153,6 @@ export interface ServiceUser {
 }
 
 /**
- * Schema defining any properties for advertisement appeals
- */
-export interface AdvertSpecificProperties {
-  /**
-   * Indicates if the appellant has land owners permission
-   */
-  hasLandownersPermission: boolean | null;
-  /**
-   * Indicates if the advert is already in position
-   */
-  isAdvertInPosition: boolean | null;
-  /**
-   * Indicates if site is on highway land
-   */
-  isSiteOnHighwayLand: boolean | null;
-  [k: string]: unknown;
-}
-
-/**
- * Schema defining any properties common across all appeal types for appeal submissions
- */
-export type AppellantCommonSubmissionProperties = (
-  | {
-      siteGridReferenceEasting: {
-        [k: string]: unknown;
-      };
-      siteGridReferenceNorthing: {
-        [k: string]: unknown;
-      };
-    }
-  | {
-      siteAddressLine1: {
-        [k: string]: unknown;
-      };
-      siteAddressTown: {
-        [k: string]: unknown;
-      };
-      siteAddressPostcode: {
-        [k: string]: unknown;
-      };
-    }
-) & {
-  /**
-   * Case submission id - link to draft submission created by appellant
-   */
-  submissionId: string;
-  /**
-   * The type of procedure for the appeal
-   */
-  caseProcedure: 'written' | 'hearing' | 'inquiry';
-  /**
-   * A unique identifier for the Local Planning Authority
-   */
-  lpaCode: string;
-  /**
-   * The date the appeal was submitted by the appellant
-   */
-  caseSubmittedDate: string;
-  /**
-   * Indicates if an enforcement notice is the reason for the appeal
-   */
-  enforcementNotice: boolean | null;
-  /**
-   * The unique identifier of the LPA application
-   */
-  applicationReference: string;
-  /**
-   * The date of the original LPA application
-   */
-  applicationDate: string;
-  /**
-   * The outcome of the original LPA decision
-   */
-  applicationDecision: 'granted' | 'refused' | 'not_received';
-  /**
-   * The date of the original LPA decision
-   */
-  applicationDecisionDate: string | null;
-  /**
-   * The statutory deadline for submitting an appeal from the original LPA decision date
-   */
-  caseSubmissionDueDate: string | null;
-  /**
-   * First line of address for the appeal site
-   */
-  siteAddressLine1?: string | null;
-  /**
-   * Second line of address for the appeal site
-   */
-  siteAddressLine2?: string | null;
-  /**
-   * Town / City of the site address
-   */
-  siteAddressTown?: string | null;
-  /**
-   * County of the site address
-   */
-  siteAddressCounty?: string | null;
-  /**
-   * Postal code of the site address
-   */
-  siteAddressPostcode?: string | null;
-  siteGridReferenceEasting?: string | null;
-  siteGridReferenceNorthing?: string | null;
-  /**
-   * Provided information on site accessibility
-   */
-  siteAccessDetails: string[] | null;
-  /**
-   * Provided information on site health and safety
-   */
-  siteSafetyDetails: string[] | null;
-  /**
-   * A list of neighbouring site addresses
-   */
-  neighbouringSiteAddresses:
-    | {
-        /**
-         * First line of address of the site
-         */
-        neighbouringSiteAddressLine1: string;
-        /**
-         * Second line of address of the site
-         */
-        neighbouringSiteAddressLine2: string | null;
-        /**
-         * Town / City of the site address
-         */
-        neighbouringSiteAddressTown: string;
-        /**
-         * County of the site address
-         */
-        neighbouringSiteAddressCounty: string | null;
-        /**
-         * Postal code of the site address
-         */
-        neighbouringSiteAddressPostcode: string;
-        /**
-         * Provided information on site accessibility on this address
-         */
-        neighbouringSiteAccessDetails: string | null;
-        /**
-         * Provided information on site health and safety on this address
-         */
-        neighbouringSiteSafetyDetails: string | null;
-        [k: string]: unknown;
-      }[]
-    | null;
-  /**
-   * A list of related case references known to the appellant and the LPA
-   */
-  nearbyCaseReferences: string[] | null;
-  typeOfPlanningApplication?:
-    | 'full-appeal'
-    | 'householder-planning'
-    | 'outline-planning'
-    | 'prior-approval'
-    | 'reserved-matters'
-    | 'removal-or-variation-of-conditions'
-    | 'listed-building'
-    | 'minor-commercial-development'
-    | 'advertisement'
-    | null;
-  [k: string]: unknown;
-};
-
-/**
- * Schema defining any HAS specific properties for submissions
- */
-export type AppellantHASSubmissionProperties = {
-  /**
-   * Indicates if the site is in a green belt
-   */
-  isGreenBelt?: boolean | null;
-  /**
-   * The site area, in square meters
-   */
-  siteAreaSquareMetres?: number | null;
-  /**
-   * The floor space, in square meters
-   */
-  floorSpaceSquareMetres?: number | null;
-  /**
-   * Indicates if the appellant has complete ownership of the site
-   */
-  ownsAllLand?: boolean | null;
-  /**
-   * Indicates if the appellant has partial ownership of the site
-   */
-  ownsSomeLand?: boolean | null;
-  /**
-   * Indicates if the appellant knows other owners of the site
-   */
-  knowsOtherOwners?: 'Yes' | 'No' | 'Some' | null;
-  /**
-   * Indicates if the appellant knows all owners of the site
-   */
-  knowsAllOwners?: 'Yes' | 'No' | 'Some' | null;
-  /**
-   * Indicates if the appellant has advertised the appeal to the LPA decision
-   */
-  advertisedAppeal?: boolean | null;
-  /**
-   * Indicates if the appellant has informed other owners of the site
-   */
-  ownersInformed?: boolean | null;
-  /**
-   * The original description of the development, as provided by the appellant
-   */
-  originalDevelopmentDescription?: string | null;
-  /**
-   * Indicates that the LPA has changed the development description
-   */
-  changedDevelopmentDescription?: boolean | null;
-  /**
-   * Indicates if the appellant has applied for costs
-   */
-  appellantCostsAppliedFor?: boolean | null;
-};
-
-/**
  * Schema defining the data produced by the Front-Office when a representation is created on an appeal
  */
 export type AppealRepresentationSubmission = {
@@ -3432,69 +3284,6 @@ export type AppealRepresentationSubmission = {
 };
 
 /**
- * Schema defining any S78 specific properties for questionnaire submissions
- */
-export type AppellantS78SubmissionProperties = {
-  /**
-   * Indicates if the site is an agricultural holding
-   */
-  agriculturalHolding?: boolean | null;
-  /**
-   * Indicates if the site is a tenant agricultural holding
-   */
-  tenantAgriculturalHolding?: boolean | null;
-  /**
-   * Indicates if the site is an agricultural holding with other tenants
-   */
-  otherTenantsAgriculturalHolding?: boolean | null;
-  /**
-   * If the site is an agricultural holding, indicates tenants are informed
-   */
-  informedTenantsAgriculturalHolding?: boolean | null;
-  /**
-   * The procedure preference indicated by the appellant
-   */
-  appellantProcedurePreference?: 'written' | 'hearing' | 'inquiry' | null;
-  /**
-   * The procedure details preference indicated by the appellant
-   */
-  appellantProcedurePreferenceDetails?: string | null;
-  /**
-   * The duration of the procedure indicated by the appellant
-   */
-  appellantProcedurePreferenceDuration?: number | null;
-  /**
-   * The number of witnesses in inquiries
-   */
-  appellantProcedurePreferenceWitnessCount?: number | null;
-  /**
-   * Indicates the existence of a planning obligation
-   */
-  planningObligation?: boolean | null;
-  /**
-   * The planning obligation information, if available
-   */
-  statusPlanningObligation?: string | null;
-  developmentType?:
-    | 'householder'
-    | 'change-of-use'
-    | 'major-dwellings'
-    | 'major-industry-storage'
-    | 'major-offices'
-    | 'major-retail-services'
-    | 'major-traveller-caravan'
-    | 'mineral-workings'
-    | 'minor-dwellings'
-    | 'minor-industry-storage'
-    | 'minor-offices'
-    | 'minor-retail-services'
-    | 'minor-traveller-caravan'
-    | 'other-major'
-    | 'other-minor'
-    | null;
-};
-
-/**
  * Schema defining any properties common across all appeal types for appeal submissions
  */
 export type AppellantCommonSubmissionProperties = (
@@ -3642,7 +3431,7 @@ export type AppellantCommonSubmissionProperties = (
   [k: string]: unknown;
 };
 /**
- * Schema defining any HAS specific properties for submissions
+ * Schema defining any HAS specific properties for appeal submissions
  */
 export type AppellantHASSubmissionProperties = {
   /**
@@ -3695,7 +3484,7 @@ export type AppellantHASSubmissionProperties = {
   appellantCostsAppliedFor?: boolean | null;
 };
 /**
- * Schema defining any S78 specific properties for questionnaire submissions
+ * Schema defining any S78 specific properties for appeal submissions
  */
 export type AppellantS78SubmissionProperties = {
   /**
@@ -3756,6 +3545,27 @@ export type AppellantS78SubmissionProperties = {
     | 'other-minor'
     | null;
 };
+/**
+ * Schema defining appellant procedure preference properties
+ */
+export type AppellantProcedurePreferenceProperties = {
+  /**
+   * The procedure preference indicated by the appellant
+   */
+  appellantProcedurePreference?: 'written' | 'hearing' | 'inquiry' | null;
+  /**
+   * The procedure details preference indicated by the appellant
+   */
+  appellantProcedurePreferenceDetails?: string | null;
+  /**
+   * The duration of the procedure indicated by the appellant
+   */
+  appellantProcedurePreferenceDuration?: number | null;
+  /**
+   * The number of witnesses in inquiries
+   */
+  appellantProcedurePreferenceWitnessCount?: number | null;
+};
 
 /**
  * Schema defining the data produced by the Front-Office when an appeal is requested
@@ -3770,12 +3580,19 @@ export interface AppellantSubmissionCommand {
         caseType?: 'W' | 'Y';
       } & AppellantCommonSubmissionProperties &
         AppellantHASSubmissionProperties &
-        AppellantS78SubmissionProperties)
+        AppellantS78SubmissionProperties &
+        AppellantProcedurePreferenceProperties)
     | ({
-        caseType?: 'H' | 'ZA';
+        caseType?: 'ZA';
       } & AppellantCommonSubmissionProperties &
         AppellantHASSubmissionProperties &
-        AdvertSpecificProperties);
+        AdvertSpecificProperties)
+    | ({
+        caseType?: 'H';
+      } & AppellantCommonSubmissionProperties &
+        AppellantHASSubmissionProperties &
+        AdvertSpecificProperties &
+        AppellantProcedurePreferenceProperties);
   documents: {
     /**
      * The unique identifier for the document
@@ -3907,13 +3724,36 @@ export interface AdvertSpecificProperties {
    */
   hasLandownersPermission: boolean | null;
   /**
-   * Indicates if the advert is already in position
+   * A list of advertisements for the appeal
    */
-  isAdvertInPosition: boolean | null;
-  /**
-   * Indicates if site is on highway land
-   */
-  isSiteOnHighwayLand: boolean | null;
+  advertDetails:
+    | {
+        advertType:
+          | '4-6 Sheet Non-Illuminated'
+          | '4-6 Sheet Illuminated'
+          | '12/16/32 Sheet Non-Illuminated'
+          | '12/16/32 Sheet Illuminated'
+          | '48/64/96 Sheet Non-Illuminated'
+          | '48/64/96 Sheet Illuminated'
+          | 'Fascia Projecting Signs Non-Illuminated'
+          | 'Fascia Projecting Signs Illuminated'
+          | 'Directional & Others Non-Illuminated'
+          | 'Directional & Others Illuminated'
+          | 'Monolith/Totem Signs Non-Illuminated'
+          | 'Monolith/Totem Signs Illuminated'
+          | 'Other'
+          | null;
+        /**
+         * Is the advertisement in position?
+         */
+        isAdvertInPosition: boolean | null;
+        /**
+         * Is the site on highway land?
+         */
+        isSiteOnHighwayLand: boolean | null;
+        [k: string]: unknown;
+      }[]
+    | null;
   [k: string]: unknown;
 }
 
@@ -3945,305 +3785,6 @@ export interface Address {
 }
 
 /**
- * Schema defining any cas advert specific properties for LPAQ submissions
- */
-export type LPAQCasAdvertSubmissionProperties = {
-  /**
-   * Indicates that a scheduled monument is affected
-   */
-  affectsScheduledMonument?: boolean | null;
-  /**
-   * Indicates the existence of protected species
-   */
-  hasProtectedSpecies?: boolean | null;
-  /**
-   * Indicates an area of outstanding beauty (National Landscape)
-   */
-  isAonbNationalLandscape?: boolean | null;
-  /**
-   * The designated site names
-   */
-  designatedSitesNames?: string[] | null;
-  /**
-   * Indicates statutory consultees
-   */
-  hasStatutoryConsultees?: boolean | null;
-  /**
-   * The details of the bodies consulted
-   */
-  consultedBodiesDetails?: string | null;
-  /**
-   * Indicates emerging plans
-   */
-  hasEmergingPlan?: boolean | null;
-  /**
-   * The procedure preference indicated by the LPA
-   */
-  lpaProcedurePreference?: 'written' | 'hearing' | 'inquiry' | null;
-  /**
-   * The procedure details preference indicated by the LPA
-   */
-  lpaProcedurePreferenceDetails?: string | null;
-  /**
-   * The duration of enquiry indicated by the LPA
-   */
-  lpaProcedurePreferenceDuration?: number | null;
-  /**
-   * Indicates if the site is in an area of special control for adverts
-   */
-  isSiteInAreaOfSpecialControlAdverts?: boolean | null;
-  /**
-   * Indicates if the application was refused because of highway or traffic public safety?
-   */
-  wasApplicationRefusedDueToHighwayOrTraffic?: boolean | null;
-  /**
-   * Indicates if the appellant submitted complete and accurate photographs and plans
-   */
-  didAppellantSubmitCompletePhotosAndPlans?: boolean | null;
-};
-
-/**
- * Schema defining any properties common across all appeal types for LPAQ submissions
- */
-export interface LPAQCommonSubmissionProperties {
-  /**
-   * External case identifier
-   */
-  caseReference: string;
-  /**
-   * The date the LPA provided a response to the case
-   */
-  lpaQuestionnaireSubmittedDate: string | null;
-  /**
-   * Provided information on site accessibility
-   */
-  siteAccessDetails: string[] | null;
-  /**
-   * Provided information on site health and safety
-   */
-  siteSafetyDetails: string[] | null;
-  /**
-   * A list of related case references known to the appellant and the LPA
-   */
-  nearbyCaseReferences: string[] | null;
-  /**
-   * A list of neighbouring site addresses
-   */
-  neighbouringSiteAddresses:
-    | {
-        /**
-         * First line of address of the site
-         */
-        neighbouringSiteAddressLine1: string;
-        /**
-         * Second line of address of the site
-         */
-        neighbouringSiteAddressLine2: string | null;
-        /**
-         * Town / City of the site address
-         */
-        neighbouringSiteAddressTown: string;
-        /**
-         * County of the site address
-         */
-        neighbouringSiteAddressCounty: string | null;
-        /**
-         * Postal code of the site address
-         */
-        neighbouringSiteAddressPostcode: string;
-        /**
-         * Provided information on site accessibility on this address
-         */
-        neighbouringSiteAccessDetails: string | null;
-        /**
-         * Provided information on site health and safety on this address
-         */
-        neighbouringSiteSafetyDetails: string | null;
-        [k: string]: unknown;
-      }[]
-    | null;
-  /**
-   * A general reason given for the need to visit any neighbours
-   */
-  reasonForNeighbourVisits?: string | null;
-  [k: string]: unknown;
-}
-
-/**
- * Schema defining any HAS specific properties for LPAQ submissions
- */
-export type LPAQHASSubmissionProperties = {
-  /**
-   * Indicates if the LPA considers the appeal type appropriate
-   */
-  isCorrectAppealType?: boolean | null;
-  /**
-   * A list of affected listed building IDs from Historic England
-   */
-  affectedListedBuildingNumbers?: string[] | null;
-  /**
-   * Indicates if the site is in a green belt
-   */
-  isGreenBelt?: boolean | null;
-  /**
-   * Indicates if the site is in a conservation area
-   */
-  inConservationArea?: boolean | null;
-  /**
-   * New conditions details provided by the LPA
-   */
-  newConditionDetails?: string | null;
-  /**
-   * The methods used to notify relevant parties
-   */
-  notificationMethod?: string[] | null;
-  /**
-   * Indicates if the LPA has applied for costs
-   */
-  lpaCostsAppliedFor?: boolean | null;
-  /**
-   * A statement provided by the LPA, unused?
-   */
-  lpaStatement?: string | null;
-};
-
-/**
- * Schema defining any S78 specific properties for LPAQ submissions
- */
-export type LPAQS78SubmissionProperties = {
-  /**
-   * A list of changed listed building IDs from Historic England
-   */
-  changedListedBuildingNumbers?: string[] | null;
-  /**
-   * A grant or loan has been made to preserve the listed building
-   */
-  preserveGrantLoan?: boolean | null;
-  /**
-   * Are Historic England to be consulted?
-   */
-  consultHistoricEngland?: boolean | null;
-  /**
-   * Indicates that a scheduled monument is affected
-   */
-  affectsScheduledMonument?: boolean | null;
-  /**
-   * Indicates the existence of protected species
-   */
-  hasProtectedSpecies?: boolean | null;
-  /**
-   * Indicates an area of outstanding beauty (National Landscape)
-   */
-  isAonbNationalLandscape?: boolean | null;
-  /**
-   * The designated site names
-   */
-  designatedSitesNames?: string[] | null;
-  /**
-   * Indicates a TPO (tree preservation order)
-   */
-  hasTreePreservationOrder?: boolean | null;
-  /**
-   * Indicates a traveller site
-   */
-  isGypsyOrTravellerSite?: boolean | null;
-  /**
-   * Indicates a PROW (public right of way)
-   */
-  isPublicRightOfWay?: boolean | null;
-  /**
-   * The impact schedule from EIA
-   */
-  eiaEnvironmentalImpactSchedule?: 'schedule-1' | 'schedule-2' | null;
-  /**
-   * The development description from EIA
-   */
-  eiaDevelopmentDescription?:
-    | 'agriculture-aquaculture'
-    | 'change-extensions'
-    | 'chemical-industry'
-    | 'energy-industry'
-    | 'extractive-industry'
-    | 'food-industry'
-    | 'infrastructure-projects'
-    | 'mineral-industry'
-    | 'other-projects'
-    | 'production-processing-of-metals'
-    | 'rubber-industry'
-    | 'textile-industries'
-    | 'tourism-leisure'
-    | null;
-  /**
-   * The sensitive area details from EIA
-   */
-  eiaSensitiveAreaDetails?: string | null;
-  /**
-   * EIA specific threshold
-   */
-  eiaColumnTwoThreshold?: boolean | null;
-  /**
-   * EIA screening opinion
-   */
-  eiaScreeningOpinion?: boolean | null;
-  /**
-   * EIA environmental statement required
-   */
-  eiaRequiresEnvironmentalStatement?: boolean | null;
-  /**
-   * EIA completed environmental statement required
-   */
-  eiaCompletedEnvironmentalStatement?: boolean | null;
-  /**
-   * Indicates statutory consultees
-   */
-  hasStatutoryConsultees?: boolean | null;
-  /**
-   * The details of the bodies consulted
-   */
-  consultedBodiesDetails?: string | null;
-  /**
-   * Indicates consultation responses
-   */
-  hasConsultationResponses?: boolean | null;
-  /**
-   * Indicates emerging plans
-   */
-  hasEmergingPlan?: boolean | null;
-  /**
-   * Indicates supplementary planning documents
-   */
-  hasSupplementaryPlanningDocs?: boolean | null;
-  /**
-   * Indicates the existence of an infrastructure levy
-   */
-  hasInfrastructureLevy?: boolean | null;
-  /**
-   * Indicates if the infrastructure levy is formally adopted
-   */
-  isInfrastructureLevyFormallyAdopted?: boolean | null;
-  /**
-   * The date of the infrastructure levy adoption
-   */
-  infrastructureLevyAdoptedDate?: string | null;
-  /**
-   * The expected date of the infrastructure levy
-   */
-  infrastructureLevyExpectedDate?: string | null;
-  /**
-   * The procedure preference indicated by the LPA
-   */
-  lpaProcedurePreference?: 'written' | 'hearing' | 'inquiry' | null;
-  /**
-   * The procedure details preference indicated by the LPA
-   */
-  lpaProcedurePreferenceDetails?: string | null;
-  /**
-   * The duration of enquiry indicated by the LPA
-   */
-  lpaProcedurePreferenceDuration?: number | null;
-};
-
-/**
  * Schema defining any HAS specific properties for LPAQ submissions
  */
 export type LPAQHASSubmissionProperties = {
@@ -4402,6 +3943,11 @@ export type LPAQS78SubmissionProperties = {
    * The expected date of the infrastructure levy
    */
   infrastructureLevyExpectedDate?: string | null;
+};
+/**
+ * Schema defining LPA procedure preference properties
+ */
+export type LPAProcedurePreferenceProperties = {
   /**
    * The procedure preference indicated by the LPA
    */
@@ -4416,7 +3962,16 @@ export type LPAQS78SubmissionProperties = {
   lpaProcedurePreferenceDuration?: number | null;
 };
 /**
- * Schema defining any cas advert specific properties for LPAQ submissions
+ * Schema defining changed-listed-building-numbers
+ */
+export type ChangedListedBuildingNumbersProperties = {
+  /**
+   * A list of changed listed building IDs from Historic England
+   */
+  changedListedBuildingNumbers?: string[] | null;
+};
+/**
+ * Schema defining any advert specific properties for LPAQ submissions
  */
 export type LPAQCasAdvertSubmissionProperties = {
   /**
@@ -4447,18 +4002,6 @@ export type LPAQCasAdvertSubmissionProperties = {
    * Indicates emerging plans
    */
   hasEmergingPlan?: boolean | null;
-  /**
-   * The procedure preference indicated by the LPA
-   */
-  lpaProcedurePreference?: 'written' | 'hearing' | 'inquiry' | null;
-  /**
-   * The procedure details preference indicated by the LPA
-   */
-  lpaProcedurePreferenceDetails?: string | null;
-  /**
-   * The duration of enquiry indicated by the LPA
-   */
-  lpaProcedurePreferenceDuration?: number | null;
   /**
    * Indicates if the site is in an area of special control for adverts
    */
@@ -4486,12 +4029,22 @@ export interface LPAQuestionnaireCommand {
         caseType?: 'W' | 'Y';
       } & LPAQCommonSubmissionProperties &
         LPAQHASSubmissionProperties &
-        LPAQS78SubmissionProperties)
+        LPAQS78SubmissionProperties &
+        LPAProcedurePreferenceProperties &
+        ChangedListedBuildingNumbersProperties)
     | ({
-        caseType?: 'H' | 'ZA';
+        caseType?: 'ZA';
       } & LPAQCommonSubmissionProperties &
         LPAQHASSubmissionProperties &
-        LPAQCasAdvertSubmissionProperties);
+        LPAProcedurePreferenceProperties &
+        LPAQCasAdvertSubmissionProperties)
+    | ({
+        caseType?: 'H';
+      } & LPAQCommonSubmissionProperties &
+        LPAQHASSubmissionProperties &
+        LPAQCasAdvertSubmissionProperties &
+        LPAProcedurePreferenceProperties &
+        ChangedListedBuildingNumbersProperties);
   documents: {
     /**
      * The unique identifier for the document

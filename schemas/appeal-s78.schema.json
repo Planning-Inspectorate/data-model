@@ -1032,6 +1032,61 @@
       "type": ["string", "null"],
       "format": "date-time",
       "examples": ["2023-07-27T20:30:00.000Z"]
+    },
+    "hasLandownersPermission": {
+      "type": ["boolean", "null"],
+      "description": "Does the appellant have the landowners permission"
+    },
+    "wasApplicationRefusedDueToHighwayOrTraffic": {
+      "type": ["boolean", "null"],
+      "description": "Did the LPA refuse the application because of highway or traffic public safety?"
+    },
+    "didAppellantSubmitCompletePhotosAndPlans": {
+      "type": ["boolean", "null"],
+      "description": "Did the appellant submit complete photos and plans?"
+    },
+    "isSiteInAreaOfSpecialControlAdverts": {
+      "type": ["boolean", "null"],
+      "description": "Is the site in an area of special control of advertisements?"
+    },
+    "advertDetails": {
+      "type": ["array", "null"],
+      "items": {
+        "type": "object",
+        "additionalProperties": true,
+        "properties": {
+          "advertType": {
+            "type": ["string", "null"],
+            "enum": [
+              "4-6 Sheet Non-Illuminated",
+              "4-6 Sheet Illuminated",
+              "12/16/32 Sheet Non-Illuminated",
+              "12/16/32 Sheet Illuminated",
+              "48/64/96 Sheet Non-Illuminated",
+              "48/64/96 Sheet Illuminated",
+              "Fascia Projecting Signs Non-Illuminated",
+              "Fascia Projecting Signs Illuminated",
+              "Directional & Others Non-Illuminated",
+              "Directional & Others Illuminated",
+              "Monolith/Totem Signs Non-Illuminated",
+              "Monolith/Totem Signs Illuminated",
+              "Other",
+              null
+            ]
+          },
+          "isAdvertInPosition": {
+            "type": ["boolean", "null"],
+            "description": "Is the advertisement in position?"
+          },
+          "isSiteOnHighwayLand": {
+            "type": ["boolean", "null"],
+            "description": "Is the site on highway land?"
+          }
+        },
+        "required": ["advertType", "isAdvertInPosition", "isSiteOnHighwayLand"]
+      },
+      "description": "A list of advertisements for the appeal",
+      "$comment": "Also available on CAS Adverts (ZA) cases"
     }
   }
 }

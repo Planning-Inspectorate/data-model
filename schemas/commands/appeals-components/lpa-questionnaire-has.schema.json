@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "$id": "commands/lpa-questionnaire-has.schema.json",
+  "$id": "commands/appeals-components/lpa-questionnaire-has.schema.json",
   "title": "LPAQ HAS submission properties",
   "description": "Schema defining any HAS specific properties for LPAQ submissions",
   "type": "object",

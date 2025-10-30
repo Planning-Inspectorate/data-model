@@ -82,17 +82,17 @@
     "unit": {
       "type": "string",
       "description": "The personnel area of the Inspector",
-      "example": "Corporate Services"
+      "example": "Operations"
     },
     "service": {
       "type": "string",
       "description": "The personnel sub area of the Inspector",
-      "example": "Ops Group 1"
+      "example": "Planning and Environmental Appeals Service"
     },
     "group": {
       "type": "string",
       "description": "Group of the Inspector",
-      "example": "Case Management (Local Plans/Inq/Costs)"
+      "example": "Enforcement Groups"
     },
     "inspectorManager": {
       "type": "string",

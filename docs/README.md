@@ -60,6 +60,10 @@
 
 * [Untitled object in Examination Timetable](./nsip-exam-timetable-defs-line-item.md) – `nsip-exam-timetable.schema.json#/$defs/line-item`
 
+* [Untitled object in NSIP Project](./nsip-project-defs-meeting.md "A meeting related to the project") – `nsip-project.schema.json#/$defs/meeting`
+
+* [Untitled object in NSIP Project](./nsip-project-defs-invoice.md "An invoice related to the project") – `nsip-project.schema.json#/$defs/invoice`
+
 ### Arrays
 
 * [Untitled array in Appeal Representation](./appeal-representation-properties-documentids.md "An array of documentIds") – `appeal-representation.schema.json#/properties/documentIds`
@@ -75,6 +79,22 @@
 * [Untitled array in NSIP Project](./nsip-project-properties-nsipadministrationofficerids.md) – `nsip-project.schema.json#/properties/nsipAdministrationOfficerIds`
 
 * [Untitled array in NSIP Project](./nsip-project-properties-inspectorids.md) – `nsip-project.schema.json#/properties/inspectorIds`
+
+* [Untitled array in NSIP Project](./nsip-project-properties-operationsleadids.md "Maps to \[Employee]") – `nsip-project.schema.json#/properties/operationsLeadIds`
+
+* [Untitled array in NSIP Project](./nsip-project-properties-operationsmanagerids.md "New NSIP role, Maps to \[Employee]") – `nsip-project.schema.json#/properties/operationsManagerIds`
+
+* [Untitled array in NSIP Project](./nsip-project-properties-casemanagerids.md "Maps to \[Employee]") – `nsip-project.schema.json#/properties/caseManagerIds`
+
+* [Untitled array in NSIP Project](./nsip-project-properties-leadinspectorids.md "Maps to \[Employee]") – `nsip-project.schema.json#/properties/leadInspectorIds`
+
+* [Untitled array in NSIP Project](./nsip-project-properties-environmentalservicesofficerids.md "Maps to \[Employee]") – `nsip-project.schema.json#/properties/environmentalServicesOfficerIds`
+
+* [Untitled array in NSIP Project](./nsip-project-properties-legalofficerids.md "Maps to \[Employee]") – `nsip-project.schema.json#/properties/legalOfficerIds`
+
+* [Untitled array in NSIP Project](./nsip-project-properties-meetings.md "Collection of meetings associated with this project") – `nsip-project.schema.json#/properties/meetings`
+
+* [Untitled array in NSIP Project](./nsip-project-properties-invoices.md "Collection of invoices associated with this project") – `nsip-project.schema.json#/properties/invoices`
 
 * [Untitled array in Representation](./nsip-representation-properties-attachmentids.md) – `nsip-representation.schema.json#/properties/attachmentIds`
 

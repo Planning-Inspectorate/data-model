@@ -2090,9 +2090,18 @@ export interface NSIPProject {
   projectDescription: string | null;
   projectDescriptionWelsh?: string | null;
   /**
-   * Decision: approved/refused/split-decision
+   * Decision outcome: approved/refused/split-decision/granted/partially_consented/quashed/redetermination/withdrawn
    */
-  decision: 'approved' | 'refused' | 'split-decision' | null;
+  decision:
+    | 'approved'
+    | 'refused'
+    | 'split-decision'
+    | 'granted'
+    | 'partially_consented'
+    | 'quashed'
+    | 'redetermination'
+    | 'withdrawn'
+    | null;
   publishStatus: 'published' | 'unpublished' | null;
   /**
    * {Sector Abbreviation} - {Sector Display Name}
@@ -2382,6 +2391,284 @@ export interface NSIPProject {
    * Is this an application for a material change?
    */
   isMaterialChange?: boolean | null;
+  /**
+   * Date of court decision
+   */
+  courtDecisionDate?: string | null;
+  /**
+   * Court decision outcome text; values include 'upheld','partially_upheld','quashed','other:<Text>'
+   */
+  courtDecisionOutcomeText?: string | null;
+  /**
+   * Date of decision challenge submission
+   */
+  decisionChallengeSubmissionDate?: string | null;
+  /**
+   * Recommendation
+   */
+  recommendation?: 'recommend_consent' | 'recommend_partial_consent' | 'recommend_refusal' | null;
+  /**
+   * Date of inception meeting
+   */
+  inceptionMeetingDate?: string | null;
+  /**
+   * Date for submission of draft documents
+   */
+  draftDocumentSubmissionDate?: string | null;
+  /**
+   * Programme document submission date
+   */
+  programmeDocumentSubmissionDate?: string | null;
+  /**
+   * Tier
+   */
+  tier?: 'basic' | 'standard' | 'enhanced' | null;
+  /**
+   * Link to s61 summary
+   */
+  s61SummaryURI?: string | null;
+  /**
+   * Estimated scoping submission date
+   */
+  estimatedScopingSubmissionDate?: string | null;
+  /**
+   * Adequacy of Consultation Milestone
+   */
+  consultationMilestoneAdequacyDate?: string | null;
+  /**
+   * Evidence plan process
+   */
+  planProcessEvidence?: boolean | null;
+  /**
+   * Issues tracker
+   */
+  issuesTracker?: string | null;
+  /**
+   * Essential fast track components
+   */
+  essentialFastTrackComponents?: boolean | null;
+  /**
+   * Principal area disagreement summary statement (PADSS)
+   */
+  principalAreaDisagreementSummaryStmt?: 'submitted_by_applicant' | 'awaiting_submission' | 'not_applicable' | null;
+  /**
+   * Principal area disagreement summary statement (PADSS) Submitted date
+   */
+  principalAreaDisagreementSummaryStmtSubmittedDate?: string | null;
+  /**
+   * Policy compliance document (PCD)
+   */
+  policyComplianceDocument?: 'submitted_by_applicant' | 'awaiting_submission' | 'not_applicable' | null;
+  /**
+   * Policy compliance document (PCD) Submitted Date
+   */
+  policyComplianceDocumentSubmittedDate?: string | null;
+  /**
+   * Design approach document (DAD)
+   */
+  designApproachDocument?: 'submitted_by_applicant' | 'awaiting_submission' | 'not_applicable' | null;
+  /**
+   * Design approach document (DAD) Submitted Date
+   */
+  designApproachDocumentSubmittedDate?: string | null;
+  /**
+   * Mature outline control documents
+   */
+  matureOutlineControlDocument?: 'submitted_by_applicant' | 'awaiting_submission' | 'not_applicable' | null;
+  /**
+   * Mature outline control documents Submitted Date
+   */
+  matureOutlineControlDocumentSubmittedDate?: string | null;
+  /**
+   * CA and TP evidence
+   */
+  caAndTpEvidence?: 'submitted_by_applicant' | 'awaiting_submission' | 'not_applicable' | null;
+  /**
+   * CA and TP evidence Submitted Date
+   */
+  caAndTpEvidenceSubmittedDate?: string | null;
+  /**
+   * Public sector equality duty (PSED)
+   */
+  publicSectorEqualityDuty?: 'submitted_by_applicant' | 'awaiting_submission' | 'not_applicable' | null;
+  /**
+   * Public sector equality duty (PSED) Submitted Date
+   */
+  publicSectorEqualityDutySubmittedDate?: string | null;
+  /**
+   * Fast track admission document
+   */
+  fastTrackAdmissionDocument?: 'submitted_by_applicant' | 'awaiting_submission' | 'not_applicable' | null;
+  /**
+   * Fast track admission document Submitted Date
+   */
+  fastTrackAdmissionDocumentSubmittedDate?: string | null;
+  /**
+   * Multiparty application readiness gate-check (trial)
+   */
+  multipartyApplicationCheckDocument?: 'submitted_by_applicant' | 'awaiting_submission' | 'not_applicable' | null;
+  /**
+   * Multiparty application readiness gate-check Submitted Date (trial)
+   */
+  multipartyApplicationCheckDocumentSubmittedDate?: string | null;
+  /**
+   * Link to programme document
+   */
+  programmeDocumentURI?: string | null;
+  /**
+   * Date updated programme document is received
+   */
+  updatedProgrammeDocumentReceivedDate?: string | null;
+  /**
+   * Date programme document reviewed by EST
+   */
+  programmeDocumentReviewedByEstDate?: string | null;
+  /**
+   * Date case team issued comments on programme document
+   */
+  caseTeamIssuedCommentsDate?: string | null;
+  /**
+   * Project type
+   */
+  subProjectType?:
+    | 'energy_from_waste'
+    | 'gas_power_station'
+    | 'hydrogen_power_station'
+    | 'nuclear'
+    | 'offshore_wind'
+    | 'onshore_wind'
+    | 'solar'
+    | null;
+  /**
+   * New maturity
+   */
+  newMaturity?: 'a' | 'b' | 'c' | 'd' | 'e' | 'f' | 'g' | null;
+  /**
+   * Statutory consultation period end date
+   */
+  statutoryConsultationPeriodEndDate?: string | null;
+  /**
+   * Date for submission of draft documents
+   */
+  submissionOfDraftDocumentsDate?: string | null;
+  /**
+   * Number of band 2 inspectors
+   */
+  numberBand2Inspectors?: number | null;
+  /**
+   * Number of band 3 inspectors
+   */
+  numberBand3Inspectors?: number | null;
+  /**
+   * MEM (last updated)
+   */
+  memLastUpdated?: string | null;
+  /**
+   * Additional comments
+   */
+  additionalComments?: string | null;
+  /**
+   * Maps to [Employee].[EmployeeID].
+   */
+  operationsLeadIds?: string[];
+  /**
+   * New NSIP role, Maps to [Employee].[EmployeeID]
+   */
+  operationsManagerIds?: string[];
+  /**
+   * Maps to [Employee].[EmployeeID].
+   */
+  caseManagerIds?: string[];
+  /**
+   * Maps to [Employee].[EmployeeID].
+   */
+  leadInspectorIds?: string[];
+  /**
+   * Maps to [Employee].[EmployeeID].
+   */
+  environmentalServicesOfficerIds?: string[];
+  /**
+   * Maps to [Employee].[EmployeeID].
+   */
+  legalOfficerIds?: string[];
+  /**
+   * Collection of meetings associated with this project
+   */
+  meetings?: Meeting[];
+  /**
+   * Collection of invoices associated with this project
+   */
+  invoices?: Invoice[];
+  [k: string]: unknown;
+}
+/**
+ * A meeting related to the project
+ */
+export interface Meeting {
+  /**
+   * Meeting agenda
+   */
+  meetingAgenda?: string | null;
+  /**
+   * Planning Inspectorate role
+   */
+  planningInspectorateRole?: 'facilitator' | 'advisor' | 'observer' | null;
+  /**
+   * Meeting date
+   */
+  meetingDate?: string | null;
+  /**
+   * Type of Meeting
+   */
+  meetingType?: string | null;
+  [k: string]: unknown;
+}
+/**
+ * An invoice related to the project
+ */
+export interface Invoice {
+  /**
+   * Invoice stage
+   */
+  invoiceStage?:
+    | 'pre_acceptance'
+    | 'acceptance'
+    | 'pre_examination'
+    | 'initial_examination'
+    | 'final_examination'
+    | null;
+  /**
+   * Invoice number
+   */
+  invoiceNumber: string;
+  /**
+   * Amount due
+   */
+  amountDue: number;
+  /**
+   * Payment due date
+   */
+  paymentDueDate?: string | null;
+  /**
+   * Invoiced date
+   */
+  invoicedDate?: string | null;
+  /**
+   * Date of payment
+   */
+  paymentDate?: string | null;
+  /**
+   * Refund credit note number
+   */
+  refundCreditNoteNumber?: string | null;
+  /**
+   * Amount refunded
+   */
+  refundAmount?: number | null;
+  /**
+   * Refund issue date
+   */
+  refundIssueDate?: string | null;
   [k: string]: unknown;
 }
 

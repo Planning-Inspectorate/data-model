@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "$id": "commands/lpa-questionnaire-s78.schema.json",
+  "$id": "commands/appeals-components/lpa-questionnaire-s78.schema.json",
   "title": "LPAQ S78 submission properties",
   "description": "Schema defining any S78 specific properties for LPAQ submissions",
   "type": "object",
@@ -29,10 +29,7 @@
     "hasInfrastructureLevy",
     "isInfrastructureLevyFormallyAdopted",
     "infrastructureLevyAdoptedDate",
-    "infrastructureLevyExpectedDate",
-    "lpaProcedurePreference",
-    "lpaProcedurePreferenceDetails",
-    "lpaProcedurePreferenceDuration"
+    "infrastructureLevyExpectedDate"
   ],
   "allOf": [
     {
@@ -193,22 +190,6 @@
           "format": "date-time",
           "examples": ["2023-07-27T20:30:00.000Z"],
           "description": "The expected date of the infrastructure levy",
-          "$comment": "Only available in S78 cases"
-        },
-        "lpaProcedurePreference": {
-          "type": ["string", "null"],
-          "enum": ["written", "hearing", "inquiry", null],
-          "description": "The procedure preference indicated by the LPA",
-          "$comment": "Only available in S78 cases"
-        },
-        "lpaProcedurePreferenceDetails": {
-          "type": ["string", "null"],
-          "description": "The procedure details preference indicated by the LPA",
-          "$comment": "Only available in S78 cases"
-        },
-        "lpaProcedurePreferenceDuration": {
-          "type": ["number", "null"],
-          "description": "The duration of enquiry indicated by the LPA",
           "$comment": "Only available in S78 cases"
         }
       }

@@ -49,6 +49,7 @@ const exampleAdvertQuestionnaireSchema = {
 			'ullamco quis',
 			'voluptate quis'
 		],
+		changedListedBuildingNumbers: ['occaecat id aliquip dolore'],
 		lpaCostsAppliedFor: null,
 		affectsScheduledMonument: null,
 		hasProtectedSpecies: null,

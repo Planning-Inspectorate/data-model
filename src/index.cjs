@@ -753,6 +753,7 @@ const __dirname$1 = path.dirname(url.fileURLToPath((typeof document === 'undefin
 
 const schemasPath = path.join(__dirname$1, '..', 'schemas');
 const commandsPath = path.join(schemasPath, 'commands');
+const appealsCommandsComponentsPath = path.join(commandsPath, 'appeals-components');
 
 /**
  * Load all schemas from schemas and commands folders
@@ -762,7 +763,8 @@ const commandsPath = path.join(schemasPath, 'commands');
 async function loadAllSchemas() {
 	return {
 		schemas: await loadSchemas(schemasPath),
-		commands: await loadSchemas(commandsPath)
+		commands: await loadSchemas(commandsPath),
+		appealsComponents: await loadSchemas(appealsCommandsComponentsPath)
 	};
 }
 
@@ -774,7 +776,8 @@ async function loadAllSchemas() {
 function loadAllSchemasSync() {
 	return {
 		schemas: loadSchemasSync(schemasPath),
-		commands: loadSchemasSync(commandsPath)
+		commands: loadSchemasSync(commandsPath),
+		appealsComponents: loadSchemasSync(appealsCommandsComponentsPath)
 	};
 }
 
@@ -848,6 +851,7 @@ exports.NSIP_VIRUS_CHECK_STATUS = NSIP_VIRUS_CHECK_STATUS;
 exports.REDACTION_STATUS = REDACTION_STATUS;
 exports.SERVICE_USER_TYPE = SERVICE_USER_TYPE;
 exports.STATUS = STATUS;
+exports.appealsCommandsComponentsPath = appealsCommandsComponentsPath;
 exports.commandsPath = commandsPath;
 exports.loadAllSchemas = loadAllSchemas;
 exports.loadAllSchemasSync = loadAllSchemasSync;

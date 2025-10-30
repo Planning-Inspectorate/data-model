@@ -1,0 +1,28 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "commands/appeals-components/lpa-procedure-preference.schema.json",
+  "title": "LPA procedure preference properties",
+  "description": "Schema defining LPA procedure preference properties",
+  "type": "object",
+  "additionalProperties": true,
+  "required": ["lpaProcedurePreference", "lpaProcedurePreferenceDetails", "lpaProcedurePreferenceDuration"],
+  "allOf": [
+    {
+      "properties": {
+        "lpaProcedurePreference": {
+          "type": ["string", "null"],
+          "enum": ["written", "hearing", "inquiry", null],
+          "description": "The procedure preference indicated by the LPA"
+        },
+        "lpaProcedurePreferenceDetails": {
+          "type": ["string", "null"],
+          "description": "The procedure details preference indicated by the LPA"
+        },
+        "lpaProcedurePreferenceDuration": {
+          "type": ["number", "null"],
+          "description": "The duration of enquiry indicated by the LPA"
+        }
+      }
+    }
+  ]
+}

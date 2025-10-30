@@ -1,8 +1,8 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "$id": "commands/lpa-questionnaire-cas-advert.schema.json",
+  "$id": "commands/appeals-components/lpa-questionnaire-advert.schema.json",
   "title": "LPAQ cas advert submission properties",
-  "description": "Schema defining any cas advert specific properties for LPAQ submissions",
+  "description": "Schema defining any advert specific properties for LPAQ submissions",
   "type": "object",
   "additionalProperties": true,
   "required": [
@@ -13,9 +13,6 @@
     "hasStatutoryConsultees",
     "consultedBodiesDetails",
     "hasEmergingPlan",
-    "lpaProcedurePreference",
-    "lpaProcedurePreferenceDetails",
-    "lpaProcedurePreferenceDuration",
     "isSiteInAreaOfSpecialControlAdverts",
     "wasApplicationRefusedDueToHighwayOrTraffic",
     "didAppellantSubmitCompletePhotosAndPlans"
@@ -25,18 +22,15 @@
       "properties": {
         "affectsScheduledMonument": {
           "type": ["boolean", "null"],
-          "description": "Indicates that a scheduled monument is affected",
-          "$comment": "Only available in S78 cases"
+          "description": "Indicates that a scheduled monument is affected"
         },
         "hasProtectedSpecies": {
           "type": ["boolean", "null"],
-          "description": "Indicates the existence of protected species",
-          "$comment": "Only available in S78 cases"
+          "description": "Indicates the existence of protected species"
         },
         "isAonbNationalLandscape": {
           "type": ["boolean", "null"],
-          "description": "Indicates an area of outstanding beauty (National Landscape)",
-          "$comment": "Only available in S78 cases"
+          "description": "Indicates an area of outstanding beauty (National Landscape)"
         },
         "designatedSitesNames": {
           "type": ["array", "null"],
@@ -44,13 +38,11 @@
             "type": "string",
             "examples": ["SSSI", "cSAC", "SAC", "pSPA", "SPA", "user entered value"]
           },
-          "description": "The designated site names",
-          "$comment": "Only available in S78 cases"
+          "description": "The designated site names"
         },
         "hasStatutoryConsultees": {
           "type": ["boolean", "null"],
-          "description": "Indicates statutory consultees",
-          "$comment": "Only available in S78 cases"
+          "description": "Indicates statutory consultees"
         },
         "consultedBodiesDetails": {
           "type": ["string", "null"],
@@ -58,24 +50,7 @@
         },
         "hasEmergingPlan": {
           "type": ["boolean", "null"],
-          "description": "Indicates emerging plans",
-          "$comment": "Only available in S78 cases"
-        },
-        "lpaProcedurePreference": {
-          "type": ["string", "null"],
-          "enum": ["written", "hearing", "inquiry", null],
-          "description": "The procedure preference indicated by the LPA",
-          "$comment": "Only available in S78 cases"
-        },
-        "lpaProcedurePreferenceDetails": {
-          "type": ["string", "null"],
-          "description": "The procedure details preference indicated by the LPA",
-          "$comment": "Only available in S78 cases"
-        },
-        "lpaProcedurePreferenceDuration": {
-          "type": ["number", "null"],
-          "description": "The duration of enquiry indicated by the LPA",
-          "$comment": "Only available in S78 cases"
+          "description": "Indicates emerging plans"
         },
         "isSiteInAreaOfSpecialControlAdverts": {
           "type": ["boolean", "null"],

@@ -16,26 +16,40 @@
           "$comment": "Householder + CAS Planning",
           "allOf": [
             { "properties": { "caseType": { "enum": ["D", "ZP"] } } },
-            { "$ref": "lpa-questionnaire-common.schema.json" },
-            { "$ref": "lpa-questionnaire-has.schema.json" }
+            { "$ref": "appeals-components/lpa-questionnaire-common.schema.json" },
+            { "$ref": "appeals-components/lpa-questionnaire-has.schema.json" }
           ]
         },
         {
           "$comment": "S78 + S20",
           "allOf": [
             { "properties": { "caseType": { "enum": ["W", "Y"] } } },
-            { "$ref": "lpa-questionnaire-common.schema.json" },
-            { "$ref": "lpa-questionnaire-has.schema.json" },
-            { "$ref": "lpa-questionnaire-s78.schema.json" }
+            { "$ref": "appeals-components/lpa-questionnaire-common.schema.json" },
+            { "$ref": "appeals-components/lpa-questionnaire-has.schema.json" },
+            { "$ref": "appeals-components/lpa-questionnaire-s78.schema.json" },
+            { "$ref": "appeals-components/lpa-procedure-preference.schema.json" },
+            { "$ref": "appeals-components/changed-listed-building-number.schema.json" }
           ]
         },
         {
-          "$comment": "Adverts + CAS Adverts - TBD - may need separate schemas",
+          "$comment": "CAS Adverts",
           "allOf": [
-            { "properties": { "caseType": { "enum": ["H", "ZA"] } } },
-            { "$ref": "lpa-questionnaire-common.schema.json" },
-            { "$ref": "lpa-questionnaire-has.schema.json" },
-            { "$ref": "lpa-questionnaire-cas-advert.schema.json" }
+            { "properties": { "caseType": { "enum": ["ZA"] } } },
+            { "$ref": "appeals-components/lpa-questionnaire-common.schema.json" },
+            { "$ref": "appeals-components/lpa-questionnaire-has.schema.json" },
+            { "$ref": "appeals-components/lpa-procedure-preference.schema.json" },
+            { "$ref": "appeals-components/lpa-questionnaire-advert.schema.json" }
+          ]
+        },
+        {
+          "$comment": "Adverts",
+          "allOf": [
+            { "properties": { "caseType": { "enum": ["H"] } } },
+            { "$ref": "appeals-components/lpa-questionnaire-common.schema.json" },
+            { "$ref": "appeals-components/lpa-questionnaire-has.schema.json" },
+            { "$ref": "appeals-components/lpa-questionnaire-advert.schema.json" },
+            { "$ref": "appeals-components/lpa-procedure-preference.schema.json" },
+            { "$ref": "appeals-components/changed-listed-building-number.schema.json" }
           ]
         }
       ]

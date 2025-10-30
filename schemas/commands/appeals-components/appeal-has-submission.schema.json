@@ -1,8 +1,8 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "$id": "commands/appeal-has-submission.schema.json",
+  "$id": "commands/appeals-components/appeal-has-submission.schema.json",
   "title": "Appellant HAS submission properties",
-  "description": "Schema defining any HAS specific properties for submissions",
+  "description": "Schema defining any HAS specific properties for appeal submissions",
   "type": "object",
   "additionalProperties": true,
   "required": [

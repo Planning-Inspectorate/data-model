@@ -2,11 +2,35 @@
   "$schema": "http://json-schema.org/draft-07/schema#",
   "$id": "pins-inspector.schema.json",
   "title": "PINS Inspector",
-  "description": "Inspector attributes as per Horizon. This will be extended with SAP/Entra data",
+  "description": "Inspector Details originating from Horizon, SAP HR and Entra.",
   "type": "object",
   "additionalProperties": true,
-  "required": ["firstName", "lastName", "horizonId", "email"],
+  "required": [
+    "entraId",
+    "sapId",
+    "firstName",
+    "lastName",
+    "email",
+    "grade",
+    "fte",
+    "unit",
+    "service",
+    "group",
+    "inspectorManager",
+    "address",
+    "specialisms"
+  ],
   "properties": {
+    "entraId": {
+      "type": ["string", "null"],
+      "description": "EntraID of the Inspector if available in ODW.",
+      "example": "00000000-0000-0000-0000-000000000000"
+    },
+    "sapId": {
+      "type": ["string", "null"],
+      "description": "SAPID of the Inspector if available in ODW.",
+      "example": "12345678"
+    },
     "horizonId": {
       "type": "string",
       "description": "The PINS-generated unique horizon ID"
@@ -41,7 +65,88 @@
     },
     "email": {
       "type": ["string", "null"],
-      "description": "The email address of the inspector"
+      "format": "email",
+      "description": "PINS Email address for the Inspector",
+      "example": "example@planninginspectorate.gov.uk"
+    },
+    "grade": {
+      "type": "string",
+      "description": "Grades as a coded value e.g. B1, B2, B3, FTC-B1, FTC-B2, FTC-B3, PL",
+      "example": "B1"
+    },
+    "fte": {
+      "type": "number",
+      "description": "FTE Decimal value e.g. 1, 0.5 etc",
+      "example": 0.75
+    },
+    "unit": {
+      "type": "string",
+      "description": "The personnel area of the Inspector",
+      "example": "Operations"
+    },
+    "service": {
+      "type": "string",
+      "description": "The personnel sub area of the Inspector",
+      "example": "Planning and Environmental Appeals Service"
+    },
+    "group": {
+      "type": "string",
+      "description": "Group of the Inspector",
+      "example": "Enforcement Groups"
+    },
+    "inspectorManager": {
+      "type": "string",
+      "description": "Name of the Inspector's manager.",
+      "example": "Dan Brown"
+    },
+    "validFrom": {
+      "type": ["string", "null"],
+      "description": "Date the Inspector record was first recorded.",
+      "format": "date-time",
+      "examples": ["2023-07-27T20:30:00.000Z"]
+    },
+    "address": {
+      "type": "object",
+      "additionalProperties": true,
+      "required": ["addressLine1", "addressLine2", "townCity", "county", "postcode"],
+      "properties": {
+        "addressLine1": { "type": ["string", "null"] },
+        "addressLine2": { "type": ["string", "null"] },
+        "townCity": { "type": ["string", "null"] },
+        "county": { "type": ["string", "null"] },
+        "postcode": { "type": ["string", "null"] }
+      }
+    },
+    "specialisms": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/specialism"
+      }
+    }
+  },
+  "$defs": {
+    "specialism": {
+      "type": "object",
+      "additionalProperties": true,
+      "required": ["name", "proficiency", "validFrom"],
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": "Working above band is stored as a specialism",
+          "example": "S62A Casework Major"
+        },
+        "proficiency": {
+          "type": ["string", "null"],
+          "description": "trained or in-training",
+          "example": "trained"
+        },
+        "validFrom": {
+          "type": ["string", "null"],
+          "description": "Date training started or date training was completed.",
+          "format": "date-time",
+          "examples": ["2023-07-27T20:30:00.000Z"]
+        }
+      }
     }
   }
 }

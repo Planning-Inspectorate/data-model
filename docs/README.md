@@ -34,7 +34,7 @@
 
 * [NSIP Project Update](./nsip-project-update.md "NSIP Project Update (formerly known as Banners)") – `nsip-project-update.schema.json`
 
-* [PINS Inspector](./pins-inspector.md "Inspector attributes as per Horizon") – `pins-inspector.schema.json`
+* [PINS Inspector](./pins-inspector.md "Inspector Details originating from Horizon, SAP HR and Entra") – `pins-inspector.schema.json`
 
 * [PINS LPA](./pins-lpa.md "Local Planning Authority (LPA) attributes as per Horizon") – `pins-lpa.schema.json`
 
@@ -60,6 +60,10 @@
 
 * [Untitled object in Examination Timetable](./nsip-exam-timetable-defs-line-item.md) – `nsip-exam-timetable.schema.json#/$defs/line-item`
 
+* [Untitled object in PINS Inspector](./pins-inspector-properties-address.md) – `pins-inspector.schema.json#/properties/address`
+
+* [Untitled object in PINS Inspector](./pins-inspector-defs-specialism.md) – `pins-inspector.schema.json#/$defs/specialism`
+
 ### Arrays
 
 * [Untitled array in Appeal Representation](./appeal-representation-properties-documentids.md "An array of documentIds") – `appeal-representation.schema.json#/properties/documentIds`
@@ -75,6 +79,8 @@
 * [Untitled array in NSIP Project](./nsip-project-properties-nsipadministrationofficerids.md) – `nsip-project.schema.json#/properties/nsipAdministrationOfficerIds`
 
 * [Untitled array in NSIP Project](./nsip-project-properties-inspectorids.md) – `nsip-project.schema.json#/properties/inspectorIds`
+
+* [Untitled array in PINS Inspector](./pins-inspector-properties-specialisms.md) – `pins-inspector.schema.json#/properties/specialisms`
 
 * [Untitled array in Representation](./nsip-representation-properties-attachmentids.md) – `nsip-representation.schema.json#/properties/attachmentIds`
 

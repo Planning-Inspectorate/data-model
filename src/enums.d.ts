@@ -355,6 +355,12 @@ export const METHOD = {
   POST: 'post',
 };
 
+export const NSIP_CA_AND_TP_EVIDENCE = {
+  AWAITING_SUBMISSION: 'awaiting_submission',
+  NOT_APPLICABLE: 'not_applicable',
+  SUBMITTED_BY_APPLICANT: 'submitted_by_applicant',
+};
+
 export const NSIP_CASE_TYPE = {
   HAS: 'has',
   NSIP: 'nsip',
@@ -362,8 +368,19 @@ export const NSIP_CASE_TYPE = {
 
 export const NSIP_DECISION = {
   APPROVED: 'approved',
+  GRANTED: 'granted',
+  PARTIALLY_CONSENTED: 'partially_consented',
+  QUASHED: 'quashed',
+  REDETERMINATION: 'redetermination',
   REFUSED: 'refused',
   SPLIT_DECISION: 'split-decision',
+  WITHDRAWN: 'withdrawn',
+};
+
+export const NSIP_DESIGN_APPROACH_DOCUMENT = {
+  AWAITING_SUBMISSION: 'awaiting_submission',
+  NOT_APPLICABLE: 'not_applicable',
+  SUBMITTED_BY_APPLICANT: 'submitted_by_applicant',
 };
 
 export const NSIP_DOCUMENT_CASE_STAGE = {
@@ -379,6 +396,12 @@ export const NSIP_DOCUMENT_CASE_STAGE = {
   PRE_EXAMINATION: 'pre-examination',
   RECOMMENDATION: 'recommendation',
   WITHDRAWN: 'withdrawn',
+};
+
+export const NSIP_FAST_TRACK_ADMISSION_DOCUMENT = {
+  AWAITING_SUBMISSION: 'awaiting_submission',
+  NOT_APPLICABLE: 'not_applicable',
+  SUBMITTED_BY_APPLICANT: 'submitted_by_applicant',
 };
 
 export const NSIP_LANGUAGE = {
@@ -398,11 +421,45 @@ export const NSIP_MAP_ZOOM_LEVEL = {
   TOWN: 'town',
 };
 
+export const NSIP_MATURE_OUTLINE_CONTROL_DOCUMENT = {
+  AWAITING_SUBMISSION: 'awaiting_submission',
+  NOT_APPLICABLE: 'not_applicable',
+  SUBMITTED_BY_APPLICANT: 'submitted_by_applicant',
+};
+
+export const NSIP_MULTIPARTY_APPLICATION_CHECK_DOCUMENT = {
+  AWAITING_SUBMISSION: 'awaiting_submission',
+  NOT_APPLICABLE: 'not_applicable',
+  SUBMITTED_BY_APPLICANT: 'submitted_by_applicant',
+};
+
+export const NSIP_NEW_MATURITY = {
+  A: 'a',
+  B: 'b',
+  C: 'c',
+  D: 'd',
+  E: 'e',
+  F: 'f',
+  G: 'g',
+};
+
 export const NSIP_ORIGIN = {
   CITIZEN: 'citizen',
   LPA: 'lpa',
   OGD: 'ogd',
   PINS: 'pins',
+};
+
+export const NSIP_POLICY_COMPLIANCE_DOCUMENT = {
+  AWAITING_SUBMISSION: 'awaiting_submission',
+  NOT_APPLICABLE: 'not_applicable',
+  SUBMITTED_BY_APPLICANT: 'submitted_by_applicant',
+};
+
+export const NSIP_PRINCIPAL_AREA_DISAGREEMENT_SUMMARY_STMT = {
+  AWAITING_SUBMISSION: 'awaiting_submission',
+  NOT_APPLICABLE: 'not_applicable',
+  SUBMITTED_BY_APPLICANT: 'submitted_by_applicant',
 };
 
 export const NSIP_PROJECT_TYPE = {
@@ -433,6 +490,12 @@ export const NSIP_PROJECT_TYPE = {
   WW_01_WASTE_WATER_TREATMENT_PLANTS: 'WW01 - Waste Water Treatment Plants',
 };
 
+export const NSIP_PUBLIC_SECTOR_EQUALITY_DUTY = {
+  AWAITING_SUBMISSION: 'awaiting_submission',
+  NOT_APPLICABLE: 'not_applicable',
+  SUBMITTED_BY_APPLICANT: 'submitted_by_applicant',
+};
+
 export const NSIP_PUBLISH_STATUS = {
   PUBLISHED: 'published',
   UNPUBLISHED: 'unpublished',
@@ -449,6 +512,12 @@ export const NSIP_PUBLISHED_STATUS = {
   READY_TO_PUBLISH: 'ready_to_publish',
   UNPUBLISHED: 'unpublished',
   UNPUBLISHING: 'unpublishing',
+};
+
+export const NSIP_RECOMMENDATION = {
+  RECOMMEND_CONSENT: 'recommend_consent',
+  RECOMMEND_PARTIAL_CONSENT: 'recommend_partial_consent',
+  RECOMMEND_REFUSAL: 'recommend_refusal',
 };
 
 export const NSIP_REDACTED_STATUS = {
@@ -536,11 +605,27 @@ export const NSIP_STATUS = {
   WITHDRAWN: 'withdrawn',
 };
 
+export const NSIP_SUB_PROJECT_TYPE = {
+  ENERGY_FROM_WASTE: 'energy_from_waste',
+  GAS_POWER_STATION: 'gas_power_station',
+  HYDROGEN_POWER_STATION: 'hydrogen_power_station',
+  NUCLEAR: 'nuclear',
+  OFFSHORE_WIND: 'offshore_wind',
+  ONSHORE_WIND: 'onshore_wind',
+  SOLAR: 'solar',
+};
+
 export const NSIP_SUBSCRIPTION_TYPE = {
   ALL_UPDATES: 'allUpdates',
   APPLICATION_DECIDED: 'applicationDecided',
   APPLICATION_SUBMITTED: 'applicationSubmitted',
   REGISTRATION_OPEN: 'registrationOpen',
+};
+
+export const NSIP_TIER = {
+  BASIC: 'basic',
+  ENHANCED: 'enhanced',
+  STANDARD: 'standard',
 };
 
 export const NSIP_UPDATE_STATUS = {

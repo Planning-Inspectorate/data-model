@@ -105,8 +105,18 @@
     },
     "decision": {
       "type": ["string", "null"],
-      "description": "Decision: approved/refused/split-decision",
-      "enum": ["approved", "refused", "split-decision", null]
+      "description": "Decision outcome: approved/refused/split-decision/granted/partially_consented/quashed/redetermination/withdrawn",
+      "enum": [
+        "approved",
+        "refused",
+        "split-decision",
+        "granted",
+        "partially_consented",
+        "quashed",
+        "redetermination",
+        "withdrawn",
+        null
+      ]
     },
     "publishStatus": {
       "type": ["string", "null"],
@@ -534,6 +544,414 @@
       "type": ["boolean", "null"],
       "description": "Is this an application for a material change?",
       "examples": [true, false]
+    },
+    "courtDecisionDate": {
+      "type": ["string", "null"],
+      "description": "Date of court decision",
+      "format": "date-time",
+      "examples": ["2023-07-27T20:30:00.000Z"]
+    },
+    "courtDecisionOutcomeText": {
+      "type": ["string", "null"],
+      "description": "Court decision outcome text; values include 'upheld','partially_upheld','quashed','other:<Text>'",
+      "examples": ["upheld"]
+    },
+    "decisionChallengeSubmissionDate": {
+      "type": ["string", "null"],
+      "description": "Date of decision challenge submission",
+      "format": "date-time",
+      "examples": ["2023-07-27T20:30:00.000Z"]
+    },
+    "recommendation": {
+      "type": ["string", "null"],
+      "description": "Recommendation",
+      "enum": ["recommend_consent", "recommend_partial_consent", "recommend_refusal", null],
+      "examples": ["recommend_consent"]
+    },
+    "inceptionMeetingDate": {
+      "type": ["string", "null"],
+      "description": "Date of inception meeting",
+      "format": "date-time",
+      "examples": ["2023-07-27T20:30:00.000Z"]
+    },
+    "draftDocumentSubmissionDate": {
+      "type": ["string", "null"],
+      "description": "Date for submission of draft documents",
+      "format": "date-time",
+      "examples": ["2023-07-27T20:30:00.000Z"]
+    },
+    "programmeDocumentSubmissionDate": {
+      "type": ["string", "null"],
+      "description": "Programme document submission date",
+      "format": "date-time",
+      "examples": ["2023-07-27T20:30:00.000Z"]
+    },
+    "tier": {
+      "type": ["string", "null"],
+      "description": "Tier",
+      "enum": ["basic", "standard", "enhanced", null],
+      "examples": ["basic"]
+    },
+    "s61SummaryURI": {
+      "type": ["string", "null"],
+      "description": "Link to s61 summary",
+      "examples": ["s61.sharepoint.com/"]
+    },
+    "estimatedScopingSubmissionDate": {
+      "type": ["string", "null"],
+      "description": "Estimated scoping submission date",
+      "format": "date-time",
+      "examples": ["2023-07-27T20:30:00.000Z"]
+    },
+    "consultationMilestoneAdequacyDate": {
+      "type": ["string", "null"],
+      "description": "Adequacy of Consultation Milestone",
+      "format": "date-time",
+      "examples": ["2023-07-27T20:30:00.000Z"]
+    },
+    "planProcessEvidence": {
+      "type": ["boolean", "null"],
+      "description": "Evidence plan process",
+      "examples": [true]
+    },
+    "issuesTracker": {
+      "type": ["string", "null"],
+      "description": "Issues tracker",
+      "examples": ["tracker.sharepoint.com/"]
+    },
+    "essentialFastTrackComponents": {
+      "type": ["boolean", "null"],
+      "description": "Essential fast track components",
+      "examples": [true]
+    },
+    "principalAreaDisagreementSummaryStmt": {
+      "type": ["string", "null"],
+      "description": "Principal area disagreement summary statement (PADSS)",
+      "enum": ["submitted_by_applicant", "awaiting_submission", "not_applicable", null],
+      "examples": ["submitted_by_applicant"]
+    },
+    "principalAreaDisagreementSummaryStmtSubmittedDate": {
+      "type": ["string", "null"],
+      "description": "Principal area disagreement summary statement (PADSS) Submitted date",
+      "format": "date-time",
+      "examples": ["2023-07-27T20:30:00.000Z"]
+    },
+    "policyComplianceDocument": {
+      "type": ["string", "null"],
+      "description": "Policy compliance document (PCD)",
+      "enum": ["submitted_by_applicant", "awaiting_submission", "not_applicable", null],
+      "examples": ["submitted_by_applicant"]
+    },
+    "policyComplianceDocumentSubmittedDate": {
+      "type": ["string", "null"],
+      "description": "Policy compliance document (PCD) Submitted Date",
+      "format": "date-time",
+      "examples": ["2023-07-27T20:30:00.000Z"]
+    },
+    "designApproachDocument": {
+      "type": ["string", "null"],
+      "description": "Design approach document (DAD)",
+      "enum": ["submitted_by_applicant", "awaiting_submission", "not_applicable", null],
+      "examples": ["submitted_by_applicant"]
+    },
+    "designApproachDocumentSubmittedDate": {
+      "type": ["string", "null"],
+      "description": "Design approach document (DAD) Submitted Date",
+      "format": "date-time",
+      "examples": ["2023-07-27T20:30:00.000Z"]
+    },
+    "matureOutlineControlDocument": {
+      "type": ["string", "null"],
+      "description": "Mature outline control documents",
+      "enum": ["submitted_by_applicant", "awaiting_submission", "not_applicable", null],
+      "examples": ["submitted_by_applicant"]
+    },
+    "matureOutlineControlDocumentSubmittedDate": {
+      "type": ["string", "null"],
+      "description": "Mature outline control documents Submitted Date",
+      "format": "date-time",
+      "examples": ["2023-07-27T20:30:00.000Z"]
+    },
+    "caAndTpEvidence": {
+      "type": ["string", "null"],
+      "description": "CA and TP evidence",
+      "enum": ["submitted_by_applicant", "awaiting_submission", "not_applicable", null],
+      "examples": ["submitted_by_applicant"]
+    },
+    "caAndTpEvidenceSubmittedDate": {
+      "type": ["string", "null"],
+      "description": "CA and TP evidence Submitted Date",
+      "format": "date-time",
+      "examples": ["2023-07-27T20:30:00.000Z"]
+    },
+    "publicSectorEqualityDuty": {
+      "type": ["string", "null"],
+      "description": "Public sector equality duty (PSED)",
+      "enum": ["submitted_by_applicant", "awaiting_submission", "not_applicable", null],
+      "examples": ["submitted_by_applicant"]
+    },
+    "publicSectorEqualityDutySubmittedDate": {
+      "type": ["string", "null"],
+      "description": "Public sector equality duty (PSED) Submitted Date",
+      "format": "date-time",
+      "examples": ["2023-07-27T20:30:00.000Z"]
+    },
+    "fastTrackAdmissionDocument": {
+      "type": ["string", "null"],
+      "description": "Fast track admission document",
+      "enum": ["submitted_by_applicant", "awaiting_submission", "not_applicable", null],
+      "examples": ["submitted_by_applicant"]
+    },
+    "fastTrackAdmissionDocumentSubmittedDate": {
+      "type": ["string", "null"],
+      "description": "Fast track admission document Submitted Date",
+      "format": "date-time",
+      "examples": ["2023-07-27T20:30:00.000Z"]
+    },
+    "multipartyApplicationCheckDocument": {
+      "type": ["string", "null"],
+      "description": "Multiparty application readiness gate-check (trial)",
+      "enum": ["submitted_by_applicant", "awaiting_submission", "not_applicable", null],
+      "examples": ["submitted_by_applicant"]
+    },
+    "multipartyApplicationCheckDocumentSubmittedDate": {
+      "type": ["string", "null"],
+      "description": "Multiparty application readiness gate-check Submitted Date (trial)",
+      "format": "date-time",
+      "examples": ["2023-07-27T20:30:00.000Z"]
+    },
+    "programmeDocumentURI": {
+      "type": ["string", "null"],
+      "description": "Link to programme document",
+      "examples": ["progdoc.sharepoint.com/"]
+    },
+    "updatedProgrammeDocumentReceivedDate": {
+      "type": ["string", "null"],
+      "description": "Date updated programme document is received",
+      "format": "date-time",
+      "examples": ["2023-07-27T20:30:00.000Z"]
+    },
+    "programmeDocumentReviewedByEstDate": {
+      "type": ["string", "null"],
+      "description": "Date programme document reviewed by EST",
+      "format": "date-time",
+      "examples": ["2023-07-27T20:30:00.000Z"]
+    },
+    "caseTeamIssuedCommentsDate": {
+      "type": ["string", "null"],
+      "description": "Date case team issued comments on programme document",
+      "format": "date-time",
+      "examples": ["2023-07-27T20:30:00.000Z"]
+    },
+    "subProjectType": {
+      "type": ["string", "null"],
+      "description": "Project type",
+      "enum": [
+        "energy_from_waste",
+        "gas_power_station",
+        "hydrogen_power_station",
+        "nuclear",
+        "offshore_wind",
+        "onshore_wind",
+        "solar",
+        null
+      ],
+      "examples": ["solar"]
+    },
+    "newMaturity": {
+      "type": ["string", "null"],
+      "description": "New maturity",
+      "enum": ["a", "b", "c", "d", "e", "f", "g", null],
+      "examples": ["a"]
+    },
+    "statutoryConsultationPeriodEndDate": {
+      "type": ["string", "null"],
+      "description": "Statutory consultation period end date",
+      "format": "date-time",
+      "examples": ["2023-07-27T20:30:00.000Z"]
+    },
+    "submissionOfDraftDocumentsDate": {
+      "type": ["string", "null"],
+      "description": "Date for submission of draft documents",
+      "format": "date-time",
+      "examples": ["2023-07-27T20:30:00.000Z"]
+    },
+    "numberBand2Inspectors": {
+      "type": ["number", "null"],
+      "description": "Number of band 2 inspectors",
+      "examples": [1]
+    },
+    "numberBand3Inspectors": {
+      "type": ["number", "null"],
+      "description": "Number of band 3 inspectors",
+      "examples": [2]
+    },
+    "memLastUpdated": {
+      "type": ["string", "null"],
+      "description": "MEM (last updated)",
+      "format": "date-time",
+      "examples": ["2023-07-27T20:30:00.000Z"]
+    },
+    "additionalComments": {
+      "type": ["string", "null"],
+      "description": "Additional comments",
+      "examples": ["Very likely to change tier from standard to basic after April 2025"]
+    },
+    "operationsLeadIds": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "description": "Maps to [Employee].[EmployeeID]."
+      },
+      "description": "Maps to [Employee].[EmployeeID].",
+      "examples": [["9bee96d2-00fe-4269-9d01-8c66", "9bee96d2-00fe-4269-9d01-8c22"]]
+    },
+    "operationsManagerIds": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "description": "Maps to [Employee].[EmployeeID]."
+      },
+      "description": "New NSIP role, Maps to [Employee].[EmployeeID]",
+      "examples": [["9bee96d2-00fe-4269-9d01-8c66", "9bee96d2-00fe-4269-9d01-8c22"]]
+    },
+    "caseManagerIds": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "description": "Maps to [Employee].[EmployeeID]."
+      },
+      "description": "Maps to [Employee].[EmployeeID].",
+      "examples": [["9bee96d2-00fe-4269-9d01-8c66", "9bee96d2-00fe-4269-9d01-8c22"]]
+    },
+    "leadInspectorIds": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "description": "Maps to [Employee].[EmployeeID]."
+      },
+      "description": "Maps to [Employee].[EmployeeID].",
+      "examples": [["9bee96d2-00fe-4269-9d01-8c66", "9bee96d2-00fe-4269-9d01-8c22"]]
+    },
+    "environmentalServicesOfficerIds": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "description": "Maps to [Employee].[EmployeeID]."
+      },
+      "description": "Maps to [Employee].[EmployeeID].",
+      "examples": [["9bee96d2-00fe-4269-9d01-8c66", "9bee96d2-00fe-4269-9d01-8c22"]]
+    },
+    "legalOfficerIds": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "description": "Maps to [Employee].[EmployeeID]."
+      },
+      "description": "Maps to [Employee].[EmployeeID].",
+      "examples": [["9bee96d2-00fe-4269-9d01-8c66", "9bee96d2-00fe-4269-9d01-8c22"]]
+    },
+    "meetings": {
+      "type": "array",
+      "description": "Collection of meetings associated with this project",
+      "items": {
+        "$ref": "#/$defs/meeting"
+      }
+    },
+    "invoices": {
+      "type": "array",
+      "description": "Collection of invoices associated with this project",
+      "items": {
+        "$ref": "#/$defs/invoice"
+      }
+    }
+  },
+  "$defs": {
+    "meeting": {
+      "type": "object",
+      "additionalProperties": true,
+      "description": "A meeting related to the project",
+      "properties": {
+        "meetingAgenda": {
+          "type": ["string", "null"],
+          "description": "Meeting agenda",
+          "examples": ["Flood Risk Assessment (FRA)"]
+        },
+        "planningInspectorateRole": {
+          "type": ["string", "null"],
+          "description": "Planning Inspectorate role",
+          "enum": ["facilitator", "advisor", "observer", null],
+          "examples": ["facilitator"]
+        },
+        "meetingDate": {
+          "type": ["string", "null"],
+          "description": "Meeting date",
+          "format": "date-time",
+          "examples": ["2023-07-27T20:30:00.000Z"]
+        },
+        "meetingType": {
+          "type": ["string", "null"],
+          "description": "Type of Meeting"
+        }
+      }
+    },
+    "invoice": {
+      "type": "object",
+      "additionalProperties": true,
+      "description": "An invoice related to the project",
+      "required": ["invoiceNumber", "amountDue"],
+      "properties": {
+        "invoiceStage": {
+          "type": ["string", "null"],
+          "description": "Invoice stage",
+          "enum": ["pre_acceptance", "acceptance", "pre_examination", "initial_examination", "final_examination", null],
+          "examples": ["pre_acceptance"]
+        },
+        "invoiceNumber": {
+          "type": "string",
+          "description": "Invoice number",
+          "examples": ["1800004419"]
+        },
+        "amountDue": {
+          "type": "number",
+          "description": "Amount due",
+          "examples": [500]
+        },
+        "paymentDueDate": {
+          "type": ["string", "null"],
+          "description": "Payment due date",
+          "format": "date-time",
+          "examples": ["2023-07-27T20:30:00.000Z"]
+        },
+        "invoicedDate": {
+          "type": ["string", "null"],
+          "description": "Invoiced date",
+          "format": "date-time",
+          "examples": ["2023-07-27T20:30:00.000Z"]
+        },
+        "paymentDate": {
+          "type": ["string", "null"],
+          "description": "Date of payment",
+          "format": "date-time",
+          "examples": ["2023-07-27T20:30:00.000Z"]
+        },
+        "refundCreditNoteNumber": {
+          "type": ["string", "null"],
+          "description": "Refund credit note number",
+          "examples": ["1800004419"]
+        },
+        "refundAmount": {
+          "type": ["number", "null"],
+          "description": "Amount refunded",
+          "examples": [200]
+        },
+        "refundIssueDate": {
+          "type": ["string", "null"],
+          "description": "Refund issue date",
+          "format": "date-time",
+          "examples": ["2023-07-27T20:30:00.000Z"]
+        }
+      }
     }
   }
 }

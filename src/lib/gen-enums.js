@@ -11,7 +11,7 @@ export const constPath = path.join(__dirname, '..', 'enums.js');
 export const constTsPath = path.join(__dirname, '..', 'enums.d.ts');
 
 const SPACING = '  ';
-const NEW_LINE = '\r\n';
+const NEW_LINE = '\n';
 
 /**
  * Load all schemas and generate JS constant definitions

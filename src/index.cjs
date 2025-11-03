@@ -443,7 +443,6 @@ const NSIP_CA_AND_TP_EVIDENCE = Object.freeze({
   NOT_APPLICABLE: 'not_applicable',
   SUBMITTED_BY_APPLICANT: 'submitted_by_applicant',
 });
-
 const NSIP_CASE_TYPE = Object.freeze({
   HAS: 'has',
   NSIP: 'nsip',
@@ -459,7 +458,6 @@ const NSIP_DECISION = Object.freeze({
   SPLIT_DECISION: 'split-decision',
   WITHDRAWN: 'withdrawn',
 });
-
 const NSIP_DESIGN_APPROACH_DOCUMENT = Object.freeze({
   AWAITING_SUBMISSION: 'awaiting_submission',
   NOT_APPLICABLE: 'not_applicable',
@@ -486,7 +484,6 @@ const NSIP_FAST_TRACK_ADMISSION_DOCUMENT = Object.freeze({
   NOT_APPLICABLE: 'not_applicable',
   SUBMITTED_BY_APPLICANT: 'submitted_by_applicant',
 });
-
 const NSIP_LANGUAGE = Object.freeze({
   ENGLISH: 'English',
   WELSH: 'Welsh',
@@ -509,13 +506,11 @@ const NSIP_MATURE_OUTLINE_CONTROL_DOCUMENT = Object.freeze({
   NOT_APPLICABLE: 'not_applicable',
   SUBMITTED_BY_APPLICANT: 'submitted_by_applicant',
 });
-
 const NSIP_MULTIPARTY_APPLICATION_CHECK_DOCUMENT = Object.freeze({
   AWAITING_SUBMISSION: 'awaiting_submission',
   NOT_APPLICABLE: 'not_applicable',
   SUBMITTED_BY_APPLICANT: 'submitted_by_applicant',
 });
-
 const NSIP_NEW_MATURITY = Object.freeze({
   A: 'a',
   B: 'b',
@@ -525,7 +520,6 @@ const NSIP_NEW_MATURITY = Object.freeze({
   F: 'f',
   G: 'g',
 });
-
 const NSIP_ORIGIN = Object.freeze({
   CITIZEN: 'citizen',
   LPA: 'lpa',
@@ -538,13 +532,11 @@ const NSIP_POLICY_COMPLIANCE_DOCUMENT = Object.freeze({
   NOT_APPLICABLE: 'not_applicable',
   SUBMITTED_BY_APPLICANT: 'submitted_by_applicant',
 });
-
 const NSIP_PRINCIPAL_AREA_DISAGREEMENT_SUMMARY_STMT = Object.freeze({
   AWAITING_SUBMISSION: 'awaiting_submission',
   NOT_APPLICABLE: 'not_applicable',
   SUBMITTED_BY_APPLICANT: 'submitted_by_applicant',
 });
-
 const NSIP_PROJECT_TYPE = Object.freeze({
   BC_01_OFFICE_USE: 'BC01 - Office Use',
   BC_02_RESEARCH_AND_DEVELOPMENT_OF_PRODUCTS_OR_PROCESSES: 'BC02 - Research and Development of Products or Processes',
@@ -578,7 +570,6 @@ const NSIP_PUBLIC_SECTOR_EQUALITY_DUTY = Object.freeze({
   NOT_APPLICABLE: 'not_applicable',
   SUBMITTED_BY_APPLICANT: 'submitted_by_applicant',
 });
-
 const NSIP_PUBLISH_STATUS = Object.freeze({
   PUBLISHED: 'published',
   UNPUBLISHED: 'unpublished',
@@ -602,7 +593,6 @@ const NSIP_RECOMMENDATION = Object.freeze({
   RECOMMEND_PARTIAL_CONSENT: 'recommend_partial_consent',
   RECOMMEND_REFUSAL: 'recommend_refusal',
 });
-
 const NSIP_REDACTED_STATUS = Object.freeze({
   NOT_REDACTED: 'not_redacted',
   REDACTED: 'redacted',
@@ -697,7 +687,6 @@ const NSIP_SUB_PROJECT_TYPE = Object.freeze({
   ONSHORE_WIND: 'onshore_wind',
   SOLAR: 'solar',
 });
-
 const NSIP_SUBSCRIPTION_TYPE = Object.freeze({
   ALL_UPDATES: 'allUpdates',
   APPLICATION_DECIDED: 'applicationDecided',
@@ -710,7 +699,6 @@ const NSIP_TIER = Object.freeze({
   ENHANCED: 'enhanced',
   STANDARD: 'standard',
 });
-
 const NSIP_UPDATE_STATUS = Object.freeze({
   ARCHIVED: 'archived',
   DRAFT: 'draft',

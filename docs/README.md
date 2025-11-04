@@ -34,7 +34,7 @@
 
 * [NSIP Project Update](./nsip-project-update.md "NSIP Project Update (formerly known as Banners)") – `nsip-project-update.schema.json`
 
-* [PINS Inspector](./pins-inspector.md "Inspector attributes as per Horizon") – `pins-inspector.schema.json`
+* [PINS Inspector](./pins-inspector.md "Inspector Details originating from Horizon, SAP HR and Entra") – `pins-inspector.schema.json`
 
 * [PINS LPA](./pins-lpa.md "Local Planning Authority (LPA) attributes as per Horizon") – `pins-lpa.schema.json`
 
@@ -63,6 +63,10 @@
 * [Untitled object in NSIP Project](./nsip-project-defs-meeting.md "A meeting related to the project") – `nsip-project.schema.json#/$defs/meeting`
 
 * [Untitled object in NSIP Project](./nsip-project-defs-invoice.md "An invoice related to the project") – `nsip-project.schema.json#/$defs/invoice`
+
+* [Untitled object in PINS Inspector](./pins-inspector-properties-address.md) – `pins-inspector.schema.json#/properties/address`
+
+* [Untitled object in PINS Inspector](./pins-inspector-defs-specialism.md) – `pins-inspector.schema.json#/$defs/specialism`
 
 ### Arrays
 
@@ -95,6 +99,8 @@
 * [Untitled array in NSIP Project](./nsip-project-properties-meetings.md "Collection of meetings associated with this project") – `nsip-project.schema.json#/properties/meetings`
 
 * [Untitled array in NSIP Project](./nsip-project-properties-invoices.md "Collection of invoices associated with this project") – `nsip-project.schema.json#/properties/invoices`
+
+* [Untitled array in PINS Inspector](./pins-inspector-properties-specialisms.md) – `pins-inspector.schema.json#/properties/specialisms`
 
 * [Untitled array in Representation](./nsip-representation-properties-attachmentids.md) – `nsip-representation.schema.json#/properties/attachmentIds`
 

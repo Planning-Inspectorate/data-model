@@ -2754,13 +2754,21 @@ export interface NsipSubscription {
 }
 
 /**
- * Inspector attributes as per Horizon. This will be extended with SAP/Entra data
+ * Inspector Details originating from Horizon, SAP HR and Entra.
  */
 export interface PINSInspector {
   /**
+   * EntraID of the Inspector if available in ODW.
+   */
+  entraId: string | null;
+  /**
+   * SAPID of the Inspector if available in ODW.
+   */
+  sapId: string | null;
+  /**
    * The PINS-generated unique horizon ID
    */
-  horizonId: string;
+  horizonId?: string;
   /**
    * The first name of the inspector
    */
@@ -2790,9 +2798,61 @@ export interface PINSInspector {
    */
   qualifications?: string | null;
   /**
-   * The email address of the inspector
+   * PINS Email address for the Inspector
    */
   email: string | null;
+  /**
+   * Grades as a coded value e.g. B1, B2, B3, FTC-B1, FTC-B2, FTC-B3, PL
+   */
+  grade: string;
+  /**
+   * FTE Decimal value e.g. 1, 0.5 etc
+   */
+  fte: number;
+  /**
+   * The personnel area of the Inspector
+   */
+  unit: string;
+  /**
+   * The personnel sub area of the Inspector
+   */
+  service: string;
+  /**
+   * Group of the Inspector
+   */
+  group: string;
+  /**
+   * Name of the Inspector's manager.
+   */
+  inspectorManager: string;
+  /**
+   * Date the Inspector record was first recorded.
+   */
+  validFrom?: string | null;
+  address: {
+    addressLine1: string | null;
+    addressLine2: string | null;
+    townCity: string | null;
+    county: string | null;
+    postcode: string | null;
+    [k: string]: unknown;
+  };
+  specialisms: Specialism[];
+  [k: string]: unknown;
+}
+export interface Specialism {
+  /**
+   * Working above band is stored as a specialism
+   */
+  name: string;
+  /**
+   * trained or in-training
+   */
+  proficiency: string | null;
+  /**
+   * Date training started or date training was completed.
+   */
+  validFrom: string | null;
   [k: string]: unknown;
 }
 

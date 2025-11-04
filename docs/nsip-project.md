@@ -86,6 +86,56 @@
 | [dateOfReOpenRelevantRepresentationStart](#dateofreopenrelevantrepresentationstart)                     | `string`      | Required | can be null    | [NSIP Project](nsip-project-properties-dateofreopenrelevantrepresentationstart.md "nsip-project.schema.json#/properties/dateOfReOpenRelevantRepresentationStart")                     |
 | [dateOfReOpenRelevantRepresentationClose](#dateofreopenrelevantrepresentationclose)                     | `string`      | Required | can be null    | [NSIP Project](nsip-project-properties-dateofreopenrelevantrepresentationclose.md "nsip-project.schema.json#/properties/dateOfReOpenRelevantRepresentationClose")                     |
 | [isMaterialChange](#ismaterialchange)                                                                   | `boolean`     | Optional | can be null    | [NSIP Project](nsip-project-properties-ismaterialchange.md "nsip-project.schema.json#/properties/isMaterialChange")                                                                   |
+| [courtDecisionDate](#courtdecisiondate)                                                                 | `string`      | Optional | can be null    | [NSIP Project](nsip-project-properties-courtdecisiondate.md "nsip-project.schema.json#/properties/courtDecisionDate")                                                                 |
+| [courtDecisionOutcomeText](#courtdecisionoutcometext)                                                   | `string`      | Optional | can be null    | [NSIP Project](nsip-project-properties-courtdecisionoutcometext.md "nsip-project.schema.json#/properties/courtDecisionOutcomeText")                                                   |
+| [decisionChallengeSubmissionDate](#decisionchallengesubmissiondate)                                     | `string`      | Optional | can be null    | [NSIP Project](nsip-project-properties-decisionchallengesubmissiondate.md "nsip-project.schema.json#/properties/decisionChallengeSubmissionDate")                                     |
+| [recommendation](#recommendation)                                                                       | `string`      | Optional | can be null    | [NSIP Project](nsip-project-properties-recommendation.md "nsip-project.schema.json#/properties/recommendation")                                                                       |
+| [inceptionMeetingDate](#inceptionmeetingdate)                                                           | `string`      | Optional | can be null    | [NSIP Project](nsip-project-properties-inceptionmeetingdate.md "nsip-project.schema.json#/properties/inceptionMeetingDate")                                                           |
+| [draftDocumentSubmissionDate](#draftdocumentsubmissiondate)                                             | `string`      | Optional | can be null    | [NSIP Project](nsip-project-properties-draftdocumentsubmissiondate.md "nsip-project.schema.json#/properties/draftDocumentSubmissionDate")                                             |
+| [programmeDocumentSubmissionDate](#programmedocumentsubmissiondate)                                     | `string`      | Optional | can be null    | [NSIP Project](nsip-project-properties-programmedocumentsubmissiondate.md "nsip-project.schema.json#/properties/programmeDocumentSubmissionDate")                                     |
+| [tier](#tier)                                                                                           | `string`      | Optional | can be null    | [NSIP Project](nsip-project-properties-tier.md "nsip-project.schema.json#/properties/tier")                                                                                           |
+| [s61SummaryURI](#s61summaryuri)                                                                         | `string`      | Optional | can be null    | [NSIP Project](nsip-project-properties-s61summaryuri.md "nsip-project.schema.json#/properties/s61SummaryURI")                                                                         |
+| [estimatedScopingSubmissionDate](#estimatedscopingsubmissiondate)                                       | `string`      | Optional | can be null    | [NSIP Project](nsip-project-properties-estimatedscopingsubmissiondate.md "nsip-project.schema.json#/properties/estimatedScopingSubmissionDate")                                       |
+| [consultationMilestoneAdequacyDate](#consultationmilestoneadequacydate)                                 | `string`      | Optional | can be null    | [NSIP Project](nsip-project-properties-consultationmilestoneadequacydate.md "nsip-project.schema.json#/properties/consultationMilestoneAdequacyDate")                                 |
+| [planProcessEvidence](#planprocessevidence)                                                             | `boolean`     | Optional | can be null    | [NSIP Project](nsip-project-properties-planprocessevidence.md "nsip-project.schema.json#/properties/planProcessEvidence")                                                             |
+| [issuesTracker](#issuestracker)                                                                         | `string`      | Optional | can be null    | [NSIP Project](nsip-project-properties-issuestracker.md "nsip-project.schema.json#/properties/issuesTracker")                                                                         |
+| [essentialFastTrackComponents](#essentialfasttrackcomponents)                                           | `boolean`     | Optional | can be null    | [NSIP Project](nsip-project-properties-essentialfasttrackcomponents.md "nsip-project.schema.json#/properties/essentialFastTrackComponents")                                           |
+| [principalAreaDisagreementSummaryStmt](#principalareadisagreementsummarystmt)                           | `string`      | Optional | can be null    | [NSIP Project](nsip-project-properties-principalareadisagreementsummarystmt.md "nsip-project.schema.json#/properties/principalAreaDisagreementSummaryStmt")                           |
+| [principalAreaDisagreementSummaryStmtSubmittedDate](#principalareadisagreementsummarystmtsubmitteddate) | `string`      | Optional | can be null    | [NSIP Project](nsip-project-properties-principalareadisagreementsummarystmtsubmitteddate.md "nsip-project.schema.json#/properties/principalAreaDisagreementSummaryStmtSubmittedDate") |
+| [policyComplianceDocument](#policycompliancedocument)                                                   | `string`      | Optional | can be null    | [NSIP Project](nsip-project-properties-policycompliancedocument.md "nsip-project.schema.json#/properties/policyComplianceDocument")                                                   |
+| [policyComplianceDocumentSubmittedDate](#policycompliancedocumentsubmitteddate)                         | `string`      | Optional | can be null    | [NSIP Project](nsip-project-properties-policycompliancedocumentsubmitteddate.md "nsip-project.schema.json#/properties/policyComplianceDocumentSubmittedDate")                         |
+| [designApproachDocument](#designapproachdocument)                                                       | `string`      | Optional | can be null    | [NSIP Project](nsip-project-properties-designapproachdocument.md "nsip-project.schema.json#/properties/designApproachDocument")                                                       |
+| [designApproachDocumentSubmittedDate](#designapproachdocumentsubmitteddate)                             | `string`      | Optional | can be null    | [NSIP Project](nsip-project-properties-designapproachdocumentsubmitteddate.md "nsip-project.schema.json#/properties/designApproachDocumentSubmittedDate")                             |
+| [matureOutlineControlDocument](#matureoutlinecontroldocument)                                           | `string`      | Optional | can be null    | [NSIP Project](nsip-project-properties-matureoutlinecontroldocument.md "nsip-project.schema.json#/properties/matureOutlineControlDocument")                                           |
+| [matureOutlineControlDocumentSubmittedDate](#matureoutlinecontroldocumentsubmitteddate)                 | `string`      | Optional | can be null    | [NSIP Project](nsip-project-properties-matureoutlinecontroldocumentsubmitteddate.md "nsip-project.schema.json#/properties/matureOutlineControlDocumentSubmittedDate")                 |
+| [caAndTpEvidence](#caandtpevidence)                                                                     | `string`      | Optional | can be null    | [NSIP Project](nsip-project-properties-caandtpevidence.md "nsip-project.schema.json#/properties/caAndTpEvidence")                                                                     |
+| [caAndTpEvidenceSubmittedDate](#caandtpevidencesubmitteddate)                                           | `string`      | Optional | can be null    | [NSIP Project](nsip-project-properties-caandtpevidencesubmitteddate.md "nsip-project.schema.json#/properties/caAndTpEvidenceSubmittedDate")                                           |
+| [publicSectorEqualityDuty](#publicsectorequalityduty)                                                   | `string`      | Optional | can be null    | [NSIP Project](nsip-project-properties-publicsectorequalityduty.md "nsip-project.schema.json#/properties/publicSectorEqualityDuty")                                                   |
+| [publicSectorEqualityDutySubmittedDate](#publicsectorequalitydutysubmitteddate)                         | `string`      | Optional | can be null    | [NSIP Project](nsip-project-properties-publicsectorequalitydutysubmitteddate.md "nsip-project.schema.json#/properties/publicSectorEqualityDutySubmittedDate")                         |
+| [fastTrackAdmissionDocument](#fasttrackadmissiondocument)                                               | `string`      | Optional | can be null    | [NSIP Project](nsip-project-properties-fasttrackadmissiondocument.md "nsip-project.schema.json#/properties/fastTrackAdmissionDocument")                                               |
+| [fastTrackAdmissionDocumentSubmittedDate](#fasttrackadmissiondocumentsubmitteddate)                     | `string`      | Optional | can be null    | [NSIP Project](nsip-project-properties-fasttrackadmissiondocumentsubmitteddate.md "nsip-project.schema.json#/properties/fastTrackAdmissionDocumentSubmittedDate")                     |
+| [multipartyApplicationCheckDocument](#multipartyapplicationcheckdocument)                               | `string`      | Optional | can be null    | [NSIP Project](nsip-project-properties-multipartyapplicationcheckdocument.md "nsip-project.schema.json#/properties/multipartyApplicationCheckDocument")                               |
+| [multipartyApplicationCheckDocumentSubmittedDate](#multipartyapplicationcheckdocumentsubmitteddate)     | `string`      | Optional | can be null    | [NSIP Project](nsip-project-properties-multipartyapplicationcheckdocumentsubmitteddate.md "nsip-project.schema.json#/properties/multipartyApplicationCheckDocumentSubmittedDate")     |
+| [programmeDocumentURI](#programmedocumenturi)                                                           | `string`      | Optional | can be null    | [NSIP Project](nsip-project-properties-programmedocumenturi.md "nsip-project.schema.json#/properties/programmeDocumentURI")                                                           |
+| [updatedProgrammeDocumentReceivedDate](#updatedprogrammedocumentreceiveddate)                           | `string`      | Optional | can be null    | [NSIP Project](nsip-project-properties-updatedprogrammedocumentreceiveddate.md "nsip-project.schema.json#/properties/updatedProgrammeDocumentReceivedDate")                           |
+| [programmeDocumentReviewedByEstDate](#programmedocumentreviewedbyestdate)                               | `string`      | Optional | can be null    | [NSIP Project](nsip-project-properties-programmedocumentreviewedbyestdate.md "nsip-project.schema.json#/properties/programmeDocumentReviewedByEstDate")                               |
+| [caseTeamIssuedCommentsDate](#caseteamissuedcommentsdate)                                               | `string`      | Optional | can be null    | [NSIP Project](nsip-project-properties-caseteamissuedcommentsdate.md "nsip-project.schema.json#/properties/caseTeamIssuedCommentsDate")                                               |
+| [subProjectType](#subprojecttype)                                                                       | `string`      | Optional | can be null    | [NSIP Project](nsip-project-properties-subprojecttype.md "nsip-project.schema.json#/properties/subProjectType")                                                                       |
+| [newMaturity](#newmaturity)                                                                             | `string`      | Optional | can be null    | [NSIP Project](nsip-project-properties-newmaturity.md "nsip-project.schema.json#/properties/newMaturity")                                                                             |
+| [statutoryConsultationPeriodEndDate](#statutoryconsultationperiodenddate)                               | `string`      | Optional | can be null    | [NSIP Project](nsip-project-properties-statutoryconsultationperiodenddate.md "nsip-project.schema.json#/properties/statutoryConsultationPeriodEndDate")                               |
+| [submissionOfDraftDocumentsDate](#submissionofdraftdocumentsdate)                                       | `string`      | Optional | can be null    | [NSIP Project](nsip-project-properties-submissionofdraftdocumentsdate.md "nsip-project.schema.json#/properties/submissionOfDraftDocumentsDate")                                       |
+| [numberBand2Inspectors](#numberband2inspectors)                                                         | `number`      | Optional | can be null    | [NSIP Project](nsip-project-properties-numberband2inspectors.md "nsip-project.schema.json#/properties/numberBand2Inspectors")                                                         |
+| [numberBand3Inspectors](#numberband3inspectors)                                                         | `number`      | Optional | can be null    | [NSIP Project](nsip-project-properties-numberband3inspectors.md "nsip-project.schema.json#/properties/numberBand3Inspectors")                                                         |
+| [memLastUpdated](#memlastupdated)                                                                       | `string`      | Optional | can be null    | [NSIP Project](nsip-project-properties-memlastupdated.md "nsip-project.schema.json#/properties/memLastUpdated")                                                                       |
+| [additionalComments](#additionalcomments)                                                               | `string`      | Optional | can be null    | [NSIP Project](nsip-project-properties-additionalcomments.md "nsip-project.schema.json#/properties/additionalComments")                                                               |
+| [operationsLeadIds](#operationsleadids)                                                                 | `array`       | Optional | cannot be null | [NSIP Project](nsip-project-properties-operationsleadids.md "nsip-project.schema.json#/properties/operationsLeadIds")                                                                 |
+| [operationsManagerIds](#operationsmanagerids)                                                           | `array`       | Optional | cannot be null | [NSIP Project](nsip-project-properties-operationsmanagerids.md "nsip-project.schema.json#/properties/operationsManagerIds")                                                           |
+| [caseManagerIds](#casemanagerids)                                                                       | `array`       | Optional | cannot be null | [NSIP Project](nsip-project-properties-casemanagerids.md "nsip-project.schema.json#/properties/caseManagerIds")                                                                       |
+| [leadInspectorIds](#leadinspectorids)                                                                   | `array`       | Optional | cannot be null | [NSIP Project](nsip-project-properties-leadinspectorids.md "nsip-project.schema.json#/properties/leadInspectorIds")                                                                   |
+| [environmentalServicesOfficerIds](#environmentalservicesofficerids)                                     | `array`       | Optional | cannot be null | [NSIP Project](nsip-project-properties-environmentalservicesofficerids.md "nsip-project.schema.json#/properties/environmentalServicesOfficerIds")                                     |
+| [legalOfficerIds](#legalofficerids)                                                                     | `array`       | Optional | cannot be null | [NSIP Project](nsip-project-properties-legalofficerids.md "nsip-project.schema.json#/properties/legalOfficerIds")                                                                     |
+| [meetings](#meetings)                                                                                   | `array`       | Optional | cannot be null | [NSIP Project](nsip-project-properties-meetings.md "nsip-project.schema.json#/properties/meetings")                                                                                   |
+| [invoices](#invoices)                                                                                   | `array`       | Optional | cannot be null | [NSIP Project](nsip-project-properties-invoices.md "nsip-project.schema.json#/properties/invoices")                                                                                   |
 | Additional Properties                                                                                   | Any           | Optional | can be null    |                                                                                                                                                                                       |
 
 ## caseId
@@ -222,7 +272,7 @@ Name of project in Welsh
 
 ## decision
 
-Decision: approved/refused/split-decision
+Decision outcome: approved/refused/split-decision/granted/partially\_consented/quashed/redetermination/withdrawn
 
 `decision`
 
@@ -242,12 +292,17 @@ Decision: approved/refused/split-decision
 
 **enum**: the value of this property must be equal to one of the following values:
 
-| Value              | Explanation |
-| :----------------- | :---------- |
-| `"approved"`       |             |
-| `"refused"`        |             |
-| `"split-decision"` |             |
-| `null`             |             |
+| Value                   | Explanation |
+| :---------------------- | :---------- |
+| `"approved"`            |             |
+| `"refused"`             |             |
+| `"split-decision"`      |             |
+| `"granted"`             |             |
+| `"partially_consented"` |             |
+| `"quashed"`             |             |
+| `"redetermination"`     |             |
+| `"withdrawn"`           |             |
+| `null`                  |             |
 
 ## publishStatus
 
@@ -2093,6 +2148,1833 @@ true
 false
 ```
 
+## courtDecisionDate
+
+Date of court decision
+
+`courtDecisionDate`
+
+* is optional
+
+* Type: `string`
+
+* can be null
+
+* defined in: [NSIP Project](nsip-project-properties-courtdecisiondate.md "nsip-project.schema.json#/properties/courtDecisionDate")
+
+### courtDecisionDate Type
+
+`string`
+
+### courtDecisionDate Constraints
+
+**date time**: the string must be a date time string, according to [RFC 3339, section 5.6](https://tools.ietf.org/html/rfc3339 "check the specification")
+
+### courtDecisionDate Examples
+
+```json
+"2023-07-27T20:30:00.000Z"
+```
+
+## courtDecisionOutcomeText
+
+Court decision outcome text; values include 'upheld','partially\_upheld','quashed','other:<Text>'
+
+`courtDecisionOutcomeText`
+
+* is optional
+
+* Type: `string`
+
+* can be null
+
+* defined in: [NSIP Project](nsip-project-properties-courtdecisionoutcometext.md "nsip-project.schema.json#/properties/courtDecisionOutcomeText")
+
+### courtDecisionOutcomeText Type
+
+`string`
+
+### courtDecisionOutcomeText Examples
+
+```json
+"upheld"
+```
+
+## decisionChallengeSubmissionDate
+
+Date of decision challenge submission
+
+`decisionChallengeSubmissionDate`
+
+* is optional
+
+* Type: `string`
+
+* can be null
+
+* defined in: [NSIP Project](nsip-project-properties-decisionchallengesubmissiondate.md "nsip-project.schema.json#/properties/decisionChallengeSubmissionDate")
+
+### decisionChallengeSubmissionDate Type
+
+`string`
+
+### decisionChallengeSubmissionDate Constraints
+
+**date time**: the string must be a date time string, according to [RFC 3339, section 5.6](https://tools.ietf.org/html/rfc3339 "check the specification")
+
+### decisionChallengeSubmissionDate Examples
+
+```json
+"2023-07-27T20:30:00.000Z"
+```
+
+## recommendation
+
+Recommendation
+
+`recommendation`
+
+* is optional
+
+* Type: `string`
+
+* can be null
+
+* defined in: [NSIP Project](nsip-project-properties-recommendation.md "nsip-project.schema.json#/properties/recommendation")
+
+### recommendation Type
+
+`string`
+
+### recommendation Constraints
+
+**enum**: the value of this property must be equal to one of the following values:
+
+| Value                         | Explanation |
+| :---------------------------- | :---------- |
+| `"recommend_consent"`         |             |
+| `"recommend_partial_consent"` |             |
+| `"recommend_refusal"`         |             |
+| `null`                        |             |
+
+### recommendation Examples
+
+```json
+"recommend_consent"
+```
+
+## inceptionMeetingDate
+
+Date of inception meeting
+
+`inceptionMeetingDate`
+
+* is optional
+
+* Type: `string`
+
+* can be null
+
+* defined in: [NSIP Project](nsip-project-properties-inceptionmeetingdate.md "nsip-project.schema.json#/properties/inceptionMeetingDate")
+
+### inceptionMeetingDate Type
+
+`string`
+
+### inceptionMeetingDate Constraints
+
+**date time**: the string must be a date time string, according to [RFC 3339, section 5.6](https://tools.ietf.org/html/rfc3339 "check the specification")
+
+### inceptionMeetingDate Examples
+
+```json
+"2023-07-27T20:30:00.000Z"
+```
+
+## draftDocumentSubmissionDate
+
+Date for submission of draft documents
+
+`draftDocumentSubmissionDate`
+
+* is optional
+
+* Type: `string`
+
+* can be null
+
+* defined in: [NSIP Project](nsip-project-properties-draftdocumentsubmissiondate.md "nsip-project.schema.json#/properties/draftDocumentSubmissionDate")
+
+### draftDocumentSubmissionDate Type
+
+`string`
+
+### draftDocumentSubmissionDate Constraints
+
+**date time**: the string must be a date time string, according to [RFC 3339, section 5.6](https://tools.ietf.org/html/rfc3339 "check the specification")
+
+### draftDocumentSubmissionDate Examples
+
+```json
+"2023-07-27T20:30:00.000Z"
+```
+
+## programmeDocumentSubmissionDate
+
+Programme document submission date
+
+`programmeDocumentSubmissionDate`
+
+* is optional
+
+* Type: `string`
+
+* can be null
+
+* defined in: [NSIP Project](nsip-project-properties-programmedocumentsubmissiondate.md "nsip-project.schema.json#/properties/programmeDocumentSubmissionDate")
+
+### programmeDocumentSubmissionDate Type
+
+`string`
+
+### programmeDocumentSubmissionDate Constraints
+
+**date time**: the string must be a date time string, according to [RFC 3339, section 5.6](https://tools.ietf.org/html/rfc3339 "check the specification")
+
+### programmeDocumentSubmissionDate Examples
+
+```json
+"2023-07-27T20:30:00.000Z"
+```
+
+## tier
+
+Tier
+
+`tier`
+
+* is optional
+
+* Type: `string`
+
+* can be null
+
+* defined in: [NSIP Project](nsip-project-properties-tier.md "nsip-project.schema.json#/properties/tier")
+
+### tier Type
+
+`string`
+
+### tier Constraints
+
+**enum**: the value of this property must be equal to one of the following values:
+
+| Value        | Explanation |
+| :----------- | :---------- |
+| `"basic"`    |             |
+| `"standard"` |             |
+| `"enhanced"` |             |
+| `null`       |             |
+
+### tier Examples
+
+```json
+"basic"
+```
+
+## s61SummaryURI
+
+Link to s61 summary
+
+`s61SummaryURI`
+
+* is optional
+
+* Type: `string`
+
+* can be null
+
+* defined in: [NSIP Project](nsip-project-properties-s61summaryuri.md "nsip-project.schema.json#/properties/s61SummaryURI")
+
+### s61SummaryURI Type
+
+`string`
+
+### s61SummaryURI Examples
+
+```json
+"s61.sharepoint.com/"
+```
+
+## estimatedScopingSubmissionDate
+
+Estimated scoping submission date
+
+`estimatedScopingSubmissionDate`
+
+* is optional
+
+* Type: `string`
+
+* can be null
+
+* defined in: [NSIP Project](nsip-project-properties-estimatedscopingsubmissiondate.md "nsip-project.schema.json#/properties/estimatedScopingSubmissionDate")
+
+### estimatedScopingSubmissionDate Type
+
+`string`
+
+### estimatedScopingSubmissionDate Constraints
+
+**date time**: the string must be a date time string, according to [RFC 3339, section 5.6](https://tools.ietf.org/html/rfc3339 "check the specification")
+
+### estimatedScopingSubmissionDate Examples
+
+```json
+"2023-07-27T20:30:00.000Z"
+```
+
+## consultationMilestoneAdequacyDate
+
+Adequacy of Consultation Milestone
+
+`consultationMilestoneAdequacyDate`
+
+* is optional
+
+* Type: `string`
+
+* can be null
+
+* defined in: [NSIP Project](nsip-project-properties-consultationmilestoneadequacydate.md "nsip-project.schema.json#/properties/consultationMilestoneAdequacyDate")
+
+### consultationMilestoneAdequacyDate Type
+
+`string`
+
+### consultationMilestoneAdequacyDate Constraints
+
+**date time**: the string must be a date time string, according to [RFC 3339, section 5.6](https://tools.ietf.org/html/rfc3339 "check the specification")
+
+### consultationMilestoneAdequacyDate Examples
+
+```json
+"2023-07-27T20:30:00.000Z"
+```
+
+## planProcessEvidence
+
+Evidence plan process
+
+`planProcessEvidence`
+
+* is optional
+
+* Type: `boolean`
+
+* can be null
+
+* defined in: [NSIP Project](nsip-project-properties-planprocessevidence.md "nsip-project.schema.json#/properties/planProcessEvidence")
+
+### planProcessEvidence Type
+
+`boolean`
+
+### planProcessEvidence Examples
+
+```json
+true
+```
+
+## issuesTracker
+
+Issues tracker
+
+`issuesTracker`
+
+* is optional
+
+* Type: `string`
+
+* can be null
+
+* defined in: [NSIP Project](nsip-project-properties-issuestracker.md "nsip-project.schema.json#/properties/issuesTracker")
+
+### issuesTracker Type
+
+`string`
+
+### issuesTracker Examples
+
+```json
+"tracker.sharepoint.com/"
+```
+
+## essentialFastTrackComponents
+
+Essential fast track components
+
+`essentialFastTrackComponents`
+
+* is optional
+
+* Type: `boolean`
+
+* can be null
+
+* defined in: [NSIP Project](nsip-project-properties-essentialfasttrackcomponents.md "nsip-project.schema.json#/properties/essentialFastTrackComponents")
+
+### essentialFastTrackComponents Type
+
+`boolean`
+
+### essentialFastTrackComponents Examples
+
+```json
+true
+```
+
+## principalAreaDisagreementSummaryStmt
+
+Principal area disagreement summary statement (PADSS)
+
+`principalAreaDisagreementSummaryStmt`
+
+* is optional
+
+* Type: `string`
+
+* can be null
+
+* defined in: [NSIP Project](nsip-project-properties-principalareadisagreementsummarystmt.md "nsip-project.schema.json#/properties/principalAreaDisagreementSummaryStmt")
+
+### principalAreaDisagreementSummaryStmt Type
+
+`string`
+
+### principalAreaDisagreementSummaryStmt Constraints
+
+**enum**: the value of this property must be equal to one of the following values:
+
+| Value                      | Explanation |
+| :------------------------- | :---------- |
+| `"submitted_by_applicant"` |             |
+| `"awaiting_submission"`    |             |
+| `"not_applicable"`         |             |
+| `null`                     |             |
+
+### principalAreaDisagreementSummaryStmt Examples
+
+```json
+"submitted_by_applicant"
+```
+
+## principalAreaDisagreementSummaryStmtSubmittedDate
+
+Principal area disagreement summary statement (PADSS) Submitted date
+
+`principalAreaDisagreementSummaryStmtSubmittedDate`
+
+* is optional
+
+* Type: `string`
+
+* can be null
+
+* defined in: [NSIP Project](nsip-project-properties-principalareadisagreementsummarystmtsubmitteddate.md "nsip-project.schema.json#/properties/principalAreaDisagreementSummaryStmtSubmittedDate")
+
+### principalAreaDisagreementSummaryStmtSubmittedDate Type
+
+`string`
+
+### principalAreaDisagreementSummaryStmtSubmittedDate Constraints
+
+**date time**: the string must be a date time string, according to [RFC 3339, section 5.6](https://tools.ietf.org/html/rfc3339 "check the specification")
+
+### principalAreaDisagreementSummaryStmtSubmittedDate Examples
+
+```json
+"2023-07-27T20:30:00.000Z"
+```
+
+## policyComplianceDocument
+
+Policy compliance document (PCD)
+
+`policyComplianceDocument`
+
+* is optional
+
+* Type: `string`
+
+* can be null
+
+* defined in: [NSIP Project](nsip-project-properties-policycompliancedocument.md "nsip-project.schema.json#/properties/policyComplianceDocument")
+
+### policyComplianceDocument Type
+
+`string`
+
+### policyComplianceDocument Constraints
+
+**enum**: the value of this property must be equal to one of the following values:
+
+| Value                      | Explanation |
+| :------------------------- | :---------- |
+| `"submitted_by_applicant"` |             |
+| `"awaiting_submission"`    |             |
+| `"not_applicable"`         |             |
+| `null`                     |             |
+
+### policyComplianceDocument Examples
+
+```json
+"submitted_by_applicant"
+```
+
+## policyComplianceDocumentSubmittedDate
+
+Policy compliance document (PCD) Submitted Date
+
+`policyComplianceDocumentSubmittedDate`
+
+* is optional
+
+* Type: `string`
+
+* can be null
+
+* defined in: [NSIP Project](nsip-project-properties-policycompliancedocumentsubmitteddate.md "nsip-project.schema.json#/properties/policyComplianceDocumentSubmittedDate")
+
+### policyComplianceDocumentSubmittedDate Type
+
+`string`
+
+### policyComplianceDocumentSubmittedDate Constraints
+
+**date time**: the string must be a date time string, according to [RFC 3339, section 5.6](https://tools.ietf.org/html/rfc3339 "check the specification")
+
+### policyComplianceDocumentSubmittedDate Examples
+
+```json
+"2023-07-27T20:30:00.000Z"
+```
+
+## designApproachDocument
+
+Design approach document (DAD)
+
+`designApproachDocument`
+
+* is optional
+
+* Type: `string`
+
+* can be null
+
+* defined in: [NSIP Project](nsip-project-properties-designapproachdocument.md "nsip-project.schema.json#/properties/designApproachDocument")
+
+### designApproachDocument Type
+
+`string`
+
+### designApproachDocument Constraints
+
+**enum**: the value of this property must be equal to one of the following values:
+
+| Value                      | Explanation |
+| :------------------------- | :---------- |
+| `"submitted_by_applicant"` |             |
+| `"awaiting_submission"`    |             |
+| `"not_applicable"`         |             |
+| `null`                     |             |
+
+### designApproachDocument Examples
+
+```json
+"submitted_by_applicant"
+```
+
+## designApproachDocumentSubmittedDate
+
+Design approach document (DAD) Submitted Date
+
+`designApproachDocumentSubmittedDate`
+
+* is optional
+
+* Type: `string`
+
+* can be null
+
+* defined in: [NSIP Project](nsip-project-properties-designapproachdocumentsubmitteddate.md "nsip-project.schema.json#/properties/designApproachDocumentSubmittedDate")
+
+### designApproachDocumentSubmittedDate Type
+
+`string`
+
+### designApproachDocumentSubmittedDate Constraints
+
+**date time**: the string must be a date time string, according to [RFC 3339, section 5.6](https://tools.ietf.org/html/rfc3339 "check the specification")
+
+### designApproachDocumentSubmittedDate Examples
+
+```json
+"2023-07-27T20:30:00.000Z"
+```
+
+## matureOutlineControlDocument
+
+Mature outline control documents
+
+`matureOutlineControlDocument`
+
+* is optional
+
+* Type: `string`
+
+* can be null
+
+* defined in: [NSIP Project](nsip-project-properties-matureoutlinecontroldocument.md "nsip-project.schema.json#/properties/matureOutlineControlDocument")
+
+### matureOutlineControlDocument Type
+
+`string`
+
+### matureOutlineControlDocument Constraints
+
+**enum**: the value of this property must be equal to one of the following values:
+
+| Value                      | Explanation |
+| :------------------------- | :---------- |
+| `"submitted_by_applicant"` |             |
+| `"awaiting_submission"`    |             |
+| `"not_applicable"`         |             |
+| `null`                     |             |
+
+### matureOutlineControlDocument Examples
+
+```json
+"submitted_by_applicant"
+```
+
+## matureOutlineControlDocumentSubmittedDate
+
+Mature outline control documents Submitted Date
+
+`matureOutlineControlDocumentSubmittedDate`
+
+* is optional
+
+* Type: `string`
+
+* can be null
+
+* defined in: [NSIP Project](nsip-project-properties-matureoutlinecontroldocumentsubmitteddate.md "nsip-project.schema.json#/properties/matureOutlineControlDocumentSubmittedDate")
+
+### matureOutlineControlDocumentSubmittedDate Type
+
+`string`
+
+### matureOutlineControlDocumentSubmittedDate Constraints
+
+**date time**: the string must be a date time string, according to [RFC 3339, section 5.6](https://tools.ietf.org/html/rfc3339 "check the specification")
+
+### matureOutlineControlDocumentSubmittedDate Examples
+
+```json
+"2023-07-27T20:30:00.000Z"
+```
+
+## caAndTpEvidence
+
+CA and TP evidence
+
+`caAndTpEvidence`
+
+* is optional
+
+* Type: `string`
+
+* can be null
+
+* defined in: [NSIP Project](nsip-project-properties-caandtpevidence.md "nsip-project.schema.json#/properties/caAndTpEvidence")
+
+### caAndTpEvidence Type
+
+`string`
+
+### caAndTpEvidence Constraints
+
+**enum**: the value of this property must be equal to one of the following values:
+
+| Value                      | Explanation |
+| :------------------------- | :---------- |
+| `"submitted_by_applicant"` |             |
+| `"awaiting_submission"`    |             |
+| `"not_applicable"`         |             |
+| `null`                     |             |
+
+### caAndTpEvidence Examples
+
+```json
+"submitted_by_applicant"
+```
+
+## caAndTpEvidenceSubmittedDate
+
+CA and TP evidence Submitted Date
+
+`caAndTpEvidenceSubmittedDate`
+
+* is optional
+
+* Type: `string`
+
+* can be null
+
+* defined in: [NSIP Project](nsip-project-properties-caandtpevidencesubmitteddate.md "nsip-project.schema.json#/properties/caAndTpEvidenceSubmittedDate")
+
+### caAndTpEvidenceSubmittedDate Type
+
+`string`
+
+### caAndTpEvidenceSubmittedDate Constraints
+
+**date time**: the string must be a date time string, according to [RFC 3339, section 5.6](https://tools.ietf.org/html/rfc3339 "check the specification")
+
+### caAndTpEvidenceSubmittedDate Examples
+
+```json
+"2023-07-27T20:30:00.000Z"
+```
+
+## publicSectorEqualityDuty
+
+Public sector equality duty (PSED)
+
+`publicSectorEqualityDuty`
+
+* is optional
+
+* Type: `string`
+
+* can be null
+
+* defined in: [NSIP Project](nsip-project-properties-publicsectorequalityduty.md "nsip-project.schema.json#/properties/publicSectorEqualityDuty")
+
+### publicSectorEqualityDuty Type
+
+`string`
+
+### publicSectorEqualityDuty Constraints
+
+**enum**: the value of this property must be equal to one of the following values:
+
+| Value                      | Explanation |
+| :------------------------- | :---------- |
+| `"submitted_by_applicant"` |             |
+| `"awaiting_submission"`    |             |
+| `"not_applicable"`         |             |
+| `null`                     |             |
+
+### publicSectorEqualityDuty Examples
+
+```json
+"submitted_by_applicant"
+```
+
+## publicSectorEqualityDutySubmittedDate
+
+Public sector equality duty (PSED) Submitted Date
+
+`publicSectorEqualityDutySubmittedDate`
+
+* is optional
+
+* Type: `string`
+
+* can be null
+
+* defined in: [NSIP Project](nsip-project-properties-publicsectorequalitydutysubmitteddate.md "nsip-project.schema.json#/properties/publicSectorEqualityDutySubmittedDate")
+
+### publicSectorEqualityDutySubmittedDate Type
+
+`string`
+
+### publicSectorEqualityDutySubmittedDate Constraints
+
+**date time**: the string must be a date time string, according to [RFC 3339, section 5.6](https://tools.ietf.org/html/rfc3339 "check the specification")
+
+### publicSectorEqualityDutySubmittedDate Examples
+
+```json
+"2023-07-27T20:30:00.000Z"
+```
+
+## fastTrackAdmissionDocument
+
+Fast track admission document
+
+`fastTrackAdmissionDocument`
+
+* is optional
+
+* Type: `string`
+
+* can be null
+
+* defined in: [NSIP Project](nsip-project-properties-fasttrackadmissiondocument.md "nsip-project.schema.json#/properties/fastTrackAdmissionDocument")
+
+### fastTrackAdmissionDocument Type
+
+`string`
+
+### fastTrackAdmissionDocument Constraints
+
+**enum**: the value of this property must be equal to one of the following values:
+
+| Value                      | Explanation |
+| :------------------------- | :---------- |
+| `"submitted_by_applicant"` |             |
+| `"awaiting_submission"`    |             |
+| `"not_applicable"`         |             |
+| `null`                     |             |
+
+### fastTrackAdmissionDocument Examples
+
+```json
+"submitted_by_applicant"
+```
+
+## fastTrackAdmissionDocumentSubmittedDate
+
+Fast track admission document Submitted Date
+
+`fastTrackAdmissionDocumentSubmittedDate`
+
+* is optional
+
+* Type: `string`
+
+* can be null
+
+* defined in: [NSIP Project](nsip-project-properties-fasttrackadmissiondocumentsubmitteddate.md "nsip-project.schema.json#/properties/fastTrackAdmissionDocumentSubmittedDate")
+
+### fastTrackAdmissionDocumentSubmittedDate Type
+
+`string`
+
+### fastTrackAdmissionDocumentSubmittedDate Constraints
+
+**date time**: the string must be a date time string, according to [RFC 3339, section 5.6](https://tools.ietf.org/html/rfc3339 "check the specification")
+
+### fastTrackAdmissionDocumentSubmittedDate Examples
+
+```json
+"2023-07-27T20:30:00.000Z"
+```
+
+## multipartyApplicationCheckDocument
+
+Multiparty application readiness gate-check (trial)
+
+`multipartyApplicationCheckDocument`
+
+* is optional
+
+* Type: `string`
+
+* can be null
+
+* defined in: [NSIP Project](nsip-project-properties-multipartyapplicationcheckdocument.md "nsip-project.schema.json#/properties/multipartyApplicationCheckDocument")
+
+### multipartyApplicationCheckDocument Type
+
+`string`
+
+### multipartyApplicationCheckDocument Constraints
+
+**enum**: the value of this property must be equal to one of the following values:
+
+| Value                      | Explanation |
+| :------------------------- | :---------- |
+| `"submitted_by_applicant"` |             |
+| `"awaiting_submission"`    |             |
+| `"not_applicable"`         |             |
+| `null`                     |             |
+
+### multipartyApplicationCheckDocument Examples
+
+```json
+"submitted_by_applicant"
+```
+
+## multipartyApplicationCheckDocumentSubmittedDate
+
+Multiparty application readiness gate-check Submitted Date (trial)
+
+`multipartyApplicationCheckDocumentSubmittedDate`
+
+* is optional
+
+* Type: `string`
+
+* can be null
+
+* defined in: [NSIP Project](nsip-project-properties-multipartyapplicationcheckdocumentsubmitteddate.md "nsip-project.schema.json#/properties/multipartyApplicationCheckDocumentSubmittedDate")
+
+### multipartyApplicationCheckDocumentSubmittedDate Type
+
+`string`
+
+### multipartyApplicationCheckDocumentSubmittedDate Constraints
+
+**date time**: the string must be a date time string, according to [RFC 3339, section 5.6](https://tools.ietf.org/html/rfc3339 "check the specification")
+
+### multipartyApplicationCheckDocumentSubmittedDate Examples
+
+```json
+"2023-07-27T20:30:00.000Z"
+```
+
+## programmeDocumentURI
+
+Link to programme document
+
+`programmeDocumentURI`
+
+* is optional
+
+* Type: `string`
+
+* can be null
+
+* defined in: [NSIP Project](nsip-project-properties-programmedocumenturi.md "nsip-project.schema.json#/properties/programmeDocumentURI")
+
+### programmeDocumentURI Type
+
+`string`
+
+### programmeDocumentURI Examples
+
+```json
+"progdoc.sharepoint.com/"
+```
+
+## updatedProgrammeDocumentReceivedDate
+
+Date updated programme document is received
+
+`updatedProgrammeDocumentReceivedDate`
+
+* is optional
+
+* Type: `string`
+
+* can be null
+
+* defined in: [NSIP Project](nsip-project-properties-updatedprogrammedocumentreceiveddate.md "nsip-project.schema.json#/properties/updatedProgrammeDocumentReceivedDate")
+
+### updatedProgrammeDocumentReceivedDate Type
+
+`string`
+
+### updatedProgrammeDocumentReceivedDate Constraints
+
+**date time**: the string must be a date time string, according to [RFC 3339, section 5.6](https://tools.ietf.org/html/rfc3339 "check the specification")
+
+### updatedProgrammeDocumentReceivedDate Examples
+
+```json
+"2023-07-27T20:30:00.000Z"
+```
+
+## programmeDocumentReviewedByEstDate
+
+Date programme document reviewed by EST
+
+`programmeDocumentReviewedByEstDate`
+
+* is optional
+
+* Type: `string`
+
+* can be null
+
+* defined in: [NSIP Project](nsip-project-properties-programmedocumentreviewedbyestdate.md "nsip-project.schema.json#/properties/programmeDocumentReviewedByEstDate")
+
+### programmeDocumentReviewedByEstDate Type
+
+`string`
+
+### programmeDocumentReviewedByEstDate Constraints
+
+**date time**: the string must be a date time string, according to [RFC 3339, section 5.6](https://tools.ietf.org/html/rfc3339 "check the specification")
+
+### programmeDocumentReviewedByEstDate Examples
+
+```json
+"2023-07-27T20:30:00.000Z"
+```
+
+## caseTeamIssuedCommentsDate
+
+Date case team issued comments on programme document
+
+`caseTeamIssuedCommentsDate`
+
+* is optional
+
+* Type: `string`
+
+* can be null
+
+* defined in: [NSIP Project](nsip-project-properties-caseteamissuedcommentsdate.md "nsip-project.schema.json#/properties/caseTeamIssuedCommentsDate")
+
+### caseTeamIssuedCommentsDate Type
+
+`string`
+
+### caseTeamIssuedCommentsDate Constraints
+
+**date time**: the string must be a date time string, according to [RFC 3339, section 5.6](https://tools.ietf.org/html/rfc3339 "check the specification")
+
+### caseTeamIssuedCommentsDate Examples
+
+```json
+"2023-07-27T20:30:00.000Z"
+```
+
+## subProjectType
+
+Project type
+
+`subProjectType`
+
+* is optional
+
+* Type: `string`
+
+* can be null
+
+* defined in: [NSIP Project](nsip-project-properties-subprojecttype.md "nsip-project.schema.json#/properties/subProjectType")
+
+### subProjectType Type
+
+`string`
+
+### subProjectType Constraints
+
+**enum**: the value of this property must be equal to one of the following values:
+
+| Value                      | Explanation |
+| :------------------------- | :---------- |
+| `"energy_from_waste"`      |             |
+| `"gas_power_station"`      |             |
+| `"hydrogen_power_station"` |             |
+| `"nuclear"`                |             |
+| `"offshore_wind"`          |             |
+| `"onshore_wind"`           |             |
+| `"solar"`                  |             |
+| `null`                     |             |
+
+### subProjectType Examples
+
+```json
+"solar"
+```
+
+## newMaturity
+
+New maturity
+
+`newMaturity`
+
+* is optional
+
+* Type: `string`
+
+* can be null
+
+* defined in: [NSIP Project](nsip-project-properties-newmaturity.md "nsip-project.schema.json#/properties/newMaturity")
+
+### newMaturity Type
+
+`string`
+
+### newMaturity Constraints
+
+**enum**: the value of this property must be equal to one of the following values:
+
+| Value  | Explanation |
+| :----- | :---------- |
+| `"a"`  |             |
+| `"b"`  |             |
+| `"c"`  |             |
+| `"d"`  |             |
+| `"e"`  |             |
+| `"f"`  |             |
+| `"g"`  |             |
+| `null` |             |
+
+### newMaturity Examples
+
+```json
+"a"
+```
+
+## statutoryConsultationPeriodEndDate
+
+Statutory consultation period end date
+
+`statutoryConsultationPeriodEndDate`
+
+* is optional
+
+* Type: `string`
+
+* can be null
+
+* defined in: [NSIP Project](nsip-project-properties-statutoryconsultationperiodenddate.md "nsip-project.schema.json#/properties/statutoryConsultationPeriodEndDate")
+
+### statutoryConsultationPeriodEndDate Type
+
+`string`
+
+### statutoryConsultationPeriodEndDate Constraints
+
+**date time**: the string must be a date time string, according to [RFC 3339, section 5.6](https://tools.ietf.org/html/rfc3339 "check the specification")
+
+### statutoryConsultationPeriodEndDate Examples
+
+```json
+"2023-07-27T20:30:00.000Z"
+```
+
+## submissionOfDraftDocumentsDate
+
+Date for submission of draft documents
+
+`submissionOfDraftDocumentsDate`
+
+* is optional
+
+* Type: `string`
+
+* can be null
+
+* defined in: [NSIP Project](nsip-project-properties-submissionofdraftdocumentsdate.md "nsip-project.schema.json#/properties/submissionOfDraftDocumentsDate")
+
+### submissionOfDraftDocumentsDate Type
+
+`string`
+
+### submissionOfDraftDocumentsDate Constraints
+
+**date time**: the string must be a date time string, according to [RFC 3339, section 5.6](https://tools.ietf.org/html/rfc3339 "check the specification")
+
+### submissionOfDraftDocumentsDate Examples
+
+```json
+"2023-07-27T20:30:00.000Z"
+```
+
+## numberBand2Inspectors
+
+Number of band 2 inspectors
+
+`numberBand2Inspectors`
+
+* is optional
+
+* Type: `number`
+
+* can be null
+
+* defined in: [NSIP Project](nsip-project-properties-numberband2inspectors.md "nsip-project.schema.json#/properties/numberBand2Inspectors")
+
+### numberBand2Inspectors Type
+
+`number`
+
+### numberBand2Inspectors Examples
+
+```json
+1
+```
+
+## numberBand3Inspectors
+
+Number of band 3 inspectors
+
+`numberBand3Inspectors`
+
+* is optional
+
+* Type: `number`
+
+* can be null
+
+* defined in: [NSIP Project](nsip-project-properties-numberband3inspectors.md "nsip-project.schema.json#/properties/numberBand3Inspectors")
+
+### numberBand3Inspectors Type
+
+`number`
+
+### numberBand3Inspectors Examples
+
+```json
+2
+```
+
+## memLastUpdated
+
+MEM (last updated)
+
+`memLastUpdated`
+
+* is optional
+
+* Type: `string`
+
+* can be null
+
+* defined in: [NSIP Project](nsip-project-properties-memlastupdated.md "nsip-project.schema.json#/properties/memLastUpdated")
+
+### memLastUpdated Type
+
+`string`
+
+### memLastUpdated Constraints
+
+**date time**: the string must be a date time string, according to [RFC 3339, section 5.6](https://tools.ietf.org/html/rfc3339 "check the specification")
+
+### memLastUpdated Examples
+
+```json
+"2023-07-27T20:30:00.000Z"
+```
+
+## additionalComments
+
+Additional comments
+
+`additionalComments`
+
+* is optional
+
+* Type: `string`
+
+* can be null
+
+* defined in: [NSIP Project](nsip-project-properties-additionalcomments.md "nsip-project.schema.json#/properties/additionalComments")
+
+### additionalComments Type
+
+`string`
+
+### additionalComments Examples
+
+```json
+"Very likely to change tier from standard to basic after April 2025"
+```
+
+## operationsLeadIds
+
+Maps to \[Employee].\[EmployeeID].
+
+`operationsLeadIds`
+
+* is optional
+
+* Type: `string[]`
+
+* cannot be null
+
+* defined in: [NSIP Project](nsip-project-properties-operationsleadids.md "nsip-project.schema.json#/properties/operationsLeadIds")
+
+### operationsLeadIds Type
+
+`string[]`
+
+### operationsLeadIds Examples
+
+```json
+[
+  "9bee96d2-00fe-4269-9d01-8c66",
+  "9bee96d2-00fe-4269-9d01-8c22"
+]
+```
+
+## operationsManagerIds
+
+New NSIP role, Maps to \[Employee].\[EmployeeID]
+
+`operationsManagerIds`
+
+* is optional
+
+* Type: `string[]`
+
+* cannot be null
+
+* defined in: [NSIP Project](nsip-project-properties-operationsmanagerids.md "nsip-project.schema.json#/properties/operationsManagerIds")
+
+### operationsManagerIds Type
+
+`string[]`
+
+### operationsManagerIds Examples
+
+```json
+[
+  "9bee96d2-00fe-4269-9d01-8c66",
+  "9bee96d2-00fe-4269-9d01-8c22"
+]
+```
+
+## caseManagerIds
+
+Maps to \[Employee].\[EmployeeID].
+
+`caseManagerIds`
+
+* is optional
+
+* Type: `string[]`
+
+* cannot be null
+
+* defined in: [NSIP Project](nsip-project-properties-casemanagerids.md "nsip-project.schema.json#/properties/caseManagerIds")
+
+### caseManagerIds Type
+
+`string[]`
+
+### caseManagerIds Examples
+
+```json
+[
+  "9bee96d2-00fe-4269-9d01-8c66",
+  "9bee96d2-00fe-4269-9d01-8c22"
+]
+```
+
+## leadInspectorIds
+
+Maps to \[Employee].\[EmployeeID].
+
+`leadInspectorIds`
+
+* is optional
+
+* Type: `string[]`
+
+* cannot be null
+
+* defined in: [NSIP Project](nsip-project-properties-leadinspectorids.md "nsip-project.schema.json#/properties/leadInspectorIds")
+
+### leadInspectorIds Type
+
+`string[]`
+
+### leadInspectorIds Examples
+
+```json
+[
+  "9bee96d2-00fe-4269-9d01-8c66",
+  "9bee96d2-00fe-4269-9d01-8c22"
+]
+```
+
+## environmentalServicesOfficerIds
+
+Maps to \[Employee].\[EmployeeID].
+
+`environmentalServicesOfficerIds`
+
+* is optional
+
+* Type: `string[]`
+
+* cannot be null
+
+* defined in: [NSIP Project](nsip-project-properties-environmentalservicesofficerids.md "nsip-project.schema.json#/properties/environmentalServicesOfficerIds")
+
+### environmentalServicesOfficerIds Type
+
+`string[]`
+
+### environmentalServicesOfficerIds Examples
+
+```json
+[
+  "9bee96d2-00fe-4269-9d01-8c66",
+  "9bee96d2-00fe-4269-9d01-8c22"
+]
+```
+
+## legalOfficerIds
+
+Maps to \[Employee].\[EmployeeID].
+
+`legalOfficerIds`
+
+* is optional
+
+* Type: `string[]`
+
+* cannot be null
+
+* defined in: [NSIP Project](nsip-project-properties-legalofficerids.md "nsip-project.schema.json#/properties/legalOfficerIds")
+
+### legalOfficerIds Type
+
+`string[]`
+
+### legalOfficerIds Examples
+
+```json
+[
+  "9bee96d2-00fe-4269-9d01-8c66",
+  "9bee96d2-00fe-4269-9d01-8c22"
+]
+```
+
+## meetings
+
+Collection of meetings associated with this project
+
+`meetings`
+
+* is optional
+
+* Type: `object[]` ([Details](nsip-project-defs-meeting.md))
+
+* cannot be null
+
+* defined in: [NSIP Project](nsip-project-properties-meetings.md "nsip-project.schema.json#/properties/meetings")
+
+### meetings Type
+
+`object[]` ([Details](nsip-project-defs-meeting.md))
+
+## invoices
+
+Collection of invoices associated with this project
+
+`invoices`
+
+* is optional
+
+* Type: `object[]` ([Details](nsip-project-defs-invoice.md))
+
+* cannot be null
+
+* defined in: [NSIP Project](nsip-project-properties-invoices.md "nsip-project.schema.json#/properties/invoices")
+
+### invoices Type
+
+`object[]` ([Details](nsip-project-defs-invoice.md))
+
 ## Additional Properties
+
+Additional properties are allowed and do not have to follow a specific schema
+
+# NSIP Project Definitions
+
+## Definitions group meeting
+
+Reference this group by using
+
+```json
+{"$ref":"nsip-project.schema.json#/$defs/meeting"}
+```
+
+| Property                                              | Type     | Required | Nullable    | Defined by                                                                                                                                                     |
+| :---------------------------------------------------- | :------- | :------- | :---------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [meetingAgenda](#meetingagenda)                       | `string` | Optional | can be null | [NSIP Project](nsip-project-defs-meeting-properties-meetingagenda.md "nsip-project.schema.json#/$defs/meeting/properties/meetingAgenda")                       |
+| [planningInspectorateRole](#planninginspectoraterole) | `string` | Optional | can be null | [NSIP Project](nsip-project-defs-meeting-properties-planninginspectoraterole.md "nsip-project.schema.json#/$defs/meeting/properties/planningInspectorateRole") |
+| [meetingDate](#meetingdate)                           | `string` | Optional | can be null | [NSIP Project](nsip-project-defs-meeting-properties-meetingdate.md "nsip-project.schema.json#/$defs/meeting/properties/meetingDate")                           |
+| [meetingType](#meetingtype)                           | `string` | Optional | can be null | [NSIP Project](nsip-project-defs-meeting-properties-meetingtype.md "nsip-project.schema.json#/$defs/meeting/properties/meetingType")                           |
+| Additional Properties                                 | Any      | Optional | can be null |                                                                                                                                                                |
+
+### meetingAgenda
+
+Meeting agenda
+
+`meetingAgenda`
+
+* is optional
+
+* Type: `string`
+
+* can be null
+
+* defined in: [NSIP Project](nsip-project-defs-meeting-properties-meetingagenda.md "nsip-project.schema.json#/$defs/meeting/properties/meetingAgenda")
+
+#### meetingAgenda Type
+
+`string`
+
+#### meetingAgenda Examples
+
+```json
+"Flood Risk Assessment (FRA)"
+```
+
+### planningInspectorateRole
+
+Planning Inspectorate role
+
+`planningInspectorateRole`
+
+* is optional
+
+* Type: `string`
+
+* can be null
+
+* defined in: [NSIP Project](nsip-project-defs-meeting-properties-planninginspectoraterole.md "nsip-project.schema.json#/$defs/meeting/properties/planningInspectorateRole")
+
+#### planningInspectorateRole Type
+
+`string`
+
+#### planningInspectorateRole Constraints
+
+**enum**: the value of this property must be equal to one of the following values:
+
+| Value           | Explanation |
+| :-------------- | :---------- |
+| `"facilitator"` |             |
+| `"advisor"`     |             |
+| `"observer"`    |             |
+| `null`          |             |
+
+#### planningInspectorateRole Examples
+
+```json
+"facilitator"
+```
+
+### meetingDate
+
+Meeting date
+
+`meetingDate`
+
+* is optional
+
+* Type: `string`
+
+* can be null
+
+* defined in: [NSIP Project](nsip-project-defs-meeting-properties-meetingdate.md "nsip-project.schema.json#/$defs/meeting/properties/meetingDate")
+
+#### meetingDate Type
+
+`string`
+
+#### meetingDate Constraints
+
+**date time**: the string must be a date time string, according to [RFC 3339, section 5.6](https://tools.ietf.org/html/rfc3339 "check the specification")
+
+#### meetingDate Examples
+
+```json
+"2023-07-27T20:30:00.000Z"
+```
+
+### meetingType
+
+Type of Meeting
+
+`meetingType`
+
+* is optional
+
+* Type: `string`
+
+* can be null
+
+* defined in: [NSIP Project](nsip-project-defs-meeting-properties-meetingtype.md "nsip-project.schema.json#/$defs/meeting/properties/meetingType")
+
+#### meetingType Type
+
+`string`
+
+### Additional Properties
+
+Additional properties are allowed and do not have to follow a specific schema
+
+## Definitions group invoice
+
+Reference this group by using
+
+```json
+{"$ref":"nsip-project.schema.json#/$defs/invoice"}
+```
+
+| Property                                          | Type     | Required | Nullable       | Defined by                                                                                                                                                 |
+| :------------------------------------------------ | :------- | :------- | :------------- | :--------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [invoiceStage](#invoicestage)                     | `string` | Optional | can be null    | [NSIP Project](nsip-project-defs-invoice-properties-invoicestage.md "nsip-project.schema.json#/$defs/invoice/properties/invoiceStage")                     |
+| [invoiceNumber](#invoicenumber)                   | `string` | Required | cannot be null | [NSIP Project](nsip-project-defs-invoice-properties-invoicenumber.md "nsip-project.schema.json#/$defs/invoice/properties/invoiceNumber")                   |
+| [amountDue](#amountdue)                           | `number` | Required | cannot be null | [NSIP Project](nsip-project-defs-invoice-properties-amountdue.md "nsip-project.schema.json#/$defs/invoice/properties/amountDue")                           |
+| [paymentDueDate](#paymentduedate)                 | `string` | Optional | can be null    | [NSIP Project](nsip-project-defs-invoice-properties-paymentduedate.md "nsip-project.schema.json#/$defs/invoice/properties/paymentDueDate")                 |
+| [invoicedDate](#invoiceddate)                     | `string` | Optional | can be null    | [NSIP Project](nsip-project-defs-invoice-properties-invoiceddate.md "nsip-project.schema.json#/$defs/invoice/properties/invoicedDate")                     |
+| [paymentDate](#paymentdate)                       | `string` | Optional | can be null    | [NSIP Project](nsip-project-defs-invoice-properties-paymentdate.md "nsip-project.schema.json#/$defs/invoice/properties/paymentDate")                       |
+| [refundCreditNoteNumber](#refundcreditnotenumber) | `string` | Optional | can be null    | [NSIP Project](nsip-project-defs-invoice-properties-refundcreditnotenumber.md "nsip-project.schema.json#/$defs/invoice/properties/refundCreditNoteNumber") |
+| [refundAmount](#refundamount)                     | `number` | Optional | can be null    | [NSIP Project](nsip-project-defs-invoice-properties-refundamount.md "nsip-project.schema.json#/$defs/invoice/properties/refundAmount")                     |
+| [refundIssueDate](#refundissuedate)               | `string` | Optional | can be null    | [NSIP Project](nsip-project-defs-invoice-properties-refundissuedate.md "nsip-project.schema.json#/$defs/invoice/properties/refundIssueDate")               |
+| Additional Properties                             | Any      | Optional | can be null    |                                                                                                                                                            |
+
+### invoiceStage
+
+Invoice stage
+
+`invoiceStage`
+
+* is optional
+
+* Type: `string`
+
+* can be null
+
+* defined in: [NSIP Project](nsip-project-defs-invoice-properties-invoicestage.md "nsip-project.schema.json#/$defs/invoice/properties/invoiceStage")
+
+#### invoiceStage Type
+
+`string`
+
+#### invoiceStage Constraints
+
+**enum**: the value of this property must be equal to one of the following values:
+
+| Value                   | Explanation |
+| :---------------------- | :---------- |
+| `"pre_acceptance"`      |             |
+| `"acceptance"`          |             |
+| `"pre_examination"`     |             |
+| `"initial_examination"` |             |
+| `"final_examination"`   |             |
+| `null`                  |             |
+
+#### invoiceStage Examples
+
+```json
+"pre_acceptance"
+```
+
+### invoiceNumber
+
+Invoice number
+
+`invoiceNumber`
+
+* is required
+
+* Type: `string`
+
+* cannot be null
+
+* defined in: [NSIP Project](nsip-project-defs-invoice-properties-invoicenumber.md "nsip-project.schema.json#/$defs/invoice/properties/invoiceNumber")
+
+#### invoiceNumber Type
+
+`string`
+
+#### invoiceNumber Examples
+
+```json
+"1800004419"
+```
+
+### amountDue
+
+Amount due
+
+`amountDue`
+
+* is required
+
+* Type: `number`
+
+* cannot be null
+
+* defined in: [NSIP Project](nsip-project-defs-invoice-properties-amountdue.md "nsip-project.schema.json#/$defs/invoice/properties/amountDue")
+
+#### amountDue Type
+
+`number`
+
+#### amountDue Examples
+
+```json
+500
+```
+
+### paymentDueDate
+
+Payment due date
+
+`paymentDueDate`
+
+* is optional
+
+* Type: `string`
+
+* can be null
+
+* defined in: [NSIP Project](nsip-project-defs-invoice-properties-paymentduedate.md "nsip-project.schema.json#/$defs/invoice/properties/paymentDueDate")
+
+#### paymentDueDate Type
+
+`string`
+
+#### paymentDueDate Constraints
+
+**date time**: the string must be a date time string, according to [RFC 3339, section 5.6](https://tools.ietf.org/html/rfc3339 "check the specification")
+
+#### paymentDueDate Examples
+
+```json
+"2023-07-27T20:30:00.000Z"
+```
+
+### invoicedDate
+
+Invoiced date
+
+`invoicedDate`
+
+* is optional
+
+* Type: `string`
+
+* can be null
+
+* defined in: [NSIP Project](nsip-project-defs-invoice-properties-invoiceddate.md "nsip-project.schema.json#/$defs/invoice/properties/invoicedDate")
+
+#### invoicedDate Type
+
+`string`
+
+#### invoicedDate Constraints
+
+**date time**: the string must be a date time string, according to [RFC 3339, section 5.6](https://tools.ietf.org/html/rfc3339 "check the specification")
+
+#### invoicedDate Examples
+
+```json
+"2023-07-27T20:30:00.000Z"
+```
+
+### paymentDate
+
+Date of payment
+
+`paymentDate`
+
+* is optional
+
+* Type: `string`
+
+* can be null
+
+* defined in: [NSIP Project](nsip-project-defs-invoice-properties-paymentdate.md "nsip-project.schema.json#/$defs/invoice/properties/paymentDate")
+
+#### paymentDate Type
+
+`string`
+
+#### paymentDate Constraints
+
+**date time**: the string must be a date time string, according to [RFC 3339, section 5.6](https://tools.ietf.org/html/rfc3339 "check the specification")
+
+#### paymentDate Examples
+
+```json
+"2023-07-27T20:30:00.000Z"
+```
+
+### refundCreditNoteNumber
+
+Refund credit note number
+
+`refundCreditNoteNumber`
+
+* is optional
+
+* Type: `string`
+
+* can be null
+
+* defined in: [NSIP Project](nsip-project-defs-invoice-properties-refundcreditnotenumber.md "nsip-project.schema.json#/$defs/invoice/properties/refundCreditNoteNumber")
+
+#### refundCreditNoteNumber Type
+
+`string`
+
+#### refundCreditNoteNumber Examples
+
+```json
+"1800004419"
+```
+
+### refundAmount
+
+Amount refunded
+
+`refundAmount`
+
+* is optional
+
+* Type: `number`
+
+* can be null
+
+* defined in: [NSIP Project](nsip-project-defs-invoice-properties-refundamount.md "nsip-project.schema.json#/$defs/invoice/properties/refundAmount")
+
+#### refundAmount Type
+
+`number`
+
+#### refundAmount Examples
+
+```json
+200
+```
+
+### refundIssueDate
+
+Refund issue date
+
+`refundIssueDate`
+
+* is optional
+
+* Type: `string`
+
+* can be null
+
+* defined in: [NSIP Project](nsip-project-defs-invoice-properties-refundissuedate.md "nsip-project.schema.json#/$defs/invoice/properties/refundIssueDate")
+
+#### refundIssueDate Type
+
+`string`
+
+#### refundIssueDate Constraints
+
+**date time**: the string must be a date time string, according to [RFC 3339, section 5.6](https://tools.ietf.org/html/rfc3339 "check the specification")
+
+#### refundIssueDate Examples
+
+```json
+"2023-07-27T20:30:00.000Z"
+```
+
+### Additional Properties
 
 Additional properties are allowed and do not have to follow a specific schema

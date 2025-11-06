@@ -3387,10 +3387,10 @@ The net gain in residences of the proposed development
 **pattern**: the string must match the following regular expression:&#x20;
 
 ```regexp
-^\d{6}$
+^\d{6,7}$
 ```
 
-[try pattern](https://regexr.com/?expression=%5E%5Cd%7B6%7D%24 "try regular expression with regexr.com")
+[try pattern](https://regexr.com/?expression=%5E%5Cd%7B6%2C7%7D%24 "try regular expression with regexr.com")
 
 ### siteGridReferenceEasting Examples
 
@@ -3421,10 +3421,10 @@ The net gain in residences of the proposed development
 **pattern**: the string must match the following regular expression:&#x20;
 
 ```regexp
-^\d{6}$
+^\d{6,7}$
 ```
 
-[try pattern](https://regexr.com/?expression=%5E%5Cd%7B6%7D%24 "try regular expression with regexr.com")
+[try pattern](https://regexr.com/?expression=%5E%5Cd%7B6%2C7%7D%24 "try regular expression with regexr.com")
 
 ### siteGridReferenceNorthing Examples
 

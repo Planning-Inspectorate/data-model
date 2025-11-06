@@ -701,12 +701,12 @@
     },
     "siteGridReferenceEasting": {
       "type": ["string", "null"],
-      "pattern": "^\\d{6}$",
+      "pattern": "^\\d{6,7}$",
       "examples": ["357144"]
     },
     "siteGridReferenceNorthing": {
       "type": ["string", "null"],
-      "pattern": "^\\d{6}$",
+      "pattern": "^\\d{6,7}$",
       "examples": ["400534"]
     },
     "hasLandownersPermission": {

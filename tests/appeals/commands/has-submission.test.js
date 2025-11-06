@@ -96,10 +96,10 @@ describe('HAS submission command schema', () => {
 	it('should enforce eastings-northings pattern', () => {
 		const invalidPatterns = [
 			{ easting: 'abc123', northing: '400534', description: 'easting with letters' },
-			{ easting: '1234567', northing: '400534', description: 'easting too long' },
+			{ easting: '12345678', northing: '400534', description: 'easting too long' },
 			{ easting: '12345', northing: '400534', description: 'easting too short' },
 			{ easting: '357144', northing: 'xyz123', description: 'northing with letters' },
-			{ easting: '357144', northing: '1234567', description: 'northing too long' },
+			{ easting: '357144', northing: '12345678', description: 'northing too long' },
 			{ easting: '357144', northing: '12345', description: 'northing too short' },
 			{ easting: '', northing: '400534', description: 'empty easting' },
 			{ easting: '357144', northing: '', description: 'empty northing' }

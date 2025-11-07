@@ -1,0 +1,82 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "nsip-invoice.schema.json",
+  "title": "NSIP Invoice",
+  "description": "NSIP Standalone Invoice Schema for ODW Curated layer",
+  "type": "object",
+  "additionalProperties": true,
+  "required": [
+    "caseId",
+    "caseReference",
+    "invoiceStage",
+    "invoiceNumber",
+    "amountDue",
+    "paymentDueDate",
+    "invoicedDate",
+    "paymentDate",
+    "refundCreditNoteNumber",
+    "refundAmount",
+    "refundIssueDate"
+    ],
+  "properties": {
+    "caseId": {
+      "type": "integer",
+      "examples": [1242],
+      "description": "The unique identifier within the Back Office. This is not the same as the case reference"
+    },
+    "caseReference": {
+      "type": ["string", "null"],
+      "examples": ["BC0510001"]
+    },    
+    "invoiceStage": {
+        "type": ["string", "null"],
+        "description": "Invoice stage",
+        "enum": ["pre_acceptance", "acceptance", "pre_examination", "initial_examination", "final_examination", null],
+        "examples": ["pre_acceptance"]
+    },
+    "invoiceNumber": {
+        "type": "string",
+        "description": "Invoice number",
+        "examples": ["1800004419"]
+    },
+    "amountDue": {
+        "type": "number",
+        "description": "Amount due",
+        "examples": [500]
+    },
+    "paymentDueDate": {
+        "type": ["string", "null"],
+        "description": "Payment due date",
+        "format": "date-time",
+        "examples": ["2023-07-27T20:30:00.000Z"]
+    },
+    "invoicedDate": {
+        "type": ["string", "null"],
+        "description": "Invoiced date",
+        "format": "date-time",
+        "examples": ["2023-07-27T20:30:00.000Z"]
+    },
+    "paymentDate": {
+        "type": ["string", "null"],
+        "description": "Date of payment",
+        "format": "date-time",
+        "examples": ["2023-07-27T20:30:00.000Z"]
+    },
+    "refundCreditNoteNumber": {
+        "type": ["string", "null"],
+        "description": "Refund credit note number",
+        "examples": ["1800004419"]
+    },
+    "refundAmount": {
+        "type": ["number", "null"],
+        "description": "Amount refunded",
+        "examples": [200]
+    },
+    "refundIssueDate": {
+        "type": ["string", "null"],
+        "description": "Refund issue date",
+        "format": "date-time",
+        "examples": ["2023-07-27T20:30:00.000Z"]
+    }
+  }
+}

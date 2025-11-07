@@ -136,16 +136,16 @@
     {
       "required": ["siteGridReferenceEasting", "siteGridReferenceNorthing"],
       "properties": {
-        "siteGridReferenceEasting": { "not": { "type": "null" } },
-        "siteGridReferenceNorthing": { "not": { "type": "null" } }
+        "siteGridReferenceEasting": { "type": "string" },
+        "siteGridReferenceNorthing": { "type": "string" }
       }
     },
     {
       "required": ["siteAddressLine1", "siteAddressTown", "siteAddressPostcode"],
       "properties": {
-        "siteAddressLine1": { "not": { "type": "null" } },
-        "siteAddressTown": { "not": { "type": "null" } },
-        "siteAddressPostcode": { "not": { "type": "null" } }
+        "siteAddressLine1": { "type": "string" },
+        "siteAddressTown": { "type": "string" },
+        "siteAddressPostcode": { "type": "string" }
       }
     }
   ],

@@ -305,23 +305,13 @@ export interface AppealEvent {
  */
 export type AppealHASCase = (
   | {
-      siteGridReferenceEasting: {
-        [k: string]: unknown;
-      };
-      siteGridReferenceNorthing: {
-        [k: string]: unknown;
-      };
+      siteGridReferenceEasting: string;
+      siteGridReferenceNorthing: string;
     }
   | {
-      siteAddressLine1: {
-        [k: string]: unknown;
-      };
-      siteAddressTown: {
-        [k: string]: unknown;
-      };
-      siteAddressPostcode: {
-        [k: string]: unknown;
-      };
+      siteAddressLine1: string;
+      siteAddressTown: string;
+      siteAddressPostcode: string;
     }
 ) & {
   /**
@@ -903,23 +893,13 @@ export interface AppealRepresentation {
  */
 export type AppealS78Case = (
   | {
-      siteGridReferenceEasting: {
-        [k: string]: unknown;
-      };
-      siteGridReferenceNorthing: {
-        [k: string]: unknown;
-      };
+      siteGridReferenceEasting: string;
+      siteGridReferenceNorthing: string;
     }
   | {
-      siteAddressLine1: {
-        [k: string]: unknown;
-      };
-      siteAddressTown: {
-        [k: string]: unknown;
-      };
-      siteAddressPostcode: {
-        [k: string]: unknown;
-      };
+      siteAddressLine1: string;
+      siteAddressTown: string;
+      siteAddressPostcode: string;
     }
 ) & {
   /**
@@ -3288,23 +3268,13 @@ export type AppealRepresentationSubmission = {
  */
 export type AppellantCommonSubmissionProperties = (
   | {
-      siteGridReferenceEasting: {
-        [k: string]: unknown;
-      };
-      siteGridReferenceNorthing: {
-        [k: string]: unknown;
-      };
+      siteGridReferenceEasting: string;
+      siteGridReferenceNorthing: string;
     }
   | {
-      siteAddressLine1: {
-        [k: string]: unknown;
-      };
-      siteAddressTown: {
-        [k: string]: unknown;
-      };
-      siteAddressPostcode: {
-        [k: string]: unknown;
-      };
+      siteAddressLine1: string;
+      siteAddressTown: string;
+      siteAddressPostcode: string;
     }
 ) & {
   /**

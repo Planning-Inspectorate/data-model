@@ -17,7 +17,7 @@
     "refundCreditNoteNumber",
     "refundAmount",
     "refundIssueDate"
-    ],
+  ],
   "properties": {
     "caseId": {
       "type": "integer",
@@ -27,56 +27,56 @@
     "caseReference": {
       "type": ["string", "null"],
       "examples": ["BC0510001"]
-    },    
+    },
     "invoiceStage": {
-        "type": ["string", "null"],
-        "description": "Invoice stage",
-        "enum": ["pre_acceptance", "acceptance", "pre_examination", "initial_examination", "final_examination", null],
-        "examples": ["pre_acceptance"]
+      "type": ["string", "null"],
+      "description": "Invoice stage",
+      "enum": ["pre_acceptance", "acceptance", "pre_examination", "initial_examination", "final_examination", null],
+      "examples": ["pre_acceptance"]
     },
     "invoiceNumber": {
-        "type": "string",
-        "description": "Invoice number",
-        "examples": ["1800004419"]
+      "type": "string",
+      "description": "Invoice number",
+      "examples": ["1800004419"]
     },
     "amountDue": {
-        "type": "number",
-        "description": "Amount due",
-        "examples": [500]
+      "type": "number",
+      "description": "Amount due",
+      "examples": [500]
     },
     "paymentDueDate": {
-        "type": ["string", "null"],
-        "description": "Payment due date",
-        "format": "date-time",
-        "examples": ["2023-07-27T20:30:00.000Z"]
+      "type": ["string", "null"],
+      "description": "Payment due date",
+      "format": "date-time",
+      "examples": ["2023-07-27T20:30:00.000Z"]
     },
     "invoicedDate": {
-        "type": ["string", "null"],
-        "description": "Invoiced date",
-        "format": "date-time",
-        "examples": ["2023-07-27T20:30:00.000Z"]
+      "type": ["string", "null"],
+      "description": "Invoiced date",
+      "format": "date-time",
+      "examples": ["2023-07-27T20:30:00.000Z"]
     },
     "paymentDate": {
-        "type": ["string", "null"],
-        "description": "Date of payment",
-        "format": "date-time",
-        "examples": ["2023-07-27T20:30:00.000Z"]
+      "type": ["string", "null"],
+      "description": "Date of payment",
+      "format": "date-time",
+      "examples": ["2023-07-27T20:30:00.000Z"]
     },
     "refundCreditNoteNumber": {
-        "type": ["string", "null"],
-        "description": "Refund credit note number",
-        "examples": ["1800004419"]
+      "type": ["string", "null"],
+      "description": "Refund credit note number",
+      "examples": ["1800004419"]
     },
     "refundAmount": {
-        "type": ["number", "null"],
-        "description": "Amount refunded",
-        "examples": [200]
+      "type": ["number", "null"],
+      "description": "Amount refunded",
+      "examples": [200]
     },
     "refundIssueDate": {
-        "type": ["string", "null"],
-        "description": "Refund issue date",
-        "format": "date-time",
-        "examples": ["2023-07-27T20:30:00.000Z"]
+      "type": ["string", "null"],
+      "description": "Refund issue date",
+      "format": "date-time",
+      "examples": ["2023-07-27T20:30:00.000Z"]
     }
   }
 }

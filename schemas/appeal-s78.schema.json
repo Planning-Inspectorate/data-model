@@ -37,7 +37,6 @@
     "lpaQuestionnaireValidationOutcome",
     "lpaQuestionnaireValidationOutcomeDate",
     "lpaQuestionnaireValidationDetails",
-    "lpaStatement",
     "caseWithdrawnDate",
     "caseTransferredDate",
     "transferredCaseClosedDate",
@@ -105,7 +104,6 @@
     "lpaProcedurePreference",
     "lpaProcedurePreferenceDetails",
     "lpaProcedurePreferenceDuration",
-    "caseworkReason",
     "developmentType",
     "importantInformation",
     "jurisdiction",
@@ -114,7 +112,6 @@
     "dateNotRecoveredOrDerecovered",
     "dateRecovered",
     "originalCaseDecisionDate",
-    "targetDate",
     "appellantCommentsSubmittedDate",
     "appellantStatementSubmittedDate",
     "appellantProofsSubmittedDate",
@@ -392,12 +389,6 @@
         "examples": ["Policies are missing", "Other documents or information are missing"]
       },
       "description": "A list of reasons why the questionnaire is incomplete",
-      "$comment": "Also available on HAS cases"
-    },
-    "lpaStatement": {
-      "type": ["string", "null"],
-      "examples": ["We refused the application because of ..."],
-      "description": "A statement provided by the LPA",
       "$comment": "Also available on HAS cases"
     },
     "caseWithdrawnDate": {
@@ -708,11 +699,6 @@
       "description": "A grant or loan has been made to preserve the listed building",
       "$comment": "Only available in S20 cases"
     },
-    "consultHistoricEngland": {
-      "type": ["boolean", "null"],
-      "description": "Are Historic England to be consulted?",
-      "$comment": "Only available in S20 cases"
-    },
     "appellantCostsAppliedFor": {
       "type": ["boolean", "null"],
       "description": "Indicates if the appellant has applied for costs",
@@ -874,9 +860,6 @@
       "type": ["number", "null"],
       "description": "The duration of enquiry indicated by the LPA"
     },
-    "caseworkReason": {
-      "type": ["string", "null"]
-    },
     "importantInformation": {
       "type": ["string", "null"]
     },
@@ -903,11 +886,6 @@
       "examples": ["2023-07-27T20:30:00.000Z"]
     },
     "originalCaseDecisionDate": {
-      "type": ["string", "null"],
-      "format": "date-time",
-      "examples": ["2023-07-27T20:30:00.000Z"]
-    },
-    "targetDate": {
       "type": ["string", "null"],
       "format": "date-time",
       "examples": ["2023-07-27T20:30:00.000Z"]

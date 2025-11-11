@@ -12,8 +12,7 @@
     "inConservationArea",
     "newConditionDetails",
     "notificationMethod",
-    "lpaCostsAppliedFor",
-    "lpaStatement"
+    "lpaCostsAppliedFor"
   ],
   "allOf": [
     {
@@ -56,11 +55,6 @@
         "lpaCostsAppliedFor": {
           "type": ["boolean", "null"],
           "description": "Indicates if the LPA has applied for costs"
-        },
-        "lpaStatement": {
-          "type": ["string", "null"],
-          "examples": ["We refused the application because of ..."],
-          "description": "A statement provided by the LPA, unused?"
         }
       }
     }

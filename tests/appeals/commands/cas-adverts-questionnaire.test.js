@@ -22,7 +22,6 @@ const exampleCasAdvertQuestionnaireSchema = {
 		caseType: 'ZA',
 		caseReference: 'nisi incididunt cillum',
 		lpaQuestionnaireSubmittedDate: null,
-		lpaStatement: 'consequat ex',
 		siteAccessDetails: null,
 		siteSafetyDetails: null,
 		isCorrectAppealType: null,

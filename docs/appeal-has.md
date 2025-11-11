@@ -44,7 +44,6 @@ any of
 | [lpaQuestionnaireValidationOutcome](#lpaquestionnairevalidationoutcome)                   | `string`  | Required | can be null    | [Appeal HAS Case](appeal-has-properties-lpaquestionnairevalidationoutcome.md "appeal-has.schema.json#/properties/lpaQuestionnaireValidationOutcome")                   |
 | [lpaQuestionnaireValidationOutcomeDate](#lpaquestionnairevalidationoutcomedate)           | `string`  | Required | can be null    | [Appeal HAS Case](appeal-has-properties-lpaquestionnairevalidationoutcomedate.md "appeal-has.schema.json#/properties/lpaQuestionnaireValidationOutcomeDate")           |
 | [lpaQuestionnaireValidationDetails](#lpaquestionnairevalidationdetails)                   | `array`   | Required | can be null    | [Appeal HAS Case](appeal-has-properties-lpaquestionnairevalidationdetails.md "appeal-has.schema.json#/properties/lpaQuestionnaireValidationDetails")                   |
-| [lpaStatement](#lpastatement)                                                             | `string`  | Required | can be null    | [Appeal HAS Case](appeal-has-properties-lpastatement.md "appeal-has.schema.json#/properties/lpaStatement")                                                             |
 | [caseWithdrawnDate](#casewithdrawndate)                                                   | `string`  | Required | can be null    | [Appeal HAS Case](appeal-has-properties-casewithdrawndate.md "appeal-has.schema.json#/properties/caseWithdrawnDate")                                                   |
 | [caseTransferredDate](#casetransferreddate)                                               | `string`  | Required | can be null    | [Appeal HAS Case](appeal-has-properties-casetransferreddate.md "appeal-has.schema.json#/properties/caseTransferredDate")                                               |
 | [transferredCaseClosedDate](#transferredcasecloseddate)                                   | `string`  | Required | can be null    | [Appeal HAS Case](appeal-has-properties-transferredcasecloseddate.md "appeal-has.schema.json#/properties/transferredCaseClosedDate")                                   |
@@ -82,7 +81,6 @@ any of
 | [lpaProcedurePreference](#lpaprocedurepreference)                                         | `string`  | Optional | can be null    | [Appeal HAS Case](appeal-has-properties-lpaprocedurepreference.md "appeal-has.schema.json#/properties/lpaProcedurePreference")                                         |
 | [lpaProcedurePreferenceDetails](#lpaprocedurepreferencedetails)                           | `string`  | Optional | can be null    | [Appeal HAS Case](appeal-has-properties-lpaprocedurepreferencedetails.md "appeal-has.schema.json#/properties/lpaProcedurePreferenceDetails")                           |
 | [lpaProcedurePreferenceDuration](#lpaprocedurepreferenceduration)                         | `number`  | Optional | can be null    | [Appeal HAS Case](appeal-has-properties-lpaprocedurepreferenceduration.md "appeal-has.schema.json#/properties/lpaProcedurePreferenceDuration")                         |
-| [caseworkReason](#caseworkreason)                                                         | `string`  | Optional | can be null    | [Appeal HAS Case](appeal-has-properties-caseworkreason.md "appeal-has.schema.json#/properties/caseworkReason")                                                         |
 | [importantInformation](#importantinformation)                                             | `string`  | Optional | can be null    | [Appeal HAS Case](appeal-has-properties-importantinformation.md "appeal-has.schema.json#/properties/importantInformation")                                             |
 | [jurisdiction](#jurisdiction)                                                             | `string`  | Optional | can be null    | [Appeal HAS Case](appeal-has-properties-jurisdiction.md "appeal-has.schema.json#/properties/jurisdiction")                                                             |
 | [redeterminedIndicator](#redeterminedindicator)                                           | `boolean` | Optional | can be null    | [Appeal HAS Case](appeal-has-properties-redeterminedindicator.md "appeal-has.schema.json#/properties/redeterminedIndicator")                                           |
@@ -90,7 +88,6 @@ any of
 | [dateNotRecoveredOrDerecovered](#datenotrecoveredorderecovered)                           | `string`  | Optional | can be null    | [Appeal HAS Case](appeal-has-properties-datenotrecoveredorderecovered.md "appeal-has.schema.json#/properties/dateNotRecoveredOrDerecovered")                           |
 | [dateRecovered](#daterecovered)                                                           | `string`  | Optional | can be null    | [Appeal HAS Case](appeal-has-properties-daterecovered.md "appeal-has.schema.json#/properties/dateRecovered")                                                           |
 | [originalCaseDecisionDate](#originalcasedecisiondate)                                     | `string`  | Optional | can be null    | [Appeal HAS Case](appeal-has-properties-originalcasedecisiondate.md "appeal-has.schema.json#/properties/originalCaseDecisionDate")                                     |
-| [targetDate](#targetdate)                                                                 | `string`  | Optional | can be null    | [Appeal HAS Case](appeal-has-properties-targetdate.md "appeal-has.schema.json#/properties/targetDate")                                                                 |
 | [ownsAllLand](#ownsallland)                                                               | `boolean` | Required | can be null    | [Appeal HAS Case](appeal-has-properties-ownsallland.md "appeal-has.schema.json#/properties/ownsAllLand")                                                               |
 | [ownsSomeLand](#ownssomeland)                                                             | `boolean` | Required | can be null    | [Appeal HAS Case](appeal-has-properties-ownssomeland.md "appeal-has.schema.json#/properties/ownsSomeLand")                                                             |
 | [knowsOtherOwners](#knowsotherowners)                                                     | `string`  | Required | can be null    | [Appeal HAS Case](appeal-has-properties-knowsotherowners.md "appeal-has.schema.json#/properties/knowsOtherOwners")                                                     |
@@ -996,30 +993,6 @@ A list of reasons why the questionnaire is incomplete
 
 `string[]`
 
-## lpaStatement
-
-A statement provided by the LPA
-
-`lpaStatement`
-
-* is required
-
-* Type: `string`
-
-* can be null
-
-* defined in: [Appeal HAS Case](appeal-has-properties-lpastatement.md "appeal-has.schema.json#/properties/lpaStatement")
-
-### lpaStatement Type
-
-`string`
-
-### lpaStatement Examples
-
-```json
-"We refused the application because of ..."
-```
-
 ## caseWithdrawnDate
 
 The date the appeal was withdrawn by the appellant
@@ -1879,24 +1852,6 @@ The duration of enquiry indicated by the LPA
 
 `number`
 
-## caseworkReason
-
-TBC
-
-`caseworkReason`
-
-* is optional
-
-* Type: `string`
-
-* can be null
-
-* defined in: [Appeal HAS Case](appeal-has-properties-caseworkreason.md "appeal-has.schema.json#/properties/caseworkReason")
-
-### caseworkReason Type
-
-`string`
-
 ## importantInformation
 
 Information relevant to case...
@@ -2058,34 +2013,6 @@ The original case decision date
 **date time**: the string must be a date time string, according to [RFC 3339, section 5.6](https://tools.ietf.org/html/rfc3339 "check the specification")
 
 ### originalCaseDecisionDate Examples
-
-```json
-"2023-07-27T20:30:00.000Z"
-```
-
-## targetDate
-
-The target date for case completion
-
-`targetDate`
-
-* is optional
-
-* Type: `string`
-
-* can be null
-
-* defined in: [Appeal HAS Case](appeal-has-properties-targetdate.md "appeal-has.schema.json#/properties/targetDate")
-
-### targetDate Type
-
-`string`
-
-### targetDate Constraints
-
-**date time**: the string must be a date time string, according to [RFC 3339, section 5.6](https://tools.ietf.org/html/rfc3339 "check the specification")
-
-### targetDate Examples
 
 ```json
 "2023-07-27T20:30:00.000Z"

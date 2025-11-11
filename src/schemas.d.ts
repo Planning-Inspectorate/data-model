@@ -456,10 +456,6 @@ export type AppealHASCase = (
    */
   lpaQuestionnaireValidationDetails: string[] | null;
   /**
-   * A statement provided by the LPA
-   */
-  lpaStatement: string | null;
-  /**
    * The date the appeal was withdrawn by the appellant
    */
   caseWithdrawnDate: string | null;
@@ -608,10 +604,6 @@ export type AppealHASCase = (
    */
   lpaProcedurePreferenceDuration?: number | null;
   /**
-   * TBC
-   */
-  caseworkReason?: string | null;
-  /**
    * Information relevant to case...
    */
   importantInformation?: string | null;
@@ -639,10 +631,6 @@ export type AppealHASCase = (
    * The original case decision date
    */
   originalCaseDecisionDate?: string | null;
-  /**
-   * The target date for case completion
-   */
-  targetDate?: string | null;
   /**
    * Indicates if the appellant has complete ownership of the site
    */
@@ -1048,10 +1036,6 @@ export type AppealS78Case = (
    */
   lpaQuestionnaireValidationDetails: string[] | null;
   /**
-   * A statement provided by the LPA
-   */
-  lpaStatement: string | null;
-  /**
    * The date the appeal was withdrawn by the appellant
    */
   caseWithdrawnDate: string | null;
@@ -1248,10 +1232,6 @@ export type AppealS78Case = (
    */
   preserveGrantLoan?: boolean | null;
   /**
-   * Are Historic England to be consulted?
-   */
-  consultHistoricEngland?: boolean | null;
-  /**
    * Indicates if the appellant has applied for costs
    */
   appellantCostsAppliedFor: boolean | null;
@@ -1397,7 +1377,6 @@ export type AppealS78Case = (
    * The duration of enquiry indicated by the LPA
    */
   lpaProcedurePreferenceDuration: number | null;
-  caseworkReason: string | null;
   importantInformation: string | null;
   jurisdiction: string | null;
   redeterminedIndicator: string | null;
@@ -1408,7 +1387,6 @@ export type AppealS78Case = (
   dateNotRecoveredOrDerecovered: string | null;
   dateRecovered: string | null;
   originalCaseDecisionDate: string | null;
-  targetDate: string | null;
   appellantCommentsSubmittedDate: string | null;
   appellantStatementSubmittedDate: string | null;
   appellantProofsSubmittedDate: string | null;
@@ -3786,10 +3764,6 @@ export type LPAQHASSubmissionProperties = {
    * Indicates if the LPA has applied for costs
    */
   lpaCostsAppliedFor?: boolean | null;
-  /**
-   * A statement provided by the LPA, unused?
-   */
-  lpaStatement?: string | null;
 };
 /**
  * Schema defining any S78 specific properties for LPAQ submissions
@@ -3803,10 +3777,6 @@ export type LPAQS78SubmissionProperties = {
    * A grant or loan has been made to preserve the listed building
    */
   preserveGrantLoan?: boolean | null;
-  /**
-   * Are Historic England to be consulted?
-   */
-  consultHistoricEngland?: boolean | null;
   /**
    * Indicates that a scheduled monument is affected
    */

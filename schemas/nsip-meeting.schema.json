@@ -1,0 +1,41 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "nsip-meeting.schema.json",
+  "title": "NSIP Meeting",
+  "description": "NSIP Standalone Meeting Schema for ODW Curated layer",
+  "type": "object",
+  "additionalProperties": true,
+  "required": ["caseId", "caseReference", "meetingAgenda", "planningInspectorateRole", "meetingDate", "meetingType"],
+  "properties": {
+    "caseId": {
+      "type": "integer",
+      "examples": [1242],
+      "description": "The unique identifier within the Back Office. This is not the same as the case reference"
+    },
+    "caseReference": {
+      "type": ["string", "null"],
+      "examples": ["BC0510001"]
+    },
+    "meetingAgenda": {
+      "type": ["string", "null"],
+      "description": "Meeting agenda",
+      "examples": ["Flood Risk Assessment (FRA)"]
+    },
+    "planningInspectorateRole": {
+      "type": ["string", "null"],
+      "description": "Planning Inspectorate role",
+      "enum": ["facilitator", "advisor", "observer", null],
+      "examples": ["facilitator"]
+    },
+    "meetingDate": {
+      "type": ["string", "null"],
+      "description": "Meeting date",
+      "format": "date-time",
+      "examples": ["2023-07-27T20:30:00.000Z"]
+    },
+    "meetingType": {
+      "type": ["string", "null"],
+      "description": "Type of Meeting"
+    }
+  }
+}

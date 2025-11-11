@@ -2036,6 +2036,88 @@ export interface LineItem {
 }
 
 /**
+ * NSIP Standalone Invoice Schema for ODW Curated layer
+ */
+export interface NSIPInvoice {
+  /**
+   * The unique identifier within the Back Office. This is not the same as the case reference
+   */
+  caseId: number;
+  caseReference: string | null;
+  /**
+   * Invoice stage
+   */
+  invoiceStage:
+    | 'pre_acceptance'
+    | 'acceptance'
+    | 'pre_examination'
+    | 'initial_examination'
+    | 'final_examination'
+    | null;
+  /**
+   * Invoice number
+   */
+  invoiceNumber: string;
+  /**
+   * Amount due
+   */
+  amountDue: number;
+  /**
+   * Payment due date
+   */
+  paymentDueDate: string | null;
+  /**
+   * Invoiced date
+   */
+  invoicedDate: string | null;
+  /**
+   * Date of payment
+   */
+  paymentDate: string | null;
+  /**
+   * Refund credit note number
+   */
+  refundCreditNoteNumber: string | null;
+  /**
+   * Amount refunded
+   */
+  refundAmount: number | null;
+  /**
+   * Refund issue date
+   */
+  refundIssueDate: string | null;
+  [k: string]: unknown;
+}
+
+/**
+ * NSIP Standalone Meeting Schema for ODW Curated layer
+ */
+export interface NSIPMeeting {
+  /**
+   * The unique identifier within the Back Office. This is not the same as the case reference
+   */
+  caseId: number;
+  caseReference: string | null;
+  /**
+   * Meeting agenda
+   */
+  meetingAgenda: string | null;
+  /**
+   * Planning Inspectorate role
+   */
+  planningInspectorateRole: 'facilitator' | 'advisor' | 'observer' | null;
+  /**
+   * Meeting date
+   */
+  meetingDate: string | null;
+  /**
+   * Type of Meeting
+   */
+  meetingType: string | null;
+  [k: string]: unknown;
+}
+
+/**
  * NSIP Project Update (formerly known as Banners)
  */
 export interface NSIPProjectUpdate {

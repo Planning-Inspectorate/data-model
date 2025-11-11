@@ -30,6 +30,10 @@
 
 * [NSIP Document](./nsip-document.md "NSIP document schema") – `nsip-document.schema.json`
 
+* [NSIP Invoice](./nsip-invoice.md "NSIP Standalone Invoice Schema for ODW Curated layer") – `nsip-invoice.schema.json`
+
+* [NSIP Meeting](./nsip-meeting.md "NSIP Standalone Meeting Schema for ODW Curated layer") – `nsip-meeting.schema.json`
+
 * [NSIP Project](./nsip-project.md "Subset of Pins Data Model \[Case]") – `nsip-project.schema.json`
 
 * [NSIP Project Update](./nsip-project-update.md "NSIP Project Update (formerly known as Banners)") – `nsip-project-update.schema.json`

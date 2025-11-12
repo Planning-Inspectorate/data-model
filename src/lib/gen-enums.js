@@ -53,7 +53,7 @@ async function run() {
  */
 function generateConstants(name, values, { ts = false } = {}) {
 	const freezeStart = ts ? '' : 'Object.freeze(';
-	const freezeEnd = ts ? '' : ')';
+	const freezeEnd = ts ? ' as const' : ')';
 	const exportPrefix = 'export ';
 	const lines = [`${exportPrefix}const ${formatName(name)} = ${freezeStart}{`];
 	/**

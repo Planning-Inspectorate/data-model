@@ -2659,6 +2659,10 @@ export interface NSIPProject {
  */
 export interface Meeting {
   /**
+   * Unique identifier for the meeting
+   */
+  meetingId?: number | null;
+  /**
    * Meeting agenda
    */
   meetingAgenda?: string | null;

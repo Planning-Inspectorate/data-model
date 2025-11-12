@@ -872,6 +872,11 @@
       "additionalProperties": true,
       "description": "A meeting related to the project",
       "properties": {
+        "meetingId": {
+          "type": ["integer", "null"],
+          "description": "Unique identifier for the meeting",
+          "examples": [123]
+        },
         "meetingAgenda": {
           "type": ["string", "null"],
           "description": "Meeting agenda",

@@ -7,32 +7,32 @@ export const APPEAL_ALLOCATION_LEVEL = {
   F: 'F',
   G: 'G',
   H: 'H',
-};
+} as const;
 
 export const APPEAL_APPELLANT_PROCEDURE_PREFERENCE = {
   HEARING: 'hearing',
   INQUIRY: 'inquiry',
   WRITTEN: 'written',
-};
+} as const;
 
 export const APPEAL_APPLICATION_DECISION = {
   GRANTED: 'granted',
   NOT_RECEIVED: 'not_received',
   REFUSED: 'refused',
-};
+} as const;
 
 export const APPEAL_CASE_DECISION_OUTCOME = {
   ALLOWED: 'allowed',
   DISMISSED: 'dismissed',
   INVALID: 'invalid',
   SPLIT_DECISION: 'split_decision',
-};
+} as const;
 
 export const APPEAL_CASE_PROCEDURE = {
   HEARING: 'hearing',
   INQUIRY: 'inquiry',
   WRITTEN: 'written',
-};
+} as const;
 
 export const APPEAL_CASE_STAGE = {
   APPEAL_DECISION: 'appeal-decision',
@@ -45,7 +45,7 @@ export const APPEAL_CASE_STAGE = {
   STATEMENTS: 'statements',
   THIRD_PARTY_COMMENTS: 'third-party-comments',
   WITNESSES: 'witnesses',
-};
+} as const;
 
 export const APPEAL_CASE_STATUS = {
   ASSIGN_CASE_OFFICER: 'assign_case_officer',
@@ -65,7 +65,7 @@ export const APPEAL_CASE_STATUS = {
   VALIDATION: 'validation',
   WITHDRAWN: 'withdrawn',
   WITNESSES: 'witnesses',
-};
+} as const;
 
 export const APPEAL_CASE_TYPE = {
   C: 'C',
@@ -83,13 +83,13 @@ export const APPEAL_CASE_TYPE = {
   Z: 'Z',
   ZA: 'ZA',
   ZP: 'ZP',
-};
+} as const;
 
 export const APPEAL_CASE_VALIDATION_OUTCOME = {
   INCOMPLETE: 'incomplete',
   INVALID: 'invalid',
   VALID: 'valid',
-};
+} as const;
 
 export const APPEAL_DEVELOPMENT_TYPE = {
   CHANGE_OF_USE: 'change-of-use',
@@ -107,7 +107,7 @@ export const APPEAL_DEVELOPMENT_TYPE = {
   MINOR_TRAVELLER_CARAVAN: 'minor-traveller-caravan',
   OTHER_MAJOR: 'other-major',
   OTHER_MINOR: 'other-minor',
-};
+} as const;
 
 export const APPEAL_DOCUMENT_TYPE = {
   APPEAL_NOTIFICATION: 'appealNotification',
@@ -170,7 +170,7 @@ export const APPEAL_DOCUMENT_TYPE = {
   WHO_NOTIFIED_LETTER_TO_NEIGHBOURS: 'whoNotifiedLetterToNeighbours',
   WHO_NOTIFIED_PRESS_ADVERT: 'whoNotifiedPressAdvert',
   WHO_NOTIFIED_SITE_NOTICE: 'whoNotifiedSiteNotice',
-};
+} as const;
 
 export const APPEAL_EIA_DEVELOPMENT_DESCRIPTION = {
   AGRICULTURE_AQUACULTURE: 'agriculture-aquaculture',
@@ -186,12 +186,12 @@ export const APPEAL_EIA_DEVELOPMENT_DESCRIPTION = {
   RUBBER_INDUSTRY: 'rubber-industry',
   TEXTILE_INDUSTRIES: 'textile-industries',
   TOURISM_LEISURE: 'tourism-leisure',
-};
+} as const;
 
 export const APPEAL_EIA_ENVIRONMENTAL_IMPACT_SCHEDULE = {
   SCHEDULE_1: 'schedule-1',
   SCHEDULE_2: 'schedule-2',
-};
+} as const;
 
 export const APPEAL_EVENT_STATUS = {
   CHANGE_OF_PROCEDURE: 'change_of_procedure',
@@ -202,7 +202,7 @@ export const APPEAL_EVENT_STATUS = {
   OFFERED: 'offered',
   POSTPONED: 'postponed',
   WITHDRAWN: 'withdrawn',
-};
+} as const;
 
 export const APPEAL_EVENT_TYPE = {
   HEARING: 'hearing',
@@ -215,7 +215,7 @@ export const APPEAL_EVENT_TYPE = {
   SITE_VISIT_ACCESS_REQUIRED: 'site_visit_access_required',
   SITE_VISIT_ACCOMPANIED: 'site_visit_accompanied',
   SITE_VISIT_UNACCOMPANIED: 'site_visit_unaccompanied',
-};
+} as const;
 
 export const APPEAL_INVALID_OR_INCOMPLETE_DETAILS = {
   CONTAINS_LINKS_TO_WEB_PAGES: 'Contains links to web pages',
@@ -226,54 +226,54 @@ export const APPEAL_INVALID_OR_INCOMPLETE_DETAILS = {
   NOT_RELEVANT_TO_THIS_APPEAL: 'Not relevant to this appeal',
   RECEIVED_AFTER_DEADLINE: 'Received after deadline',
   OTHER_REASON: 'other_reason',
-};
+} as const;
 
 export const APPEAL_KNOWS_ALL_OWNERS = {
   NO: 'No',
   SOME: 'Some',
   YES: 'Yes',
-};
+} as const;
 
 export const APPEAL_KNOWS_OTHER_OWNERS = {
   NO: 'No',
   SOME: 'Some',
   YES: 'Yes',
-};
+} as const;
 
 export const APPEAL_LINKED_CASE_STATUS = {
   CHILD: 'child',
   LEAD: 'lead',
-};
+} as const;
 
 export const APPEAL_LPA_PROCEDURE_PREFERENCE = {
   HEARING: 'hearing',
   INQUIRY: 'inquiry',
   WRITTEN: 'written',
-};
+} as const;
 
 export const APPEAL_LPA_QUESTIONNAIRE_VALIDATION_OUTCOME = {
   COMPLETE: 'complete',
   INCOMPLETE: 'incomplete',
-};
+} as const;
 
 export const APPEAL_NOTIFICATION_METHOD = {
   ADVERT: 'advert',
   LETTER: 'letter',
   NOTICE: 'notice',
-};
+} as const;
 
 export const APPEAL_ORIGIN = {
   CITIZEN: 'citizen',
   LPA: 'lpa',
   OGD: 'ogd',
   PINS: 'pins',
-};
+} as const;
 
 export const APPEAL_REDACTED_STATUS = {
   NO_REDACTION_REQUIRED: 'no_redaction_required',
   NOT_REDACTED: 'not_redacted',
   REDACTED: 'redacted',
-};
+} as const;
 
 export const APPEAL_REPRESENTATION_STATUS = {
   ARCHIVED: 'archived',
@@ -285,26 +285,26 @@ export const APPEAL_REPRESENTATION_STATUS = {
   REFERRED: 'referred',
   VALID: 'valid',
   WITHDRAWN: 'withdrawn',
-};
+} as const;
 
 export const APPEAL_REPRESENTATION_TYPE = {
   COMMENT: 'comment',
   FINAL_COMMENT: 'final_comment',
   PROOFS_EVIDENCE: 'proofs_evidence',
   STATEMENT: 'statement',
-};
+} as const;
 
 export const APPEAL_SOURCE = {
   CITIZEN: 'citizen',
   LPA: 'lpa',
-};
+} as const;
 
 export const APPEAL_SOURCE_SYSTEM = {
   ACP: 'acp',
   BACK_OFFICE_APPEALS: 'back-office-appeals',
   HORIZON: 'horizon',
   SHAREPOINT: 'sharepoint',
-};
+} as const;
 
 export const APPEAL_TYPE_OF_PLANNING_APPLICATION = {
   ADVERTISEMENT: 'advertisement',
@@ -316,13 +316,13 @@ export const APPEAL_TYPE_OF_PLANNING_APPLICATION = {
   PRIOR_APPROVAL: 'prior-approval',
   REMOVAL_OR_VARIATION_OF_CONDITIONS: 'removal-or-variation-of-conditions',
   RESERVED_MATTERS: 'reserved-matters',
-};
+} as const;
 
 export const APPEAL_VIRUS_CHECK_STATUS = {
   AFFECTED: 'affected',
   NOT_SCANNED: 'not_scanned',
   SCANNED: 'scanned',
-};
+} as const;
 
 export const CASE_STAGE = {
   0: '0',
@@ -337,7 +337,7 @@ export const CASE_STAGE = {
   PRE_EXAMINATION: 'pre-examination',
   RECOMMENDATION: 'recommendation',
   WITHDRAWN: 'withdrawn',
-};
+} as const;
 
 export const MESSAGE_EVENT_TYPE = {
   CREATE: 'Create',
@@ -345,7 +345,7 @@ export const MESSAGE_EVENT_TYPE = {
   PUBLISH: 'Publish',
   UNPUBLISH: 'Unpublish',
   UPDATE: 'Update',
-};
+} as const;
 
 export const METHOD = {
   EMAIL: 'email',
@@ -353,18 +353,18 @@ export const METHOD = {
   MEETING: 'meeting',
   PHONE: 'phone',
   POST: 'post',
-};
+} as const;
 
 export const NSIP_CA_AND_TP_EVIDENCE = {
   AWAITING_SUBMISSION: 'awaiting_submission',
   NOT_APPLICABLE: 'not_applicable',
   SUBMITTED_BY_APPLICANT: 'submitted_by_applicant',
-};
+} as const;
 
 export const NSIP_CASE_TYPE = {
   HAS: 'has',
   NSIP: 'nsip',
-};
+} as const;
 
 export const NSIP_DECISION = {
   APPROVED: 'approved',
@@ -375,13 +375,13 @@ export const NSIP_DECISION = {
   REFUSED: 'refused',
   SPLIT_DECISION: 'split-decision',
   WITHDRAWN: 'withdrawn',
-};
+} as const;
 
 export const NSIP_DESIGN_APPROACH_DOCUMENT = {
   AWAITING_SUBMISSION: 'awaiting_submission',
   NOT_APPLICABLE: 'not_applicable',
   SUBMITTED_BY_APPLICANT: 'submitted_by_applicant',
-};
+} as const;
 
 export const NSIP_DOCUMENT_CASE_STAGE = {
   0: '0',
@@ -396,18 +396,18 @@ export const NSIP_DOCUMENT_CASE_STAGE = {
   PRE_EXAMINATION: 'pre-examination',
   RECOMMENDATION: 'recommendation',
   WITHDRAWN: 'withdrawn',
-};
+} as const;
 
 export const NSIP_FAST_TRACK_ADMISSION_DOCUMENT = {
   AWAITING_SUBMISSION: 'awaiting_submission',
   NOT_APPLICABLE: 'not_applicable',
   SUBMITTED_BY_APPLICANT: 'submitted_by_applicant',
-};
+} as const;
 
 export const NSIP_LANGUAGE = {
   ENGLISH: 'English',
   WELSH: 'Welsh',
-};
+} as const;
 
 export const NSIP_MAP_ZOOM_LEVEL = {
   BOROUGH: 'borough',
@@ -419,19 +419,19 @@ export const NSIP_MAP_ZOOM_LEVEL = {
   NONE: 'none',
   REGION: 'region',
   TOWN: 'town',
-};
+} as const;
 
 export const NSIP_MATURE_OUTLINE_CONTROL_DOCUMENT = {
   AWAITING_SUBMISSION: 'awaiting_submission',
   NOT_APPLICABLE: 'not_applicable',
   SUBMITTED_BY_APPLICANT: 'submitted_by_applicant',
-};
+} as const;
 
 export const NSIP_MULTIPARTY_APPLICATION_CHECK_DOCUMENT = {
   AWAITING_SUBMISSION: 'awaiting_submission',
   NOT_APPLICABLE: 'not_applicable',
   SUBMITTED_BY_APPLICANT: 'submitted_by_applicant',
-};
+} as const;
 
 export const NSIP_NEW_MATURITY = {
   A: 'a',
@@ -441,26 +441,26 @@ export const NSIP_NEW_MATURITY = {
   E: 'e',
   F: 'f',
   G: 'g',
-};
+} as const;
 
 export const NSIP_ORIGIN = {
   CITIZEN: 'citizen',
   LPA: 'lpa',
   OGD: 'ogd',
   PINS: 'pins',
-};
+} as const;
 
 export const NSIP_POLICY_COMPLIANCE_DOCUMENT = {
   AWAITING_SUBMISSION: 'awaiting_submission',
   NOT_APPLICABLE: 'not_applicable',
   SUBMITTED_BY_APPLICANT: 'submitted_by_applicant',
-};
+} as const;
 
 export const NSIP_PRINCIPAL_AREA_DISAGREEMENT_SUMMARY_STMT = {
   AWAITING_SUBMISSION: 'awaiting_submission',
   NOT_APPLICABLE: 'not_applicable',
   SUBMITTED_BY_APPLICANT: 'submitted_by_applicant',
-};
+} as const;
 
 export const NSIP_PROJECT_TYPE = {
   BC_01_OFFICE_USE: 'BC01 - Office Use',
@@ -488,18 +488,18 @@ export const NSIP_PROJECT_TYPE = {
   WA_02_TRANSFER_OF_WATER_RESOURCES: 'WA02 - Transfer of Water Resources',
   WS_01_HAZARDOUS_WASTE_FACILITIES: 'WS01 - Hazardous Waste Facilities',
   WW_01_WASTE_WATER_TREATMENT_PLANTS: 'WW01 - Waste Water Treatment Plants',
-};
+} as const;
 
 export const NSIP_PUBLIC_SECTOR_EQUALITY_DUTY = {
   AWAITING_SUBMISSION: 'awaiting_submission',
   NOT_APPLICABLE: 'not_applicable',
   SUBMITTED_BY_APPLICANT: 'submitted_by_applicant',
-};
+} as const;
 
 export const NSIP_PUBLISH_STATUS = {
   PUBLISHED: 'published',
   UNPUBLISHED: 'unpublished',
-};
+} as const;
 
 export const NSIP_PUBLISHED_STATUS = {
   ARCHIVED: 'archived',
@@ -512,18 +512,18 @@ export const NSIP_PUBLISHED_STATUS = {
   READY_TO_PUBLISH: 'ready_to_publish',
   UNPUBLISHED: 'unpublished',
   UNPUBLISHING: 'unpublishing',
-};
+} as const;
 
 export const NSIP_RECOMMENDATION = {
   RECOMMEND_CONSENT: 'recommend_consent',
   RECOMMEND_PARTIAL_CONSENT: 'recommend_partial_consent',
   RECOMMEND_REFUSAL: 'recommend_refusal',
-};
+} as const;
 
 export const NSIP_REDACTED_STATUS = {
   NOT_REDACTED: 'not_redacted',
   REDACTED: 'redacted',
-};
+} as const;
 
 export const NSIP_REGIONS = {
   EAST_MIDLANDS: 'east_midlands',
@@ -536,19 +536,19 @@ export const NSIP_REGIONS = {
   WALES: 'wales',
   WEST_MIDLANDS: 'west_midlands',
   YORKSHIRE_AND_THE_HUMBER: 'yorkshire_and_the_humber',
-};
+} as const;
 
 export const NSIP_REGISTER_FOR = {
   FAMILY_GROUP: 'FAMILY_GROUP',
   ORGANISATION: 'ORGANISATION',
   PERSON: 'PERSON',
-};
+} as const;
 
 export const NSIP_REPRESENTATION_FROM = {
   AGENT: 'AGENT',
   ORGANISATION: 'ORGANISATION',
   PERSON: 'PERSON',
-};
+} as const;
 
 export const NSIP_REPRESENTATION_TYPE = {
   ANOTHER_INDIVIDUAL: 'Another Individual',
@@ -558,7 +558,7 @@ export const NSIP_REPRESENTATION_TYPE = {
   PARISH_COUNCILS: 'Parish Councils',
   PUBLIC_BUSINESSES: 'Public & Businesses',
   STATUTORY_CONSULTEES: 'Statutory Consultees',
-};
+} as const;
 
 export const NSIP_SECTOR = {
   BC_BUSINESS_AND_COMMERCIAL: 'BC - Business and Commercial',
@@ -567,19 +567,19 @@ export const NSIP_SECTOR = {
   WA_WATER: 'WA - Water',
   WS_WASTE: 'WS - Waste',
   WW_WASTE_WATER: 'WW - Waste Water',
-};
+} as const;
 
 export const NSIP_SECURITY_CLASSIFICATION = {
   OFFICIAL: 'official',
   PUBLIC: 'public',
   SECRET: 'secret',
   TOP_SECRET: 'top-secret',
-};
+} as const;
 
 export const NSIP_SOURCE_SYSTEM = {
   BACK_OFFICE_APPLICATIONS: 'back-office-applications',
   HORIZON: 'horizon',
-};
+} as const;
 
 export const NSIP_STAGE = {
   ACCEPTANCE: 'acceptance',
@@ -591,7 +591,7 @@ export const NSIP_STAGE = {
   PRE_EXAMINATION: 'pre_examination',
   RECOMMENDATION: 'recommendation',
   WITHDRAWN: 'withdrawn',
-};
+} as const;
 
 export const NSIP_STATUS = {
   ARCHIVED: 'archived',
@@ -603,7 +603,7 @@ export const NSIP_STATUS = {
   UNPUBLISHED: 'unpublished',
   VALID: 'valid',
   WITHDRAWN: 'withdrawn',
-};
+} as const;
 
 export const NSIP_SUB_PROJECT_TYPE = {
   ENERGY_FROM_WASTE: 'energy_from_waste',
@@ -613,20 +613,20 @@ export const NSIP_SUB_PROJECT_TYPE = {
   OFFSHORE_WIND: 'offshore_wind',
   ONSHORE_WIND: 'onshore_wind',
   SOLAR: 'solar',
-};
+} as const;
 
 export const NSIP_SUBSCRIPTION_TYPE = {
   ALL_UPDATES: 'allUpdates',
   APPLICATION_DECIDED: 'applicationDecided',
   APPLICATION_SUBMITTED: 'applicationSubmitted',
   REGISTRATION_OPEN: 'registrationOpen',
-};
+} as const;
 
 export const NSIP_TIER = {
   BASIC: 'basic',
   ENHANCED: 'enhanced',
   STANDARD: 'standard',
-};
+} as const;
 
 export const NSIP_UPDATE_STATUS = {
   ARCHIVED: 'archived',
@@ -635,18 +635,18 @@ export const NSIP_UPDATE_STATUS = {
   READY_TO_PUBLISH: 'ready-to-publish',
   READY_TO_UNPUBLISH: 'ready-to-unpublish',
   UNPUBLISHED: 'unpublished',
-};
+} as const;
 
 export const NSIP_VIRUS_CHECK_STATUS = {
   AFFECTED: 'affected',
   NOT_SCANNED: 'not_scanned',
   SCANNED: 'scanned',
-};
+} as const;
 
 export const REDACTION_STATUS = {
   REDACTED: 'redacted',
   UNREDACTED: 'unredacted',
-};
+} as const;
 
 export const SERVICE_USER_TYPE = {
   AGENT: 'Agent',
@@ -656,7 +656,7 @@ export const SERVICE_USER_TYPE = {
   REPRESENTATION_CONTACT: 'RepresentationContact',
   RULE_6_PARTY: 'Rule6Party',
   SUBSCRIBER: 'Subscriber',
-};
+} as const;
 
 export const STATUS = {
   CHECKED: 'checked',
@@ -664,5 +664,5 @@ export const STATUS = {
   PUBLISHED: 'published',
   READYTOPUBLISH: 'readytopublish',
   UNCHECKED: 'unchecked',
-};
+} as const;
 

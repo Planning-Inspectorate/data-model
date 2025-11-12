@@ -4,13 +4,38 @@
 
 # meeting Properties
 
-| Property                                              | Type     | Required | Nullable    | Defined by                                                                                                                                                     |
-| :---------------------------------------------------- | :------- | :------- | :---------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [meetingAgenda](#meetingagenda)                       | `string` | Optional | can be null | [NSIP Project](nsip-project-defs-meeting-properties-meetingagenda.md "nsip-project.schema.json#/$defs/meeting/properties/meetingAgenda")                       |
-| [planningInspectorateRole](#planninginspectoraterole) | `string` | Optional | can be null | [NSIP Project](nsip-project-defs-meeting-properties-planninginspectoraterole.md "nsip-project.schema.json#/$defs/meeting/properties/planningInspectorateRole") |
-| [meetingDate](#meetingdate)                           | `string` | Optional | can be null | [NSIP Project](nsip-project-defs-meeting-properties-meetingdate.md "nsip-project.schema.json#/$defs/meeting/properties/meetingDate")                           |
-| [meetingType](#meetingtype)                           | `string` | Optional | can be null | [NSIP Project](nsip-project-defs-meeting-properties-meetingtype.md "nsip-project.schema.json#/$defs/meeting/properties/meetingType")                           |
-| Additional Properties                                 | Any      | Optional | can be null |                                                                                                                                                                |
+| Property                                              | Type      | Required | Nullable    | Defined by                                                                                                                                                     |
+| :---------------------------------------------------- | :-------- | :------- | :---------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [meetingId](#meetingid)                               | `integer` | Optional | can be null | [NSIP Project](nsip-project-defs-meeting-properties-meetingid.md "nsip-project.schema.json#/$defs/meeting/properties/meetingId")                               |
+| [meetingAgenda](#meetingagenda)                       | `string`  | Optional | can be null | [NSIP Project](nsip-project-defs-meeting-properties-meetingagenda.md "nsip-project.schema.json#/$defs/meeting/properties/meetingAgenda")                       |
+| [planningInspectorateRole](#planninginspectoraterole) | `string`  | Optional | can be null | [NSIP Project](nsip-project-defs-meeting-properties-planninginspectoraterole.md "nsip-project.schema.json#/$defs/meeting/properties/planningInspectorateRole") |
+| [meetingDate](#meetingdate)                           | `string`  | Optional | can be null | [NSIP Project](nsip-project-defs-meeting-properties-meetingdate.md "nsip-project.schema.json#/$defs/meeting/properties/meetingDate")                           |
+| [meetingType](#meetingtype)                           | `string`  | Optional | can be null | [NSIP Project](nsip-project-defs-meeting-properties-meetingtype.md "nsip-project.schema.json#/$defs/meeting/properties/meetingType")                           |
+| Additional Properties                                 | Any       | Optional | can be null |                                                                                                                                                                |
+
+## meetingId
+
+Unique identifier for the meeting
+
+`meetingId`
+
+* is optional
+
+* Type: `integer`
+
+* can be null
+
+* defined in: [NSIP Project](nsip-project-defs-meeting-properties-meetingid.md "nsip-project.schema.json#/$defs/meeting/properties/meetingId")
+
+### meetingId Type
+
+`integer`
+
+### meetingId Examples
+
+```json
+123
+```
 
 ## meetingAgenda
 

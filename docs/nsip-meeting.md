@@ -6,6 +6,7 @@
 
 | Property                                              | Type      | Required | Nullable       | Defined by                                                                                                                          |
 | :---------------------------------------------------- | :-------- | :------- | :------------- | :---------------------------------------------------------------------------------------------------------------------------------- |
+| [meetingID](#meetingid)                               | `integer` | Required | cannot be null | [NSIP Meeting](nsip-meeting-properties-meetingid.md "nsip-meeting.schema.json#/properties/meetingID")                               |
 | [caseId](#caseid)                                     | `integer` | Required | cannot be null | [NSIP Meeting](nsip-meeting-properties-caseid.md "nsip-meeting.schema.json#/properties/caseId")                                     |
 | [caseReference](#casereference)                       | `string`  | Required | can be null    | [NSIP Meeting](nsip-meeting-properties-casereference.md "nsip-meeting.schema.json#/properties/caseReference")                       |
 | [meetingAgenda](#meetingagenda)                       | `string`  | Required | can be null    | [NSIP Meeting](nsip-meeting-properties-meetingagenda.md "nsip-meeting.schema.json#/properties/meetingAgenda")                       |
@@ -14,9 +15,33 @@
 | [meetingType](#meetingtype)                           | `string`  | Required | can be null    | [NSIP Meeting](nsip-meeting-properties-meetingtype.md "nsip-meeting.schema.json#/properties/meetingType")                           |
 | Additional Properties                                 | Any       | Optional | can be null    |                                                                                                                                     |
 
+## meetingID
+
+The unique identifier for an NSIP Meeting.
+
+`meetingID`
+
+* is required
+
+* Type: `integer`
+
+* cannot be null
+
+* defined in: [NSIP Meeting](nsip-meeting-properties-meetingid.md "nsip-meeting.schema.json#/properties/meetingID")
+
+### meetingID Type
+
+`integer`
+
+### meetingID Examples
+
+```json
+1234
+```
+
 ## caseId
 
-The unique identifier within the Back Office. This is not the same as the case reference
+The unique identifier for the case within the Back Office. This is not the same as the case reference
 
 `caseId`
 

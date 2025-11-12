@@ -2094,7 +2094,11 @@ export interface NSIPInvoice {
  */
 export interface NSIPMeeting {
   /**
-   * The unique identifier within the Back Office. This is not the same as the case reference
+   * The unique identifier for an NSIP Meeting.
+   */
+  meetingID: number;
+  /**
+   * The unique identifier for the case within the Back Office. This is not the same as the case reference
    */
   caseId: number;
   caseReference: string | null;

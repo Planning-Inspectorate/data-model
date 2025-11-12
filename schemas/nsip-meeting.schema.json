@@ -5,12 +5,17 @@
   "description": "NSIP Standalone Meeting Schema for ODW Curated layer",
   "type": "object",
   "additionalProperties": true,
-  "required": ["caseId", "caseReference", "meetingAgenda", "planningInspectorateRole", "meetingDate", "meetingType"],
+  "required": ["meetingID","caseId", "caseReference", "meetingAgenda", "planningInspectorateRole", "meetingDate", "meetingType"],
   "properties": {
+    "meetingID": {
+      "type": "integer",
+      "examples": [1234],
+      "description": "The unique identifier for an NSIP Meeting."
+    },
     "caseId": {
       "type": "integer",
       "examples": [1242],
-      "description": "The unique identifier within the Back Office. This is not the same as the case reference"
+      "description": "The unique identifier for the case within the Back Office. This is not the same as the case reference"
     },
     "caseReference": {
       "type": ["string", "null"],

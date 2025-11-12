@@ -22,7 +22,6 @@ const exampleHasQuestionnaireSchema = {
 		caseType: 'D',
 		caseReference: 'nisi incididunt cillum',
 		lpaQuestionnaireSubmittedDate: null,
-		lpaStatement: 'consequat ex',
 		siteAccessDetails: null,
 		siteSafetyDetails: null,
 		isCorrectAppealType: null,

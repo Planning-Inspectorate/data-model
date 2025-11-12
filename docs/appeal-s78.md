@@ -44,7 +44,6 @@ any of
 | [lpaQuestionnaireValidationOutcome](#lpaquestionnairevalidationoutcome)                   | `string`  | Required | can be null    | [Appeal S78 Case](appeal-s78-properties-lpaquestionnairevalidationoutcome.md "appeal-s78.schema.json#/properties/lpaQuestionnaireValidationOutcome")                   |
 | [lpaQuestionnaireValidationOutcomeDate](#lpaquestionnairevalidationoutcomedate)           | `string`  | Required | can be null    | [Appeal S78 Case](appeal-s78-properties-lpaquestionnairevalidationoutcomedate.md "appeal-s78.schema.json#/properties/lpaQuestionnaireValidationOutcomeDate")           |
 | [lpaQuestionnaireValidationDetails](#lpaquestionnairevalidationdetails)                   | `array`   | Required | can be null    | [Appeal S78 Case](appeal-s78-properties-lpaquestionnairevalidationdetails.md "appeal-s78.schema.json#/properties/lpaQuestionnaireValidationDetails")                   |
-| [lpaStatement](#lpastatement)                                                             | `string`  | Required | can be null    | [Appeal S78 Case](appeal-s78-properties-lpastatement.md "appeal-s78.schema.json#/properties/lpaStatement")                                                             |
 | [caseWithdrawnDate](#casewithdrawndate)                                                   | `string`  | Required | can be null    | [Appeal S78 Case](appeal-s78-properties-casewithdrawndate.md "appeal-s78.schema.json#/properties/caseWithdrawnDate")                                                   |
 | [caseTransferredDate](#casetransferreddate)                                               | `string`  | Required | can be null    | [Appeal S78 Case](appeal-s78-properties-casetransferreddate.md "appeal-s78.schema.json#/properties/caseTransferredDate")                                               |
 | [transferredCaseClosedDate](#transferredcasecloseddate)                                   | `string`  | Required | can be null    | [Appeal S78 Case](appeal-s78-properties-transferredcasecloseddate.md "appeal-s78.schema.json#/properties/transferredCaseClosedDate")                                   |
@@ -86,7 +85,6 @@ any of
 | [affectedListedBuildingNumbers](#affectedlistedbuildingnumbers)                           | `array`   | Required | can be null    | [Appeal S78 Case](appeal-s78-properties-affectedlistedbuildingnumbers.md "appeal-s78.schema.json#/properties/affectedListedBuildingNumbers")                           |
 | [changedListedBuildingNumbers](#changedlistedbuildingnumbers)                             | `array`   | Required | can be null    | [Appeal S78 Case](appeal-s78-properties-changedlistedbuildingnumbers.md "appeal-s78.schema.json#/properties/changedListedBuildingNumbers")                             |
 | [preserveGrantLoan](#preservegrantloan)                                                   | `boolean` | Optional | can be null    | [Appeal S78 Case](appeal-s78-properties-preservegrantloan.md "appeal-s78.schema.json#/properties/preserveGrantLoan")                                                   |
-| [consultHistoricEngland](#consulthistoricengland)                                         | `boolean` | Optional | can be null    | [Appeal S78 Case](appeal-s78-properties-consulthistoricengland.md "appeal-s78.schema.json#/properties/consultHistoricEngland")                                         |
 | [appellantCostsAppliedFor](#appellantcostsappliedfor)                                     | `boolean` | Required | can be null    | [Appeal S78 Case](appeal-s78-properties-appellantcostsappliedfor.md "appeal-s78.schema.json#/properties/appellantCostsAppliedFor")                                     |
 | [lpaCostsAppliedFor](#lpacostsappliedfor)                                                 | `boolean` | Required | can be null    | [Appeal S78 Case](appeal-s78-properties-lpacostsappliedfor.md "appeal-s78.schema.json#/properties/lpaCostsAppliedFor")                                                 |
 | [agriculturalHolding](#agriculturalholding)                                               | `boolean` | Required | can be null    | [Appeal S78 Case](appeal-s78-properties-agriculturalholding.md "appeal-s78.schema.json#/properties/agriculturalHolding")                                               |
@@ -120,7 +118,6 @@ any of
 | [lpaProcedurePreference](#lpaprocedurepreference)                                         | `string`  | Required | can be null    | [Appeal S78 Case](appeal-s78-properties-lpaprocedurepreference.md "appeal-s78.schema.json#/properties/lpaProcedurePreference")                                         |
 | [lpaProcedurePreferenceDetails](#lpaprocedurepreferencedetails)                           | `string`  | Required | can be null    | [Appeal S78 Case](appeal-s78-properties-lpaprocedurepreferencedetails.md "appeal-s78.schema.json#/properties/lpaProcedurePreferenceDetails")                           |
 | [lpaProcedurePreferenceDuration](#lpaprocedurepreferenceduration)                         | `number`  | Required | can be null    | [Appeal S78 Case](appeal-s78-properties-lpaprocedurepreferenceduration.md "appeal-s78.schema.json#/properties/lpaProcedurePreferenceDuration")                         |
-| [caseworkReason](#caseworkreason)                                                         | `string`  | Required | can be null    | [Appeal S78 Case](appeal-s78-properties-caseworkreason.md "appeal-s78.schema.json#/properties/caseworkReason")                                                         |
 | [importantInformation](#importantinformation)                                             | `string`  | Required | can be null    | [Appeal S78 Case](appeal-s78-properties-importantinformation.md "appeal-s78.schema.json#/properties/importantInformation")                                             |
 | [jurisdiction](#jurisdiction)                                                             | `string`  | Required | can be null    | [Appeal S78 Case](appeal-s78-properties-jurisdiction.md "appeal-s78.schema.json#/properties/jurisdiction")                                                             |
 | [redeterminedIndicator](#redeterminedindicator)                                           | `string`  | Required | can be null    | [Appeal S78 Case](appeal-s78-properties-redeterminedindicator.md "appeal-s78.schema.json#/properties/redeterminedIndicator")                                           |
@@ -128,7 +125,6 @@ any of
 | [dateNotRecoveredOrDerecovered](#datenotrecoveredorderecovered)                           | `string`  | Required | can be null    | [Appeal S78 Case](appeal-s78-properties-datenotrecoveredorderecovered.md "appeal-s78.schema.json#/properties/dateNotRecoveredOrDerecovered")                           |
 | [dateRecovered](#daterecovered)                                                           | `string`  | Required | can be null    | [Appeal S78 Case](appeal-s78-properties-daterecovered.md "appeal-s78.schema.json#/properties/dateRecovered")                                                           |
 | [originalCaseDecisionDate](#originalcasedecisiondate)                                     | `string`  | Required | can be null    | [Appeal S78 Case](appeal-s78-properties-originalcasedecisiondate.md "appeal-s78.schema.json#/properties/originalCaseDecisionDate")                                     |
-| [targetDate](#targetdate)                                                                 | `string`  | Required | can be null    | [Appeal S78 Case](appeal-s78-properties-targetdate.md "appeal-s78.schema.json#/properties/targetDate")                                                                 |
 | [appellantCommentsSubmittedDate](#appellantcommentssubmitteddate)                         | `string`  | Required | can be null    | [Appeal S78 Case](appeal-s78-properties-appellantcommentssubmitteddate.md "appeal-s78.schema.json#/properties/appellantCommentsSubmittedDate")                         |
 | [appellantStatementSubmittedDate](#appellantstatementsubmitteddate)                       | `string`  | Required | can be null    | [Appeal S78 Case](appeal-s78-properties-appellantstatementsubmitteddate.md "appeal-s78.schema.json#/properties/appellantStatementSubmittedDate")                       |
 | [appellantProofsSubmittedDate](#appellantproofssubmitteddate)                             | `string`  | Required | can be null    | [Appeal S78 Case](appeal-s78-properties-appellantproofssubmitteddate.md "appeal-s78.schema.json#/properties/appellantProofsSubmittedDate")                             |
@@ -1089,32 +1085,6 @@ A list of reasons why the questionnaire is incomplete
 ### lpaQuestionnaireValidationDetails Type
 
 `string[]`
-
-## lpaStatement
-
-A statement provided by the LPA
-
-> Also available on HAS cases
-
-`lpaStatement`
-
-* is required
-
-* Type: `string`
-
-* can be null
-
-* defined in: [Appeal S78 Case](appeal-s78-properties-lpastatement.md "appeal-s78.schema.json#/properties/lpaStatement")
-
-### lpaStatement Type
-
-`string`
-
-### lpaStatement Examples
-
-```json
-"We refused the application because of ..."
-```
 
 ## caseWithdrawnDate
 
@@ -2135,26 +2105,6 @@ A grant or loan has been made to preserve the listed building
 
 `boolean`
 
-## consultHistoricEngland
-
-Are Historic England to be consulted?
-
-> Only available in S20 cases
-
-`consultHistoricEngland`
-
-* is optional
-
-* Type: `boolean`
-
-* can be null
-
-* defined in: [Appeal S78 Case](appeal-s78-properties-consulthistoricengland.md "appeal-s78.schema.json#/properties/consultHistoricEngland")
-
-### consultHistoricEngland Type
-
-`boolean`
-
 ## appellantCostsAppliedFor
 
 Indicates if the appellant has applied for costs
@@ -2826,24 +2776,6 @@ The duration of enquiry indicated by the LPA
 
 `number`
 
-## caseworkReason
-
-
-
-`caseworkReason`
-
-* is required
-
-* Type: `string`
-
-* can be null
-
-* defined in: [Appeal S78 Case](appeal-s78-properties-caseworkreason.md "appeal-s78.schema.json#/properties/caseworkReason")
-
-### caseworkReason Type
-
-`string`
-
 ## importantInformation
 
 
@@ -3005,34 +2937,6 @@ The date of the cost report
 **date time**: the string must be a date time string, according to [RFC 3339, section 5.6](https://tools.ietf.org/html/rfc3339 "check the specification")
 
 ### originalCaseDecisionDate Examples
-
-```json
-"2023-07-27T20:30:00.000Z"
-```
-
-## targetDate
-
-
-
-`targetDate`
-
-* is required
-
-* Type: `string`
-
-* can be null
-
-* defined in: [Appeal S78 Case](appeal-s78-properties-targetdate.md "appeal-s78.schema.json#/properties/targetDate")
-
-### targetDate Type
-
-`string`
-
-### targetDate Constraints
-
-**date time**: the string must be a date time string, according to [RFC 3339, section 5.6](https://tools.ietf.org/html/rfc3339 "check the specification")
-
-### targetDate Examples
 
 ```json
 "2023-07-27T20:30:00.000Z"

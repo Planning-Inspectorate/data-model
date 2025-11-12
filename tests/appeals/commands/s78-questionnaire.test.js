@@ -33,7 +33,6 @@ const exampleS78QuestionnaireSchema = {
 		newConditionDetails: null,
 		notificationMethod: ['irure', 'cillum tempor incididunt labore in'],
 		lpaCostsAppliedFor: true,
-		lpaStatement: 'ex laborum cupidatat',
 		changedListedBuildingNumbers: null,
 		affectsScheduledMonument: true,
 		hasProtectedSpecies: false,

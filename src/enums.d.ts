@@ -404,6 +404,14 @@ export const NSIP_FAST_TRACK_ADMISSION_DOCUMENT = {
   SUBMITTED_BY_APPLICANT: 'submitted_by_applicant',
 };
 
+export const NSIP_INVOICE_STAGE = {
+  ACCEPTANCE: 'acceptance',
+  FINAL_EXAMINATION: 'final_examination',
+  INITIAL_EXAMINATION: 'initial_examination',
+  PRE_ACCEPTANCE: 'pre_acceptance',
+  PRE_EXAMINATION: 'pre_examination',
+};
+
 export const NSIP_LANGUAGE = {
   ENGLISH: 'English',
   WELSH: 'Welsh',
@@ -448,6 +456,12 @@ export const NSIP_ORIGIN = {
   LPA: 'lpa',
   OGD: 'ogd',
   PINS: 'pins',
+};
+
+export const NSIP_PLANNING_INSPECTORATE_ROLE = {
+  ADVISOR: 'advisor',
+  FACILITATOR: 'facilitator',
+  OBSERVER: 'observer',
 };
 
 export const NSIP_POLICY_COMPLIANCE_DOCUMENT = {

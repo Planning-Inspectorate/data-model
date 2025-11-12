@@ -5,7 +5,16 @@
   "description": "NSIP Standalone Meeting Schema for ODW Curated layer",
   "type": "object",
   "additionalProperties": true,
-  "required": ["meetingID","caseId", "caseReference", "meetingAgenda", "planningInspectorateRole", "meetingDate", "meetingType"],
+
+  "required": [
+    "meetingID",
+    "caseId",
+    "caseReference",
+    "meetingAgenda",
+    "planningInspectorateRole",
+    "meetingDate",
+    "meetingType"
+  ],
   "properties": {
     "meetingID": {
       "type": "integer",

@@ -23,7 +23,7 @@ async function genDocs() {
 		includeReadme: true
 	});
 	// remove all irrelevant docs
-	const removePatterns = ['-properties-', '-properties.', '-anyof-'];
+	const removePatterns = ['-properties-', '-properties.'];
 	for (const md of out.markdown) {
 		const shouldRemove = removePatterns.some((pattern) => md.fileName.includes(pattern));
 		if (shouldRemove) {

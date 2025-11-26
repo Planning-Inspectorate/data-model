@@ -4,9 +4,9 @@
 
 any of
 
-* [Untitled undefined type in Appeal S78 Case](appeal-s78-anyof-0.md "check type definition")
+* [Grid Reference](appeal-s78-anyof-grid-reference.md "check type definition")
 
-* [Untitled undefined type in Appeal S78 Case](appeal-s78-anyof-1.md "check type definition")
+* [Site address](appeal-s78-anyof-site-address.md "check type definition")
 
 # Appeal S78 Case Properties
 

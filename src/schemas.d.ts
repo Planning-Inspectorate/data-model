@@ -303,17 +303,7 @@ export interface AppealEvent {
 /**
  * Group A - Schema defining the metadata for an appeal
  */
-export type AppealHASCase = (
-  | {
-      siteGridReferenceEasting: string;
-      siteGridReferenceNorthing: string;
-    }
-  | {
-      siteAddressLine1: string;
-      siteAddressTown: string;
-      siteAddressPostcode: string;
-    }
-) & {
+export type AppealHASCase = (GridReference | SiteAddress) & {
   /**
    * Internal case identifier
    */
@@ -802,6 +792,16 @@ export type AppealHASCase = (
   [k: string]: unknown;
 };
 
+export interface GridReference {
+  siteGridReferenceEasting: string;
+  siteGridReferenceNorthing: string;
+}
+export interface SiteAddress {
+  siteAddressLine1: string;
+  siteAddressTown: string;
+  siteAddressPostcode: string;
+}
+
 /**
  * Schema defining the metadata for appeal representations, such as statements, third-party comments and final comments
  */
@@ -891,17 +891,7 @@ export interface AppealRepresentation {
 /**
  * Group B - Schema defining the metadata for an appeal
  */
-export type AppealS78Case = (
-  | {
-      siteGridReferenceEasting: string;
-      siteGridReferenceNorthing: string;
-    }
-  | {
-      siteAddressLine1: string;
-      siteAddressTown: string;
-      siteAddressPostcode: string;
-    }
-) & {
+export type AppealS78Case = (GridReference | SiteAddress) & {
   /**
    * Internal case identifier
    */
@@ -1507,6 +1497,16 @@ export type AppealS78Case = (
     | null;
   [k: string]: unknown;
 };
+
+export interface GridReference {
+  siteGridReferenceEasting: string;
+  siteGridReferenceNorthing: string;
+}
+export interface SiteAddress {
+  siteAddressLine1: string;
+  siteAddressTown: string;
+  siteAddressPostcode: string;
+}
 
 /**
  * Schema defining the data returned by the DaRT API

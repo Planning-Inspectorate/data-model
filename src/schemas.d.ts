@@ -799,6 +799,10 @@ export type AppealHASCase = (
         [k: string]: unknown;
       }[]
     | null;
+  /**
+   * padsSapId for PADS inspectors
+   */
+  padsSapId: string | null;
   [k: string]: unknown;
 };
 
@@ -1505,6 +1509,10 @@ export type AppealS78Case = (
         [k: string]: unknown;
       }[]
     | null;
+  /**
+   * padsSapId for PADS inspectors
+   */
+  padsSapId: string | null;
   [k: string]: unknown;
 };
 

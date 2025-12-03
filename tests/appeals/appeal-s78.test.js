@@ -160,7 +160,8 @@ const appealS78 = {
 			isSiteOnHighwayLand: false,
 			advertType: 'Other'
 		}
-	]
+	],
+	padsSapId: null
 };
 
 describe(schema, () => {

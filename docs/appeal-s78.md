@@ -154,6 +154,7 @@ any of
 | [didAppellantSubmitCompletePhotosAndPlans](#didappellantsubmitcompletephotosandplans)     | `boolean` | Optional | can be null    | [Appeal S78 Case](appeal-s78-properties-didappellantsubmitcompletephotosandplans.md "appeal-s78.schema.json#/properties/didAppellantSubmitCompletePhotosAndPlans")     |
 | [isSiteInAreaOfSpecialControlAdverts](#issiteinareaofspecialcontroladverts)               | `boolean` | Optional | can be null    | [Appeal S78 Case](appeal-s78-properties-issiteinareaofspecialcontroladverts.md "appeal-s78.schema.json#/properties/isSiteInAreaOfSpecialControlAdverts")               |
 | [advertDetails](#advertdetails)                                                           | `array`   | Optional | can be null    | [Appeal S78 Case](appeal-s78-properties-advertdetails.md "appeal-s78.schema.json#/properties/advertDetails")                                                           |
+| [padsSapId](#padssapid)                                                                   | `string`  | Required | can be null    | [Appeal S78 Case](appeal-s78-properties-padssapid.md "appeal-s78.schema.json#/properties/padsSapId")                                                                   |
 | Additional Properties                                                                     | Any       | Optional | can be null    |                                                                                                                                                                        |
 
 ## caseId
@@ -3691,6 +3692,24 @@ A list of advertisements for the appeal
 ### advertDetails Type
 
 `object[]` ([Details](appeal-s78-properties-advertdetails-items.md))
+
+## padsSapId
+
+padsSapId for PADS inspectors
+
+`padsSapId`
+
+* is required
+
+* Type: `string`
+
+* can be null
+
+* defined in: [Appeal S78 Case](appeal-s78-properties-padssapid.md "appeal-s78.schema.json#/properties/padsSapId")
+
+### padsSapId Type
+
+`string`
 
 ## Additional Properties
 

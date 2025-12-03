@@ -130,7 +130,8 @@
     "numberOfResidencesNetChange",
     "siteViewableFromRoad",
     "siteWithinSSSI",
-    "typeOfPlanningApplication"
+    "typeOfPlanningApplication",
+    "padsSapId"
   ],
   "anyOf": [
     {
@@ -1087,6 +1088,10 @@
       },
       "description": "A list of advertisements for the appeal",
       "$comment": "Also available on CAS Adverts (ZA) cases"
+    },
+    "padsSapId": {
+      "type": ["string", "null"],
+      "description": "padsSapId for PADS inspectors"
     }
   }
 }

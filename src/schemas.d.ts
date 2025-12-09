@@ -1078,7 +1078,16 @@ export type AppealS78Case = (
   /**
    * The final outcome for the decision
    */
-  caseDecisionOutcome: 'allowed' | 'split_decision' | 'dismissed' | 'invalid' | null;
+  caseDecisionOutcome:
+    | 'allowed'
+    | 'split_decision'
+    | 'dismissed'
+    | 'invalid'
+    | 'notice_upheld'
+    | 'planning_permission_granted'
+    | 'quashed_on_legal_grounds'
+    | 'notice_varied_and_upheld'
+    | null;
   /**
    * The date the appeal decision letter
    */
@@ -1414,6 +1423,7 @@ export type AppealS78Case = (
   originalCaseDecisionDate: string | null;
   targetDate: string | null;
   appellantCommentsSubmittedDate: string | null;
+  appellantStatementDueDate?: string | null;
   appellantStatementSubmittedDate: string | null;
   appellantProofsSubmittedDate: string | null;
   finalCommentsDueDate: string | null;
@@ -1513,6 +1523,90 @@ export type AppealS78Case = (
    * padsSapId for PADS inspectors
    */
   padsSapId: string | null;
+  /**
+   * The nature of the appellant's interest in the appeal site
+   */
+  ownerOccupancyStatus?: string | null;
+  /**
+   * Does the appellant meet the criteria in relation to their interest in the site
+   */
+  occupancyConditionsMet?: boolean | null;
+  /**
+   * A list of grounds for the appeal, supporting facts & start dates. Enforcement cases (C) can have grounds (a) to (g)
+   */
+  enforcementAppealGroundsDetails?:
+    | {
+        appealGroundLetter?: 'a' | 'b' | 'c' | 'd' | 'e' | 'f' | 'g' | null;
+        groundForAppealStartDate?: string | null;
+        /**
+         * Facts supporting the appeal ground
+         */
+        groundFacts?: string | null;
+        [k: string]: unknown;
+      }[]
+    | null;
+  /**
+   * Was an application made and paid for
+   */
+  applicationMadeAndFeePaid?: boolean | null;
+  noticeRelatesToBuildingEngineeringMiningOther?: boolean | null;
+  changeOfUseRefuseOrWaste?: boolean | null;
+  changeOfUseMineralExtraction?: boolean | null;
+  changeOfUseMineralStorage?: boolean | null;
+  relatesToErectionOfBuildingOrBuildings?: boolean | null;
+  relatesToBuildingWithAgriculturalPurpose?: boolean | null;
+  relatesToBuildingSingleDwellingHouse?: boolean | null;
+  /**
+   * Was planning permission granted in relation to a prior application
+   */
+  previousPlanningPermissionGranted?: boolean | null;
+  /**
+   * The date on which an enforcement notice was issued
+   */
+  issueDateOfEnforcementNotice?: string | null;
+  /**
+   * The effective date of an enforcement notice
+   */
+  effectiveDateOfEnforcementNotice?: string | null;
+  /**
+   * Did the appellant appeal the decision made
+   */
+  didAppellantAppealLpaDecision?: boolean | null;
+  /**
+   * Date on which LPA decision in relation to application is due
+   */
+  dateLpaDecisionDue?: string | null;
+  /**
+   * Date on which LPA decision in relation to application was received
+   */
+  dateLpaDecisionReceived?: string | null;
+  areaOfAllegedBreachInSquareMetres?: number | null;
+  doesAllegedBreachCreateFloorSpace?: boolean | null;
+  floorSpaceCreatedByBreachInSquareMetres?: number | null;
+  /**
+   * Did the application relate to all or part of the development
+   */
+  applicationPartOrWholeDevelopment?: 'all-of-the-development' | 'part-of-the-development' | null;
+  hasPcnBeenServed?: boolean | null;
+  isSiteWithin67MOfTrunkRd?: boolean | null;
+  /**
+   * Name of trunk road within 67M of site
+   */
+  affectedTrunkRoadName?: string | null;
+  isSiteOnCrownLand?: boolean | null;
+  stopNoticeExists?: boolean | null;
+  isSiteWithin400MOfMineralInterest?: boolean | null;
+  isSiteWithin250MOfLandfill?: boolean | null;
+  hasDevelopmentInvolvedWasteImportation?: boolean | null;
+  isSiteSubjectToArticle4Direction?: boolean | null;
+  /**
+   * What permitted development rights are affected by the Article 4 Direction
+   */
+  article4AffectedDevelopmentRights?: string | null;
+  /**
+   * Have any development rights been restricted by means of a planning condition?
+   */
+  pcnRestrictedDevelopmentRights?: boolean | null;
   [k: string]: unknown;
 };
 

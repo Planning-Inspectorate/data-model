@@ -130,6 +130,7 @@ any of
 | [originalCaseDecisionDate](#originalcasedecisiondate)                                           | `string`  | Required | can be null    | [Appeal S78 Case](appeal-s78-properties-originalcasedecisiondate.md "appeal-s78.schema.json#/properties/originalCaseDecisionDate")                                           |
 | [targetDate](#targetdate)                                                                       | `string`  | Required | can be null    | [Appeal S78 Case](appeal-s78-properties-targetdate.md "appeal-s78.schema.json#/properties/targetDate")                                                                       |
 | [appellantCommentsSubmittedDate](#appellantcommentssubmitteddate)                               | `string`  | Required | can be null    | [Appeal S78 Case](appeal-s78-properties-appellantcommentssubmitteddate.md "appeal-s78.schema.json#/properties/appellantCommentsSubmittedDate")                               |
+| [appellantStatementDueDate](#appellantstatementduedate)                                         | `string`  | Optional | can be null    | [Appeal S78 Case](appeal-s78-properties-appellantstatementduedate.md "appeal-s78.schema.json#/properties/appellantStatementDueDate")                                         |
 | [appellantStatementSubmittedDate](#appellantstatementsubmitteddate)                             | `string`  | Required | can be null    | [Appeal S78 Case](appeal-s78-properties-appellantstatementsubmitteddate.md "appeal-s78.schema.json#/properties/appellantStatementSubmittedDate")                             |
 | [appellantProofsSubmittedDate](#appellantproofssubmitteddate)                                   | `string`  | Required | can be null    | [Appeal S78 Case](appeal-s78-properties-appellantproofssubmitteddate.md "appeal-s78.schema.json#/properties/appellantProofsSubmittedDate")                                   |
 | [finalCommentsDueDate](#finalcommentsduedate)                                                   | `string`  | Required | can be null    | [Appeal S78 Case](appeal-s78-properties-finalcommentsduedate.md "appeal-s78.schema.json#/properties/finalCommentsDueDate")                                                   |
@@ -1303,7 +1304,7 @@ The date the appeal decision was published
 
 The final outcome for the decision
 
-> Also available on HAS cases
+> List expanded for Enforcement Case Decision Outcomes
 
 `caseDecisionOutcome`
 
@@ -1323,13 +1324,17 @@ The final outcome for the decision
 
 **enum**: the value of this property must be equal to one of the following values:
 
-| Value              | Explanation |
-| :----------------- | :---------- |
-| `"allowed"`        |             |
-| `"split_decision"` |             |
-| `"dismissed"`      |             |
-| `"invalid"`        |             |
-| `null`             |             |
+| Value                           | Explanation |
+| :------------------------------ | :---------- |
+| `"allowed"`                     |             |
+| `"split_decision"`              |             |
+| `"dismissed"`                   |             |
+| `"invalid"`                     |             |
+| `"notice_upheld"`               |             |
+| `"planning_permission_granted"` |             |
+| `"quashed_on_legal_grounds"`    |             |
+| `"notice_varied_and_upheld"`    |             |
+| `null`                          |             |
 
 ## caseCompletedDate
 
@@ -3094,6 +3099,34 @@ The date of the cost report
 **date time**: the string must be a date time string, according to [RFC 3339, section 5.6](https://tools.ietf.org/html/rfc3339 "check the specification")
 
 ### appellantCommentsSubmittedDate Examples
+
+```json
+"2023-07-27T20:30:00.000Z"
+```
+
+## appellantStatementDueDate
+
+
+
+`appellantStatementDueDate`
+
+* is optional
+
+* Type: `string`
+
+* can be null
+
+* defined in: [Appeal S78 Case](appeal-s78-properties-appellantstatementduedate.md "appeal-s78.schema.json#/properties/appellantStatementDueDate")
+
+### appellantStatementDueDate Type
+
+`string`
+
+### appellantStatementDueDate Constraints
+
+**date time**: the string must be a date time string, according to [RFC 3339, section 5.6](https://tools.ietf.org/html/rfc3339 "check the specification")
+
+### appellantStatementDueDate Examples
 
 ```json
 "2023-07-27T20:30:00.000Z"

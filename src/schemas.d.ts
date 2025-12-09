@@ -1078,7 +1078,16 @@ export type AppealS78Case = (
   /**
    * The final outcome for the decision
    */
-  caseDecisionOutcome: 'allowed' | 'split_decision' | 'dismissed' | 'invalid' | null;
+  caseDecisionOutcome:
+    | 'allowed'
+    | 'split_decision'
+    | 'dismissed'
+    | 'invalid'
+    | 'notice_upheld'
+    | 'planning_permission_granted'
+    | 'quashed_on_legal_grounds'
+    | 'notice_varied_and_upheld'
+    | null;
   /**
    * The date the appeal decision letter
    */
@@ -1414,6 +1423,7 @@ export type AppealS78Case = (
   originalCaseDecisionDate: string | null;
   targetDate: string | null;
   appellantCommentsSubmittedDate: string | null;
+  appellantStatementDueDate?: string | null;
   appellantStatementSubmittedDate: string | null;
   appellantProofsSubmittedDate: string | null;
   finalCommentsDueDate: string | null;

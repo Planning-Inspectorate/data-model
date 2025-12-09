@@ -21,6 +21,11 @@ export const APPEAL_APPLICATION_DECISION = {
   REFUSED: 'refused',
 } as const;
 
+export const APPEAL_APPLICATION_PART_OR_WHOLE_DEVELOPMENT = {
+  ALL_OF_THE_DEVELOPMENT: 'all-of-the-development',
+  PART_OF_THE_DEVELOPMENT: 'part-of-the-development',
+} as const;
+
 export const APPEAL_CASE_DECISION_OUTCOME = {
   ALLOWED: 'allowed',
   DISMISSED: 'dismissed',

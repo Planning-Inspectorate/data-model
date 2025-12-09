@@ -21,6 +21,11 @@ export const APPEAL_APPLICATION_DECISION = Object.freeze({
   REFUSED: 'refused',
 });
 
+export const APPEAL_APPLICATION_PART_OR_WHOLE_DEVELOPMENT = Object.freeze({
+  ALL_OF_THE_DEVELOPMENT: 'all-of-the-development',
+  PART_OF_THE_DEVELOPMENT: 'part-of-the-development',
+});
+
 export const APPEAL_CASE_DECISION_OUTCOME = Object.freeze({
   ALLOWED: 'allowed',
   DISMISSED: 'dismissed',

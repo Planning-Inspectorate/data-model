@@ -438,9 +438,19 @@
     },
     "caseDecisionOutcome": {
       "type": ["string", "null"],
-      "enum": ["allowed", "split_decision", "dismissed", "invalid", null],
+      "enum": [
+        "allowed",
+        "split_decision",
+        "dismissed",
+        "invalid",
+        "notice_upheld",
+        "planning_permission_granted",
+        "quashed_on_legal_grounds",
+        "notice_varied_and_upheld",
+        null
+      ],
       "description": "The final outcome for the decision",
-      "$comment": "Also available on HAS cases"
+      "$comment": "List expanded for Enforcement Case Decision Outcomes"
     },
     "caseCompletedDate": {
       "type": ["string", "null"],
@@ -918,6 +928,11 @@
       "format": "date-time",
       "examples": ["2023-07-27T20:30:00.000Z"]
     },
+    "appellantStatementDueDate": {
+      "type": ["string", "null"],
+      "format": "date-time",
+      "examples": ["2023-07-27T20:30:00.000Z"]
+    },
     "appellantStatementSubmittedDate": {
       "type": ["string", "null"],
       "format": "date-time",
@@ -1092,6 +1107,148 @@
     "padsSapId": {
       "type": ["string", "null"],
       "description": "padsSapId for PADS inspectors"
+    },
+    "ownerOccupancyStatus": {
+      "type": ["string", "null"],
+      "description": "The nature of the appellant's interest in the appeal site",
+      "examples": ["Owner", "Tenant", "Mortgage lender"]
+    },
+    "occupancyConditionsMet": {
+      "type": ["boolean", "null"],
+      "description": "Does the appellant meet the criteria in relation to their interest in the site"
+    },
+    "enforcementAppealGroundsDetails": {
+      "type": ["array", "null"],
+      "items": {
+        "type": "object",
+        "additionalProperties": true,
+        "properties": {
+          "appealGroundLetter": {
+            "type": ["string", "null"],
+            "enum": ["a", "b", "c", "d", "e", "f", "g", null]
+          },
+          "groundForAppealStartDate": {
+            "type": ["string", "null"],
+            "format": "date-time",
+            "examples": ["2023-07-27T20:30:00.000Z"]
+          },
+          "groundFacts": {
+            "type": ["string", "null"],
+            "description": "Facts supporting the appeal ground"
+          }
+        }
+      },
+      "description": "A list of grounds for the appeal, supporting facts & start dates. Enforcement cases (C) can have grounds (a) to (g)",
+      "$comment": "Enforcement Listed Building cases (F) have a separate list of grounds (a) to (k)"
+    },
+    "applicationMadeAndFeePaid": {
+      "type": ["boolean", "null"],
+      "description": "Was an application made and paid for"
+    },
+    "noticeRelatesToBuildingEngineeringMiningOther": {
+      "type": ["boolean", "null"]
+    },
+    "changeOfUseRefuseOrWaste": {
+      "type": ["boolean", "null"]
+    },
+    "changeOfUseMineralExtraction": {
+      "type": ["boolean", "null"]
+    },
+    "changeOfUseMineralStorage": {
+      "type": ["boolean", "null"]
+    },
+    "relatesToErectionOfBuildingOrBuildings": {
+      "type": ["boolean", "null"]
+    },
+    "relatesToBuildingWithAgriculturalPurpose": {
+      "type": ["boolean", "null"]
+    },
+    "relatesToBuildingSingleDwellingHouse": {
+      "type": ["boolean", "null"]
+    },
+    "previousPlanningPermissionGranted": {
+      "type": ["boolean", "null"],
+      "description": "Was planning permission granted in relation to a prior application"
+    },
+    "issueDateOfEnforcementNotice": {
+      "type": ["string", "null"],
+      "format": "date-time",
+      "description": "The date on which an enforcement notice was issued",
+      "examples": ["2023-07-27T20:30:00.000Z"]
+    },
+    "effectiveDateOfEnforcementNotice": {
+      "type": ["string", "null"],
+      "format": "date-time",
+      "description": "The effective date of an enforcement notice",
+      "examples": ["2023-07-27T20:30:00.000Z"]
+    },
+    "didAppellantAppealLpaDecision": {
+      "type": ["boolean", "null"],
+      "description": "Did the appellant appeal the decision made"
+    },
+    "dateLpaDecisionDue": {
+      "type": ["string", "null"],
+      "format": "date-time",
+      "description": "Date on which LPA decision in relation to application is due",
+      "examples": ["2023-07-27T20:30:00.000Z"]
+    },
+    "dateLpaDecisionReceived": {
+      "type": ["string", "null"],
+      "format": "date-time",
+      "description": "Date on which LPA decision in relation to application was received",
+      "examples": ["2023-07-27T20:30:00.000Z"]
+    },
+    "areaOfAllegedBreachInSquareMetres": {
+      "type": ["number", "null"],
+      "examples": [3.5]
+    },
+    "doesAllegedBreachCreateFloorSpace": {
+      "type": ["boolean", "null"]
+    },
+    "floorSpaceCreatedByBreachInSquareMetres": {
+      "type": ["number", "null"],
+      "examples": [5.3]
+    },
+    "applicationPartOrWholeDevelopment": {
+      "type": ["string", "null"],
+      "description": "Did the application relate to all or part of the development",
+      "enum": ["all-of-the-development", "part-of-the-development", null]
+    },
+    "hasPcnBeenServed": {
+      "type": ["boolean", "null"]
+    },
+    "isSiteWithin67MOfTrunkRd": {
+      "type": ["boolean", "null"]
+    },
+    "affectedTrunkRoadName": {
+      "type": ["string", "null"],
+      "description": "Name of trunk road within 67M of site"
+    },
+    "isSiteOnCrownLand": {
+      "type": ["boolean", "null"]
+    },
+    "stopNoticeExists": {
+      "type": ["boolean", "null"]
+    },
+    "isSiteWithin400MOfMineralInterest": {
+      "type": ["boolean", "null"]
+    },
+    "isSiteWithin250MOfLandfill": {
+      "type": ["boolean", "null"]
+    },
+    "hasDevelopmentInvolvedWasteImportation": {
+      "type": ["boolean", "null"]
+    },
+    "isSiteSubjectToArticle4Direction": {
+      "type": ["boolean", "null"]
+    },
+    "article4AffectedDevelopmentRights": {
+      "type": ["string", "null"],
+      "description": "What permitted development rights are affected by the Article 4 Direction"
+    },
+    "pcnRestrictedDevelopmentRights": {
+      "type": ["boolean", "null"],
+      "description": "Have any development rights been restricted by means of a planning condition?"
     }
   }
 }

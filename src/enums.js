@@ -21,10 +21,19 @@ export const APPEAL_APPLICATION_DECISION = Object.freeze({
   REFUSED: 'refused',
 });
 
+export const APPEAL_APPLICATION_PART_OR_WHOLE_DEVELOPMENT = Object.freeze({
+  ALL_OF_THE_DEVELOPMENT: 'all-of-the-development',
+  PART_OF_THE_DEVELOPMENT: 'part-of-the-development',
+});
+
 export const APPEAL_CASE_DECISION_OUTCOME = Object.freeze({
   ALLOWED: 'allowed',
   DISMISSED: 'dismissed',
   INVALID: 'invalid',
+  NOTICE_UPHELD: 'notice_upheld',
+  NOTICE_VARIED_AND_UPHELD: 'notice_varied_and_upheld',
+  PLANNING_PERMISSION_GRANTED: 'planning_permission_granted',
+  QUASHED_ON_LEGAL_GROUNDS: 'quashed_on_legal_grounds',
   SPLIT_DECISION: 'split_decision',
 });
 

@@ -135,6 +135,7 @@
   ],
   "anyOf": [
     {
+      "title": "Grid Reference",
       "required": ["siteGridReferenceEasting", "siteGridReferenceNorthing"],
       "properties": {
         "siteGridReferenceEasting": { "type": "string" },
@@ -142,6 +143,7 @@
       }
     },
     {
+      "title": "Site address",
       "required": ["siteAddressLine1", "siteAddressTown", "siteAddressPostcode"],
       "properties": {
         "siteAddressLine1": { "type": "string" },

@@ -115,7 +115,7 @@ any of
 | [didAppellantSubmitCompletePhotosAndPlans](#didappellantsubmitcompletephotosandplans)     | `boolean` | Optional | can be null    | [Appeal HAS Case](appeal-has-properties-didappellantsubmitcompletephotosandplans.md "appeal-has.schema.json#/properties/didAppellantSubmitCompletePhotosAndPlans")     |
 | [isSiteInAreaOfSpecialControlAdverts](#issiteinareaofspecialcontroladverts)               | `boolean` | Optional | can be null    | [Appeal HAS Case](appeal-has-properties-issiteinareaofspecialcontroladverts.md "appeal-has.schema.json#/properties/isSiteInAreaOfSpecialControlAdverts")               |
 | [advertDetails](#advertdetails)                                                           | `array`   | Optional | can be null    | [Appeal HAS Case](appeal-has-properties-advertdetails.md "appeal-has.schema.json#/properties/advertDetails")                                                           |
-| [padsSapId](#padssapid)                                                                   | `string`  | Required | can be null    | [Appeal HAS Case](appeal-has-properties-padssapid.md "appeal-has.schema.json#/properties/padsSapId")                                                                   |
+| [padsSapId](#padssapid)                                                                   | `string`  | Optional | can be null    | [Appeal HAS Case](appeal-has-properties-padssapid.md "appeal-has.schema.json#/properties/padsSapId")                                                                   |
 | Additional Properties                                                                     | Any       | Optional | can be null    |                                                                                                                                                                        |
 
 ## caseId
@@ -2630,7 +2630,7 @@ padsSapId for PADS inspectors
 
 `padsSapId`
 
-* is required
+* is optional
 
 * Type: `string`
 

@@ -130,8 +130,7 @@
     "numberOfResidencesNetChange",
     "siteViewableFromRoad",
     "siteWithinSSSI",
-    "typeOfPlanningApplication",
-    "padsSapId"
+    "typeOfPlanningApplication"
   ],
   "anyOf": [
     {

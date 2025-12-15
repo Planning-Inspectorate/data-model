@@ -72,8 +72,7 @@
     "neighbouringSiteAddresses",
     "affectedListedBuildingNumbers",
     "appellantCostsAppliedFor",
-    "lpaCostsAppliedFor",
-    "padsSapId"
+    "lpaCostsAppliedFor"
   ],
   "anyOf": [
     {

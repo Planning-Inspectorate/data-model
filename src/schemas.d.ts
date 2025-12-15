@@ -802,7 +802,7 @@ export type AppealHASCase = (
   /**
    * padsSapId for PADS inspectors
    */
-  padsSapId: string | null;
+  padsSapId?: string | null;
   [k: string]: unknown;
 };
 
@@ -1522,7 +1522,7 @@ export type AppealS78Case = (
   /**
    * padsSapId for PADS inspectors
    */
-  padsSapId: string | null;
+  padsSapId?: string | null;
   /**
    * The nature of the appellant's interest in the appeal site
    */

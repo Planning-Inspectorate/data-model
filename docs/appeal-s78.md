@@ -155,7 +155,7 @@ any of
 | [didAppellantSubmitCompletePhotosAndPlans](#didappellantsubmitcompletephotosandplans)           | `boolean` | Optional | can be null    | [Appeal S78 Case](appeal-s78-properties-didappellantsubmitcompletephotosandplans.md "appeal-s78.schema.json#/properties/didAppellantSubmitCompletePhotosAndPlans")           |
 | [isSiteInAreaOfSpecialControlAdverts](#issiteinareaofspecialcontroladverts)                     | `boolean` | Optional | can be null    | [Appeal S78 Case](appeal-s78-properties-issiteinareaofspecialcontroladverts.md "appeal-s78.schema.json#/properties/isSiteInAreaOfSpecialControlAdverts")                     |
 | [advertDetails](#advertdetails)                                                                 | `array`   | Optional | can be null    | [Appeal S78 Case](appeal-s78-properties-advertdetails.md "appeal-s78.schema.json#/properties/advertDetails")                                                                 |
-| [padsSapId](#padssapid)                                                                         | `string`  | Required | can be null    | [Appeal S78 Case](appeal-s78-properties-padssapid.md "appeal-s78.schema.json#/properties/padsSapId")                                                                         |
+| [padsSapId](#padssapid)                                                                         | `string`  | Optional | can be null    | [Appeal S78 Case](appeal-s78-properties-padssapid.md "appeal-s78.schema.json#/properties/padsSapId")                                                                         |
 | [ownerOccupancyStatus](#owneroccupancystatus)                                                   | `string`  | Optional | can be null    | [Appeal S78 Case](appeal-s78-properties-owneroccupancystatus.md "appeal-s78.schema.json#/properties/ownerOccupancyStatus")                                                   |
 | [occupancyConditionsMet](#occupancyconditionsmet)                                               | `boolean` | Optional | can be null    | [Appeal S78 Case](appeal-s78-properties-occupancyconditionsmet.md "appeal-s78.schema.json#/properties/occupancyConditionsMet")                                               |
 | [enforcementAppealGroundsDetails](#enforcementappealgroundsdetails)                             | `array`   | Optional | can be null    | [Appeal S78 Case](appeal-s78-properties-enforcementappealgroundsdetails.md "appeal-s78.schema.json#/properties/enforcementAppealGroundsDetails")                             |
@@ -3764,7 +3764,7 @@ padsSapId for PADS inspectors
 
 `padsSapId`
 
-* is required
+* is optional
 
 * Type: `string`
 

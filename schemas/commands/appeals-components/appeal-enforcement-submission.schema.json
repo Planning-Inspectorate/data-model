@@ -1,0 +1,325 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "commands/appeals-components/appeal-enforcement-submission.schema.json",
+  "title": "Appellant enforcement submission properties",
+  "description": "Schema defining any properties for enforcement appeals",
+  "type": "object",
+  "additionalProperties": true,
+  "required": [
+    "submissionId",
+    "caseProcedure",
+    "lpaCode",
+    "caseSubmittedDate",
+    "enforcementNotice",
+    "enforcementReference",
+    "caseSubmissionDueDate",
+    "enforcementIssueDate",
+    "enforcementEffectiveDate"
+  ],
+  "anyOf": [
+    {
+      "required": ["siteGridReferenceEasting", "siteGridReferenceNorthing"],
+      "properties": {
+        "siteGridReferenceEasting": { "type": "string" },
+        "siteGridReferenceNorthing": { "type": "string" }
+      }
+    },
+    {
+      "required": ["siteAddressLine1", "siteAddressTown", "siteAddressPostcode"],
+      "properties": {
+        "siteAddressLine1": { "type": "string" },
+        "siteAddressTown": { "type": "string" },
+        "siteAddressPostcode": { "type": "string" }
+      }
+    }
+  ],
+  "properties": {
+    "submissionId": {
+      "type": "string",
+      "format": "uuid",
+      "examples": ["7f45748c-2342-4b59-b934-ad6183e8d834"],
+      "description": "Case submission id - link to draft submission created by appellant"
+    },
+    "caseProcedure": {
+      "type": "string",
+      "enum": ["written", "hearing", "inquiry"],
+      "description": "The type of procedure for the appeal"
+    },
+    "lpaCode": {
+      "type": "string",
+      "examples": ["Q9999"],
+      "description": "A unique identifier for the Local Planning Authority",
+      "$comment": "Uses the internal PINS code identifying LPAs"
+    },
+    "caseSubmittedDate": {
+      "type": "string",
+      "format": "date-time",
+      "examples": ["2023-07-27T20:30:00.000Z"],
+      "description": "The date the appeal was submitted by the appellant"
+    },
+    "enforcementNotice": {
+      "type": ["boolean", "null"],
+      "description": "Indicates if an enforcement notice is the reason for the appeal"
+    },
+    "enforcementReference": {
+      "type": "string",
+      "examples": ["123456"],
+      "description": "The unique identifier of the enforcement notice"
+    },
+    "enforcementIssueDate": {
+      "type": "string",
+      "format": "date-time",
+      "examples": ["2023-07-27T20:30:00.000Z"],
+      "description": "The date the enforcement notice was issued"
+    },
+    "enforcementEffectiveDate": {
+      "type": "string",
+      "format": "date-time",
+      "examples": ["2023-07-27T20:30:00.000Z"],
+      "description": "The date the enforcement notice took effect"
+    },
+    "contactPlanningInspectorateDate": {
+      "type": ["string", "null"],
+      "format": "date-time",
+      "examples": ["2023-07-27T20:30:00.000Z"],
+      "description": "The date the enforcement notice took effect"
+    },
+    "interestInLand": {
+      "type": ["string", "null"],
+      "examples": ["owner, tenant, mortgage holder, other"],
+      "description": "The individual's interest in the appeal land"
+    },
+    "writtenOrVerbalPermission": {
+      "type": ["string", "null"],
+      "examples": ["yes, no"],
+      "description": "If required, whether the individual has permission to use the appeal land"
+    },
+    "descriptionOfAllegedBreach": {
+      "type": ["string", "null"],
+      "description": "A description of the alleged breach"
+    },
+    "applicationMadeAndFeePaid": {
+      "type": ["boolean", "null"],
+      "description": "Whether a planning application was made"
+    },
+    "applicationDevelopmentAllOrPart": {
+      "type": ["string", "null"],
+      "enum": ["all-of-the-development", "part-of-the-development", null],
+      "description": "Did the application relate to all or part of the development"
+    },
+    "originalDevelopmentDescription": {
+      "type": ["string", "null"],
+      "description": "A description of the proposed development"
+    },
+    "changedDevelopmentDescription": {
+      "type": ["boolean", "null"],
+      "description": "An updated description of the proposed development"
+    },
+    "applicationReference": {
+      "type": ["string", "null"],
+      "examples": ["43010/APP/1/290572"],
+      "description": "The unique identifier of the LPA application"
+    },
+    "applicationDate": {
+      "type": ["string", "null"],
+      "format": "date-time",
+      "examples": ["2023-07-27T20:30:00.000Z"],
+      "description": "The date of the original LPA application"
+    },
+    "applicationDecision": {
+      "type": ["string", "null"],
+      "enum": ["granted", "refused", "not_received", null],
+      "description": "The outcome of the original LPA decision"
+    },
+    "applicationDecisionDate": {
+      "type": ["string", "null"],
+      "format": "date-time",
+      "examples": ["2023-07-27T20:30:00.000Z"],
+      "description": "The date of the original LPA decision"
+    },
+    "applicationDecisionAppealed": {
+      "type": ["boolean", "null"],
+      "description": "Whether an appeal was made against the original LPA decision"
+    },
+    "appealDecisionDate": {
+      "type": ["string", "null"],
+      "format": "date-time",
+      "examples": ["2023-07-27T20:30:00.000Z"],
+      "description": "The date of the appeal against the original LPA decision"
+    },
+    "caseSubmissionDueDate": {
+      "type": ["string", "null"],
+      "format": "date-time",
+      "examples": ["2023-07-27T20:30:00.000Z"],
+      "description": "The statutory deadline for submitting an appeal from the original LPA decision date",
+      "$comment": "Calculated from the applicationDecisionDate"
+    },
+    "siteAddressLine1": {
+      "type": ["string", "null"],
+      "examples": ["96 The Avenue"],
+      "description": "First line of address for the appeal site"
+    },
+    "siteAddressLine2": {
+      "type": ["string", "null"],
+      "description": "Second line of address for the appeal site"
+    },
+    "siteAddressTown": {
+      "type": ["string", "null"],
+      "examples": ["Maidstone"],
+      "description": "Town / City of the site address"
+    },
+    "siteAddressCounty": {
+      "type": ["string", "null"],
+      "examples": ["Kent"],
+      "description": "County of the site address"
+    },
+    "siteAddressPostcode": {
+      "type": ["string", "null"],
+      "examples": ["MD21 5XY"],
+      "description": "Postal code of the site address"
+    },
+    "siteGridReferenceEasting": {
+      "type": ["string", "null"],
+      "pattern": "^\\d{6,7}$",
+      "examples": ["357144"]
+    },
+    "siteGridReferenceNorthing": {
+      "type": ["string", "null"],
+      "pattern": "^\\d{6,7}$",
+      "examples": ["400534"]
+    },
+    "contactAddressLine1": {
+      "type": ["string", "null"],
+      "examples": ["96 The Avenue"],
+      "description": "First line of address for the appeal site"
+    },
+    "contactAddressLine2": {
+      "type": ["string", "null"],
+      "description": "Second line of address for the appeal site"
+    },
+    "contactAddressTown": {
+      "type": ["string", "null"],
+      "examples": ["Maidstone"],
+      "description": "Town / City of the site address"
+    },
+    "contactAddressCounty": {
+      "type": ["string", "null"],
+      "examples": ["Kent"],
+      "description": "County of the site address"
+    },
+    "contactAddressPostcode": {
+      "type": ["string", "null"],
+      "examples": ["MD21 5XY"],
+      "description": "Postal code of the site address"
+    },
+    "contactGridReferenceEasting": {
+      "type": ["string", "null"],
+      "pattern": "^\\d{6,7}$",
+      "examples": ["357144"]
+    },
+    "contactGridReferenceNorthing": {
+      "type": ["string", "null"],
+      "pattern": "^\\d{6,7}$",
+      "examples": ["400534"]
+    },
+    "siteAccessDetails": {
+      "type": ["array", "null"],
+      "items": {
+        "type": "string",
+        "examples": ["The site is accessible through the small gate on the left of the property"]
+      },
+      "description": "Provided information on site accessibility"
+    },
+    "siteSafetyDetails": {
+      "type": ["array", "null"],
+      "items": {
+        "type": "string",
+        "examples": ["There is an aggressive dog in the property"]
+      },
+      "description": "Provided information on site health and safety"
+    },
+    "appellantCostsAppliedFor": {
+      "type": ["boolean", "null"],
+      "description": "Indicates if the appellant has applied for costs",
+      "$comment": "Also available on HAS cases"
+    },
+    "appellantProcedurePreference": {
+      "type": ["string", "null"],
+      "enum": ["written", "hearing", "inquiry", null],
+      "description": "The procedure preference indicated by the appellant"
+    },
+    "appellantProcedurePreferenceDetails": {
+      "type": ["string", "null"],
+      "description": "The procedure details preference indicated by the appellant"
+    },
+    "appellantProcedurePreferenceDuration": {
+      "type": ["number", "null"],
+      "description": "The duration of the procedure indicated by the appellant"
+    },
+    "appellantProcedurePreferenceWitnessCount": {
+      "type": ["number", "null"],
+      "description": "The number of witnesses appellant has suggested for inquiries preference"
+    },
+    "statusPlanningObligation": {
+      "type": ["string", "null"],
+      "description": "The planning obligation information, if available"
+    },
+    "nearbyCaseReferences": {
+      "type": ["array", "null"],
+      "items": {
+        "type": "string",
+        "examples": ["6000456", "8004567"]
+      },
+      "description": "A list of related case references known to the appellant and the LPA"
+    },
+    "namedIndividuals": {
+      "type": ["array", "null"],
+      "items": {
+        "type": "object",
+        "additionalProperties": true,
+        "properties": {
+          "firstName": {
+            "type": "string",
+            "description": "First name of the individual"
+          },
+          "lastName": {
+            "type": "string",
+            "description": "Last name of the individual"
+          },
+          "interestInLand": {
+            "type": "string",
+            "examples": ["owner, tenant, mortgage holder, other"],
+            "description": "Individual's interest in the appeal land"
+          },
+          "writtenOrVerbalPermission": {
+            "type": ["string", "null"],
+            "examples": ["yes"],
+            "description": "Whether the individual has permission to use the land"
+          }
+        },
+        "required": ["firstName", "lastName", "interestInLand", "writtenOrVerbalPermission"]
+      },
+      "description": "A list of individuals named on the enforcement notice"
+    },
+    "appealGrounds": {
+      "type": ["array", "null"],
+      "items": {
+        "type": "object",
+        "additionalProperties": true,
+        "properties": {
+          "groundRef": {
+            "type": "string",
+            "enum": ["a", "b", "c", "d", "e", "f", "g"],
+            "description": "Name of the appeal ground"
+          },
+          "factsForGround": {
+            "type": "string",
+            "description": "Facts supporting the appeal ground"
+          }
+        },
+        "required": ["groundRef", "factsForGround"]
+      },
+      "description": "A list of appeal grounds being pleaded"
+    }
+  }
+}

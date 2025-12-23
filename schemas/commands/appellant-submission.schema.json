@@ -49,6 +49,14 @@
             { "$ref": "appeals-components/appeal-advert.submission.schema.json" },
             { "$ref": "appeals-components/appellant-procedure-preference.schema.json" }
           ]
+        },
+        {
+          "$comment": "Enforcement notice",
+          "allOf": [
+            { "properties": { "caseType": { "enum": ["C"] } } },
+            { "$ref": "appeals-components/appeal-enforcement-submission.schema.json" },
+            { "$ref": "appeals-components/appellant-procedure-preference.schema.json" }
+          ]
         }
       ]
     },
@@ -116,6 +124,16 @@
               "plansDrawings",
               "newPlansDrawings",
               "otherNewDocuments",
+              "priorCorrespondenceWithPINS",
+              "enforcementNotice",
+              "enforcementNoticePlan",
+              "groundASupporting",
+              "groundBSupporting",
+              "groundCSupporting",
+              "groundDSupporting",
+              "groundESupporting",
+              "groundFSupporting",
+              "groundGSupporting",
               null,
               "environmentalAssessment"
             ],

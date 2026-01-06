@@ -49,7 +49,8 @@
     },
     "meetingType": {
       "type": ["string", "null"],
-      "description": "Type of Meeting"
+      "description": "Type of Meeting",
+      "enum": ["evidence_plan", "project", null]
     }
   }
 }

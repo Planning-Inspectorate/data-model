@@ -192,6 +192,16 @@ Type of Meeting
 
 `string`
 
+### meetingType Constraints
+
+**enum**: the value of this property must be equal to one of the following values:
+
+| Value             | Explanation |
+| :---------------- | :---------- |
+| `"evidence_plan"` |             |
+| `"project"`       |             |
+| `null`            |             |
+
 ## Additional Properties
 
 Additional properties are allowed and do not have to follow a specific schema

@@ -444,6 +444,11 @@ export const NSIP_MATURE_OUTLINE_CONTROL_DOCUMENT = Object.freeze({
   SUBMITTED_BY_APPLICANT: 'submitted_by_applicant',
 });
 
+export const NSIP_MEETING_TYPE = Object.freeze({
+  EVIDENCE_PLAN: 'evidence_plan',
+  PROJECT: 'project',
+});
+
 export const NSIP_MULTIPARTY_APPLICATION_CHECK_DOCUMENT = Object.freeze({
   AWAITING_SUBMISSION: 'awaiting_submission',
   NOT_APPLICABLE: 'not_applicable',

@@ -444,6 +444,11 @@ export const NSIP_MATURE_OUTLINE_CONTROL_DOCUMENT = {
   SUBMITTED_BY_APPLICANT: 'submitted_by_applicant',
 } as const;
 
+export const NSIP_MEETING_TYPE = {
+  EVIDENCE_PLAN: 'evidence_plan',
+  PROJECT: 'project',
+} as const;
+
 export const NSIP_MULTIPARTY_APPLICATION_CHECK_DOCUMENT = {
   AWAITING_SUBMISSION: 'awaiting_submission',
   NOT_APPLICABLE: 'not_applicable',

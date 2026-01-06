@@ -2272,7 +2272,7 @@ export interface NSIPMeeting {
   /**
    * Type of Meeting
    */
-  meetingType: string | null;
+  meetingType: 'evidence_plan' | 'project' | null;
   [k: string]: unknown;
 }
 
@@ -2865,7 +2865,7 @@ export interface Meeting {
   /**
    * Type of Meeting
    */
-  meetingType?: string | null;
+  meetingType?: 'evidence_plan' | 'project' | null;
   [k: string]: unknown;
 }
 /**

@@ -134,6 +134,11 @@
               "groundESupporting",
               "groundFSupporting",
               "groundGSupporting",
+              "groundHSupporting",
+              "groundISupporting",
+              "groundJSupporting",
+              "groundKSupporting",
+              "applicationFeeReceipt",
               null,
               "environmentalAssessment"
             ],

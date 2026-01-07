@@ -597,6 +597,14 @@ The type of document, used for exchange, migrations and consumption from the app
 | `"environmentalAssessment"`       |             |
 | `"appealNotification"`            |             |
 | `"historicEnglandConsultation"`   |             |
+| `"stopNotice"`                    |             |
+| `"article4Direction"`             |             |
+| `"enforcementList"`               |             |
+| `"localDevelopmentOrder"`         |             |
+| `"planningPermission"`            |             |
+| `"lpaEnforcementNotice"`          |             |
+| `"lpaEnforcementNoticePlan"`      |             |
+| `"planningContraventionNotice"`   |             |
 | `null`                            |             |
 
 ## sourceSystem

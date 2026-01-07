@@ -1,0 +1,73 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "commands/appeals-components/lpa-questionnaire-enforcement.schema.json",
+  "title": "LPAQ Enforcement submission properties",
+  "description": "Schema defining any enfrocement specific properties for LPAQ submissions",
+  "type": "object",
+  "additionalProperties": true,
+  "required": [
+    "noticeRelatesToBuildingEngineeringMiningOther",
+    "siteAreaSquareMetres",
+    "hasAllegedBreachArea",
+    "doesAllegedBreachCreateFloorSpace",
+    "changeOfUseRefuseOrWaste",
+    "changeOfUseMineralExtraction",
+    "changeOfUseMineralStorage",
+    "relatesToErectionOfBuildingOrBuildings",
+    "relatesToBuildingWithAgriculturalPurpose",
+    "relatesToBuildingSingleDwellingHouse",
+    "affectedTrunkRoadName",
+    "isSiteOnCrownLand",
+    "article4AffectedDevelopmentRights"
+  ],
+  "allOf": [
+    {
+      "properties": {
+        "noticeRelatesToBuildingEngineeringMiningOther": {
+          "type": ["boolean", "null"]
+        },
+        "siteAreaSquareMetres": {
+          "type": ["number", "null"],
+          "examples": [45.7],
+          "description": "The site area, in square meters"
+        },
+        "hasAllegedBreachArea": {
+          "type": ["boolean", "null"]
+        },
+        "doesAllegedBreachCreateFloorSpace": {
+          "type": ["boolean", "null"]
+        },
+        "changeOfUseRefuseOrWaste": {
+          "type": ["boolean", "null"]
+        },
+        "changeOfUseMineralExtraction": {
+          "type": ["boolean", "null"]
+        },
+        "changeOfUseMineralStorage": {
+          "type": ["boolean", "null"]
+        },
+        "relatesToErectionOfBuildingOrBuildings": {
+          "type": ["boolean", "null"]
+        },
+        "relatesToBuildingWithAgriculturalPurpose": {
+          "type": ["boolean", "null"]
+        },
+        "relatesToBuildingSingleDwellingHouse": {
+          "type": ["boolean", "null"]
+        },
+        "affectedTrunkRoadName": {
+          "type": ["string", "null"],
+          "examples": ["Buckingham palace road"],
+          "description": "Name of trunk road within 67M of site"
+        },
+        "isSiteOnCrownLand": {
+          "type": ["boolean", "null"]
+        },
+        "article4AffectedDevelopmentRights": {
+          "type": ["string", "null"],
+          "description": "What permitted develpoment rights are affected by the Article 4 Direction"
+        }
+      }
+    }
+  ]
+}

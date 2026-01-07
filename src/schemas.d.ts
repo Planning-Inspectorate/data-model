@@ -4046,6 +4046,11 @@ export interface AppellantSubmissionCommand {
       | 'groundESupporting'
       | 'groundFSupporting'
       | 'groundGSupporting'
+      | 'groundHSupporting'
+      | 'groundISupporting'
+      | 'groundJSupporting'
+      | 'groundKSupporting'
+      | 'applicationFeeReceipt'
       | null
       | 'environmentalAssessment';
     [k: string]: unknown;

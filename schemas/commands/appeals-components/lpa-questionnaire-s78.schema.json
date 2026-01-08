@@ -19,23 +19,19 @@
       "properties": {
         "affectsScheduledMonument": {
           "type": ["boolean", "null"],
-          "description": "Indicates that a scheduled monument is affected",
-          "$comment": "Only available in S78 cases"
+          "description": "Indicates that a scheduled monument is affected"
         },
         "hasTreePreservationOrder": {
           "type": ["boolean", "null"],
-          "description": "Indicates a TPO (tree preservation order)",
-          "$comment": "Only available in S78 cases"
+          "description": "Indicates a TPO (tree preservation order)"
         },
         "isPublicRightOfWay": {
           "type": ["boolean", "null"],
-          "description": "Indicates a PROW (public right of way)",
-          "$comment": "Only available in S78 cases"
+          "description": "Indicates a PROW (public right of way)"
         },
         "hasStatutoryConsultees": {
           "type": ["boolean", "null"],
-          "description": "Indicates statutory consultees",
-          "$comment": "Only available in S78 cases"
+          "description": "Indicates statutory consultees"
         },
         "consultedBodiesDetails": {
           "type": ["string", "null"],
@@ -43,18 +39,15 @@
         },
         "hasConsultationResponses": {
           "type": ["boolean", "null"],
-          "description": "Indicates consultation responses",
-          "$comment": "Only available in S78 cases"
+          "description": "Indicates consultation responses"
         },
         "hasEmergingPlan": {
           "type": ["boolean", "null"],
-          "description": "Indicates emerging plans",
-          "$comment": "Only available in S78 cases"
+          "description": "Indicates emerging plans"
         },
         "hasSupplementaryPlanningDocs": {
           "type": ["boolean", "null"],
-          "description": "Indicates supplementary planning documents",
-          "$comment": "Only available in S78 cases"
+          "description": "Indicates supplementary planning documents"
         }
       }
     }

@@ -4422,6 +4422,19 @@ export type SiteDesignationsAndProtectionSpecificProperties = {
   isGypsyOrTravellerSite?: boolean | null;
 };
 /**
+ * Schema defining any listed building specific properties for LPAQ submissions
+ */
+export type LPAQListedBuildingSubmissionProperties = {
+  /**
+   * A grant or loan has been made to preserve the listed building
+   */
+  preserveGrantLoan?: boolean | null;
+  /**
+   * Are Historic England to be consulted?
+   */
+  consultHistoricEngland?: boolean | null;
+};
+/**
  * Schema defining any advert specific properties for LPAQ submissions
  */
 export type LPAQCasAdvertSubmissionProperties = {
@@ -4504,7 +4517,7 @@ export interface LPAQuestionnaireCommand {
       } & LPAQCommonSubmissionProperties &
         LPAQHASSubmissionProperties)
     | ({
-        caseType?: 'W' | 'Y';
+        caseType?: 'W';
       } & LPAQCommonSubmissionProperties &
         LPAQHASSubmissionProperties &
         LPAQS78SubmissionProperties &
@@ -4514,11 +4527,22 @@ export interface LPAQuestionnaireCommand {
         EnvironmentalImpactAssessmentProperties &
         SiteDesignationsAndProtectionSpecificProperties)
     | ({
+        caseType?: 'Y';
+      } & LPAQCommonSubmissionProperties &
+        LPAQHASSubmissionProperties &
+        LPAQS78SubmissionProperties &
+        LPAProcedurePreferenceProperties &
+        ChangedListedBuildingNumbersProperties &
+        InfrastructureLevyProperties &
+        EnvironmentalImpactAssessmentProperties &
+        SiteDesignationsAndProtectionSpecificProperties &
+        LPAQListedBuildingSubmissionProperties)
+    | ({
         caseType?: 'ZA';
       } & LPAQCommonSubmissionProperties &
         LPAQHASSubmissionProperties &
-        LPAProcedurePreferenceProperties &
-        LPAQCasAdvertSubmissionProperties)
+        LPAQCasAdvertSubmissionProperties &
+        LPAProcedurePreferenceProperties)
     | ({
         caseType?: 'H';
       } & LPAQCommonSubmissionProperties &
@@ -4569,6 +4593,7 @@ export interface LPAQuestionnaireCommand {
      * The type of document, used for exchange, migrations and consumption from the appeal back-office system
      */
     documentType:
+      | null
       | 'whoNotified'
       | 'whoNotifiedSiteNotice'
       | 'whoNotifiedLetterToNeighbours'
@@ -4585,7 +4610,6 @@ export interface LPAQuestionnaireCommand {
       | 'supplementaryPlanning'
       | 'emergingPlan'
       | 'appealNotification'
-      | null
       | 'otherRelevantPolicies'
       | 'treePreservationPlan'
       | 'consultationResponses'

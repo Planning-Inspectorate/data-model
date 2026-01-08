@@ -1,0 +1,23 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "commands/appeals-components/lpa-questionnaire-listed-building.schema.json",
+  "title": "LPAQ listed building submission properties",
+  "description": "Schema defining any listed building specific properties for LPAQ submissions",
+  "type": "object",
+  "additionalProperties": true,
+  "required": ["preserveGrantLoan", "consultHistoricEngland"],
+  "allOf": [
+    {
+      "properties": {
+        "preserveGrantLoan": {
+          "type": ["boolean", "null"],
+          "description": "A grant or loan has been made to preserve the listed building"
+        },
+        "consultHistoricEngland": {
+          "type": ["boolean", "null"],
+          "description": "Are Historic England to be consulted?"
+        }
+      }
+    }
+  ]
+}

@@ -21,9 +21,9 @@
           ]
         },
         {
-          "$comment": "S78 + S20",
+          "$comment": "S78",
           "allOf": [
-            { "properties": { "caseType": { "enum": ["W", "Y"] } } },
+            { "properties": { "caseType": { "enum": ["W"] } } },
             { "$ref": "appeals-components/lpa-questionnaire-common.schema.json" },
             { "$ref": "appeals-components/lpa-questionnaire-has.schema.json" },
             { "$ref": "appeals-components/lpa-questionnaire-s78.schema.json" },
@@ -35,13 +35,28 @@
           ]
         },
         {
+          "$comment": "S20",
+          "allOf": [
+            { "properties": { "caseType": { "enum": ["Y"] } } },
+            { "$ref": "appeals-components/lpa-questionnaire-common.schema.json" },
+            { "$ref": "appeals-components/lpa-questionnaire-has.schema.json" },
+            { "$ref": "appeals-components/lpa-questionnaire-s78.schema.json" },
+            { "$ref": "appeals-components/lpa-procedure-preference.schema.json" },
+            { "$ref": "appeals-components/changed-listed-building-number.schema.json" },
+            { "$ref": "appeals-components/infrastructure-levy.schema.json" },
+            { "$ref": "appeals-components/environmental-impact-assessment.schema.json" },
+            { "$ref": "appeals-components/site-designations-protection.schema.json" },
+            { "$ref": "appeals-components/lpa-questionnaire-listed-building.schema.json" }
+          ]
+        },
+        {
           "$comment": "CAS Adverts",
           "allOf": [
             { "properties": { "caseType": { "enum": ["ZA"] } } },
             { "$ref": "appeals-components/lpa-questionnaire-common.schema.json" },
             { "$ref": "appeals-components/lpa-questionnaire-has.schema.json" },
-            { "$ref": "appeals-components/lpa-procedure-preference.schema.json" },
-            { "$ref": "appeals-components/lpa-questionnaire-advert.schema.json" }
+            { "$ref": "appeals-components/lpa-questionnaire-advert.schema.json" },
+            { "$ref": "appeals-components/lpa-procedure-preference.schema.json" }
           ]
         },
         {
@@ -119,6 +134,7 @@
           "documentType": {
             "type": ["string", "null"],
             "enum": [
+              null,
               "whoNotified",
               "whoNotifiedSiteNotice",
               "whoNotifiedLetterToNeighbours",
@@ -135,7 +151,6 @@
               "supplementaryPlanning",
               "emergingPlan",
               "appealNotification",
-              null,
               "otherRelevantPolicies",
               "treePreservationPlan",
               "consultationResponses",

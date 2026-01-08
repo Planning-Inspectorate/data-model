@@ -21,13 +21,25 @@
           ]
         },
         {
-          "$comment": "S78 + S20",
+          "$comment": "S78",
           "allOf": [
-            { "properties": { "caseType": { "enum": ["W", "Y"] } } },
+            { "properties": { "caseType": { "enum": ["W"] } } },
             { "$ref": "appeals-components/lpa-questionnaire-common.schema.json" },
             { "$ref": "appeals-components/lpa-questionnaire-has.schema.json" },
             { "$ref": "appeals-components/lpa-questionnaire-s78.schema.json" },
             { "$ref": "appeals-components/lpa-procedure-preference.schema.json" },
+            { "$ref": "appeals-components/changed-listed-building-number.schema.json" }
+          ]
+        },
+        {
+          "$comment": "S20",
+          "allOf": [
+            { "properties": { "caseType": { "enum": ["Y"] } } },
+            { "$ref": "appeals-components/lpa-questionnaire-common.schema.json" },
+            { "$ref": "appeals-components/lpa-questionnaire-has.schema.json" },
+            { "$ref": "appeals-components/lpa-questionnaire-s78.schema.json" },
+            { "$ref": "appeals-components/lpa-procedure-preference.schema.json" },
+            { "$ref": "appeals-components/lpa-questionnaire-listed-building.schema.json" },
             { "$ref": "appeals-components/changed-listed-building-number.schema.json" }
           ]
         },
@@ -37,8 +49,8 @@
             { "properties": { "caseType": { "enum": ["ZA"] } } },
             { "$ref": "appeals-components/lpa-questionnaire-common.schema.json" },
             { "$ref": "appeals-components/lpa-questionnaire-has.schema.json" },
-            { "$ref": "appeals-components/lpa-procedure-preference.schema.json" },
-            { "$ref": "appeals-components/lpa-questionnaire-advert.schema.json" }
+            { "$ref": "appeals-components/lpa-questionnaire-advert.schema.json" },
+            { "$ref": "appeals-components/lpa-procedure-preference.schema.json" }
           ]
         },
         {
@@ -118,7 +130,6 @@
               "supplementaryPlanning",
               "emergingPlan",
               "appealNotification",
-              null,
               "otherRelevantPolicies",
               "treePreservationPlan",
               "consultationResponses",
@@ -128,7 +139,8 @@
               "eiaScopingOpinion",
               "communityInfrastructureLevy",
               "definitiveMapStatement",
-              "historicEnglandConsultation"
+              "historicEnglandConsultation",
+              null
             ],
             "description": "The type of document, used for exchange, migrations and consumption from the appeal back-office system"
           }

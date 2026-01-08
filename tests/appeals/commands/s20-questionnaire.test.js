@@ -17,9 +17,9 @@ const document = {
 	documentType: 'plansDrawings'
 };
 
-const exampleS78QuestionnaireSchema = {
+const exampleS20QuestionnaireSchema = {
 	casedata: {
-		caseType: 'W',
+		caseType: 'Y',
 		caseReference: 'est ea elit in nulla',
 		lpaQuestionnaireSubmittedDate: '2026-01-01T12:00:00.000Z',
 		siteAccessDetails: ['velit adipisicing fugiat dolor ullamco'],
@@ -70,24 +70,26 @@ const exampleS78QuestionnaireSchema = {
 		infrastructureLevyExpectedDate: '1912-06-14T10:40:33.0Z',
 		lpaProcedurePreference: 'written',
 		lpaProcedurePreferenceDetails: 'in reprehenderit',
-		lpaProcedurePreferenceDuration: -34480053.16630782
+		lpaProcedurePreferenceDuration: -34480053.16630782,
+		preserveGrantLoan: true,
+		consultHistoricEngland: true
 	},
 	documents: [document]
 };
 
-describe('S78 questionnaire command schema', () => {
+describe('S20 questionnaire command schema', () => {
 	const schemas = loadAllSchemasSync();
 	const flatSchemas = Object.values(schemas).reduce((a, c) => ({ ...a, ...c }), {});
 	const ajv = new Ajv({ schemas: flatSchemas, allErrors: true });
 	addFormats(ajv);
 
-	it('should allow valid schema for S78', () => {
-		const validationResult = ajv.validate(schema, exampleS78QuestionnaireSchema);
+	it('should allow valid schema for S20', () => {
+		const validationResult = ajv.validate(schema, exampleS20QuestionnaireSchema);
 		assert.strictEqual(validationResult, true);
 	});
 
 	it('should reject missing caseReference', () => {
-		const test = structuredClone(exampleS78QuestionnaireSchema);
+		const test = structuredClone(exampleS20QuestionnaireSchema);
 		delete test.casedata.caseReference;
 		const validationResult = ajv.validate(schema, test);
 		assert.strictEqual(validationResult, false);
@@ -98,7 +100,7 @@ describe('S78 questionnaire command schema', () => {
 	});
 
 	it('should allow additional props', () => {
-		const test = structuredClone(exampleS78QuestionnaireSchema);
+		const test = structuredClone(exampleS20QuestionnaireSchema);
 		test.test = 1;
 		const validationResult = ajv.validate(schema, test);
 		assert.strictEqual(validationResult, true);

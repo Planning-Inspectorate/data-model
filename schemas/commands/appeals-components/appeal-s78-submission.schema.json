@@ -23,54 +23,44 @@
       "properties": {
         "agriculturalHolding": {
           "type": ["boolean", "null"],
-          "description": "Indicates if the site is an agricultural holding",
-          "$comment": "Only available in S78 cases"
+          "description": "Indicates if the site is an agricultural holding"
         },
         "tenantAgriculturalHolding": {
           "type": ["boolean", "null"],
-          "description": "Indicates if the site is a tenant agricultural holding",
-          "$comment": "Only available in S78 cases"
+          "description": "Indicates if the site is a tenant agricultural holding"
         },
         "otherTenantsAgriculturalHolding": {
           "type": ["boolean", "null"],
-          "description": "Indicates if the site is an agricultural holding with other tenants",
-          "$comment": "Only available in S78 cases"
+          "description": "Indicates if the site is an agricultural holding with other tenants"
         },
         "informedTenantsAgriculturalHolding": {
           "type": ["boolean", "null"],
-          "description": "If the site is an agricultural holding, indicates tenants are informed",
-          "$comment": "Only available in S78 cases"
+          "description": "If the site is an agricultural holding, indicates tenants are informed"
         },
         "appellantProcedurePreference": {
           "type": ["string", "null"],
           "enum": ["written", "hearing", "inquiry", null],
-          "description": "The procedure preference indicated by the appellant",
-          "$comment": "Only available in S78 cases"
+          "description": "The procedure preference indicated by the appellant"
         },
         "appellantProcedurePreferenceDetails": {
           "type": ["string", "null"],
-          "description": "The procedure details preference indicated by the appellant",
-          "$comment": "Only available in S78 cases"
+          "description": "The procedure details preference indicated by the appellant"
         },
         "appellantProcedurePreferenceDuration": {
           "type": ["number", "null"],
-          "description": "The duration of the procedure indicated by the appellant",
-          "$comment": "Only available in S78 cases"
+          "description": "The duration of the procedure indicated by the appellant"
         },
         "appellantProcedurePreferenceWitnessCount": {
           "type": ["number", "null"],
-          "description": "The number of witnesses in inquiries",
-          "$comment": "Only available in S78 cases"
+          "description": "The number of witnesses in inquiries"
         },
         "planningObligation": {
           "type": ["boolean", "null"],
-          "description": "Indicates the existence of a planning obligation",
-          "$comment": "Only available in S78 cases"
+          "description": "Indicates the existence of a planning obligation"
         },
         "statusPlanningObligation": {
           "type": ["string", "null"],
-          "description": "The planning obligation information, if available",
-          "$comment": "Only available in S78 cases"
+          "description": "The planning obligation information, if available"
         },
         "developmentType": {
           "type": ["string", "null"],

@@ -17,18 +17,15 @@
       "properties": {
         "affectsScheduledMonument": {
           "type": ["boolean", "null"],
-          "description": "Indicates that a scheduled monument is affected",
-          "$comment": "Only available in S78 cases"
+          "description": "Indicates that a scheduled monument is affected"
         },
         "hasProtectedSpecies": {
           "type": ["boolean", "null"],
-          "description": "Indicates the existence of protected species",
-          "$comment": "Only available in S78 cases"
+          "description": "Indicates the existence of protected species"
         },
         "isAonbNationalLandscape": {
           "type": ["boolean", "null"],
-          "description": "Indicates an area of outstanding beauty (National Landscape)",
-          "$comment": "Only available in S78 cases"
+          "description": "Indicates an area of outstanding beauty (National Landscape)"
         },
         "designatedSitesNames": {
           "type": ["array", "null"],
@@ -36,13 +33,11 @@
             "type": "string",
             "examples": ["SSSI", "cSAC", "SAC", "pSPA", "SPA", "user entered value"]
           },
-          "description": "The designated site names",
-          "$comment": "Only available in S78 cases"
+          "description": "The designated site names"
         },
         "isGypsyOrTravellerSite": {
           "type": ["boolean", "null"],
-          "description": "Indicates a traveller site",
-          "$comment": "Only available in S78 cases"
+          "description": "Indicates a traveller site"
         }
       }
     }

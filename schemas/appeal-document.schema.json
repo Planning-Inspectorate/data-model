@@ -197,6 +197,14 @@
         "environmentalAssessment",
         "appealNotification",
         "historicEnglandConsultation",
+        "stopNotice",
+        "article4Direction",
+        "enforcementList",
+        "localDevelopmentOrder",
+        "planningPermission",
+        "lpaEnforcementNotice",
+        "lpaEnforcementNoticePlan",
+        "planningContraventionNotice",
         null
       ],
       "description": "The type of document, used for exchange, migrations and consumption from the appeal back-office system"

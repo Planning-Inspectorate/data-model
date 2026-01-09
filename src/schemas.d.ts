@@ -145,6 +145,14 @@ export interface AppealDocument {
     | 'environmentalAssessment'
     | 'appealNotification'
     | 'historicEnglandConsultation'
+    | 'stopNotice'
+    | 'article4Direction'
+    | 'enforcementList'
+    | 'localDevelopmentOrder'
+    | 'planningPermission'
+    | 'lpaEnforcementNotice'
+    | 'lpaEnforcementNoticePlan'
+    | 'planningContraventionNotice'
     | null;
   /**
    * The system mastering the metadata for the current document
@@ -4235,45 +4243,89 @@ export type LPAQHASSubmissionProperties = {
  */
 export type LPAQS78SubmissionProperties = {
   /**
-   * A list of changed listed building IDs from Historic England
-   */
-  changedListedBuildingNumbers?: string[] | null;
-  /**
-   * A grant or loan has been made to preserve the listed building
-   */
-  preserveGrantLoan?: boolean | null;
-  /**
-   * Are Historic England to be consulted?
-   */
-  consultHistoricEngland?: boolean | null;
-  /**
    * Indicates that a scheduled monument is affected
    */
   affectsScheduledMonument?: boolean | null;
-  /**
-   * Indicates the existence of protected species
-   */
-  hasProtectedSpecies?: boolean | null;
-  /**
-   * Indicates an area of outstanding beauty (National Landscape)
-   */
-  isAonbNationalLandscape?: boolean | null;
-  /**
-   * The designated site names
-   */
-  designatedSitesNames?: string[] | null;
   /**
    * Indicates a TPO (tree preservation order)
    */
   hasTreePreservationOrder?: boolean | null;
   /**
-   * Indicates a traveller site
-   */
-  isGypsyOrTravellerSite?: boolean | null;
-  /**
    * Indicates a PROW (public right of way)
    */
   isPublicRightOfWay?: boolean | null;
+  /**
+   * Indicates statutory consultees
+   */
+  hasStatutoryConsultees?: boolean | null;
+  /**
+   * The details of the bodies consulted
+   */
+  consultedBodiesDetails?: string | null;
+  /**
+   * Indicates consultation responses
+   */
+  hasConsultationResponses?: boolean | null;
+  /**
+   * Indicates emerging plans
+   */
+  hasEmergingPlan?: boolean | null;
+  /**
+   * Indicates supplementary planning documents
+   */
+  hasSupplementaryPlanningDocs?: boolean | null;
+};
+/**
+ * Schema defining LPA procedure preference properties
+ */
+export type LPAProcedurePreferenceProperties = {
+  /**
+   * The procedure preference indicated by the LPA
+   */
+  lpaProcedurePreference?: 'written' | 'hearing' | 'inquiry' | null;
+  /**
+   * The procedure details preference indicated by the LPA
+   */
+  lpaProcedurePreferenceDetails?: string | null;
+  /**
+   * The duration of enquiry indicated by the LPA
+   */
+  lpaProcedurePreferenceDuration?: number | null;
+};
+/**
+ * Schema defining changed-listed-building-numbers
+ */
+export type ChangedListedBuildingNumbersProperties = {
+  /**
+   * A list of changed listed building IDs from Historic England
+   */
+  changedListedBuildingNumbers?: string[] | null;
+};
+/**
+ * Schema defining infrastructure levy properties
+ */
+export type InfrastructureLevyProperties = {
+  /**
+   * Indicates the existence of an infrastructure levy
+   */
+  hasInfrastructureLevy?: boolean | null;
+  /**
+   * Indicates if the infrastructure levy is formally adopted
+   */
+  isInfrastructureLevyFormallyAdopted?: boolean | null;
+  /**
+   * The date of the infrastructure levy adoption
+   */
+  infrastructureLevyAdoptedDate?: string | null;
+  /**
+   * The expected date of the infrastructure levy
+   */
+  infrastructureLevyExpectedDate?: string | null;
+};
+/**
+ * Schema defining environmental impact assessment properties
+ */
+export type EnvironmentalImpactAssessmentProperties = {
   /**
    * The impact schedule from EIA
    */
@@ -4316,68 +4368,31 @@ export type LPAQS78SubmissionProperties = {
    * EIA completed environmental statement required
    */
   eiaCompletedEnvironmentalStatement?: boolean | null;
-  /**
-   * Indicates statutory consultees
-   */
-  hasStatutoryConsultees?: boolean | null;
-  /**
-   * The details of the bodies consulted
-   */
-  consultedBodiesDetails?: string | null;
-  /**
-   * Indicates consultation responses
-   */
-  hasConsultationResponses?: boolean | null;
-  /**
-   * Indicates emerging plans
-   */
-  hasEmergingPlan?: boolean | null;
-  /**
-   * Indicates supplementary planning documents
-   */
-  hasSupplementaryPlanningDocs?: boolean | null;
-  /**
-   * Indicates the existence of an infrastructure levy
-   */
-  hasInfrastructureLevy?: boolean | null;
-  /**
-   * Indicates if the infrastructure levy is formally adopted
-   */
-  isInfrastructureLevyFormallyAdopted?: boolean | null;
-  /**
-   * The date of the infrastructure levy adoption
-   */
-  infrastructureLevyAdoptedDate?: string | null;
-  /**
-   * The expected date of the infrastructure levy
-   */
-  infrastructureLevyExpectedDate?: string | null;
 };
 /**
- * Schema defining LPA procedure preference properties
+ * Schema defining site designations and protection specific properties
  */
-export type LPAProcedurePreferenceProperties = {
+export type SiteDesignationsAndProtectionSpecificProperties = {
   /**
-   * The procedure preference indicated by the LPA
+   * Indicates that a scheduled monument is affected
    */
-  lpaProcedurePreference?: 'written' | 'hearing' | 'inquiry' | null;
+  affectsScheduledMonument?: boolean | null;
   /**
-   * The procedure details preference indicated by the LPA
+   * Indicates the existence of protected species
    */
-  lpaProcedurePreferenceDetails?: string | null;
+  hasProtectedSpecies?: boolean | null;
   /**
-   * The duration of enquiry indicated by the LPA
+   * Indicates an area of outstanding beauty (National Landscape)
    */
-  lpaProcedurePreferenceDuration?: number | null;
-};
-/**
- * Schema defining changed-listed-building-numbers
- */
-export type ChangedListedBuildingNumbersProperties = {
+  isAonbNationalLandscape?: boolean | null;
   /**
-   * A list of changed listed building IDs from Historic England
+   * The designated site names
    */
-  changedListedBuildingNumbers?: string[] | null;
+  designatedSitesNames?: string[] | null;
+  /**
+   * Indicates a traveller site
+   */
+  isGypsyOrTravellerSite?: boolean | null;
 };
 /**
  * Schema defining any advert specific properties for LPAQ submissions
@@ -4424,6 +4439,33 @@ export type LPAQCasAdvertSubmissionProperties = {
    */
   didAppellantSubmitCompletePhotosAndPlans?: boolean | null;
 };
+/**
+ * Schema defining any enfrocement specific properties for LPAQ submissions
+ */
+export type LPAQEnforcementSubmissionProperties = {
+  noticeRelatesToBuildingEngineeringMiningOther?: boolean | null;
+  /**
+   * The site area, in square meters
+   */
+  siteAreaSquareMetres?: number | null;
+  hasAllegedBreachArea?: boolean | null;
+  doesAllegedBreachCreateFloorSpace?: boolean | null;
+  changeOfUseRefuseOrWaste?: boolean | null;
+  changeOfUseMineralExtraction?: boolean | null;
+  changeOfUseMineralStorage?: boolean | null;
+  relatesToErectionOfBuildingOrBuildings?: boolean | null;
+  relatesToBuildingWithAgriculturalPurpose?: boolean | null;
+  relatesToBuildingSingleDwellingHouse?: boolean | null;
+  /**
+   * Name of trunk road within 67M of site
+   */
+  affectedTrunkRoadName?: string | null;
+  isSiteOnCrownLand?: boolean | null;
+  /**
+   * What permitted develpoment rights are affected by the Article 4 Direction
+   */
+  article4AffectedDevelopmentRights?: string | null;
+};
 
 /**
  * Schema defining the data produced by the Front-Office when an LPA Questionnaire is submitted
@@ -4440,7 +4482,10 @@ export interface LPAQuestionnaireCommand {
         LPAQHASSubmissionProperties &
         LPAQS78SubmissionProperties &
         LPAProcedurePreferenceProperties &
-        ChangedListedBuildingNumbersProperties)
+        ChangedListedBuildingNumbersProperties &
+        InfrastructureLevyProperties &
+        EnvironmentalImpactAssessmentProperties &
+        SiteDesignationsAndProtectionSpecificProperties)
     | ({
         caseType?: 'ZA';
       } & LPAQCommonSubmissionProperties &
@@ -4453,7 +4498,17 @@ export interface LPAQuestionnaireCommand {
         LPAQHASSubmissionProperties &
         LPAQCasAdvertSubmissionProperties &
         LPAProcedurePreferenceProperties &
-        ChangedListedBuildingNumbersProperties);
+        ChangedListedBuildingNumbersProperties)
+    | ({
+        caseType?: 'C';
+      } & LPAQCommonSubmissionProperties &
+        LPAQHASSubmissionProperties &
+        LPAProcedurePreferenceProperties &
+        ChangedListedBuildingNumbersProperties &
+        InfrastructureLevyProperties &
+        EnvironmentalImpactAssessmentProperties &
+        SiteDesignationsAndProtectionSpecificProperties &
+        LPAQEnforcementSubmissionProperties);
   documents: {
     /**
      * The unique identifier for the document
@@ -4513,7 +4568,15 @@ export interface LPAQuestionnaireCommand {
       | 'eiaScopingOpinion'
       | 'communityInfrastructureLevy'
       | 'definitiveMapStatement'
-      | 'historicEnglandConsultation';
+      | 'historicEnglandConsultation'
+      | 'stopNotice'
+      | 'article4Direction'
+      | 'enforcementList'
+      | 'localDevelopmentOrder'
+      | 'planningPermission'
+      | 'enforcementNotice'
+      | 'enforcementNoticePlan'
+      | 'planningContraventionNotice';
     [k: string]: unknown;
   }[];
   [k: string]: unknown;

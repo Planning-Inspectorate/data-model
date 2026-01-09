@@ -1,0 +1,68 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "commands/appeals-components/environmental-impact-assessment.schema.json",
+  "title": "Environmental impact assessment properties",
+  "description": "Schema defining environmental impact assessment properties",
+  "type": "object",
+  "additionalProperties": true,
+  "required": [
+    "eiaEnvironmentalImpactSchedule",
+    "eiaDevelopmentDescription",
+    "eiaSensitiveAreaDetails",
+    "eiaColumnTwoThreshold",
+    "eiaScreeningOpinion",
+    "eiaRequiresEnvironmentalStatement",
+    "eiaCompletedEnvironmentalStatement"
+  ],
+  "allOf": [
+    {
+      "properties": {
+        "eiaEnvironmentalImpactSchedule": {
+          "type": ["string", "null"],
+          "enum": ["schedule-1", "schedule-2", null],
+          "description": "The impact schedule from EIA"
+        },
+        "eiaDevelopmentDescription": {
+          "type": ["string", "null"],
+          "enum": [
+            "agriculture-aquaculture",
+            "change-extensions",
+            "chemical-industry",
+            "energy-industry",
+            "extractive-industry",
+            "food-industry",
+            "infrastructure-projects",
+            "mineral-industry",
+            "other-projects",
+            "production-processing-of-metals",
+            "rubber-industry",
+            "textile-industries",
+            "tourism-leisure",
+            null
+          ],
+          "description": "The development description from EIA"
+        },
+        "eiaSensitiveAreaDetails": {
+          "type": ["string", "null"],
+          "description": "The sensitive area details from EIA"
+        },
+        "eiaColumnTwoThreshold": {
+          "type": ["boolean", "null"],
+          "description": "EIA specific threshold"
+        },
+        "eiaScreeningOpinion": {
+          "type": ["boolean", "null"],
+          "description": "EIA screening opinion"
+        },
+        "eiaRequiresEnvironmentalStatement": {
+          "type": ["boolean", "null"],
+          "description": "EIA environmental statement required"
+        },
+        "eiaCompletedEnvironmentalStatement": {
+          "type": ["boolean", "null"],
+          "description": "EIA completed environmental statement required"
+        }
+      }
+    }
+  ]
+}

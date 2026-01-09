@@ -1,0 +1,50 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "commands/appeals-components/site-designations-protection.schema.json",
+  "title": "Site designations and protection specific properties",
+  "description": "Schema defining site designations and protection specific properties",
+  "type": "object",
+  "additionalProperties": true,
+  "required": [
+    "affectsScheduledMonument",
+    "hasProtectedSpecies",
+    "isAonbNationalLandscape",
+    "designatedSitesNames",
+    "isGypsyOrTravellerSite"
+  ],
+  "allOf": [
+    {
+      "properties": {
+        "affectsScheduledMonument": {
+          "type": ["boolean", "null"],
+          "description": "Indicates that a scheduled monument is affected",
+          "$comment": "Only available in S78 cases"
+        },
+        "hasProtectedSpecies": {
+          "type": ["boolean", "null"],
+          "description": "Indicates the existence of protected species",
+          "$comment": "Only available in S78 cases"
+        },
+        "isAonbNationalLandscape": {
+          "type": ["boolean", "null"],
+          "description": "Indicates an area of outstanding beauty (National Landscape)",
+          "$comment": "Only available in S78 cases"
+        },
+        "designatedSitesNames": {
+          "type": ["array", "null"],
+          "items": {
+            "type": "string",
+            "examples": ["SSSI", "cSAC", "SAC", "pSPA", "SPA", "user entered value"]
+          },
+          "description": "The designated site names",
+          "$comment": "Only available in S78 cases"
+        },
+        "isGypsyOrTravellerSite": {
+          "type": ["boolean", "null"],
+          "description": "Indicates a traveller site",
+          "$comment": "Only available in S78 cases"
+        }
+      }
+    }
+  ]
+}

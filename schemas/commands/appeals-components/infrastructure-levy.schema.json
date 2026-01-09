@@ -1,0 +1,40 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "commands/appeals-components/infrastructure-levy.schema.json",
+  "title": "Infrastructure levy properties",
+  "description": "Schema defining infrastructure levy properties",
+  "type": "object",
+  "additionalProperties": true,
+  "required": [
+    "hasInfrastructureLevy",
+    "isInfrastructureLevyFormallyAdopted",
+    "infrastructureLevyAdoptedDate",
+    "infrastructureLevyExpectedDate"
+  ],
+  "allOf": [
+    {
+      "properties": {
+        "hasInfrastructureLevy": {
+          "type": ["boolean", "null"],
+          "description": "Indicates the existence of an infrastructure levy"
+        },
+        "isInfrastructureLevyFormallyAdopted": {
+          "type": ["boolean", "null"],
+          "description": "Indicates if the infrastructure levy is formally adopted"
+        },
+        "infrastructureLevyAdoptedDate": {
+          "type": ["string", "null"],
+          "format": "date-time",
+          "examples": ["2023-07-27T20:30:00.000Z"],
+          "description": "The date of the infrastructure levy adoption"
+        },
+        "infrastructureLevyExpectedDate": {
+          "type": ["string", "null"],
+          "format": "date-time",
+          "examples": ["2023-07-27T20:30:00.000Z"],
+          "description": "The expected date of the infrastructure levy"
+        }
+      }
+    }
+  ]
+}

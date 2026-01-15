@@ -53,9 +53,9 @@ any of
 | [caseDecisionOutcome](#casedecisionoutcome)                                                     | `string`  | Required | can be null    | [Appeal S78 Case](appeal-s78-properties-casedecisionoutcome.md "appeal-s78.schema.json#/properties/caseDecisionOutcome")                                                     |
 | [caseCompletedDate](#casecompleteddate)                                                         | `string`  | Required | can be null    | [Appeal S78 Case](appeal-s78-properties-casecompleteddate.md "appeal-s78.schema.json#/properties/caseCompletedDate")                                                         |
 | [enforcementNotice](#enforcementnotice)                                                         | `boolean` | Required | can be null    | [Appeal S78 Case](appeal-s78-properties-enforcementnotice.md "appeal-s78.schema.json#/properties/enforcementNotice")                                                         |
-| [applicationReference](#applicationreference)                                                   | `string`  | Required | cannot be null | [Appeal S78 Case](appeal-s78-properties-applicationreference.md "appeal-s78.schema.json#/properties/applicationReference")                                                   |
-| [applicationDate](#applicationdate)                                                             | `string`  | Required | cannot be null | [Appeal S78 Case](appeal-s78-properties-applicationdate.md "appeal-s78.schema.json#/properties/applicationDate")                                                             |
-| [applicationDecision](#applicationdecision)                                                     | `string`  | Required | cannot be null | [Appeal S78 Case](appeal-s78-properties-applicationdecision.md "appeal-s78.schema.json#/properties/applicationDecision")                                                     |
+| [applicationReference](#applicationreference)                                                   | `string`  | Required | can be null    | [Appeal S78 Case](appeal-s78-properties-applicationreference.md "appeal-s78.schema.json#/properties/applicationReference")                                                   |
+| [applicationDate](#applicationdate)                                                             | `string`  | Required | can be null    | [Appeal S78 Case](appeal-s78-properties-applicationdate.md "appeal-s78.schema.json#/properties/applicationDate")                                                             |
+| [applicationDecision](#applicationdecision)                                                     | `string`  | Required | can be null    | [Appeal S78 Case](appeal-s78-properties-applicationdecision.md "appeal-s78.schema.json#/properties/applicationDecision")                                                     |
 | [applicationDecisionDate](#applicationdecisiondate)                                             | `string`  | Required | can be null    | [Appeal S78 Case](appeal-s78-properties-applicationdecisiondate.md "appeal-s78.schema.json#/properties/applicationDecisionDate")                                             |
 | [caseSubmissionDueDate](#casesubmissionduedate)                                                 | `string`  | Required | can be null    | [Appeal S78 Case](appeal-s78-properties-casesubmissionduedate.md "appeal-s78.schema.json#/properties/caseSubmissionDueDate")                                                 |
 | [siteAddressLine1](#siteaddressline1)                                                           | `string`  | Optional | can be null    | [Appeal S78 Case](appeal-s78-properties-siteaddressline1.md "appeal-s78.schema.json#/properties/siteAddressLine1")                                                           |
@@ -156,6 +156,9 @@ any of
 | [isSiteInAreaOfSpecialControlAdverts](#issiteinareaofspecialcontroladverts)                     | `boolean` | Optional | can be null    | [Appeal S78 Case](appeal-s78-properties-issiteinareaofspecialcontroladverts.md "appeal-s78.schema.json#/properties/isSiteInAreaOfSpecialControlAdverts")                     |
 | [advertDetails](#advertdetails)                                                                 | `array`   | Optional | can be null    | [Appeal S78 Case](appeal-s78-properties-advertdetails.md "appeal-s78.schema.json#/properties/advertDetails")                                                                 |
 | [padsSapId](#padssapid)                                                                         | `string`  | Optional | can be null    | [Appeal S78 Case](appeal-s78-properties-padssapid.md "appeal-s78.schema.json#/properties/padsSapId")                                                                         |
+| [enforcementNoticeReference](#enforcementnoticereference)                                       | `string`  | Optional | can be null    | [Appeal S78 Case](appeal-s78-properties-enforcementnoticereference.md "appeal-s78.schema.json#/properties/enforcementNoticeReference")                                       |
+| [descriptionOfAllegedBreach](#descriptionofallegedbreach)                                       | `string`  | Optional | can be null    | [Appeal S78 Case](appeal-s78-properties-descriptionofallegedbreach.md "appeal-s78.schema.json#/properties/descriptionOfAllegedBreach")                                       |
+| [dateAppellantContactedPins](#dateappellantcontactedpins)                                       | `string`  | Optional | can be null    | [Appeal S78 Case](appeal-s78-properties-dateappellantcontactedpins.md "appeal-s78.schema.json#/properties/dateAppellantContactedPins")                                       |
 | [ownerOccupancyStatus](#owneroccupancystatus)                                                   | `string`  | Optional | can be null    | [Appeal S78 Case](appeal-s78-properties-owneroccupancystatus.md "appeal-s78.schema.json#/properties/ownerOccupancyStatus")                                                   |
 | [occupancyConditionsMet](#occupancyconditionsmet)                                               | `boolean` | Optional | can be null    | [Appeal S78 Case](appeal-s78-properties-occupancyconditionsmet.md "appeal-s78.schema.json#/properties/occupancyConditionsMet")                                               |
 | [enforcementAppealGroundsDetails](#enforcementappealgroundsdetails)                             | `array`   | Optional | can be null    | [Appeal S78 Case](appeal-s78-properties-enforcementappealgroundsdetails.md "appeal-s78.schema.json#/properties/enforcementAppealGroundsDetails")                             |
@@ -1398,7 +1401,7 @@ The unique identifier of the LPA application
 
 * Type: `string`
 
-* cannot be null
+* can be null
 
 * defined in: [Appeal S78 Case](appeal-s78-properties-applicationreference.md "appeal-s78.schema.json#/properties/applicationReference")
 
@@ -1424,7 +1427,7 @@ The date of the original LPA application
 
 * Type: `string`
 
-* cannot be null
+* can be null
 
 * defined in: [Appeal S78 Case](appeal-s78-properties-applicationdate.md "appeal-s78.schema.json#/properties/applicationDate")
 
@@ -1454,7 +1457,7 @@ The outcome of the original LPA decision
 
 * Type: `string`
 
-* cannot be null
+* can be null
 
 * defined in: [Appeal S78 Case](appeal-s78-properties-applicationdecision.md "appeal-s78.schema.json#/properties/applicationDecision")
 
@@ -3775,6 +3778,84 @@ padsSapId for PADS inspectors
 ### padsSapId Type
 
 `string`
+
+## enforcementNoticeReference
+
+The reference number of the enforcement notice
+
+`enforcementNoticeReference`
+
+* is optional
+
+* Type: `string`
+
+* can be null
+
+* defined in: [Appeal S78 Case](appeal-s78-properties-enforcementnoticereference.md "appeal-s78.schema.json#/properties/enforcementNoticeReference")
+
+### enforcementNoticeReference Type
+
+`string`
+
+### enforcementNoticeReference Examples
+
+```json
+"myC45e-123"
+```
+
+## descriptionOfAllegedBreach
+
+A description of the alleged breach
+
+`descriptionOfAllegedBreach`
+
+* is optional
+
+* Type: `string`
+
+* can be null
+
+* defined in: [Appeal S78 Case](appeal-s78-properties-descriptionofallegedbreach.md "appeal-s78.schema.json#/properties/descriptionOfAllegedBreach")
+
+### descriptionOfAllegedBreach Type
+
+`string`
+
+### descriptionOfAllegedBreach Examples
+
+```json
+"My breach description"
+```
+
+## dateAppellantContactedPins
+
+The date of the appellant contacted PINS prior to submitting an appeal
+
+> Relevant if enforcement effective date already passed
+
+`dateAppellantContactedPins`
+
+* is optional
+
+* Type: `string`
+
+* can be null
+
+* defined in: [Appeal S78 Case](appeal-s78-properties-dateappellantcontactedpins.md "appeal-s78.schema.json#/properties/dateAppellantContactedPins")
+
+### dateAppellantContactedPins Type
+
+`string`
+
+### dateAppellantContactedPins Constraints
+
+**date time**: the string must be a date time string, according to [RFC 3339, section 5.6](https://tools.ietf.org/html/rfc3339 "check the specification")
+
+### dateAppellantContactedPins Examples
+
+```json
+"2025-12-26T10:00:00.000Z"
+```
 
 ## ownerOccupancyStatus
 

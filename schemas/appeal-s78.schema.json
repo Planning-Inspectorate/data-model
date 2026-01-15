@@ -464,20 +464,20 @@
       "$comment": "Also available on HAS cases"
     },
     "applicationReference": {
-      "type": "string",
+      "type": ["string", "null"],
       "examples": ["43010/APP/1/290572"],
       "description": "The unique identifier of the LPA application",
       "$comment": "Also available on HAS cases"
     },
     "applicationDate": {
-      "type": "string",
+      "type": ["string", "null"],
       "format": "date-time",
       "examples": ["2023-07-27T20:30:00.000Z"],
       "description": "The date of the original LPA application",
       "$comment": "Also available on HAS cases"
     },
     "applicationDecision": {
-      "type": "string",
+      "type": ["string", "null"],
       "enum": ["granted", "refused", "not_received"],
       "description": "The outcome of the original LPA decision",
       "$comment": "Also available on HAS cases"
@@ -1106,6 +1106,23 @@
     "padsSapId": {
       "type": ["string", "null"],
       "description": "padsSapId for PADS inspectors"
+    },
+    "enforcementNoticeReference": {
+      "type": ["string", "null"],
+      "description": "The reference number of the enforcement notice",
+      "examples": ["myC45e-123"]
+    },
+    "descriptionOfAllegedBreach": {
+      "type": ["string", "null"],
+      "description": "A description of the alleged breach",
+      "examples": ["My breach description"]
+    },
+    "dateAppellantContactedPins": {
+      "type": ["string", "null"],
+      "format": "date-time",
+      "examples": ["2025-12-26T10:00:00.000Z"],
+      "description": "The date of the appellant contacted PINS prior to submitting an appeal",
+      "$comment": "Relevant if enforcement effective date already passed"
     },
     "ownerOccupancyStatus": {
       "type": ["string", "null"],

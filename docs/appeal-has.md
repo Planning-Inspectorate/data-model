@@ -4,9 +4,9 @@
 
 any of
 
-* [Untitled undefined type in Appeal HAS Case](appeal-has-anyof-0.md "check type definition")
+* [Grid Reference](appeal-has-anyof-grid-reference.md "check type definition")
 
-* [Untitled undefined type in Appeal HAS Case](appeal-has-anyof-1.md "check type definition")
+* [Site address](appeal-has-anyof-site-address.md "check type definition")
 
 # Appeal HAS Case Properties
 

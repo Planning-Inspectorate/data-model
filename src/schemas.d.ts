@@ -145,6 +145,9 @@ export interface AppealDocument {
     | 'environmentalAssessment'
     | 'appealNotification'
     | 'historicEnglandConsultation'
+    | 'conservationDocuments'
+    | 'planShowingExtentOfOrder'
+    | 'definitiveMapAndStatementExtract'
     | 'stopNotice'
     | 'article4Direction'
     | 'enforcementList'
@@ -153,6 +156,18 @@ export interface AppealDocument {
     | 'lpaEnforcementNotice'
     | 'lpaEnforcementNoticePlan'
     | 'planningContraventionNotice'
+    | 'priorCorrespondenceWithPINS'
+    | 'enforcementNotice'
+    | 'enforcementNoticePlan'
+    | 'groundASupporting'
+    | 'groundBSupporting'
+    | 'groundCSupporting'
+    | 'groundDSupporting'
+    | 'groundESupporting'
+    | 'groundFSupporting'
+    | 'groundGSupporting'
+    | 'groundAFeeReceipt'
+    | 'delegatedReport'
     | null;
   /**
    * The system mastering the metadata for the current document
@@ -1107,15 +1122,15 @@ export type AppealS78Case = (
   /**
    * The unique identifier of the LPA application
    */
-  applicationReference: string;
+  applicationReference: string | null;
   /**
    * The date of the original LPA application
    */
-  applicationDate: string;
+  applicationDate: string | null;
   /**
    * The outcome of the original LPA decision
    */
-  applicationDecision: 'granted' | 'refused' | 'not_received';
+  applicationDecision: ('granted' | 'refused' | 'not_received') | null;
   /**
    * The date of the original LPA decision
    */
@@ -1531,6 +1546,18 @@ export type AppealS78Case = (
    * padsSapId for PADS inspectors
    */
   padsSapId?: string | null;
+  /**
+   * The reference number of the enforcement notice
+   */
+  enforcementNoticeReference?: string | null;
+  /**
+   * A description of the alleged breach
+   */
+  descriptionOfAllegedBreach?: string | null;
+  /**
+   * The date of the appellant contacted PINS prior to submitting an appeal
+   */
+  dateAppellantContactedPins?: string | null;
   /**
    * The nature of the appellant's interest in the appeal site
    */
@@ -4058,7 +4085,7 @@ export interface AppellantSubmissionCommand {
       | 'groundISupporting'
       | 'groundJSupporting'
       | 'groundKSupporting'
-      | 'applicationFeeReceipt'
+      | 'groundAFeeReceipt'
       | null
       | 'environmentalAssessment';
     [k: string]: unknown;
@@ -4574,8 +4601,8 @@ export interface LPAQuestionnaireCommand {
       | 'enforcementList'
       | 'localDevelopmentOrder'
       | 'planningPermission'
-      | 'enforcementNotice'
-      | 'enforcementNoticePlan'
+      | 'lpaEnforcementNotice'
+      | 'lpaEnforcementNoticePlan'
       | 'planningContraventionNotice';
     [k: string]: unknown;
   }[];

@@ -478,7 +478,7 @@
     },
     "applicationDecision": {
       "type": ["string", "null"],
-      "enum": ["granted", "refused", "not_received"],
+      "enum": ["granted", "refused", "not_received", null],
       "description": "The outcome of the original LPA decision",
       "$comment": "Also available on HAS cases"
     },

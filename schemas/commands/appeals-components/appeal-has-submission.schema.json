@@ -7,14 +7,6 @@
   "additionalProperties": true,
   "required": [
     "isGreenBelt",
-    "siteAreaSquareMetres",
-    "floorSpaceSquareMetres",
-    "ownsAllLand",
-    "ownsSomeLand",
-    "knowsOtherOwners",
-    "knowsAllOwners",
-    "advertisedAppeal",
-    "ownersInformed",
     "originalDevelopmentDescription",
     "changedDevelopmentDescription",
     "appellantCostsAppliedFor"
@@ -25,42 +17,6 @@
         "isGreenBelt": {
           "type": ["boolean", "null"],
           "description": "Indicates if the site is in a green belt"
-        },
-        "siteAreaSquareMetres": {
-          "type": ["number", "null"],
-          "examples": [45.7],
-          "description": "The site area, in square meters"
-        },
-        "floorSpaceSquareMetres": {
-          "type": ["number", "null"],
-          "examples": [3.5],
-          "description": "The floor space, in square meters"
-        },
-        "ownsAllLand": {
-          "type": ["boolean", "null"],
-          "description": "Indicates if the appellant has complete ownership of the site"
-        },
-        "ownsSomeLand": {
-          "type": ["boolean", "null"],
-          "description": "Indicates if the appellant has partial ownership of the site"
-        },
-        "knowsOtherOwners": {
-          "type": ["string", "null"],
-          "enum": ["Yes", "No", "Some", null],
-          "description": "Indicates if the appellant knows other owners of the site"
-        },
-        "knowsAllOwners": {
-          "type": ["string", "null"],
-          "enum": ["Yes", "No", "Some", null],
-          "description": "Indicates if the appellant knows all owners of the site"
-        },
-        "advertisedAppeal": {
-          "type": ["boolean", "null"],
-          "description": "Indicates if the appellant has advertised the appeal to the LPA decision"
-        },
-        "ownersInformed": {
-          "type": ["boolean", "null"],
-          "description": "Indicates if the appellant has informed other owners of the site"
         },
         "originalDevelopmentDescription": {
           "type": ["string", "null"],

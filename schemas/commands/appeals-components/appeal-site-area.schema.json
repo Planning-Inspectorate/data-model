@@ -1,0 +1,21 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "commands/appeals-components/appeal-site-area.schema.json",
+  "title": "Site area properties",
+  "description": "Schema defining any properties for site area for an appeal",
+  "type": "object",
+  "additionalProperties": true,
+  "required": ["siteAreaSquareMetres", "floorSpaceSquareMetres"],
+  "properties": {
+    "siteAreaSquareMetres": {
+      "type": ["number", "null"],
+      "examples": [45.7],
+      "description": "The site area, in square meters"
+    },
+    "floorSpaceSquareMetres": {
+      "type": ["number", "null"],
+      "examples": [3.5],
+      "description": "The floor space, in square meters"
+    }
+  }
+}

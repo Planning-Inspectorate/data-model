@@ -1,0 +1,48 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "commands/appeals-components/appeal-land-ownership.schema.json",
+  "title": "Appeal land ownership properties",
+  "description": "Schema defining properties relating to land ownership",
+  "type": "object",
+  "additionalProperties": true,
+  "required": [
+    "ownsAllLand",
+    "ownsSomeLand",
+    "knowsOtherOwners",
+    "knowsAllOwners",
+    "advertisedAppeal",
+    "ownersInformed"
+  ],
+  "allOf": [
+    {
+      "properties": {
+        "ownsAllLand": {
+          "type": ["boolean", "null"],
+          "description": "Indicates if the appellant has complete ownership of the site"
+        },
+        "ownsSomeLand": {
+          "type": ["boolean", "null"],
+          "description": "Indicates if the appellant has partial ownership of the site"
+        },
+        "knowsOtherOwners": {
+          "type": ["string", "null"],
+          "enum": ["Yes", "No", "Some", null],
+          "description": "Indicates if the appellant knows other owners of the site"
+        },
+        "knowsAllOwners": {
+          "type": ["string", "null"],
+          "enum": ["Yes", "No", "Some", null],
+          "description": "Indicates if the appellant knows all owners of the site"
+        },
+        "advertisedAppeal": {
+          "type": ["boolean", "null"],
+          "description": "Indicates if the appellant has advertised the appeal to the LPA decision"
+        },
+        "ownersInformed": {
+          "type": ["boolean", "null"],
+          "description": "Indicates if the appellant has informed other owners of the site"
+        }
+      }
+    }
+  ]
+}

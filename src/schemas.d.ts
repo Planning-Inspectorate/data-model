@@ -3525,22 +3525,6 @@ export type AppellantCommonSubmissionProperties = (
    */
   enforcementNotice: boolean | null;
   /**
-   * The unique identifier of the LPA application
-   */
-  applicationReference: string;
-  /**
-   * The date of the original LPA application
-   */
-  applicationDate: string;
-  /**
-   * The outcome of the original LPA decision
-   */
-  applicationDecision: 'granted' | 'refused' | 'not_received';
-  /**
-   * The date of the original LPA decision
-   */
-  applicationDecisionDate: string | null;
-  /**
    * The statutory deadline for submitting an appeal from the original LPA decision date
    */
   caseSubmissionDueDate: string | null;
@@ -3575,42 +3559,6 @@ export type AppellantCommonSubmissionProperties = (
    */
   siteSafetyDetails: string[] | null;
   /**
-   * A list of neighbouring site addresses
-   */
-  neighbouringSiteAddresses:
-    | {
-        /**
-         * First line of address of the site
-         */
-        neighbouringSiteAddressLine1: string;
-        /**
-         * Second line of address of the site
-         */
-        neighbouringSiteAddressLine2: string | null;
-        /**
-         * Town / City of the site address
-         */
-        neighbouringSiteAddressTown: string;
-        /**
-         * County of the site address
-         */
-        neighbouringSiteAddressCounty: string | null;
-        /**
-         * Postal code of the site address
-         */
-        neighbouringSiteAddressPostcode: string;
-        /**
-         * Provided information on site accessibility on this address
-         */
-        neighbouringSiteAccessDetails: string | null;
-        /**
-         * Provided information on site health and safety on this address
-         */
-        neighbouringSiteSafetyDetails: string | null;
-        [k: string]: unknown;
-      }[]
-    | null;
-  /**
    * A list of related case references known to the appellant and the LPA
    */
   nearbyCaseReferences: string[] | null;
@@ -3625,24 +3573,16 @@ export type AppellantCommonSubmissionProperties = (
     | 'minor-commercial-development'
     | 'advertisement'
     | null;
+  /**
+   * Indicates if the appellant has applied for costs
+   */
+  appellantCostsAppliedFor: boolean | null;
   [k: string]: unknown;
 };
 /**
- * Schema defining any HAS specific properties for appeal submissions
+ * Schema defining properties relating to land ownership
  */
-export type AppellantHASSubmissionProperties = {
-  /**
-   * Indicates if the site is in a green belt
-   */
-  isGreenBelt?: boolean | null;
-  /**
-   * The site area, in square meters
-   */
-  siteAreaSquareMetres?: number | null;
-  /**
-   * The floor space, in square meters
-   */
-  floorSpaceSquareMetres?: number | null;
+export type AppealLandOwnershipProperties = {
   /**
    * Indicates if the appellant has complete ownership of the site
    */
@@ -3667,18 +3607,6 @@ export type AppellantHASSubmissionProperties = {
    * Indicates if the appellant has informed other owners of the site
    */
   ownersInformed?: boolean | null;
-  /**
-   * The original description of the development, as provided by the appellant
-   */
-  originalDevelopmentDescription?: string | null;
-  /**
-   * Indicates that the LPA has changed the development description
-   */
-  changedDevelopmentDescription?: boolean | null;
-  /**
-   * Indicates if the appellant has applied for costs
-   */
-  appellantCostsAppliedFor?: boolean | null;
 };
 /**
  * Schema defining any S78 specific properties for appeal submissions
@@ -4000,22 +3928,28 @@ export interface AppellantSubmissionCommand {
     | ({
         caseType?: 'D' | 'ZP';
       } & AppellantCommonSubmissionProperties &
-        AppellantHASSubmissionProperties)
+        AppellantCommonPlanningProperties &
+        SiteAreaProperties &
+        AppealLandOwnershipProperties)
     | ({
         caseType?: 'W' | 'Y';
       } & AppellantCommonSubmissionProperties &
-        AppellantHASSubmissionProperties &
+        AppellantCommonPlanningProperties &
+        SiteAreaProperties &
+        AppealLandOwnershipProperties &
         AppellantS78SubmissionProperties &
         AppellantProcedurePreferenceProperties)
     | ({
         caseType?: 'ZA';
       } & AppellantCommonSubmissionProperties &
-        AppellantHASSubmissionProperties &
+        AppellantCommonPlanningProperties &
+        AppealLandOwnershipProperties &
         AdvertSpecificProperties)
     | ({
         caseType?: 'H';
       } & AppellantCommonSubmissionProperties &
-        AppellantHASSubmissionProperties &
+        AppellantCommonPlanningProperties &
+        AppealLandOwnershipProperties &
         AdvertSpecificProperties &
         AppellantProcedurePreferenceProperties)
     | ({
@@ -4157,6 +4091,54 @@ export interface AppellantSubmissionCommand {
       [k: string]: unknown;
     }[]
   ];
+  [k: string]: unknown;
+}
+/**
+ * Schema defining any properties common across all planning appeal types for appeal submissions
+ */
+export interface AppellantCommonPlanningProperties {
+  /**
+   * The unique identifier of the LPA application
+   */
+  applicationReference: string;
+  /**
+   * The date of the original LPA application
+   */
+  applicationDate: string;
+  /**
+   * The outcome of the original LPA decision
+   */
+  applicationDecision: 'granted' | 'refused' | 'not_received';
+  /**
+   * The date of the original LPA decision
+   */
+  applicationDecisionDate: string | null;
+  /**
+   * Indicates if the site is in a green belt
+   */
+  isGreenBelt: boolean | null;
+  /**
+   * The original description of the development, as provided by the appellant
+   */
+  originalDevelopmentDescription: string | null;
+  /**
+   * Indicates that the LPA has changed the development description
+   */
+  changedDevelopmentDescription: boolean | null;
+  [k: string]: unknown;
+}
+/**
+ * Schema defining any properties for site area for an appeal
+ */
+export interface SiteAreaProperties {
+  /**
+   * The site area, in square meters
+   */
+  siteAreaSquareMetres: number | null;
+  /**
+   * The floor space, in square meters
+   */
+  floorSpaceSquareMetres: number | null;
   [k: string]: unknown;
 }
 /**

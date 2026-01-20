@@ -10,7 +10,6 @@
     "applicationDate",
     "applicationDecision",
     "applicationDecisionDate",
-    "neighbouringSiteAddresses",
     "isGreenBelt",
     "originalDevelopmentDescription",
     "changedDevelopmentDescription"
@@ -37,59 +36,6 @@
       "format": "date-time",
       "examples": ["2023-07-27T20:30:00.000Z"],
       "description": "The date of the original LPA decision"
-    },
-    "neighbouringSiteAddresses": {
-      "type": ["array", "null"],
-      "items": {
-        "type": "object",
-        "additionalProperties": true,
-        "properties": {
-          "neighbouringSiteAddressLine1": {
-            "type": "string",
-            "examples": ["96 The Avenue"],
-            "description": "First line of address of the site"
-          },
-          "neighbouringSiteAddressLine2": {
-            "type": ["string", "null"],
-            "description": "Second line of address of the site"
-          },
-          "neighbouringSiteAddressTown": {
-            "type": "string",
-            "examples": ["Maidstone"],
-            "description": "Town / City of the site address"
-          },
-          "neighbouringSiteAddressCounty": {
-            "type": ["string", "null"],
-            "examples": ["Kent"],
-            "description": "County of the site address"
-          },
-          "neighbouringSiteAddressPostcode": {
-            "type": "string",
-            "examples": ["MD21 5XY"],
-            "description": "Postal code of the site address"
-          },
-          "neighbouringSiteAccessDetails": {
-            "type": ["string", "null"],
-            "examples": ["Ongoing road works at this address"],
-            "description": "Provided information on site accessibility on this address"
-          },
-          "neighbouringSiteSafetyDetails": {
-            "type": ["string", "null"],
-            "examples": ["Ongoing road works at this address"],
-            "description": "Provided information on site health and safety on this address"
-          }
-        },
-        "required": [
-          "neighbouringSiteAddressLine1",
-          "neighbouringSiteAddressLine2",
-          "neighbouringSiteAddressTown",
-          "neighbouringSiteAddressCounty",
-          "neighbouringSiteAddressPostcode",
-          "neighbouringSiteAccessDetails",
-          "neighbouringSiteSafetyDetails"
-        ]
-      },
-      "description": "A list of neighbouring site addresses"
     },
     "isGreenBelt": {
       "type": ["boolean", "null"],

@@ -1,0 +1,19 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "commands/appeals-components/appeal-ldc.submission.schema.json",
+  "title": "LDC specific properties",
+  "description": "Schema defining any properties for ldc appeals",
+  "type": "object",
+  "additionalProperties": true,
+  "required": ["siteUseAtTimeOfApplication", "applicationMadeUnderActSection"],
+  "properties": {
+    "siteUseAtTimeOfApplication": {
+      "type": ["string", "null"],
+      "description": "Site use at time of application"
+    },
+    "applicationMadeUnderActSection": {
+      "type": ["string", "null"],
+      "enum": ["existing-development", "proposed-use-of-a-development", "proposed-changes-to-a-listed-building", null]
+    }
+  }
+}

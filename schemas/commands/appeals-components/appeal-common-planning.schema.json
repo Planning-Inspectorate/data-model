@@ -21,14 +21,14 @@
       "description": "The unique identifier of the LPA application"
     },
     "applicationDate": {
-      "type": "string",
+      "type": ["string", "null"],
       "format": "date-time",
       "examples": ["2023-07-27T20:30:00.000Z"],
       "description": "The date of the original LPA application"
     },
     "applicationDecision": {
-      "type": "string",
-      "enum": ["granted", "refused", "not_received"],
+      "type": ["string", "null"],
+      "enum": ["granted", "refused", "not_received", null],
       "description": "The outcome of the original LPA decision"
     },
     "applicationDecisionDate": {

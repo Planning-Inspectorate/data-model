@@ -2462,6 +2462,7 @@ Indicates if the appellant has applied for costs
 | `"listed-building"`                    |             |
 | `"minor-commercial-development"`       |             |
 | `"advertisement"`                      |             |
+| `"lawful-development-certificate"`     |             |
 | `null`                                 |             |
 
 ## siteGridReferenceEasting

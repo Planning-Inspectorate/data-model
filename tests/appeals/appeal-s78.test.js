@@ -161,7 +161,12 @@ const appealS78 = {
 			advertType: 'Other'
 		}
 	],
-	padsSapId: null
+	padsSapId: null,
+	applicationMadeUnderActSection: 'existing-development',
+	siteUseAtTimeOfApplication: 'Site use at time of application',
+	appealUnderActSection: 'proposed-use-of-a-development',
+	lpaConsiderAppealInvalid: true,
+	lpaAppealInvalidReasons: 'Reason(s) why LPA consider the appeal invalid'
 };
 
 describe(schema, () => {
@@ -238,5 +243,15 @@ describe(schema, () => {
 		test.advertDetails[0].advertType = 'something';
 		const validationResult = ajv.validate(schema, test);
 		assert.strictEqual(validationResult, false);
+	});
+
+	const groupBAppealTypes = ['C', 'F', 'H', 'W', 'X', 'Y', 'Z'];
+	groupBAppealTypes.forEach((appealType) => {
+		it(`should support group B appeal type ${appealType}`, () => {
+			const test = structuredClone(appealS78);
+			test.caseType = appealType;
+			const validationResult = ajv.validate(schema, test);
+			assert.strictEqual(validationResult, true);
+		});
 	});
 });

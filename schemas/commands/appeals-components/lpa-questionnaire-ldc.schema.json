@@ -1,0 +1,31 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "commands/appeals-components/lpa-questionnaire-ldc.schema.json",
+  "title": "LPAQ LDC submission properties",
+  "description": "Schema defining any LDC specific properties for LPAQ submissions",
+  "type": "object",
+  "additionalProperties": true,
+  "required": ["appealUnderActSection", "lpaConsiderAppealInvalid", "lpaAppealInvalidReasons"],
+  "allOf": [
+    {
+      "properties": {
+        "appealUnderActSection": {
+          "type": ["string", "null"],
+          "enum": [
+            "existing-development",
+            "proposed-use-of-a-development",
+            "proposed-changes-to-a-listed-building",
+            null
+          ]
+        },
+        "lpaConsiderAppealInvalid": {
+          "type": ["boolean", "null"]
+        },
+        "lpaAppealInvalidReasons": {
+          "type": ["string", "null"],
+          "description": "Reason(s) why LPA consider the appeal invalid"
+        }
+      }
+    }
+  ]
+}

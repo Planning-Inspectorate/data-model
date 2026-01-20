@@ -6,7 +6,6 @@
   "type": "object",
   "additionalProperties": true,
   "required": [
-    "isCorrectAppealType",
     "affectedListedBuildingNumbers",
     "isGreenBelt",
     "inConservationArea",
@@ -18,10 +17,6 @@
   "allOf": [
     {
       "properties": {
-        "isCorrectAppealType": {
-          "type": ["boolean", "null"],
-          "description": "Indicates if the LPA considers the appeal type appropriate"
-        },
         "affectedListedBuildingNumbers": {
           "type": ["array", "null"],
           "items": {

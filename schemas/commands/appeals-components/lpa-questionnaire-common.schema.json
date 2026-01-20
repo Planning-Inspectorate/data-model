@@ -11,7 +11,8 @@
     "siteAccessDetails",
     "siteSafetyDetails",
     "nearbyCaseReferences",
-    "neighbouringSiteAddresses"
+    "neighbouringSiteAddresses",
+    "isCorrectAppealType"
   ],
   "properties": {
     "caseReference": {
@@ -105,6 +106,10 @@
     "reasonForNeighbourVisits": {
       "type": ["string", "null"],
       "description": "A general reason given for the need to visit any neighbours"
+    },
+    "isCorrectAppealType": {
+      "type": ["boolean", "null"],
+      "description": "Indicates if the LPA considers the appeal type appropriate"
     }
   }
 }

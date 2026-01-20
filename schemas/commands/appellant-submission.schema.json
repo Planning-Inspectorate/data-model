@@ -63,6 +63,16 @@
             { "$ref": "appeals-components/appeal-enforcement-submission.schema.json" },
             { "$ref": "appeals-components/appellant-procedure-preference.schema.json" }
           ]
+        },
+        {
+          "$comment": "Lawful development certificate",
+          "allOf": [
+            { "properties": { "caseType": { "enum": ["X"] } } },
+            { "$ref": "appeals-components/appeal-common-submission.schema.json" },
+            { "$ref": "appeals-components/appeal-common-planning.schema.json" },
+            { "$ref": "appeals-components/appellant-procedure-preference.schema.json" },
+            { "$ref": "appeals-components/appeal-ldc.submission.schema.json" }
+          ]
         }
       ]
     },

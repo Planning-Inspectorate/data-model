@@ -18,7 +18,9 @@
           "allOf": [
             { "properties": { "caseType": { "enum": ["D", "ZP"] } } },
             { "$ref": "appeals-components/appeal-common-submission.schema.json" },
-            { "$ref": "appeals-components/appeal-has-submission.schema.json" }
+            { "$ref": "appeals-components/appeal-has-submission.schema.json" },
+            { "$ref": "appeals-components/appeal-site-area.schema.json" },
+            { "$ref": "appeals-components/appeal-land-ownership.schema.json" }
           ]
         },
         {
@@ -27,6 +29,8 @@
             { "properties": { "caseType": { "enum": ["W", "Y"] } } },
             { "$ref": "appeals-components/appeal-common-submission.schema.json" },
             { "$ref": "appeals-components/appeal-has-submission.schema.json" },
+            { "$ref": "appeals-components/appeal-site-area.schema.json" },
+            { "$ref": "appeals-components/appeal-land-ownership.schema.json" },
             { "$ref": "appeals-components/appeal-s78-submission.schema.json" },
             { "$ref": "appeals-components/appellant-procedure-preference.schema.json" }
           ]
@@ -37,6 +41,7 @@
             { "properties": { "caseType": { "enum": ["ZA"] } } },
             { "$ref": "appeals-components/appeal-common-submission.schema.json" },
             { "$ref": "appeals-components/appeal-has-submission.schema.json" },
+            { "$ref": "appeals-components/appeal-land-ownership.schema.json" },
             { "$ref": "appeals-components/appeal-advert.submission.schema.json" }
           ]
         },
@@ -46,6 +51,7 @@
             { "properties": { "caseType": { "enum": ["H"] } } },
             { "$ref": "appeals-components/appeal-common-submission.schema.json" },
             { "$ref": "appeals-components/appeal-has-submission.schema.json" },
+            { "$ref": "appeals-components/appeal-land-ownership.schema.json" },
             { "$ref": "appeals-components/appeal-advert.submission.schema.json" },
             { "$ref": "appeals-components/appellant-procedure-preference.schema.json" }
           ]

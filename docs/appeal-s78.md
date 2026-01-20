@@ -191,6 +191,11 @@ any of
 | [isSiteSubjectToArticle4Direction](#issitesubjecttoarticle4direction)                           | `boolean` | Optional | can be null    | [Appeal S78 Case](appeal-s78-properties-issitesubjecttoarticle4direction.md "appeal-s78.schema.json#/properties/isSiteSubjectToArticle4Direction")                           |
 | [article4AffectedDevelopmentRights](#article4affecteddevelopmentrights)                         | `string`  | Optional | can be null    | [Appeal S78 Case](appeal-s78-properties-article4affecteddevelopmentrights.md "appeal-s78.schema.json#/properties/article4AffectedDevelopmentRights")                         |
 | [pcnRestrictedDevelopmentRights](#pcnrestricteddevelopmentrights)                               | `boolean` | Optional | can be null    | [Appeal S78 Case](appeal-s78-properties-pcnrestricteddevelopmentrights.md "appeal-s78.schema.json#/properties/pcnRestrictedDevelopmentRights")                               |
+| [applicationMadeUnderActSection](#applicationmadeunderactsection)                               | `string`  | Optional | can be null    | [Appeal S78 Case](appeal-s78-properties-applicationmadeunderactsection.md "appeal-s78.schema.json#/properties/applicationMadeUnderActSection")                               |
+| [siteUseAtTimeOfApplication](#siteuseattimeofapplication)                                       | `string`  | Optional | can be null    | [Appeal S78 Case](appeal-s78-properties-siteuseattimeofapplication.md "appeal-s78.schema.json#/properties/siteUseAtTimeOfApplication")                                       |
+| [appealUnderActSection](#appealunderactsection)                                                 | `string`  | Optional | can be null    | [Appeal S78 Case](appeal-s78-properties-appealunderactsection.md "appeal-s78.schema.json#/properties/appealUnderActSection")                                                 |
+| [lpaConsiderAppealInvalid](#lpaconsiderappealinvalid)                                           | `boolean` | Optional | can be null    | [Appeal S78 Case](appeal-s78-properties-lpaconsiderappealinvalid.md "appeal-s78.schema.json#/properties/lpaConsiderAppealInvalid")                                           |
+| [lpaAppealInvalidReasons](#lpaappealinvalidreasons)                                             | `string`  | Optional | can be null    | [Appeal S78 Case](appeal-s78-properties-lpaappealinvalidreasons.md "appeal-s78.schema.json#/properties/lpaAppealInvalidReasons")                                             |
 | Additional Properties                                                                           | Any       | Optional | can be null    |                                                                                                                                                                              |
 
 ## caseId
@@ -3571,6 +3576,7 @@ The net gain in residences of the proposed development
 | `"listed-building"`                    |             |
 | `"minor-commercial-development"`       |             |
 | `"advertisement"`                      |             |
+| `"lawful-development-certificate"`     |             |
 | `null`                                 |             |
 
 ## developmentType
@@ -4511,6 +4517,118 @@ Have any development rights been restricted by means of a planning condition?
 ### pcnRestrictedDevelopmentRights Type
 
 `boolean`
+
+## applicationMadeUnderActSection
+
+
+
+`applicationMadeUnderActSection`
+
+* is optional
+
+* Type: `string`
+
+* can be null
+
+* defined in: [Appeal S78 Case](appeal-s78-properties-applicationmadeunderactsection.md "appeal-s78.schema.json#/properties/applicationMadeUnderActSection")
+
+### applicationMadeUnderActSection Type
+
+`string`
+
+### applicationMadeUnderActSection Constraints
+
+**enum**: the value of this property must be equal to one of the following values:
+
+| Value                                     | Explanation |
+| :---------------------------------------- | :---------- |
+| `"existing-development"`                  |             |
+| `"proposed-use-of-a-development"`         |             |
+| `"proposed-changes-to-a-listed-building"` |             |
+| `null`                                    |             |
+
+## siteUseAtTimeOfApplication
+
+Site use at time of application
+
+`siteUseAtTimeOfApplication`
+
+* is optional
+
+* Type: `string`
+
+* can be null
+
+* defined in: [Appeal S78 Case](appeal-s78-properties-siteuseattimeofapplication.md "appeal-s78.schema.json#/properties/siteUseAtTimeOfApplication")
+
+### siteUseAtTimeOfApplication Type
+
+`string`
+
+## appealUnderActSection
+
+
+
+`appealUnderActSection`
+
+* is optional
+
+* Type: `string`
+
+* can be null
+
+* defined in: [Appeal S78 Case](appeal-s78-properties-appealunderactsection.md "appeal-s78.schema.json#/properties/appealUnderActSection")
+
+### appealUnderActSection Type
+
+`string`
+
+### appealUnderActSection Constraints
+
+**enum**: the value of this property must be equal to one of the following values:
+
+| Value                                     | Explanation |
+| :---------------------------------------- | :---------- |
+| `"existing-development"`                  |             |
+| `"proposed-use-of-a-development"`         |             |
+| `"proposed-changes-to-a-listed-building"` |             |
+| `null`                                    |             |
+
+## lpaConsiderAppealInvalid
+
+
+
+`lpaConsiderAppealInvalid`
+
+* is optional
+
+* Type: `boolean`
+
+* can be null
+
+* defined in: [Appeal S78 Case](appeal-s78-properties-lpaconsiderappealinvalid.md "appeal-s78.schema.json#/properties/lpaConsiderAppealInvalid")
+
+### lpaConsiderAppealInvalid Type
+
+`boolean`
+
+## lpaAppealInvalidReasons
+
+Reason(s) why LPA consider the appeal invalid
+
+`lpaAppealInvalidReasons`
+
+* is optional
+
+* Type: `string`
+
+* can be null
+
+* defined in: [Appeal S78 Case](appeal-s78-properties-lpaappealinvalidreasons.md "appeal-s78.schema.json#/properties/lpaAppealInvalidReasons")
+
+### lpaAppealInvalidReasons Type
+
+`string`
 
 ## Additional Properties
 

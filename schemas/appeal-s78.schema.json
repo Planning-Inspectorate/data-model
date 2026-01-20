@@ -1014,6 +1014,7 @@
         "listed-building",
         "minor-commercial-development",
         "advertisement",
+        "lawful-development-certificate",
         null
       ]
     },
@@ -1265,6 +1266,25 @@
     "pcnRestrictedDevelopmentRights": {
       "type": ["boolean", "null"],
       "description": "Have any development rights been restricted by means of a planning condition?"
+    },
+    "applicationMadeUnderActSection": {
+      "type": ["string", "null"],
+      "enum": ["existing-development", "proposed-use-of-a-development", "proposed-changes-to-a-listed-building", null]
+    },
+    "siteUseAtTimeOfApplication": {
+      "type": ["string", "null"],
+      "description": "Site use at time of application"
+    },
+    "appealUnderActSection": {
+      "type": ["string", "null"],
+      "enum": ["existing-development", "proposed-use-of-a-development", "proposed-changes-to-a-listed-building", null]
+    },
+    "lpaConsiderAppealInvalid": {
+      "type": ["boolean", "null"]
+    },
+    "lpaAppealInvalidReasons": {
+      "type": ["string", "null"],
+      "description": "Reason(s) why LPA consider the appeal invalid"
     }
   }
 }

@@ -9,6 +9,12 @@ export const APPEAL_ALLOCATION_LEVEL = {
   H: 'H',
 } as const;
 
+export const APPEAL_APPEAL_UNDER_ACT_SECTION = {
+  EXISTING_DEVELOPMENT: 'existing-development',
+  PROPOSED_CHANGES_TO_A_LISTED_BUILDING: 'proposed-changes-to-a-listed-building',
+  PROPOSED_USE_OF_A_DEVELOPMENT: 'proposed-use-of-a-development',
+} as const;
+
 export const APPEAL_APPELLANT_PROCEDURE_PREFERENCE = {
   HEARING: 'hearing',
   INQUIRY: 'inquiry',
@@ -19,6 +25,12 @@ export const APPEAL_APPLICATION_DECISION = {
   GRANTED: 'granted',
   NOT_RECEIVED: 'not_received',
   REFUSED: 'refused',
+} as const;
+
+export const APPEAL_APPLICATION_MADE_UNDER_ACT_SECTION = {
+  EXISTING_DEVELOPMENT: 'existing-development',
+  PROPOSED_CHANGES_TO_A_LISTED_BUILDING: 'proposed-changes-to-a-listed-building',
+  PROPOSED_USE_OF_A_DEVELOPMENT: 'proposed-use-of-a-development',
 } as const;
 
 export const APPEAL_APPLICATION_PART_OR_WHOLE_DEVELOPMENT = {
@@ -181,6 +193,7 @@ export const APPEAL_DOCUMENT_TYPE = {
   ORIGINAL_APPLICATION_FORM: 'originalApplicationForm',
   OTHER_NEW_DOCUMENTS: 'otherNewDocuments',
   OTHER_PARTY_REPRESENTATIONS: 'otherPartyRepresentations',
+  OTHER_RELEVANT_MATTERS: 'otherRelevantMatters',
   OTHER_RELEVANT_POLICIES: 'otherRelevantPolicies',
   OWNERSHIP_CERTIFICATE: 'ownershipCertificate',
   PLAN_SHOWING_EXTENT_OF_ORDER: 'planShowingExtentOfOrder',
@@ -190,6 +203,7 @@ export const APPEAL_DOCUMENT_TYPE = {
   PLANNING_PERMISSION: 'planningPermission',
   PLANS_DRAWINGS: 'plansDrawings',
   PRIOR_CORRESPONDENCE_WITH_PINS: 'priorCorrespondenceWithPINS',
+  RELATED_APPLICATIONS: 'relatedApplications',
   RULE_6_PROOF_OF_EVIDENCE: 'rule6ProofOfEvidence',
   RULE_6_STATEMENT: 'rule6Statement',
   RULE_6_WITNESSES_EVIDENCE: 'rule6WitnessesEvidence',
@@ -342,6 +356,7 @@ export const APPEAL_TYPE_OF_PLANNING_APPLICATION = {
   ADVERTISEMENT: 'advertisement',
   FULL_APPEAL: 'full-appeal',
   HOUSEHOLDER_PLANNING: 'householder-planning',
+  LAWFUL_DEVELOPMENT_CERTIFICATE: 'lawful-development-certificate',
   LISTED_BUILDING: 'listed-building',
   MINOR_COMMERCIAL_DEVELOPMENT: 'minor-commercial-development',
   OUTLINE_PLANNING: 'outline-planning',

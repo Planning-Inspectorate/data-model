@@ -168,6 +168,8 @@ export interface AppealDocument {
     | 'groundGSupporting'
     | 'groundAFeeReceipt'
     | 'delegatedReport'
+    | 'relatedApplications'
+    | 'otherRelevantMatters'
     | null;
   /**
    * The system mastering the metadata for the current document
@@ -772,6 +774,7 @@ export type AppealHASCase = (
     | 'listed-building'
     | 'minor-commercial-development'
     | 'advertisement'
+    | 'lawful-development-certificate'
     | null;
   siteGridReferenceEasting?: string | null;
   siteGridReferenceNorthing?: string | null;
@@ -1475,6 +1478,7 @@ export type AppealS78Case = (
     | 'listed-building'
     | 'minor-commercial-development'
     | 'advertisement'
+    | 'lawful-development-certificate'
     | null;
   developmentType:
     | 'householder'
@@ -1642,6 +1646,25 @@ export type AppealS78Case = (
    * Have any development rights been restricted by means of a planning condition?
    */
   pcnRestrictedDevelopmentRights?: boolean | null;
+  applicationMadeUnderActSection?:
+    | 'existing-development'
+    | 'proposed-use-of-a-development'
+    | 'proposed-changes-to-a-listed-building'
+    | null;
+  /**
+   * Site use at time of application
+   */
+  siteUseAtTimeOfApplication?: string | null;
+  appealUnderActSection?:
+    | 'existing-development'
+    | 'proposed-use-of-a-development'
+    | 'proposed-changes-to-a-listed-building'
+    | null;
+  lpaConsiderAppealInvalid?: boolean | null;
+  /**
+   * Reason(s) why LPA consider the appeal invalid
+   */
+  lpaAppealInvalidReasons?: string | null;
   [k: string]: unknown;
 };
 
@@ -3572,6 +3595,7 @@ export type AppellantCommonSubmissionProperties = (
     | 'listed-building'
     | 'minor-commercial-development'
     | 'advertisement'
+    | 'lawful-development-certificate'
     | null;
   /**
    * Indicates if the appellant has applied for costs
@@ -3955,7 +3979,13 @@ export interface AppellantSubmissionCommand {
     | ({
         caseType?: 'C';
       } & AppellantEnforcementSubmissionProperties &
-        AppellantProcedurePreferenceProperties);
+        AppellantProcedurePreferenceProperties)
+    | ({
+        caseType?: 'X';
+      } & AppellantCommonSubmissionProperties &
+        AppellantCommonPlanningProperties &
+        AppellantProcedurePreferenceProperties &
+        LDCSpecificProperties);
   documents: {
     /**
      * The unique identifier for the document
@@ -4104,11 +4134,11 @@ export interface AppellantCommonPlanningProperties {
   /**
    * The date of the original LPA application
    */
-  applicationDate: string;
+  applicationDate: string | null;
   /**
    * The outcome of the original LPA decision
    */
-  applicationDecision: 'granted' | 'refused' | 'not_received';
+  applicationDecision: 'granted' | 'refused' | 'not_received' | null;
   /**
    * The date of the original LPA decision
    */
@@ -4182,6 +4212,21 @@ export interface AdvertSpecificProperties {
     | null;
   [k: string]: unknown;
 }
+/**
+ * Schema defining any properties for ldc appeals
+ */
+export interface LDCSpecificProperties {
+  /**
+   * Site use at time of application
+   */
+  siteUseAtTimeOfApplication: string | null;
+  applicationMadeUnderActSection:
+    | 'existing-development'
+    | 'proposed-use-of-a-development'
+    | 'proposed-changes-to-a-listed-building'
+    | null;
+  [k: string]: unknown;
+}
 
 export type Name = string;
 
@@ -4214,10 +4259,6 @@ export interface Address {
  * Schema defining any HAS specific properties for LPAQ submissions
  */
 export type LPAQHASSubmissionProperties = {
-  /**
-   * Indicates if the LPA considers the appeal type appropriate
-   */
-  isCorrectAppealType?: boolean | null;
   /**
    * A list of affected listed building IDs from Historic England
    */
@@ -4488,6 +4529,21 @@ export type LPAQEnforcementSubmissionProperties = {
    */
   article4AffectedDevelopmentRights?: string | null;
 };
+/**
+ * Schema defining any LDC specific properties for LPAQ submissions
+ */
+export type LPAQLDCSubmissionProperties = {
+  appealUnderActSection?:
+    | 'existing-development'
+    | 'proposed-use-of-a-development'
+    | 'proposed-changes-to-a-listed-building'
+    | null;
+  lpaConsiderAppealInvalid?: boolean | null;
+  /**
+   * Reason(s) why LPA consider the appeal invalid
+   */
+  lpaAppealInvalidReasons?: string | null;
+};
 
 /**
  * Schema defining the data produced by the Front-Office when an LPA Questionnaire is submitted
@@ -4541,7 +4597,13 @@ export interface LPAQuestionnaireCommand {
         InfrastructureLevyProperties &
         EnvironmentalImpactAssessmentProperties &
         SiteDesignationsAndProtectionSpecificProperties &
-        LPAQEnforcementSubmissionProperties);
+        LPAQEnforcementSubmissionProperties)
+    | ({
+        caseType?: 'X';
+      } & LPAQCommonSubmissionProperties &
+        LPAProcedurePreferenceProperties &
+        InfrastructureLevyProperties &
+        LPAQLDCSubmissionProperties);
   documents: {
     /**
      * The unique identifier for the document
@@ -4609,7 +4671,9 @@ export interface LPAQuestionnaireCommand {
       | 'planningPermission'
       | 'lpaEnforcementNotice'
       | 'lpaEnforcementNoticePlan'
-      | 'planningContraventionNotice';
+      | 'planningContraventionNotice'
+      | 'relatedApplications'
+      | 'otherRelevantMatters';
     [k: string]: unknown;
   }[];
   [k: string]: unknown;
@@ -4678,6 +4742,10 @@ export interface LPAQCommonSubmissionProperties {
    * A general reason given for the need to visit any neighbours
    */
   reasonForNeighbourVisits?: string | null;
+  /**
+   * Indicates if the LPA considers the appeal type appropriate
+   */
+  isCorrectAppealType: boolean | null;
   [k: string]: unknown;
 }
 

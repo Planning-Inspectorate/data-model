@@ -1,0 +1,108 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "commands/appeals-components/appeal-common-planning.schema.json",
+  "title": "Appellant common planning properties",
+  "description": "Schema defining any properties common across all planning appeal types for appeal submissions",
+  "type": "object",
+  "additionalProperties": true,
+  "required": [
+    "applicationReference",
+    "applicationDate",
+    "applicationDecision",
+    "applicationDecisionDate",
+    "neighbouringSiteAddresses",
+    "isGreenBelt",
+    "originalDevelopmentDescription",
+    "changedDevelopmentDescription"
+  ],
+  "properties": {
+    "applicationReference": {
+      "type": "string",
+      "examples": ["43010/APP/1/290572"],
+      "description": "The unique identifier of the LPA application"
+    },
+    "applicationDate": {
+      "type": "string",
+      "format": "date-time",
+      "examples": ["2023-07-27T20:30:00.000Z"],
+      "description": "The date of the original LPA application"
+    },
+    "applicationDecision": {
+      "type": "string",
+      "enum": ["granted", "refused", "not_received"],
+      "description": "The outcome of the original LPA decision"
+    },
+    "applicationDecisionDate": {
+      "type": ["string", "null"],
+      "format": "date-time",
+      "examples": ["2023-07-27T20:30:00.000Z"],
+      "description": "The date of the original LPA decision"
+    },
+    "neighbouringSiteAddresses": {
+      "type": ["array", "null"],
+      "items": {
+        "type": "object",
+        "additionalProperties": true,
+        "properties": {
+          "neighbouringSiteAddressLine1": {
+            "type": "string",
+            "examples": ["96 The Avenue"],
+            "description": "First line of address of the site"
+          },
+          "neighbouringSiteAddressLine2": {
+            "type": ["string", "null"],
+            "description": "Second line of address of the site"
+          },
+          "neighbouringSiteAddressTown": {
+            "type": "string",
+            "examples": ["Maidstone"],
+            "description": "Town / City of the site address"
+          },
+          "neighbouringSiteAddressCounty": {
+            "type": ["string", "null"],
+            "examples": ["Kent"],
+            "description": "County of the site address"
+          },
+          "neighbouringSiteAddressPostcode": {
+            "type": "string",
+            "examples": ["MD21 5XY"],
+            "description": "Postal code of the site address"
+          },
+          "neighbouringSiteAccessDetails": {
+            "type": ["string", "null"],
+            "examples": ["Ongoing road works at this address"],
+            "description": "Provided information on site accessibility on this address"
+          },
+          "neighbouringSiteSafetyDetails": {
+            "type": ["string", "null"],
+            "examples": ["Ongoing road works at this address"],
+            "description": "Provided information on site health and safety on this address"
+          }
+        },
+        "required": [
+          "neighbouringSiteAddressLine1",
+          "neighbouringSiteAddressLine2",
+          "neighbouringSiteAddressTown",
+          "neighbouringSiteAddressCounty",
+          "neighbouringSiteAddressPostcode",
+          "neighbouringSiteAccessDetails",
+          "neighbouringSiteSafetyDetails"
+        ]
+      },
+      "description": "A list of neighbouring site addresses"
+    },
+    "isGreenBelt": {
+      "type": ["boolean", "null"],
+      "description": "Indicates if the site is in a green belt"
+    },
+    "originalDevelopmentDescription": {
+      "type": ["string", "null"],
+      "examples": ["Replacement of an existing gate to access the property"],
+      "description": "The original description of the development, as provided by the appellant"
+    },
+    "changedDevelopmentDescription": {
+      "type": ["boolean", "null"],
+      "description": "Indicates that the LPA has changed the development description"
+    }
+  }
+}

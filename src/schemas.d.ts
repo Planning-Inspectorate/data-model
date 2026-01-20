@@ -1130,7 +1130,7 @@ export type AppealS78Case = (
   /**
    * The outcome of the original LPA decision
    */
-  applicationDecision: ('granted' | 'refused' | 'not_received') | null;
+  applicationDecision: 'granted' | 'refused' | 'not_received' | null;
   /**
    * The date of the original LPA decision
    */

@@ -1474,6 +1474,7 @@ The outcome of the original LPA decision
 | `"granted"`      |             |
 | `"refused"`      |             |
 | `"not_received"` |             |
+| `null`           |             |
 
 ## applicationDecisionDate
 

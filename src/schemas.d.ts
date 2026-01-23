@@ -3446,6 +3446,7 @@ export type AppealRepresentationSubmission = {
       | 'lpaWitnessesEvidence'
       | 'rule6ProofOfEvidence'
       | 'rule6WitnessesEvidence'
+      | 'appellantStatement'
       | null;
     [k: string]: unknown;
   }[];

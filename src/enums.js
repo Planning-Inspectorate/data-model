@@ -53,6 +53,7 @@ export const APPEAL_CASE_PROCEDURE = Object.freeze({
   HEARING: 'hearing',
   INQUIRY: 'inquiry',
   WRITTEN: 'written',
+  WRITTEN_PART_1: 'writtenPart1',
 });
 
 export const APPEAL_CASE_STAGE = Object.freeze({

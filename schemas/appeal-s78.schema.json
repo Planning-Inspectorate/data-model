@@ -201,7 +201,7 @@
     },
     "caseProcedure": {
       "type": ["string", "null"],
-      "enum": ["written", "hearing", "inquiry", null],
+      "enum": ["written", "hearing", "inquiry", "writtenPart1", null],
       "description": "The type of procedure for the appeal",
       "$comment": "Also available on HAS cases"
     },

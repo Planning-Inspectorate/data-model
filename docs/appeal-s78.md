@@ -390,12 +390,13 @@ The type of procedure for the appeal
 
 **enum**: the value of this property must be equal to one of the following values:
 
-| Value       | Explanation |
-| :---------- | :---------- |
-| `"written"` |             |
-| `"hearing"` |             |
-| `"inquiry"` |             |
-| `null`      |             |
+| Value            | Explanation |
+| :--------------- | :---------- |
+| `"written"`      |             |
+| `"hearing"`      |             |
+| `"inquiry"`      |             |
+| `"writtenPart1"` |             |
+| `null`           |             |
 
 ## lpaCode
 

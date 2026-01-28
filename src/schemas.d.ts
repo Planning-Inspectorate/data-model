@@ -972,7 +972,7 @@ export type AppealS78Case = (
   /**
    * The type of procedure for the appeal
    */
-  caseProcedure: 'written' | 'hearing' | 'inquiry' | null;
+  caseProcedure: 'written' | 'hearing' | 'inquiry' | 'writtenPart1' | null;
   /**
    * A unique identifier for the Local Planning Authority
    */

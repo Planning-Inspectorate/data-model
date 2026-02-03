@@ -1215,6 +1215,9 @@
       "description": "Date on which LPA decision in relation to application was received",
       "examples": ["2023-07-27T20:30:00.000Z"]
     },
+    "hasAllegedBreachArea": {
+      "type": ["boolean", "null"]
+    },
     "areaOfAllegedBreachInSquareMetres": {
       "type": ["number", "null"],
       "examples": [3.5]

@@ -176,6 +176,7 @@ any of
 | [didAppellantAppealLpaDecision](#didappellantappeallpadecision)                                 | `boolean` | Optional | can be null    | [Appeal S78 Case](appeal-s78-properties-didappellantappeallpadecision.md "appeal-s78.schema.json#/properties/didAppellantAppealLpaDecision")                                 |
 | [dateLpaDecisionDue](#datelpadecisiondue)                                                       | `string`  | Optional | can be null    | [Appeal S78 Case](appeal-s78-properties-datelpadecisiondue.md "appeal-s78.schema.json#/properties/dateLpaDecisionDue")                                                       |
 | [dateLpaDecisionReceived](#datelpadecisionreceived)                                             | `string`  | Optional | can be null    | [Appeal S78 Case](appeal-s78-properties-datelpadecisionreceived.md "appeal-s78.schema.json#/properties/dateLpaDecisionReceived")                                             |
+| [hasAllegedBreachArea](#hasallegedbreacharea)                                                   | `boolean` | Optional | can be null    | [Appeal S78 Case](appeal-s78-properties-hasallegedbreacharea.md "appeal-s78.schema.json#/properties/hasAllegedBreachArea")                                                   |
 | [areaOfAllegedBreachInSquareMetres](#areaofallegedbreachinsquaremetres)                         | `number`  | Optional | can be null    | [Appeal S78 Case](appeal-s78-properties-areaofallegedbreachinsquaremetres.md "appeal-s78.schema.json#/properties/areaOfAllegedBreachInSquareMetres")                         |
 | [doesAllegedBreachCreateFloorSpace](#doesallegedbreachcreatefloorspace)                         | `boolean` | Optional | can be null    | [Appeal S78 Case](appeal-s78-properties-doesallegedbreachcreatefloorspace.md "appeal-s78.schema.json#/properties/doesAllegedBreachCreateFloorSpace")                         |
 | [floorSpaceCreatedByBreachInSquareMetres](#floorspacecreatedbybreachinsquaremetres)             | `number`  | Optional | can be null    | [Appeal S78 Case](appeal-s78-properties-floorspacecreatedbybreachinsquaremetres.md "appeal-s78.schema.json#/properties/floorSpaceCreatedByBreachInSquareMetres")             |
@@ -4226,6 +4227,24 @@ Date on which LPA decision in relation to application was received
 ```json
 "2023-07-27T20:30:00.000Z"
 ```
+
+## hasAllegedBreachArea
+
+
+
+`hasAllegedBreachArea`
+
+* is optional
+
+* Type: `boolean`
+
+* can be null
+
+* defined in: [Appeal S78 Case](appeal-s78-properties-hasallegedbreacharea.md "appeal-s78.schema.json#/properties/hasAllegedBreachArea")
+
+### hasAllegedBreachArea Type
+
+`boolean`
 
 ## areaOfAllegedBreachInSquareMetres
 

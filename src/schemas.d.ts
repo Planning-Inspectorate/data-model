@@ -1619,6 +1619,7 @@ export type AppealS78Case = (
    * Date on which LPA decision in relation to application was received
    */
   dateLpaDecisionReceived?: string | null;
+  hasAllegedBreachArea?: boolean | null;
   areaOfAllegedBreachInSquareMetres?: number | null;
   doesAllegedBreachCreateFloorSpace?: boolean | null;
   floorSpaceCreatedByBreachInSquareMetres?: number | null;

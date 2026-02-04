@@ -671,6 +671,10 @@ const NSIP_RECOMMENDATION = Object.freeze({
 });
 
 const NSIP_REDACTED_STATUS = Object.freeze({
+  AI_REDACTION_FAILED: 'ai_redaction_failed',
+  AI_REDACTION_REVIEW_REQUIRED: 'ai_redaction_review_required',
+  AWAITING_AI_REDACTION: 'awaiting_ai_redaction',
+  NO_REDACTION_REQUIRED: 'no_redaction_required',
   NOT_REDACTED: 'not_redacted',
   REDACTED: 'redacted',
 });

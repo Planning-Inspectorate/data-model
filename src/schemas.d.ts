@@ -2115,7 +2115,14 @@ export interface NSIPDocument {
   dateCreated: string;
   lastModified: string | null;
   caseType: 'nsip' | 'has' | null;
-  redactedStatus: 'not_redacted' | 'redacted' | null;
+  redactedStatus:
+    | 'not_redacted'
+    | 'redacted'
+    | 'awaiting_ai_redaction'
+    | 'ai_redaction_review_required'
+    | 'ai_redaction_failed'
+    | 'no_redaction_required'
+    | null;
   publishedStatus:
     | 'not_checked'
     | 'checked'

@@ -2914,7 +2914,7 @@ export interface Meeting {
   /**
    * Unique identifier for the meeting
    */
-  meetingId?: number | null;
+  meetingId: number;
   /**
    * Meeting agenda
    */
@@ -2927,6 +2927,10 @@ export interface Meeting {
    * Meeting date
    */
   meetingDate?: string | null;
+  /**
+   * Estimated Preliminary Meeting date
+   */
+  estimatedPrelimMeetingDate?: string | null;
   /**
    * Type of Meeting
    */

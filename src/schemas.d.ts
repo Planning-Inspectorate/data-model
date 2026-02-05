@@ -3993,7 +3993,11 @@ export interface AppellantSubmissionCommand {
       } & AppellantCommonSubmissionProperties &
         AppellantCommonPlanningProperties &
         AppellantProcedurePreferenceProperties &
-        LDCSpecificProperties);
+        LDCSpecificProperties)
+    | ({
+        caseType?: 'F';
+      } & AppellantEnforcementSubmissionProperties &
+        AppellantProcedurePreferenceProperties);
   documents: {
     /**
      * The unique identifier for the document
@@ -4597,7 +4601,7 @@ export interface LPAQuestionnaireCommand {
         LPAProcedurePreferenceProperties &
         ChangedListedBuildingNumbersProperties)
     | ({
-        caseType?: 'C';
+        caseType?: 'C' | 'F';
       } & LPAQCommonSubmissionProperties &
         LPAQHASSubmissionProperties &
         LPAProcedurePreferenceProperties &

@@ -71,9 +71,9 @@
           ]
         },
         {
-          "$comment": "Enforcement",
+          "$comment": "Enforcement + Enforcement listed building",
           "allOf": [
-            { "properties": { "caseType": { "enum": ["C"] } } },
+            { "properties": { "caseType": { "enum": ["C", "F"] } } },
             { "$ref": "appeals-components/lpa-questionnaire-common.schema.json" },
             { "$ref": "appeals-components/lpa-questionnaire-has.schema.json" },
             { "$ref": "appeals-components/lpa-procedure-preference.schema.json" },

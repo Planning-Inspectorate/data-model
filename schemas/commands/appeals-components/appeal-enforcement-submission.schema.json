@@ -102,6 +102,14 @@
       "type": ["boolean", "null"],
       "description": "Whether a planning application was made"
     },
+    "retrospectiveApplication": {
+      "type": ["boolean", "null"],
+      "description": "Whether a retrospective planning application was made"
+    },
+    "groundAFeePaid": {
+      "type": ["boolean", "null"],
+      "description": "Whether a ground (a) fee has been paid"
+    },
     "applicationDevelopmentAllOrPart": {
       "type": ["string", "null"],
       "enum": ["all-of-the-development", "part-of-the-development", null],

@@ -43,6 +43,8 @@ const exampleEnforcementSubmissionSchema = {
 		writtenOrVerbalPermission: null,
 		descriptionOfAllegedBreach: 'a new chimney',
 		applicationMadeAndFeePaid: true,
+		retrospectiveApplication: true,
+		groundAFeePaid: true,
 		applicationDevelopmentAllOrPart: 'all-of-the-development',
 		originalDevelopmentDescription: 'in amet',
 		changedDevelopmentDescription: true,

@@ -871,9 +871,10 @@
       "type": "object",
       "additionalProperties": true,
       "description": "A meeting related to the project",
+      "required": ["meetingId"],
       "properties": {
         "meetingId": {
-          "type": ["integer", "null"],
+          "type": "integer",
           "description": "Unique identifier for the meeting",
           "examples": [123]
         },
@@ -891,6 +892,12 @@
         "meetingDate": {
           "type": ["string", "null"],
           "description": "Meeting date",
+          "format": "date-time",
+          "examples": ["2023-07-27T20:30:00.000Z"]
+        },
+        "estimatedPrelimMeetingDate": {
+          "type": ["string", "null"],
+          "description": "Estimated Preliminary Meeting date",
           "format": "date-time",
           "examples": ["2023-07-27T20:30:00.000Z"]
         },

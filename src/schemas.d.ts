@@ -3798,6 +3798,14 @@ export type AppellantEnforcementSubmissionProperties = (
    */
   applicationMadeAndFeePaid?: boolean | null;
   /**
+   * Whether a retrospective planning application was made
+   */
+  retrospectiveApplication?: boolean | null;
+  /**
+   * Whether a ground (a) fee has been paid
+   */
+  groundAFeePaid?: boolean | null;
+  /**
    * Did the application relate to all or part of the development
    */
   applicationDevelopmentAllOrPart?: 'all-of-the-development' | 'part-of-the-development' | null;

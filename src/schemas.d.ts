@@ -2321,23 +2321,27 @@ export interface NSIPMeeting {
    * The unique identifier for the case within the Back Office. This is not the same as the case reference
    */
   caseId: number;
-  caseReference: string | null;
+  caseReference?: string | null;
   /**
    * Meeting agenda
    */
-  meetingAgenda: string | null;
+  meetingAgenda?: string | null;
   /**
    * Planning Inspectorate role
    */
-  planningInspectorateRole: 'facilitator' | 'advisor' | 'observer' | null;
+  planningInspectorateRole?: 'facilitator' | 'advisor' | 'observer' | null;
   /**
    * Meeting date
    */
-  meetingDate: string | null;
+  meetingDate?: string | null;
+  /**
+   * Estimated Preliminary Meeting date
+   */
+  estimatedPrelimMeetingDate?: string | null;
   /**
    * Type of Meeting
    */
-  meetingType: 'evidence_plan' | 'project' | null;
+  meetingType?: 'evidence_plan' | 'project' | null;
   [k: string]: unknown;
 }
 

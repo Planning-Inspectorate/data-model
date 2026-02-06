@@ -61,6 +61,7 @@
           "allOf": [
             { "properties": { "caseType": { "enum": ["C"] } } },
             { "$ref": "appeals-components/appeal-enforcement-submission.schema.json" },
+            { "$ref": "appeals-components/appeal-enforcement-common-submission.schema.json" },
             { "$ref": "appeals-components/appellant-procedure-preference.schema.json" }
           ]
         },
@@ -78,7 +79,8 @@
           "$comment": "Enforcement listed building",
           "allOf": [
             { "properties": { "caseType": { "enum": ["F"] } } },
-            { "$ref": "appeals-components/appeal-enforcement-submission.schema.json" },
+            { "$ref": "appeals-components/appeal-enforcement-common-submission.schema.json" },
+            { "$ref": "appeals-components/appeal-enforcement-listed-submission.schema.json" },
             { "$ref": "appeals-components/appellant-procedure-preference.schema.json" }
           ]
         }

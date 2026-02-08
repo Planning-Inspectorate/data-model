@@ -80,6 +80,7 @@ any of
 | [originalDevelopmentDescription](#originaldevelopmentdescription)                               | `string`  | Required | can be null    | [Appeal S78 Case](appeal-s78-properties-originaldevelopmentdescription.md "appeal-s78.schema.json#/properties/originalDevelopmentDescription")                               |
 | [changedDevelopmentDescription](#changeddevelopmentdescription)                                 | `boolean` | Required | can be null    | [Appeal S78 Case](appeal-s78-properties-changeddevelopmentdescription.md "appeal-s78.schema.json#/properties/changedDevelopmentDescription")                                 |
 | [newConditionDetails](#newconditiondetails)                                                     | `string`  | Required | can be null    | [Appeal S78 Case](appeal-s78-properties-newconditiondetails.md "appeal-s78.schema.json#/properties/newConditionDetails")                                                     |
+| [extraConditionsDetails](#extraconditionsdetails)                                               | `string`  | Optional | can be null    | [Appeal S78 Case](appeal-s78-properties-extraconditionsdetails.md "appeal-s78.schema.json#/properties/extraConditionsDetails")                                               |
 | [nearbyCaseReferences](#nearbycasereferences)                                                   | `array`   | Required | can be null    | [Appeal S78 Case](appeal-s78-properties-nearbycasereferences.md "appeal-s78.schema.json#/properties/nearbyCaseReferences")                                                   |
 | [neighbouringSiteAddresses](#neighbouringsiteaddresses)                                         | `array`   | Required | can be null    | [Appeal S78 Case](appeal-s78-properties-neighbouringsiteaddresses.md "appeal-s78.schema.json#/properties/neighbouringSiteAddresses")                                         |
 | [reasonForNeighbourVisits](#reasonforneighbourvisits)                                           | `string`  | Required | can be null    | [Appeal S78 Case](appeal-s78-properties-reasonforneighbourvisits.md "appeal-s78.schema.json#/properties/reasonForNeighbourVisits")                                           |
@@ -162,6 +163,7 @@ any of
 | [ownerOccupancyStatus](#owneroccupancystatus)                                                   | `string`  | Optional | can be null    | [Appeal S78 Case](appeal-s78-properties-owneroccupancystatus.md "appeal-s78.schema.json#/properties/ownerOccupancyStatus")                                                   |
 | [occupancyConditionsMet](#occupancyconditionsmet)                                               | `boolean` | Optional | can be null    | [Appeal S78 Case](appeal-s78-properties-occupancyconditionsmet.md "appeal-s78.schema.json#/properties/occupancyConditionsMet")                                               |
 | [enforcementAppealGroundsDetails](#enforcementappealgroundsdetails)                             | `array`   | Optional | can be null    | [Appeal S78 Case](appeal-s78-properties-enforcementappealgroundsdetails.md "appeal-s78.schema.json#/properties/enforcementAppealGroundsDetails")                             |
+| [applicationElbAppealGroundsDetails](#applicationelbappealgroundsdetails)                       | `array`   | Optional | can be null    | [Appeal S78 Case](appeal-s78-properties-applicationelbappealgroundsdetails.md "appeal-s78.schema.json#/properties/applicationElbAppealGroundsDetails")                       |
 | [applicationMadeAndFeePaid](#applicationmadeandfeepaid)                                         | `boolean` | Optional | can be null    | [Appeal S78 Case](appeal-s78-properties-applicationmadeandfeepaid.md "appeal-s78.schema.json#/properties/applicationMadeAndFeePaid")                                         |
 | [noticeRelatesToBuildingEngineeringMiningOther](#noticerelatestobuildingengineeringminingother) | `boolean` | Optional | can be null    | [Appeal S78 Case](appeal-s78-properties-noticerelatestobuildingengineeringminingother.md "appeal-s78.schema.json#/properties/noticeRelatesToBuildingEngineeringMiningOther") |
 | [changeOfUseRefuseOrWaste](#changeofuserefuseorwaste)                                           | `boolean` | Optional | can be null    | [Appeal S78 Case](appeal-s78-properties-changeofuserefuseorwaste.md "appeal-s78.schema.json#/properties/changeOfUseRefuseOrWaste")                                           |
@@ -2067,6 +2069,30 @@ New conditions details provided by the LPA
 "Since the original application, a number of things have changed..."
 ```
 
+## extraConditionsDetails
+
+extra conditions details provided by the LPA
+
+`extraConditionsDetails`
+
+* is optional
+
+* Type: `string`
+
+* can be null
+
+* defined in: [Appeal S78 Case](appeal-s78-properties-extraconditionsdetails.md "appeal-s78.schema.json#/properties/extraConditionsDetails")
+
+### extraConditionsDetails Type
+
+`string`
+
+### extraConditionsDetails Examples
+
+```json
+"Since the original application, a number of things have changed..."
+```
+
 ## nearbyCaseReferences
 
 A list of related case references known to the appellant and the LPA
@@ -3934,6 +3960,26 @@ A list of grounds for the appeal, supporting facts & start dates. Enforcement ca
 ### enforcementAppealGroundsDetails Type
 
 `object[]` ([Details](appeal-s78-properties-enforcementappealgroundsdetails-items.md))
+
+## applicationElbAppealGroundsDetails
+
+A list of grounds for the appeal, supporting facts & start dates. Enforcement cases (C) can have grounds (a) to (g)
+
+> Enforcement Listed Building cases (F) have a separate list of grounds (a) to (k)
+
+`applicationElbAppealGroundsDetails`
+
+* is optional
+
+* Type: `object[]` ([Details](appeal-s78-properties-applicationelbappealgroundsdetails-items.md))
+
+* can be null
+
+* defined in: [Appeal S78 Case](appeal-s78-properties-applicationelbappealgroundsdetails.md "appeal-s78.schema.json#/properties/applicationElbAppealGroundsDetails")
+
+### applicationElbAppealGroundsDetails Type
+
+`object[]` ([Details](appeal-s78-properties-applicationelbappealgroundsdetails-items.md))
 
 ## applicationMadeAndFeePaid
 

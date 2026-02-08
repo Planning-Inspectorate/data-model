@@ -170,6 +170,10 @@ export interface AppealDocument {
     | 'delegatedReport'
     | 'relatedApplications'
     | 'otherRelevantMatters'
+    | 'groundHSupporting'
+    | 'groundISupporting'
+    | 'groundJSupporting'
+    | 'groundKSupporting'
     | null;
   /**
    * The system mastering the metadata for the current document
@@ -1231,6 +1235,10 @@ export type AppealS78Case = (
    */
   newConditionDetails: string | null;
   /**
+   * extra conditions details provided by the LPA
+   */
+  extraConditionsDetails?: string | null;
+  /**
    * A list of related case references known to the appellant and the LPA
    */
   nearbyCaseReferences: string[] | null;
@@ -1576,6 +1584,20 @@ export type AppealS78Case = (
   enforcementAppealGroundsDetails?:
     | {
         appealGroundLetter?: 'a' | 'b' | 'c' | 'd' | 'e' | 'f' | 'g' | null;
+        groundForAppealStartDate?: string | null;
+        /**
+         * Facts supporting the appeal ground
+         */
+        groundFacts?: string | null;
+        [k: string]: unknown;
+      }[]
+    | null;
+  /**
+   * A list of grounds for the appeal, supporting facts & start dates. Enforcement cases (C) can have grounds (a) to (g)
+   */
+  applicationElbAppealGroundsDetails?:
+    | {
+        appealGroundLetter?: 'a' | 'b' | 'c' | 'd' | 'e' | 'f' | 'g' | 'h' | 'i' | 'j' | 'k' | null;
         groundForAppealStartDate?: string | null;
         /**
          * Facts supporting the appeal ground

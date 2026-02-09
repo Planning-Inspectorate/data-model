@@ -64,6 +64,8 @@
 
 * [Untitled object in Appeal S78 Case](./appeal-s78-properties-enforcementappealgroundsdetails-items.md) – `appeal-s78.schema.json#/properties/enforcementAppealGroundsDetails/items`
 
+* [Untitled object in Appeal S78 Case](./appeal-s78-properties-applicationelbappealgroundsdetails-items.md) – `appeal-s78.schema.json#/properties/applicationElbAppealGroundsDetails/items`
+
 * [Untitled object in DaRT API response](./dart-response-properties-neighbouringsiteaddresses-items.md) – `dart-response.schema.json#/properties/neighbouringSiteAddresses/items`
 
 * [Untitled object in Examination Timetable](./nsip-exam-timetable-defs-event.md) – `nsip-exam-timetable.schema.json#/$defs/event`

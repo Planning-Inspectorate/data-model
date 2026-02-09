@@ -629,6 +629,11 @@
       "description": "New conditions details provided by the LPA",
       "$comment": "Also available on HAS cases"
     },
+    "extraConditionsDetails": {
+      "type": ["string", "null"],
+      "examples": ["Since the original application, a number of things have changed..."],
+      "description": "extra conditions details provided by the LPA"
+    },
     "nearbyCaseReferences": {
       "type": ["array", "null"],
       "items": {
@@ -1143,6 +1148,30 @@
           "appealGroundLetter": {
             "type": ["string", "null"],
             "enum": ["a", "b", "c", "d", "e", "f", "g", null]
+          },
+          "groundForAppealStartDate": {
+            "type": ["string", "null"],
+            "format": "date-time",
+            "examples": ["2023-07-27T20:30:00.000Z"]
+          },
+          "groundFacts": {
+            "type": ["string", "null"],
+            "description": "Facts supporting the appeal ground"
+          }
+        }
+      },
+      "description": "A list of grounds for the appeal, supporting facts & start dates. Enforcement cases (C) can have grounds (a) to (g)",
+      "$comment": "Enforcement Listed Building cases (F) have a separate list of grounds (a) to (k)"
+    },
+    "applicationElbAppealGroundsDetails": {
+      "type": ["array", "null"],
+      "items": {
+        "type": "object",
+        "additionalProperties": true,
+        "properties": {
+          "appealGroundLetter": {
+            "type": ["string", "null"],
+            "enum": ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", null]
           },
           "groundForAppealStartDate": {
             "type": ["string", "null"],

@@ -622,6 +622,10 @@ The type of document, used for exchange, migrations and consumption from the app
 | `"delegatedReport"`                  |             |
 | `"relatedApplications"`              |             |
 | `"otherRelevantMatters"`             |             |
+| `"groundHSupporting"`                |             |
+| `"groundISupporting"`                |             |
+| `"groundJSupporting"`                |             |
+| `"groundKSupporting"`                |             |
 | `null`                               |             |
 
 ## sourceSystem

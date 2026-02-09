@@ -3746,65 +3746,9 @@ export type AppellantEnforcementSubmissionProperties = (
     }
 ) & {
   /**
-   * Case submission id - link to draft submission created by appellant
-   */
-  submissionId: string;
-  /**
-   * The type of procedure for the appeal
-   */
-  caseProcedure: 'written' | 'hearing' | 'inquiry';
-  /**
-   * A unique identifier for the Local Planning Authority
-   */
-  lpaCode: string;
-  /**
-   * The date the appeal was submitted by the appellant
-   */
-  caseSubmittedDate: string;
-  /**
-   * Indicates if an enforcement notice is the reason for the appeal
-   */
-  enforcementNotice: boolean | null;
-  /**
-   * The unique identifier of the enforcement notice
-   */
-  enforcementReference: string;
-  /**
-   * The date the enforcement notice was issued
-   */
-  enforcementIssueDate: string;
-  /**
-   * The date the enforcement notice took effect
-   */
-  enforcementEffectiveDate: string;
-  /**
-   * The date the enforcement notice took effect
-   */
-  contactPlanningInspectorateDate?: string | null;
-  /**
-   * The individual's interest in the appeal land
-   */
-  interestInLand?: string | null;
-  /**
-   * If required, whether the individual has permission to use the appeal land
-   */
-  writtenOrVerbalPermission?: string | null;
-  /**
-   * A description of the alleged breach
-   */
-  descriptionOfAllegedBreach?: string | null;
-  /**
    * Whether a planning application was made
    */
   applicationMadeAndFeePaid?: boolean | null;
-  /**
-   * Whether a retrospective planning application was made
-   */
-  retrospectiveApplication?: boolean | null;
-  /**
-   * Whether a ground (a) fee has been paid
-   */
-  groundAFeePaid?: boolean | null;
   /**
    * Did the application relate to all or part of the development
    */
@@ -3842,10 +3786,6 @@ export type AppellantEnforcementSubmissionProperties = (
    */
   appealDecisionDate?: string | null;
   /**
-   * The statutory deadline for submitting an appeal from the original LPA decision date
-   */
-  caseSubmissionDueDate: string | null;
-  /**
    * First line of address for the appeal site
    */
   siteAddressLine1?: string | null;
@@ -3865,8 +3805,6 @@ export type AppellantEnforcementSubmissionProperties = (
    * Postal code of the site address
    */
   siteAddressPostcode?: string | null;
-  siteGridReferenceEasting?: string | null;
-  siteGridReferenceNorthing?: string | null;
   /**
    * First line of address for the appeal site
    */
@@ -3887,44 +3825,22 @@ export type AppellantEnforcementSubmissionProperties = (
    * Postal code of the site address
    */
   contactAddressPostcode?: string | null;
+  siteGridReferenceEasting?: string | null;
+  siteGridReferenceNorthing?: string | null;
+  /**
+   * Whether a retrospective planning application was made
+   */
+  retrospectiveApplication?: boolean | null;
   contactGridReferenceEasting?: string | null;
   contactGridReferenceNorthing?: string | null;
   /**
-   * Provided information on site accessibility
+   * Whether a ground (a) fee has been paid
    */
-  siteAccessDetails?: string[] | null;
+  groundAFeePaid?: boolean | null;
   /**
-   * Provided information on site health and safety
+   * If required, whether the individual has permission to use the appeal land
    */
-  siteSafetyDetails?: string[] | null;
-  /**
-   * Indicates if the appellant has applied for costs
-   */
-  appellantCostsAppliedFor?: boolean | null;
-  /**
-   * The procedure preference indicated by the appellant
-   */
-  appellantProcedurePreference?: 'written' | 'hearing' | 'inquiry' | null;
-  /**
-   * The procedure details preference indicated by the appellant
-   */
-  appellantProcedurePreferenceDetails?: string | null;
-  /**
-   * The duration of the procedure indicated by the appellant
-   */
-  appellantProcedurePreferenceDuration?: number | null;
-  /**
-   * The number of witnesses appellant has suggested for inquiries preference
-   */
-  appellantProcedurePreferenceWitnessCount?: number | null;
-  /**
-   * The planning obligation information, if available
-   */
-  statusPlanningObligation?: string | null;
-  /**
-   * A list of related case references known to the appellant and the LPA
-   */
-  nearbyCaseReferences?: string[] | null;
+  writtenOrVerbalPermission?: string | null;
   /**
    * A list of individuals named on the enforcement notice
    */
@@ -3943,7 +3859,7 @@ export type AppellantEnforcementSubmissionProperties = (
          */
         interestInLand: string;
         /**
-         * Whether the individual has permission to use the land
+         * If required, whether the individual has permission to use the appeal land
          */
         writtenOrVerbalPermission: string | null;
         [k: string]: unknown;
@@ -4003,6 +3919,7 @@ export interface AppellantSubmissionCommand {
     | ({
         caseType?: 'C';
       } & AppellantEnforcementSubmissionProperties &
+        AppellantEnforcementCommonSubmissionProperties &
         AppellantProcedurePreferenceProperties)
     | ({
         caseType?: 'X';
@@ -4012,7 +3929,8 @@ export interface AppellantSubmissionCommand {
         LDCSpecificProperties)
     | ({
         caseType?: 'F';
-      } & AppellantEnforcementSubmissionProperties &
+      } & AppellantEnforcementCommonSubmissionProperties &
+        AppellantEnforcementListedBuildingSubmissionProperties &
         AppellantProcedurePreferenceProperties);
   documents: {
     /**
@@ -4241,6 +4159,96 @@ export interface AdvertSpecificProperties {
   [k: string]: unknown;
 }
 /**
+ * Schema defining any common properties for enforcement appeals
+ */
+export interface AppellantEnforcementCommonSubmissionProperties {
+  /**
+   * Case submission id - link to draft submission created by appellant
+   */
+  submissionId: string;
+  /**
+   * A description of the alleged breach
+   */
+  descriptionOfAllegedBreach?: string | null;
+  /**
+   * The type of procedure for the appeal
+   */
+  caseProcedure: 'written' | 'hearing' | 'inquiry';
+  /**
+   * A unique identifier for the Local Planning Authority
+   */
+  lpaCode: string;
+  /**
+   * The date the appeal was submitted by the appellant
+   */
+  caseSubmittedDate: string;
+  /**
+   * Indicates if an enforcement notice is the reason for the appeal
+   */
+  enforcementNotice: boolean | null;
+  /**
+   * The unique identifier of the enforcement notice
+   */
+  enforcementReference: string;
+  /**
+   * The date the enforcement notice was issued
+   */
+  enforcementIssueDate: string;
+  /**
+   * The date the enforcement notice took effect
+   */
+  enforcementEffectiveDate: string;
+  /**
+   * The date the enforcement notice took effect
+   */
+  contactPlanningInspectorateDate?: string | null;
+  /**
+   * The individual's interest in the appeal land
+   */
+  interestInLand?: string | null;
+  /**
+   * The statutory deadline for submitting an appeal from the original LPA decision date
+   */
+  caseSubmissionDueDate: string | null;
+  /**
+   * Provided information on site accessibility
+   */
+  siteAccessDetails?: string[] | null;
+  /**
+   * Provided information on site health and safety
+   */
+  siteSafetyDetails?: string[] | null;
+  /**
+   * Indicates if the appellant has applied for costs
+   */
+  appellantCostsAppliedFor?: boolean | null;
+  /**
+   * The procedure preference indicated by the appellant
+   */
+  appellantProcedurePreference?: 'written' | 'hearing' | 'inquiry' | null;
+  /**
+   * The procedure details preference indicated by the appellant
+   */
+  appellantProcedurePreferenceDetails?: string | null;
+  /**
+   * The duration of the procedure indicated by the appellant
+   */
+  appellantProcedurePreferenceDuration?: number | null;
+  /**
+   * The number of witnesses appellant has suggested for inquiries preference
+   */
+  appellantProcedurePreferenceWitnessCount?: number | null;
+  /**
+   * The planning obligation information, if available
+   */
+  statusPlanningObligation?: string | null;
+  /**
+   * A list of related case references known to the appellant and the LPA
+   */
+  nearbyCaseReferences?: string[] | null;
+  [k: string]: unknown;
+}
+/**
  * Schema defining any properties for ldc appeals
  */
 export interface LDCSpecificProperties {
@@ -4252,6 +4260,88 @@ export interface LDCSpecificProperties {
     | 'existing-development'
     | 'proposed-use-of-a-development'
     | 'proposed-changes-to-a-listed-building'
+    | null;
+  [k: string]: unknown;
+}
+/**
+ * Schema defining any properties for enforcement listed building appeals
+ */
+export interface AppellantEnforcementListedBuildingSubmissionProperties {
+  /**
+   * A list of individuals named on the enforcement notice
+   */
+  namedIndividuals?:
+    | {
+        /**
+         * First name of the individual
+         */
+        firstName: string;
+        /**
+         * Last name of the individual
+         */
+        lastName: string;
+        /**
+         * Individual's interest in the appeal land
+         */
+        interestInLand: string;
+        [k: string]: unknown;
+      }[]
+    | null;
+  /**
+   * First line of address for the appeal site
+   */
+  siteAddressLine1?: string | null;
+  /**
+   * Second line of address for the appeal site
+   */
+  siteAddressLine2?: string | null;
+  /**
+   * Town / City of the site address
+   */
+  siteAddressTown?: string | null;
+  /**
+   * County of the site address
+   */
+  siteAddressCounty?: string | null;
+  /**
+   * Postal code of the site address
+   */
+  siteAddressPostcode?: string | null;
+  /**
+   * First line of address for the appeal site
+   */
+  contactAddressLine1?: string | null;
+  /**
+   * Second line of address for the appeal site
+   */
+  contactAddressLine2?: string | null;
+  /**
+   * Town / City of the site address
+   */
+  contactAddressTown?: string | null;
+  /**
+   * County of the site address
+   */
+  contactAddressCounty?: string | null;
+  /**
+   * Postal code of the site address
+   */
+  contactAddressPostcode?: string | null;
+  /**
+   * A list of appeal grounds being pleaded
+   */
+  appealGrounds?:
+    | {
+        /**
+         * Name of the appeal ground
+         */
+        groundRef: 'a' | 'b' | 'c' | 'd' | 'e' | 'f' | 'g' | 'h' | 'i' | 'j' | 'k';
+        /**
+         * Facts supporting the appeal ground
+         */
+        factsForGround: string;
+        [k: string]: unknown;
+      }[]
     | null;
   [k: string]: unknown;
 }

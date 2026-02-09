@@ -5,17 +5,7 @@
   "description": "Schema defining any properties for enforcement appeals",
   "type": "object",
   "additionalProperties": true,
-  "required": [
-    "submissionId",
-    "caseProcedure",
-    "lpaCode",
-    "caseSubmittedDate",
-    "enforcementNotice",
-    "enforcementReference",
-    "caseSubmissionDueDate",
-    "enforcementIssueDate",
-    "enforcementEffectiveDate"
-  ],
+  "required": [],
   "anyOf": [
     {
       "required": ["siteGridReferenceEasting", "siteGridReferenceNorthing"],
@@ -34,81 +24,9 @@
     }
   ],
   "properties": {
-    "submissionId": {
-      "type": "string",
-      "format": "uuid",
-      "examples": ["7f45748c-2342-4b59-b934-ad6183e8d834"],
-      "description": "Case submission id - link to draft submission created by appellant"
-    },
-    "caseProcedure": {
-      "type": "string",
-      "enum": ["written", "hearing", "inquiry"],
-      "description": "The type of procedure for the appeal"
-    },
-    "lpaCode": {
-      "type": "string",
-      "examples": ["Q9999"],
-      "description": "A unique identifier for the Local Planning Authority",
-      "$comment": "Uses the internal PINS code identifying LPAs"
-    },
-    "caseSubmittedDate": {
-      "type": "string",
-      "format": "date-time",
-      "examples": ["2023-07-27T20:30:00.000Z"],
-      "description": "The date the appeal was submitted by the appellant"
-    },
-    "enforcementNotice": {
-      "type": ["boolean", "null"],
-      "description": "Indicates if an enforcement notice is the reason for the appeal"
-    },
-    "enforcementReference": {
-      "type": "string",
-      "examples": ["123456"],
-      "description": "The unique identifier of the enforcement notice"
-    },
-    "enforcementIssueDate": {
-      "type": "string",
-      "format": "date-time",
-      "examples": ["2023-07-27T20:30:00.000Z"],
-      "description": "The date the enforcement notice was issued"
-    },
-    "enforcementEffectiveDate": {
-      "type": "string",
-      "format": "date-time",
-      "examples": ["2023-07-27T20:30:00.000Z"],
-      "description": "The date the enforcement notice took effect"
-    },
-    "contactPlanningInspectorateDate": {
-      "type": ["string", "null"],
-      "format": "date-time",
-      "examples": ["2023-07-27T20:30:00.000Z"],
-      "description": "The date the enforcement notice took effect"
-    },
-    "interestInLand": {
-      "type": ["string", "null"],
-      "examples": ["owner, tenant, mortgage holder, other"],
-      "description": "The individual's interest in the appeal land"
-    },
-    "writtenOrVerbalPermission": {
-      "type": ["string", "null"],
-      "examples": ["yes, no"],
-      "description": "If required, whether the individual has permission to use the appeal land"
-    },
-    "descriptionOfAllegedBreach": {
-      "type": ["string", "null"],
-      "description": "A description of the alleged breach"
-    },
     "applicationMadeAndFeePaid": {
       "type": ["boolean", "null"],
       "description": "Whether a planning application was made"
-    },
-    "retrospectiveApplication": {
-      "type": ["boolean", "null"],
-      "description": "Whether a retrospective planning application was made"
-    },
-    "groundAFeePaid": {
-      "type": ["boolean", "null"],
-      "description": "Whether a ground (a) fee has been paid"
     },
     "applicationDevelopmentAllOrPart": {
       "type": ["string", "null"],
@@ -155,13 +73,6 @@
       "examples": ["2023-07-27T20:30:00.000Z"],
       "description": "The date of the appeal against the original LPA decision"
     },
-    "caseSubmissionDueDate": {
-      "type": ["string", "null"],
-      "format": "date-time",
-      "examples": ["2023-07-27T20:30:00.000Z"],
-      "description": "The statutory deadline for submitting an appeal from the original LPA decision date",
-      "$comment": "Calculated from the applicationDecisionDate"
-    },
     "siteAddressLine1": {
       "type": ["string", "null"],
       "examples": ["96 The Avenue"],
@@ -185,16 +96,6 @@
       "type": ["string", "null"],
       "examples": ["MD21 5XY"],
       "description": "Postal code of the site address"
-    },
-    "siteGridReferenceEasting": {
-      "type": ["string", "null"],
-      "pattern": "^\\d{6,7}$",
-      "examples": ["357144"]
-    },
-    "siteGridReferenceNorthing": {
-      "type": ["string", "null"],
-      "pattern": "^\\d{6,7}$",
-      "examples": ["400534"]
     },
     "contactAddressLine1": {
       "type": ["string", "null"],
@@ -220,6 +121,20 @@
       "examples": ["MD21 5XY"],
       "description": "Postal code of the site address"
     },
+    "siteGridReferenceEasting": {
+      "type": ["string", "null"],
+      "pattern": "^\\d{6,7}$",
+      "examples": ["357144"]
+    },
+    "siteGridReferenceNorthing": {
+      "type": ["string", "null"],
+      "pattern": "^\\d{6,7}$",
+      "examples": ["400534"]
+    },
+    "retrospectiveApplication": {
+      "type": ["boolean", "null"],
+      "description": "Whether a retrospective planning application was made"
+    },
     "contactGridReferenceEasting": {
       "type": ["string", "null"],
       "pattern": "^\\d{6,7}$",
@@ -230,55 +145,14 @@
       "pattern": "^\\d{6,7}$",
       "examples": ["400534"]
     },
-    "siteAccessDetails": {
-      "type": ["array", "null"],
-      "items": {
-        "type": "string",
-        "examples": ["The site is accessible through the small gate on the left of the property"]
-      },
-      "description": "Provided information on site accessibility"
-    },
-    "siteSafetyDetails": {
-      "type": ["array", "null"],
-      "items": {
-        "type": "string",
-        "examples": ["There is an aggressive dog in the property"]
-      },
-      "description": "Provided information on site health and safety"
-    },
-    "appellantCostsAppliedFor": {
+    "groundAFeePaid": {
       "type": ["boolean", "null"],
-      "description": "Indicates if the appellant has applied for costs",
-      "$comment": "Also available on HAS cases"
+      "description": "Whether a ground (a) fee has been paid"
     },
-    "appellantProcedurePreference": {
+    "writtenOrVerbalPermission": {
       "type": ["string", "null"],
-      "enum": ["written", "hearing", "inquiry", null],
-      "description": "The procedure preference indicated by the appellant"
-    },
-    "appellantProcedurePreferenceDetails": {
-      "type": ["string", "null"],
-      "description": "The procedure details preference indicated by the appellant"
-    },
-    "appellantProcedurePreferenceDuration": {
-      "type": ["number", "null"],
-      "description": "The duration of the procedure indicated by the appellant"
-    },
-    "appellantProcedurePreferenceWitnessCount": {
-      "type": ["number", "null"],
-      "description": "The number of witnesses appellant has suggested for inquiries preference"
-    },
-    "statusPlanningObligation": {
-      "type": ["string", "null"],
-      "description": "The planning obligation information, if available"
-    },
-    "nearbyCaseReferences": {
-      "type": ["array", "null"],
-      "items": {
-        "type": "string",
-        "examples": ["6000456", "8004567"]
-      },
-      "description": "A list of related case references known to the appellant and the LPA"
+      "examples": ["yes, no"],
+      "description": "If required, whether the individual has permission to use the appeal land"
     },
     "namedIndividuals": {
       "type": ["array", "null"],
@@ -301,8 +175,8 @@
           },
           "writtenOrVerbalPermission": {
             "type": ["string", "null"],
-            "examples": ["yes"],
-            "description": "Whether the individual has permission to use the land"
+            "examples": ["yes, no"],
+            "description": "If required, whether the individual has permission to use the appeal land"
           }
         },
         "required": ["firstName", "lastName", "interestInLand", "writtenOrVerbalPermission"]

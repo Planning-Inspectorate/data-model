@@ -40,18 +40,6 @@ const exampleEnforcementListedSubmissionSchema = {
 		enforcementEffectiveDate: '1890-12-28T22:49:47.0Z',
 		contactPlanningInspectorateDate: null,
 		interestInLand: 'owner',
-		writtenOrVerbalPermission: null,
-		descriptionOfAllegedBreach: 'a new chimney',
-		applicationMadeAndFeePaid: true,
-		applicationDevelopmentAllOrPart: 'all-of-the-development',
-		originalDevelopmentDescription: 'in amet',
-		changedDevelopmentDescription: true,
-		applicationReference: '43010/APP/1/290572',
-		applicationDate: '1890-12-28T22:49:47.0Z',
-		applicationDecision: 'granted',
-		applicationDecisionAppealed: false,
-		applicationDecisionDate: '1890-12-28T22:49:47.0Z',
-		appealDecisionDate: null,
 		caseSubmissionDueDate: null,
 		siteAddressLine1: 'occaecat aliquip non pariatur consequat',
 		siteAddressLine2: null,
@@ -65,8 +53,6 @@ const exampleEnforcementListedSubmissionSchema = {
 		contactAddressTown: null,
 		contactAddressCounty: null,
 		contactAddressPostcode: null,
-		contactGridReferenceEasting: null,
-		contactGridReferenceNorthing: null,
 		siteAccessDetails: ['laborum', 'aute velit quis', 'dolor'],
 		siteSafetyDetails: ['velit aliqua', 'qui', 'tempor Duis ut dolore', 'anim Ut in ea', 'eiusmod laborum'],
 		appellantCostsAppliedFor: false,
@@ -80,8 +66,7 @@ const exampleEnforcementListedSubmissionSchema = {
 			{
 				firstName: 'Bob',
 				lastName: 'Bobberson',
-				interestInLand: 'owner',
-				writtenOrVerbalPermission: 'yes'
+				interestInLand: 'owner'
 			}
 		],
 		appealGrounds: [
@@ -106,54 +91,10 @@ describe(' listed building submission command schema', () => {
 		assert.strictEqual(validationResult, true);
 	});
 
-	it('should enforce eastings-northings pattern', () => {
-		const invalidPatterns = [
-			{ easting: 'abc123', northing: '400534', description: 'easting with letters' },
-			{ easting: '1234567*', northing: '400534', description: 'easting too long' },
-			{ easting: '12345', northing: '400534', description: 'easting too short' },
-			{ easting: '357144', northing: 'xyz123', description: 'northing with letters' },
-			{ easting: '357144', northing: '12345678', description: 'northing too long' },
-			{ easting: '357144', northing: '12345', description: 'northing too short' },
-			{ easting: '', northing: '400534', description: 'empty easting' },
-			{ easting: '357144', northing: '', description: 'empty northing' }
-		];
-
-		for (const pattern of invalidPatterns) {
-			const test = structuredClone(exampleEnforcementListedSubmissionSchema);
-			test.casedata.siteGridReferenceEasting = pattern.easting;
-			test.casedata.siteGridReferenceNorthing = pattern.northing;
-
-			const validationResult = ajv.validate(schema, test);
-			assert.strictEqual(validationResult, false, `Expected validation to fail for ${pattern.description}`);
-		}
-	});
-
-	it('should allow only eastings-northings', () => {
-		const test = structuredClone(exampleEnforcementListedSubmissionSchema);
-		test.casedata.siteAddressPostcode = undefined;
-		test.casedata.siteAddressLine1 = null;
-		test.casedata.siteAddressTown = null;
-		const validationResult = ajv.validate(schema, test);
-		assert.strictEqual(validationResult, true);
-	});
-
 	it('should allow only site address', () => {
 		const test = structuredClone(exampleEnforcementListedSubmissionSchema);
-		test.casedata.siteGridReferenceEasting = undefined;
-		test.casedata.siteGridReferenceNorthing = null;
 		const validationResult = ajv.validate(schema, test);
 		assert.strictEqual(validationResult, true);
-	});
-
-	it('should enforce either site address or easting-northing', () => {
-		const test = structuredClone(exampleEnforcementListedSubmissionSchema);
-		test.casedata.siteAddressPostcode = undefined;
-		test.casedata.siteAddressLine1 = null;
-		test.casedata.siteAddressTown = null;
-		test.casedata.siteGridReferenceEasting = undefined;
-		test.casedata.siteGridReferenceNorthing = null;
-		const validationResult = ajv.validate(schema, test);
-		assert.strictEqual(validationResult, false);
 	});
 
 	it('should reject missing root property', () => {

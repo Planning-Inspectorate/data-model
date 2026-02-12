@@ -4651,8 +4651,14 @@ export type LPAQEnforcementSubmissionProperties = {
    * The site area, in square meters
    */
   siteAreaSquareMetres?: number | null;
-  hasAllegedBreachArea?: boolean | null;
-  doesAllegedBreachCreateFloorSpace?: boolean | null;
+  /**
+   * Area of the alleged breach, in square meters
+   */
+  areaOfAllegedBreachInSquareMetres?: number | null;
+  /**
+   * Floor space created by the breach, in square meters
+   */
+  floorSpaceCreatedByBreachInSquareMetres?: number | null;
   changeOfUseRefuseOrWaste?: boolean | null;
   changeOfUseMineralExtraction?: boolean | null;
   changeOfUseMineralStorage?: boolean | null;

@@ -31,11 +31,15 @@
           "examples": [45.7],
           "description": "The site area, in square meters"
         },
-        "hasAllegedBreachArea": {
-          "type": ["boolean", "null"]
+        "areaOfAllegedBreachInSquareMetres": {
+          "type": ["number", "null"],
+          "examples": [45.7],
+          "description": "Area of the alleged breach, in square meters"
         },
-        "doesAllegedBreachCreateFloorSpace": {
-          "type": ["boolean", "null"]
+        "floorSpaceCreatedByBreachInSquareMetres": {
+          "type": ["number", "null"],
+          "examples": [45.7],
+          "description": "Floor space created by the breach, in square meters"
         },
         "changeOfUseRefuseOrWaste": {
           "type": ["boolean", "null"]

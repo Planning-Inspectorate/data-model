@@ -164,29 +164,29 @@ The schemas in this repository are written in jsonc (JSON with comments), and ca
 
 ## Node.js Usage
 
-To use these schemas in a Node project, add this repo as a dependency (with a particular tag or commit as the version):
+To use these schemas in a Node project, add this repo as a dependency:
 
-`npm i -s Planning-Inspectorate/data-model#some-tag-or-commit`
+`npm i -s @planning-inspectorate/data-model`
+
+As usual with npm you can optionally specify a version:
+
+`npm i -s @planning-inspectorate/data-model@2.20.0`
 
 Then import as required:
 
 ```es6
-import {loadAllSchemas} from 'pins-data-model';
+import {loadAllSchemas} from '@planning-inspectorate/data-model';
 ```
 
 or to import enum constants, for example:
 
 ```es6
-import { APPEAL_CASE_STATUS } from 'pins-data-model';
+import { APPEAL_CASE_STATUS } from '@planning-inspectorate/data-model';
 
 if (someAppeal.status === APPEAL_CASE_STATUS.COMPLETE) {
     console.log(`we're done!`);
 }
 ```
-
-To upgrade to a different version, simply doing npm command does not seem to get the correct version, so we need to first uninstall and then reinstall. You can do this by running:
-
-`npm uninstall pins-data-model && npm prune && npm i -s github:Planning-Inspectorate/data-model#some-tag-or-commit`
 
 ### Tests
 

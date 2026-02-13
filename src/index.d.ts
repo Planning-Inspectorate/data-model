@@ -1,5 +1,5 @@
-import * as Schemas from './schemas';
-export * from './enums';
+import * as Schemas from './schemas.js';
+export * from './enums.js';
 
 export interface LoadedSchemas {
 	schemas: {

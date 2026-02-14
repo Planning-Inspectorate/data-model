@@ -1,32 +1,23 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "$id": "commands/appeals-components/appeal-enforcement-submission.schema.json",
-  "title": "Appellant enforcement submission properties",
-  "description": "Schema defining any properties for enforcement appeals",
+  "$id": "commands/appeals-components/appeal-enforcement-notice-submission.schema.json",
+  "title": "Appellant enforcement notice specific submission properties",
+  "description": "Schema defining properties specific to enforcement notice appeals",
   "type": "object",
   "additionalProperties": true,
   "required": [],
-  "anyOf": [
-    {
-      "required": ["siteGridReferenceEasting", "siteGridReferenceNorthing"],
-      "properties": {
-        "siteGridReferenceEasting": { "type": "string" },
-        "siteGridReferenceNorthing": { "type": "string" }
-      }
-    },
-    {
-      "required": ["siteAddressLine1", "siteAddressTown", "siteAddressPostcode"],
-      "properties": {
-        "siteAddressLine1": { "type": "string" },
-        "siteAddressTown": { "type": "string" },
-        "siteAddressPostcode": { "type": "string" }
-      }
-    }
-  ],
   "properties": {
     "applicationMadeAndFeePaid": {
       "type": ["boolean", "null"],
-      "description": "Whether a planning application was made"
+      "description": "Whether a planning application was made - historic question"
+    },
+    "retrospectiveApplication": {
+      "type": ["boolean", "null"],
+      "description": "Whether a retrospective planning application was made"
+    },
+    "groundAFeePaid": {
+      "type": ["boolean", "null"],
+      "description": "Whether a ground (a) fee has been paid"
     },
     "applicationDevelopmentAllOrPart": {
       "type": ["string", "null"],
@@ -73,81 +64,13 @@
       "examples": ["2023-07-27T20:30:00.000Z"],
       "description": "The date of the appeal against the original LPA decision"
     },
-    "siteAddressLine1": {
-      "type": ["string", "null"],
-      "examples": ["96 The Avenue"],
-      "description": "First line of address for the appeal site"
-    },
-    "siteAddressLine2": {
-      "type": ["string", "null"],
-      "description": "Second line of address for the appeal site"
-    },
-    "siteAddressTown": {
-      "type": ["string", "null"],
-      "examples": ["Maidstone"],
-      "description": "Town / City of the site address"
-    },
-    "siteAddressCounty": {
-      "type": ["string", "null"],
-      "examples": ["Kent"],
-      "description": "County of the site address"
-    },
-    "siteAddressPostcode": {
-      "type": ["string", "null"],
-      "examples": ["MD21 5XY"],
-      "description": "Postal code of the site address"
-    },
-    "contactAddressLine1": {
-      "type": ["string", "null"],
-      "examples": ["96 The Avenue"],
-      "description": "First line of address for the appeal site"
-    },
-    "contactAddressLine2": {
-      "type": ["string", "null"],
-      "description": "Second line of address for the appeal site"
-    },
-    "contactAddressTown": {
-      "type": ["string", "null"],
-      "examples": ["Maidstone"],
-      "description": "Town / City of the site address"
-    },
-    "contactAddressCounty": {
-      "type": ["string", "null"],
-      "examples": ["Kent"],
-      "description": "County of the site address"
-    },
-    "contactAddressPostcode": {
-      "type": ["string", "null"],
-      "examples": ["MD21 5XY"],
-      "description": "Postal code of the site address"
-    },
-    "siteGridReferenceEasting": {
-      "type": ["string", "null"],
-      "pattern": "^\\d{6,7}$",
-      "examples": ["357144"]
-    },
-    "siteGridReferenceNorthing": {
-      "type": ["string", "null"],
-      "pattern": "^\\d{6,7}$",
-      "examples": ["400534"]
-    },
-    "retrospectiveApplication": {
+    "planningObligation": {
       "type": ["boolean", "null"],
-      "description": "Whether a retrospective planning application was made"
+      "description": "Indicates the existence of a planning obligation"
     },
-    "contactGridReferenceEasting": {
+    "statusPlanningObligation": {
       "type": ["string", "null"],
-      "pattern": "^\\d{6,7}$",
-      "examples": ["357144"]
-    },
-    "contactGridReferenceNorthing": {
-      "type": ["string", "null"],
-      "pattern": "^\\d{6,7}$",
-      "examples": ["400534"]
-    },
-    "groundAFeePaid": {
-      "type": ["boolean", "null"],
-      "description": "Whether a ground (a) fee has been paid"
+      "description": "The planning obligation information, if available"
     },
     "writtenOrVerbalPermission": {
       "type": ["string", "null"],

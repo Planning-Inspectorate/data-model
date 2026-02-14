@@ -46,8 +46,6 @@ const exampleEnforcementListedSubmissionSchema = {
 		siteAddressTown: 'et',
 		siteAddressCounty: 'velit',
 		siteAddressPostcode: 'nisi minim laboris sed',
-		siteGridReferenceEasting: '357144',
-		siteGridReferenceNorthing: '400534',
 		contactAddressLine1: null,
 		contactAddressLine2: null,
 		contactAddressTown: null,
@@ -60,7 +58,6 @@ const exampleEnforcementListedSubmissionSchema = {
 		appellantProcedurePreferenceDetails: 'eiusmod ex exercitation',
 		appellantProcedurePreferenceDuration: 10816414.941069126,
 		appellantProcedurePreferenceWitnessCount: -91300569.36444478,
-		statusPlanningObligation: 'proident aute',
 		nearbyCaseReferences: ['incididunt'],
 		namedIndividuals: [
 			{

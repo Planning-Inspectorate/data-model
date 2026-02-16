@@ -14,8 +14,6 @@
     "appellantProcedurePreferenceDetails",
     "appellantProcedurePreferenceDuration",
     "appellantProcedurePreferenceWitnessCount",
-    "planningObligation",
-    "statusPlanningObligation",
     "developmentType"
   ],
   "allOf": [
@@ -53,14 +51,6 @@
         "appellantProcedurePreferenceWitnessCount": {
           "type": ["number", "null"],
           "description": "The number of witnesses in inquiries"
-        },
-        "planningObligation": {
-          "type": ["boolean", "null"],
-          "description": "Indicates the existence of a planning obligation"
-        },
-        "statusPlanningObligation": {
-          "type": ["string", "null"],
-          "description": "The planning obligation information, if available"
         },
         "developmentType": {
           "type": ["string", "null"],

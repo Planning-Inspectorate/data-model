@@ -60,8 +60,6 @@ const exampleEnforcementSubmissionSchema = {
 		siteAddressTown: 'et',
 		siteAddressCounty: 'velit',
 		siteAddressPostcode: 'nisi minim laboris sed',
-		siteGridReferenceEasting: '357144',
-		siteGridReferenceNorthing: '400534',
 		contactAddressLine1: null,
 		contactAddressLine2: null,
 		contactAddressTown: null,
@@ -76,7 +74,7 @@ const exampleEnforcementSubmissionSchema = {
 		appellantProcedurePreferenceDetails: 'eiusmod ex exercitation',
 		appellantProcedurePreferenceDuration: 10816414.941069126,
 		appellantProcedurePreferenceWitnessCount: -91300569.36444478,
-		statusPlanningObligation: 'proident aute',
+		statusPlanningObligation: 'finalised',
 		nearbyCaseReferences: ['incididunt'],
 		namedIndividuals: [
 			{
@@ -108,52 +106,11 @@ describe('enforcement submission command schema', () => {
 		assert.strictEqual(validationResult, true);
 	});
 
-	it('should enforce eastings-northings pattern', () => {
-		const invalidPatterns = [
-			{ easting: 'abc123', northing: '400534', description: 'easting with letters' },
-			{ easting: '1234567*', northing: '400534', description: 'easting too long' },
-			{ easting: '12345', northing: '400534', description: 'easting too short' },
-			{ easting: '357144', northing: 'xyz123', description: 'northing with letters' },
-			{ easting: '357144', northing: '12345678', description: 'northing too long' },
-			{ easting: '357144', northing: '12345', description: 'northing too short' },
-			{ easting: '', northing: '400534', description: 'empty easting' },
-			{ easting: '357144', northing: '', description: 'empty northing' }
-		];
-
-		for (const pattern of invalidPatterns) {
-			const test = structuredClone(exampleEnforcementSubmissionSchema);
-			test.casedata.siteGridReferenceEasting = pattern.easting;
-			test.casedata.siteGridReferenceNorthing = pattern.northing;
-
-			const validationResult = ajv.validate(schema, test);
-			assert.strictEqual(validationResult, false, `Expected validation to fail for ${pattern.description}`);
-		}
-	});
-
-	it('should allow only eastings-northings', () => {
+	it('should enforce site address', () => {
 		const test = structuredClone(exampleEnforcementSubmissionSchema);
 		test.casedata.siteAddressPostcode = undefined;
 		test.casedata.siteAddressLine1 = null;
 		test.casedata.siteAddressTown = null;
-		const validationResult = ajv.validate(schema, test);
-		assert.strictEqual(validationResult, true);
-	});
-
-	it('should allow only site address', () => {
-		const test = structuredClone(exampleEnforcementSubmissionSchema);
-		test.casedata.siteGridReferenceEasting = undefined;
-		test.casedata.siteGridReferenceNorthing = null;
-		const validationResult = ajv.validate(schema, test);
-		assert.strictEqual(validationResult, true);
-	});
-
-	it('should enforce either site address or easting-northing', () => {
-		const test = structuredClone(exampleEnforcementSubmissionSchema);
-		test.casedata.siteAddressPostcode = undefined;
-		test.casedata.siteAddressLine1 = null;
-		test.casedata.siteAddressTown = null;
-		test.casedata.siteGridReferenceEasting = undefined;
-		test.casedata.siteGridReferenceNorthing = null;
 		const validationResult = ajv.validate(schema, test);
 		assert.strictEqual(validationResult, false);
 	});

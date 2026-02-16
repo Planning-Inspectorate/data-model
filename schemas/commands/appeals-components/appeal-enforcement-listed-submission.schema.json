@@ -2,7 +2,7 @@
   "$schema": "http://json-schema.org/draft-07/schema#",
   "$id": "commands/appeals-components/appeal-enforcement-listed-submission.schema.json",
   "title": "Appellant enforcement listed building submission properties",
-  "description": "Schema defining any properties for enforcement listed building appeals",
+  "description": "Schema defining any properties specific to enforcement listed building appeals",
   "type": "object",
   "additionalProperties": true,
   "required": [],
@@ -30,54 +30,6 @@
         "required": ["firstName", "lastName", "interestInLand"]
       },
       "description": "A list of individuals named on the enforcement notice"
-    },
-    "siteAddressLine1": {
-      "type": ["string", "null"],
-      "examples": ["96 The Avenue"],
-      "description": "First line of address for the appeal site"
-    },
-    "siteAddressLine2": {
-      "type": ["string", "null"],
-      "description": "Second line of address for the appeal site"
-    },
-    "siteAddressTown": {
-      "type": ["string", "null"],
-      "examples": ["Maidstone"],
-      "description": "Town / City of the site address"
-    },
-    "siteAddressCounty": {
-      "type": ["string", "null"],
-      "examples": ["Kent"],
-      "description": "County of the site address"
-    },
-    "siteAddressPostcode": {
-      "type": ["string", "null"],
-      "examples": ["MD21 5XY"],
-      "description": "Postal code of the site address"
-    },
-    "contactAddressLine1": {
-      "type": ["string", "null"],
-      "examples": ["96 The Avenue"],
-      "description": "First line of address for the appeal site"
-    },
-    "contactAddressLine2": {
-      "type": ["string", "null"],
-      "description": "Second line of address for the appeal site"
-    },
-    "contactAddressTown": {
-      "type": ["string", "null"],
-      "examples": ["Maidstone"],
-      "description": "Town / City of the site address"
-    },
-    "contactAddressCounty": {
-      "type": ["string", "null"],
-      "examples": ["Kent"],
-      "description": "County of the site address"
-    },
-    "contactAddressPostcode": {
-      "type": ["string", "null"],
-      "examples": ["MD21 5XY"],
-      "description": "Postal code of the site address"
     },
     "appealGrounds": {
       "type": ["array", "null"],

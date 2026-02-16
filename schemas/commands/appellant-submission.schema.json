@@ -60,8 +60,8 @@
           "$comment": "Enforcement notice",
           "allOf": [
             { "properties": { "caseType": { "enum": ["C"] } } },
-            { "$ref": "appeals-components/appeal-enforcement-submission.schema.json" },
             { "$ref": "appeals-components/appeal-enforcement-common-submission.schema.json" },
+            { "$ref": "appeals-components/appeal-enforcement-notice-submission.schema.json" },
             { "$ref": "appeals-components/appellant-procedure-preference.schema.json" }
           ]
         },

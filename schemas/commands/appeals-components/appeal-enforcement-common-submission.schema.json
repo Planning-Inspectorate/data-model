@@ -14,7 +14,10 @@
     "enforcementReference",
     "caseSubmissionDueDate",
     "enforcementIssueDate",
-    "enforcementEffectiveDate"
+    "enforcementEffectiveDate",
+    "siteAddressLine1",
+    "siteAddressTown",
+    "siteAddressPostcode"
   ],
   "properties": {
     "submissionId": {
@@ -83,6 +86,54 @@
       "description": "The statutory deadline for submitting an appeal from the original LPA decision date",
       "$comment": "Calculated from the applicationDecisionDate"
     },
+    "siteAddressLine1": {
+      "type": ["string", "null"],
+      "examples": ["96 The Avenue"],
+      "description": "First line of address for the appeal site"
+    },
+    "siteAddressLine2": {
+      "type": ["string", "null"],
+      "description": "Second line of address for the appeal site"
+    },
+    "siteAddressTown": {
+      "type": ["string", "null"],
+      "examples": ["Maidstone"],
+      "description": "Town / City of the site address"
+    },
+    "siteAddressCounty": {
+      "type": ["string", "null"],
+      "examples": ["Kent"],
+      "description": "County of the site address"
+    },
+    "siteAddressPostcode": {
+      "type": ["string", "null"],
+      "examples": ["MD21 5XY"],
+      "description": "Postal code of the site address"
+    },
+    "contactAddressLine1": {
+      "type": ["string", "null"],
+      "examples": ["96 The Avenue"],
+      "description": "First line of address for the appeal site"
+    },
+    "contactAddressLine2": {
+      "type": ["string", "null"],
+      "description": "Second line of address for the appeal site"
+    },
+    "contactAddressTown": {
+      "type": ["string", "null"],
+      "examples": ["Maidstone"],
+      "description": "Town / City of the site address"
+    },
+    "contactAddressCounty": {
+      "type": ["string", "null"],
+      "examples": ["Kent"],
+      "description": "County of the site address"
+    },
+    "contactAddressPostcode": {
+      "type": ["string", "null"],
+      "examples": ["MD21 5XY"],
+      "description": "Postal code of the site address"
+    },
     "siteAccessDetails": {
       "type": ["array", "null"],
       "items": {
@@ -120,10 +171,6 @@
     "appellantProcedurePreferenceWitnessCount": {
       "type": ["number", "null"],
       "description": "The number of witnesses appellant has suggested for inquiries preference"
-    },
-    "statusPlanningObligation": {
-      "type": ["string", "null"],
-      "description": "The planning obligation information, if available"
     },
     "nearbyCaseReferences": {
       "type": ["array", "null"],

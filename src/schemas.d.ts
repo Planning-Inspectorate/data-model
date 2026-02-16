@@ -3706,14 +3706,6 @@ export type AppellantS78SubmissionProperties = {
    * The number of witnesses in inquiries
    */
   appellantProcedurePreferenceWitnessCount?: number | null;
-  /**
-   * Indicates the existence of a planning obligation
-   */
-  planningObligation?: boolean | null;
-  /**
-   * The planning obligation information, if available
-   */
-  statusPlanningObligation?: string | null;
   developmentType?:
     | 'householder'
     | 'change-of-use'
@@ -3772,6 +3764,7 @@ export interface AppellantSubmissionCommand {
         SiteAreaProperties &
         AppealLandOwnershipProperties &
         AppellantS78SubmissionProperties &
+        PlanningObligationSpecificProperties &
         AppellantProcedurePreferenceProperties)
     | ({
         caseType?: 'ZA';
@@ -3796,6 +3789,7 @@ export interface AppellantSubmissionCommand {
       } & AppellantCommonSubmissionProperties &
         AppellantCommonPlanningProperties &
         AppellantProcedurePreferenceProperties &
+        PlanningObligationSpecificProperties &
         LDCSpecificProperties)
     | ({
         caseType?: 'F';
@@ -3985,6 +3979,20 @@ export interface SiteAreaProperties {
    * The floor space, in square meters
    */
   floorSpaceSquareMetres: number | null;
+  [k: string]: unknown;
+}
+/**
+ * Schema defining any properties for planning obligation
+ */
+export interface PlanningObligationSpecificProperties {
+  /**
+   * Indicates the existence of a planning obligation
+   */
+  planningObligation: boolean | null;
+  /**
+   * The planning obligation information, if available
+   */
+  statusPlanningObligation: 'finalised' | 'not_started' | null;
   [k: string]: unknown;
 }
 /**

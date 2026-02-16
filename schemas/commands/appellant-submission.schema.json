@@ -32,6 +32,7 @@
             { "$ref": "appeals-components/appeal-site-area.schema.json" },
             { "$ref": "appeals-components/appeal-land-ownership.schema.json" },
             { "$ref": "appeals-components/appeal-s78-submission.schema.json" },
+            { "$ref": "appeals-components/appeal-planning-obligation.submission.schema.json" },
             { "$ref": "appeals-components/appellant-procedure-preference.schema.json" }
           ]
         },
@@ -72,6 +73,7 @@
             { "$ref": "appeals-components/appeal-common-submission.schema.json" },
             { "$ref": "appeals-components/appeal-common-planning.schema.json" },
             { "$ref": "appeals-components/appellant-procedure-preference.schema.json" },
+            { "$ref": "appeals-components/appeal-planning-obligation.submission.schema.json" },
             { "$ref": "appeals-components/appeal-ldc.submission.schema.json" }
           ]
         },

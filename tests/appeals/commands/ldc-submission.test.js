@@ -63,6 +63,8 @@ const exampleLDCSubmissionSchema = {
 		appellantProcedurePreferenceDetails: 'eiusmod ex exercitation',
 		appellantProcedurePreferenceDuration: 10816414.941069126,
 		appellantProcedurePreferenceWitnessCount: -91300569.36444478,
+		planningObligation: true,
+		statusPlanningObligation: 'finalised',
 		siteUseAtTimeOfApplication: 'residential',
 		applicationMadeUnderActSection: 'existing-development'
 	},

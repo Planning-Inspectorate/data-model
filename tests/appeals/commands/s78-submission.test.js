@@ -71,8 +71,8 @@ const exampleS78SubmissionSchema = {
 		appellantProcedurePreferenceDetails: 'eiusmod ex exercitation',
 		appellantProcedurePreferenceDuration: 10816414.941069126,
 		appellantProcedurePreferenceWitnessCount: -91300569.36444478,
-		planningObligation: false,
-		statusPlanningObligation: 'proident aute',
+		planningObligation: true,
+		statusPlanningObligation: 'finalised',
 		developmentType: 'change-of-use'
 	},
 	documents: [document],

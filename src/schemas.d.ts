@@ -527,6 +527,10 @@ export type AppealHASCase = (GridReference | SiteAddress) & {
    */
   applicationDecisionDate: string | null;
   /**
+   * The date that an application decision is due
+   */
+  applicationDecisionDueDate?: string | null;
+  /**
    * The statutory deadline for submitting an appeal from the original LPA decision date
    */
   caseSubmissionDueDate: string | null;
@@ -685,7 +689,7 @@ export type AppealHASCase = (GridReference | SiteAddress) & {
   /**
    * The methods used to notify relevant parties
    */
-  notificationMethod: ('notice' | 'letter' | 'advert')[] | null;
+  notificationMethod: ('notice' | 'letter' | 'advert' | 'not_notified')[] | null;
   /**
    * Indicates if the appellant has informed other owners of the site
    */
@@ -1133,6 +1137,10 @@ export type AppealS78Case = (GridReference | SiteAddress) & {
    */
   applicationDecisionDate: string | null;
   /**
+   * The date that an application decision is due
+   */
+  applicationDecisionDueDate?: string | null;
+  /**
    * The statutory deadline for submitting an appeal from the original LPA decision date
    */
   caseSubmissionDueDate: string | null;
@@ -1207,7 +1215,7 @@ export type AppealS78Case = (GridReference | SiteAddress) & {
   /**
    * The methods used to notify relevant parties
    */
-  notificationMethod: ('notice' | 'letter' | 'advert')[] | null;
+  notificationMethod: ('notice' | 'letter' | 'advert' | 'not_notified')[] | null;
   /**
    * Indicates if the appellant has informed other owners of the site
    */
@@ -1458,6 +1466,10 @@ export type AppealS78Case = (GridReference | SiteAddress) & {
   proofsOfEvidenceDueDate: string | null;
   siteNoticesSentDate: string | null;
   statementDueDate: string | null;
+  /**
+   * The date of the Case Management Conference (CMC)
+   */
+  caseManagementConferenceDate?: string | null;
   /**
    * The net gain in residences of the proposed development
    */

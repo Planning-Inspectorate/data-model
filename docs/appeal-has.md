@@ -57,6 +57,7 @@ any of
 | [applicationDate](#applicationdate)                                                       | `string`  | Required | cannot be null | [Appeal HAS Case](appeal-has-properties-applicationdate.md "appeal-has.schema.json#/properties/applicationDate")                                                       |
 | [applicationDecision](#applicationdecision)                                               | `string`  | Required | cannot be null | [Appeal HAS Case](appeal-has-properties-applicationdecision.md "appeal-has.schema.json#/properties/applicationDecision")                                               |
 | [applicationDecisionDate](#applicationdecisiondate)                                       | `string`  | Required | can be null    | [Appeal HAS Case](appeal-has-properties-applicationdecisiondate.md "appeal-has.schema.json#/properties/applicationDecisionDate")                                       |
+| [applicationDecisionDueDate](#applicationdecisionduedate)                                 | `string`  | Optional | can be null    | [Appeal HAS Case](appeal-has-properties-applicationdecisionduedate.md "appeal-has.schema.json#/properties/applicationDecisionDueDate")                                 |
 | [caseSubmissionDueDate](#casesubmissionduedate)                                           | `string`  | Required | can be null    | [Appeal HAS Case](appeal-has-properties-casesubmissionduedate.md "appeal-has.schema.json#/properties/caseSubmissionDueDate")                                           |
 | [siteAddressLine1](#siteaddressline1)                                                     | `string`  | Optional | can be null    | [Appeal HAS Case](appeal-has-properties-siteaddressline1.md "appeal-has.schema.json#/properties/siteAddressLine1")                                                     |
 | [siteAddressLine2](#siteaddressline2)                                                     | `string`  | Optional | can be null    | [Appeal HAS Case](appeal-has-properties-siteaddressline2.md "appeal-has.schema.json#/properties/siteAddressLine2")                                                     |
@@ -1340,6 +1341,34 @@ The date of the original LPA decision
 **date time**: the string must be a date time string, according to [RFC 3339, section 5.6](https://tools.ietf.org/html/rfc3339 "check the specification")
 
 ### applicationDecisionDate Examples
+
+```json
+"2023-07-27T20:30:00.000Z"
+```
+
+## applicationDecisionDueDate
+
+The date that an application decision is due
+
+`applicationDecisionDueDate`
+
+* is optional
+
+* Type: `string`
+
+* can be null
+
+* defined in: [Appeal HAS Case](appeal-has-properties-applicationdecisionduedate.md "appeal-has.schema.json#/properties/applicationDecisionDueDate")
+
+### applicationDecisionDueDate Type
+
+`string`
+
+### applicationDecisionDueDate Constraints
+
+**date time**: the string must be a date time string, according to [RFC 3339, section 5.6](https://tools.ietf.org/html/rfc3339 "check the specification")
+
+### applicationDecisionDueDate Examples
 
 ```json
 "2023-07-27T20:30:00.000Z"

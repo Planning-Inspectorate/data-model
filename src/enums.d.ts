@@ -310,6 +310,7 @@ export const APPEAL_LPA_QUESTIONNAIRE_VALIDATION_OUTCOME = {
 export const APPEAL_NOTIFICATION_METHOD = {
   ADVERT: 'advert',
   LETTER: 'letter',
+  NOT_NOTIFIED: 'not_notified',
   NOTICE: 'notice',
 } as const;
 

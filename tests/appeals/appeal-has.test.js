@@ -58,6 +58,7 @@ const appealHas = {
 	applicationDate: '1949-08-25T15:11:02.0Z',
 	applicationDecision: 'refused',
 	applicationDecisionDate: '1952-08-09T01:03:51.0Z',
+	applicationDecisionDueDate: null,
 	caseSubmissionDueDate: '1942-02-09T21:03:07.0Z',
 	siteAddressLine1: 'ullamco',
 	siteAddressLine2: null,

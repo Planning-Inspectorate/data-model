@@ -81,6 +81,35 @@ function loadSchemaSync(filePath) {
 	return jsoncParser.parse(content.toString());
 }
 
+const APPEAL_HAS_CASE_DECISION_OUTCOME = Object.freeze({
+  ALLOWED: 'allowed',
+  DISMISSED: 'dismissed',
+  INVALID: 'invalid',
+  SPLIT_DECISION: 'split_decision',
+});
+
+const APPEAL_HAS_CASE_PROCEDURE = Object.freeze({
+  HEARING: 'hearing',
+  INQUIRY: 'inquiry',
+  WRITTEN: 'written',
+});
+
+const APPEAL_HAS_CASE_STATUS = Object.freeze({
+  ASSIGN_CASE_OFFICER: 'assign_case_officer',
+  AWAITING_EVENT: 'awaiting_event',
+  AWAITING_TRANSFER: 'awaiting_transfer',
+  CLOSED: 'closed',
+  COMPLETE: 'complete',
+  EVENT: 'event',
+  INVALID: 'invalid',
+  ISSUE_DETERMINATION: 'issue_determination',
+  LPA_QUESTIONNAIRE: 'lpa_questionnaire',
+  READY_TO_START: 'ready_to_start',
+  TRANSFERRED: 'transferred',
+  VALIDATION: 'validation',
+  WITHDRAWN: 'withdrawn',
+});
+
 const APPEAL_ALLOCATION_LEVEL = Object.freeze({
   A: 'A',
   B: 'B',
@@ -491,6 +520,11 @@ const METHOD = Object.freeze({
   POST: 'post',
 });
 
+const NSIP_PROJECT_SOURCE_SYSTEM = Object.freeze({
+  BACK_OFFICE_APPLICATIONS: 'back-office-applications',
+  HORIZON: 'horizon',
+});
+
 const NSIP_CA_AND_TP_EVIDENCE = Object.freeze({
   AWAITING_SUBMISSION: 'awaiting_submission',
   NOT_APPLICABLE: 'not_applicable',
@@ -736,8 +770,11 @@ const NSIP_SECURITY_CLASSIFICATION = Object.freeze({
 });
 
 const NSIP_SOURCE_SYSTEM = Object.freeze({
+  BACK_OFFICE_APPEALS: 'back-office-appeals',
   BACK_OFFICE_APPLICATIONS: 'back-office-applications',
   HORIZON: 'horizon',
+  NI_FILE: 'ni_file',
+  SHAREPOINT: 'sharepoint',
 });
 
 const NSIP_STAGE = Object.freeze({
@@ -875,6 +912,9 @@ exports.APPEAL_EIA_DEVELOPMENT_DESCRIPTION = APPEAL_EIA_DEVELOPMENT_DESCRIPTION;
 exports.APPEAL_EIA_ENVIRONMENTAL_IMPACT_SCHEDULE = APPEAL_EIA_ENVIRONMENTAL_IMPACT_SCHEDULE;
 exports.APPEAL_EVENT_STATUS = APPEAL_EVENT_STATUS;
 exports.APPEAL_EVENT_TYPE = APPEAL_EVENT_TYPE;
+exports.APPEAL_HAS_CASE_DECISION_OUTCOME = APPEAL_HAS_CASE_DECISION_OUTCOME;
+exports.APPEAL_HAS_CASE_PROCEDURE = APPEAL_HAS_CASE_PROCEDURE;
+exports.APPEAL_HAS_CASE_STATUS = APPEAL_HAS_CASE_STATUS;
 exports.APPEAL_INVALID_OR_INCOMPLETE_DETAILS = APPEAL_INVALID_OR_INCOMPLETE_DETAILS;
 exports.APPEAL_KNOWS_ALL_OWNERS = APPEAL_KNOWS_ALL_OWNERS;
 exports.APPEAL_KNOWS_OTHER_OWNERS = APPEAL_KNOWS_OTHER_OWNERS;
@@ -910,6 +950,7 @@ exports.NSIP_ORIGIN = NSIP_ORIGIN;
 exports.NSIP_PLANNING_INSPECTORATE_ROLE = NSIP_PLANNING_INSPECTORATE_ROLE;
 exports.NSIP_POLICY_COMPLIANCE_DOCUMENT = NSIP_POLICY_COMPLIANCE_DOCUMENT;
 exports.NSIP_PRINCIPAL_AREA_DISAGREEMENT_SUMMARY_STMT = NSIP_PRINCIPAL_AREA_DISAGREEMENT_SUMMARY_STMT;
+exports.NSIP_PROJECT_SOURCE_SYSTEM = NSIP_PROJECT_SOURCE_SYSTEM;
 exports.NSIP_PROJECT_TYPE = NSIP_PROJECT_TYPE;
 exports.NSIP_PUBLIC_SECTOR_EQUALITY_DUTY = NSIP_PUBLIC_SECTOR_EQUALITY_DUTY;
 exports.NSIP_PUBLISHED_STATUS = NSIP_PUBLISHED_STATUS;

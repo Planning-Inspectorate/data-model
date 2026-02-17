@@ -1,3 +1,32 @@
+export const APPEAL_HAS_CASE_DECISION_OUTCOME = Object.freeze({
+  ALLOWED: 'allowed',
+  DISMISSED: 'dismissed',
+  INVALID: 'invalid',
+  SPLIT_DECISION: 'split_decision',
+});
+
+export const APPEAL_HAS_CASE_PROCEDURE = Object.freeze({
+  HEARING: 'hearing',
+  INQUIRY: 'inquiry',
+  WRITTEN: 'written',
+});
+
+export const APPEAL_HAS_CASE_STATUS = Object.freeze({
+  ASSIGN_CASE_OFFICER: 'assign_case_officer',
+  AWAITING_EVENT: 'awaiting_event',
+  AWAITING_TRANSFER: 'awaiting_transfer',
+  CLOSED: 'closed',
+  COMPLETE: 'complete',
+  EVENT: 'event',
+  INVALID: 'invalid',
+  ISSUE_DETERMINATION: 'issue_determination',
+  LPA_QUESTIONNAIRE: 'lpa_questionnaire',
+  READY_TO_START: 'ready_to_start',
+  TRANSFERRED: 'transferred',
+  VALIDATION: 'validation',
+  WITHDRAWN: 'withdrawn',
+});
+
 export const APPEAL_ALLOCATION_LEVEL = Object.freeze({
   A: 'A',
   B: 'B',
@@ -408,6 +437,11 @@ export const METHOD = Object.freeze({
   POST: 'post',
 });
 
+export const NSIP_PROJECT_SOURCE_SYSTEM = Object.freeze({
+  BACK_OFFICE_APPLICATIONS: 'back-office-applications',
+  HORIZON: 'horizon',
+});
+
 export const NSIP_CA_AND_TP_EVIDENCE = Object.freeze({
   AWAITING_SUBMISSION: 'awaiting_submission',
   NOT_APPLICABLE: 'not_applicable',
@@ -653,8 +687,11 @@ export const NSIP_SECURITY_CLASSIFICATION = Object.freeze({
 });
 
 export const NSIP_SOURCE_SYSTEM = Object.freeze({
+  BACK_OFFICE_APPEALS: 'back-office-appeals',
   BACK_OFFICE_APPLICATIONS: 'back-office-applications',
   HORIZON: 'horizon',
+  NI_FILE: 'ni_file',
+  SHAREPOINT: 'sharepoint',
 });
 
 export const NSIP_STAGE = Object.freeze({

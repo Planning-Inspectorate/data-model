@@ -57,6 +57,7 @@ any of
 | [applicationDate](#applicationdate)                                                             | `string`  | Required | can be null    | [Appeal S78 Case](appeal-s78-properties-applicationdate.md "appeal-s78.schema.json#/properties/applicationDate")                                                             |
 | [applicationDecision](#applicationdecision)                                                     | `string`  | Required | can be null    | [Appeal S78 Case](appeal-s78-properties-applicationdecision.md "appeal-s78.schema.json#/properties/applicationDecision")                                                     |
 | [applicationDecisionDate](#applicationdecisiondate)                                             | `string`  | Required | can be null    | [Appeal S78 Case](appeal-s78-properties-applicationdecisiondate.md "appeal-s78.schema.json#/properties/applicationDecisionDate")                                             |
+| [applicationDecisionDueDate](#applicationdecisionduedate)                                       | `string`  | Optional | can be null    | [Appeal S78 Case](appeal-s78-properties-applicationdecisionduedate.md "appeal-s78.schema.json#/properties/applicationDecisionDueDate")                                       |
 | [caseSubmissionDueDate](#casesubmissionduedate)                                                 | `string`  | Required | can be null    | [Appeal S78 Case](appeal-s78-properties-casesubmissionduedate.md "appeal-s78.schema.json#/properties/caseSubmissionDueDate")                                                 |
 | [siteAddressLine1](#siteaddressline1)                                                           | `string`  | Optional | can be null    | [Appeal S78 Case](appeal-s78-properties-siteaddressline1.md "appeal-s78.schema.json#/properties/siteAddressLine1")                                                           |
 | [siteAddressLine2](#siteaddressline2)                                                           | `string`  | Optional | can be null    | [Appeal S78 Case](appeal-s78-properties-siteaddressline2.md "appeal-s78.schema.json#/properties/siteAddressLine2")                                                           |
@@ -142,6 +143,7 @@ any of
 | [proofsOfEvidenceDueDate](#proofsofevidenceduedate)                                             | `string`  | Required | can be null    | [Appeal S78 Case](appeal-s78-properties-proofsofevidenceduedate.md "appeal-s78.schema.json#/properties/proofsOfEvidenceDueDate")                                             |
 | [siteNoticesSentDate](#sitenoticessentdate)                                                     | `string`  | Required | can be null    | [Appeal S78 Case](appeal-s78-properties-sitenoticessentdate.md "appeal-s78.schema.json#/properties/siteNoticesSentDate")                                                     |
 | [statementDueDate](#statementduedate)                                                           | `string`  | Required | can be null    | [Appeal S78 Case](appeal-s78-properties-statementduedate.md "appeal-s78.schema.json#/properties/statementDueDate")                                                           |
+| [caseManagementConferenceDate](#casemanagementconferencedate)                                   | `string`  | Optional | can be null    | [Appeal S78 Case](appeal-s78-properties-casemanagementconferencedate.md "appeal-s78.schema.json#/properties/caseManagementConferenceDate")                                   |
 | [numberOfResidencesNetChange](#numberofresidencesnetchange)                                     | `number`  | Required | can be null    | [Appeal S78 Case](appeal-s78-properties-numberofresidencesnetchange.md "appeal-s78.schema.json#/properties/numberOfResidencesNetChange")                                     |
 | [siteGridReferenceEasting](#sitegridreferenceeasting)                                           | `string`  | Optional | can be null    | [Appeal S78 Case](appeal-s78-properties-sitegridreferenceeasting.md "appeal-s78.schema.json#/properties/siteGridReferenceEasting")                                           |
 | [siteGridReferenceNorthing](#sitegridreferencenorthing)                                         | `string`  | Optional | can be null    | [Appeal S78 Case](appeal-s78-properties-sitegridreferencenorthing.md "appeal-s78.schema.json#/properties/siteGridReferenceNorthing")                                         |
@@ -1509,6 +1511,36 @@ The date of the original LPA decision
 **date time**: the string must be a date time string, according to [RFC 3339, section 5.6](https://tools.ietf.org/html/rfc3339 "check the specification")
 
 ### applicationDecisionDate Examples
+
+```json
+"2023-07-27T20:30:00.000Z"
+```
+
+## applicationDecisionDueDate
+
+The date that an application decision is due
+
+> Also available on HAS cases
+
+`applicationDecisionDueDate`
+
+* is optional
+
+* Type: `string`
+
+* can be null
+
+* defined in: [Appeal S78 Case](appeal-s78-properties-applicationdecisionduedate.md "appeal-s78.schema.json#/properties/applicationDecisionDueDate")
+
+### applicationDecisionDueDate Type
+
+`string`
+
+### applicationDecisionDueDate Constraints
+
+**date time**: the string must be a date time string, according to [RFC 3339, section 5.6](https://tools.ietf.org/html/rfc3339 "check the specification")
+
+### applicationDecisionDueDate Examples
 
 ```json
 "2023-07-27T20:30:00.000Z"
@@ -3443,6 +3475,34 @@ The date of the cost report
 **date time**: the string must be a date time string, according to [RFC 3339, section 5.6](https://tools.ietf.org/html/rfc3339 "check the specification")
 
 ### statementDueDate Examples
+
+```json
+"2023-07-27T20:30:00.000Z"
+```
+
+## caseManagementConferenceDate
+
+The date of the Case Management Conference (CMC)
+
+`caseManagementConferenceDate`
+
+* is optional
+
+* Type: `string`
+
+* can be null
+
+* defined in: [Appeal S78 Case](appeal-s78-properties-casemanagementconferencedate.md "appeal-s78.schema.json#/properties/caseManagementConferenceDate")
+
+### caseManagementConferenceDate Type
+
+`string`
+
+### caseManagementConferenceDate Constraints
+
+**date time**: the string must be a date time string, according to [RFC 3339, section 5.6](https://tools.ietf.org/html/rfc3339 "check the specification")
+
+### caseManagementConferenceDate Examples
 
 ```json
 "2023-07-27T20:30:00.000Z"

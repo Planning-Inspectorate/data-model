@@ -393,6 +393,7 @@ const APPEAL_LPA_QUESTIONNAIRE_VALIDATION_OUTCOME = Object.freeze({
 const APPEAL_NOTIFICATION_METHOD = Object.freeze({
   ADVERT: 'advert',
   LETTER: 'letter',
+  NOT_NOTIFIED: 'not_notified',
   NOTICE: 'notice',
 });
 

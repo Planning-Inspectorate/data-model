@@ -491,6 +491,13 @@
       "description": "The date of the original LPA decision",
       "$comment": "Also available on HAS cases"
     },
+    "applicationDecisionDueDate": {
+      "type": ["string", "null"],
+      "format": "date-time",
+      "examples": ["2023-07-27T20:30:00.000Z"],
+      "description": "The date that an application decision is due",
+      "$comment": "Also available on HAS cases"
+    },
     "caseSubmissionDueDate": {
       "type": ["string", "null"],
       "format": "date-time",
@@ -603,7 +610,7 @@
       "type": ["array", "null"],
       "items": {
         "type": "string",
-        "enum": ["notice", "letter", "advert"]
+        "enum": ["notice", "letter", "advert", "not_notified"]
       },
       "examples": [["notice", "letter"], ["advert"]],
       "description": "The methods used to notify relevant parties",
@@ -988,6 +995,12 @@
       "type": ["string", "null"],
       "format": "date-time",
       "examples": ["2023-07-27T20:30:00.000Z"]
+    },
+    "caseManagementConferenceDate": {
+      "type": ["string", "null"],
+      "format": "date-time",
+      "examples": ["2023-07-27T20:30:00.000Z"],
+      "description": "The date of the Case Management Conference (CMC)"
     },
     "numberOfResidencesNetChange": {
       "type": ["number", "null"],

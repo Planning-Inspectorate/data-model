@@ -4613,7 +4613,7 @@ export type LPAQCasAdvertSubmissionProperties = {
   didAppellantSubmitCompletePhotosAndPlans?: boolean | null;
 };
 /**
- * Schema defining any enfrocement specific properties for LPAQ submissions
+ * Schema defining any common enforcement specific properties for LPAQ submissions
  */
 export type LPAQEnforcementSubmissionProperties = {
   noticeRelatesToBuildingEngineeringMiningOther?: boolean | null;
@@ -4635,6 +4635,11 @@ export type LPAQEnforcementSubmissionProperties = {
   relatesToErectionOfBuildingOrBuildings?: boolean | null;
   relatesToBuildingWithAgriculturalPurpose?: boolean | null;
   relatesToBuildingSingleDwellingHouse?: boolean | null;
+};
+/**
+ * Schema defining any enforcement specific properties for LPAQ submissions
+ */
+export type LPAQEnforcementSubmissionProperties1 = {
   /**
    * Name of trunk road within 67M of site
    */
@@ -4705,7 +4710,7 @@ export interface LPAQuestionnaireCommand {
         LPAProcedurePreferenceProperties &
         ChangedListedBuildingNumbersProperties)
     | ({
-        caseType?: 'C' | 'F';
+        caseType?: 'C';
       } & LPAQCommonSubmissionProperties &
         LPAQHASSubmissionProperties &
         LPAProcedurePreferenceProperties &
@@ -4713,13 +4718,25 @@ export interface LPAQuestionnaireCommand {
         InfrastructureLevyProperties &
         EnvironmentalImpactAssessmentProperties &
         SiteDesignationsAndProtectionSpecificProperties &
-        LPAQEnforcementSubmissionProperties)
+        LPAQEnforcementSubmissionProperties &
+        LPAQEnforcementSubmissionProperties1)
     | ({
         caseType?: 'X';
       } & LPAQCommonSubmissionProperties &
         LPAProcedurePreferenceProperties &
         InfrastructureLevyProperties &
-        LPAQLDCSubmissionProperties);
+        LPAQLDCSubmissionProperties)
+    | ({
+        caseType?: 'F';
+      } & LPAQCommonSubmissionProperties &
+        LPAQHASSubmissionProperties &
+        LPAProcedurePreferenceProperties &
+        ChangedListedBuildingNumbersProperties &
+        InfrastructureLevyProperties &
+        EnvironmentalImpactAssessmentProperties &
+        SiteDesignationsAndProtectionSpecificProperties &
+        LPAQEnforcementSubmissionProperties &
+        LPAQListedBuildingSubmissionProperties);
   documents: {
     /**
      * The unique identifier for the document

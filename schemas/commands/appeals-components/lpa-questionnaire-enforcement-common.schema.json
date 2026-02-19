@@ -1,0 +1,60 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "commands/appeals-components/lpa-questionnaire-enforcement-common.schema.json",
+  "title": "LPAQ Enforcement submission properties",
+  "description": "Schema defining any common enforcement specific properties for LPAQ submissions",
+  "type": "object",
+  "additionalProperties": true,
+  "required": [
+    "noticeRelatesToBuildingEngineeringMiningOther",
+    "siteAreaSquareMetres",
+    "changeOfUseRefuseOrWaste",
+    "changeOfUseMineralExtraction",
+    "changeOfUseMineralStorage",
+    "relatesToErectionOfBuildingOrBuildings",
+    "relatesToBuildingWithAgriculturalPurpose",
+    "relatesToBuildingSingleDwellingHouse"
+  ],
+  "allOf": [
+    {
+      "properties": {
+        "noticeRelatesToBuildingEngineeringMiningOther": {
+          "type": ["boolean", "null"]
+        },
+        "siteAreaSquareMetres": {
+          "type": ["number", "null"],
+          "examples": [45.7],
+          "description": "The site area, in square meters"
+        },
+        "areaOfAllegedBreachInSquareMetres": {
+          "type": ["number", "null"],
+          "examples": [45.7],
+          "description": "Area of the alleged breach, in square meters"
+        },
+        "floorSpaceCreatedByBreachInSquareMetres": {
+          "type": ["number", "null"],
+          "examples": [45.7],
+          "description": "Floor space created by the breach, in square meters"
+        },
+        "changeOfUseRefuseOrWaste": {
+          "type": ["boolean", "null"]
+        },
+        "changeOfUseMineralExtraction": {
+          "type": ["boolean", "null"]
+        },
+        "changeOfUseMineralStorage": {
+          "type": ["boolean", "null"]
+        },
+        "relatesToErectionOfBuildingOrBuildings": {
+          "type": ["boolean", "null"]
+        },
+        "relatesToBuildingWithAgriculturalPurpose": {
+          "type": ["boolean", "null"]
+        },
+        "relatesToBuildingSingleDwellingHouse": {
+          "type": ["boolean", "null"]
+        }
+      }
+    }
+  ]
+}

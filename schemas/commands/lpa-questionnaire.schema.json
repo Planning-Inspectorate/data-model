@@ -71,9 +71,9 @@
           ]
         },
         {
-          "$comment": "Enforcement + Enforcement listed building",
+          "$comment": "Enforcement",
           "allOf": [
-            { "properties": { "caseType": { "enum": ["C", "F"] } } },
+            { "properties": { "caseType": { "enum": ["C"] } } },
             { "$ref": "appeals-components/lpa-questionnaire-common.schema.json" },
             { "$ref": "appeals-components/lpa-questionnaire-has.schema.json" },
             { "$ref": "appeals-components/lpa-procedure-preference.schema.json" },
@@ -81,6 +81,7 @@
             { "$ref": "appeals-components/infrastructure-levy.schema.json" },
             { "$ref": "appeals-components/environmental-impact-assessment.schema.json" },
             { "$ref": "appeals-components/site-designations-protection.schema.json" },
+            { "$ref": "appeals-components/lpa-questionnaire-enforcement-common.schema.json" },
             { "$ref": "appeals-components/lpa-questionnaire-enforcement.schema.json" }
           ]
         },
@@ -92,6 +93,21 @@
             { "$ref": "appeals-components/lpa-procedure-preference.schema.json" },
             { "$ref": "appeals-components/infrastructure-levy.schema.json" },
             { "$ref": "appeals-components/lpa-questionnaire-ldc.schema.json" }
+          ]
+        },
+        {
+          "$comment": "Enforcement listed building",
+          "allOf": [
+            { "properties": { "caseType": { "enum": ["F"] } } },
+            { "$ref": "appeals-components/lpa-questionnaire-common.schema.json" },
+            { "$ref": "appeals-components/lpa-questionnaire-has.schema.json" },
+            { "$ref": "appeals-components/lpa-procedure-preference.schema.json" },
+            { "$ref": "appeals-components/changed-listed-building-number.schema.json" },
+            { "$ref": "appeals-components/infrastructure-levy.schema.json" },
+            { "$ref": "appeals-components/environmental-impact-assessment.schema.json" },
+            { "$ref": "appeals-components/site-designations-protection.schema.json" },
+            { "$ref": "appeals-components/lpa-questionnaire-enforcement-common.schema.json" },
+            { "$ref": "appeals-components/lpa-questionnaire-listed-building.schema.json" }
           ]
         }
       ]

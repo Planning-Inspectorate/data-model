@@ -71,9 +71,8 @@ const exampleEnforcementListedQuestionnaireSchema = {
 		relatesToErectionOfBuildingOrBuildings: null,
 		relatesToBuildingWithAgriculturalPurpose: null,
 		relatesToBuildingSingleDwellingHouse: null,
-		affectedTrunkRoadName: null,
-		isSiteOnCrownLand: null,
-		article4AffectedDevelopmentRights: null
+		preserveGrantLoan: null,
+		consultHistoricEngland: null
 	},
 	documents: [document]
 };

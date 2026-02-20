@@ -4,6 +4,7 @@ import url from 'url';
 import { loadAllSchemas } from '../index.js';
 import { compile } from 'json-schema-to-typescript';
 import { schemasPath, commandsPath } from '../index.js';
+import { generateName } from 'json-schema-to-typescript/dist/src/utils.js';
 
 const __dirname = path.dirname(url.fileURLToPath(import.meta.url));
 
@@ -20,7 +21,13 @@ async function run() {
 	const eventSchemas = await Promise.all(schemaKeys.map(eventSchemaToTypeString(s.schemas)));
 	const commandSchemas = await Promise.all(commandKeys.map(commandSchemaToTypeString(s.commands)));
 
-	const types = [...eventSchemas, ...commandSchemas].map((schemaTypes) => schemaTypes + '\n').join('');
+	const eventSchemaTypesList = schemaKeys.map(toTypeName(s.schemas, eventSchemas)).join(' |\n  ');
+	const commandSchemaTypesList = commandKeys.map(toTypeName(s.commands, commandSchemas)).join(' |\n  ');
+
+	let types = [...eventSchemas, ...commandSchemas].map((schemaTypes) => schemaTypes + '\n').join('');
+	types += `type EventSchemas = ${eventSchemaTypesList}\n\n`;
+	types += `type CommandSchemas = ${commandSchemaTypesList}\n\n`;
+	types += `type Schemas = EventSchemas | CommandSchemas\n`;
 
 	await fs.writeFile(typesPath, types);
 }
@@ -40,8 +47,19 @@ function commandSchemaToTypeString(schemas) {
 	};
 }
 
+function toTypeName(schemas, types) {
+	return (key, index) => {
+		const typeStr = types[index];
+		const schema = schemas[key];
+		const name = generateName(schema.title || schema['$id'], new Set());
+		if (!(typeStr.includes(`export interface ${name}`) || typeStr.includes(`export type ${name}`))) {
+			throw new Error(`${name} not found in type definition`);
+		}
+		return name;
+	};
+}
+
 /**
- *
  * @param {boolean} first
  * @param {string} [refPath]
  * @returns {Partial<import('json-schema-to-typescript').Options>}

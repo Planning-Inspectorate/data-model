@@ -5057,3 +5057,38 @@ export interface InterestedParty1 {
   [k: string]: unknown;
 }
 
+type EventSchemas = AppealDocument |
+  AppealEventEstimate |
+  AppealEvent |
+  AppealHASCase |
+  AppealRepresentation |
+  AppealS78Case |
+  DaRTAPIResponse |
+  EntraIDUserObjects |
+  Folder |
+  GetTimesheetsAPIResponse |
+  ListedBuilding |
+  ListedBuildings |
+  NSIPDocument |
+  ExaminationTimetable |
+  NSIPInvoice |
+  NSIPMeeting |
+  NSIPProjectUpdate |
+  NSIPProject |
+  Representation |
+  NsipSubscription |
+  PINSInspector |
+  PINSLPA |
+  S51Advice |
+  ServiceUser
+
+type CommandSchemas = AppealRepresentationSubmission |
+  AppellantSubmissionCommand |
+  InterestedParty |
+  LPAQuestionnaireCommand |
+  NewDeadlineSubmission |
+  NsipExamTimetableSubmission |
+  RegisterNsipSubscription |
+  RegisterRepresentation
+
+type Schemas = EventSchemas | CommandSchemas

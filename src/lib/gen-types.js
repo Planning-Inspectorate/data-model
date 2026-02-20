@@ -1,9 +1,8 @@
 import fs from 'fs/promises';
 import path from 'path';
 import url from 'url';
-import { loadAllSchemas } from '../index.js';
+import { commandsPath, loadAllSchemas, schemasPath } from '../index.js';
 import { compile } from 'json-schema-to-typescript';
-import { schemasPath, commandsPath } from '../index.js';
 
 const __dirname = path.dirname(url.fileURLToPath(import.meta.url));
 
@@ -14,42 +13,40 @@ export const typesPath = path.join(__dirname, '..', 'schemas.d.ts');
  */
 async function run() {
 	const s = await loadAllSchemas();
+	const schemaKeys = Object.keys(s.schemas).sort();
+	const commandKeys = Object.keys(s.commands).sort();
 
-	let types = '';
-	let first = true;
-
-	for (const schemaName of Object.keys(s.schemas).sort()) {
-		const schema = s.schemas[schemaName];
-		types += await compile(schema, schema['$id'], options(first));
-		types += '\n';
-		first = false;
+	/** @type {string[]} */
+	const typeDefinitions = [];
+	for (let i = 0; i < schemaKeys.length; i++) {
+		const schemaKey = schemaKeys[i];
+		const schema = s.schemas[schemaKey];
+		typeDefinitions.push(await compile(schema, schema['$id'], options(i === 0)));
 	}
 
-	for (const commandName of Object.keys(s.commands).sort()) {
-		const schema = s.commands[commandName];
-
-		if (
-			commandName.startsWith('appeal') ||
-			commandName.startsWith('appellant') ||
-			commandName.startsWith('lpa-questionnaire')
-		) {
-			// hack to allow nested $ref links to function in tests and gen types,
-			// can we leverage a better means to resolve $refs that aligns with how tests/appeals references this
-			types += await compile(schema, schema['$id'], options(first, commandsPath));
-		} else {
-			types += await compile(schema, schema['$id'], options(first));
-		}
-
-		types += '\n';
-		first = false;
+	for (const schemaKey of commandKeys) {
+		const schema = s.commands[schemaKey];
+		typeDefinitions.push(await commandSchemaToTypeString(schema, schemaKey));
 	}
+
+	const types = typeDefinitions.join('\n');
 
 	await fs.writeFile(typesPath, types);
 }
 
+function commandSchemaToTypeString(schema, name) {
+	let refPath;
+	// hack to allow nested $ref links to function in tests and gen types,
+	// can we leverage a better means to resolve $refs that aligns with how tests/appeals references this
+	if (['appeal', 'appellant', 'lpa-questionnaire'].some((prefix) => name.startsWith(prefix))) {
+		refPath = commandsPath;
+	}
+	return compile(schema, schema['$id'], options(false, refPath));
+}
+
 /**
- *
  * @param {boolean} first
+ * @param {string} [refPath]
  * @returns {Partial<import('json-schema-to-typescript').Options>}
  */
 function options(first, refPath = schemasPath) {

@@ -5,7 +5,14 @@
   "description": "Schema defining any enforcement specific properties for LPAQ submissions",
   "type": "object",
   "additionalProperties": true,
-  "required": ["affectedTrunkRoadName", "isSiteOnCrownLand", "article4AffectedDevelopmentRights"],
+  "required": [
+    "affectedTrunkRoadName",
+    "isSiteOnCrownLand",
+    "article4AffectedDevelopmentRights",
+    "changeOfUseRefuseOrWaste",
+    "changeOfUseMineralExtraction",
+    "changeOfUseMineralStorage"
+  ],
   "allOf": [
     {
       "properties": {
@@ -20,6 +27,15 @@
         "article4AffectedDevelopmentRights": {
           "type": ["string", "null"],
           "description": "What permitted develpoment rights are affected by the Article 4 Direction"
+        },
+        "changeOfUseRefuseOrWaste": {
+          "type": ["boolean", "null"]
+        },
+        "changeOfUseMineralExtraction": {
+          "type": ["boolean", "null"]
+        },
+        "changeOfUseMineralStorage": {
+          "type": ["boolean", "null"]
         }
       }
     }

@@ -18,16 +18,33 @@ async function run() {
 	const schemaKeys = Object.keys(s.schemas).sort();
 	const commandKeys = Object.keys(s.commands).sort();
 
-	const eventSchemas = await Promise.all(schemaKeys.map(eventSchemaToTypeString(s.schemas)));
-	const commandSchemas = await Promise.all(commandKeys.map(commandSchemaToTypeString(s.commands)));
+	const eventSchemasTypes = await Promise.all(schemaKeys.map(eventSchemaToTypeString(s.schemas)));
+	const commandSchemasTypes = await Promise.all(commandKeys.map(commandSchemaToTypeString(s.commands)));
 
-	const eventSchemaTypesList = schemaKeys.map(toTypeName(s.schemas, eventSchemas)).join(' |\n  ');
-	const commandSchemaTypesList = commandKeys.map(toTypeName(s.commands, commandSchemas)).join(' |\n  ');
+	const eventSchemaTypesList = schemaKeys.map(toTypeName(s.schemas, eventSchemasTypes));
+	const commandSchemaTypesList = commandKeys.map(toTypeName(s.commands, commandSchemasTypes));
+	const eventSchemaTypesMap = schemaKeys.reduce((acc, schemaKey, currentIndex) => {
+		acc[schemaKey] = eventSchemaTypesList[currentIndex];
+		return acc;
+	}, {});
+	const commandSchemaTypesMap = commandKeys.reduce((acc, schemaKey, currentIndex) => {
+		acc[schemaKey] = commandSchemaTypesList[currentIndex];
+		return acc;
+	}, {});
 
-	let types = [...eventSchemas, ...commandSchemas].map((schemaTypes) => schemaTypes + '\n').join('');
-	types += `type EventSchemas = ${eventSchemaTypesList}\n\n`;
-	types += `type CommandSchemas = ${commandSchemaTypesList}\n\n`;
-	types += `type Schemas = EventSchemas | CommandSchemas\n`;
+	let types = [...eventSchemasTypes, ...commandSchemasTypes].map((schemaTypes) => schemaTypes + '\n').join('');
+	types += `type EventSchemas = ${eventSchemaTypesList.join(' |\n  ')}\n\n`;
+	types += `type CommandSchemas = ${commandSchemaTypesList.join(' |\n  ')}\n\n`;
+	types += `type Schemas = EventSchemas | CommandSchemas\n\n`;
+	types += `export type LoadedSchemas = {\n  schemas: {\n    `;
+	types += Object.entries(eventSchemaTypesMap)
+		.map(([a, b]) => `'${a}': ${b};`)
+		.join('\n    ');
+	types += `\n  }\n  commands: {\n    `;
+	types += Object.entries(commandSchemaTypesMap)
+		.map(([a, b]) => `'${a}': ${b};`)
+		.join('\n    ');
+	types += `\n  }\n};\n`;
 
 	await fs.writeFile(typesPath, types);
 }

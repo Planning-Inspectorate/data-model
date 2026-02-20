@@ -5092,3 +5092,42 @@ type CommandSchemas = AppealRepresentationSubmission |
   RegisterRepresentation
 
 type Schemas = EventSchemas | CommandSchemas
+
+export type LoadedSchemas = {
+  schemas: {
+    'appeal-document.schema.json': AppealDocument;
+    'appeal-event-estimate.schema.json': AppealEventEstimate;
+    'appeal-event.schema.json': AppealEvent;
+    'appeal-has.schema.json': AppealHASCase;
+    'appeal-representation.schema.json': AppealRepresentation;
+    'appeal-s78.schema.json': AppealS78Case;
+    'dart-response.schema.json': DaRTAPIResponse;
+    'entraid.schema.json': EntraIDUserObjects;
+    'folder.schema.json': Folder;
+    'gettimesheets-response.schema.json': GetTimesheetsAPIResponse;
+    'listed-building.schema.json': ListedBuilding;
+    'listed-buildings.schema.json': ListedBuildings;
+    'nsip-document.schema.json': NSIPDocument;
+    'nsip-exam-timetable.schema.json': ExaminationTimetable;
+    'nsip-invoice.schema.json': NSIPInvoice;
+    'nsip-meeting.schema.json': NSIPMeeting;
+    'nsip-project-update.schema.json': NSIPProjectUpdate;
+    'nsip-project.schema.json': NSIPProject;
+    'nsip-representation.schema.json': Representation;
+    'nsip-subscription.schema.json': NsipSubscription;
+    'pins-inspector.schema.json': PINSInspector;
+    'pins-lpa.schema.json': PINSLPA;
+    's51-advice.schema.json': S51Advice;
+    'service-user.schema.json': ServiceUser;
+  }
+  commands: {
+    'appeal-representation-submission.schema.json': AppealRepresentationSubmission;
+    'appellant-submission.schema.json': AppellantSubmissionCommand;
+    'interested-party.schema.json': InterestedParty;
+    'lpa-questionnaire.schema.json': LPAQuestionnaireCommand;
+    'new-deadline-submission.schema.json': NewDeadlineSubmission;
+    'nsip-exam-timetable-submission.schema.json': NsipExamTimetableSubmission;
+    'register-nsip-subscription.schema.json': RegisterNsipSubscription;
+    'register-representation.schema.json': RegisterRepresentation;
+  }
+};

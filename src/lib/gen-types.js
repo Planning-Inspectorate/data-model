@@ -14,42 +14,36 @@ export const typesPath = path.join(__dirname, '..', 'schemas.d.ts');
  */
 async function run() {
 	const s = await loadAllSchemas();
+	const schemaKeys = Object.keys(s.schemas).sort();
+	const commandKeys = Object.keys(s.commands).sort();
 
-	let types = '';
-	let first = true;
+	const eventSchemas = await Promise.all(schemaKeys.map(eventSchemaToTypeString(s.schemas)));
+	const commandSchemas = await Promise.all(commandKeys.map(commandSchemaToTypeString(s.commands)));
 
-	for (const schemaName of Object.keys(s.schemas).sort()) {
-		const schema = s.schemas[schemaName];
-		types += await compile(schema, schema['$id'], options(first));
-		types += '\n';
-		first = false;
-	}
-
-	for (const commandName of Object.keys(s.commands).sort()) {
-		const schema = s.commands[commandName];
-
-		if (
-			commandName.startsWith('appeal') ||
-			commandName.startsWith('appellant') ||
-			commandName.startsWith('lpa-questionnaire')
-		) {
-			// hack to allow nested $ref links to function in tests and gen types,
-			// can we leverage a better means to resolve $refs that aligns with how tests/appeals references this
-			types += await compile(schema, schema['$id'], options(first, commandsPath));
-		} else {
-			types += await compile(schema, schema['$id'], options(first));
-		}
-
-		types += '\n';
-		first = false;
-	}
+	const types = [...eventSchemas, ...commandSchemas].map((schemaTypes) => schemaTypes + '\n').join('');
 
 	await fs.writeFile(typesPath, types);
+}
+
+function eventSchemaToTypeString(schemas) {
+	return (name, index) => compile(schemas[name], schemas[name]['$id'], options(index === 0));
+}
+
+function commandSchemaToTypeString(schemas) {
+	return (name) => {
+		const schema = schemas[name];
+		let refPath;
+		if (['appeal', 'appellant', 'lpa-questionnaire'].some((prefix) => name.startsWith(prefix))) {
+			refPath = commandsPath;
+		}
+		return compile(schema, schema['$id'], options(false, refPath));
+	};
 }
 
 /**
  *
  * @param {boolean} first
+ * @param {string} [refPath]
  * @returns {Partial<import('json-schema-to-typescript').Options>}
  */
 function options(first, refPath = schemasPath) {

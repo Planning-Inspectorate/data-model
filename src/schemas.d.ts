@@ -4615,7 +4615,7 @@ export type LPAQCasAdvertSubmissionProperties = {
 /**
  * Schema defining any common enforcement specific properties for LPAQ submissions
  */
-export type LPAQEnforcementSubmissionProperties = {
+export type LPAQEnforcementCommonSubmissionProperties = {
   noticeRelatesToBuildingEngineeringMiningOther?: boolean | null;
   /**
    * The site area, in square meters
@@ -4629,9 +4629,6 @@ export type LPAQEnforcementSubmissionProperties = {
    * Floor space created by the breach, in square meters
    */
   floorSpaceCreatedByBreachInSquareMetres?: number | null;
-  changeOfUseRefuseOrWaste?: boolean | null;
-  changeOfUseMineralExtraction?: boolean | null;
-  changeOfUseMineralStorage?: boolean | null;
   relatesToErectionOfBuildingOrBuildings?: boolean | null;
   relatesToBuildingWithAgriculturalPurpose?: boolean | null;
   relatesToBuildingSingleDwellingHouse?: boolean | null;
@@ -4639,7 +4636,7 @@ export type LPAQEnforcementSubmissionProperties = {
 /**
  * Schema defining any enforcement specific properties for LPAQ submissions
  */
-export type LPAQEnforcementSubmissionProperties1 = {
+export type LPAQEnforcementSubmissionProperties = {
   /**
    * Name of trunk road within 67M of site
    */
@@ -4649,6 +4646,9 @@ export type LPAQEnforcementSubmissionProperties1 = {
    * What permitted develpoment rights are affected by the Article 4 Direction
    */
   article4AffectedDevelopmentRights?: string | null;
+  changeOfUseRefuseOrWaste?: boolean | null;
+  changeOfUseMineralExtraction?: boolean | null;
+  changeOfUseMineralStorage?: boolean | null;
 };
 /**
  * Schema defining any LDC specific properties for LPAQ submissions
@@ -4718,8 +4718,8 @@ export interface LPAQuestionnaireCommand {
         InfrastructureLevyProperties &
         EnvironmentalImpactAssessmentProperties &
         SiteDesignationsAndProtectionSpecificProperties &
-        LPAQEnforcementSubmissionProperties &
-        LPAQEnforcementSubmissionProperties1)
+        LPAQEnforcementCommonSubmissionProperties &
+        LPAQEnforcementSubmissionProperties)
     | ({
         caseType?: 'X';
       } & LPAQCommonSubmissionProperties &
@@ -4735,7 +4735,7 @@ export interface LPAQuestionnaireCommand {
         InfrastructureLevyProperties &
         EnvironmentalImpactAssessmentProperties &
         SiteDesignationsAndProtectionSpecificProperties &
-        LPAQEnforcementSubmissionProperties &
+        LPAQEnforcementCommonSubmissionProperties &
         LPAQListedBuildingSubmissionProperties);
   documents: {
     /**

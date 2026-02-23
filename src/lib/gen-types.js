@@ -3,6 +3,7 @@ import path from 'path';
 import url from 'url';
 import { commandsPath, loadAllSchemas, schemasPath } from '../index.js';
 import { compile } from 'json-schema-to-typescript';
+import { generateName } from 'json-schema-to-typescript/dist/src/utils.js';
 
 const __dirname = path.dirname(url.fileURLToPath(import.meta.url));
 
@@ -18,18 +19,34 @@ async function run() {
 
 	/** @type {string[]} */
 	const typeDefinitions = [];
+	const typesMap = {
+		schemas: {},
+		commands: {}
+	};
+
 	for (let i = 0; i < schemaKeys.length; i++) {
 		const schemaKey = schemaKeys[i];
 		const schema = s.schemas[schemaKey];
 		typeDefinitions.push(await compile(schema, schema['$id'], options(i === 0)));
+		typesMap.schemas[schemaKey] = schemaTypeName(schema, typeDefinitions);
 	}
 
 	for (const schemaKey of commandKeys) {
 		const schema = s.commands[schemaKey];
 		typeDefinitions.push(await commandSchemaToTypeString(schema, schemaKey));
+		typesMap.commands[schemaKey] = schemaTypeName(schema, typeDefinitions);
 	}
 
-	const types = typeDefinitions.join('\n');
+	let types = typeDefinitions.join('\n');
+	types += `\nexport type SchemaMap = {`;
+	for (const [k, map] of Object.entries(typesMap)) {
+		types += `\n  ${k}: {\n    `;
+		types += Object.entries(map)
+			.map(([a, b]) => `'${a}': ${b};`)
+			.join('\n    ');
+		types += `\n  }`;
+	}
+	types += `\n};\n`;
 
 	await fs.writeFile(typesPath, types);
 }
@@ -42,6 +59,22 @@ function commandSchemaToTypeString(schema, name) {
 		refPath = commandsPath;
 	}
 	return compile(schema, schema['$id'], options(false, refPath));
+}
+
+/**
+ * @param {any} schema
+ * @param {string[]} types
+ * @returns {string}
+ */
+function schemaTypeName(schema, types) {
+	const name = generateName(schema.title || schema['$id'], new Set());
+	// check the type name is in the generated types
+	if (
+		types.some((typeStr) => typeStr.includes(`export interface ${name}`) || typeStr.includes(`export type ${name}`))
+	) {
+		return name;
+	}
+	throw new Error(`${name} not found in type definition`);
 }
 
 /**

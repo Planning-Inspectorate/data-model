@@ -16,12 +16,14 @@ async function run() {
 	const s = await loadAllSchemas();
 	const schemaKeys = Object.keys(s.schemas).sort();
 	const commandKeys = Object.keys(s.commands).sort();
+	const appealsComponentKeys = Object.keys(s.appealsComponents).sort();
 
 	/** @type {string[]} */
 	const typeDefinitions = [];
 	const typesMap = {
 		schemas: {},
-		commands: {}
+		commands: {},
+		appealsComponents: {}
 	};
 
 	for (let i = 0; i < schemaKeys.length; i++) {
@@ -35,6 +37,12 @@ async function run() {
 		const schema = s.commands[schemaKey];
 		typeDefinitions.push(await commandSchemaToTypeString(schema, schemaKey));
 		typesMap.commands[schemaKey] = schemaTypeName(schema, typeDefinitions);
+	}
+
+	for (const schemaKey of appealsComponentKeys) {
+		const schema = s.appealsComponents[schemaKey];
+		// no need to generate types, will be included by the schemas and commands
+		typesMap.appealsComponents[schemaKey] = schemaTypeName(schema, typeDefinitions);
 	}
 
 	let types = typeDefinitions.join('\n');

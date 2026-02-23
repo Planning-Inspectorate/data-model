@@ -1,11 +1,7 @@
 import * as Schemas from './schemas.js';
 export * from './enums.js';
 
-export type LoadedSchemas = Schemas.SchemaMap & {
-	appealsComponents: {
-		[name: string]: any;
-	};
-};
+export type LoadedSchemas = Schemas.SchemaMap;
 
 export const schemasPath: string;
 export const commandsPath: string;

@@ -5094,4 +5094,31 @@ export type SchemaMap = {
     'register-nsip-subscription.schema.json': RegisterNsipSubscription;
     'register-representation.schema.json': RegisterRepresentation;
   }
+  appealsComponents: {
+    'appeal-advert.submission.schema.json': AdvertSpecificProperties;
+    'appeal-common-planning.schema.json': AppellantCommonPlanningProperties;
+    'appeal-common-submission.schema.json': AppellantCommonSubmissionProperties;
+    'appeal-enforcement-common-submission.schema.json': AppellantEnforcementCommonSubmissionProperties;
+    'appeal-enforcement-listed-submission.schema.json': AppellantEnforcementListedBuildingSubmissionProperties;
+    'appeal-enforcement-notice-submission.schema.json': AppellantEnforcementNoticeSpecificSubmissionProperties;
+    'appeal-land-ownership.schema.json': AppealLandOwnershipProperties;
+    'appeal-ldc.submission.schema.json': LDCSpecificProperties;
+    'appeal-planning-obligation.submission.schema.json': PlanningObligationSpecificProperties;
+    'appeal-s78-submission.schema.json': AppellantS78SubmissionProperties;
+    'appeal-site-area.schema.json': SiteAreaProperties;
+    'appellant-procedure-preference.schema.json': AppellantProcedurePreferenceProperties;
+    'changed-listed-building-number.schema.json': ChangedListedBuildingNumbersProperties;
+    'environmental-impact-assessment.schema.json': EnvironmentalImpactAssessmentProperties;
+    'infrastructure-levy.schema.json': InfrastructureLevyProperties;
+    'lpa-procedure-preference.schema.json': LPAProcedurePreferenceProperties;
+    'lpa-questionnaire-advert.schema.json': LPAQCasAdvertSubmissionProperties;
+    'lpa-questionnaire-common.schema.json': LPAQCommonSubmissionProperties;
+    'lpa-questionnaire-enforcement-common.schema.json': LPAQEnforcementCommonSubmissionProperties;
+    'lpa-questionnaire-enforcement.schema.json': LPAQEnforcementSubmissionProperties;
+    'lpa-questionnaire-has.schema.json': LPAQHASSubmissionProperties;
+    'lpa-questionnaire-ldc.schema.json': LPAQLDCSubmissionProperties;
+    'lpa-questionnaire-listed-building.schema.json': LPAQListedBuildingSubmissionProperties;
+    'lpa-questionnaire-s78.schema.json': LPAQS78SubmissionProperties;
+    'site-designations-protection.schema.json': SiteDesignationsAndProtectionSpecificProperties;
+  }
 };

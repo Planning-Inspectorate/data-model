@@ -9,6 +9,8 @@ const __dirname = path.dirname(url.fileURLToPath(import.meta.url));
 
 export const typesPath = path.join(__dirname, '..', 'schemas.d.ts');
 
+const schemaTypeNames = new Map();
+
 /**
  * Load all schemas and generate TypeScript definitions
  */
@@ -76,10 +78,16 @@ function commandSchemaToTypeString(schema, name) {
  */
 function schemaTypeName(schema, types) {
 	const name = generateName(schema.title || schema['$id'], new Set());
+	if (schemaTypeNames.has(name)) {
+		throw new Error(
+			`Schema with type name ${name} already exists (schemas ${schema['$id']}, ${schemaTypeNames.get(name)})\nEnsure schema title fields are unique and match the ID`
+		);
+	}
 	// check the type name is in the generated types
 	if (
 		types.some((typeStr) => typeStr.includes(`export interface ${name}`) || typeStr.includes(`export type ${name}`))
 	) {
+		schemaTypeNames.set(name, schema['$id']);
 		return name;
 	}
 	throw new Error(`${name} not found in type definition`);

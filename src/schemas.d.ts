@@ -2153,7 +2153,9 @@ export interface NSIPDocument {
     | 'not_redacted'
     | 'redacted'
     | 'awaiting_ai_redaction'
-    | 'ai_redaction_review_required'
+    | 'awaiting_ai_suggestions'
+    | 'ai_suggestions_reviewed'
+    | 'ai_suggestions_review_required'
     | 'ai_redaction_failed'
     | 'no_redaction_required'
     | null;

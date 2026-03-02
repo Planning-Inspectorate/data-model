@@ -628,8 +628,10 @@ export const NSIP_RECOMMENDATION = Object.freeze({
 
 export const NSIP_REDACTED_STATUS = Object.freeze({
   AI_REDACTION_FAILED: 'ai_redaction_failed',
-  AI_REDACTION_REVIEW_REQUIRED: 'ai_redaction_review_required',
+  AI_SUGGESTIONS_REVIEW_REQUIRED: 'ai_suggestions_review_required',
+  AI_SUGGESTIONS_REVIEWED: 'ai_suggestions_reviewed',
   AWAITING_AI_REDACTION: 'awaiting_ai_redaction',
+  AWAITING_AI_SUGGESTIONS: 'awaiting_ai_suggestions',
   NO_REDACTION_REQUIRED: 'no_redaction_required',
   NOT_REDACTED: 'not_redacted',
   REDACTED: 'redacted',

@@ -516,15 +516,17 @@ The location of the published document. Only applicable to documents which are p
 
 **enum**: the value of this property must be equal to one of the following values:
 
-| Value                            | Explanation |
-| :------------------------------- | :---------- |
-| `"not_redacted"`                 |             |
-| `"redacted"`                     |             |
-| `"awaiting_ai_redaction"`        |             |
-| `"ai_redaction_review_required"` |             |
-| `"ai_redaction_failed"`          |             |
-| `"no_redaction_required"`        |             |
-| `null`                           |             |
+| Value                              | Explanation |
+| :--------------------------------- | :---------- |
+| `"not_redacted"`                   |             |
+| `"redacted"`                       |             |
+| `"awaiting_ai_redaction"`          |             |
+| `"awaiting_ai_suggestions"`        |             |
+| `"ai_suggestions_reviewed"`        |             |
+| `"ai_suggestions_review_required"` |             |
+| `"ai_redaction_failed"`            |             |
+| `"no_redaction_required"`          |             |
+| `null`                             |             |
 
 ## publishedStatus
 

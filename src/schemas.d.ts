@@ -174,7 +174,6 @@ export interface AppealDocument {
     | 'groundISupporting'
     | 'groundJSupporting'
     | 'groundKSupporting'
-    | 'lpaEnforcementNoticeWithdrawal'
     | null;
   /**
    * The system mastering the metadata for the current document

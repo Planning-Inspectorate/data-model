@@ -207,6 +207,7 @@
         "planningPermission",
         "lpaEnforcementNotice",
         "lpaEnforcementNoticePlan",
+        "lpaEnforcementNoticeWithdrawal",
         "planningContraventionNotice",
         "priorCorrespondenceWithPINS",
         "enforcementNotice",
@@ -265,6 +266,7 @@
         "appeal-decision",
         "costs",
         "internal",
+        "cancellation",
         null
       ],
       "description": "The stage in the appeal process that has created the document",

@@ -607,6 +607,7 @@ The type of document, used for exchange, migrations and consumption from the app
 | `"planningPermission"`               |             |
 | `"lpaEnforcementNotice"`             |             |
 | `"lpaEnforcementNoticePlan"`         |             |
+| `"lpaEnforcementNoticeWithdrawal"`   |             |
 | `"planningContraventionNotice"`      |             |
 | `"priorCorrespondenceWithPINS"`      |             |
 | `"enforcementNotice"`                |             |
@@ -778,6 +779,7 @@ The stage in the appeal process that has created the document
 | `"appeal-decision"`      |             |
 | `"costs"`                |             |
 | `"internal"`             |             |
+| `"cancellation"`         |             |
 | `null`                   |             |
 
 ## horizonFolderId

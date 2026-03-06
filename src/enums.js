@@ -88,6 +88,7 @@ export const APPEAL_CASE_PROCEDURE = Object.freeze({
 export const APPEAL_CASE_STAGE = Object.freeze({
   APPEAL_DECISION: 'appeal-decision',
   APPELLANT_CASE: 'appellant-case',
+  CANCELLATION: 'cancellation',
   COSTS: 'costs',
   EVIDENCE: 'evidence',
   FINAL_COMMENTS: 'final-comments',
@@ -218,6 +219,7 @@ export const APPEAL_DOCUMENT_TYPE = Object.freeze({
   LPA_COSTS_WITHDRAWAL: 'lpaCostsWithdrawal',
   LPA_ENFORCEMENT_NOTICE: 'lpaEnforcementNotice',
   LPA_ENFORCEMENT_NOTICE_PLAN: 'lpaEnforcementNoticePlan',
+  LPA_ENFORCEMENT_NOTICE_WITHDRAWAL: 'lpaEnforcementNoticeWithdrawal',
   LPA_FINAL_COMMENT: 'lpaFinalComment',
   LPA_PROOF_OF_EVIDENCE: 'lpaProofOfEvidence',
   LPA_STATEMENT: 'lpaStatement',

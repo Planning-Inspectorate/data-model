@@ -155,6 +155,7 @@ export interface AppealDocument {
     | 'planningPermission'
     | 'lpaEnforcementNotice'
     | 'lpaEnforcementNoticePlan'
+    | 'lpaEnforcementNoticeWithdrawal'
     | 'planningContraventionNotice'
     | 'priorCorrespondenceWithPINS'
     | 'enforcementNotice'
@@ -209,6 +210,7 @@ export interface AppealDocument {
     | 'appeal-decision'
     | 'costs'
     | 'internal'
+    | 'cancellation'
     | null;
   /**
    * The folder ID containing the document in Horizon

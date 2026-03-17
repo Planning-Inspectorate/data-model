@@ -27,6 +27,19 @@ export const APPEAL_HAS_CASE_STATUS = {
   WITHDRAWN: 'withdrawn',
 } as const;
 
+export const APPEAL_HAS_TYPE_OF_PLANNING_APPLICATION = {
+  ADVERTISEMENT: 'advertisement',
+  FULL_APPEAL: 'full-appeal',
+  HOUSEHOLDER_PLANNING: 'householder-planning',
+  LAWFUL_DEVELOPMENT_CERTIFICATE: 'lawful-development-certificate',
+  LISTED_BUILDING: 'listed-building',
+  MINOR_COMMERCIAL_DEVELOPMENT: 'minor-commercial-development',
+  OUTLINE_PLANNING: 'outline-planning',
+  PRIOR_APPROVAL: 'prior-approval',
+  REMOVAL_OR_VARIATION_OF_CONDITIONS: 'removal-or-variation-of-conditions',
+  RESERVED_MATTERS: 'reserved-matters',
+} as const;
+
 export const APPEAL_ALLOCATION_LEVEL = {
   A: 'A',
   B: 'B',
@@ -161,6 +174,12 @@ export const APPEAL_DEVELOPMENT_TYPE = {
   OTHER_MINOR: 'other-minor',
 } as const;
 
+export const APPEAL_DISCONTINUANCE_NOTICE_SERVED_REASON = {
+  DANGER_TO_MEMBERS_OF_THE_PUBLIC: 'danger-to-members-of-the-public',
+  OTHER: 'other',
+  RISK_OF_INJURY_TO_THE_AMENITY_OF_LOCALITY: 'risk-of-injury-to-the-amenity-of-locality',
+} as const;
+
 export const APPEAL_DOCUMENT_TYPE = {
   APPEAL_NOTIFICATION: 'appealNotification',
   APPELLANT_CASE_CORRESPONDENCE: 'appellantCaseCorrespondence',
@@ -187,6 +206,7 @@ export const APPEAL_DOCUMENT_TYPE = {
   DELEGATED_REPORT: 'delegatedReport',
   DESIGN_ACCESS_STATEMENT: 'designAccessStatement',
   DEVELOPMENT_PLAN_POLICIES: 'developmentPlanPolicies',
+  DISCONTINUANCE_NOTICE: 'discontinuanceNotice',
   EIA_ENVIRONMENTAL_STATEMENT: 'eiaEnvironmentalStatement',
   EIA_SCOPING_OPINION: 'eiaScopingOpinion',
   EIA_SCREENING_DIRECTION: 'eiaScreeningDirection',
@@ -391,6 +411,7 @@ export const APPEAL_SOURCE_SYSTEM = {
 
 export const APPEAL_TYPE_OF_PLANNING_APPLICATION = {
   ADVERTISEMENT: 'advertisement',
+  DISCONTINUANCE_NOTICE: 'discontinuance-notice',
   FULL_APPEAL: 'full-appeal',
   HOUSEHOLDER_PLANNING: 'householder-planning',
   LAWFUL_DEVELOPMENT_CERTIFICATE: 'lawful-development-certificate',

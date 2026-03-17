@@ -151,6 +151,16 @@
       }
     }
   ],
+  "if": {
+    "properties": {
+      "discontinuanceNoticeServedReason": { "const": "other" }
+    }
+  },
+  "then": {
+    "properties": {
+      "discontinuanceNoticeServedOtherReason": { "type": "string", "minLength": 1 }
+    }
+  },
   "properties": {
     "caseId": {
       "type": ["integer", "null"],
@@ -1035,6 +1045,7 @@
         "minor-commercial-development",
         "advertisement",
         "lawful-development-certificate",
+        "discontinuance-notice",
         null
       ]
     },
@@ -1234,13 +1245,13 @@
     "issueDateOfEnforcementNotice": {
       "type": ["string", "null"],
       "format": "date-time",
-      "description": "The date on which an enforcement notice was issued",
+      "description": "The date on which an Enforcement Notice or Discontinuance Notice was issued",
       "examples": ["2023-07-27T20:30:00.000Z"]
     },
     "effectiveDateOfEnforcementNotice": {
       "type": ["string", "null"],
       "format": "date-time",
-      "description": "The effective date of an enforcement notice",
+      "description": "The effective date of an Enforcement Notice or Discontinuance Notice",
       "examples": ["2023-07-27T20:30:00.000Z"]
     },
     "didAppellantAppealLpaDecision": {
@@ -1329,6 +1340,17 @@
     "lpaAppealInvalidReasons": {
       "type": ["string", "null"],
       "description": "Reason(s) why LPA consider the appeal invalid"
+    },
+    "discontinuanceNoticeServedReason": {
+      "type": ["string", "null"],
+      "enum": ["risk-of-injury-to-the-amenity-of-locality", "danger-to-members-of-the-public", "other", null]
+    },
+    "discontinuanceNoticeServedOtherReason": {
+      "type": ["string", "null"],
+      "description": "Other reason for serving a discontinuance notice, for discontinuanceNoticeServedReason: other"
+    },
+    "wasRetrospectivePlanningApplicationMade": {
+      "type": ["boolean", "null"]
     }
   }
 }

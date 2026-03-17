@@ -175,6 +175,7 @@ export interface AppealDocument {
     | 'groundISupporting'
     | 'groundJSupporting'
     | 'groundKSupporting'
+    | 'discontinuanceNotice'
     | null;
   /**
    * The system mastering the metadata for the current document
@@ -1491,6 +1492,7 @@ export type AppealS78Case = (GridReference | SiteAddress) & {
     | 'minor-commercial-development'
     | 'advertisement'
     | 'lawful-development-certificate'
+    | 'discontinuance-notice'
     | null;
   developmentType:
     | 'householder'
@@ -1626,11 +1628,11 @@ export type AppealS78Case = (GridReference | SiteAddress) & {
    */
   previousPlanningPermissionGranted?: boolean | null;
   /**
-   * The date on which an enforcement notice was issued
+   * The date on which an Enforcement Notice or Discontinuance Notice was issued
    */
   issueDateOfEnforcementNotice?: string | null;
   /**
-   * The effective date of an enforcement notice
+   * The effective date of an Enforcement Notice or Discontinuance Notice
    */
   effectiveDateOfEnforcementNotice?: string | null;
   /**
@@ -1691,6 +1693,16 @@ export type AppealS78Case = (GridReference | SiteAddress) & {
    * Reason(s) why LPA consider the appeal invalid
    */
   lpaAppealInvalidReasons?: string | null;
+  discontinuanceNoticeServedReason?:
+    | 'risk-of-injury-to-the-amenity-of-locality'
+    | 'danger-to-members-of-the-public'
+    | 'other'
+    | null;
+  /**
+   * Other reason for serving a discontinuance notice, for discontinuanceNoticeServedReason: other
+   */
+  discontinuanceNoticeServedOtherReason?: string | null;
+  wasRetrospectivePlanningApplicationMade?: boolean | null;
   [k: string]: unknown;
 };
 

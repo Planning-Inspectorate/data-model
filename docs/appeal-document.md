@@ -627,6 +627,7 @@ The type of document, used for exchange, migrations and consumption from the app
 | `"groundISupporting"`                |             |
 | `"groundJSupporting"`                |             |
 | `"groundKSupporting"`                |             |
+| `"discontinuanceNotice"`             |             |
 | `null`                               |             |
 
 ## sourceSystem

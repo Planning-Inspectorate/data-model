@@ -3000,7 +3000,7 @@ export interface Invoice {
   /**
    * Amount due
    */
-  amountDue: number;
+  amountDue: number | null;
   /**
    * Payment due date
    */

@@ -915,7 +915,7 @@
       "required": ["invoiceNumber", "amountDue"],
       "properties": {
         "invoiceStage": {
-          "type": ["string", "null"],
+          "type": "string",
           "description": "Invoice stage",
           "enum": ["pre_acceptance", "acceptance", "pre_examination", "initial_examination", "final_examination", null],
           "examples": ["pre_acceptance"]
@@ -926,7 +926,7 @@
           "examples": ["1800004419"]
         },
         "amountDue": {
-          "type": "number",
+          "type": ["number", "null"],
           "description": "Amount due",
           "examples": [500]
         },

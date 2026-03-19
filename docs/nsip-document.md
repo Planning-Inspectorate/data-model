@@ -672,6 +672,7 @@ The location of the published document. Only applicable to documents which are p
 | :--------------------------- | :---------- |
 | `"back-office-appeals"`      |             |
 | `"back-office-applications"` |             |
+| `"dco-portal"`               |             |
 | `"horizon"`                  |             |
 | `"ni_file"`                  |             |
 | `"sharepoint"`               |             |

@@ -2176,7 +2176,14 @@ export interface NSIPDocument {
   datePublished: string | null;
   documentType: string | null;
   securityClassification: 'public' | 'official' | 'secret' | 'top-secret' | null;
-  sourceSystem: 'back-office-appeals' | 'back-office-applications' | 'horizon' | 'ni_file' | 'sharepoint' | null;
+  sourceSystem:
+    | 'back-office-appeals'
+    | 'back-office-applications'
+    | 'dco-portal'
+    | 'horizon'
+    | 'ni_file'
+    | 'sharepoint'
+    | null;
   origin: 'pins' | 'citizen' | 'lpa' | 'ogd' | null;
   owner: string | null;
   /**

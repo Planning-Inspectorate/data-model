@@ -3783,9 +3783,9 @@ Reference this group by using
 
 | Property                                          | Type     | Required | Nullable       | Defined by                                                                                                                                                 |
 | :------------------------------------------------ | :------- | :------- | :------------- | :--------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [invoiceStage](#invoicestage)                     | `string` | Optional | can be null    | [NSIP Project](nsip-project-defs-invoice-properties-invoicestage.md "nsip-project.schema.json#/$defs/invoice/properties/invoiceStage")                     |
+| [invoiceStage](#invoicestage)                     | `string` | Required | cannot be null | [NSIP Project](nsip-project-defs-invoice-properties-invoicestage.md "nsip-project.schema.json#/$defs/invoice/properties/invoiceStage")                     |
 | [invoiceNumber](#invoicenumber)                   | `string` | Required | cannot be null | [NSIP Project](nsip-project-defs-invoice-properties-invoicenumber.md "nsip-project.schema.json#/$defs/invoice/properties/invoiceNumber")                   |
-| [amountDue](#amountdue)                           | `number` | Required | cannot be null | [NSIP Project](nsip-project-defs-invoice-properties-amountdue.md "nsip-project.schema.json#/$defs/invoice/properties/amountDue")                           |
+| [amountDue](#amountdue)                           | `number` | Optional | can be null    | [NSIP Project](nsip-project-defs-invoice-properties-amountdue.md "nsip-project.schema.json#/$defs/invoice/properties/amountDue")                           |
 | [paymentDueDate](#paymentduedate)                 | `string` | Optional | can be null    | [NSIP Project](nsip-project-defs-invoice-properties-paymentduedate.md "nsip-project.schema.json#/$defs/invoice/properties/paymentDueDate")                 |
 | [invoicedDate](#invoiceddate)                     | `string` | Optional | can be null    | [NSIP Project](nsip-project-defs-invoice-properties-invoiceddate.md "nsip-project.schema.json#/$defs/invoice/properties/invoicedDate")                     |
 | [paymentDate](#paymentdate)                       | `string` | Optional | can be null    | [NSIP Project](nsip-project-defs-invoice-properties-paymentdate.md "nsip-project.schema.json#/$defs/invoice/properties/paymentDate")                       |
@@ -3800,11 +3800,11 @@ Invoice stage
 
 `invoiceStage`
 
-* is optional
+* is required
 
 * Type: `string`
 
-* can be null
+* cannot be null
 
 * defined in: [NSIP Project](nsip-project-defs-invoice-properties-invoicestage.md "nsip-project.schema.json#/$defs/invoice/properties/invoiceStage")
 
@@ -3823,7 +3823,6 @@ Invoice stage
 | `"pre_examination"`     |             |
 | `"initial_examination"` |             |
 | `"final_examination"`   |             |
-| `null`                  |             |
 
 #### invoiceStage Examples
 
@@ -3861,11 +3860,11 @@ Amount due
 
 `amountDue`
 
-* is required
+* is optional
 
 * Type: `number`
 
-* cannot be null
+* can be null
 
 * defined in: [NSIP Project](nsip-project-defs-invoice-properties-amountdue.md "nsip-project.schema.json#/$defs/invoice/properties/amountDue")
 

@@ -2986,13 +2986,7 @@ export interface Invoice {
   /**
    * Invoice stage
    */
-  invoiceStage?:
-    | 'pre_acceptance'
-    | 'acceptance'
-    | 'pre_examination'
-    | 'initial_examination'
-    | 'final_examination'
-    | null;
+  invoiceStage: 'pre_acceptance' | 'acceptance' | 'pre_examination' | 'initial_examination' | 'final_examination';
   /**
    * Invoice number
    */
@@ -3000,7 +2994,7 @@ export interface Invoice {
   /**
    * Amount due
    */
-  amountDue: number;
+  amountDue?: number | null;
   /**
    * Payment due date
    */

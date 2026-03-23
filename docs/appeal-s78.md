@@ -200,6 +200,9 @@ any of
 | [appealUnderActSection](#appealunderactsection)                                                 | `string`  | Optional | can be null    | [Appeal S78 Case](appeal-s78-properties-appealunderactsection.md "appeal-s78.schema.json#/properties/appealUnderActSection")                                                 |
 | [lpaConsiderAppealInvalid](#lpaconsiderappealinvalid)                                           | `boolean` | Optional | can be null    | [Appeal S78 Case](appeal-s78-properties-lpaconsiderappealinvalid.md "appeal-s78.schema.json#/properties/lpaConsiderAppealInvalid")                                           |
 | [lpaAppealInvalidReasons](#lpaappealinvalidreasons)                                             | `string`  | Optional | can be null    | [Appeal S78 Case](appeal-s78-properties-lpaappealinvalidreasons.md "appeal-s78.schema.json#/properties/lpaAppealInvalidReasons")                                             |
+| [discontinuanceNoticeServedReason](#discontinuancenoticeservedreason)                           | `string`  | Optional | can be null    | [Appeal S78 Case](appeal-s78-properties-discontinuancenoticeservedreason.md "appeal-s78.schema.json#/properties/discontinuanceNoticeServedReason")                           |
+| [discontinuanceNoticeServedOtherReason](#discontinuancenoticeservedotherreason)                 | `string`  | Optional | can be null    | [Appeal S78 Case](appeal-s78-properties-discontinuancenoticeservedotherreason.md "appeal-s78.schema.json#/properties/discontinuanceNoticeServedOtherReason")                 |
+| [wasRetrospectivePlanningApplicationMade](#wasretrospectiveplanningapplicationmade)             | `boolean` | Optional | can be null    | [Appeal S78 Case](appeal-s78-properties-wasretrospectiveplanningapplicationmade.md "appeal-s78.schema.json#/properties/wasRetrospectivePlanningApplicationMade")             |
 | Additional Properties                                                                           | Any       | Optional | can be null    |                                                                                                                                                                              |
 
 ## caseId
@@ -3664,6 +3667,7 @@ The net gain in residences of the proposed development
 | `"minor-commercial-development"`       |             |
 | `"advertisement"`                      |             |
 | `"lawful-development-certificate"`     |             |
+| `"discontinuance-notice"`              |             |
 | `null`                                 |             |
 
 ## developmentType
@@ -4205,7 +4209,7 @@ Was planning permission granted in relation to a prior application
 
 ## issueDateOfEnforcementNotice
 
-The date on which an enforcement notice was issued
+The date on which an Enforcement Notice or Discontinuance Notice was issued
 
 `issueDateOfEnforcementNotice`
 
@@ -4233,7 +4237,7 @@ The date on which an enforcement notice was issued
 
 ## effectiveDateOfEnforcementNotice
 
-The effective date of an enforcement notice
+The effective date of an Enforcement Notice or Discontinuance Notice
 
 `effectiveDateOfEnforcementNotice`
 
@@ -4736,6 +4740,71 @@ Reason(s) why LPA consider the appeal invalid
 ### lpaAppealInvalidReasons Type
 
 `string`
+
+## discontinuanceNoticeServedReason
+
+
+
+`discontinuanceNoticeServedReason`
+
+* is optional
+
+* Type: `string`
+
+* can be null
+
+* defined in: [Appeal S78 Case](appeal-s78-properties-discontinuancenoticeservedreason.md "appeal-s78.schema.json#/properties/discontinuanceNoticeServedReason")
+
+### discontinuanceNoticeServedReason Type
+
+`string`
+
+### discontinuanceNoticeServedReason Constraints
+
+**enum**: the value of this property must be equal to one of the following values:
+
+| Value                                         | Explanation |
+| :-------------------------------------------- | :---------- |
+| `"risk-of-injury-to-the-amenity-of-locality"` |             |
+| `"danger-to-members-of-the-public"`           |             |
+| `"other"`                                     |             |
+| `null`                                        |             |
+
+## discontinuanceNoticeServedOtherReason
+
+Other reason for serving a discontinuance notice, for discontinuanceNoticeServedReason: other
+
+`discontinuanceNoticeServedOtherReason`
+
+* is optional
+
+* Type: `string`
+
+* can be null
+
+* defined in: [Appeal S78 Case](appeal-s78-properties-discontinuancenoticeservedotherreason.md "appeal-s78.schema.json#/properties/discontinuanceNoticeServedOtherReason")
+
+### discontinuanceNoticeServedOtherReason Type
+
+`string`
+
+## wasRetrospectivePlanningApplicationMade
+
+
+
+`wasRetrospectivePlanningApplicationMade`
+
+* is optional
+
+* Type: `boolean`
+
+* can be null
+
+* defined in: [Appeal S78 Case](appeal-s78-properties-wasretrospectiveplanningapplicationmade.md "appeal-s78.schema.json#/properties/wasRetrospectivePlanningApplicationMade")
+
+### wasRetrospectivePlanningApplicationMade Type
+
+`boolean`
 
 ## Additional Properties
 

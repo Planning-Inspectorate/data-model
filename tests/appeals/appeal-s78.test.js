@@ -247,7 +247,27 @@ describe(schema, () => {
 		assert.strictEqual(validationResult, false);
 	});
 
-	const groupBAppealTypes = ['C', 'F', 'H', 'W', 'X', 'Y', 'Z'];
+	it('should enforce other for discontinuanceNoticeServedReason', () => {
+		const test = structuredClone(appealS78);
+		test.discontinuanceNoticeServedReason = 'other';
+		test.discontinuanceNoticeServedOtherReason = '';
+		const validationResult = ajv.validate(schema, test);
+		assert.strictEqual(validationResult, false);
+
+		test.discontinuanceNoticeServedOtherReason = null;
+		const validationResult2 = ajv.validate(schema, test);
+		assert.strictEqual(validationResult2, false);
+	});
+
+	it('should allow no reason for non other discontinuanceNoticeServedOtherReason', () => {
+		const test = structuredClone(appealS78);
+		test.discontinuanceNoticeServedReason = 'danger-to-members-of-the-public';
+		test.discontinuanceNoticeServedOtherReason = null;
+		const validationResult = ajv.validate(schema, test);
+		assert.strictEqual(validationResult, true);
+	});
+
+	const groupBAppealTypes = ['C', 'F', 'G', 'H', 'W', 'X', 'Y', 'Z'];
 	groupBAppealTypes.forEach((appealType) => {
 		it(`should support group B appeal type ${appealType}`, () => {
 			const test = structuredClone(appealS78);

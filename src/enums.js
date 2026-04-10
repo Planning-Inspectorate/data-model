@@ -96,6 +96,7 @@ export const APPEAL_CASE_PROCEDURE = Object.freeze({
   INQUIRY: 'inquiry',
   WRITTEN: 'written',
   WRITTEN_PART_1: 'writtenPart1',
+  WRITTEN_PART_2: 'writtenPart2',
 });
 
 export const APPEAL_CASE_STAGE = Object.freeze({
@@ -208,6 +209,7 @@ export const APPEAL_DOCUMENT_TYPE = Object.freeze({
   DEVELOPMENT_PLAN_POLICIES: 'developmentPlanPolicies',
   DISCONTINUANCE_NOTICE: 'discontinuanceNotice',
   EIA_ENVIRONMENTAL_STATEMENT: 'eiaEnvironmentalStatement',
+  EIA_ENVIRONMENTAL_STATEMENT_APPELLANT: 'eiaEnvironmentalStatementAppellant',
   EIA_SCOPING_OPINION: 'eiaScopingOpinion',
   EIA_SCREENING_DIRECTION: 'eiaScreeningDirection',
   EIA_SCREENING_OPINION: 'eiaScreeningOpinion',
@@ -251,6 +253,7 @@ export const APPEAL_DOCUMENT_TYPE = Object.freeze({
   OTHER_PARTY_REPRESENTATIONS: 'otherPartyRepresentations',
   OTHER_RELEVANT_MATTERS: 'otherRelevantMatters',
   OTHER_RELEVANT_POLICIES: 'otherRelevantPolicies',
+  OTHER_SUPPORTING_INFORMATION_APPELLANT: 'otherSupportingInformationAppellant',
   OWNERSHIP_CERTIFICATE: 'ownershipCertificate',
   PLAN_SHOWING_EXTENT_OF_ORDER: 'planShowingExtentOfOrder',
   PLANNING_CONTRAVENTION_NOTICE: 'planningContraventionNotice',

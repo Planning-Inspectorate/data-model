@@ -118,14 +118,10 @@
     "appellantCommentsSubmittedDate",
     "appellantStatementSubmittedDate",
     "appellantProofsSubmittedDate",
-    "finalCommentsDueDate",
-    "interestedPartyRepsDueDate",
     "lpaCommentsSubmittedDate",
     "lpaProofsSubmittedDate",
     "lpaStatementSubmittedDate",
-    "proofsOfEvidenceDueDate",
     "siteNoticesSentDate",
-    "statementDueDate",
     "reasonForNeighbourVisits",
     "numberOfResidencesNetChange",
     "siteViewableFromRoad",
@@ -213,7 +209,7 @@
     },
     "caseProcedure": {
       "type": ["string", "null"],
-      "enum": ["written", "hearing", "inquiry", "writtenPart1", null],
+      "enum": ["written", "hearing", "inquiry", "writtenPart1", "writtenPart2", null],
       "description": "The type of procedure for the appeal",
       "$comment": "Also available on HAS cases"
     },
@@ -1351,6 +1347,53 @@
     },
     "wasRetrospectivePlanningApplicationMade": {
       "type": ["boolean", "null"]
+    },
+    "reasonForAppealAppellant": {
+      "type": ["string", "null"],
+      "maxLength": 250,
+      "description": "Reason for appeal as provided by the appellant (Expedited Appeals)"
+    },
+    "screeningOpinionIndicatesEiaRequired": {
+      "type": ["boolean", "null"],
+      "description": "Indicates if the screening opinion specifies that an EIA is required (Expedited Appeals)"
+    },
+    "significantChangesAffectingApplicationAppellant": {
+      "type": ["array", "null"],
+      "items": {
+        "type": "object",
+        "properties": {
+          "value": {
+            "$ref": "#/definitions/SignificantChangesAffectingApplication"
+          },
+          "comment": {
+            "type": ["string", "null"]
+          }
+        },
+        "required": ["value"]
+      },
+      "description": "Significant changes affecting the application as reported by the appellant (Expedited Appeals)"
+    },
+    "significantChangesAffectingApplicationLpa": {
+      "type": ["array", "null"],
+      "items": {
+        "type": "object",
+        "properties": {
+          "value": {
+            "$ref": "#/definitions/SignificantChangesAffectingApplication"
+          },
+          "comment": {
+            "type": ["string", "null"]
+          }
+        },
+        "required": ["value"]
+      },
+      "description": "Significant changes affecting the application as reported by the LPA (Expedited Appeals)"
+    }
+  },
+  "definitions": {
+    "SignificantChangesAffectingApplication": {
+      "type": "string",
+      "enum": ["adopted-a-new-local-plan", "national-policy-change", "court-judgement", "other"]
     }
   }
 }

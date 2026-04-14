@@ -176,6 +176,8 @@ export interface AppealDocument {
     | 'groundJSupporting'
     | 'groundKSupporting'
     | 'discontinuanceNotice'
+    | 'otherSupportingInformationAppellant'
+    | 'eiaEnvironmentalStatementAppellant'
     | null;
   /**
    * The system mastering the metadata for the current document
@@ -973,7 +975,7 @@ export type AppealS78Case = (GridReference | SiteAddress) & {
   /**
    * The type of procedure for the appeal
    */
-  caseProcedure: 'written' | 'hearing' | 'inquiry' | 'writtenPart1' | null;
+  caseProcedure: 'written' | 'hearing' | 'inquiry' | 'writtenPart1' | 'writtenPart2' | null;
   /**
    * A unique identifier for the Local Planning Authority
    */
@@ -1461,14 +1463,14 @@ export type AppealS78Case = (GridReference | SiteAddress) & {
   appellantStatementDueDate?: string | null;
   appellantStatementSubmittedDate: string | null;
   appellantProofsSubmittedDate: string | null;
-  finalCommentsDueDate: string | null;
-  interestedPartyRepsDueDate: string | null;
+  finalCommentsDueDate?: string | null;
+  interestedPartyRepsDueDate?: string | null;
   lpaCommentsSubmittedDate: string | null;
   lpaProofsSubmittedDate: string | null;
   lpaStatementSubmittedDate: string | null;
-  proofsOfEvidenceDueDate: string | null;
+  proofsOfEvidenceDueDate?: string | null;
   siteNoticesSentDate: string | null;
-  statementDueDate: string | null;
+  statementDueDate?: string | null;
   /**
    * The date of the Case Management Conference (CMC)
    */
@@ -1703,8 +1705,39 @@ export type AppealS78Case = (GridReference | SiteAddress) & {
    */
   discontinuanceNoticeServedOtherReason?: string | null;
   wasRetrospectivePlanningApplicationMade?: boolean | null;
+  /**
+   * Reason for appeal as provided by the appellant (Expedited Appeals)
+   */
+  reasonForAppealAppellant?: string | null;
+  /**
+   * Indicates if the screening opinion specifies that an EIA is required (Expedited Appeals)
+   */
+  screeningOpinionIndicatesEiaRequired?: boolean | null;
+  /**
+   * Significant changes affecting the application as reported by the appellant (Expedited Appeals)
+   */
+  significantChangesAffectingApplicationAppellant?:
+    | {
+        value: SignificantChangesAffectingApplication;
+        comment?: string | null;
+      }[]
+    | null;
+  /**
+   * Significant changes affecting the application as reported by the LPA (Expedited Appeals)
+   */
+  significantChangesAffectingApplicationLpa?:
+    | {
+        value: SignificantChangesAffectingApplication;
+        comment?: string | null;
+      }[]
+    | null;
   [k: string]: unknown;
 };
+export type SignificantChangesAffectingApplication =
+  | 'adopted-a-new-local-plan'
+  | 'national-policy-change'
+  | 'court-judgement'
+  | 'other';
 
 export interface GridReference {
   siteGridReferenceEasting: string;
@@ -3889,7 +3922,8 @@ export interface AppellantSubmissionCommand {
       | 'groundKSupporting'
       | 'groundAFeeReceipt'
       | null
-      | 'environmentalAssessment';
+      | 'environmentalAssessment'
+      | 'eiaEnvironmentalStatement';
     [k: string]: unknown;
   }[];
   /**

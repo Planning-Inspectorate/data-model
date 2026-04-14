@@ -3923,7 +3923,8 @@ export interface AppellantSubmissionCommand {
       | 'groundAFeeReceipt'
       | null
       | 'environmentalAssessment'
-      | 'eiaEnvironmentalStatement';
+      | 'eiaEnvironmentalStatementAppellant'
+      | 'otherSupportingInformationAppellant';
     [k: string]: unknown;
   }[];
   /**

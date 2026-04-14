@@ -169,7 +169,8 @@
               "groundAFeeReceipt",
               null,
               "environmentalAssessment",
-              "eiaEnvironmentalStatement"
+              "eiaEnvironmentalStatementAppellant",
+              "otherSupportingInformationAppellant"
             ],
             "description": "The type of document, used for exchange, migrations and consumption from the appeal back-office system"
           }

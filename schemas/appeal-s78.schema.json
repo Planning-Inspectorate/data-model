@@ -1363,7 +1363,8 @@
         "type": "object",
         "properties": {
           "value": {
-            "$ref": "#/definitions/SignificantChangesAffectingApplication"
+            "$ref": "#/definitions/SignificantChangesAffectingApplication",
+            "type": "string"
           },
           "comment": {
             "type": ["string", "null"]
@@ -1379,7 +1380,8 @@
         "type": "object",
         "properties": {
           "value": {
-            "$ref": "#/definitions/SignificantChangesAffectingApplication"
+            "$ref": "#/definitions/SignificantChangesAffectingApplication",
+            "type": "string"
           },
           "comment": {
             "type": ["string", "null"]

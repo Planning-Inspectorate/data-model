@@ -1718,7 +1718,7 @@ export type AppealS78Case = (GridReference | SiteAddress) & {
    */
   significantChangesAffectingApplicationAppellant?:
     | {
-        value: SignificantChangesAffectingApplication;
+        value: 'adopted-a-new-local-plan' | 'national-policy-change' | 'court-judgement' | 'other';
         comment?: string | null;
       }[]
     | null;
@@ -1727,17 +1727,12 @@ export type AppealS78Case = (GridReference | SiteAddress) & {
    */
   significantChangesAffectingApplicationLpa?:
     | {
-        value: SignificantChangesAffectingApplication;
+        value: 'adopted-a-new-local-plan' | 'national-policy-change' | 'court-judgement' | 'other';
         comment?: string | null;
       }[]
     | null;
   [k: string]: unknown;
 };
-export type SignificantChangesAffectingApplication =
-  | 'adopted-a-new-local-plan'
-  | 'national-policy-change'
-  | 'court-judgement'
-  | 'other';
 
 export interface GridReference {
   siteGridReferenceEasting: string;

@@ -12,3 +12,4 @@
 | `"national-policy-change"`   |             |
 | `"court-judgement"`          |             |
 | `"other"`                    |             |
+| `null`                       |             |

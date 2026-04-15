@@ -4890,16 +4890,3 @@ Significant changes affecting the application as reported by the LPA (Expedited 
 ## Additional Properties
 
 Additional properties are allowed and do not have to follow a specific schema
-
-# Appeal S78 Case Definitions
-
-## Definitions group SignificantChangesAffectingApplication
-
-Reference this group by using
-
-```json
-{"$ref":"appeal-s78.schema.json#/definitions/SignificantChangesAffectingApplication"}
-```
-
-| Property | Type | Required | Nullable | Defined by |
-| :------- | :--- | :------- | :------- | :--------- |

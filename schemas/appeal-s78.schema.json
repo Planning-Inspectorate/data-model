@@ -1363,8 +1363,8 @@
         "type": "object",
         "properties": {
           "value": {
-            "$ref": "#/definitions/SignificantChangesAffectingApplication",
-            "type": ["string", "null"]
+            "type": ["string", "null"],
+            "enum": ["adopted-a-new-local-plan", "national-policy-change", "court-judgement", "other", null]
           },
           "comment": {
             "type": ["string", "null"]
@@ -1380,8 +1380,8 @@
         "type": "object",
         "properties": {
           "value": {
-            "$ref": "#/definitions/SignificantChangesAffectingApplication",
-            "type": ["string", "null"]
+            "type": ["string", "null"],
+            "enum": ["adopted-a-new-local-plan", "national-policy-change", "court-judgement", "other", null]
           },
           "comment": {
             "type": ["string", "null"]
@@ -1390,12 +1390,6 @@
         "required": ["value"]
       },
       "description": "Significant changes affecting the application as reported by the LPA (Expedited Appeals)"
-    }
-  },
-  "definitions": {
-    "SignificantChangesAffectingApplication": {
-      "type": ["string", "null"],
-      "enum": ["adopted-a-new-local-plan", "national-policy-change", "court-judgement", "other", null]
     }
   }
 }

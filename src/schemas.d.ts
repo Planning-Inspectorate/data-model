@@ -1718,7 +1718,7 @@ export type AppealS78Case = (GridReference | SiteAddress) & {
    */
   significantChangesAffectingApplicationAppellant?:
     | {
-        value: 'adopted-a-new-local-plan' | 'national-policy-change' | 'court-judgement' | 'other';
+        value: 'adopted-a-new-local-plan' | 'national-policy-change' | 'court-judgement' | 'other' | null;
         comment?: string | null;
       }[]
     | null;
@@ -1727,7 +1727,7 @@ export type AppealS78Case = (GridReference | SiteAddress) & {
    */
   significantChangesAffectingApplicationLpa?:
     | {
-        value: 'adopted-a-new-local-plan' | 'national-policy-change' | 'court-judgement' | 'other';
+        value: 'adopted-a-new-local-plan' | 'national-policy-change' | 'court-judgement' | 'other' | null;
         comment?: string | null;
       }[]
     | null;

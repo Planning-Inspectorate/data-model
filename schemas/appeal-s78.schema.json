@@ -1364,7 +1364,7 @@
         "properties": {
           "value": {
             "$ref": "#/definitions/SignificantChangesAffectingApplication",
-            "type": "string"
+            "type": ["string", "null"]
           },
           "comment": {
             "type": ["string", "null"]
@@ -1381,7 +1381,7 @@
         "properties": {
           "value": {
             "$ref": "#/definitions/SignificantChangesAffectingApplication",
-            "type": "string"
+            "type": ["string", "null"]
           },
           "comment": {
             "type": ["string", "null"]
@@ -1394,8 +1394,8 @@
   },
   "definitions": {
     "SignificantChangesAffectingApplication": {
-      "type": "string",
-      "enum": ["adopted-a-new-local-plan", "national-policy-change", "court-judgement", "other"]
+      "type": ["string", "null"],
+      "enum": ["adopted-a-new-local-plan", "national-policy-change", "court-judgement", "other", null]
     }
   }
 }

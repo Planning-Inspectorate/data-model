@@ -717,6 +717,7 @@ export const NSIP_SECURITY_CLASSIFICATION = Object.freeze({
 export const NSIP_SOURCE_SYSTEM = Object.freeze({
   BACK_OFFICE_APPEALS: 'back-office-appeals',
   BACK_OFFICE_APPLICATIONS: 'back-office-applications',
+  DCO_PORTAL: 'dco-portal',
   HORIZON: 'horizon',
   NI_FILE: 'ni_file',
   SHAREPOINT: 'sharepoint',

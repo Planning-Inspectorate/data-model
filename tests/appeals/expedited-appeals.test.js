@@ -183,13 +183,6 @@ describe('Expedited S78 Appeals', () => {
 		assert.strictEqual(validationResult, true);
 	});
 
-	it('should enforce maxLength for reasonForAppealAppellant', () => {
-		const test = structuredClone(expeditedAppealPayload);
-		test.reasonForAppealAppellant = 'a'.repeat(251);
-		const validationResult = ajv.validate(schema, test);
-		assert.strictEqual(validationResult, false);
-	});
-
 	it('should enforce enum for significantChangesAffectingApplication', () => {
 		const test = structuredClone(expeditedAppealPayload);
 		test.significantChangesAffectingApplicationAppellant = [{ value: 'invalid-enum-value', comment: 'some comment' }];

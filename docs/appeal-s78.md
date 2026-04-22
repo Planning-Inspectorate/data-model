@@ -4829,10 +4829,6 @@ Reason for appeal as provided by the appellant (Expedited Appeals)
 
 `string`
 
-### reasonForAppealAppellant Constraints
-
-**maximum length**: the maximum number of characters for this string is: `250`
-
 ## screeningOpinionIndicatesEiaRequired
 
 Indicates if the screening opinion specifies that an EIA is required (Expedited Appeals)

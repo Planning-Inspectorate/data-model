@@ -1350,7 +1350,6 @@
     },
     "reasonForAppealAppellant": {
       "type": ["string", "null"],
-      "maxLength": 250,
       "description": "Reason for appeal as provided by the appellant (Expedited Appeals)"
     },
     "screeningOpinionIndicatesEiaRequired": {

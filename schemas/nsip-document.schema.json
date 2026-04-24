@@ -154,6 +154,7 @@
         "unpublished",
         "unpublishing",
         "awaiting_upload",
+        "invalid",
         null
       ]
     },

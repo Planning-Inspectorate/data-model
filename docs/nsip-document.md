@@ -562,6 +562,7 @@ The location of the published document. Only applicable to documents which are p
 | `"unpublished"`      |             |
 | `"unpublishing"`     |             |
 | `"awaiting_upload"`  |             |
+| `"invalid"`          |             |
 | `null`               |             |
 
 ## datePublished

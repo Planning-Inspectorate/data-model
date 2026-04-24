@@ -721,6 +721,7 @@ const NSIP_PUBLISHED_STATUS = Object.freeze({
   AWAITING_UPLOAD: 'awaiting_upload',
   CHECKED: 'checked',
   DO_NOT_PUBLISH: 'do_not_publish',
+  INVALID: 'invalid',
   NOT_CHECKED: 'not_checked',
   PUBLISHED: 'published',
   PUBLISHING: 'publishing',

@@ -2212,6 +2212,7 @@ export interface NSIPDocument {
     | 'unpublished'
     | 'unpublishing'
     | 'awaiting_upload'
+    | 'invalid'
     | null;
   datePublished: string | null;
   documentType: string | null;

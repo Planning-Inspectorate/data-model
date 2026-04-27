@@ -797,6 +797,12 @@
       "description": "Additional comments",
       "examples": ["Very likely to change tier from standard to basic after April 2025"]
     },
+    "estimatedPrelimMeetingDate": {
+      "type": ["string", "null"],
+      "description": "Estimated Preliminary Meeting date",
+      "format": "date-time",
+      "examples": ["2023-07-27T20:30:00.000Z"]
+    },
     "operationsLeadIds": {
       "type": "array",
       "items": {
@@ -892,12 +898,6 @@
         "meetingDate": {
           "type": ["string", "null"],
           "description": "Meeting date",
-          "format": "date-time",
-          "examples": ["2023-07-27T20:30:00.000Z"]
-        },
-        "estimatedPrelimMeetingDate": {
-          "type": ["string", "null"],
-          "description": "Estimated Preliminary Meeting date",
           "format": "date-time",
           "examples": ["2023-07-27T20:30:00.000Z"]
         },

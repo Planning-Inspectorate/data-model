@@ -2421,10 +2421,6 @@ export interface NSIPMeeting {
    */
   meetingDate?: string | null;
   /**
-   * Estimated Preliminary Meeting date
-   */
-  estimatedPrelimMeetingDate?: string | null;
-  /**
    * Type of Meeting
    */
   meetingType?: 'evidence_plan' | 'project' | null;
@@ -2964,6 +2960,10 @@ export interface NSIPProject {
    */
   additionalComments?: string | null;
   /**
+   * Estimated Preliminary Meeting date
+   */
+  estimatedPrelimMeetingDate?: string | null;
+  /**
    * Maps to [Employee].[EmployeeID].
    */
   operationsLeadIds?: string[];
@@ -3017,10 +3017,6 @@ export interface Meeting {
    * Meeting date
    */
   meetingDate?: string | null;
-  /**
-   * Estimated Preliminary Meeting date
-   */
-  estimatedPrelimMeetingDate?: string | null;
   /**
    * Type of Meeting
    */

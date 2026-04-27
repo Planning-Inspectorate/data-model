@@ -128,6 +128,7 @@
 | [numberBand3Inspectors](#numberband3inspectors)                                                         | `number`      | Optional | can be null    | [NSIP Project](nsip-project-properties-numberband3inspectors.md "nsip-project.schema.json#/properties/numberBand3Inspectors")                                                         |
 | [memLastUpdated](#memlastupdated)                                                                       | `string`      | Optional | can be null    | [NSIP Project](nsip-project-properties-memlastupdated.md "nsip-project.schema.json#/properties/memLastUpdated")                                                                       |
 | [additionalComments](#additionalcomments)                                                               | `string`      | Optional | can be null    | [NSIP Project](nsip-project-properties-additionalcomments.md "nsip-project.schema.json#/properties/additionalComments")                                                               |
+| [estimatedPrelimMeetingDate](#estimatedprelimmeetingdate)                                               | `string`      | Optional | can be null    | [NSIP Project](nsip-project-properties-estimatedprelimmeetingdate.md "nsip-project.schema.json#/properties/estimatedPrelimMeetingDate")                                               |
 | [operationsLeadIds](#operationsleadids)                                                                 | `array`       | Optional | cannot be null | [NSIP Project](nsip-project-properties-operationsleadids.md "nsip-project.schema.json#/properties/operationsLeadIds")                                                                 |
 | [operationsManagerIds](#operationsmanagerids)                                                           | `array`       | Optional | cannot be null | [NSIP Project](nsip-project-properties-operationsmanagerids.md "nsip-project.schema.json#/properties/operationsManagerIds")                                                           |
 | [caseManagerIds](#casemanagerids)                                                                       | `array`       | Optional | cannot be null | [NSIP Project](nsip-project-properties-casemanagerids.md "nsip-project.schema.json#/properties/caseManagerIds")                                                                       |
@@ -3380,6 +3381,34 @@ Additional comments
 "Very likely to change tier from standard to basic after April 2025"
 ```
 
+## estimatedPrelimMeetingDate
+
+Estimated Preliminary Meeting date
+
+`estimatedPrelimMeetingDate`
+
+* is optional
+
+* Type: `string`
+
+* can be null
+
+* defined in: [NSIP Project](nsip-project-properties-estimatedprelimmeetingdate.md "nsip-project.schema.json#/properties/estimatedPrelimMeetingDate")
+
+### estimatedPrelimMeetingDate Type
+
+`string`
+
+### estimatedPrelimMeetingDate Constraints
+
+**date time**: the string must be a date time string, according to [RFC 3339, section 5.6](https://tools.ietf.org/html/rfc3339 "check the specification")
+
+### estimatedPrelimMeetingDate Examples
+
+```json
+"2023-07-27T20:30:00.000Z"
+```
+
 ## operationsLeadIds
 
 Maps to \[Employee].\[EmployeeID].
@@ -3592,15 +3621,14 @@ Reference this group by using
 {"$ref":"nsip-project.schema.json#/$defs/meeting"}
 ```
 
-| Property                                                  | Type      | Required | Nullable       | Defined by                                                                                                                                                         |
-| :-------------------------------------------------------- | :-------- | :------- | :------------- | :----------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [meetingId](#meetingid)                                   | `integer` | Required | cannot be null | [NSIP Project](nsip-project-defs-meeting-properties-meetingid.md "nsip-project.schema.json#/$defs/meeting/properties/meetingId")                                   |
-| [meetingAgenda](#meetingagenda)                           | `string`  | Optional | can be null    | [NSIP Project](nsip-project-defs-meeting-properties-meetingagenda.md "nsip-project.schema.json#/$defs/meeting/properties/meetingAgenda")                           |
-| [planningInspectorateRole](#planninginspectoraterole)     | `string`  | Optional | can be null    | [NSIP Project](nsip-project-defs-meeting-properties-planninginspectoraterole.md "nsip-project.schema.json#/$defs/meeting/properties/planningInspectorateRole")     |
-| [meetingDate](#meetingdate)                               | `string`  | Optional | can be null    | [NSIP Project](nsip-project-defs-meeting-properties-meetingdate.md "nsip-project.schema.json#/$defs/meeting/properties/meetingDate")                               |
-| [estimatedPrelimMeetingDate](#estimatedprelimmeetingdate) | `string`  | Optional | can be null    | [NSIP Project](nsip-project-defs-meeting-properties-estimatedprelimmeetingdate.md "nsip-project.schema.json#/$defs/meeting/properties/estimatedPrelimMeetingDate") |
-| [meetingType](#meetingtype)                               | `string`  | Optional | can be null    | [NSIP Project](nsip-project-defs-meeting-properties-meetingtype.md "nsip-project.schema.json#/$defs/meeting/properties/meetingType")                               |
-| Additional Properties                                     | Any       | Optional | can be null    |                                                                                                                                                                    |
+| Property                                              | Type      | Required | Nullable       | Defined by                                                                                                                                                     |
+| :---------------------------------------------------- | :-------- | :------- | :------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [meetingId](#meetingid)                               | `integer` | Required | cannot be null | [NSIP Project](nsip-project-defs-meeting-properties-meetingid.md "nsip-project.schema.json#/$defs/meeting/properties/meetingId")                               |
+| [meetingAgenda](#meetingagenda)                       | `string`  | Optional | can be null    | [NSIP Project](nsip-project-defs-meeting-properties-meetingagenda.md "nsip-project.schema.json#/$defs/meeting/properties/meetingAgenda")                       |
+| [planningInspectorateRole](#planninginspectoraterole) | `string`  | Optional | can be null    | [NSIP Project](nsip-project-defs-meeting-properties-planninginspectoraterole.md "nsip-project.schema.json#/$defs/meeting/properties/planningInspectorateRole") |
+| [meetingDate](#meetingdate)                           | `string`  | Optional | can be null    | [NSIP Project](nsip-project-defs-meeting-properties-meetingdate.md "nsip-project.schema.json#/$defs/meeting/properties/meetingDate")                           |
+| [meetingType](#meetingtype)                           | `string`  | Optional | can be null    | [NSIP Project](nsip-project-defs-meeting-properties-meetingtype.md "nsip-project.schema.json#/$defs/meeting/properties/meetingType")                           |
+| Additional Properties                                 | Any       | Optional | can be null    |                                                                                                                                                                |
 
 ### meetingId
 
@@ -3708,34 +3736,6 @@ Meeting date
 **date time**: the string must be a date time string, according to [RFC 3339, section 5.6](https://tools.ietf.org/html/rfc3339 "check the specification")
 
 #### meetingDate Examples
-
-```json
-"2023-07-27T20:30:00.000Z"
-```
-
-### estimatedPrelimMeetingDate
-
-Estimated Preliminary Meeting date
-
-`estimatedPrelimMeetingDate`
-
-* is optional
-
-* Type: `string`
-
-* can be null
-
-* defined in: [NSIP Project](nsip-project-defs-meeting-properties-estimatedprelimmeetingdate.md "nsip-project.schema.json#/$defs/meeting/properties/estimatedPrelimMeetingDate")
-
-#### estimatedPrelimMeetingDate Type
-
-`string`
-
-#### estimatedPrelimMeetingDate Constraints
-
-**date time**: the string must be a date time string, according to [RFC 3339, section 5.6](https://tools.ietf.org/html/rfc3339 "check the specification")
-
-#### estimatedPrelimMeetingDate Examples
 
 ```json
 "2023-07-27T20:30:00.000Z"

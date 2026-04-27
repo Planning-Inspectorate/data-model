@@ -39,12 +39,6 @@
       "format": "date-time",
       "examples": ["2023-07-27T20:30:00.000Z"]
     },
-    "estimatedPrelimMeetingDate": {
-      "type": ["string", "null"],
-      "description": "Estimated Preliminary Meeting date",
-      "format": "date-time",
-      "examples": ["2023-07-27T20:30:00.000Z"]
-    },
     "meetingType": {
       "type": ["string", "null"],
       "description": "Type of Meeting",

@@ -48,6 +48,27 @@
         "hasSupplementaryPlanningDocs": {
           "type": ["boolean", "null"],
           "description": "Indicates supplementary planning documents"
+        },
+        "listOfDocumentsBeforeDecision": {
+          "type": ["string", "null"],
+          "description": "Free text response from LPA listing documents used to drive their decision"
+        },
+        "significantChangesAffectingApplicationLpa": {
+          "type": ["array", "null"],
+          "items": {
+            "type": "object",
+            "properties": {
+              "value": {
+                "type": ["string", "null"],
+                "enum": ["adopted-a-new-local-plan", "national-policy-change", "court-judgement", "other", null]
+              },
+              "comment": {
+                "type": ["string", "null"]
+              }
+            },
+            "required": ["value"]
+          },
+          "description": "Significant changes affecting the application as reported by the LPA (Expedited Appeals)"
         }
       }
     }

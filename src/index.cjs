@@ -265,6 +265,7 @@ const APPEAL_DISCONTINUANCE_NOTICE_SERVED_REASON = Object.freeze({
 });
 
 const APPEAL_DOCUMENT_TYPE = Object.freeze({
+  ADDITIONAL_DOCUMENTS_LPA: 'additionalDocumentsLPA',
   APPEAL_NOTIFICATION: 'appealNotification',
   APPELLANT_CASE_CORRESPONDENCE: 'appellantCaseCorrespondence',
   APPELLANT_CASE_WITHDRAWAL_LETTER: 'appellantCaseWithdrawalLetter',
@@ -289,6 +290,7 @@ const APPEAL_DOCUMENT_TYPE = Object.freeze({
   DEFINITIVE_MAP_STATEMENT: 'definitiveMapStatement',
   DELEGATED_REPORT: 'delegatedReport',
   DESIGN_ACCESS_STATEMENT: 'designAccessStatement',
+  DESIGN_ACCESS_STATEMENT_LPA: 'designAccessStatementLPA',
   DEVELOPMENT_PLAN_POLICIES: 'developmentPlanPolicies',
   DISCONTINUANCE_NOTICE: 'discontinuanceNotice',
   EIA_ENVIRONMENTAL_STATEMENT: 'eiaEnvironmentalStatement',
@@ -336,7 +338,6 @@ const APPEAL_DOCUMENT_TYPE = Object.freeze({
   OTHER_PARTY_REPRESENTATIONS: 'otherPartyRepresentations',
   OTHER_RELEVANT_MATTERS: 'otherRelevantMatters',
   OTHER_RELEVANT_POLICIES: 'otherRelevantPolicies',
-  OTHER_SUPPORTING_INFORMATION_APPELLANT: 'otherSupportingInformationAppellant',
   OWNERSHIP_CERTIFICATE: 'ownershipCertificate',
   PLAN_SHOWING_EXTENT_OF_ORDER: 'planShowingExtentOfOrder',
   PLANNING_CONTRAVENTION_NOTICE: 'planningContraventionNotice',
@@ -344,6 +345,7 @@ const APPEAL_DOCUMENT_TYPE = Object.freeze({
   PLANNING_OFFICER_REPORT: 'planningOfficerReport',
   PLANNING_PERMISSION: 'planningPermission',
   PLANS_DRAWINGS: 'plansDrawings',
+  PLANS_DRAWINGS_LPA: 'plansDrawingsLPA',
   PRIOR_CORRESPONDENCE_WITH_PINS: 'priorCorrespondenceWithPINS',
   RELATED_APPLICATIONS: 'relatedApplications',
   RULE_6_PROOF_OF_EVIDENCE: 'rule6ProofOfEvidence',

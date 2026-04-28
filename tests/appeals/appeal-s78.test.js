@@ -40,6 +40,7 @@ const appealS78 = {
 	lpaQuestionnaireValidationOutcomeDate: null,
 	lpaQuestionnaireValidationDetails: ['cupidatat dolore in', 'officia in nostrud non', 'eu amet velit labore aute'],
 	lpaStatement: 'ipsum consectetur labore pariatur',
+	listOfDocumentsBeforeDecision: null,
 	caseWithdrawnDate: '1941-07-27T04:17:40.0Z',
 	caseTransferredDate: null,
 	transferredCaseClosedDate: null,

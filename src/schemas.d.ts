@@ -176,8 +176,10 @@ export interface AppealDocument {
     | 'groundJSupporting'
     | 'groundKSupporting'
     | 'discontinuanceNotice'
-    | 'otherSupportingInformationAppellant'
     | 'eiaEnvironmentalStatementAppellant'
+    | 'designAccessStatementLPA'
+    | 'plansDrawingsLPA'
+    | 'additionalDocumentsLPA'
     | null;
   /**
    * The system mastering the metadata for the current document
@@ -1084,6 +1086,10 @@ export type AppealS78Case = (GridReference | SiteAddress) & {
    * A statement provided by the LPA
    */
   lpaStatement: string | null;
+  /**
+   * Free text response from LPA listing documents used to drive their decision
+   */
+  listOfDocumentsBeforeDecision: string | null;
   /**
    * The date the appeal was withdrawn by the appellant
    */
@@ -3916,8 +3922,7 @@ export interface AppellantSubmissionCommand {
       | 'groundAFeeReceipt'
       | null
       | 'environmentalAssessment'
-      | 'eiaEnvironmentalStatementAppellant'
-      | 'otherSupportingInformationAppellant';
+      | 'eiaEnvironmentalStatementAppellant';
     [k: string]: unknown;
   }[];
   /**
@@ -4478,6 +4483,19 @@ export type LPAQS78SubmissionProperties = {
    * Indicates supplementary planning documents
    */
   hasSupplementaryPlanningDocs?: boolean | null;
+  /**
+   * Free text response from LPA listing documents used to drive their decision
+   */
+  listOfDocumentsBeforeDecision?: string | null;
+  /**
+   * Significant changes affecting the application as reported by the LPA (Expedited Appeals)
+   */
+  significantChangesAffectingApplicationLpa?:
+    | {
+        value: 'adopted-a-new-local-plan' | 'national-policy-change' | 'court-judgement' | 'other' | null;
+        comment?: string | null;
+      }[]
+    | null;
 };
 /**
  * Schema defining LPA procedure preference properties
@@ -4850,7 +4868,10 @@ export interface LPAQuestionnaireCommand {
       | 'lpaEnforcementNoticePlan'
       | 'planningContraventionNotice'
       | 'relatedApplications'
-      | 'otherRelevantMatters';
+      | 'otherRelevantMatters'
+      | 'designAccessStatementLPA'
+      | 'plansDrawingsLPA'
+      | 'additionalDocumentsLPA';
     [k: string]: unknown;
   }[];
   [k: string]: unknown;

@@ -228,8 +228,10 @@
         "groundJSupporting",
         "groundKSupporting",
         "discontinuanceNotice",
-        "otherSupportingInformationAppellant",
         "eiaEnvironmentalStatementAppellant",
+        "designAccessStatementLPA",
+        "plansDrawingsLPA",
+        "additionalDocumentsLPA",
         null
       ],
       "description": "The type of document, used for exchange, migrations and consumption from the appeal back-office system"

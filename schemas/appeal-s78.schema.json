@@ -38,6 +38,7 @@
     "lpaQuestionnaireValidationOutcomeDate",
     "lpaQuestionnaireValidationDetails",
     "lpaStatement",
+    "listOfDocumentsBeforeDecision",
     "caseWithdrawnDate",
     "caseTransferredDate",
     "transferredCaseClosedDate",
@@ -407,6 +408,10 @@
       "examples": ["We refused the application because of ..."],
       "description": "A statement provided by the LPA",
       "$comment": "Also available on HAS cases"
+    },
+    "listOfDocumentsBeforeDecision": {
+      "type": ["string", "null"],
+      "description": "Free text response from LPA listing documents used to drive their decision"
     },
     "caseWithdrawnDate": {
       "type": ["string", "null"],

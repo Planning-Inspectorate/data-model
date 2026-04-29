@@ -40,6 +40,7 @@ const expeditedAppealPayload = {
 	lpaQuestionnaireValidationOutcomeDate: '2024-01-10T12:00:00.000Z',
 	lpaQuestionnaireValidationDetails: null,
 	lpaStatement: 'LPA Statement content',
+	listOfDocumentsBeforeDecision: null,
 	caseWithdrawnDate: null,
 	caseTransferredDate: null,
 	transferredCaseClosedDate: null,
@@ -211,7 +212,7 @@ describe('Expedited S78 Appeals', () => {
 			lastModified: '2024-01-01T12:00:00.000Z',
 			caseType: 'S',
 			redactedStatus: 'not_redacted',
-			documentType: 'otherSupportingInformationAppellant', // New type
+			documentType: 'eiaEnvironmentalStatementAppellant', // New type
 			sourceSystem: 'back-office-appeals',
 			origin: 'citizen',
 			owner: 'appellant',
@@ -223,9 +224,5 @@ describe('Expedited S78 Appeals', () => {
 
 		const validationResult1 = ajv.validate(docSchema, testDoc);
 		assert.strictEqual(validationResult1, true);
-
-		testDoc.documentType = 'eiaEnvironmentalStatementAppellant'; // New type
-		const validationResult2 = ajv.validate(docSchema, testDoc);
-		assert.strictEqual(validationResult2, true);
 	});
 });

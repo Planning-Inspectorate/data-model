@@ -2525,6 +2525,7 @@ export interface NSIPProject {
     | 'BC07 - Sport'
     | 'BC08 - Leisure'
     | 'BC09 - Tourism'
+    | 'BC10 - Data Centres'
     | 'EN01 - Generating Stations'
     | 'EN02 - Electric Lines'
     | 'EN03 - Underground Gas Storage Facilities'

@@ -606,6 +606,7 @@ export const NSIP_PROJECT_TYPE = {
   BC_07_SPORT: 'BC07 - Sport',
   BC_08_LEISURE: 'BC08 - Leisure',
   BC_09_TOURISM: 'BC09 - Tourism',
+  BC_10_DATA_CENTRES: 'BC10 - Data Centres',
   EN_01_GENERATING_STATIONS: 'EN01 - Generating Stations',
   EN_02_ELECTRIC_LINES: 'EN02 - Electric Lines',
   EN_03_UNDERGROUND_GAS_STORAGE_FACILITIES: 'EN03 - Underground Gas Storage Facilities',

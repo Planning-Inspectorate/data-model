@@ -16,6 +16,7 @@
     "gen-types": "node src/lib/gen-types.js",
     "gen-cjs": "npx rollup ./src/index.js --file ./src/index.cjs --format cjs && npx rollup ./src/enums.js --file ./src/enums.cjs --format cjs",
     "lint": "npx eslint .",
+    "load-test-appeals": "node --env-file=.env load-test/appeals/run-load-script.js",
     "format": "prettier --write .",
     "format-check": "prettier --check .",
     "prepare": "node .husky/install.mjs"
@@ -30,6 +31,8 @@
   },
   "devDependencies": {
     "@adobe/jsonschema2md": "^8.0.3",
+    "@azure/identity": "^4.13.0",
+    "@azure/service-bus": "^7.9.1",
     "@commitlint/cli": "^20.1.0",
     "@commitlint/config-conventional": "^20.0.0",
     "@eslint/js": "^10.0.1",

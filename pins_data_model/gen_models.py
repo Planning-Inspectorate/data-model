@@ -45,6 +45,7 @@ def gen_models() -> None:
             use_field_description=True,
             target_python_version=PythonVersion.PY_311,
             use_schema_description=True,
+            disable_timestamp=True,
         )
 
 

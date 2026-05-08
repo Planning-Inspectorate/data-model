@@ -38,7 +38,6 @@
     "lpaQuestionnaireValidationOutcomeDate",
     "lpaQuestionnaireValidationDetails",
     "lpaStatement",
-    "listOfDocumentsBeforeDecision",
     "caseWithdrawnDate",
     "caseTransferredDate",
     "transferredCaseClosedDate",

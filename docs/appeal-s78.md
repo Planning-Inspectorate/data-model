@@ -45,7 +45,7 @@ any of
 | [lpaQuestionnaireValidationOutcomeDate](#lpaquestionnairevalidationoutcomedate)                     | `string`  | Required | can be null    | [Appeal S78 Case](appeal-s78-properties-lpaquestionnairevalidationoutcomedate.md "appeal-s78.schema.json#/properties/lpaQuestionnaireValidationOutcomeDate")                     |
 | [lpaQuestionnaireValidationDetails](#lpaquestionnairevalidationdetails)                             | `array`   | Required | can be null    | [Appeal S78 Case](appeal-s78-properties-lpaquestionnairevalidationdetails.md "appeal-s78.schema.json#/properties/lpaQuestionnaireValidationDetails")                             |
 | [lpaStatement](#lpastatement)                                                                       | `string`  | Required | can be null    | [Appeal S78 Case](appeal-s78-properties-lpastatement.md "appeal-s78.schema.json#/properties/lpaStatement")                                                                       |
-| [listOfDocumentsBeforeDecision](#listofdocumentsbeforedecision)                                     | `string`  | Required | can be null    | [Appeal S78 Case](appeal-s78-properties-listofdocumentsbeforedecision.md "appeal-s78.schema.json#/properties/listOfDocumentsBeforeDecision")                                     |
+| [listOfDocumentsBeforeDecision](#listofdocumentsbeforedecision)                                     | `string`  | Optional | can be null    | [Appeal S78 Case](appeal-s78-properties-listofdocumentsbeforedecision.md "appeal-s78.schema.json#/properties/listOfDocumentsBeforeDecision")                                     |
 | [caseWithdrawnDate](#casewithdrawndate)                                                             | `string`  | Required | can be null    | [Appeal S78 Case](appeal-s78-properties-casewithdrawndate.md "appeal-s78.schema.json#/properties/caseWithdrawnDate")                                                             |
 | [caseTransferredDate](#casetransferreddate)                                                         | `string`  | Required | can be null    | [Appeal S78 Case](appeal-s78-properties-casetransferreddate.md "appeal-s78.schema.json#/properties/caseTransferredDate")                                                         |
 | [transferredCaseClosedDate](#transferredcasecloseddate)                                             | `string`  | Required | can be null    | [Appeal S78 Case](appeal-s78-properties-transferredcasecloseddate.md "appeal-s78.schema.json#/properties/transferredCaseClosedDate")                                             |
@@ -1178,7 +1178,7 @@ Free text response from LPA listing documents used to drive their decision
 
 `listOfDocumentsBeforeDecision`
 
-* is required
+* is optional
 
 * Type: `string`
 

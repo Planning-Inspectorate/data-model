@@ -1089,7 +1089,7 @@ export type AppealS78Case = (GridReference | SiteAddress) & {
   /**
    * Free text response from LPA listing documents used to drive their decision
    */
-  listOfDocumentsBeforeDecision: string | null;
+  listOfDocumentsBeforeDecision?: string | null;
   /**
    * The date the appeal was withdrawn by the appellant
    */

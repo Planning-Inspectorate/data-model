@@ -434,6 +434,12 @@ export const APPEAL_VIRUS_CHECK_STATUS = {
   SCANNED: 'scanned',
 } as const;
 
+export const APPLICATION_UPDATE_STATUS = {
+  DRAFT: 'Draft',
+  PUBLISHED: 'Published',
+  UNPUBLISHED: 'Unpublished',
+} as const;
+
 export const CASE_STAGE = {
   0: '0',
   ACCEPTANCE: 'acceptance',

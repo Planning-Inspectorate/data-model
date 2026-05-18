@@ -434,6 +434,12 @@ export const APPEAL_VIRUS_CHECK_STATUS = Object.freeze({
   SCANNED: 'scanned',
 });
 
+export const APPLICATION_UPDATE_STATUS = Object.freeze({
+  DRAFT: 'Draft',
+  PUBLISHED: 'Published',
+  UNPUBLISHED: 'Unpublished',
+});
+
 export const CASE_STAGE = Object.freeze({
   0: '0',
   ACCEPTANCE: 'acceptance',

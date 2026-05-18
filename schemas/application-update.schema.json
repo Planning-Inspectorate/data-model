@@ -1,0 +1,52 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "application-update.schema.json",
+  "title": "Application Update Schema",
+  "description": "Application Update for Casework Project",
+  "type": "object",
+  "additionalProperties": true,
+  "required": ["id", "applicationId", "status", "details"],
+  "properties": {
+    "id": {
+      "type": "string",
+      "description": "Primary key",
+      "example": "AAAAAAAA-1234-1234-1234-AAAAAAAAAAAA"
+    },
+    "caseReference": {
+      "type": "string",
+      "description": "Business Key for the related case",
+      "example": "CROWN/2025/12345"
+    },
+    "caseId": {
+      "type": "string",
+      "description": "The unique ID for the case this representation belongs to.",
+      "example": "AAAAAAAA-1234-1234-1234-AAAAAAAAAAAA"
+    },
+    "caseType": {
+      "type": "string",
+      "description": "The type of case this representation is for.",
+      "example": "Crown Development Application"
+    },
+    "applicationUpdateStatus": {
+      "type": "string",
+      "description": "Application Update Status. Name displayed to users, e.g. Draft",
+      "enum": ["Draft", "Published", "Unpublished"]
+    },
+    "details": {
+      "type": "string",
+      "description": "Application Update text description."
+    },
+    "firstPublished": {
+      "type": ["string", "null"],
+      "format": "date-time"
+    },
+    "unpublishedDate": {
+      "type": ["string", "null"],
+      "format": "date-time"
+    },
+    "lastEdited": {
+      "type": ["string", "null"],
+      "format": "date-time"
+    }
+  }
+}

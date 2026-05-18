@@ -5,7 +5,7 @@
   "description": "Application Update for Casework Project",
   "type": "object",
   "additionalProperties": true,
-  "required": ["id", "applicationId", "status", "details"],
+  "required": ["id", "caseReference", "caseId", "caseType", "applicationUpdateStatus", "details"],
   "properties": {
     "id": {
       "type": "string",
@@ -19,12 +19,12 @@
     },
     "caseId": {
       "type": "string",
-      "description": "The unique ID for the case this representation belongs to.",
+      "description": "The unique ID for the case this Application Update belongs to.",
       "example": "AAAAAAAA-1234-1234-1234-AAAAAAAAAAAA"
     },
     "caseType": {
       "type": "string",
-      "description": "The type of case this representation is for.",
+      "description": "The type of case this Application Update is for.",
       "example": "Crown Development Application"
     },
     "applicationUpdateStatus": {

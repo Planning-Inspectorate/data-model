@@ -7,10 +7,10 @@
 | Property                                            | Type     | Required | Nullable       | Defined by                                                                                                                                                 |
 | :-------------------------------------------------- | :------- | :------- | :------------- | :--------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | [id](#id)                                           | `string` | Required | cannot be null | [Application Update Schema](application-update-properties-id.md "application-update.schema.json#/properties/id")                                           |
-| [caseReference](#casereference)                     | `string` | Optional | cannot be null | [Application Update Schema](application-update-properties-casereference.md "application-update.schema.json#/properties/caseReference")                     |
-| [caseId](#caseid)                                   | `string` | Optional | cannot be null | [Application Update Schema](application-update-properties-caseid.md "application-update.schema.json#/properties/caseId")                                   |
-| [caseType](#casetype)                               | `string` | Optional | cannot be null | [Application Update Schema](application-update-properties-casetype.md "application-update.schema.json#/properties/caseType")                               |
-| [applicationUpdateStatus](#applicationupdatestatus) | `string` | Optional | cannot be null | [Application Update Schema](application-update-properties-applicationupdatestatus.md "application-update.schema.json#/properties/applicationUpdateStatus") |
+| [caseReference](#casereference)                     | `string` | Required | cannot be null | [Application Update Schema](application-update-properties-casereference.md "application-update.schema.json#/properties/caseReference")                     |
+| [caseId](#caseid)                                   | `string` | Required | cannot be null | [Application Update Schema](application-update-properties-caseid.md "application-update.schema.json#/properties/caseId")                                   |
+| [caseType](#casetype)                               | `string` | Required | cannot be null | [Application Update Schema](application-update-properties-casetype.md "application-update.schema.json#/properties/caseType")                               |
+| [applicationUpdateStatus](#applicationupdatestatus) | `string` | Required | cannot be null | [Application Update Schema](application-update-properties-applicationupdatestatus.md "application-update.schema.json#/properties/applicationUpdateStatus") |
 | [details](#details)                                 | `string` | Required | cannot be null | [Application Update Schema](application-update-properties-details.md "application-update.schema.json#/properties/details")                                 |
 | [firstPublished](#firstpublished)                   | `string` | Optional | can be null    | [Application Update Schema](application-update-properties-firstpublished.md "application-update.schema.json#/properties/firstPublished")                   |
 | [unpublishedDate](#unpublisheddate)                 | `string` | Optional | can be null    | [Application Update Schema](application-update-properties-unpublisheddate.md "application-update.schema.json#/properties/unpublishedDate")                 |
@@ -41,7 +41,7 @@ Business Key for the related case
 
 `caseReference`
 
-* is optional
+* is required
 
 * Type: `string`
 
@@ -55,11 +55,11 @@ Business Key for the related case
 
 ## caseId
 
-The unique ID for the case this representation belongs to.
+The unique ID for the case this Application Update belongs to.
 
 `caseId`
 
-* is optional
+* is required
 
 * Type: `string`
 
@@ -73,11 +73,11 @@ The unique ID for the case this representation belongs to.
 
 ## caseType
 
-The type of case this representation is for.
+The type of case this Application Update is for.
 
 `caseType`
 
-* is optional
+* is required
 
 * Type: `string`
 
@@ -95,7 +95,7 @@ Application Update Status. Name displayed to users, e.g. Draft
 
 `applicationUpdateStatus`
 
-* is optional
+* is required
 
 * Type: `string`
 

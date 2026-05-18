@@ -30,19 +30,19 @@ class ApplicationUpdateSchema(BaseModel):
     """
     Primary key
     """
-    caseReference: str | None = Field(None, examples=["CROWN/2025/12345"])
+    caseReference: str = Field(..., examples=["CROWN/2025/12345"])
     """
     Business Key for the related case
     """
-    caseId: str | None = Field(None, examples=["AAAAAAAA-1234-1234-1234-AAAAAAAAAAAA"])
+    caseId: str = Field(..., examples=["AAAAAAAA-1234-1234-1234-AAAAAAAAAAAA"])
     """
-    The unique ID for the case this representation belongs to.
+    The unique ID for the case this Application Update belongs to.
     """
-    caseType: str | None = Field(None, examples=["Crown Development Application"])
+    caseType: str = Field(..., examples=["Crown Development Application"])
     """
-    The type of case this representation is for.
+    The type of case this Application Update is for.
     """
-    applicationUpdateStatus: ApplicationUpdateStatus | None = None
+    applicationUpdateStatus: ApplicationUpdateStatus
     """
     Application Update Status. Name displayed to users, e.g. Draft
     """

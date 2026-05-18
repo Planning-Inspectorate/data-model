@@ -1761,19 +1761,19 @@ export interface ApplicationUpdateSchema {
   /**
    * Business Key for the related case
    */
-  caseReference?: string;
+  caseReference: string;
   /**
-   * The unique ID for the case this representation belongs to.
+   * The unique ID for the case this Application Update belongs to.
    */
-  caseId?: string;
+  caseId: string;
   /**
-   * The type of case this representation is for.
+   * The type of case this Application Update is for.
    */
-  caseType?: string;
+  caseType: string;
   /**
    * Application Update Status. Name displayed to users, e.g. Draft
    */
-  applicationUpdateStatus?: 'Draft' | 'Published' | 'Unpublished';
+  applicationUpdateStatus: 'Draft' | 'Published' | 'Unpublished';
   /**
    * Application Update text description.
    */

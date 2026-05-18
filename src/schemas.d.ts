@@ -1751,6 +1751,40 @@ export interface SiteAddress {
 }
 
 /**
+ * Application Update for Casework Project
+ */
+export interface ApplicationUpdateSchema {
+  /**
+   * Primary key
+   */
+  id: string;
+  /**
+   * Business Key for the related case
+   */
+  caseReference: string;
+  /**
+   * The unique ID for the case this Application Update belongs to.
+   */
+  caseId: string;
+  /**
+   * The type of case this Application Update is for.
+   */
+  caseType: string;
+  /**
+   * Application Update Status. Name displayed to users, e.g. Draft
+   */
+  applicationUpdateStatus: 'Draft' | 'Published' | 'Unpublished';
+  /**
+   * Application Update text description.
+   */
+  details: string;
+  firstPublished?: string | null;
+  unpublishedDate?: string | null;
+  lastEdited?: string | null;
+  [k: string]: unknown;
+}
+
+/**
  * Schema defining the data returned by the DaRT API
  */
 export interface DaRTAPIResponse {
@@ -5131,6 +5165,7 @@ export type SchemaMap = {
     'appeal-has.schema.json': AppealHASCase;
     'appeal-representation.schema.json': AppealRepresentation;
     'appeal-s78.schema.json': AppealS78Case;
+    'application-update.schema.json': ApplicationUpdateSchema;
     'dart-response.schema.json': DaRTAPIResponse;
     'entraid.schema.json': EntraIDUserObjects;
     'folder.schema.json': Folder;

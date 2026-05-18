@@ -14,6 +14,8 @@
 
 * [Appeal S78 Case](./appeal-s78.md "Group B - Schema defining the metadata for an appeal") – `appeal-s78.schema.json`
 
+* [Application Update Schema](./application-update.md "Application Update for Casework Project") – `application-update.schema.json`
+
 * [DaRT API response](./dart-response.md "Schema defining the data returned by the DaRT API") – `dart-response.schema.json`
 
 * [Entra ID User Objects](./entraid.md "A list of users from EntraID") – `entraid.schema.json`
@@ -121,7 +123,3 @@
 * [Untitled array in Representation](./nsip-representation-properties-attachmentids.md) – `nsip-representation.schema.json#/properties/attachmentIds`
 
 * [Untitled array in S51 Advice](./s51-advice-properties-attachmentids.md) – `s51-advice.schema.json#/properties/attachmentIds`
-
-## Version Note
-
-The schemas linked above follow the JSON Schema Spec version: `http://json-schema.org/draft-07/schema#`

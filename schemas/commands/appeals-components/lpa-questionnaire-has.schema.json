@@ -56,6 +56,23 @@
           "type": ["string", "null"],
           "examples": ["We refused the application because of ..."],
           "description": "A statement provided by the LPA, unused?"
+        },
+        "significantChangesAffectingApplicationLpa": {
+          "type": ["array", "null"],
+          "items": {
+            "type": "object",
+            "properties": {
+              "value": {
+                "type": ["string", "null"],
+                "enum": ["adopted-a-new-local-plan", "national-policy-change", "court-judgement", "other", null]
+              },
+              "comment": {
+                "type": ["string", "null"]
+              }
+            },
+            "required": ["value"]
+          },
+          "description": "Significant changes affecting the application as reported by the LPA"
         }
       }
     }

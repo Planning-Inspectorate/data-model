@@ -60,6 +60,10 @@
 
 * [Untitled object in Appeal HAS Case](./appeal-has-properties-advertdetails-items.md) – `appeal-has.schema.json#/properties/advertDetails/items`
 
+* [Untitled object in Appeal HAS Case](./appeal-has-properties-significantchangesaffectingapplicationappellant-items.md) – `appeal-has.schema.json#/properties/significantChangesAffectingApplicationAppellant/items`
+
+* [Untitled object in Appeal HAS Case](./appeal-has-properties-significantchangesaffectingapplicationlpa-items.md) – `appeal-has.schema.json#/properties/significantChangesAffectingApplicationLpa/items`
+
 * [Untitled object in Appeal S78 Case](./appeal-s78-properties-neighbouringsiteaddresses-items.md) – `appeal-s78.schema.json#/properties/neighbouringSiteAddresses/items`
 
 * [Untitled object in Appeal S78 Case](./appeal-s78-properties-advertdetails-items.md) – `appeal-s78.schema.json#/properties/advertDetails/items`

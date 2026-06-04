@@ -5,19 +5,7 @@
   "description": "NSIP Standalone Invoice Schema for ODW Curated layer",
   "type": "object",
   "additionalProperties": true,
-  "required": [
-    "caseId",
-    "caseReference",
-    "invoiceStage",
-    "invoiceNumber",
-    "amountDue",
-    "paymentDueDate",
-    "invoicedDate",
-    "paymentDate",
-    "refundCreditNoteNumber",
-    "refundAmount",
-    "refundIssueDate"
-  ],
+  "required": ["caseId", "invoiceStage", "invoiceNumber"],
   "properties": {
     "caseId": {
       "type": "integer",
@@ -29,9 +17,9 @@
       "examples": ["BC0510001"]
     },
     "invoiceStage": {
-      "type": ["string", "null"],
+      "type": "string",
       "description": "Invoice stage",
-      "enum": ["pre_acceptance", "acceptance", "pre_examination", "initial_examination", "final_examination", null],
+      "enum": ["pre_acceptance", "acceptance", "pre_examination", "initial_examination", "final_examination"],
       "examples": ["pre_acceptance"]
     },
     "invoiceNumber": {
@@ -40,7 +28,7 @@
       "examples": ["1800004419"]
     },
     "amountDue": {
-      "type": "number",
+      "type": ["number", "null"],
       "description": "Amount due",
       "examples": [500]
     },

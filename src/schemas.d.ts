@@ -834,6 +834,28 @@ export type AppealHASCase = (GridReference | SiteAddress) & {
    * padsSapId for PADS inspectors
    */
   padsSapId?: string | null;
+  /**
+   * Reason for appeal as provided by the appellant
+   */
+  reasonForAppealAppellant?: string | null;
+  /**
+   * Significant changes affecting the application as reported by the appellant
+   */
+  significantChangesAffectingApplicationAppellant?:
+    | {
+        value: 'adopted-a-new-local-plan' | 'national-policy-change' | 'court-judgement' | 'other' | null;
+        comment?: string | null;
+      }[]
+    | null;
+  /**
+   * Significant changes affecting the application as reported by the LPA
+   */
+  significantChangesAffectingApplicationLpa?:
+    | {
+        value: 'adopted-a-new-local-plan' | 'national-policy-change' | 'court-judgement' | 'other' | null;
+        comment?: string | null;
+      }[]
+    | null;
   [k: string]: unknown;
 };
 
@@ -4481,6 +4503,15 @@ export type LPAQHASSubmissionProperties = {
    * A statement provided by the LPA, unused?
    */
   lpaStatement?: string | null;
+  /**
+   * Significant changes affecting the application as reported by the LPA
+   */
+  significantChangesAffectingApplicationLpa?:
+    | {
+        value: 'adopted-a-new-local-plan' | 'national-policy-change' | 'court-judgement' | 'other' | null;
+        comment?: string | null;
+      }[]
+    | null;
 };
 /**
  * Schema defining any S78 specific properties for LPAQ submissions

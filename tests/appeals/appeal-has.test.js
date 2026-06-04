@@ -174,7 +174,13 @@ const appealHas = {
 			advertType: 'Other'
 		}
 	],
-	padsSapId: null
+	padsSapId: null,
+	reasonForAppealAppellant: 'This is my reason for appeal',
+	significantChangesAffectingApplicationAppellant: [
+		{ value: 'adopted-a-new-local-plan', comment: 'Plan adopted last month' },
+		{ value: 'other', comment: 'General policy shift' }
+	],
+	significantChangesAffectingApplicationLpa: null
 };
 
 describe(schema, () => {
@@ -266,5 +272,38 @@ describe(schema, () => {
 		delete test.lpaCostsAppliedFor;
 		const validationResult = ajv.validate(schema, test);
 		assert.strictEqual(validationResult, false);
+	});
+
+	it('should allow null for new attributes', () => {
+		const test = structuredClone(appealHas);
+		test.reasonForAppealAppellant = null;
+		test.significantChangesAffectingApplicationAppellant = null;
+		test.significantChangesAffectingApplicationLpa = null;
+		const validationResult = ajv.validate(schema, test);
+		if (!validationResult) {
+			console.error(ajv.errors);
+		}
+		assert.strictEqual(validationResult, true);
+	});
+
+	it('should enforce enum for significantChangesAffectingApplication', () => {
+		const test = structuredClone(appealHas);
+		test.significantChangesAffectingApplicationAppellant = [{ value: 'invalid-enum-value', comment: 'some comment' }];
+		const validationResult = ajv.validate(schema, test);
+		assert.strictEqual(validationResult, false);
+	});
+
+	it('should enforce required value for significantChangesAffectingApplication entries', () => {
+		const test = structuredClone(appealHas);
+		test.significantChangesAffectingApplicationAppellant = [{ comment: 'some comment' }];
+		const validationResult = ajv.validate(schema, test);
+		assert.strictEqual(validationResult, false);
+	});
+
+	it('should allow missing/null comment for significantChangesAffectingApplication entries', () => {
+		const test = structuredClone(appealHas);
+		test.significantChangesAffectingApplicationAppellant = [{ value: 'adopted-a-new-local-plan' }];
+		const validationResult = ajv.validate(schema, test);
+		assert.strictEqual(validationResult, true);
 	});
 });

@@ -776,6 +776,50 @@
     "padsSapId": {
       "type": ["string", "null"],
       "description": "padsSapId for PADS inspectors"
+    },
+    "reasonForAppealAppellant": {
+      "type": ["string", "null"],
+      "description": "Reason for appeal as provided by the appellant"
+    },
+    "significantChangesAffectingApplicationAppellant": {
+      "type": ["array", "null"],
+      "items": {
+        "type": "object",
+        "properties": {
+          "value": {
+            "$ref": "#/definitions/SignificantChangesAffectingApplication",
+            "type": ["string", "null"]
+          },
+          "comment": {
+            "type": ["string", "null"]
+          }
+        },
+        "required": ["value"]
+      },
+      "description": "Significant changes affecting the application as reported by the appellant"
+    },
+    "significantChangesAffectingApplicationLpa": {
+      "type": ["array", "null"],
+      "items": {
+        "type": "object",
+        "properties": {
+          "value": {
+            "$ref": "#/definitions/SignificantChangesAffectingApplication",
+            "type": ["string", "null"]
+          },
+          "comment": {
+            "type": ["string", "null"]
+          }
+        },
+        "required": ["value"]
+      },
+      "description": "Significant changes affecting the application as reported by the LPA"
+    }
+  },
+  "definitions": {
+    "SignificantChangesAffectingApplication": {
+      "type": ["string", "null"],
+      "enum": ["adopted-a-new-local-plan", "national-policy-change", "court-judgement", "other", null]
     }
   }
 }

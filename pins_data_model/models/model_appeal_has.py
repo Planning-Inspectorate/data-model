@@ -265,6 +265,39 @@ class AdvertDetail(BaseModel):
     """
 
 
+class AdvertDetail1(BaseModel):
+    model_config = ConfigDict(
+        extra="allow",
+    )
+    advertType: AdvertType
+    isAdvertInPosition: bool | None = None
+    """
+    Is the advertisement in position?
+    """
+    isSiteOnHighwayLand: bool | None = None
+    """
+    Is the site on highway land?
+    """
+
+
+class SignificantChangesAffectingApplication(Enum):
+    adopted_a_new_local_plan = "adopted-a-new-local-plan"
+    national_policy_change = "national-policy-change"
+    court_judgement = "court-judgement"
+    other = "other"
+    NoneType_None = None
+
+
+class SignificantChangesAffectingApplicationAppellantItem(BaseModel):
+    value: SignificantChangesAffectingApplication
+    comment: str | None = None
+
+
+class SignificantChangesAffectingApplicationLpaItem(BaseModel):
+    value: SignificantChangesAffectingApplication
+    comment: str | None = None
+
+
 class AppealHasCase1(BaseModel):
     """
     Group A - Schema defining the metadata for an appeal
@@ -753,20 +786,21 @@ class AppealHasCase1(BaseModel):
     """
     padsSapId for PADS inspectors
     """
-
-
-class AdvertDetail1(BaseModel):
-    model_config = ConfigDict(
-        extra="allow",
-    )
-    advertType: AdvertType
-    isAdvertInPosition: bool | None = None
+    reasonForAppealAppellant: str | None = None
     """
-    Is the advertisement in position?
+    Reason for appeal as provided by the appellant
     """
-    isSiteOnHighwayLand: bool | None = None
+    significantChangesAffectingApplicationAppellant: (
+        list[SignificantChangesAffectingApplicationAppellantItem] | None
+    ) = None
     """
-    Is the site on highway land?
+    Significant changes affecting the application as reported by the appellant
+    """
+    significantChangesAffectingApplicationLpa: (
+        list[SignificantChangesAffectingApplicationLpaItem] | None
+    ) = None
+    """
+    Significant changes affecting the application as reported by the LPA
     """
 
 
@@ -1257,6 +1291,22 @@ class AppealHasCase2(BaseModel):
     padsSapId: str | None = None
     """
     padsSapId for PADS inspectors
+    """
+    reasonForAppealAppellant: str | None = None
+    """
+    Reason for appeal as provided by the appellant
+    """
+    significantChangesAffectingApplicationAppellant: (
+        list[SignificantChangesAffectingApplicationAppellantItem] | None
+    ) = None
+    """
+    Significant changes affecting the application as reported by the appellant
+    """
+    significantChangesAffectingApplicationLpa: (
+        list[SignificantChangesAffectingApplicationLpaItem] | None
+    ) = None
+    """
+    Significant changes affecting the application as reported by the LPA
     """
 
 

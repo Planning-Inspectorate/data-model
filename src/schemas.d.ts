@@ -2411,17 +2411,11 @@ export interface NSIPInvoice {
    * The unique identifier within the Back Office. This is not the same as the case reference
    */
   caseId: number;
-  caseReference: string | null;
+  caseReference?: string | null;
   /**
    * Invoice stage
    */
-  invoiceStage:
-    | 'pre_acceptance'
-    | 'acceptance'
-    | 'pre_examination'
-    | 'initial_examination'
-    | 'final_examination'
-    | null;
+  invoiceStage: 'pre_acceptance' | 'acceptance' | 'pre_examination' | 'initial_examination' | 'final_examination';
   /**
    * Invoice number
    */
@@ -2429,31 +2423,31 @@ export interface NSIPInvoice {
   /**
    * Amount due
    */
-  amountDue: number;
+  amountDue?: number | null;
   /**
    * Payment due date
    */
-  paymentDueDate: string | null;
+  paymentDueDate?: string | null;
   /**
    * Invoiced date
    */
-  invoicedDate: string | null;
+  invoicedDate?: string | null;
   /**
    * Date of payment
    */
-  paymentDate: string | null;
+  paymentDate?: string | null;
   /**
    * Refund credit note number
    */
-  refundCreditNoteNumber: string | null;
+  refundCreditNoteNumber?: string | null;
   /**
    * Amount refunded
    */
-  refundAmount: number | null;
+  refundAmount?: number | null;
   /**
    * Refund issue date
    */
-  refundIssueDate: string | null;
+  refundIssueDate?: string | null;
   [k: string]: unknown;
 }
 

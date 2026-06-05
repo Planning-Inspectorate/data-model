@@ -18,7 +18,6 @@ class InvoiceStage(Enum):
     pre_examination = "pre_examination"
     initial_examination = "initial_examination"
     final_examination = "final_examination"
-    NoneType_None = None
 
 
 class NsipInvoice(BaseModel):
@@ -33,7 +32,7 @@ class NsipInvoice(BaseModel):
     """
     The unique identifier within the Back Office. This is not the same as the case reference
     """
-    caseReference: str | None = Field(..., examples=["BC0510001"])
+    caseReference: str | None = Field(None, examples=["BC0510001"])
     invoiceStage: InvoiceStage = Field(..., examples=["pre_acceptance"])
     """
     Invoice stage
@@ -42,38 +41,38 @@ class NsipInvoice(BaseModel):
     """
     Invoice number
     """
-    amountDue: float = Field(..., examples=[500])
+    amountDue: float | None = Field(None, examples=[500])
     """
     Amount due
     """
     paymentDueDate: AwareDatetime | None = Field(
-        ..., examples=["2023-07-27T20:30:00.000Z"]
+        None, examples=["2023-07-27T20:30:00.000Z"]
     )
     """
     Payment due date
     """
     invoicedDate: AwareDatetime | None = Field(
-        ..., examples=["2023-07-27T20:30:00.000Z"]
+        None, examples=["2023-07-27T20:30:00.000Z"]
     )
     """
     Invoiced date
     """
     paymentDate: AwareDatetime | None = Field(
-        ..., examples=["2023-07-27T20:30:00.000Z"]
+        None, examples=["2023-07-27T20:30:00.000Z"]
     )
     """
     Date of payment
     """
-    refundCreditNoteNumber: str | None = Field(..., examples=["1800004419"])
+    refundCreditNoteNumber: str | None = Field(None, examples=["1800004419"])
     """
     Refund credit note number
     """
-    refundAmount: float | None = Field(..., examples=[200])
+    refundAmount: float | None = Field(None, examples=[200])
     """
     Amount refunded
     """
     refundIssueDate: AwareDatetime | None = Field(
-        ..., examples=["2023-07-27T20:30:00.000Z"]
+        None, examples=["2023-07-27T20:30:00.000Z"]
     )
     """
     Refund issue date

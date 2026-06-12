@@ -314,6 +314,10 @@
       "examples": ["We refused the application because of ..."],
       "description": "A statement provided by the LPA"
     },
+    "listOfDocumentsBeforeDecision": {
+      "type": ["string", "null"],
+      "description": "Free text response from LPA listing documents used to drive their decision"
+    },
     "caseWithdrawnDate": {
       "type": ["string", "null"],
       "format": "date-time",

@@ -464,6 +464,10 @@ class AppealHasCase1(BaseModel):
     """
     A statement provided by the LPA
     """
+    listOfDocumentsBeforeDecision: str | None = None
+    """
+    Free text response from LPA listing documents used to drive their decision
+    """
     caseWithdrawnDate: AwareDatetime | None = Field(
         ..., examples=["2023-07-27T20:30:00.000Z"]
     )
@@ -969,6 +973,10 @@ class AppealHasCase2(BaseModel):
     )
     """
     A statement provided by the LPA
+    """
+    listOfDocumentsBeforeDecision: str | None = None
+    """
+    Free text response from LPA listing documents used to drive their decision
     """
     caseWithdrawnDate: AwareDatetime | None = Field(
         ..., examples=["2023-07-27T20:30:00.000Z"]

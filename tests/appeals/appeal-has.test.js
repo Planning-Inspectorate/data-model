@@ -180,7 +180,8 @@ const appealHas = {
 		{ value: 'adopted-a-new-local-plan', comment: 'Plan adopted last month' },
 		{ value: 'other', comment: 'General policy shift' }
 	],
-	significantChangesAffectingApplicationLpa: null
+	significantChangesAffectingApplicationLpa: null,
+	listOfDocumentsBeforeDecision: null
 };
 
 describe(schema, () => {
@@ -279,10 +280,25 @@ describe(schema, () => {
 		test.reasonForAppealAppellant = null;
 		test.significantChangesAffectingApplicationAppellant = null;
 		test.significantChangesAffectingApplicationLpa = null;
+		test.listOfDocumentsBeforeDecision = null;
 		const validationResult = ajv.validate(schema, test);
 		if (!validationResult) {
 			console.error(ajv.errors);
 		}
+		assert.strictEqual(validationResult, true);
+	});
+
+	it('should allow listOfDocumentsBeforeDecision to be a string', () => {
+		const test = structuredClone(appealHas);
+		test.listOfDocumentsBeforeDecision = 'doc1, doc2, doc3';
+		const validationResult = ajv.validate(schema, test);
+		assert.strictEqual(validationResult, true);
+	});
+
+	it('should allow listOfDocumentsBeforeDecision to be missing (optional)', () => {
+		const test = structuredClone(appealHas);
+		delete test.listOfDocumentsBeforeDecision;
+		const validationResult = ajv.validate(schema, test);
 		assert.strictEqual(validationResult, true);
 	});
 

@@ -486,6 +486,10 @@ export type AppealHASCase = (GridReference | SiteAddress) & {
    */
   lpaStatement: string | null;
   /**
+   * Free text response from LPA listing documents used to drive their decision
+   */
+  listOfDocumentsBeforeDecision?: string | null;
+  /**
    * The date the appeal was withdrawn by the appellant
    */
   caseWithdrawnDate: string | null;
@@ -4497,6 +4501,10 @@ export type LPAQHASSubmissionProperties = {
    * A statement provided by the LPA, unused?
    */
   lpaStatement?: string | null;
+  /**
+   * Free text response from LPA listing documents used to drive their decision
+   */
+  listOfDocumentsBeforeDecision?: string | null;
   /**
    * Significant changes affecting the application as reported by the LPA
    */

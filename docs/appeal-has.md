@@ -45,6 +45,7 @@ any of
 | [lpaQuestionnaireValidationOutcomeDate](#lpaquestionnairevalidationoutcomedate)                     | `string`  | Required | can be null    | [Appeal HAS Case](appeal-has-properties-lpaquestionnairevalidationoutcomedate.md "appeal-has.schema.json#/properties/lpaQuestionnaireValidationOutcomeDate")                     |
 | [lpaQuestionnaireValidationDetails](#lpaquestionnairevalidationdetails)                             | `array`   | Required | can be null    | [Appeal HAS Case](appeal-has-properties-lpaquestionnairevalidationdetails.md "appeal-has.schema.json#/properties/lpaQuestionnaireValidationDetails")                             |
 | [lpaStatement](#lpastatement)                                                                       | `string`  | Required | can be null    | [Appeal HAS Case](appeal-has-properties-lpastatement.md "appeal-has.schema.json#/properties/lpaStatement")                                                                       |
+| [listOfDocumentsBeforeDecision](#listofdocumentsbeforedecision)                                     | `string`  | Optional | can be null    | [Appeal HAS Case](appeal-has-properties-listofdocumentsbeforedecision.md "appeal-has.schema.json#/properties/listOfDocumentsBeforeDecision")                                     |
 | [caseWithdrawnDate](#casewithdrawndate)                                                             | `string`  | Required | can be null    | [Appeal HAS Case](appeal-has-properties-casewithdrawndate.md "appeal-has.schema.json#/properties/caseWithdrawnDate")                                                             |
 | [caseTransferredDate](#casetransferreddate)                                                         | `string`  | Required | can be null    | [Appeal HAS Case](appeal-has-properties-casetransferreddate.md "appeal-has.schema.json#/properties/caseTransferredDate")                                                         |
 | [transferredCaseClosedDate](#transferredcasecloseddate)                                             | `string`  | Required | can be null    | [Appeal HAS Case](appeal-has-properties-transferredcasecloseddate.md "appeal-has.schema.json#/properties/transferredCaseClosedDate")                                             |
@@ -1024,6 +1025,24 @@ A statement provided by the LPA
 ```json
 "We refused the application because of ..."
 ```
+
+## listOfDocumentsBeforeDecision
+
+Free text response from LPA listing documents used to drive their decision
+
+`listOfDocumentsBeforeDecision`
+
+* is optional
+
+* Type: `string`
+
+* can be null
+
+* defined in: [Appeal HAS Case](appeal-has-properties-listofdocumentsbeforedecision.md "appeal-has.schema.json#/properties/listOfDocumentsBeforeDecision")
+
+### listOfDocumentsBeforeDecision Type
+
+`string`
 
 ## caseWithdrawnDate
 

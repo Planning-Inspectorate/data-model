@@ -3904,7 +3904,6 @@ export interface AppellantSubmissionCommand {
       } & AppellantCommonSubmissionProperties &
         AppellantCommonPlanningProperties &
         AppellantProcedurePreferenceProperties &
-        PlanningObligationSpecificProperties &
         LDCSpecificProperties)
     | ({
         caseType?: 'F';

@@ -1709,29 +1709,20 @@ export type AppealS78Case = (GridReference | SiteAddress) & {
    */
   pcnRestrictedDevelopmentRights?: boolean | null;
   applicationMadeUnderActSection?:
-    | 'existing-development'
-    | 'proposed-use-of-a-development'
-    | 'proposed-changes-to-a-listed-building'
-    | null;
+    'existing-development' | 'proposed-use-of-a-development' | 'proposed-changes-to-a-listed-building' | null;
   /**
    * Site use at time of application
    */
   siteUseAtTimeOfApplication?: string | null;
   appealUnderActSection?:
-    | 'existing-development'
-    | 'proposed-use-of-a-development'
-    | 'proposed-changes-to-a-listed-building'
-    | null;
+    'existing-development' | 'proposed-use-of-a-development' | 'proposed-changes-to-a-listed-building' | null;
   lpaConsiderAppealInvalid?: boolean | null;
   /**
    * Reason(s) why LPA consider the appeal invalid
    */
   lpaAppealInvalidReasons?: string | null;
   discontinuanceNoticeServedReason?:
-    | 'risk-of-injury-to-the-amenity-of-locality'
-    | 'danger-to-members-of-the-public'
-    | 'other'
-    | null;
+    'risk-of-injury-to-the-amenity-of-locality' | 'danger-to-members-of-the-public' | 'other' | null;
   /**
    * Other reason for serving a discontinuance notice, for discontinuanceNoticeServedReason: other
    */
@@ -2284,13 +2275,7 @@ export interface NSIPDocument {
   documentType: string | null;
   securityClassification: 'public' | 'official' | 'secret' | 'top-secret' | null;
   sourceSystem:
-    | 'back-office-appeals'
-    | 'back-office-applications'
-    | 'dco-portal'
-    | 'horizon'
-    | 'ni_file'
-    | 'sharepoint'
-    | null;
+    'back-office-appeals' | 'back-office-applications' | 'dco-portal' | 'horizon' | 'ni_file' | 'sharepoint' | null;
   origin: 'pins' | 'citizen' | 'lpa' | 'ogd' | null;
   owner: string | null;
   /**
@@ -3512,13 +3497,7 @@ export interface ServiceUser {
    * Type or category of the service user.
    */
   serviceUserType:
-    | 'Applicant'
-    | 'Appellant'
-    | 'Agent'
-    | 'Rule6Party'
-    | 'InterestedParty'
-    | 'RepresentationContact'
-    | 'Subscriber';
+    'Applicant' | 'Appellant' | 'Agent' | 'Rule6Party' | 'InterestedParty' | 'RepresentationContact' | 'Subscriber';
   /**
    * Reference number for a particular case or incident.
    */
@@ -4392,10 +4371,7 @@ export interface LDCSpecificProperties {
    */
   siteUseAtTimeOfApplication: string | null;
   applicationMadeUnderActSection:
-    | 'existing-development'
-    | 'proposed-use-of-a-development'
-    | 'proposed-changes-to-a-listed-building'
-    | null;
+    'existing-development' | 'proposed-use-of-a-development' | 'proposed-changes-to-a-listed-building' | null;
   [k: string]: unknown;
 }
 /**
@@ -4784,10 +4760,7 @@ export type LPAQEnforcementSubmissionProperties = {
  */
 export type LPAQLDCSubmissionProperties = {
   appealUnderActSection?:
-    | 'existing-development'
-    | 'proposed-use-of-a-development'
-    | 'proposed-changes-to-a-listed-building'
-    | null;
+    'existing-development' | 'proposed-use-of-a-development' | 'proposed-changes-to-a-listed-building' | null;
   lpaConsiderAppealInvalid?: boolean | null;
   /**
    * Reason(s) why LPA consider the appeal invalid

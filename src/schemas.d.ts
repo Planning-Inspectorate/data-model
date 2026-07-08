@@ -292,7 +292,8 @@ export interface AppealEvent {
     | 'confirmed'
     | 'link_to_enforcement'
     | 'offered'
-    | 'postponed';
+    | 'postponed'
+    | 'pending';
   /**
    * Indicates if the event is urgent
    */
@@ -304,35 +305,35 @@ export interface AppealEvent {
   /**
    * Event start date and time
    */
-  eventStartDateTime: string;
+  eventStartDateTime?: string | null;
   /**
    * Event end date and time
    */
-  eventEndDateTime: string | null;
+  eventEndDateTime?: string | null;
   /**
    * The date third-parties were informed of the site visit event
    */
-  notificationOfSiteVisit: string | null;
+  notificationOfSiteVisit?: string | null;
   /**
    * First line of address for the event site
    */
-  addressLine1: string | null;
+  addressLine1?: string | null;
   /**
    * Second line of address for the event site
    */
-  addressLine2: string | null;
+  addressLine2?: string | null;
   /**
    * Town / City of the event address
    */
-  addressTown: string | null;
+  addressTown?: string | null;
   /**
    * County of the event address
    */
-  addressCounty: string | null;
+  addressCounty?: string | null;
   /**
    * Postal code of the event address
    */
-  addressPostcode: string | null;
+  addressPostcode?: string | null;
   [k: string]: unknown;
 }
 

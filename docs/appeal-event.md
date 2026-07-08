@@ -13,14 +13,14 @@
 | [eventStatus](#eventstatus)                         | `string`  | Required | cannot be null | [Appeal Event](appeal-event-properties-eventstatus.md "appeal-event.schema.json#/properties/eventStatus")                         |
 | [isUrgent](#isurgent)                               | `boolean` | Required | cannot be null | [Appeal Event](appeal-event-properties-isurgent.md "appeal-event.schema.json#/properties/isUrgent")                               |
 | [eventPublished](#eventpublished)                   | `boolean` | Required | can be null    | [Appeal Event](appeal-event-properties-eventpublished.md "appeal-event.schema.json#/properties/eventPublished")                   |
-| [eventStartDateTime](#eventstartdatetime)           | `string`  | Required | cannot be null | [Appeal Event](appeal-event-properties-eventstartdatetime.md "appeal-event.schema.json#/properties/eventStartDateTime")           |
-| [eventEndDateTime](#eventenddatetime)               | `string`  | Required | can be null    | [Appeal Event](appeal-event-properties-eventenddatetime.md "appeal-event.schema.json#/properties/eventEndDateTime")               |
-| [notificationOfSiteVisit](#notificationofsitevisit) | `string`  | Required | can be null    | [Appeal Event](appeal-event-properties-notificationofsitevisit.md "appeal-event.schema.json#/properties/notificationOfSiteVisit") |
-| [addressLine1](#addressline1)                       | `string`  | Required | can be null    | [Appeal Event](appeal-event-properties-addressline1.md "appeal-event.schema.json#/properties/addressLine1")                       |
-| [addressLine2](#addressline2)                       | `string`  | Required | can be null    | [Appeal Event](appeal-event-properties-addressline2.md "appeal-event.schema.json#/properties/addressLine2")                       |
-| [addressTown](#addresstown)                         | `string`  | Required | can be null    | [Appeal Event](appeal-event-properties-addresstown.md "appeal-event.schema.json#/properties/addressTown")                         |
-| [addressCounty](#addresscounty)                     | `string`  | Required | can be null    | [Appeal Event](appeal-event-properties-addresscounty.md "appeal-event.schema.json#/properties/addressCounty")                     |
-| [addressPostcode](#addresspostcode)                 | `string`  | Required | can be null    | [Appeal Event](appeal-event-properties-addresspostcode.md "appeal-event.schema.json#/properties/addressPostcode")                 |
+| [eventStartDateTime](#eventstartdatetime)           | `string`  | Optional | can be null    | [Appeal Event](appeal-event-properties-eventstartdatetime.md "appeal-event.schema.json#/properties/eventStartDateTime")           |
+| [eventEndDateTime](#eventenddatetime)               | `string`  | Optional | can be null    | [Appeal Event](appeal-event-properties-eventenddatetime.md "appeal-event.schema.json#/properties/eventEndDateTime")               |
+| [notificationOfSiteVisit](#notificationofsitevisit) | `string`  | Optional | can be null    | [Appeal Event](appeal-event-properties-notificationofsitevisit.md "appeal-event.schema.json#/properties/notificationOfSiteVisit") |
+| [addressLine1](#addressline1)                       | `string`  | Optional | can be null    | [Appeal Event](appeal-event-properties-addressline1.md "appeal-event.schema.json#/properties/addressLine1")                       |
+| [addressLine2](#addressline2)                       | `string`  | Optional | can be null    | [Appeal Event](appeal-event-properties-addressline2.md "appeal-event.schema.json#/properties/addressLine2")                       |
+| [addressTown](#addresstown)                         | `string`  | Optional | can be null    | [Appeal Event](appeal-event-properties-addresstown.md "appeal-event.schema.json#/properties/addressTown")                         |
+| [addressCounty](#addresscounty)                     | `string`  | Optional | can be null    | [Appeal Event](appeal-event-properties-addresscounty.md "appeal-event.schema.json#/properties/addressCounty")                     |
+| [addressPostcode](#addresspostcode)                 | `string`  | Optional | can be null    | [Appeal Event](appeal-event-properties-addresspostcode.md "appeal-event.schema.json#/properties/addressPostcode")                 |
 | Additional Properties                               | Any       | Optional | can be null    |                                                                                                                                   |
 
 ## eventId
@@ -164,6 +164,7 @@ Status of the event
 | `"link_to_enforcement"` |             |
 | `"offered"`             |             |
 | `"postponed"`           |             |
+| `"pending"`             |             |
 
 ## isUrgent
 
@@ -207,11 +208,11 @@ Event start date and time
 
 `eventStartDateTime`
 
-* is required
+* is optional
 
 * Type: `string`
 
-* cannot be null
+* can be null
 
 * defined in: [Appeal Event](appeal-event-properties-eventstartdatetime.md "appeal-event.schema.json#/properties/eventStartDateTime")
 
@@ -235,7 +236,7 @@ Event end date and time
 
 `eventEndDateTime`
 
-* is required
+* is optional
 
 * Type: `string`
 
@@ -263,7 +264,7 @@ The date third-parties were informed of the site visit event
 
 `notificationOfSiteVisit`
 
-* is required
+* is optional
 
 * Type: `string`
 
@@ -291,7 +292,7 @@ First line of address for the event site
 
 `addressLine1`
 
-* is required
+* is optional
 
 * Type: `string`
 
@@ -315,7 +316,7 @@ Second line of address for the event site
 
 `addressLine2`
 
-* is required
+* is optional
 
 * Type: `string`
 
@@ -333,7 +334,7 @@ Town / City of the event address
 
 `addressTown`
 
-* is required
+* is optional
 
 * Type: `string`
 
@@ -357,7 +358,7 @@ County of the event address
 
 `addressCounty`
 
-* is required
+* is optional
 
 * Type: `string`
 
@@ -381,7 +382,7 @@ Postal code of the event address
 
 `addressPostcode`
 
-* is required
+* is optional
 
 * Type: `string`
 

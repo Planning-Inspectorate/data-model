@@ -5,23 +5,7 @@
   "description": "Schema defining the metadata for appeal events, such as site visits, inquiries, hearings",
   "type": "object",
   "additionalProperties": true,
-  "required": [
-    "eventId",
-    "caseReference",
-    "eventType",
-    "eventName",
-    "eventStatus",
-    "isUrgent",
-    "eventPublished",
-    "eventStartDateTime",
-    "eventEndDateTime",
-    "notificationOfSiteVisit",
-    "addressLine1",
-    "addressLine2",
-    "addressTown",
-    "addressCounty",
-    "addressPostcode"
-  ],
+  "required": ["eventId", "caseReference", "eventType", "eventName", "eventStatus", "isUrgent", "eventPublished"],
   "properties": {
     "eventId": {
       "type": "string",
@@ -65,7 +49,8 @@
         "confirmed",
         "link_to_enforcement",
         "offered",
-        "postponed"
+        "postponed",
+        "pending"
       ],
       "description": "Status of the event"
     },
@@ -78,7 +63,7 @@
       "description": "Indicates if the event has been published"
     },
     "eventStartDateTime": {
-      "type": "string",
+      "type": ["string", "null"],
       "format": "date-time",
       "examples": ["2023-07-27T20:30:00.000Z"],
       "description": "Event start date and time"

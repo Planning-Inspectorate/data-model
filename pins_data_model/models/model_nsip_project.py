@@ -256,13 +256,17 @@ class SubProjectType(Enum):
     Project type
     """
 
+    biomass = "biomass"
+    coal_power_station = "coal_power_station"
     energy_from_waste = "energy_from_waste"
     gas_power_station = "gas_power_station"
+    hydro_electric = "hydro_electric"
     hydrogen_power_station = "hydrogen_power_station"
     nuclear = "nuclear"
     offshore_wind = "offshore_wind"
     onshore_wind = "onshore_wind"
     solar = "solar"
+    tidal_barrage = "tidal_barrage"
     NoneType_None = None
 
 

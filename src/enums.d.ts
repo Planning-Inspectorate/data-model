@@ -758,13 +758,17 @@ export const NSIP_STATUS = {
 } as const;
 
 export const NSIP_SUB_PROJECT_TYPE = {
+  BIOMASS: 'biomass',
+  COAL_POWER_STATION: 'coal_power_station',
   ENERGY_FROM_WASTE: 'energy_from_waste',
   GAS_POWER_STATION: 'gas_power_station',
+  HYDRO_ELECTRIC: 'hydro_electric',
   HYDROGEN_POWER_STATION: 'hydrogen_power_station',
   NUCLEAR: 'nuclear',
   OFFSHORE_WIND: 'offshore_wind',
   ONSHORE_WIND: 'onshore_wind',
   SOLAR: 'solar',
+  TIDAL_BARRAGE: 'tidal_barrage',
 } as const;
 
 export const NSIP_SUBSCRIPTION_TYPE = {

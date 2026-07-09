@@ -2969,13 +2969,17 @@ export interface NSIPProject {
    * Project type
    */
   subProjectType?:
+    | 'biomass'
+    | 'coal_power_station'
     | 'energy_from_waste'
     | 'gas_power_station'
+    | 'hydro_electric'
     | 'hydrogen_power_station'
     | 'nuclear'
     | 'offshore_wind'
     | 'onshore_wind'
     | 'solar'
+    | 'tidal_barrage'
     | null;
   /**
    * New maturity

@@ -38,6 +38,7 @@ class EventStatus(Enum):
     link_to_enforcement = "link_to_enforcement"
     offered = "offered"
     postponed = "postponed"
+    pending = "pending"
 
 
 class AppealEvent(BaseModel):
@@ -76,25 +77,25 @@ class AppealEvent(BaseModel):
     """
     Indicates if the event has been published
     """
-    eventStartDateTime: AwareDatetime = Field(
-        ..., examples=["2023-07-27T20:30:00.000Z"]
+    eventStartDateTime: AwareDatetime | None = Field(
+        None, examples=["2023-07-27T20:30:00.000Z"]
     )
     """
     Event start date and time
     """
     eventEndDateTime: AwareDatetime | None = Field(
-        ..., examples=["2023-07-27T20:30:00.000Z"]
+        None, examples=["2023-07-27T20:30:00.000Z"]
     )
     """
     Event end date and time
     """
     notificationOfSiteVisit: AwareDatetime | None = Field(
-        ..., examples=["2023-07-27T20:30:00.000Z"]
+        None, examples=["2023-07-27T20:30:00.000Z"]
     )
     """
     The date third-parties were informed of the site visit event
     """
-    addressLine1: str | None = Field(..., examples=["96 The Avenue"])
+    addressLine1: str | None = Field(None, examples=["96 The Avenue"])
     """
     First line of address for the event site
     """
@@ -102,15 +103,15 @@ class AppealEvent(BaseModel):
     """
     Second line of address for the event site
     """
-    addressTown: str | None = Field(..., examples=["Maidstone"])
+    addressTown: str | None = Field(None, examples=["Maidstone"])
     """
     Town / City of the event address
     """
-    addressCounty: str | None = Field(..., examples=["Kent"])
+    addressCounty: str | None = Field(None, examples=["Kent"])
     """
     County of the event address
     """
-    addressPostcode: str | None = Field(..., examples=["MD21 5XY"])
+    addressPostcode: str | None = Field(None, examples=["MD21 5XY"])
     """
     Postal code of the event address
     """

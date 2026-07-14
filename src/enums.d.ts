@@ -307,6 +307,7 @@ export const APPEAL_EVENT_STATUS = {
   LINK_TO_ENFORCEMENT: 'link_to_enforcement',
   NEW_RESCHEDULED: 'new_rescheduled',
   OFFERED: 'offered',
+  PENDING: 'pending',
   POSTPONED: 'postponed',
   WITHDRAWN: 'withdrawn',
 } as const;

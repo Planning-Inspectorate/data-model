@@ -53,6 +53,22 @@ describe(schema, () => {
 		assert.strictEqual(validationResult, true);
 	});
 
+	it('should allow eventStatus to be pending, eventStartDateTime to be null, and address fields to be omitted', () => {
+		const test = {
+			eventId: 'ipsum ut proident Ut',
+			caseReference: 'irure dolore in exercitation elit',
+			eventType: 'site_visit_accompanied',
+			eventName: 'minim anim',
+			eventStatus: 'pending',
+			isUrgent: true,
+			eventPublished: false,
+			eventStartDateTime: null
+		};
+
+		const validationResult = ajv.validate(schema, test);
+		assert.strictEqual(validationResult, true);
+	});
+
 	it('should allow additional props', () => {
 		const test = structuredClone(event);
 		test.test = 1; // additional unknown prop allowed

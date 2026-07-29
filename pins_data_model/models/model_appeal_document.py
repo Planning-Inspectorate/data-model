@@ -153,6 +153,10 @@ class DocumentType(Enum):
     designAccessStatementLPA = "designAccessStatementLPA"
     plansDrawingsLPA = "plansDrawingsLPA"
     additionalDocumentsLPA = "additionalDocumentsLPA"
+    generalSupporting = "generalSupporting"
+    hearingProcess = "hearingProcess"
+    inquiryCore = "inquiryCore"
+    inquiryPostEvent = "inquiryPostEvent"
     NoneType_None = None
 
 

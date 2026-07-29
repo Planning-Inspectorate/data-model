@@ -180,6 +180,10 @@ export interface AppealDocument {
     | 'designAccessStatementLPA'
     | 'plansDrawingsLPA'
     | 'additionalDocumentsLPA'
+    | 'generalSupporting'
+    | 'hearingProcess'
+    | 'inquiryCore'
+    | 'inquiryPostEvent'
     | null;
   /**
    * The system mastering the metadata for the current document

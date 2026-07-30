@@ -785,6 +785,7 @@ export type AppealHASCase = (GridReference | SiteAddress) & {
     | 'minor-commercial-development'
     | 'advertisement'
     | 'lawful-development-certificate'
+    | 'permission-in-principle'
     | null;
   siteGridReferenceEasting?: string | null;
   siteGridReferenceNorthing?: string | null;
@@ -1528,6 +1529,7 @@ export type AppealS78Case = (GridReference | SiteAddress) & {
     | 'advertisement'
     | 'lawful-development-certificate'
     | 'discontinuance-notice'
+    | 'permission-in-principle'
     | null;
   developmentType:
     | 'householder'
@@ -3733,6 +3735,7 @@ export type AppellantCommonSubmissionProperties = (
     | 'minor-commercial-development'
     | 'advertisement'
     | 'lawful-development-certificate'
+    | 'permission-in-principle'
     | null;
   /**
    * Indicates if the appellant has applied for costs

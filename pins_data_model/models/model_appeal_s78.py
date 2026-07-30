@@ -285,6 +285,7 @@ class TypeOfPlanningApplication(Enum):
     advertisement = "advertisement"
     lawful_development_certificate = "lawful-development-certificate"
     discontinuance_notice = "discontinuance-notice"
+    permission_in_principle = "permission-in-principle"
     NoneType_None = None
 
 

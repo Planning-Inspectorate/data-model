@@ -2514,6 +2514,7 @@ Indicates if the appellant has applied for costs
 | `"minor-commercial-development"`       |             |
 | `"advertisement"`                      |             |
 | `"lawful-development-certificate"`     |             |
+| `"permission-in-principle"`            |             |
 | `null`                                 |             |
 
 ## siteGridReferenceEasting

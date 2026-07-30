@@ -3692,6 +3692,7 @@ The net gain in residences of the proposed development
 | `"advertisement"`                      |             |
 | `"lawful-development-certificate"`     |             |
 | `"discontinuance-notice"`              |             |
+| `"permission-in-principle"`            |             |
 | `null`                                 |             |
 
 ## developmentType

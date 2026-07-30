@@ -97,6 +97,13 @@ describe('S78 submission command schema', () => {
 		assert.strictEqual(validationResult, true);
 	});
 
+	it('should allow permission-in-principle for typeOfPlanningApplication', () => {
+		const test = structuredClone(exampleS78SubmissionSchema);
+		test.casedata.typeOfPlanningApplication = 'permission-in-principle';
+		const validationResult = ajv.validate(schema, test);
+		assert.strictEqual(validationResult, true);
+	});
+
 	it('should enforce eastings-northings pattern', () => {
 		const invalidPatterns = [
 			{ easting: 'abc123', northing: '400534', description: 'easting with letters' },

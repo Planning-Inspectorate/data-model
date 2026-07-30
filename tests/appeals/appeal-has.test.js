@@ -322,4 +322,11 @@ describe(schema, () => {
 		const validationResult = ajv.validate(schema, test);
 		assert.strictEqual(validationResult, true);
 	});
+
+	it('should allow permission-in-principle for typeOfPlanningApplication', () => {
+		const test = structuredClone(appealHas);
+		test.typeOfPlanningApplication = 'permission-in-principle';
+		const validationResult = ajv.validate(schema, test);
+		assert.strictEqual(validationResult, true);
+	});
 });

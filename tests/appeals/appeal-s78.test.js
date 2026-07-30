@@ -276,4 +276,11 @@ describe(schema, () => {
 			assert.strictEqual(validationResult, true);
 		});
 	});
+
+	it('should allow permission-in-principle for typeOfPlanningApplication', () => {
+		const test = structuredClone(appealS78);
+		test.typeOfPlanningApplication = 'permission-in-principle';
+		const validationResult = ajv.validate(schema, test);
+		assert.strictEqual(validationResult, true);
+	});
 });

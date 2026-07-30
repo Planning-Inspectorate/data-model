@@ -230,6 +230,7 @@ class TypeOfPlanningApplication(Enum):
     minor_commercial_development = "minor-commercial-development"
     advertisement = "advertisement"
     lawful_development_certificate = "lawful-development-certificate"
+    permission_in_principle = "permission-in-principle"
     NoneType_None = None
 
 

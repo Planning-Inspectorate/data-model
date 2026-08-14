@@ -124,6 +124,12 @@ const APPEAL_HAS_TYPE_OF_PLANNING_APPLICATION = Object.freeze({
   RESERVED_MATTERS: 'reserved-matters',
 });
 
+const APPEAL_UNDER_ACT_SECTION = Object.freeze({
+  EXISTING_DEVELOPMENT: 'existing-development',
+  PROPOSED_CHANGES_TO_A_LISTED_BUILDING: 'proposed-changes-to-a-listed-building',
+  PROPOSED_USE_OF_A_DEVELOPMENT: 'proposed-use-of-a-development',
+});
+
 const APPEAL_ALLOCATION_LEVEL = Object.freeze({
   A: 'A',
   B: 'B',
@@ -133,12 +139,6 @@ const APPEAL_ALLOCATION_LEVEL = Object.freeze({
   F: 'F',
   G: 'G',
   H: 'H',
-});
-
-const APPEAL_APPEAL_UNDER_ACT_SECTION = Object.freeze({
-  EXISTING_DEVELOPMENT: 'existing-development',
-  PROPOSED_CHANGES_TO_A_LISTED_BUILDING: 'proposed-changes-to-a-listed-building',
-  PROPOSED_USE_OF_A_DEVELOPMENT: 'proposed-use-of-a-development',
 });
 
 const APPEAL_APPELLANT_PROCEDURE_PREFERENCE = Object.freeze({
@@ -912,6 +912,9 @@ const STATUS = Object.freeze({
   UNCHECKED: 'unchecked',
 });
 
+/** @deprecated use APPEAL_UNDER_ACT_SECTION **/
+const APPEAL_APPEAL_UNDER_ACT_SECTION = APPEAL_UNDER_ACT_SECTION;
+
 const __dirname$1 = path.dirname(url.fileURLToPath((typeof document === 'undefined' ? require('u' + 'rl').pathToFileURL(__filename).href : (_documentCurrentScript && _documentCurrentScript.tagName.toUpperCase() === 'SCRIPT' && _documentCurrentScript.src || new URL('index.cjs', document.baseURI).href))));
 
 const schemasPath = path.join(__dirname$1, '..', 'schemas');
@@ -981,6 +984,7 @@ exports.APPEAL_REPRESENTATION_TYPE = APPEAL_REPRESENTATION_TYPE;
 exports.APPEAL_SOURCE = APPEAL_SOURCE;
 exports.APPEAL_SOURCE_SYSTEM = APPEAL_SOURCE_SYSTEM;
 exports.APPEAL_TYPE_OF_PLANNING_APPLICATION = APPEAL_TYPE_OF_PLANNING_APPLICATION;
+exports.APPEAL_UNDER_ACT_SECTION = APPEAL_UNDER_ACT_SECTION;
 exports.APPEAL_VIRUS_CHECK_STATUS = APPEAL_VIRUS_CHECK_STATUS;
 exports.APPLICATION_UPDATE_STATUS = APPLICATION_UPDATE_STATUS;
 exports.CASE_STAGE = CASE_STAGE;

@@ -57,7 +57,10 @@ export function generateEnumMap(enums) {
 
 	for (const e of enums) {
 		const prefix = schemaPrefix(e.schemaName);
-		const key = prefix ? prefix + '_' + e.key : e.key;
+		let key = e.key;
+		if (prefix && !key.startsWith(prefix)) {
+			key = prefix + '_' + key;
+		}
 
 		const existingEnum = enumProps[key];
 		const thisEnum = e.values;

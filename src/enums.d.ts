@@ -41,6 +41,12 @@ export const APPEAL_HAS_TYPE_OF_PLANNING_APPLICATION = {
   RESERVED_MATTERS: 'reserved-matters',
 } as const;
 
+export const APPEAL_UNDER_ACT_SECTION = {
+  EXISTING_DEVELOPMENT: 'existing-development',
+  PROPOSED_CHANGES_TO_A_LISTED_BUILDING: 'proposed-changes-to-a-listed-building',
+  PROPOSED_USE_OF_A_DEVELOPMENT: 'proposed-use-of-a-development',
+} as const;
+
 export const APPEAL_ALLOCATION_LEVEL = {
   A: 'A',
   B: 'B',
@@ -50,12 +56,6 @@ export const APPEAL_ALLOCATION_LEVEL = {
   F: 'F',
   G: 'G',
   H: 'H',
-} as const;
-
-export const APPEAL_APPEAL_UNDER_ACT_SECTION = {
-  EXISTING_DEVELOPMENT: 'existing-development',
-  PROPOSED_CHANGES_TO_A_LISTED_BUILDING: 'proposed-changes-to-a-listed-building',
-  PROPOSED_USE_OF_A_DEVELOPMENT: 'proposed-use-of-a-development',
 } as const;
 
 export const APPEAL_APPELLANT_PROCEDURE_PREFERENCE = {
@@ -829,3 +829,5 @@ export const STATUS = {
   UNCHECKED: 'unchecked',
 } as const;
 
+/** @deprecated use APPEAL_UNDER_ACT_SECTION **/
+export const APPEAL_APPEAL_UNDER_ACT_SECTION = APPEAL_UNDER_ACT_SECTION;

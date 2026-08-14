@@ -72,6 +72,7 @@ describe('schemas', () => {
 	it('should use the singular form for $id', () => {
 		// very crude test to ensure schemas don't end in 's'...
 		const suffixExceptions = [
+			'address',
 			'has', // allow has suffix for appeals
 			'listed-buildings' // allow this temporary schema, to remove when this schema copy is removed
 		];

@@ -37,6 +37,11 @@ async function run() {
 		tsOutput += generateConstants(name, enumProps[name], { ts: true }) + NEW_LINE.repeat(2);
 	}
 
+	// for backwards compatibility, to remove once APPEAL_APPEAL_UNDER_ACT_SECTION isn't referenced
+	const forCompatibility = `/** @deprecated use APPEAL_UNDER_ACT_SECTION **/${NEW_LINE}export const APPEAL_APPEAL_UNDER_ACT_SECTION = APPEAL_UNDER_ACT_SECTION;`;
+	output += forCompatibility;
+	tsOutput += forCompatibility;
+
 	await fs.writeFile(constPath, output);
 	await fs.writeFile(constTsPath, tsOutput);
 }

@@ -190,6 +190,9 @@ export function schemaPrefix(schemaName) {
 	if (schemaName === 'message') {
 		return 'message';
 	}
+	if (schemaName.toLowerCase().includes('applications')) {
+		return 'application';
+	}
 	if (schemaName.toLowerCase().includes('appeal')) {
 		return 'appeal';
 	}

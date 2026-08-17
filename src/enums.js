@@ -5,12 +5,6 @@ export const APPEAL_HAS_CASE_DECISION_OUTCOME = Object.freeze({
   SPLIT_DECISION: 'split_decision',
 });
 
-export const APPEAL_HAS_CASE_PROCEDURE = Object.freeze({
-  HEARING: 'hearing',
-  INQUIRY: 'inquiry',
-  WRITTEN: 'written',
-});
-
 export const APPEAL_HAS_CASE_STATUS = Object.freeze({
   ASSIGN_CASE_OFFICER: 'assign_case_officer',
   AWAITING_EVENT: 'awaiting_event',

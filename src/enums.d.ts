@@ -5,12 +5,6 @@ export const APPEAL_HAS_CASE_DECISION_OUTCOME = {
   SPLIT_DECISION: 'split_decision',
 } as const;
 
-export const APPEAL_HAS_CASE_PROCEDURE = {
-  HEARING: 'hearing',
-  INQUIRY: 'inquiry',
-  WRITTEN: 'written',
-} as const;
-
 export const APPEAL_HAS_CASE_STATUS = {
   ASSIGN_CASE_OFFICER: 'assign_case_officer',
   AWAITING_EVENT: 'awaiting_event',

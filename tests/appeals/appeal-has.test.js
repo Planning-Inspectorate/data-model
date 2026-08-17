@@ -329,4 +329,38 @@ describe(schema, () => {
 		const validationResult = ajv.validate(schema, test);
 		assert.strictEqual(validationResult, true);
 	});
+
+	describe('caseProcedure schema validation (Group A - HAS)', () => {
+		it('should accept existing values: written, hearing, inquiry', () => {
+			for (const proc of ['written', 'hearing', 'inquiry']) {
+				const test = structuredClone(appealHas);
+				test.caseProcedure = proc;
+				const validationResult = ajv.validate(schema, test);
+				assert.strictEqual(validationResult, true, `Expected caseProcedure "${proc}" to be valid`);
+			}
+		});
+
+		it('should accept new expedited appeal values: writtenPart1, writtenPart2', () => {
+			for (const proc of ['writtenPart1', 'writtenPart2']) {
+				const test = structuredClone(appealHas);
+				test.caseProcedure = proc;
+				const validationResult = ajv.validate(schema, test);
+				assert.strictEqual(validationResult, true, `Expected caseProcedure "${proc}" to be valid`);
+			}
+		});
+
+		it('should accept null value for caseProcedure', () => {
+			const test = structuredClone(appealHas);
+			test.caseProcedure = null;
+			const validationResult = ajv.validate(schema, test);
+			assert.strictEqual(validationResult, true, 'Expected caseProcedure null to be valid');
+		});
+
+		it('should reject invalid caseProcedure values', () => {
+			const test = structuredClone(appealHas);
+			test.caseProcedure = 'invalidProcedure';
+			const validationResult = ajv.validate(schema, test);
+			assert.strictEqual(validationResult, false, 'Expected invalid caseProcedure value to fail validation');
+		});
+	});
 });

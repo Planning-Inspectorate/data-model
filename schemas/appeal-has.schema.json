@@ -135,8 +135,8 @@
       "description": "The internal code for an appeal type, e.g. D (Householder)"
     },
     "caseProcedure": {
-      "type": "string",
-      "enum": ["written", "hearing", "inquiry"],
+      "type": ["string", "null"],
+      "enum": ["written", "hearing", "inquiry", "writtenPart1", "writtenPart2", null],
       "description": "The type of procedure for the appeal"
     },
     "lpaCode": {

@@ -1,0 +1,118 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "applications-notify-email.schema.json",
+  "title": "Email Notification Record Schema",
+  "description": "Email Notifications for Casework Projects",
+  "type": "object",
+  "additionalProperties": true,
+  "required": ["id", "caseReference", "caseId", "caseType", "status", "lpaCode"],
+  "properties": {
+    "id": {
+      "type": "string",
+      "description": "Internal Identifier UUID",
+      "example": "AAAAAAAA-1234-1234-1234-AAAAAAAAAAAA"
+    },
+    "notifyId": {
+      "type": ["string", "null"],
+      "description": "Id used by Notify"
+    },
+    "reference": {
+      "type": "string",
+      "description": "Reference passed to notify (used to identify the case or representation it relates to)"
+    },
+    "caseReference": {
+      "type": "string",
+      "description": "Business Key for the related case",
+      "example": "CROWN/2025/12345"
+    },
+    "caseId": {
+      "type": "string",
+      "description": "The unique ID for the case this notification belongs to.",
+      "example": "AAAAAAAA-1234-1234-1234-AAAAAAAAAAAA"
+    },
+    "caseType": {
+      "type": "string",
+      "description": "The type of case this notification is for.",
+      "example": "Crown Development Application"
+    },
+    "createdDate": {
+      "type": ["string", "null"],
+      "format": "date-time",
+      "description": "Date the email was created"
+    },
+    "createdBy": {
+      "type": ["string", "null"],
+      "description": "Name of the person that triggered the email (only applies when done manually)"
+    },
+    "completedDate": {
+      "type": ["string", "null"],
+      "format": "date-time",
+      "description": "When the email completed (succeeded or failed)"
+    },
+    "email": {
+      "type": ["string", "null"],
+      "format": "email",
+      "description": "Email address sent to if unable to be linked to an LPA or Contact"
+    },
+    "contact": {
+      "type": ["array", "null"],
+      "description": "Contact(s) the email was sent to",
+      "items": {
+        "$ref": "#/$defs/Contact"
+      }
+    },
+    "lpaCode": {
+      "type": "string",
+      "description": "Planning Body code",
+      "example": "Z0116"
+    },
+    "emailStatus": {
+      "type": "string",
+      "description": "Outcome of the email (status)",
+      "enum": ["Sending", "Delivered", "Permanent failure", "Temporary failure", "Technical failure"],
+      "example": "Delivered"
+    },
+    "templateId": {
+      "type": ["string", "null"],
+      "description": "The id of the template sent in Notify"
+    },
+    "templateVersion": {
+      "type": ["integer", "null"],
+      "description": "The version of the template sent"
+    },
+    "body": {
+      "type": ["string", "null"],
+      "description": "The full HTML/plain text body of the email"
+    },
+    "subject": {
+      "type": ["string", "null"],
+      "description": "The full HTML/plain text subject of the email"
+    }
+  },
+  "$defs": {
+    "Contact": {
+      "type": "object",
+      "description": "Contact the email was sent to",
+      "required": ["contactId", "addressId"],
+      "properties": {
+        "contactId": {
+          "type": "string",
+          "description": "Source PK for Contact",
+          "example": "AAAAAAAA-1234-1234-1234-AAAAAAAAAAAA"
+        },
+        "contactPreference": {
+          "type": ["string", "null"],
+          "enum": ["email", "post"],
+          "description": "Preferred contact method",
+          "example": "email"
+        },
+        "writtenRepOrgName": {
+          "type": ["string", "null"]
+        },
+        "writtenRepJobTitleorRole": {
+          "type": ["string", "null"]
+        }
+      }
+    }
+  }
+}

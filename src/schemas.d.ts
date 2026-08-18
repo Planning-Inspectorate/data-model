@@ -6,6 +6,54 @@
  */
 
 /**
+ * A schema to define the structure of an Address object in PINS.
+ */
+export interface PINSAddressSchema {
+  /**
+   * Primary Key for an Address.
+   */
+  addressDimKey: number;
+  /**
+   * The type of thing this address is for.
+   */
+  addressType?: 'site' | 'neighbouring' | 'organisation' | 'contact';
+  /**
+   * Business Key for the related case
+   */
+  caseReference: string;
+  /**
+   * The unique ID for the case this representation belongs to.
+   */
+  caseId: string;
+  /**
+   * The type of case this representation is for.
+   */
+  caseType: string;
+  /**
+   * Some sites may have a postcode, but do not have postal addresses.
+   */
+  description?: string | null;
+  line1?: string | null;
+  line2?: string | null;
+  townCity?: string | null;
+  county?: string | null;
+  postcode?: string | null;
+  country?: string | null;
+  easting?: string | null;
+  northing?: string | null;
+  latitudeWGS84?: number | null;
+  longitudeWGS84?: number | null;
+  /**
+   * The Unique Property Reference Number (UPRN) is a unique number (a geocode) for every addressable location—e.g., a building, a bus stop, a post box, a feature in the landscape, or a defibrillator—in Great Britain.
+   */
+  UPRN?: string | null;
+  dependentRequired?: {
+    [k: string]: unknown;
+  };
+  [k: string]: unknown;
+}
+
+/**
  * Schema defining the metadata for appeal documents
  */
 export interface AppealDocument {
@@ -1806,6 +1854,631 @@ export interface ApplicationUpdateSchema {
   unpublishedDate?: string | null;
   lastEdited?: string | null;
   [k: string]: unknown;
+}
+
+/**
+ * Main application details for Crown Development Project
+ */
+export interface CrownDevelopmentApplication {
+  /**
+   * Internal Identifier UUID
+   */
+  id: string;
+  /**
+   * External Identifier: CROWN/YYYY/XXXXXXX
+   */
+  reference: string;
+  /**
+   * Date the case was created
+   */
+  createdDate: string;
+  /**
+   * Date the case was updated
+   */
+  updatedDate?: string | null;
+  /**
+   * Type of application. Name displayed to users
+   */
+  type:
+    | 'Planning permission'
+    | 'Outline planning permission with some matters reserved'
+    | 'Outline planning permission with all matters reserved'
+    | 'Approval of reserved matters following outline approval'
+    | 'Planning permission and listed building consent (LBC) for alterations, extension or demolition of a listed building';
+  /**
+   * SubType applies to Planning permissions and LBC
+   */
+  subType?: ('Planning permission' | 'Listed building consent (LBC)') | null;
+  /**
+   * Self-referencial for parent to children relationship
+   */
+  linkedParentId?: string | null;
+  /**
+   * Description of the project
+   */
+  description?: string | null;
+  /**
+   * Primary Planning Body code
+   */
+  primaryLPACode?: string;
+  /**
+   * Secondary LPAs when project overlaps authorities
+   */
+  secondaryLPACode?: string | null;
+  /**
+   * Is an agent assigned to the case on behalf of the applicant
+   */
+  hasAgent: boolean;
+  /**
+   * Applications can have one or more organisaitons associated with them.
+   */
+  organisations?: Organisation[];
+  /**
+   * Site Address details
+   */
+  siteAddress?: Address[] | null;
+  /**
+   * Easting of the site, if known
+   */
+  siteEasting?: string | null;
+  /**
+   * Northing of the site, if known
+   */
+  siteNorthing?: string | null;
+  /**
+   * Site area in hectares
+   */
+  siteArea?: number | null;
+  /**
+   * Date case officer expects the application to be submitted (NB: cases are created before document submissions as applicants upload directly)
+   */
+  expectedDateOfSubmission?: string;
+  /**
+   * Current status of the case (enum)
+   */
+  applicationStatus?:
+    | 'New'
+    | 'Accepted'
+    | 'Invalid'
+    | 'Consultation period open'
+    | 'Hearing/Inquiry date set'
+    | 'Application on hold awaiting further information'
+    | 'Report awaited'
+    | 'Report sent to Decision Branch'
+    | 'Decision awaited'
+    | 'Decided'
+    | 'Withdrawn'
+    | 'Declined to determine'
+    | 'Closed - invalid'
+    | 'Closed - opened in error';
+  /**
+   * Current stage of the case (enum)
+   */
+  applicationStage?:
+    | (
+        | 'Accepted'
+        | 'Consultation'
+        | 'Procedure choice'
+        | 'Written representations'
+        | 'Inquiry'
+        | 'Hearing/Inquiry date set'
+        | 'Final decision'
+      )
+    | null;
+  /**
+   * Site is nationally important (Yes/No)
+   */
+  nationallyImportant?: boolean | null;
+  /**
+   * Date the application's national importance was confirmed
+   */
+  nationallyImportantConfirmationDate?: string | null;
+  /**
+   * Flags if a notNationallyImportant email has been sent
+   */
+  notNationallyImportantEmailSent?: boolean | null;
+  /**
+   * Highlights the cases as containing distressing content
+   */
+  containsDistressingContent?: boolean | null;
+  /**
+   * LPA cross reference. Reference number for the case as known by the Local Planning Authority (LPA)
+   */
+  lpaReference?: string | null;
+  /**
+   * Application category (enum)
+   */
+  category?:
+    | (
+        | 'Major Development'
+        | 'Buildings over 1000 square metres'
+        | 'Development of a site above 1 hectare'
+        | 'Dwellings numbering 10 or more'
+        | 'Dwellings of 0.5 hectare or more'
+        | 'Minerals'
+        | 'Waste'
+        | 'Non-Major Development'
+        | 'Buildings less than 1000 square metres'
+        | 'Development of a site less than 1 hectare'
+        | 'Dwellings numbering between 1 and 9'
+        | 'Dwellings of less than 0.5 hectare'
+        | 'Change of use'
+        | 'Relevant demolition'
+        | 'Other'
+        | 'Listed building consent to alter/extend'
+        | 'Listed building consent to demolish'
+      )
+    | null;
+  /**
+   * Is the site in green belt land
+   */
+  isGreenBelt?: boolean | null;
+  /**
+   * Does the Site has H&S Issue
+   */
+  healthAndSafetyIssue?: boolean | null;
+  /**
+   * Date the application was received
+   */
+  applicationReceivedDate?: string | null;
+  /**
+   * Flags if an applicationReceived email has been sent
+   */
+  applicationReceivedDateEmailSent?: boolean | null;
+  /**
+   * Date the application was accepted
+   */
+  applicationAcceptedDate?: string | null;
+  /**
+   * Date the lpa questionnaire was sent
+   */
+  lpaQuestionnaireSentDate?: string | null;
+  /**
+   * Date the lpa questionnaire was received
+   */
+  lpaQuestionnaireReceivedDate?: string | null;
+  /**
+   * Flags if an lpaQuestionnaireReceived email has been sent
+   */
+  lpaQuestionnaireReceivedEmailSent?: boolean | null;
+  /**
+   * Date the application was published to the portal
+   */
+  publishDate?: string | null;
+  /**
+   * Date the press notice was published
+   */
+  pressNoticeDate?: string | null;
+  /**
+   * Date the neighbours were notified by the LPA
+   */
+  neighboursNotifiedByLpaDate?: string | null;
+  /**
+   * Date the site notice was erected by the LPA
+   */
+  siteNoticeByLpaDate?: string | null;
+  /**
+   * Date the application should be decided by
+   */
+  targetDecisionDate?: string | null;
+  /**
+   * Extended date by which the application should be decided
+   */
+  extendedTargetDecisionDate?: string | null;
+  /**
+   * Date the application was recovered by the Secretary of State
+   */
+  recoveredDate?: string | null;
+  /**
+   * Date the Inspector's report was sent to the Secretary of State
+   */
+  recoveredReportSentDate?: string | null;
+  /**
+   * Date application was withdrawn
+   */
+  withdrawnDate?: string | null;
+  /**
+   * Date the application was decided on
+   */
+  decisionDate?: string | null;
+  /**
+   * Date of the original decision if later quashed
+   */
+  originalDecisionDate?: string | null;
+  /**
+   * As displayed to users
+   */
+  decisionOutcome?: ('Approved' | 'Approved with conditions' | 'Refused' | 'Withdrawn') | null;
+  /**
+   * Date application was turned away
+   */
+  turnedAwayDate?: string | null;
+  /**
+   * Date the representations was publish
+   */
+  representationsPublishDate?: string | null;
+  /**
+   * Start date of the representation period (starts at 00:00)
+   */
+  representationsPeriodStartDate?: string | null;
+  /**
+   * End date of the representation period (ends at 23:59)
+   */
+  representationsPeriodEndDate?: string | null;
+  /**
+   * EntraID for Inspector
+   */
+  inspector1Id?: string | null;
+  /**
+   * EntraID for Inspector
+   */
+  inspector2Id?: string | null;
+  /**
+   * EntraID for Inspector
+   */
+  inspector3Id?: string | null;
+  /**
+   * EntraID for Assessor
+   */
+  assessorInspectorId?: string | null;
+  /**
+   * EntraID for Case Officer
+   */
+  caseOfficerId?: string | null;
+  /**
+   * EntraID for Planning Officer
+   */
+  planningOfficerId?: string | null;
+  /**
+   * Does the application need an Environmental Impact Assessment
+   */
+  eiaScreening?: boolean | null;
+  /**
+   * What was the outcome of the Environmental Impact Assessment
+   */
+  eiaScreeningOutcome?: ('required' | 'not required') | null;
+  /**
+   * Date the environmental statement was received
+   */
+  environmentalStatementReceivedDate?: string | null;
+  /**
+   * Site is visible from public land (Yes/No or TRUE/FALSE tbc)
+   */
+  siteIsVisibleFromPublicLand?: boolean | null;
+  /**
+   * Name displayed to users
+   */
+  procedure?: ('Written Representations' | 'Hearing' | 'Inquiry') | null;
+  procedureNotificationDate?: string | null;
+  eventDate?: string | null;
+  eventPrepDuration?: number | null;
+  eventSittingDuration?: number | null;
+  eventReportingDuration?: number | null;
+  eventVenue?: string | null;
+  eventNotificationDate?: string | null;
+  eventIssuesReportPublishedDate?: string | null;
+  eventStatementsDate?: string | null;
+  eventCaseManagementConferenceDate?: string | null;
+  eventPreMeetingDate?: string | null;
+  eventProofsOfEvidenceDate?: string | null;
+  /**
+   * Application has associated Fee (Yes/No or TRUE/FALSE tbc)
+   */
+  hasApplicationFee?: boolean | null;
+  /**
+   * The amount to be payed by the Applicant
+   */
+  applicationFee?: number | null;
+  /**
+   * Date the application fee was received
+   */
+  applicationFeeReceivedDate?: string | null;
+  /**
+   * Is the applicant eligible for a refund on the fee
+   */
+  eligibleForFeeRefund?: boolean | null;
+  /**
+   * The amount to be refunded to the Applicant
+   */
+  applicationFeeRefundAmount?: number | null;
+  /**
+   * Date the application fee was refunded
+   */
+  applicationFeeRefundDate?: string | null;
+  /**
+   * Date the site was/is going to be visited by the inspector
+   */
+  siteVisitDate?: string | null;
+  /**
+   * Is the application liable for a community infrastructure levy
+   */
+  cilLiable?: boolean | null;
+  /**
+   * The amount for the community infrastructure levy
+   */
+  cilAmount?: number | null;
+  /**
+   * Is the site exempt from the Biodiversity Net Gain
+   */
+  bngExempt?: boolean | null;
+  /**
+   * If a party is making a cost claim against another for unreasonable behaviour
+   */
+  hasCostsApplications?: boolean | null;
+  /**
+   * Details about the cost application
+   */
+  costsApplicationsComment?: string | null;
+  /**
+   * Does the application have an Environmental Impact Assessment - used for context in emails to LPAs
+   */
+  environmentalImpactAssessment?: boolean | null;
+  /**
+   * Is the application a standard development plan - used for context in emails to LPAs
+   */
+  developmentPlan?: boolean | null;
+  /**
+   * Does the application apply to rights of way - used for context in emails to LPAs
+   */
+  rightOfWay?: boolean | null;
+  [k: string]: unknown;
+}
+export interface Organisation {
+  /**
+   * Agent or Applicant details
+   */
+  roleType?: 'agent' | 'applicant';
+  /**
+   * Source PK for Organisation
+   */
+  organisationId: string;
+  organisationName?: string | null;
+  organisationAddress?: Address[] | null;
+  /**
+   * An Organisation may be linked to one or more Contacts
+   */
+  contacts?: Contact[] | null;
+  [k: string]: unknown;
+}
+export interface Address {
+  line1?: string | null;
+  line2?: string | null;
+  townCity?: string | null;
+  county?: string | null;
+  postcode: string;
+  [k: string]: unknown;
+}
+export interface Contact {
+  /**
+   * Source PK for Contact
+   */
+  contactId: string;
+  contactPreference?: ('email' | 'post') | null;
+  /**
+   * Organisation Name used for written-representation on behalf of an organisation
+   */
+  writtenRepOrgName?: string | null;
+  /**
+   * Job Title or Role used for written-representation on behalf of an organisation
+   */
+  writtenRepJobTitleorRole?: string | null;
+  [k: string]: unknown;
+}
+
+/**
+ * Email Notifications for Casework Projects
+ */
+export interface EmailNotificationRecordSchema {
+  /**
+   * Internal Identifier UUID
+   */
+  id: string;
+  /**
+   * Id used by Notify
+   */
+  notifyId?: string | null;
+  /**
+   * Reference passed to notify (used to identify the case or representation it relates to)
+   */
+  reference?: string;
+  /**
+   * Business Key for the related case
+   */
+  caseReference: string;
+  /**
+   * The unique ID for the case this notification belongs to.
+   */
+  caseId: string;
+  /**
+   * The type of case this notification is for.
+   */
+  caseType: string;
+  /**
+   * Date the email was created
+   */
+  createdDate?: string | null;
+  /**
+   * Name of the person that triggered the email (only applies when done manually)
+   */
+  createdBy?: string | null;
+  /**
+   * When the email completed (succeeded or failed)
+   */
+  completedDate?: string | null;
+  /**
+   * Email address sent to if unable to be linked to an LPA or Contact
+   */
+  email?: string | null;
+  /**
+   * Contact(s) the email was sent to
+   */
+  contact?: Contact[] | null;
+  /**
+   * Planning Body code
+   */
+  lpaCode: string;
+  /**
+   * Outcome of the email (status)
+   */
+  emailStatus?: 'Sending' | 'Delivered' | 'Permanent failure' | 'Temporary failure' | 'Technical failure';
+  /**
+   * The id of the template sent in Notify
+   */
+  templateId?: string | null;
+  /**
+   * The version of the template sent
+   */
+  templateVersion?: number | null;
+  /**
+   * The full HTML/plain text body of the email
+   */
+  body?: string | null;
+  /**
+   * The full HTML/plain text subject of the email
+   */
+  subject?: string | null;
+  [k: string]: unknown;
+}
+/**
+ * Contact the email was sent to
+ */
+export interface Contact {
+  /**
+   * Source PK for Contact
+   */
+  contactId: string;
+  /**
+   * Preferred contact method
+   */
+  contactPreference?: ('email' | 'post') | null;
+  writtenRepOrgName?: string | null;
+  writtenRepJobTitleorRole?: string | null;
+}
+
+/**
+ * Representations and related document metadata for Casework Projects
+ */
+export interface CaseworkRepresentationSchema {
+  /**
+   * Primary key
+   */
+  id: string;
+  /**
+   * Auto-generated hexadecimal reference: AAAAA-BBBBB
+   */
+  reference: string;
+  /**
+   * Business Key for the related case
+   */
+  caseReference: string;
+  /**
+   * The unique ID for the case this representation belongs to.
+   */
+  caseId: string;
+  /**
+   * The type of case this representation is for.
+   */
+  caseType: string;
+  representationStatus?: 'Awaiting review' | 'Accepted' | 'Rejected' | 'Withdrawn';
+  submittedFor: 'Myself' | 'On behalf of another person or an organisation';
+  submittedByContact?: Contact[] | null;
+  submittedByAgentFlag?: boolean | null;
+  submittedByAgentOrgName?: string | null;
+  submittedDate: string;
+  /**
+   * How we received the representation
+   */
+  submittedReceivedMethod?: ('Online' | 'Phone' | 'Email' | 'Post' | 'In person') | null;
+  submissionMethodReason?: string | null;
+  comment: string;
+  /**
+   * redacted version of the comment, null if not redacted
+   */
+  commentRedacted?: string | null;
+  /**
+   * When representation is on behalf of a person/org/group
+   */
+  representedType?:
+    | (
+        | 'A person'
+        | 'An organisation or charity I work or volunteer for'
+        | 'An organisation or charity I do not work or volunteer for'
+      )
+    | null;
+  /**
+   * When representation is on behalf of a person/org/group
+   */
+  representedContact?: Contact[] | null;
+  representedCategory?: ('Consultees' | 'Interested party') | null;
+  /**
+   * Internal: wants to be heard at a hearing
+   */
+  wantsToBeHeard?: boolean | null;
+  /**
+   * Is a document attached to the representation
+   */
+  containsAttachments?: boolean | null;
+  /**
+   * to avoid creating new folders for documents when managing representations
+   */
+  sharePointFolderCreated?: boolean | null;
+  /**
+   * Flags the representation as containing distressing content
+   */
+  distressingContentInRepresentation?: boolean | null;
+  /**
+   * Date the representing party requested that the representation be withdrawn
+   */
+  withdrawalRequestDate?: string | null;
+  /**
+   * Reason for the withdrawal
+   */
+  withdrawalReason?: ('Change of opinion' | 'Mistaken Submission' | 'Misunderstanding' | 'Personal Reasons') | null;
+  /**
+   * Date the representation was withdrawn
+   */
+  dateWithdrawn?: string | null;
+  representationDocuments?: RepresentationDocument[] | null;
+  [k: string]: unknown;
+}
+export interface Contact {
+  /**
+   * Source PK for Contact
+   */
+  contactId: string;
+  contactPreference?: ('email' | 'post') | null;
+  writtenRepOrgName?: string | null;
+  writtenRepJobTitleorRole?: string | null;
+}
+export interface RepresentationDocument {
+  /**
+   * Source Key for Representation Document
+   */
+  id: string;
+  /**
+   * The representation this relates to
+   */
+  representationId: string;
+  /**
+   * The id of the item in SharePoint
+   */
+  itemId: string;
+  /**
+   * The name of the file
+   */
+  fileName: string;
+  /**
+   * The id of the redacted version of the item in sharepoint
+   */
+  redactedItemId?: string | null;
+  /**
+   * the name of the redacted file
+   */
+  redactedFileName?: string | null;
+  /**
+   * The status of the document
+   */
+  status: 'Awaiting review' | 'Accepted' | 'Rejected' | 'Withdrawn';
 }
 
 /**
@@ -5176,13 +5849,17 @@ export interface InterestedParty1 {
 
 export type SchemaMap = {
   schemas: {
+    'address.schema.json': PINSAddressSchema;
     'appeal-document.schema.json': AppealDocument;
     'appeal-event-estimate.schema.json': AppealEventEstimate;
     'appeal-event.schema.json': AppealEvent;
     'appeal-has.schema.json': AppealHASCase;
     'appeal-representation.schema.json': AppealRepresentation;
     'appeal-s78.schema.json': AppealS78Case;
-    'application-update.schema.json': ApplicationUpdateSchema;
+    'applications-application-update.schema.json': ApplicationUpdateSchema;
+    'applications-application.schema.json': CrownDevelopmentApplication;
+    'applications-notify-email.schema.json': EmailNotificationRecordSchema;
+    'applications-representation.schema.json': CaseworkRepresentationSchema;
     'dart-response.schema.json': DaRTAPIResponse;
     'entraid.schema.json': EntraIDUserObjects;
     'folder.schema.json': Folder;

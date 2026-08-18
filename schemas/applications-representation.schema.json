@@ -1,0 +1,202 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "applications-representation.schema.json",
+  "title": "Casework Representation Schema",
+  "description": "Representations and related document metadata for Casework Projects",
+  "type": "object",
+  "additionalProperties": true,
+  "required": [
+    "id",
+    "reference",
+    "caseReference",
+    "caseId",
+    "caseType",
+    "status",
+    "submittedFor",
+    "submittedDate",
+    "comment"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "description": "Primary key",
+      "example": "AAAAAAAA-1234-1234-1234-AAAAAAAAAAAA"
+    },
+    "reference": {
+      "type": "string",
+      "description": "Auto-generated hexadecimal reference: AAAAA-BBBBB"
+    },
+    "caseReference": {
+      "type": "string",
+      "description": "Business Key for the related case",
+      "example": "CROWN/2025/12345"
+    },
+    "caseId": {
+      "type": "string",
+      "description": "The unique ID for the case this representation belongs to.",
+      "example": "AAAAAAAA-1234-1234-1234-AAAAAAAAAAAA"
+    },
+    "caseType": {
+      "type": "string",
+      "description": "The type of case this representation is for.",
+      "example": "Crown Development Application"
+    },
+    "representationStatus": {
+      "type": "string",
+      "enum": ["Awaiting review", "Accepted", "Rejected", "Withdrawn"]
+    },
+    "submittedFor": {
+      "type": "string",
+      "enum": ["Myself", "On behalf of another person or an organisation"]
+    },
+    "submittedByContact": {
+      "type": ["array", "null"],
+      "items": {
+        "$ref": "#/definitions/contact"
+      }
+    },
+    "submittedByAgentFlag": {
+      "type": ["boolean", "null"]
+    },
+    "submittedByAgentOrgName": {
+      "type": ["string", "null"]
+    },
+    "submittedDate": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "submittedReceivedMethod": {
+      "type": ["string", "null"],
+      "description": "How we received the representation",
+      "enum": ["Online", "Phone", "Email", "Post", "In person"]
+    },
+    "submissionMethodReason": {
+      "type": ["string", "null"]
+    },
+    "comment": {
+      "type": "string"
+    },
+    "commentRedacted": {
+      "type": ["string", "null"],
+      "description": "redacted version of the comment, null if not redacted"
+    },
+    "representedType": {
+      "type": ["string", "null"],
+      "description": "When representation is on behalf of a person/org/group",
+      "enum": [
+        "A person",
+        "An organisation or charity I work or volunteer for",
+        "An organisation or charity I do not work or volunteer for"
+      ]
+    },
+    "representedContact": {
+      "type": ["array", "null"],
+      "items": {
+        "$ref": "#/definitions/contact"
+      },
+      "description": "When representation is on behalf of a person/org/group"
+    },
+    "representedCategory": {
+      "type": ["string", "null"],
+      "enum": ["Consultees", "Interested party"]
+    },
+    "wantsToBeHeard": {
+      "type": ["boolean", "null"],
+      "description": "Internal: wants to be heard at a hearing"
+    },
+    "containsAttachments": {
+      "type": ["boolean", "null"],
+      "description": "Is a document attached to the representation"
+    },
+    "sharePointFolderCreated": {
+      "type": ["boolean", "null"],
+      "description": "to avoid creating new folders for documents when managing representations"
+    },
+    "distressingContentInRepresentation": {
+      "type": ["boolean", "null"],
+      "description": "Flags the representation as containing distressing content"
+    },
+    "withdrawalRequestDate": {
+      "type": ["string", "null"],
+      "format": "date-time",
+      "description": "Date the representing party requested that the representation be withdrawn"
+    },
+    "withdrawalReason": {
+      "type": ["string", "null"],
+      "description": "Reason for the withdrawal",
+      "enum": ["Change of opinion", "Mistaken Submission", "Misunderstanding", "Personal Reasons"]
+    },
+    "dateWithdrawn": {
+      "type": ["string", "null"],
+      "format": "date-time",
+      "description": "Date the representation was withdrawn"
+    },
+    "representationDocuments": {
+      "type": ["array", "null"],
+      "items": {
+        "$ref": "#/definitions/representationDocument"
+      }
+    }
+  },
+  "definitions": {
+    "contact": {
+      "type": "object",
+      "required": ["contactId"],
+      "properties": {
+        "contactId": {
+          "type": "string",
+          "description": "Source PK for Contact",
+          "example": "AAAAAAAA-1234-1234-1234-AAAAAAAAAAAA"
+        },
+        "contactPreference": {
+          "type": ["string", "null"],
+          "example": "email",
+          "enum": ["email", "post"]
+        },
+        "writtenRepOrgName": {
+          "type": ["string", "null"]
+        },
+        "writtenRepJobTitleorRole": {
+          "type": ["string", "null"]
+        }
+      }
+    },
+    "representationDocument": {
+      "type": "object",
+      "required": ["id", "representationId", "itemId", "fileName", "status"],
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "Source Key for Representation Document",
+          "example": "AAAAAAAA-1234-1234-1234-AAAAAAAAAAAA"
+        },
+        "representationId": {
+          "type": "string",
+          "description": "The representation this relates to",
+          "example": "AAAAAAAA-1234-1234-1234-AAAAAAAAAAAA"
+        },
+        "itemId": {
+          "type": "string",
+          "description": "The id of the item in SharePoint"
+        },
+        "fileName": {
+          "type": "string",
+          "description": "The name of the file"
+        },
+        "redactedItemId": {
+          "type": ["string", "null"],
+          "description": "The id of the redacted version of the item in sharepoint"
+        },
+        "redactedFileName": {
+          "type": ["string", "null"],
+          "description": "the name of the redacted file"
+        },
+        "status": {
+          "type": "string",
+          "description": "The status of the document",
+          "enum": ["Awaiting review", "Accepted", "Rejected", "Withdrawn"]
+        }
+      }
+    }
+  }
+}

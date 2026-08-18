@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "$id": "application-update.schema.json",
+  "$id": "applications-application-update.schema.json",
   "title": "Application Update Schema",
   "description": "Application Update for Casework Project",
   "type": "object",

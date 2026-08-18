@@ -1,0 +1,87 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "address.schema.json",
+  "title": "PINS Address Schema",
+  "description": "A schema to define the structure of an Address object in PINS.",
+  "type": "object",
+  "additionalProperties": true,
+  "required": ["addressDimKey", "caseReference", "caseId", "caseType"],
+  "properties": {
+    "addressDimKey": {
+      "type": "number",
+      "description": "Primary Key for an Address.",
+      "example": 12345
+    },
+    "addressType": {
+      "type": "string",
+      "description": "The type of thing this address is for.",
+      "example": "site",
+      "enum": ["site", "neighbouring", "organisation", "contact"]
+    },
+    "caseReference": {
+      "type": "string",
+      "description": "Business Key for the related case",
+      "example": "CROWN/2025/12345"
+    },
+    "caseId": {
+      "type": "string",
+      "description": "The unique ID for the case this representation belongs to.",
+      "example": "AAAAAAAA-1234-1234-1234-AAAAAAAAAAAA"
+    },
+    "caseType": {
+      "type": "string",
+      "description": "The type of case this representation is for.",
+      "example": "Crown Development Application"
+    },
+    "description": {
+      "type": ["string", "null"],
+      "description": "Some sites may have a postcode, but do not have postal addresses.",
+      "example": "The field behind the crown pub"
+    },
+    "line1": {
+      "type": ["string", "null"]
+    },
+    "line2": {
+      "type": ["string", "null"]
+    },
+    "townCity": {
+      "type": ["string", "null"]
+    },
+    "county": {
+      "type": ["string", "null"]
+    },
+    "postcode": {
+      "type": ["string", "null"]
+    },
+    "country": {
+      "type": ["string", "null"]
+    },
+    "easting": {
+      "type": ["string", "null"],
+      "example": "358267"
+    },
+    "northing": {
+      "type": ["string", "null"],
+      "example": "172797"
+    },
+    "latitudeWGS84": {
+      "type": ["number", "null"],
+      "example": 51.452608
+    },
+    "longitudeWGS84": {
+      "type": ["number", "null"],
+      "example": -2.6019821
+    },
+    "UPRN": {
+      "type": ["string", "null"],
+      "example": 100023336956,
+      "description": "The Unique Property Reference Number (UPRN) is a unique number (a geocode) for every addressable location—e.g., a building, a bus stop, a post box, a feature in the landscape, or a defibrillator—in Great Britain."
+    },
+    "dependentRequired": {
+      "easting": ["northing"],
+      "northing": ["easting"],
+      "latitudeWGS84": ["longitudeWGS84"],
+      "longitudeWGS84": ["latitudeWGS84"]
+    }
+  }
+}

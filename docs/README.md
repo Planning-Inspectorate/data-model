@@ -14,9 +14,15 @@
 
 * [Appeal S78 Case](./appeal-s78.md "Group B - Schema defining the metadata for an appeal") – `appeal-s78.schema.json`
 
-* [Application Update Schema](./application-update.md "Application Update for Casework Project") – `application-update.schema.json`
+* [Application Update Schema](./applications-application-update.md "Application Update for Casework Project") – `applications-application-update.schema.json`
+
+* [Casework Representation Schema](./applications-representation.md "Representations and related document metadata for Casework Projects") – `applications-representation.schema.json`
+
+* [Crown Development Application](./applications-application.md "Main application details for Crown Development Project") – `applications-application.schema.json`
 
 * [DaRT API response](./dart-response.md "Schema defining the data returned by the DaRT API") – `dart-response.schema.json`
+
+* [Email Notification Record Schema](./applications-notify-email.md "Email Notifications for Casework Projects") – `applications-notify-email.schema.json`
 
 * [Entra ID User Objects](./entraid.md "A list of users from EntraID") – `entraid.schema.json`
 
@@ -39,6 +45,8 @@
 * [NSIP Project](./nsip-project.md "Subset of Pins Data Model \[Case]") – `nsip-project.schema.json`
 
 * [NSIP Project Update](./nsip-project-update.md "NSIP Project Update (formerly known as Banners)") – `nsip-project-update.schema.json`
+
+* [PINS Address Schema](./address.md "A schema to define the structure of an Address object in PINS") – `address.schema.json`
 
 * [PINS Inspector](./pins-inspector.md "Inspector Details originating from Horizon, SAP HR and Entra") – `pins-inspector.schema.json`
 
@@ -76,7 +84,19 @@
 
 * [Untitled object in Appeal S78 Case](./appeal-s78-properties-significantchangesaffectingapplicationlpa-items.md) – `appeal-s78.schema.json#/properties/significantChangesAffectingApplicationLpa/items`
 
+* [Untitled object in Casework Representation Schema](./applications-representation-definitions-contact.md) – `applications-representation.schema.json#/definitions/contact`
+
+* [Untitled object in Casework Representation Schema](./applications-representation-definitions-representationdocument.md) – `applications-representation.schema.json#/definitions/representationDocument`
+
+* [Untitled object in Crown Development Application](./applications-application-defs-organisation.md) – `applications-application.schema.json#/$defs/organisation`
+
+* [Untitled object in Crown Development Application](./applications-application-defs-contact.md) – `applications-application.schema.json#/$defs/contact`
+
+* [Untitled object in Crown Development Application](./applications-application-defs-address.md) – `applications-application.schema.json#/$defs/address`
+
 * [Untitled object in DaRT API response](./dart-response-properties-neighbouringsiteaddresses-items.md) – `dart-response.schema.json#/properties/neighbouringSiteAddresses/items`
+
+* [Untitled object in Email Notification Record Schema](./applications-notify-email-defs-contact.md "Contact the email was sent to") – `applications-notify-email.schema.json#/$defs/Contact`
 
 * [Untitled object in Examination Timetable](./nsip-exam-timetable-defs-event.md) – `nsip-exam-timetable.schema.json#/$defs/event`
 
@@ -93,6 +113,8 @@
 ### Arrays
 
 * [Untitled array in Appeal Representation](./appeal-representation-properties-documentids.md "An array of documentIds") – `appeal-representation.schema.json#/properties/documentIds`
+
+* [Untitled array in Crown Development Application](./applications-application-properties-organisations.md "Applications can have one or more organisaitons associated with them") – `applications-application.schema.json#/properties/organisations`
 
 * [Untitled array in Examination Timetable](./nsip-exam-timetable-properties-events.md) – `nsip-exam-timetable.schema.json#/properties/events`
 

@@ -17,7 +17,7 @@ any of
 | [submissionId](#submissionid)                                                                       | `string`  | Optional | can be null    | [Appeal HAS Case](appeal-has-properties-submissionid.md "appeal-has.schema.json#/properties/submissionId")                                                                       |
 | [caseStatus](#casestatus)                                                                           | `string`  | Required | cannot be null | [Appeal HAS Case](appeal-has-properties-casestatus.md "appeal-has.schema.json#/properties/caseStatus")                                                                           |
 | [caseType](#casetype)                                                                               | `string`  | Required | cannot be null | [Appeal HAS Case](appeal-has-properties-casetype.md "appeal-has.schema.json#/properties/caseType")                                                                               |
-| [caseProcedure](#caseprocedure)                                                                     | `string`  | Required | cannot be null | [Appeal HAS Case](appeal-has-properties-caseprocedure.md "appeal-has.schema.json#/properties/caseProcedure")                                                                     |
+| [caseProcedure](#caseprocedure)                                                                     | `string`  | Required | can be null    | [Appeal HAS Case](appeal-has-properties-caseprocedure.md "appeal-has.schema.json#/properties/caseProcedure")                                                                     |
 | [lpaCode](#lpacode)                                                                                 | `string`  | Required | cannot be null | [Appeal HAS Case](appeal-has-properties-lpacode.md "appeal-has.schema.json#/properties/lpaCode")                                                                                 |
 | [caseOfficerId](#caseofficerid)                                                                     | `string`  | Required | can be null    | [Appeal HAS Case](appeal-has-properties-caseofficerid.md "appeal-has.schema.json#/properties/caseOfficerId")                                                                     |
 | [inspectorId](#inspectorid)                                                                         | `string`  | Required | can be null    | [Appeal HAS Case](appeal-has-properties-inspectorid.md "appeal-has.schema.json#/properties/inspectorId")                                                                         |
@@ -287,7 +287,7 @@ The type of procedure for the appeal
 
 * Type: `string`
 
-* cannot be null
+* can be null
 
 * defined in: [Appeal HAS Case](appeal-has-properties-caseprocedure.md "appeal-has.schema.json#/properties/caseProcedure")
 
@@ -299,11 +299,14 @@ The type of procedure for the appeal
 
 **enum**: the value of this property must be equal to one of the following values:
 
-| Value       | Explanation |
-| :---------- | :---------- |
-| `"written"` |             |
-| `"hearing"` |             |
-| `"inquiry"` |             |
+| Value            | Explanation |
+| :--------------- | :---------- |
+| `"written"`      |             |
+| `"hearing"`      |             |
+| `"inquiry"`      |             |
+| `"writtenPart1"` |             |
+| `"writtenPart2"` |             |
+| `null`           |             |
 
 ## lpaCode
 

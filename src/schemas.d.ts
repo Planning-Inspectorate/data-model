@@ -381,7 +381,7 @@ export type AppealHASCase = (GridReference | SiteAddress) & {
   /**
    * The type of procedure for the appeal
    */
-  caseProcedure: 'written' | 'hearing' | 'inquiry';
+  caseProcedure: 'written' | 'hearing' | 'inquiry' | 'writtenPart1' | 'writtenPart2' | null;
   /**
    * A unique identifier for the Local Planning Authority
    */

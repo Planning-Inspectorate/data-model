@@ -59,6 +59,9 @@ class CaseProcedure(Enum):
     written = "written"
     hearing = "hearing"
     inquiry = "inquiry"
+    writtenPart1 = "writtenPart1"
+    writtenPart2 = "writtenPart2"
+    NoneType_None = None
 
 
 class AllocationLevel(Enum):

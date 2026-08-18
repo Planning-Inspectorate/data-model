@@ -1,3 +1,10 @@
+export const ADDRESS_TYPE = Object.freeze({
+  CONTACT: 'contact',
+  NEIGHBOURING: 'neighbouring',
+  ORGANISATION: 'organisation',
+  SITE: 'site',
+});
+
 export const APPEAL_HAS_CASE_DECISION_OUTCOME = Object.freeze({
   ALLOWED: 'allowed',
   DISMISSED: 'dismissed',
@@ -435,10 +442,134 @@ export const APPEAL_VIRUS_CHECK_STATUS = Object.freeze({
   SCANNED: 'scanned',
 });
 
+export const APPLICATION_STAGE = Object.freeze({
+  ACCEPTED: 'Accepted',
+  CONSULTATION: 'Consultation',
+  FINAL_DECISION: 'Final decision',
+  HEARING_INQUIRY_DATE_SET: 'Hearing/Inquiry date set',
+  INQUIRY: 'Inquiry',
+  PROCEDURE_CHOICE: 'Procedure choice',
+  WRITTEN_REPRESENTATIONS: 'Written representations',
+});
+
+export const APPLICATION_STATUS = Object.freeze({
+  ACCEPTED: 'Accepted',
+  APPLICATION_ON_HOLD_AWAITING_FURTHER_INFORMATION: 'Application on hold awaiting further information',
+  CLOSED_INVALID: 'Closed - invalid',
+  CLOSED_OPENED_IN_ERROR: 'Closed - opened in error',
+  CONSULTATION_PERIOD_OPEN: 'Consultation period open',
+  DECIDED: 'Decided',
+  DECISION_AWAITED: 'Decision awaited',
+  DECLINED_TO_DETERMINE: 'Declined to determine',
+  HEARING_INQUIRY_DATE_SET: 'Hearing/Inquiry date set',
+  INVALID: 'Invalid',
+  NEW: 'New',
+  REPORT_AWAITED: 'Report awaited',
+  REPORT_SENT_TO_DECISION_BRANCH: 'Report sent to Decision Branch',
+  WITHDRAWN: 'Withdrawn',
+});
+
 export const APPLICATION_UPDATE_STATUS = Object.freeze({
   DRAFT: 'Draft',
   PUBLISHED: 'Published',
   UNPUBLISHED: 'Unpublished',
+});
+
+export const APPLICATION_CATEGORY = Object.freeze({
+  BUILDINGS_LESS_THAN_1000_SQUARE_METRES: 'Buildings less than 1000 square metres',
+  BUILDINGS_OVER_1000_SQUARE_METRES: 'Buildings over 1000 square metres',
+  CHANGE_OF_USE: 'Change of use',
+  DEVELOPMENT_OF_A_SITE_ABOVE_1_HECTARE: 'Development of a site above 1 hectare',
+  DEVELOPMENT_OF_A_SITE_LESS_THAN_1_HECTARE: 'Development of a site less than 1 hectare',
+  DWELLINGS_NUMBERING_10_OR_MORE: 'Dwellings numbering 10 or more',
+  DWELLINGS_NUMBERING_BETWEEN_1_AND_9: 'Dwellings numbering between 1 and 9',
+  DWELLINGS_OF_0_5_HECTARE_OR_MORE: 'Dwellings of 0.5 hectare or more',
+  DWELLINGS_OF_LESS_THAN_0_5_HECTARE: 'Dwellings of less than 0.5 hectare',
+  LISTED_BUILDING_CONSENT_TO_ALTER_EXTEND: 'Listed building consent to alter/extend',
+  LISTED_BUILDING_CONSENT_TO_DEMOLISH: 'Listed building consent to demolish',
+  MAJOR_DEVELOPMENT: 'Major Development',
+  MINERALS: 'Minerals',
+  NON_MAJOR_DEVELOPMENT: 'Non-Major Development',
+  OTHER: 'Other',
+  RELEVANT_DEMOLITION: 'Relevant demolition',
+  WASTE: 'Waste',
+});
+
+export const APPLICATION_DECISION_OUTCOME = Object.freeze({
+  APPROVED: 'Approved',
+  APPROVED_WITH_CONDITIONS: 'Approved with conditions',
+  REFUSED: 'Refused',
+  WITHDRAWN: 'Withdrawn',
+});
+
+export const APPLICATION_EIA_SCREENING_OUTCOME = Object.freeze({
+  NOT_REQUIRED: 'not required',
+  REQUIRED: 'required',
+});
+
+export const APPLICATION_EMAIL_STATUS = Object.freeze({
+  DELIVERED: 'Delivered',
+  PERMANENT_FAILURE: 'Permanent failure',
+  SENDING: 'Sending',
+  TECHNICAL_FAILURE: 'Technical failure',
+  TEMPORARY_FAILURE: 'Temporary failure',
+});
+
+export const APPLICATION_PROCEDURE = Object.freeze({
+  HEARING: 'Hearing',
+  INQUIRY: 'Inquiry',
+  WRITTEN_REPRESENTATIONS: 'Written Representations',
+});
+
+export const APPLICATION_REPRESENTATION_STATUS = Object.freeze({
+  ACCEPTED: 'Accepted',
+  AWAITING_REVIEW: 'Awaiting review',
+  REJECTED: 'Rejected',
+  WITHDRAWN: 'Withdrawn',
+});
+
+export const APPLICATION_REPRESENTED_CATEGORY = Object.freeze({
+  CONSULTEES: 'Consultees',
+  INTERESTED_PARTY: 'Interested party',
+});
+
+export const APPLICATION_REPRESENTED_TYPE = Object.freeze({
+  A_PERSON: 'A person',
+  AN_ORGANISATION_OR_CHARITY_I_DO_NOT_WORK_OR_VOLUNTEER_FOR: 'An organisation or charity I do not work or volunteer for',
+  AN_ORGANISATION_OR_CHARITY_I_WORK_OR_VOLUNTEER_FOR: 'An organisation or charity I work or volunteer for',
+});
+
+export const APPLICATION_SUB_TYPE = Object.freeze({
+  LISTED_BUILDING_CONSENT_LBC: 'Listed building consent (LBC)',
+  PLANNING_PERMISSION: 'Planning permission',
+});
+
+export const APPLICATION_SUBMITTED_FOR = Object.freeze({
+  MYSELF: 'Myself',
+  ON_BEHALF_OF_ANOTHER_PERSON_OR_AN_ORGANISATION: 'On behalf of another person or an organisation',
+});
+
+export const APPLICATION_SUBMITTED_RECEIVED_METHOD = Object.freeze({
+  EMAIL: 'Email',
+  IN_PERSON: 'In person',
+  ONLINE: 'Online',
+  PHONE: 'Phone',
+  POST: 'Post',
+});
+
+export const APPLICATION_TYPE = Object.freeze({
+  APPROVAL_OF_RESERVED_MATTERS_FOLLOWING_OUTLINE_APPROVAL: 'Approval of reserved matters following outline approval',
+  OUTLINE_PLANNING_PERMISSION_WITH_ALL_MATTERS_RESERVED: 'Outline planning permission with all matters reserved',
+  OUTLINE_PLANNING_PERMISSION_WITH_SOME_MATTERS_RESERVED: 'Outline planning permission with some matters reserved',
+  PLANNING_PERMISSION: 'Planning permission',
+  PLANNING_PERMISSION_AND_LISTED_BUILDING_CONSENT_LBC_FOR_ALTERATIONS_EXTENSION_OR_DEMOLITION_OF_A_LISTED_BUILDING: 'Planning permission and listed building consent (LBC) for alterations, extension or demolition of a listed building',
+});
+
+export const APPLICATION_WITHDRAWAL_REASON = Object.freeze({
+  CHANGE_OF_OPINION: 'Change of opinion',
+  MISTAKEN_SUBMISSION: 'Mistaken Submission',
+  MISUNDERSTANDING: 'Misunderstanding',
+  PERSONAL_REASONS: 'Personal Reasons',
 });
 
 export const CASE_STAGE = Object.freeze({

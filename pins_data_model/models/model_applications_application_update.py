@@ -3,12 +3,12 @@
 
 from __future__ import annotations
 
-from enum import StrEnum
+from enum import Enum
 
 from pydantic import AwareDatetime, BaseModel, ConfigDict, Field
 
 
-class ApplicationUpdateStatus(StrEnum):
+class ApplicationUpdateStatus(Enum):
     """
     Application Update Status. Name displayed to users, e.g. Draft
     """

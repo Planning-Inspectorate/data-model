@@ -1,5 +1,5 @@
-import { readFile, readdir } from 'fs/promises';
 import { readFileSync, readdirSync } from 'fs';
+import { readFile, readdir } from 'fs/promises';
 import { parse } from 'jsonc-parser';
 import path from 'path';
 

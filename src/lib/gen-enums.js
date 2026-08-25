@@ -1,8 +1,8 @@
 import fs from 'fs/promises';
 import path from 'path';
 import { loadAllSchemas } from '../index.js';
-import { loadSchema } from './load.js';
 import { collectEnumProps, generateConstants, generateEnumMap } from './gen-enum-impl.js';
+import { loadSchema } from './load.js';
 
 const __dirname = import.meta.dirname;
 

@@ -1,6 +1,6 @@
-import { generateAppealsLoadTestMessages } from './generate-appeals-messages.js';
-import { ServiceBusEventClient } from '../service-bus-client.js';
 import { MESSAGE_EVENT_TYPE } from '../../src/enums.js';
+import { ServiceBusEventClient } from '../service-bus-client.js';
+import { generateAppealsLoadTestMessages } from './generate-appeals-messages.js';
 
 /** @type {'HAS'|'S78'} */ //@ts-ignore
 const caseType = process.env.APPEALS_LOAD_TEST_CASE_TYPE || 'HAS'; // 'HAS' or 'S78'

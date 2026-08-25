@@ -1,6 +1,6 @@
-import { describe, it } from 'node:test';
 import Ajv from 'ajv';
 import addFormats from 'ajv-formats';
+import { describe, it } from 'node:test';
 import { loadAllSchemasSync } from '../src/index.js';
 
 describe('schemas', () => {

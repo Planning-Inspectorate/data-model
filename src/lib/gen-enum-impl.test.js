@@ -1,6 +1,6 @@
+import assert from 'node:assert';
 import { describe, it } from 'node:test';
 import { collectEnumProps, generateConstants, generateEnumMap } from './gen-enum-impl.js';
-import assert from 'node:assert';
 
 describe('gen-enum-impl', () => {
 	describe('generateConstants', () => {

@@ -1,9 +1,9 @@
 import fs from 'fs/promises';
+import { compile } from 'json-schema-to-typescript';
+import { generateName } from 'json-schema-to-typescript/dist/src/utils.js';
 import path from 'path';
 import url from 'url';
 import { commandsPath, loadAllSchemas, schemasPath } from '../index.js';
-import { compile } from 'json-schema-to-typescript';
-import { generateName } from 'json-schema-to-typescript/dist/src/utils.js';
 
 const __dirname = path.dirname(url.fileURLToPath(import.meta.url));
 

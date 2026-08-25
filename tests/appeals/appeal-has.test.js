@@ -1,7 +1,7 @@
-import { describe, it } from 'node:test';
-import assert from 'node:assert';
 import Ajv from 'ajv';
 import addFormats from 'ajv-formats';
+import assert from 'node:assert';
+import { describe, it } from 'node:test';
 import { loadAllSchemasSync } from '../../src/index.js';
 
 const schema = 'appeal-has.schema.json';

@@ -1,6 +1,6 @@
 import { jsonschema2md } from '@adobe/jsonschema2md';
-import { loadAllSchemas } from '../index.js';
 import fs from 'fs/promises';
+import { loadAllSchemas } from '../index.js';
 
 /**
  * @typedef {import('@adobe/jsonschema2md').SchemaFiles} SchemaFiles

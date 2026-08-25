@@ -3,12 +3,12 @@
 
 from __future__ import annotations
 
-from enum import Enum
+from enum import StrEnum
 
 from pydantic import AwareDatetime, BaseModel, ConfigDict, Field
 
 
-class EventType(Enum):
+class EventType(StrEnum):
     """
     The type of event
     """
@@ -25,7 +25,7 @@ class EventType(Enum):
     pre_inquiry_virtual = "pre_inquiry_virtual"
 
 
-class EventStatus(Enum):
+class EventStatus(StrEnum):
     """
     Status of the event
     """
@@ -73,7 +73,7 @@ class AppealEvent(BaseModel):
     """
     Indicates if the event is urgent
     """
-    eventPublished: bool | None = None
+    eventPublished: bool | None
     """
     Indicates if the event has been published
     """

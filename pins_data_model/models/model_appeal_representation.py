@@ -3,7 +3,7 @@
 
 from __future__ import annotations
 
-from enum import Enum
+from enum import Enum, StrEnum
 
 from pydantic import AwareDatetime, BaseModel, ConfigDict, Field, RootModel
 
@@ -25,7 +25,7 @@ class RepresentationStatus(Enum):
     NoneType_None = None
 
 
-class InvalidOrIncompleteDetailEnumEnum(Enum):
+class InvalidOrIncompleteDetailEnumEnum(StrEnum):
     Received_after_deadline = "Received after deadline"
     Includes_personal_or_medical_information = (
         "Includes personal or medical information"
@@ -84,43 +84,43 @@ class AppealRepresentation(BaseModel):
     """
     External case identifier
     """
-    representationStatus: RepresentationStatus
+    representationStatus: RepresentationStatus | None
     """
     Status of the representation
     """
-    originalRepresentation: str | None = None
+    originalRepresentation: str | None
     """
     The original representation
     """
-    redacted: bool | None = None
+    redacted: bool | None
     """
     Indicates if the representation is redacted
     """
-    redactedRepresentation: str | None = None
+    redactedRepresentation: str | None
     """
     The redacted version of the representation
     """
-    redactedBy: str | None = None
+    redactedBy: str | None
     """
     Unique identifier for the case team member that performed the redaction
     """
-    invalidOrIncompleteDetails: list[InvalidOrIncompleteDetail]
+    invalidOrIncompleteDetails: list[InvalidOrIncompleteDetail] | None
     """
     A list of reasons why the representation has been marked as invalid or incomplete.
     """
-    otherInvalidOrIncompleteDetails: list[str]
+    otherInvalidOrIncompleteDetails: list[str] | None
     """
     A list of free text reasons why the representation has been marked as invalid or incomplete
     """
-    source: Source
+    source: Source | None
     """
     Source of the representation (citizen or LPA)
     """
-    serviceUserId: str | None = None
+    serviceUserId: str | None
     """
     Service User Id of the person or organisation making the representation
     """
-    representationType: RepresentationType
+    representationType: RepresentationType | None
     """
     The type of representation
     """

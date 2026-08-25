@@ -65,11 +65,11 @@ class S51Advice(BaseModel):
     """
     Who the enquiry is from
     """
-    agent: str | None = None
+    agent: str | None
     """
     Who the enquiry is on behalf of
     """
-    method: Method
+    method: Method | None
     """
     How the enquiry was made
     """
@@ -79,7 +79,7 @@ class S51Advice(BaseModel):
     """
     Date the enquiry was made
     """
-    enquiryDetails: str | None = None
+    enquiryDetails: str | None
     """
     Details of the enquiry
     """
@@ -87,7 +87,7 @@ class S51Advice(BaseModel):
     """
     Details of the enquiry in Welsh
     """
-    adviceGivenBy: str | None = None
+    adviceGivenBy: str | None
     """
     Who issued the advice
     """
@@ -95,7 +95,7 @@ class S51Advice(BaseModel):
     """
     Date the advice was given
     """
-    adviceDetails: str | None = None
+    adviceDetails: str | None
     """
     Details of the advice
     """
@@ -103,6 +103,6 @@ class S51Advice(BaseModel):
     """
     Details of the advice in Welsh
     """
-    status: Status
-    redactionStatus: RedactionStatus
+    status: Status | None
+    redactionStatus: RedactionStatus | None
     attachmentIds: list[str]

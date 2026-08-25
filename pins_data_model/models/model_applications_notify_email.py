@@ -3,12 +3,12 @@
 
 from __future__ import annotations
 
-from enum import Enum
+from enum import Enum, StrEnum
 
 from pydantic import AwareDatetime, BaseModel, ConfigDict, EmailStr, Field
 
 
-class EmailStatus(Enum):
+class EmailStatus(StrEnum):
     """
     Outcome of the email (status)
     """

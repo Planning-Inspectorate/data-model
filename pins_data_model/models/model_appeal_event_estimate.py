@@ -22,15 +22,15 @@ class AppealEventEstimate(BaseModel):
     """
     The case reference the event estimate belongs to.
     """
-    preparationTime: float | None = None
+    preparationTime: float | None
     """
     Estimated inspector time (days) to prepare for event.
     """
-    sittingTime: float | None = None
+    sittingTime: float | None
     """
     Estimated inspector time (days) for event.
     """
-    reportingTime: float | None = None
+    reportingTime: float | None
     """
     Estimated inspector time (days) for event reporting.
     """

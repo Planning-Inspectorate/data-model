@@ -3,12 +3,12 @@
 
 from __future__ import annotations
 
-from enum import Enum
+from enum import StrEnum
 
 from pydantic import AwareDatetime, BaseModel, ConfigDict, Field
 
 
-class Type(Enum):
+class Type(StrEnum):
     """
     Compulsory Acquisition Hearing/Deadline/Issue Specific Hearing etc
     """

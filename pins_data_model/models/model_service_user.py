@@ -3,12 +3,12 @@
 
 from __future__ import annotations
 
-from enum import Enum
+from enum import StrEnum
 
 from pydantic import BaseModel, ConfigDict, Field
 
 
-class ServiceUserType(Enum):
+class ServiceUserType(StrEnum):
     """
     Type or category of the service user.
     """

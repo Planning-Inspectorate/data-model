@@ -3,12 +3,12 @@
 
 from __future__ import annotations
 
-from enum import Enum
+from enum import StrEnum
 
 from pydantic import AwareDatetime, BaseModel, ConfigDict
 
 
-class UpdateStatus(Enum):
+class UpdateStatus(StrEnum):
     """
     The current status of this update
     """
@@ -37,11 +37,11 @@ class NsipProjectUpdate(BaseModel):
     """
     the case reference this update relates to
     """
-    updateDate: AwareDatetime | None = None
+    updateDate: AwareDatetime | None
     """
     The date the update was published
     """
-    updateName: str | None = None
+    updateName: str | None
     """
     Internal title or name of the update
     """
@@ -49,7 +49,7 @@ class NsipProjectUpdate(BaseModel):
     """
     HTML content of the update in English. Can only include `<a> <b> <ul> <li>` tags.
     """
-    updateContentWelsh: str | None = None
+    updateContentWelsh: str | None
     """
     HTML content of the update in Welsh. Can only include `<a> <b> <ul> <li>` tags.
     """

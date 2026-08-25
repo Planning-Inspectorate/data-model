@@ -3,13 +3,13 @@
 
 from __future__ import annotations
 
-from enum import Enum
+from enum import Enum, StrEnum
 from uuid import UUID
 
 from pydantic import AwareDatetime, BaseModel, ConfigDict, Field, RootModel, constr
 
 
-class CaseStatus(Enum):
+class CaseStatus(StrEnum):
     """
     The processing status for the appeal
     """
@@ -29,7 +29,7 @@ class CaseStatus(Enum):
     awaiting_event = "awaiting_event"
 
 
-class CaseType(Enum):
+class CaseType(StrEnum):
     """
     The internal code for an appeal type, e.g. D (Householder)
     """
@@ -134,7 +134,7 @@ class CaseDecisionOutcome(Enum):
     NoneType_None = None
 
 
-class ApplicationDecision(Enum):
+class ApplicationDecision(StrEnum):
     """
     The outcome of the original LPA decision
     """
@@ -177,7 +177,7 @@ class KnowsAllOwners(Enum):
     NoneType_None = None
 
 
-class NotificationMethodEnum(Enum):
+class NotificationMethodEnum(StrEnum):
     notice = "notice"
     letter = "letter"
     advert = "advert"
@@ -192,7 +192,7 @@ class NeighbouringSiteAddress(BaseModel):
     """
     First line of address of the site
     """
-    neighbouringSiteAddressLine2: str | None = None
+    neighbouringSiteAddressLine2: str | None
     """
     Second line of address of the site
     """
@@ -258,33 +258,18 @@ class AdvertDetail(BaseModel):
     model_config = ConfigDict(
         extra="allow",
     )
-    advertType: AdvertType
-    isAdvertInPosition: bool | None = None
+    advertType: AdvertType | None
+    isAdvertInPosition: bool | None
     """
     Is the advertisement in position?
     """
-    isSiteOnHighwayLand: bool | None = None
+    isSiteOnHighwayLand: bool | None
     """
     Is the site on highway land?
     """
 
 
-class AdvertDetail1(BaseModel):
-    model_config = ConfigDict(
-        extra="allow",
-    )
-    advertType: AdvertType
-    isAdvertInPosition: bool | None = None
-    """
-    Is the advertisement in position?
-    """
-    isSiteOnHighwayLand: bool | None = None
-    """
-    Is the site on highway land?
-    """
-
-
-class SignificantChangesAffectingApplication(Enum):
+class Value(Enum):
     adopted_a_new_local_plan = "adopted-a-new-local-plan"
     national_policy_change = "national-policy-change"
     court_judgement = "court-judgement"
@@ -293,12 +278,12 @@ class SignificantChangesAffectingApplication(Enum):
 
 
 class SignificantChangesAffectingApplicationAppellantItem(BaseModel):
-    value: SignificantChangesAffectingApplication
+    value: Value | None
     comment: str | None = None
 
 
 class SignificantChangesAffectingApplicationLpaItem(BaseModel):
-    value: SignificantChangesAffectingApplication
+    value: Value | None
     comment: str | None = None
 
 
@@ -332,7 +317,7 @@ class AppealHasCase1(BaseModel):
     """
     The internal code for an appeal type, e.g. D (Householder)
     """
-    caseProcedure: CaseProcedure
+    caseProcedure: CaseProcedure | None
     """
     The type of procedure for the appeal
     """
@@ -340,23 +325,23 @@ class AppealHasCase1(BaseModel):
     """
     A unique identifier for the Local Planning Authority
     """
-    caseOfficerId: str | None = None
+    caseOfficerId: str | None
     """
     Unique identifier for the case officer assigned to the case
     """
-    inspectorId: str | None = None
+    inspectorId: str | None
     """
     Unique identifier for the inspector assigned to the case
     """
-    allocationLevel: AllocationLevel
+    allocationLevel: AllocationLevel | None
     """
     A level used for allocation purposes
     """
-    allocationBand: AllocationBand
+    allocationBand: AllocationBand | None
     """
     A band used for allocation purposes
     """
-    caseSpecialisms: list[str] = Field(
+    caseSpecialisms: list[str] | None = Field(
         ..., examples=[["Access", "Listed building and enforcement"], ["Schedule 1"]]
     )
     """
@@ -386,15 +371,15 @@ class AppealHasCase1(BaseModel):
     """
     The date the appeal was validated in the back-office
     """
-    caseValidationOutcome: CaseValidationOutcome
+    caseValidationOutcome: CaseValidationOutcome | None
     """
     The outcome of the validation action
     """
-    caseValidationInvalidDetails: list[str]
+    caseValidationInvalidDetails: list[str] | None
     """
     A list of reasons why the appeal is invalid
     """
-    caseValidationIncompleteDetails: list[str]
+    caseValidationIncompleteDetails: list[str] | None
     """
     A list of reasons why the appeal is incomplete
     """
@@ -416,7 +401,7 @@ class AppealHasCase1(BaseModel):
     """
     A date indicating when the case was published
     """
-    linkedCaseStatus: LinkedCaseStatus
+    linkedCaseStatus: LinkedCaseStatus | None
     """
     Indicates if the case is linked, and the type of relationship
     """
@@ -448,7 +433,7 @@ class AppealHasCase1(BaseModel):
     """
     The date indicating when the questionnaire review was completed and the questionnaire published
     """
-    lpaQuestionnaireValidationOutcome: LpaQuestionnaireValidationOutcome
+    lpaQuestionnaireValidationOutcome: LpaQuestionnaireValidationOutcome | None
     """
     The outcome of the validation action
     """
@@ -458,7 +443,7 @@ class AppealHasCase1(BaseModel):
     """
     The date the LPA response was validated
     """
-    lpaQuestionnaireValidationDetails: list[str]
+    lpaQuestionnaireValidationDetails: list[str] | None
     """
     A list of reasons why the questionnaire is incomplete
     """
@@ -502,7 +487,7 @@ class AppealHasCase1(BaseModel):
     """
     The date the appeal decision was published
     """
-    caseDecisionOutcome: CaseDecisionOutcome
+    caseDecisionOutcome: CaseDecisionOutcome | None
     """
     The final outcome for the decision
     """
@@ -512,7 +497,7 @@ class AppealHasCase1(BaseModel):
     """
     The date the appeal decision letter
     """
-    enforcementNotice: bool | None = None
+    enforcementNotice: bool | None
     """
     Indicates if an enforcement notice is the reason for the appeal
     """
@@ -566,11 +551,11 @@ class AppealHasCase1(BaseModel):
     """
     Postal code of the site address
     """
-    siteAccessDetails: list[str]
+    siteAccessDetails: list[str] | None
     """
     Provided information on site accessibility
     """
-    siteSafetyDetails: list[str]
+    siteSafetyDetails: list[str] | None
     """
     Provided information on site health and safety
     """
@@ -582,15 +567,15 @@ class AppealHasCase1(BaseModel):
     """
     The floor space, in square meters
     """
-    isCorrectAppealType: bool | None = None
+    isCorrectAppealType: bool | None
     """
     Indicates if the LPA considers the appeal type appropriate
     """
-    isGreenBelt: bool | None = None
+    isGreenBelt: bool | None
     """
     Indicates if the site is in a green belt
     """
-    inConservationArea: bool | None = None
+    inConservationArea: bool | None
     """
     Indicates if the site is in a conservation area
     """
@@ -692,33 +677,33 @@ class AppealHasCase1(BaseModel):
     """
     The target date for case completion
     """
-    ownsAllLand: bool | None = None
+    ownsAllLand: bool | None
     """
     Indicates if the appellant has complete ownership of the site
     """
-    ownsSomeLand: bool | None = None
+    ownsSomeLand: bool | None
     """
     Indicates if the appellant has partial ownership of the site
     """
-    knowsOtherOwners: KnowsOtherOwners
+    knowsOtherOwners: KnowsOtherOwners | None
     """
     Indicates if the appellant knows other owners of the site
     """
-    knowsAllOwners: KnowsAllOwners
+    knowsAllOwners: KnowsAllOwners | None
     """
     Indicates if the appellant knows all owners of the site
     """
-    advertisedAppeal: bool | None = None
+    advertisedAppeal: bool | None
     """
     Indicates if the appellant has advertised the appeal to the LPA decision
     """
-    notificationMethod: list[NotificationMethodEnum] = Field(
+    notificationMethod: list[NotificationMethodEnum] | None = Field(
         ..., examples=[["notice", "letter"], ["advert"]]
     )
     """
     The methods used to notify relevant parties
     """
-    ownersInformed: bool | None = None
+    ownersInformed: bool | None
     """
     Indicates if the appellant has informed other owners of the site
     """
@@ -728,7 +713,7 @@ class AppealHasCase1(BaseModel):
     """
     The original description of the development, as provided by the appellant
     """
-    changedDevelopmentDescription: bool | None = None
+    changedDevelopmentDescription: bool | None
     """
     Indicates that the LPA has changed the development description
     """
@@ -739,11 +724,11 @@ class AppealHasCase1(BaseModel):
     """
     New conditions details provided by the LPA
     """
-    nearbyCaseReferences: list[str]
+    nearbyCaseReferences: list[str] | None
     """
     A list of related case references known to the appellant and the LPA
     """
-    neighbouringSiteAddresses: list[NeighbouringSiteAddress]
+    neighbouringSiteAddresses: list[NeighbouringSiteAddress] | None
     """
     A list of neighbouring site addresses
     """
@@ -751,15 +736,15 @@ class AppealHasCase1(BaseModel):
     """
     A general reason given for the need to visit any neighbours
     """
-    affectedListedBuildingNumbers: list[str]
+    affectedListedBuildingNumbers: list[str] | None
     """
     A list of affected listed building IDs from Historic England
     """
-    appellantCostsAppliedFor: bool | None = None
+    appellantCostsAppliedFor: bool | None
     """
     Indicates if the appellant has applied for costs
     """
-    lpaCostsAppliedFor: bool | None = None
+    lpaCostsAppliedFor: bool | None
     """
     Indicates if the appellant has applied for costs
     """
@@ -812,6 +797,31 @@ class AppealHasCase1(BaseModel):
     """
 
 
+class AdvertDetail1(BaseModel):
+    model_config = ConfigDict(
+        extra="allow",
+    )
+    advertType: AdvertType | None
+    isAdvertInPosition: bool | None
+    """
+    Is the advertisement in position?
+    """
+    isSiteOnHighwayLand: bool | None
+    """
+    Is the site on highway land?
+    """
+
+
+class SignificantChangesAffectingApplicationAppellantItem1(BaseModel):
+    value: Value | None
+    comment: str | None = None
+
+
+class SignificantChangesAffectingApplicationLpaItem1(BaseModel):
+    value: Value | None
+    comment: str | None = None
+
+
 class AppealHasCase2(BaseModel):
     """
     Group A - Schema defining the metadata for an appeal
@@ -842,7 +852,7 @@ class AppealHasCase2(BaseModel):
     """
     The internal code for an appeal type, e.g. D (Householder)
     """
-    caseProcedure: CaseProcedure
+    caseProcedure: CaseProcedure | None
     """
     The type of procedure for the appeal
     """
@@ -850,23 +860,23 @@ class AppealHasCase2(BaseModel):
     """
     A unique identifier for the Local Planning Authority
     """
-    caseOfficerId: str | None = None
+    caseOfficerId: str | None
     """
     Unique identifier for the case officer assigned to the case
     """
-    inspectorId: str | None = None
+    inspectorId: str | None
     """
     Unique identifier for the inspector assigned to the case
     """
-    allocationLevel: AllocationLevel
+    allocationLevel: AllocationLevel | None
     """
     A level used for allocation purposes
     """
-    allocationBand: AllocationBand
+    allocationBand: AllocationBand | None
     """
     A band used for allocation purposes
     """
-    caseSpecialisms: list[str] = Field(
+    caseSpecialisms: list[str] | None = Field(
         ..., examples=[["Access", "Listed building and enforcement"], ["Schedule 1"]]
     )
     """
@@ -896,15 +906,15 @@ class AppealHasCase2(BaseModel):
     """
     The date the appeal was validated in the back-office
     """
-    caseValidationOutcome: CaseValidationOutcome
+    caseValidationOutcome: CaseValidationOutcome | None
     """
     The outcome of the validation action
     """
-    caseValidationInvalidDetails: list[str]
+    caseValidationInvalidDetails: list[str] | None
     """
     A list of reasons why the appeal is invalid
     """
-    caseValidationIncompleteDetails: list[str]
+    caseValidationIncompleteDetails: list[str] | None
     """
     A list of reasons why the appeal is incomplete
     """
@@ -926,7 +936,7 @@ class AppealHasCase2(BaseModel):
     """
     A date indicating when the case was published
     """
-    linkedCaseStatus: LinkedCaseStatus
+    linkedCaseStatus: LinkedCaseStatus | None
     """
     Indicates if the case is linked, and the type of relationship
     """
@@ -958,7 +968,7 @@ class AppealHasCase2(BaseModel):
     """
     The date indicating when the questionnaire review was completed and the questionnaire published
     """
-    lpaQuestionnaireValidationOutcome: LpaQuestionnaireValidationOutcome
+    lpaQuestionnaireValidationOutcome: LpaQuestionnaireValidationOutcome | None
     """
     The outcome of the validation action
     """
@@ -968,7 +978,7 @@ class AppealHasCase2(BaseModel):
     """
     The date the LPA response was validated
     """
-    lpaQuestionnaireValidationDetails: list[str]
+    lpaQuestionnaireValidationDetails: list[str] | None
     """
     A list of reasons why the questionnaire is incomplete
     """
@@ -1012,7 +1022,7 @@ class AppealHasCase2(BaseModel):
     """
     The date the appeal decision was published
     """
-    caseDecisionOutcome: CaseDecisionOutcome
+    caseDecisionOutcome: CaseDecisionOutcome | None
     """
     The final outcome for the decision
     """
@@ -1022,7 +1032,7 @@ class AppealHasCase2(BaseModel):
     """
     The date the appeal decision letter
     """
-    enforcementNotice: bool | None = None
+    enforcementNotice: bool | None
     """
     Indicates if an enforcement notice is the reason for the appeal
     """
@@ -1076,11 +1086,11 @@ class AppealHasCase2(BaseModel):
     """
     Postal code of the site address
     """
-    siteAccessDetails: list[str]
+    siteAccessDetails: list[str] | None
     """
     Provided information on site accessibility
     """
-    siteSafetyDetails: list[str]
+    siteSafetyDetails: list[str] | None
     """
     Provided information on site health and safety
     """
@@ -1092,15 +1102,15 @@ class AppealHasCase2(BaseModel):
     """
     The floor space, in square meters
     """
-    isCorrectAppealType: bool | None = None
+    isCorrectAppealType: bool | None
     """
     Indicates if the LPA considers the appeal type appropriate
     """
-    isGreenBelt: bool | None = None
+    isGreenBelt: bool | None
     """
     Indicates if the site is in a green belt
     """
-    inConservationArea: bool | None = None
+    inConservationArea: bool | None
     """
     Indicates if the site is in a conservation area
     """
@@ -1202,33 +1212,33 @@ class AppealHasCase2(BaseModel):
     """
     The target date for case completion
     """
-    ownsAllLand: bool | None = None
+    ownsAllLand: bool | None
     """
     Indicates if the appellant has complete ownership of the site
     """
-    ownsSomeLand: bool | None = None
+    ownsSomeLand: bool | None
     """
     Indicates if the appellant has partial ownership of the site
     """
-    knowsOtherOwners: KnowsOtherOwners
+    knowsOtherOwners: KnowsOtherOwners | None
     """
     Indicates if the appellant knows other owners of the site
     """
-    knowsAllOwners: KnowsAllOwners
+    knowsAllOwners: KnowsAllOwners | None
     """
     Indicates if the appellant knows all owners of the site
     """
-    advertisedAppeal: bool | None = None
+    advertisedAppeal: bool | None
     """
     Indicates if the appellant has advertised the appeal to the LPA decision
     """
-    notificationMethod: list[NotificationMethodEnum] = Field(
+    notificationMethod: list[NotificationMethodEnum] | None = Field(
         ..., examples=[["notice", "letter"], ["advert"]]
     )
     """
     The methods used to notify relevant parties
     """
-    ownersInformed: bool | None = None
+    ownersInformed: bool | None
     """
     Indicates if the appellant has informed other owners of the site
     """
@@ -1238,7 +1248,7 @@ class AppealHasCase2(BaseModel):
     """
     The original description of the development, as provided by the appellant
     """
-    changedDevelopmentDescription: bool | None = None
+    changedDevelopmentDescription: bool | None
     """
     Indicates that the LPA has changed the development description
     """
@@ -1249,11 +1259,11 @@ class AppealHasCase2(BaseModel):
     """
     New conditions details provided by the LPA
     """
-    nearbyCaseReferences: list[str]
+    nearbyCaseReferences: list[str] | None
     """
     A list of related case references known to the appellant and the LPA
     """
-    neighbouringSiteAddresses: list[NeighbouringSiteAddress]
+    neighbouringSiteAddresses: list[NeighbouringSiteAddress] | None
     """
     A list of neighbouring site addresses
     """
@@ -1261,15 +1271,15 @@ class AppealHasCase2(BaseModel):
     """
     A general reason given for the need to visit any neighbours
     """
-    affectedListedBuildingNumbers: list[str]
+    affectedListedBuildingNumbers: list[str] | None
     """
     A list of affected listed building IDs from Historic England
     """
-    appellantCostsAppliedFor: bool | None = None
+    appellantCostsAppliedFor: bool | None
     """
     Indicates if the appellant has applied for costs
     """
-    lpaCostsAppliedFor: bool | None = None
+    lpaCostsAppliedFor: bool | None
     """
     Indicates if the appellant has applied for costs
     """
@@ -1309,13 +1319,13 @@ class AppealHasCase2(BaseModel):
     Reason for appeal as provided by the appellant
     """
     significantChangesAffectingApplicationAppellant: (
-        list[SignificantChangesAffectingApplicationAppellantItem] | None
+        list[SignificantChangesAffectingApplicationAppellantItem1] | None
     ) = None
     """
     Significant changes affecting the application as reported by the appellant
     """
     significantChangesAffectingApplicationLpa: (
-        list[SignificantChangesAffectingApplicationLpaItem] | None
+        list[SignificantChangesAffectingApplicationLpaItem1] | None
     ) = None
     """
     Significant changes affecting the application as reported by the LPA
@@ -1327,3 +1337,11 @@ class AppealHasCase(RootModel[AppealHasCase1 | AppealHasCase2]):
     """
     Group A - Schema defining the metadata for an appeal
     """
+
+
+class SignificantChangesAffectingApplication(Enum):
+    adopted_a_new_local_plan = "adopted-a-new-local-plan"
+    national_policy_change = "national-policy-change"
+    court_judgement = "court-judgement"
+    other = "other"
+    NoneType_None = None

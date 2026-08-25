@@ -10,11 +10,11 @@ class Address(BaseModel):
     model_config = ConfigDict(
         extra="allow",
     )
-    addressLine1: str | None = None
-    addressLine2: str | None = None
-    townCity: str | None = None
-    county: str | None = None
-    postcode: str | None = None
+    addressLine1: str | None
+    addressLine2: str | None
+    townCity: str | None
+    county: str | None
+    postcode: str | None
 
 
 class Specialism(BaseModel):

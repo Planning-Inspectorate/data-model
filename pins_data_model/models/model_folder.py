@@ -44,12 +44,12 @@ class Folder(BaseModel):
     """
     Folder display name in English.
     """
-    displayNameWelsh: str | None = None
+    displayNameWelsh: str | None
     """
     Folder display name in Welsh.
     """
-    parentFolderId: int | None = None
+    parentFolderId: int | None
     """
     Optional parent folder ID.
     """
-    caseStage: CaseStage
+    caseStage: CaseStage | None

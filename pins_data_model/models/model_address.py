@@ -3,13 +3,13 @@
 
 from __future__ import annotations
 
-from enum import Enum
+from enum import StrEnum
 from typing import Any
 
 from pydantic import BaseModel, ConfigDict, Field
 
 
-class AddressType(Enum):
+class AddressType(StrEnum):
     """
     The type of thing this address is for.
     """

@@ -62,22 +62,22 @@ class Representation(BaseModel):
     """
     The unique identifier within the Back Office. This is not the same as the case reference
     """
-    status: Status
+    status: Status | None
     originalRepresentation: str
-    redacted: bool | None = None
-    redactedRepresentation: str | None = None
+    redacted: bool | None
+    redactedRepresentation: str | None
     redactedBy: str | None = Field(..., examples=["Joe Blogs"])
     redactedNotes: str | None = Field(..., examples=["Removed names of family members"])
-    representationFrom: RepresentationFrom
+    representationFrom: RepresentationFrom | None
     representedId: str
     """
     ServiceUser Id of the person or organisation being represented
     """
-    representativeId: str | None = None
+    representativeId: str | None
     """
     ServiceUser Id of the person or organisation submitting representation in the case of Agent representationFrom
     """
-    registerFor: RegisterFor
-    representationType: RepresentationType
+    registerFor: RegisterFor | None
+    representationType: RepresentationType | None
     dateReceived: AwareDatetime = Field(..., examples=["2023-07-27T20:30:00.000Z"])
     attachmentIds: list[str]

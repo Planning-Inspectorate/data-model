@@ -261,7 +261,7 @@ class AppealDocument(BaseModel):
     """
     The location of the published document, will be null if the datePublished is not set
     """
-    virusCheckStatus: VirusCheckStatus
+    virusCheckStatus: VirusCheckStatus | None
     """
     Indicates the virus check status for the current document
     """
@@ -291,43 +291,43 @@ class AppealDocument(BaseModel):
     """
     The last update date for the document
     """
-    caseType: CaseType
+    caseType: CaseType | None
     """
     The internal code for an appeal type, e.g. Householder (D)
     """
-    redactedStatus: RedactedStatus
+    redactedStatus: RedactedStatus | None
     """
     Indicates the redaction status for the document
     """
-    documentType: DocumentType
+    documentType: DocumentType | None
     """
     The type of document, used for exchange, migrations and consumption from the appeal back-office system
     """
-    sourceSystem: SourceSystem
+    sourceSystem: SourceSystem | None
     """
     The system mastering the metadata for the current document
     """
-    origin: Origin
+    origin: Origin | None
     """
     Indicates where the documents originates from
     """
-    owner: str | None = None
+    owner: str | None
     """
     Owner of the current document
     """
-    author: str | None = None
+    author: str | None
     """
     Name of person who authored document
     """
-    description: str | None = None
+    description: str | None
     """
     A custom description for the document
     """
-    caseStage: CaseStage
+    caseStage: CaseStage | None
     """
     The stage in the appeal process that has created the document
     """
-    horizonFolderId: str | None = None
+    horizonFolderId: str | None
     """
     The folder ID containing the document in Horizon
     """

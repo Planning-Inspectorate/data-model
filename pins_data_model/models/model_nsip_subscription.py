@@ -3,12 +3,12 @@
 
 from __future__ import annotations
 
-from enum import Enum
+from enum import Enum, StrEnum
 
 from pydantic import AwareDatetime, BaseModel, ConfigDict, EmailStr, Field
 
 
-class SubscriptionType(Enum):
+class SubscriptionType(StrEnum):
     """
     which update does the subscriber want to get notified of. For multiple types, use multiple messages.
     """
@@ -33,7 +33,7 @@ class NsipSubscription(BaseModel):
     model_config = ConfigDict(
         extra="allow",
     )
-    subscriptionId: int | None = None
+    subscriptionId: int | None
     """
     The unique identifier within the Back Office. Ignored as part of register-nsip-subscription.
     """
@@ -48,12 +48,12 @@ class NsipSubscription(BaseModel):
     """
     which update does the subscriber want to get notified of. For multiple types, use multiple messages.
     """
-    startDate: AwareDatetime | None = None
+    startDate: AwareDatetime | None
     """
     The date to start getting updates
     """
-    endDate: AwareDatetime | None = None
+    endDate: AwareDatetime | None
     """
     The date to stop getting updates
     """
-    language: Language
+    language: Language | None

@@ -147,24 +147,24 @@ class NsipDocument(BaseModel):
             "EN010011/2. Post-Submission/Application Documents/Application Form/Letter.PDF"
         ],
     )
-    virusCheckStatus: VirusCheckStatus
+    virusCheckStatus: VirusCheckStatus | None
     fileMD5: str | None = Field(..., examples=["b1946ac92492d2347c6235b4d2611184"])
     dateCreated: AwareDatetime = Field(..., examples=["2023-07-27T20:30:00.000Z"])
     lastModified: AwareDatetime | None = Field(
         ..., examples=["2023-07-27T20:30:00.000Z"]
     )
-    caseType: CaseType
-    redactedStatus: RedactedStatus
-    publishedStatus: PublishedStatus
+    caseType: CaseType | None
+    redactedStatus: RedactedStatus | None
+    publishedStatus: PublishedStatus | None
     datePublished: AwareDatetime | None = Field(
         ..., examples=["2023-07-27T20:30:00.000Z"]
     )
     documentType: str | None = Field(..., examples=["Rule 8 letter"])
-    securityClassification: SecurityClassification
-    sourceSystem: SourceSystem
-    origin: Origin
-    owner: str | None = None
-    author: str | None = None
+    securityClassification: SecurityClassification | None
+    sourceSystem: SourceSystem | None
+    origin: Origin | None
+    owner: str | None
+    author: str | None
     """
     Name of person who authored document
     """
@@ -183,7 +183,7 @@ class NsipDocument(BaseModel):
         ],
     )
     descriptionWelsh: str | None = None
-    documentCaseStage: DocumentCaseStage
+    documentCaseStage: DocumentCaseStage | None
     filter1: str | None = Field(..., examples=["Deadline 2"])
     """
     Filter field to provide additional filtering
@@ -196,11 +196,11 @@ class NsipDocument(BaseModel):
     """
     Filter field to provide additional filtering
     """
-    horizonFolderId: str | None = None
+    horizonFolderId: str | None
     """
     The folder where the document exists
     """
-    transcriptId: str | None = None
+    transcriptId: str | None
     """
     The GUID of the transcript document (if one was provided).
     """

@@ -3,12 +3,12 @@
 
 from __future__ import annotations
 
-from enum import Enum
+from enum import Enum, StrEnum
 
 from pydantic import AwareDatetime, BaseModel, ConfigDict, Field
 
 
-class Type(Enum):
+class Type(StrEnum):
     """
     Type of application. Name displayed to users
     """
@@ -35,7 +35,7 @@ class SubType(Enum):
     Listed_building_consent__LBC_ = "Listed building consent (LBC)"
 
 
-class ApplicationStatus(Enum):
+class ApplicationStatus(StrEnum):
     """
     Current status of the case (enum)
     """
@@ -128,7 +128,7 @@ class Procedure(Enum):
     Inquiry = "Inquiry"
 
 
-class RoleType(Enum):
+class RoleType(StrEnum):
     """
     Agent or Applicant details
     """

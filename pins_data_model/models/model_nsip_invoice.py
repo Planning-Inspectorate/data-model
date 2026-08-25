@@ -3,12 +3,12 @@
 
 from __future__ import annotations
 
-from enum import Enum
+from enum import StrEnum
 
 from pydantic import AwareDatetime, BaseModel, ConfigDict, Field
 
 
-class InvoiceStage(Enum):
+class InvoiceStage(StrEnum):
     """
     Invoice stage
     """

@@ -3,19 +3,19 @@
 
 from __future__ import annotations
 
-from enum import Enum
+from enum import Enum, StrEnum
 
 from pydantic import AwareDatetime, BaseModel, ConfigDict, Field
 
 
-class RepresentationStatus(Enum):
+class RepresentationStatus(StrEnum):
     Awaiting_review = "Awaiting review"
     Accepted = "Accepted"
     Rejected = "Rejected"
     Withdrawn = "Withdrawn"
 
 
-class SubmittedFor(Enum):
+class SubmittedFor(StrEnum):
     Myself = "Myself"
     On_behalf_of_another_person_or_an_organisation = (
         "On behalf of another person or an organisation"
@@ -79,7 +79,7 @@ class Contact(BaseModel):
     writtenRepJobTitleorRole: str | None = None
 
 
-class Status(Enum):
+class Status(StrEnum):
     """
     The status of the document
     """

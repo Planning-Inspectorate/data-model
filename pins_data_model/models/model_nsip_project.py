@@ -3,7 +3,7 @@
 
 from __future__ import annotations
 
-from enum import Enum
+from enum import Enum, StrEnum
 from typing import Any
 
 from pydantic import AwareDatetime, BaseModel, ConfigDict, Field
@@ -85,7 +85,7 @@ class ProjectType(Enum):
     NoneType_None = None
 
 
-class SourceSystem(Enum):
+class SourceSystem(StrEnum):
     back_office_applications = "back-office-applications"
     horizon = "horizon"
 
@@ -107,7 +107,7 @@ class Stage(Enum):
     NoneType_None = None
 
 
-class Region(Enum):
+class Region(StrEnum):
     """
     Geographical region of UK. Applications can cover multiple regions.
     """
@@ -340,7 +340,7 @@ class Meeting(BaseModel):
     """
 
 
-class InvoiceStage(Enum):
+class InvoiceStage(StrEnum):
     """
     Invoice stage
     """
@@ -436,21 +436,21 @@ class NsipProject(BaseModel):
         ],
     )
     projectDescriptionWelsh: str | None = None
-    decision: Decision
+    decision: Decision | None
     """
     Decision outcome: approved/refused/split-decision/granted/partially_consented/quashed/redetermination/withdrawn
     """
-    publishStatus: PublishStatus
-    sector: Sector
+    publishStatus: PublishStatus | None
+    sector: Sector | None
     """
     {Sector Abbreviation} - {Sector Display Name}
     """
-    projectType: ProjectType
+    projectType: ProjectType | None
     """
     {SubSector Abbreviation} - {SubSector Display Name}
     """
     sourceSystem: SourceSystem
-    stage: Stage
+    stage: Stage | None
     """
     Process stage identifier
     """
@@ -490,11 +490,11 @@ class NsipProject(BaseModel):
     """
     Welsh Language translation required.
     """
-    mapZoomLevel: MapZoomLevel
+    mapZoomLevel: MapZoomLevel | None
     """
     Resolution of pinned map. Set when co-ordinates are created.
     """
-    secretaryOfState: str | None = None
+    secretaryOfState: str | None
     """
     Relevant Government Department. [TODO]
     """
@@ -705,38 +705,38 @@ class NsipProject(BaseModel):
     """
     DateProjectWithdrawn by applicant
     """
-    operationsLeadId: str | None = None
+    operationsLeadId: str | None
     """
     Maps to [Employee].[EmployeeID].
     """
-    operationsManagerId: str | None = None
+    operationsManagerId: str | None
     """
     New NSIP role, Maps to [Employee].[EmployeeID]
     """
-    caseManagerId: str | None = None
+    caseManagerId: str | None
     """
     Maps to [Employee].[EmployeeID]
     """
     nsipOfficerIds: list[str]
     nsipAdministrationOfficerIds: list[str]
-    leadInspectorId: str | None = None
+    leadInspectorId: str | None
     """
     Maps to [Employee].[EmployeeID]
     """
     inspectorIds: list[str]
-    environmentalServicesOfficerId: str | None = None
+    environmentalServicesOfficerId: str | None
     """
     Maps to [Employee].[EmployeeID]
     """
-    legalOfficerId: str | None = None
+    legalOfficerId: str | None
     """
     Maps to [Employee].[EmployeeID]
     """
-    applicantId: str | None = None
+    applicantId: str | None
     """
     Maps to [ServiceUser].[id] where the serviceUserType is Applicant
     """
-    migrationStatus: bool | None = None
+    migrationStatus: bool | None
     """
     Has this case been migrated from the legacy system? True if so.
     """

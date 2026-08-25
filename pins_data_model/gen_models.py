@@ -6,7 +6,7 @@ import json
 from os import path
 from pathlib import Path
 from datamodel_code_generator import InputFileType, PythonVersion, generate
-from datamodel_code_generator import DataModelType
+from datamodel_code_generator import DataModelType, Formatter
 
 from load_schemas import load_all_schemas
 
@@ -46,6 +46,7 @@ def gen_models() -> None:
             target_python_version=PythonVersion.PY_311,
             use_schema_description=True,
             disable_timestamp=True,
+            formatters=[Formatter.BLACK, Formatter.ISORT]
         )
 
 

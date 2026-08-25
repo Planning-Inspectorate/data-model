@@ -14,7 +14,7 @@ class NeighbouringSiteAddress(BaseModel):
     """
     First line of address of the neighbouring site
     """
-    neighbouringSiteAddressLine2: str | None = None
+    neighbouringSiteAddressLine2: str | None
     """
     Second line of address of the neighbouring site
     """

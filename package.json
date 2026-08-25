@@ -36,6 +36,7 @@
     "@commitlint/cli": "^21.0.0",
     "@commitlint/config-conventional": "^21.0.0",
     "@eslint/js": "^10.0.1",
+    "@planning-inspectorate/coding-standards": "^1.1.1",
     "ajv": "^8.17.1",
     "ajv-formats": "^3.0.1",
     "conventional-changelog-conventionalcommits": "^10.2.0",
@@ -47,6 +48,8 @@
     "lint-staged": "^17.0.4",
     "lodash.snakecase": "^4.1.1",
     "prettier": "^3.6.2",
+    "prettier-plugin-organize-imports": "^4.3.0",
+    "prettier-plugin-prisma": "^5.0.0",
     "rollup": "^4.44.2",
     "semantic-release": "^25.0.1"
   },

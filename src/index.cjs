@@ -2,8 +2,8 @@
 
 var path = require('path');
 var url = require('url');
-var promises = require('fs/promises');
 var fs = require('fs');
+var promises = require('fs/promises');
 var jsoncParser = require('jsonc-parser');
 
 var _documentCurrentScript = typeof document !== 'undefined' ? document.currentScript : null;

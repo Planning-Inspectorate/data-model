@@ -1,6 +1,6 @@
-import crypto from 'node:crypto';
 import Ajv from 'ajv';
 import addFormats from 'ajv-formats';
+import crypto from 'node:crypto';
 import { loadAllSchemasSync } from '../../src/index.js';
 
 const HAS_SCHEMA = 'appeal-has.schema.json';

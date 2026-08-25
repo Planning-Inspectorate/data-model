@@ -1,5 +1,5 @@
-import { ServiceBusClient } from '@azure/service-bus';
 import { DefaultAzureCredential } from '@azure/identity';
+import { ServiceBusClient } from '@azure/service-bus';
 
 /**
  * @typedef {object} ServiceBusEventClientOptions

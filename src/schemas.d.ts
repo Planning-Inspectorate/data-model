@@ -3044,7 +3044,8 @@ export interface Event {
     | 'Preliminary Meeting'
     | 'Procedural Deadline (Pre-Examination)'
     | 'Procedural Decision'
-    | 'Publication Of';
+    | 'Publication Of'
+    | 'Unaccompanied Site Inspection';
   /**
    * Title Of Examination Timetable Event
    */

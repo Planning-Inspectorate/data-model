@@ -25,6 +25,7 @@ class Type(StrEnum):
     Procedural_Deadline__Pre_Examination_ = "Procedural Deadline (Pre-Examination)"
     Procedural_Decision = "Procedural Decision"
     Publication_Of = "Publication Of"
+    Unaccompanied_Site_Inspection = "Unaccompanied Site Inspection"
 
 
 class LineItem(BaseModel):

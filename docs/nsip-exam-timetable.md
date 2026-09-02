@@ -146,6 +146,7 @@ Compulsory Acquisition Hearing/Deadline/Issue Specific Hearing etc
 | `"Procedural Deadline (Pre-Examination)"` |             |
 | `"Procedural Decision"`                   |             |
 | `"Publication Of"`                        |             |
+| `"Unaccompanied Site Inspection"`         |             |
 
 ### eventTitle
 

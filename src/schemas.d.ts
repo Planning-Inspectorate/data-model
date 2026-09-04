@@ -3290,6 +3290,9 @@ export interface NSIPProject {
    * PINS Project email address pubished on website
    */
   projectEmailAddress: string | null;
+  /**
+   * Items: Geographical region of UK. Applications can cover multiple regions.
+   */
   regions: (
     | 'east_midlands'
     | 'eastern'
@@ -3475,12 +3478,21 @@ export interface NSIPProject {
    * Maps to [Employee].[EmployeeID]
    */
   caseManagerId: string | null;
+  /**
+   * Items: Maps to [Employee].[EmployeeID].
+   */
   nsipOfficerIds: string[];
+  /**
+   * Items: Maps to [Employee].[EmployeeID].
+   */
   nsipAdministrationOfficerIds: string[];
   /**
    * Maps to [Employee].[EmployeeID]
    */
   leadInspectorId: string | null;
+  /**
+   * Items: Maps to [Employee].[EmployeeID]
+   */
   inspectorIds: string[];
   /**
    * Maps to [Employee].[EmployeeID]
@@ -3696,26 +3708,38 @@ export interface NSIPProject {
   estimatedPrelimMeetingDate?: string | null;
   /**
    * Maps to [Employee].[EmployeeID].
+   *
+   * Items: Maps to [Employee].[EmployeeID].
    */
   operationsLeadIds?: string[];
   /**
    * New NSIP role, Maps to [Employee].[EmployeeID]
+   *
+   * Items: Maps to [Employee].[EmployeeID].
    */
   operationsManagerIds?: string[];
   /**
    * Maps to [Employee].[EmployeeID].
+   *
+   * Items: Maps to [Employee].[EmployeeID].
    */
   caseManagerIds?: string[];
   /**
    * Maps to [Employee].[EmployeeID].
+   *
+   * Items: Maps to [Employee].[EmployeeID].
    */
   leadInspectorIds?: string[];
   /**
    * Maps to [Employee].[EmployeeID].
+   *
+   * Items: Maps to [Employee].[EmployeeID].
    */
   environmentalServicesOfficerIds?: string[];
   /**
    * Maps to [Employee].[EmployeeID].
+   *
+   * Items: Maps to [Employee].[EmployeeID].
    */
   legalOfficerIds?: string[];
   /**
@@ -4098,6 +4122,9 @@ export interface S51Advice {
   adviceDetailsWelsh?: string | null;
   status: 'checked' | 'unchecked' | 'readytopublish' | 'published' | 'donotpublish' | null;
   redactionStatus: 'unredacted' | 'redacted' | null;
+  /**
+   * Items: Collection of document IDs which are related to the S51 Advice
+   */
   attachmentIds: string[];
   [k: string]: unknown;
 }

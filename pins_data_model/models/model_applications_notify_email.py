@@ -102,7 +102,7 @@ class EmailNotificationRecordSchema(BaseModel):
     """
     Planning Body code
     """
-    emailStatus: EmailStatus | None = Field(None, examples=["Delivered"])
+    emailStatus: EmailStatus = Field(..., examples=["Delivered"])
     """
     Outcome of the email (status)
     """

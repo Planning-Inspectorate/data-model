@@ -151,10 +151,10 @@ class CaseworkRepresentationSchema(BaseModel):
     """
     The type of case this representation is for.
     """
-    representationStatus: RepresentationStatus | None = None
+    representationStatus: RepresentationStatus
     submittedFor: SubmittedFor
     submittedByContact: list[Contact] | None = None
-    submittedByAgentFlag: bool | None = None
+    submittedByAgent: bool | None = None
     submittedByAgentOrgName: str | None = None
     submittedDate: AwareDatetime
     submittedReceivedMethod: SubmittedReceivedMethod | None = None

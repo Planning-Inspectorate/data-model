@@ -2320,7 +2320,7 @@ export interface EmailNotificationRecordSchema {
   /**
    * Outcome of the email (status)
    */
-  emailStatus?: 'Sending' | 'Delivered' | 'Permanent failure' | 'Temporary failure' | 'Technical failure';
+  emailStatus: 'Sending' | 'Delivered' | 'Permanent failure' | 'Temporary failure' | 'Technical failure';
   /**
    * The id of the template sent in Notify
    */
@@ -2379,10 +2379,10 @@ export interface CaseworkRepresentationSchema {
    * The type of case this representation is for.
    */
   caseType: string;
-  representationStatus?: 'Awaiting review' | 'Accepted' | 'Rejected' | 'Withdrawn';
+  representationStatus: 'Awaiting review' | 'Accepted' | 'Rejected' | 'Withdrawn';
   submittedFor: 'Myself' | 'On behalf of another person or an organisation';
   submittedByContact?: Contact[] | null;
-  submittedByAgentFlag?: boolean | null;
+  submittedByAgent?: boolean | null;
   submittedByAgentOrgName?: string | null;
   submittedDate: string;
   /**

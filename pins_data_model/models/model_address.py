@@ -64,6 +64,6 @@ class PinsAddressSchema(BaseModel):
     longitudeWGS84: float | None = Field(None, examples=[-2.6019821])
     UPRN: str | None = Field(None, examples=[100023336956])
     """
-    The Unique Property Reference Number (UPRN) is a unique number (a geocode) for every addressable location—e.g., a building, a bus stop, a post box, a feature in the landscape, or a defibrillator—in Great Britain.
+    The Unique Property Reference Number (UPRN) is a unique number (a geocode) for every addressable locationâ€”e.g., a building, a bus stop, a post box, a feature in the landscape, or a defibrillatorâ€”in Great Britain.
     """
     dependentRequired: Any | None = None

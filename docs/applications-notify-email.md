@@ -18,7 +18,7 @@
 | [email](#email)                     | `string`  | Optional | can be null    | [Email Notification Record Schema](applications-notify-email-properties-email.md "applications-notify-email.schema.json#/properties/email")                     |
 | [contact](#contact)                 | `array`   | Optional | can be null    | [Email Notification Record Schema](applications-notify-email-properties-contact.md "applications-notify-email.schema.json#/properties/contact")                 |
 | [lpaCode](#lpacode)                 | `string`  | Required | cannot be null | [Email Notification Record Schema](applications-notify-email-properties-lpacode.md "applications-notify-email.schema.json#/properties/lpaCode")                 |
-| [emailStatus](#emailstatus)         | `string`  | Optional | cannot be null | [Email Notification Record Schema](applications-notify-email-properties-emailstatus.md "applications-notify-email.schema.json#/properties/emailStatus")         |
+| [emailStatus](#emailstatus)         | `string`  | Required | cannot be null | [Email Notification Record Schema](applications-notify-email-properties-emailstatus.md "applications-notify-email.schema.json#/properties/emailStatus")         |
 | [templateId](#templateid)           | `string`  | Optional | can be null    | [Email Notification Record Schema](applications-notify-email-properties-templateid.md "applications-notify-email.schema.json#/properties/templateId")           |
 | [templateVersion](#templateversion) | `integer` | Optional | can be null    | [Email Notification Record Schema](applications-notify-email-properties-templateversion.md "applications-notify-email.schema.json#/properties/templateVersion") |
 | [body](#body)                       | `string`  | Optional | can be null    | [Email Notification Record Schema](applications-notify-email-properties-body.md "applications-notify-email.schema.json#/properties/body")                       |
@@ -259,7 +259,7 @@ Outcome of the email (status)
 
 `emailStatus`
 
-* is optional
+* is required
 
 * Type: `string`
 

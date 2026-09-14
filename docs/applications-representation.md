@@ -11,10 +11,10 @@
 | [caseReference](#casereference)                                           | `string`  | Required | cannot be null | [Casework Representation Schema](applications-representation-properties-casereference.md "applications-representation.schema.json#/properties/caseReference")                                           |
 | [caseId](#caseid)                                                         | `string`  | Required | cannot be null | [Casework Representation Schema](applications-representation-properties-caseid.md "applications-representation.schema.json#/properties/caseId")                                                         |
 | [caseType](#casetype)                                                     | `string`  | Required | cannot be null | [Casework Representation Schema](applications-representation-properties-casetype.md "applications-representation.schema.json#/properties/caseType")                                                     |
-| [representationStatus](#representationstatus)                             | `string`  | Optional | cannot be null | [Casework Representation Schema](applications-representation-properties-representationstatus.md "applications-representation.schema.json#/properties/representationStatus")                             |
+| [representationStatus](#representationstatus)                             | `string`  | Required | cannot be null | [Casework Representation Schema](applications-representation-properties-representationstatus.md "applications-representation.schema.json#/properties/representationStatus")                             |
 | [submittedFor](#submittedfor)                                             | `string`  | Required | cannot be null | [Casework Representation Schema](applications-representation-properties-submittedfor.md "applications-representation.schema.json#/properties/submittedFor")                                             |
 | [submittedByContact](#submittedbycontact)                                 | `array`   | Optional | can be null    | [Casework Representation Schema](applications-representation-properties-submittedbycontact.md "applications-representation.schema.json#/properties/submittedByContact")                                 |
-| [submittedByAgentFlag](#submittedbyagentflag)                             | `boolean` | Optional | can be null    | [Casework Representation Schema](applications-representation-properties-submittedbyagentflag.md "applications-representation.schema.json#/properties/submittedByAgentFlag")                             |
+| [submittedByAgent](#submittedbyagent)                                     | `boolean` | Optional | can be null    | [Casework Representation Schema](applications-representation-properties-submittedbyagent.md "applications-representation.schema.json#/properties/submittedByAgent")                                     |
 | [submittedByAgentOrgName](#submittedbyagentorgname)                       | `string`  | Optional | can be null    | [Casework Representation Schema](applications-representation-properties-submittedbyagentorgname.md "applications-representation.schema.json#/properties/submittedByAgentOrgName")                       |
 | [submittedDate](#submitteddate)                                           | `string`  | Required | cannot be null | [Casework Representation Schema](applications-representation-properties-submitteddate.md "applications-representation.schema.json#/properties/submittedDate")                                           |
 | [submittedReceivedMethod](#submittedreceivedmethod)                       | `string`  | Optional | can be null    | [Casework Representation Schema](applications-representation-properties-submittedreceivedmethod.md "applications-representation.schema.json#/properties/submittedReceivedMethod")                       |
@@ -130,7 +130,7 @@ The type of case this representation is for.
 
 `representationStatus`
 
-* is optional
+* is required
 
 * Type: `string`
 
@@ -188,7 +188,7 @@ The type of case this representation is for.
 
 * is optional
 
-* Type: `object[]` ([Details](applications-representation-definitions-contact.md))
+* Type: `object[]` ([Details](applications-representation-defs-contact.md))
 
 * can be null
 
@@ -196,13 +196,13 @@ The type of case this representation is for.
 
 ### submittedByContact Type
 
-`object[]` ([Details](applications-representation-definitions-contact.md))
+`object[]` ([Details](applications-representation-defs-contact.md))
 
-## submittedByAgentFlag
+## submittedByAgent
 
 
 
-`submittedByAgentFlag`
+`submittedByAgent`
 
 * is optional
 
@@ -210,9 +210,9 @@ The type of case this representation is for.
 
 * can be null
 
-* defined in: [Casework Representation Schema](applications-representation-properties-submittedbyagentflag.md "applications-representation.schema.json#/properties/submittedByAgentFlag")
+* defined in: [Casework Representation Schema](applications-representation-properties-submittedbyagent.md "applications-representation.schema.json#/properties/submittedByAgent")
 
-### submittedByAgentFlag Type
+### submittedByAgent Type
 
 `boolean`
 
@@ -376,7 +376,7 @@ When representation is on behalf of a person/org/group
 
 * is optional
 
-* Type: `object[]` ([Details](applications-representation-definitions-contact.md))
+* Type: `object[]` ([Details](applications-representation-defs-contact.md))
 
 * can be null
 
@@ -384,7 +384,7 @@ When representation is on behalf of a person/org/group
 
 ### representedContact Type
 
-`object[]` ([Details](applications-representation-definitions-contact.md))
+`object[]` ([Details](applications-representation-defs-contact.md))
 
 ## representedCategory
 
@@ -566,7 +566,7 @@ Date the representation was withdrawn
 
 * is optional
 
-* Type: `object[]` ([Details](applications-representation-definitions-representationdocument.md))
+* Type: `object[]` ([Details](applications-representation-defs-representationdocument.md))
 
 * can be null
 
@@ -574,7 +574,7 @@ Date the representation was withdrawn
 
 ### representationDocuments Type
 
-`object[]` ([Details](applications-representation-definitions-representationdocument.md))
+`object[]` ([Details](applications-representation-defs-representationdocument.md))
 
 ## Additional Properties
 
@@ -587,15 +587,15 @@ Additional properties are allowed and do not have to follow a specific schema
 Reference this group by using
 
 ```json
-{"$ref":"applications-representation.schema.json#/definitions/contact"}
+{"$ref":"applications-representation.schema.json#/$defs/contact"}
 ```
 
-| Property                                              | Type     | Required | Nullable       | Defined by                                                                                                                                                                                                                  |
-| :---------------------------------------------------- | :------- | :------- | :------------- | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [contactId](#contactid)                               | `string` | Required | cannot be null | [Casework Representation Schema](applications-representation-definitions-contact-properties-contactid.md "applications-representation.schema.json#/definitions/contact/properties/contactId")                               |
-| [contactPreference](#contactpreference)               | `string` | Optional | can be null    | [Casework Representation Schema](applications-representation-definitions-contact-properties-contactpreference.md "applications-representation.schema.json#/definitions/contact/properties/contactPreference")               |
-| [writtenRepOrgName](#writtenreporgname)               | `string` | Optional | can be null    | [Casework Representation Schema](applications-representation-definitions-contact-properties-writtenreporgname.md "applications-representation.schema.json#/definitions/contact/properties/writtenRepOrgName")               |
-| [writtenRepJobTitleorRole](#writtenrepjobtitleorrole) | `string` | Optional | can be null    | [Casework Representation Schema](applications-representation-definitions-contact-properties-writtenrepjobtitleorrole.md "applications-representation.schema.json#/definitions/contact/properties/writtenRepJobTitleorRole") |
+| Property                                              | Type     | Required | Nullable       | Defined by                                                                                                                                                                                                     |
+| :---------------------------------------------------- | :------- | :------- | :------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [contactId](#contactid)                               | `string` | Required | cannot be null | [Casework Representation Schema](applications-representation-defs-contact-properties-contactid.md "applications-representation.schema.json#/$defs/contact/properties/contactId")                               |
+| [contactPreference](#contactpreference)               | `string` | Optional | can be null    | [Casework Representation Schema](applications-representation-defs-contact-properties-contactpreference.md "applications-representation.schema.json#/$defs/contact/properties/contactPreference")               |
+| [writtenRepOrgName](#writtenreporgname)               | `string` | Optional | can be null    | [Casework Representation Schema](applications-representation-defs-contact-properties-writtenreporgname.md "applications-representation.schema.json#/$defs/contact/properties/writtenRepOrgName")               |
+| [writtenRepJobTitleorRole](#writtenrepjobtitleorrole) | `string` | Optional | can be null    | [Casework Representation Schema](applications-representation-defs-contact-properties-writtenrepjobtitleorrole.md "applications-representation.schema.json#/$defs/contact/properties/writtenRepJobTitleorRole") |
 
 ### contactId
 
@@ -609,7 +609,7 @@ Source PK for Contact
 
 * cannot be null
 
-* defined in: [Casework Representation Schema](applications-representation-definitions-contact-properties-contactid.md "applications-representation.schema.json#/definitions/contact/properties/contactId")
+* defined in: [Casework Representation Schema](applications-representation-defs-contact-properties-contactid.md "applications-representation.schema.json#/$defs/contact/properties/contactId")
 
 #### contactId Type
 
@@ -627,7 +627,7 @@ Source PK for Contact
 
 * can be null
 
-* defined in: [Casework Representation Schema](applications-representation-definitions-contact-properties-contactpreference.md "applications-representation.schema.json#/definitions/contact/properties/contactPreference")
+* defined in: [Casework Representation Schema](applications-representation-defs-contact-properties-contactpreference.md "applications-representation.schema.json#/$defs/contact/properties/contactPreference")
 
 #### contactPreference Type
 
@@ -654,7 +654,7 @@ Source PK for Contact
 
 * can be null
 
-* defined in: [Casework Representation Schema](applications-representation-definitions-contact-properties-writtenreporgname.md "applications-representation.schema.json#/definitions/contact/properties/writtenRepOrgName")
+* defined in: [Casework Representation Schema](applications-representation-defs-contact-properties-writtenreporgname.md "applications-representation.schema.json#/$defs/contact/properties/writtenRepOrgName")
 
 #### writtenRepOrgName Type
 
@@ -672,7 +672,7 @@ Source PK for Contact
 
 * can be null
 
-* defined in: [Casework Representation Schema](applications-representation-definitions-contact-properties-writtenrepjobtitleorrole.md "applications-representation.schema.json#/definitions/contact/properties/writtenRepJobTitleorRole")
+* defined in: [Casework Representation Schema](applications-representation-defs-contact-properties-writtenrepjobtitleorrole.md "applications-representation.schema.json#/$defs/contact/properties/writtenRepJobTitleorRole")
 
 #### writtenRepJobTitleorRole Type
 
@@ -683,18 +683,18 @@ Source PK for Contact
 Reference this group by using
 
 ```json
-{"$ref":"applications-representation.schema.json#/definitions/representationDocument"}
+{"$ref":"applications-representation.schema.json#/$defs/representationDocument"}
 ```
 
-| Property                              | Type     | Required | Nullable       | Defined by                                                                                                                                                                                                                                |
-| :------------------------------------ | :------- | :------- | :------------- | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [id](#id-1)                           | `string` | Required | cannot be null | [Casework Representation Schema](applications-representation-definitions-representationdocument-properties-id.md "applications-representation.schema.json#/definitions/representationDocument/properties/id")                             |
-| [representationId](#representationid) | `string` | Required | cannot be null | [Casework Representation Schema](applications-representation-definitions-representationdocument-properties-representationid.md "applications-representation.schema.json#/definitions/representationDocument/properties/representationId") |
-| [itemId](#itemid)                     | `string` | Required | cannot be null | [Casework Representation Schema](applications-representation-definitions-representationdocument-properties-itemid.md "applications-representation.schema.json#/definitions/representationDocument/properties/itemId")                     |
-| [fileName](#filename)                 | `string` | Required | cannot be null | [Casework Representation Schema](applications-representation-definitions-representationdocument-properties-filename.md "applications-representation.schema.json#/definitions/representationDocument/properties/fileName")                 |
-| [redactedItemId](#redacteditemid)     | `string` | Optional | can be null    | [Casework Representation Schema](applications-representation-definitions-representationdocument-properties-redacteditemid.md "applications-representation.schema.json#/definitions/representationDocument/properties/redactedItemId")     |
-| [redactedFileName](#redactedfilename) | `string` | Optional | can be null    | [Casework Representation Schema](applications-representation-definitions-representationdocument-properties-redactedfilename.md "applications-representation.schema.json#/definitions/representationDocument/properties/redactedFileName") |
-| [status](#status)                     | `string` | Required | cannot be null | [Casework Representation Schema](applications-representation-definitions-representationdocument-properties-status.md "applications-representation.schema.json#/definitions/representationDocument/properties/status")                     |
+| Property                              | Type     | Required | Nullable       | Defined by                                                                                                                                                                                                                   |
+| :------------------------------------ | :------- | :------- | :------------- | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [id](#id-1)                           | `string` | Required | cannot be null | [Casework Representation Schema](applications-representation-defs-representationdocument-properties-id.md "applications-representation.schema.json#/$defs/representationDocument/properties/id")                             |
+| [representationId](#representationid) | `string` | Required | cannot be null | [Casework Representation Schema](applications-representation-defs-representationdocument-properties-representationid.md "applications-representation.schema.json#/$defs/representationDocument/properties/representationId") |
+| [itemId](#itemid)                     | `string` | Required | cannot be null | [Casework Representation Schema](applications-representation-defs-representationdocument-properties-itemid.md "applications-representation.schema.json#/$defs/representationDocument/properties/itemId")                     |
+| [fileName](#filename)                 | `string` | Required | cannot be null | [Casework Representation Schema](applications-representation-defs-representationdocument-properties-filename.md "applications-representation.schema.json#/$defs/representationDocument/properties/fileName")                 |
+| [redactedItemId](#redacteditemid)     | `string` | Optional | can be null    | [Casework Representation Schema](applications-representation-defs-representationdocument-properties-redacteditemid.md "applications-representation.schema.json#/$defs/representationDocument/properties/redactedItemId")     |
+| [redactedFileName](#redactedfilename) | `string` | Optional | can be null    | [Casework Representation Schema](applications-representation-defs-representationdocument-properties-redactedfilename.md "applications-representation.schema.json#/$defs/representationDocument/properties/redactedFileName") |
+| [status](#status)                     | `string` | Required | cannot be null | [Casework Representation Schema](applications-representation-defs-representationdocument-properties-status.md "applications-representation.schema.json#/$defs/representationDocument/properties/status")                     |
 
 ### id
 
@@ -708,7 +708,7 @@ Source Key for Representation Document
 
 * cannot be null
 
-* defined in: [Casework Representation Schema](applications-representation-definitions-representationdocument-properties-id.md "applications-representation.schema.json#/definitions/representationDocument/properties/id")
+* defined in: [Casework Representation Schema](applications-representation-defs-representationdocument-properties-id.md "applications-representation.schema.json#/$defs/representationDocument/properties/id")
 
 #### id Type
 
@@ -726,7 +726,7 @@ The representation this relates to
 
 * cannot be null
 
-* defined in: [Casework Representation Schema](applications-representation-definitions-representationdocument-properties-representationid.md "applications-representation.schema.json#/definitions/representationDocument/properties/representationId")
+* defined in: [Casework Representation Schema](applications-representation-defs-representationdocument-properties-representationid.md "applications-representation.schema.json#/$defs/representationDocument/properties/representationId")
 
 #### representationId Type
 
@@ -744,7 +744,7 @@ The id of the item in SharePoint
 
 * cannot be null
 
-* defined in: [Casework Representation Schema](applications-representation-definitions-representationdocument-properties-itemid.md "applications-representation.schema.json#/definitions/representationDocument/properties/itemId")
+* defined in: [Casework Representation Schema](applications-representation-defs-representationdocument-properties-itemid.md "applications-representation.schema.json#/$defs/representationDocument/properties/itemId")
 
 #### itemId Type
 
@@ -762,7 +762,7 @@ The name of the file
 
 * cannot be null
 
-* defined in: [Casework Representation Schema](applications-representation-definitions-representationdocument-properties-filename.md "applications-representation.schema.json#/definitions/representationDocument/properties/fileName")
+* defined in: [Casework Representation Schema](applications-representation-defs-representationdocument-properties-filename.md "applications-representation.schema.json#/$defs/representationDocument/properties/fileName")
 
 #### fileName Type
 
@@ -780,7 +780,7 @@ The id of the redacted version of the item in sharepoint
 
 * can be null
 
-* defined in: [Casework Representation Schema](applications-representation-definitions-representationdocument-properties-redacteditemid.md "applications-representation.schema.json#/definitions/representationDocument/properties/redactedItemId")
+* defined in: [Casework Representation Schema](applications-representation-defs-representationdocument-properties-redacteditemid.md "applications-representation.schema.json#/$defs/representationDocument/properties/redactedItemId")
 
 #### redactedItemId Type
 
@@ -798,7 +798,7 @@ the name of the redacted file
 
 * can be null
 
-* defined in: [Casework Representation Schema](applications-representation-definitions-representationdocument-properties-redactedfilename.md "applications-representation.schema.json#/definitions/representationDocument/properties/redactedFileName")
+* defined in: [Casework Representation Schema](applications-representation-defs-representationdocument-properties-redactedfilename.md "applications-representation.schema.json#/$defs/representationDocument/properties/redactedFileName")
 
 #### redactedFileName Type
 
@@ -816,7 +816,7 @@ The status of the document
 
 * cannot be null
 
-* defined in: [Casework Representation Schema](applications-representation-definitions-representationdocument-properties-status.md "applications-representation.schema.json#/definitions/representationDocument/properties/status")
+* defined in: [Casework Representation Schema](applications-representation-defs-representationdocument-properties-status.md "applications-representation.schema.json#/$defs/representationDocument/properties/status")
 
 #### status Type
 

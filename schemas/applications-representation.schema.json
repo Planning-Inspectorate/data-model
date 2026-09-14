@@ -11,7 +11,7 @@
     "caseReference",
     "caseId",
     "caseType",
-    "status",
+    "representationStatus",
     "submittedFor",
     "submittedDate",
     "comment"
@@ -52,10 +52,10 @@
     "submittedByContact": {
       "type": ["array", "null"],
       "items": {
-        "$ref": "#/definitions/contact"
+        "$ref": "#/$defs/contact"
       }
     },
-    "submittedByAgentFlag": {
+    "submittedByAgent": {
       "type": ["boolean", "null"]
     },
     "submittedByAgentOrgName": {
@@ -92,7 +92,7 @@
     "representedContact": {
       "type": ["array", "null"],
       "items": {
-        "$ref": "#/definitions/contact"
+        "$ref": "#/$defs/contact"
       },
       "description": "When representation is on behalf of a person/org/group"
     },
@@ -134,11 +134,11 @@
     "representationDocuments": {
       "type": ["array", "null"],
       "items": {
-        "$ref": "#/definitions/representationDocument"
+        "$ref": "#/$defs/representationDocument"
       }
     }
   },
-  "definitions": {
+  "$defs": {
     "contact": {
       "type": "object",
       "required": ["contactId"],

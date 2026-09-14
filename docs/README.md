@@ -84,9 +84,9 @@
 
 * [Untitled object in Appeal S78 Case](./appeal-s78-properties-significantchangesaffectingapplicationlpa-items.md) – `appeal-s78.schema.json#/properties/significantChangesAffectingApplicationLpa/items`
 
-* [Untitled object in Casework Representation Schema](./applications-representation-definitions-contact.md) – `applications-representation.schema.json#/definitions/contact`
+* [Untitled object in Casework Representation Schema](./applications-representation-defs-contact.md) – `applications-representation.schema.json#/$defs/contact`
 
-* [Untitled object in Casework Representation Schema](./applications-representation-definitions-representationdocument.md) – `applications-representation.schema.json#/definitions/representationDocument`
+* [Untitled object in Casework Representation Schema](./applications-representation-defs-representationdocument.md) – `applications-representation.schema.json#/$defs/representationDocument`
 
 * [Untitled object in Crown Development Application](./applications-application-defs-organisation.md) – `applications-application.schema.json#/$defs/organisation`
 

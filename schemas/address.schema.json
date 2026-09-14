@@ -75,7 +75,7 @@
     "UPRN": {
       "type": ["string", "null"],
       "example": 100023336956,
-      "description": "The Unique Property Reference Number (UPRN) is a unique number (a geocode) for every addressable location—e.g., a building, a bus stop, a post box, a feature in the landscape, or a defibrillator—in Great Britain."
+      "description": "The Unique Property Reference Number (UPRN) is a unique number (a geocode) for every addressable location - e.g., a building, a bus stop, a post box, a feature in the landscape, or a defibrillator - in Great Britain."
     },
     "dependentRequired": {
       "easting": ["northing"],

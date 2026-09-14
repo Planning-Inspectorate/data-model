@@ -44,7 +44,7 @@ export interface PINSAddressSchema {
   latitudeWGS84?: number | null;
   longitudeWGS84?: number | null;
   /**
-   * The Unique Property Reference Number (UPRN) is a unique number (a geocode) for every addressable location—e.g., a building, a bus stop, a post box, a feature in the landscape, or a defibrillator—in Great Britain.
+   * The Unique Property Reference Number (UPRN) is a unique number (a geocode) for every addressable location - e.g., a building, a bus stop, a post box, a feature in the landscape, or a defibrillator in Great Britain.
    */
   UPRN?: string | null;
   dependentRequired?: {

@@ -363,4 +363,45 @@ describe(schema, () => {
 			assert.strictEqual(validationResult, false, 'Expected invalid caseProcedure value to fail validation');
 		});
 	});
+
+	describe('caseStatus schema validation (Group A - HAS)', () => {
+		it('should accept caseStatus values', () => {
+			for (const status of [
+				'assign_case_officer',
+				'validation',
+				'ready_to_start',
+				'lpa_questionnaire',
+				'issue_determination',
+				'complete',
+				'invalid',
+				'closed',
+				'withdrawn',
+				'awaiting_transfer',
+				'transferred',
+				'event',
+				'awaiting_event',
+				'notice_withdrawn',
+				'closed_opened_in_error'
+			]) {
+				const test = structuredClone(appealHas);
+				test.caseStatus = status;
+				const validationResult = ajv.validate(schema, test);
+				assert.strictEqual(validationResult, true, `Expected caseStatus "${status}" to be valid`);
+			}
+		});
+
+		it('should not accept null value for caseStatus', () => {
+			const test = structuredClone(appealHas);
+			test.caseStatus = null;
+			const validationResult = ajv.validate(schema, test);
+			assert.strictEqual(validationResult, false, 'Expected caseStatus null not to be valid');
+		});
+
+		it('should reject invalid caseStatus values', () => {
+			const test = structuredClone(appealHas);
+			test.caseStatus = 'invalid_status';
+			const validationResult = ajv.validate(schema, test);
+			assert.strictEqual(validationResult, false, 'Expected invalid caseStatus value to fail validation');
+		});
+	});
 });

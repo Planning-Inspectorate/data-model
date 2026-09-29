@@ -27,6 +27,8 @@ class CaseStatus(StrEnum):
     transferred = "transferred"
     event = "event"
     awaiting_event = "awaiting_event"
+    notice_withdrawn = "notice_withdrawn"
+    closed_opened_in_error = "closed_opened_in_error"
 
 
 class CaseType(StrEnum):

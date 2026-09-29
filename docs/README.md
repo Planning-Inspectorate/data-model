@@ -80,6 +80,10 @@
 
 * [Untitled object in Appeal S78 Case](./appeal-s78-properties-applicationelbappealgroundsdetails-items.md) – `appeal-s78.schema.json#/properties/applicationElbAppealGroundsDetails/items`
 
+* [Untitled object in Appeal S78 Case](./appeal-s78-properties-enforcementcasegroundsofappeal-items.md) – `appeal-s78.schema.json#/properties/enforcementCaseGroundsOfAppeal/items`
+
+* [Untitled object in Appeal S78 Case](./appeal-s78-properties-elbcasegroundsofappeal-items.md) – `appeal-s78.schema.json#/properties/elbCaseGroundsOfAppeal/items`
+
 * [Untitled object in Appeal S78 Case](./appeal-s78-properties-significantchangesaffectingapplicationappellant-items.md) – `appeal-s78.schema.json#/properties/significantChangesAffectingApplicationAppellant/items`
 
 * [Untitled object in Appeal S78 Case](./appeal-s78-properties-significantchangesaffectingapplicationlpa-items.md) – `appeal-s78.schema.json#/properties/significantChangesAffectingApplicationLpa/items`

@@ -167,6 +167,8 @@ any of
 | [occupancyConditionsMet](#occupancyconditionsmet)                                                   | `boolean` | Optional | can be null    | [Appeal S78 Case](appeal-s78-properties-occupancyconditionsmet.md "appeal-s78.schema.json#/properties/occupancyConditionsMet")                                                   |
 | [enforcementAppealGroundsDetails](#enforcementappealgroundsdetails)                                 | `array`   | Optional | can be null    | [Appeal S78 Case](appeal-s78-properties-enforcementappealgroundsdetails.md "appeal-s78.schema.json#/properties/enforcementAppealGroundsDetails")                                 |
 | [applicationElbAppealGroundsDetails](#applicationelbappealgroundsdetails)                           | `array`   | Optional | can be null    | [Appeal S78 Case](appeal-s78-properties-applicationelbappealgroundsdetails.md "appeal-s78.schema.json#/properties/applicationElbAppealGroundsDetails")                           |
+| [enforcementCaseGroundsOfAppeal](#enforcementcasegroundsofappeal)                                   | `array`   | Optional | can be null    | [Appeal S78 Case](appeal-s78-properties-enforcementcasegroundsofappeal.md "appeal-s78.schema.json#/properties/enforcementCaseGroundsOfAppeal")                                   |
+| [elbCaseGroundsOfAppeal](#elbcasegroundsofappeal)                                                   | `array`   | Optional | can be null    | [Appeal S78 Case](appeal-s78-properties-elbcasegroundsofappeal.md "appeal-s78.schema.json#/properties/elbCaseGroundsOfAppeal")                                                   |
 | [applicationMadeAndFeePaid](#applicationmadeandfeepaid)                                             | `boolean` | Optional | can be null    | [Appeal S78 Case](appeal-s78-properties-applicationmadeandfeepaid.md "appeal-s78.schema.json#/properties/applicationMadeAndFeePaid")                                             |
 | [noticeRelatesToBuildingEngineeringMiningOther](#noticerelatestobuildingengineeringminingother)     | `boolean` | Optional | can be null    | [Appeal S78 Case](appeal-s78-properties-noticerelatestobuildingengineeringminingother.md "appeal-s78.schema.json#/properties/noticeRelatesToBuildingEngineeringMiningOther")     |
 | [changeOfUseRefuseOrWaste](#changeofuserefuseorwaste)                                               | `boolean` | Optional | can be null    | [Appeal S78 Case](appeal-s78-properties-changeofuserefuseorwaste.md "appeal-s78.schema.json#/properties/changeOfUseRefuseOrWaste")                                               |
@@ -316,25 +318,27 @@ The processing status for the appeal
 
 **enum**: the value of this property must be equal to one of the following values:
 
-| Value                   | Explanation |
-| :---------------------- | :---------- |
-| `"assign_case_officer"` |             |
-| `"validation"`          |             |
-| `"ready_to_start"`      |             |
-| `"lpa_questionnaire"`   |             |
-| `"issue_determination"` |             |
-| `"statements"`          |             |
-| `"evidence"`            |             |
-| `"witnesses"`           |             |
-| `"final_comments"`      |             |
-| `"complete"`            |             |
-| `"invalid"`             |             |
-| `"closed"`              |             |
-| `"withdrawn"`           |             |
-| `"awaiting_transfer"`   |             |
-| `"transferred"`         |             |
-| `"event"`               |             |
-| `"awaiting_event"`      |             |
+| Value                      | Explanation |
+| :------------------------- | :---------- |
+| `"assign_case_officer"`    |             |
+| `"validation"`             |             |
+| `"ready_to_start"`         |             |
+| `"lpa_questionnaire"`      |             |
+| `"issue_determination"`    |             |
+| `"statements"`             |             |
+| `"evidence"`               |             |
+| `"witnesses"`              |             |
+| `"final_comments"`         |             |
+| `"complete"`               |             |
+| `"invalid"`                |             |
+| `"closed"`                 |             |
+| `"withdrawn"`              |             |
+| `"awaiting_transfer"`      |             |
+| `"transferred"`            |             |
+| `"event"`                  |             |
+| `"awaiting_event"`         |             |
+| `"notice_withdrawn"`       |             |
+| `"closed_opened_in_error"` |             |
 
 ## caseType
 
@@ -4069,6 +4073,46 @@ A list of grounds for the appeal, supporting facts & start dates. Enforcement ca
 ### applicationElbAppealGroundsDetails Type
 
 `object[]` ([Details](appeal-s78-properties-applicationelbappealgroundsdetails-items.md))
+
+## enforcementCaseGroundsOfAppeal
+
+Case Officer list of grounds for the appeal & start dates. Enforcement cases (C) can have grounds (a) to (g)
+
+> Enforcement Listed Building cases (F) have a separate list of grounds (a) to (k)
+
+`enforcementCaseGroundsOfAppeal`
+
+* is optional
+
+* Type: `object[]` ([Details](appeal-s78-properties-enforcementcasegroundsofappeal-items.md))
+
+* can be null
+
+* defined in: [Appeal S78 Case](appeal-s78-properties-enforcementcasegroundsofappeal.md "appeal-s78.schema.json#/properties/enforcementCaseGroundsOfAppeal")
+
+### enforcementCaseGroundsOfAppeal Type
+
+`object[]` ([Details](appeal-s78-properties-enforcementcasegroundsofappeal-items.md))
+
+## elbCaseGroundsOfAppeal
+
+Case Officer list of grounds for the appeal & start dates. Enforcement cases (C) can have grounds (a) to (g)
+
+> Enforcement Listed Building cases (F) have a separate list of grounds (a) to (k)
+
+`elbCaseGroundsOfAppeal`
+
+* is optional
+
+* Type: `object[]` ([Details](appeal-s78-properties-elbcasegroundsofappeal-items.md))
+
+* can be null
+
+* defined in: [Appeal S78 Case](appeal-s78-properties-elbcasegroundsofappeal.md "appeal-s78.schema.json#/properties/elbCaseGroundsOfAppeal")
+
+### elbCaseGroundsOfAppeal Type
+
+`object[]` ([Details](appeal-s78-properties-elbcasegroundsofappeal-items.md))
 
 ## applicationMadeAndFeePaid
 

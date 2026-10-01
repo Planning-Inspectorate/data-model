@@ -125,7 +125,9 @@
         "awaiting_transfer",
         "transferred",
         "event",
-        "awaiting_event"
+        "awaiting_event",
+        "notice_withdrawn",
+        "closed_opened_in_error"
       ],
       "description": "The processing status for the appeal"
     },

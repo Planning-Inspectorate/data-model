@@ -31,6 +31,8 @@ class CaseStatus(StrEnum):
     transferred = "transferred"
     event = "event"
     awaiting_event = "awaiting_event"
+    notice_withdrawn = "notice_withdrawn"
+    closed_opened_in_error = "closed_opened_in_error"
 
 
 class CaseType(StrEnum):
@@ -392,6 +394,52 @@ class ApplicationElbAppealGroundsDetail(BaseModel):
     """
     Facts supporting the appeal ground
     """
+
+
+class AppealGroundLetter2(Enum):
+    a = "a"
+    b = "b"
+    c = "c"
+    d = "d"
+    e = "e"
+    f = "f"
+    g = "g"
+    NoneType_None = None
+
+
+class EnforcementCaseGroundsOfAppealItem(BaseModel):
+    model_config = ConfigDict(
+        extra="allow",
+    )
+    appealGroundLetter: AppealGroundLetter2 | None = None
+    groundForAppealStartDate: AwareDatetime | None = Field(
+        None, examples=["2023-07-27T20:30:00.000Z"]
+    )
+
+
+class AppealGroundLetter3(Enum):
+    a = "a"
+    b = "b"
+    c = "c"
+    d = "d"
+    e = "e"
+    f = "f"
+    g = "g"
+    h = "h"
+    i = "i"
+    j = "j"
+    k = "k"
+    NoneType_None = None
+
+
+class ElbCaseGroundsOfAppealItem(BaseModel):
+    model_config = ConfigDict(
+        extra="allow",
+    )
+    appealGroundLetter: AppealGroundLetter3 | None = None
+    groundForAppealStartDate: AwareDatetime | None = Field(
+        None, examples=["2023-07-27T20:30:00.000Z"]
+    )
 
 
 class ApplicationPartOrWholeDevelopment(Enum):
@@ -1099,6 +1147,16 @@ class AppealS78Case1(BaseModel):
     """
     A list of grounds for the appeal, supporting facts & start dates. Enforcement cases (C) can have grounds (a) to (g)
     """
+    enforcementCaseGroundsOfAppeal: list[EnforcementCaseGroundsOfAppealItem] | None = (
+        None
+    )
+    """
+    Case Officer list of grounds for the appeal & start dates. Enforcement cases (C) can have grounds (a) to (g)
+    """
+    elbCaseGroundsOfAppeal: list[ElbCaseGroundsOfAppealItem] | None = None
+    """
+    Case Officer list of grounds for the appeal & start dates. Enforcement cases (C) can have grounds (a) to (g)
+    """
     applicationMadeAndFeePaid: bool | None = None
     """
     Was an application made and paid for
@@ -1223,7 +1281,7 @@ class AdvertDetail1(BaseModel):
     """
 
 
-class AppealGroundLetter2(Enum):
+class AppealGroundLetter4(Enum):
     a = "a"
     b = "b"
     c = "c"
@@ -1238,7 +1296,7 @@ class EnforcementAppealGroundsDetail1(BaseModel):
     model_config = ConfigDict(
         extra="allow",
     )
-    appealGroundLetter: AppealGroundLetter2 | None = None
+    appealGroundLetter: AppealGroundLetter4 | None = None
     groundForAppealStartDate: AwareDatetime | None = Field(
         None, examples=["2023-07-27T20:30:00.000Z"]
     )
@@ -1248,7 +1306,7 @@ class EnforcementAppealGroundsDetail1(BaseModel):
     """
 
 
-class AppealGroundLetter3(Enum):
+class AppealGroundLetter5(Enum):
     a = "a"
     b = "b"
     c = "c"
@@ -1267,7 +1325,7 @@ class ApplicationElbAppealGroundsDetail1(BaseModel):
     model_config = ConfigDict(
         extra="allow",
     )
-    appealGroundLetter: AppealGroundLetter3 | None = None
+    appealGroundLetter: AppealGroundLetter5 | None = None
     groundForAppealStartDate: AwareDatetime | None = Field(
         None, examples=["2023-07-27T20:30:00.000Z"]
     )
@@ -1275,6 +1333,52 @@ class ApplicationElbAppealGroundsDetail1(BaseModel):
     """
     Facts supporting the appeal ground
     """
+
+
+class AppealGroundLetter6(Enum):
+    a = "a"
+    b = "b"
+    c = "c"
+    d = "d"
+    e = "e"
+    f = "f"
+    g = "g"
+    NoneType_None = None
+
+
+class EnforcementCaseGroundsOfAppealItem1(BaseModel):
+    model_config = ConfigDict(
+        extra="allow",
+    )
+    appealGroundLetter: AppealGroundLetter6 | None = None
+    groundForAppealStartDate: AwareDatetime | None = Field(
+        None, examples=["2023-07-27T20:30:00.000Z"]
+    )
+
+
+class AppealGroundLetter7(Enum):
+    a = "a"
+    b = "b"
+    c = "c"
+    d = "d"
+    e = "e"
+    f = "f"
+    g = "g"
+    h = "h"
+    i = "i"
+    j = "j"
+    k = "k"
+    NoneType_None = None
+
+
+class ElbCaseGroundsOfAppealItem1(BaseModel):
+    model_config = ConfigDict(
+        extra="allow",
+    )
+    appealGroundLetter: AppealGroundLetter7 | None = None
+    groundForAppealStartDate: AwareDatetime | None = Field(
+        None, examples=["2023-07-27T20:30:00.000Z"]
+    )
 
 
 class SignificantChangesAffectingApplicationAppellantItem1(BaseModel):
@@ -1940,6 +2044,16 @@ class AppealS78Case2(BaseModel):
     ) = None
     """
     A list of grounds for the appeal, supporting facts & start dates. Enforcement cases (C) can have grounds (a) to (g)
+    """
+    enforcementCaseGroundsOfAppeal: list[EnforcementCaseGroundsOfAppealItem1] | None = (
+        None
+    )
+    """
+    Case Officer list of grounds for the appeal & start dates. Enforcement cases (C) can have grounds (a) to (g)
+    """
+    elbCaseGroundsOfAppeal: list[ElbCaseGroundsOfAppealItem1] | None = None
+    """
+    Case Officer list of grounds for the appeal & start dates. Enforcement cases (C) can have grounds (a) to (g)
     """
     applicationMadeAndFeePaid: bool | None = None
     """

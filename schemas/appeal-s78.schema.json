@@ -196,7 +196,9 @@
         "awaiting_transfer",
         "transferred",
         "event",
-        "awaiting_event"
+        "awaiting_event",
+        "notice_withdrawn",
+        "closed_opened_in_error"
       ],
       "description": "The processing status for the appeal",
       "$comment": "Also available on HAS cases"
@@ -1212,6 +1214,46 @@
         }
       },
       "description": "A list of grounds for the appeal, supporting facts & start dates. Enforcement cases (C) can have grounds (a) to (g)",
+      "$comment": "Enforcement Listed Building cases (F) have a separate list of grounds (a) to (k)"
+    },
+    "enforcementCaseGroundsOfAppeal": {
+      "type": ["array", "null"],
+      "items": {
+        "type": "object",
+        "additionalProperties": true,
+        "properties": {
+          "appealGroundLetter": {
+            "type": ["string", "null"],
+            "enum": ["a", "b", "c", "d", "e", "f", "g", null]
+          },
+          "groundForAppealStartDate": {
+            "type": ["string", "null"],
+            "format": "date-time",
+            "examples": ["2023-07-27T20:30:00.000Z"]
+          }
+        }
+      },
+      "description": "Case Officer list of grounds for the appeal & start dates. Enforcement cases (C) can have grounds (a) to (g)",
+      "$comment": "Enforcement Listed Building cases (F) have a separate list of grounds (a) to (k)"
+    },
+    "elbCaseGroundsOfAppeal": {
+      "type": ["array", "null"],
+      "items": {
+        "type": "object",
+        "additionalProperties": true,
+        "properties": {
+          "appealGroundLetter": {
+            "type": ["string", "null"],
+            "enum": ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", null]
+          },
+          "groundForAppealStartDate": {
+            "type": ["string", "null"],
+            "format": "date-time",
+            "examples": ["2023-07-27T20:30:00.000Z"]
+          }
+        }
+      },
+      "description": "Case Officer list of grounds for the appeal & start dates. Enforcement cases (C) can have grounds (a) to (g)",
       "$comment": "Enforcement Listed Building cases (F) have a separate list of grounds (a) to (k)"
     },
     "applicationMadeAndFeePaid": {

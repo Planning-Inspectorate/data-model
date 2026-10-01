@@ -232,6 +232,7 @@ export interface AppealDocument {
     | 'hearingProcess'
     | 'inquiryCore'
     | 'inquiryPostEvent'
+    | 'noticeWithdrawal'
     | null;
   /**
    * The system mastering the metadata for the current document
@@ -421,7 +422,9 @@ export type AppealHASCase = (GridReference | SiteAddress) & {
     | 'awaiting_transfer'
     | 'transferred'
     | 'event'
-    | 'awaiting_event';
+    | 'awaiting_event'
+    | 'notice_withdrawn'
+    | 'closed_opened_in_error';
   /**
    * The internal code for an appeal type, e.g. D (Householder)
    */
@@ -1049,7 +1052,9 @@ export type AppealS78Case = (GridReference | SiteAddress) & {
     | 'awaiting_transfer'
     | 'transferred'
     | 'event'
-    | 'awaiting_event';
+    | 'awaiting_event'
+    | 'notice_withdrawn'
+    | 'closed_opened_in_error';
   /**
    * The internal code for an appeal type, e.g. D (Householder)
    */
@@ -1698,6 +1703,26 @@ export type AppealS78Case = (GridReference | SiteAddress) & {
          * Facts supporting the appeal ground
          */
         groundFacts?: string | null;
+        [k: string]: unknown;
+      }[]
+    | null;
+  /**
+   * Case Officer list of grounds for the appeal & start dates. Enforcement cases (C) can have grounds (a) to (g)
+   */
+  enforcementCaseGroundsOfAppeal?:
+    | {
+        appealGroundLetter?: 'a' | 'b' | 'c' | 'd' | 'e' | 'f' | 'g' | null;
+        groundForAppealStartDate?: string | null;
+        [k: string]: unknown;
+      }[]
+    | null;
+  /**
+   * Case Officer list of grounds for the appeal & start dates. Enforcement cases (C) can have grounds (a) to (g)
+   */
+  elbCaseGroundsOfAppeal?:
+    | {
+        appealGroundLetter?: 'a' | 'b' | 'c' | 'd' | 'e' | 'f' | 'g' | 'h' | 'i' | 'j' | 'k' | null;
+        groundForAppealStartDate?: string | null;
         [k: string]: unknown;
       }[]
     | null;

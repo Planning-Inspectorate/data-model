@@ -157,6 +157,7 @@ class DocumentType(Enum):
     hearingProcess = "hearingProcess"
     inquiryCore = "inquiryCore"
     inquiryPostEvent = "inquiryPostEvent"
+    noticeWithdrawal = "noticeWithdrawal"
     NoneType_None = None
 
 

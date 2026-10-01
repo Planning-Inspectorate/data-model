@@ -221,21 +221,23 @@ The processing status for the appeal
 
 **enum**: the value of this property must be equal to one of the following values:
 
-| Value                   | Explanation |
-| :---------------------- | :---------- |
-| `"assign_case_officer"` |             |
-| `"validation"`          |             |
-| `"ready_to_start"`      |             |
-| `"lpa_questionnaire"`   |             |
-| `"issue_determination"` |             |
-| `"complete"`            |             |
-| `"invalid"`             |             |
-| `"closed"`              |             |
-| `"withdrawn"`           |             |
-| `"awaiting_transfer"`   |             |
-| `"transferred"`         |             |
-| `"event"`               |             |
-| `"awaiting_event"`      |             |
+| Value                      | Explanation |
+| :------------------------- | :---------- |
+| `"assign_case_officer"`    |             |
+| `"validation"`             |             |
+| `"ready_to_start"`         |             |
+| `"lpa_questionnaire"`      |             |
+| `"issue_determination"`    |             |
+| `"complete"`               |             |
+| `"invalid"`                |             |
+| `"closed"`                 |             |
+| `"withdrawn"`              |             |
+| `"awaiting_transfer"`      |             |
+| `"transferred"`            |             |
+| `"event"`                  |             |
+| `"awaiting_event"`         |             |
+| `"notice_withdrawn"`       |             |
+| `"closed_opened_in_error"` |             |
 
 ## caseType
 

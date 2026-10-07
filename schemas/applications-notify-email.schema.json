@@ -93,7 +93,7 @@
     "Contact": {
       "type": "object",
       "description": "Contact the email was sent to",
-      "required": ["contactId", "addressId"],
+      "required": ["contactId"],
       "properties": {
         "contactId": {
           "type": "string",

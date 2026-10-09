@@ -93,7 +93,7 @@
     "Contact": {
       "type": "object",
       "description": "Contact the email was sent to",
-      "required": ["contactId", "addressId"],
+      "required": ["contactId"],
       "properties": {
         "contactId": {
           "type": "string",
@@ -102,7 +102,7 @@
         },
         "contactPreference": {
           "type": ["string", "null"],
-          "enum": ["email", "post"],
+          "enum": ["email", "post", null],
           "description": "Preferred contact method",
           "example": "email"
         },

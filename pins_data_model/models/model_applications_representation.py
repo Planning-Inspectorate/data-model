@@ -32,6 +32,7 @@ class SubmittedReceivedMethod(Enum):
     Email = "Email"
     Post = "Post"
     In_person = "In person"
+    NoneType_None = None
 
 
 class RepresentedType(Enum):
@@ -46,11 +47,13 @@ class RepresentedType(Enum):
     An_organisation_or_charity_I_do_not_work_or_volunteer_for = (
         "An organisation or charity I do not work or volunteer for"
     )
+    NoneType_None = None
 
 
 class RepresentedCategory(Enum):
     Consultees = "Consultees"
     Interested_party = "Interested party"
+    NoneType_None = None
 
 
 class WithdrawalReason(Enum):
@@ -62,11 +65,13 @@ class WithdrawalReason(Enum):
     Mistaken_Submission = "Mistaken Submission"
     Misunderstanding = "Misunderstanding"
     Personal_Reasons = "Personal Reasons"
+    NoneType_None = None
 
 
 class ContactPreference(Enum):
     email = "email"
     post = "post"
+    NoneType_None = None
 
 
 class Contact(BaseModel):

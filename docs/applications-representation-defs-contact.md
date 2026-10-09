@@ -55,6 +55,7 @@ Source PK for Contact
 | :-------- | :---------- |
 | `"email"` |             |
 | `"post"`  |             |
+| `null`    |             |
 
 ## writtenRepOrgName
 

@@ -68,7 +68,7 @@
     "submittedReceivedMethod": {
       "type": ["string", "null"],
       "description": "How we received the representation",
-      "enum": ["Online", "Phone", "Email", "Post", "In person"]
+      "enum": ["Online", "Phone", "Email", "Post", "In person", null]
     },
     "submissionMethodReason": {
       "type": ["string", "null"]
@@ -86,7 +86,8 @@
       "enum": [
         "A person",
         "An organisation or charity I work or volunteer for",
-        "An organisation or charity I do not work or volunteer for"
+        "An organisation or charity I do not work or volunteer for",
+        null
       ]
     },
     "representedContact": {
@@ -98,7 +99,7 @@
     },
     "representedCategory": {
       "type": ["string", "null"],
-      "enum": ["Consultees", "Interested party"]
+      "enum": ["Consultees", "Interested party", null]
     },
     "wantsToBeHeard": {
       "type": ["boolean", "null"],
@@ -124,7 +125,7 @@
     "withdrawalReason": {
       "type": ["string", "null"],
       "description": "Reason for the withdrawal",
-      "enum": ["Change of opinion", "Mistaken Submission", "Misunderstanding", "Personal Reasons"]
+      "enum": ["Change of opinion", "Mistaken Submission", "Misunderstanding", "Personal Reasons", null]
     },
     "dateWithdrawn": {
       "type": ["string", "null"],
@@ -151,7 +152,7 @@
         "contactPreference": {
           "type": ["string", "null"],
           "example": "email",
-          "enum": ["email", "post"]
+          "enum": ["email", "post", null]
         },
         "writtenRepOrgName": {
           "type": ["string", "null"]

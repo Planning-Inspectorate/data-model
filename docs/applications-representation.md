@@ -285,6 +285,7 @@ How we received the representation
 | `"Email"`     |             |
 | `"Post"`      |             |
 | `"In person"` |             |
+| `null`        |             |
 
 ## submissionMethodReason
 
@@ -367,6 +368,7 @@ When representation is on behalf of a person/org/group
 | `"A person"`                                                  |             |
 | `"An organisation or charity I work or volunteer for"`        |             |
 | `"An organisation or charity I do not work or volunteer for"` |             |
+| `null`                                                        |             |
 
 ## representedContact
 
@@ -412,6 +414,7 @@ When representation is on behalf of a person/org/group
 | :------------------- | :---------- |
 | `"Consultees"`       |             |
 | `"Interested party"` |             |
+| `null`               |             |
 
 ## wantsToBeHeard
 
@@ -535,6 +538,7 @@ Reason for the withdrawal
 | `"Mistaken Submission"` |             |
 | `"Misunderstanding"`    |             |
 | `"Personal Reasons"`    |             |
+| `null`                  |             |
 
 ## dateWithdrawn
 
@@ -641,6 +645,7 @@ Source PK for Contact
 | :-------- | :---------- |
 | `"email"` |             |
 | `"post"`  |             |
+| `null`    |             |
 
 ### writtenRepOrgName
 

@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "$id": "applications-application.schema.json",
+  "$id": "applications-crowndev-application.schema.json",
   "title": "Crown Development Application",
   "description": "Main application details for Crown Development Project",
   "type": "object",
@@ -43,7 +43,7 @@
       "type": ["string", "null"],
       "description": "SubType applies to Planning permissions and LBC",
       "example": "Listed building consent (LBC)",
-      "enum": ["Planning permission", "Listed building consent (LBC)"]
+      "enum": ["Planning permission", "Listed building consent (LBC)", null]
     },
     "linkedParentId": {
       "type": ["string", "null"],
@@ -132,7 +132,8 @@
         "Written representations",
         "Inquiry",
         "Hearing/Inquiry date set",
-        "Final decision"
+        "Final decision",
+        null
       ]
     },
     "nationallyImportant": {
@@ -176,7 +177,8 @@
         "Relevant demolition",
         "Other",
         "Listed building consent to alter/extend",
-        "Listed building consent to demolish"
+        "Listed building consent to demolish",
+        null
       ]
     },
     "isGreenBelt": {
@@ -273,7 +275,7 @@
     "decisionOutcome": {
       "type": ["string", "null"],
       "description": "As displayed to users",
-      "enum": ["Approved", "Approved with conditions", "Refused", "Withdrawn"]
+      "enum": ["Approved", "Approved with conditions", "Refused", "Withdrawn", null]
     },
     "turnedAwayDate": {
       "type": ["string", "null"],
@@ -326,7 +328,7 @@
     "eiaScreeningOutcome": {
       "type": ["string", "null"],
       "description": "What was the outcome of the Environmental Impact Assessment",
-      "enum": ["required", "not required"]
+      "enum": ["required", "not required", null]
     },
     "environmentalStatementReceivedDate": {
       "type": ["string", "null"],
@@ -340,7 +342,7 @@
     "procedure": {
       "type": ["string", "null"],
       "description": "Name displayed to users",
-      "enum": ["Written Representations", "Hearing", "Inquiry"]
+      "enum": ["Written Representations", "Hearing", "Inquiry", null]
     },
     "procedureNotificationDate": {
       "type": ["string", "null"],
@@ -459,7 +461,7 @@
       "additionalProperties": true,
       "required": ["contactRoleType", "organisationId"],
       "properties": {
-        "roleType": {
+        "contactRoleType": {
           "type": "string",
           "description": "Agent or Applicant details",
           "example": "agent",
@@ -501,7 +503,7 @@
         "contactPreference": {
           "type": ["string", "null"],
           "example": "email",
-          "enum": ["email", "post"]
+          "enum": ["email", "post", null]
         },
         "writtenRepOrgName": {
           "type": ["string", "null"],

@@ -1,2 +1,2 @@
-datamodel-code-generator==0.64.0
+datamodel-code-generator==0.81.0
 jsonc-parser==1.1.0

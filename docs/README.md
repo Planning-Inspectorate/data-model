@@ -18,7 +18,7 @@
 
 * [Casework Representation Schema](./applications-representation.md "Representations and related document metadata for Casework Projects") – `applications-representation.schema.json`
 
-* [Crown Development Application](./applications-application.md "Main application details for Crown Development Project") – `applications-application.schema.json`
+* [Crown Development Application](./applications-crowndev-application.md "Main application details for Crown Development Project") – `applications-crowndev-application.schema.json`
 
 * [DaRT API response](./dart-response.md "Schema defining the data returned by the DaRT API") – `dart-response.schema.json`
 
@@ -92,11 +92,11 @@
 
 * [Untitled object in Casework Representation Schema](./applications-representation-defs-representationdocument.md) – `applications-representation.schema.json#/$defs/representationDocument`
 
-* [Untitled object in Crown Development Application](./applications-application-defs-organisation.md) – `applications-application.schema.json#/$defs/organisation`
+* [Untitled object in Crown Development Application](./applications-crowndev-application-defs-organisation.md) – `applications-crowndev-application.schema.json#/$defs/organisation`
 
-* [Untitled object in Crown Development Application](./applications-application-defs-contact.md) – `applications-application.schema.json#/$defs/contact`
+* [Untitled object in Crown Development Application](./applications-crowndev-application-defs-contact.md) – `applications-crowndev-application.schema.json#/$defs/contact`
 
-* [Untitled object in Crown Development Application](./applications-application-defs-address.md) – `applications-application.schema.json#/$defs/address`
+* [Untitled object in Crown Development Application](./applications-crowndev-application-defs-address.md) – `applications-crowndev-application.schema.json#/$defs/address`
 
 * [Untitled object in DaRT API response](./dart-response-properties-neighbouringsiteaddresses-items.md) – `dart-response.schema.json#/properties/neighbouringSiteAddresses/items`
 
@@ -118,7 +118,7 @@
 
 * [Untitled array in Appeal Representation](./appeal-representation-properties-documentids.md "An array of documentIds") – `appeal-representation.schema.json#/properties/documentIds`
 
-* [Untitled array in Crown Development Application](./applications-application-properties-organisations.md "Applications can have one or more organisaitons associated with them") – `applications-application.schema.json#/properties/organisations`
+* [Untitled array in Crown Development Application](./applications-crowndev-application-properties-organisations.md "Applications can have one or more organisaitons associated with them") – `applications-crowndev-application.schema.json#/properties/organisations`
 
 * [Untitled array in Examination Timetable](./nsip-exam-timetable-properties-events.md) – `nsip-exam-timetable.schema.json#/properties/events`
 

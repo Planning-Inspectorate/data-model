@@ -27,6 +27,7 @@ class ContactPreference(Enum):
 
     email = "email"
     post = "post"
+    NoneType_None = None
 
 
 class Contact(BaseModel):

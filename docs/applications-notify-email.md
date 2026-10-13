@@ -420,6 +420,7 @@ Preferred contact method
 | :-------- | :---------- |
 | `"email"` |             |
 | `"post"`  |             |
+| `null`    |             |
 
 ### writtenRepOrgName
 

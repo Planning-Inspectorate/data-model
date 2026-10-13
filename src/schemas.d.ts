@@ -1913,7 +1913,7 @@ export interface CrownDevelopmentApplication {
   /**
    * SubType applies to Planning permissions and LBC
    */
-  subType?: ('Planning permission' | 'Listed building consent (LBC)') | null;
+  subType?: 'Planning permission' | 'Listed building consent (LBC)' | null;
   /**
    * Self-referencial for parent to children relationship
    */
@@ -1980,15 +1980,13 @@ export interface CrownDevelopmentApplication {
    * Current stage of the case (enum)
    */
   applicationStage?:
-    | (
-        | 'Accepted'
-        | 'Consultation'
-        | 'Procedure choice'
-        | 'Written representations'
-        | 'Inquiry'
-        | 'Hearing/Inquiry date set'
-        | 'Final decision'
-      )
+    | 'Accepted'
+    | 'Consultation'
+    | 'Procedure choice'
+    | 'Written representations'
+    | 'Inquiry'
+    | 'Hearing/Inquiry date set'
+    | 'Final decision'
     | null;
   /**
    * Site is nationally important (Yes/No)
@@ -2014,25 +2012,23 @@ export interface CrownDevelopmentApplication {
    * Application category (enum)
    */
   category?:
-    | (
-        | 'Major Development'
-        | 'Buildings over 1000 square metres'
-        | 'Development of a site above 1 hectare'
-        | 'Dwellings numbering 10 or more'
-        | 'Dwellings of 0.5 hectare or more'
-        | 'Minerals'
-        | 'Waste'
-        | 'Non-Major Development'
-        | 'Buildings less than 1000 square metres'
-        | 'Development of a site less than 1 hectare'
-        | 'Dwellings numbering between 1 and 9'
-        | 'Dwellings of less than 0.5 hectare'
-        | 'Change of use'
-        | 'Relevant demolition'
-        | 'Other'
-        | 'Listed building consent to alter/extend'
-        | 'Listed building consent to demolish'
-      )
+    | 'Major Development'
+    | 'Buildings over 1000 square metres'
+    | 'Development of a site above 1 hectare'
+    | 'Dwellings numbering 10 or more'
+    | 'Dwellings of 0.5 hectare or more'
+    | 'Minerals'
+    | 'Waste'
+    | 'Non-Major Development'
+    | 'Buildings less than 1000 square metres'
+    | 'Development of a site less than 1 hectare'
+    | 'Dwellings numbering between 1 and 9'
+    | 'Dwellings of less than 0.5 hectare'
+    | 'Change of use'
+    | 'Relevant demolition'
+    | 'Other'
+    | 'Listed building consent to alter/extend'
+    | 'Listed building consent to demolish'
     | null;
   /**
    * Is the site in green belt land
@@ -2113,7 +2109,7 @@ export interface CrownDevelopmentApplication {
   /**
    * As displayed to users
    */
-  decisionOutcome?: ('Approved' | 'Approved with conditions' | 'Refused' | 'Withdrawn') | null;
+  decisionOutcome?: 'Approved' | 'Approved with conditions' | 'Refused' | 'Withdrawn' | null;
   /**
    * Date application was turned away
    */
@@ -2161,7 +2157,7 @@ export interface CrownDevelopmentApplication {
   /**
    * What was the outcome of the Environmental Impact Assessment
    */
-  eiaScreeningOutcome?: ('required' | 'not required') | null;
+  eiaScreeningOutcome?: 'required' | 'not required' | null;
   /**
    * Date the environmental statement was received
    */
@@ -2173,7 +2169,7 @@ export interface CrownDevelopmentApplication {
   /**
    * Name displayed to users
    */
-  procedure?: ('Written Representations' | 'Hearing' | 'Inquiry') | null;
+  procedure?: 'Written Representations' | 'Hearing' | 'Inquiry' | null;
   procedureNotificationDate?: string | null;
   eventDate?: string | null;
   eventPrepDuration?: number | null;
@@ -2252,7 +2248,7 @@ export interface Organisation {
   /**
    * Agent or Applicant details
    */
-  roleType?: 'agent' | 'applicant';
+  contactRoleType: 'agent' | 'applicant';
   /**
    * Source PK for Organisation
    */
@@ -2278,7 +2274,7 @@ export interface Contact {
    * Source PK for Contact
    */
   contactId: string;
-  contactPreference?: ('email' | 'post') | null;
+  contactPreference?: 'email' | 'post' | null;
   /**
    * Organisation Name used for written-representation on behalf of an organisation
    */
@@ -2375,7 +2371,7 @@ export interface Contact {
   /**
    * Preferred contact method
    */
-  contactPreference?: ('email' | 'post') | null;
+  contactPreference?: 'email' | 'post' | null;
   writtenRepOrgName?: string | null;
   writtenRepJobTitleorRole?: string | null;
 }
@@ -2413,7 +2409,7 @@ export interface CaseworkRepresentationSchema {
   /**
    * How we received the representation
    */
-  submittedReceivedMethod?: ('Online' | 'Phone' | 'Email' | 'Post' | 'In person') | null;
+  submittedReceivedMethod?: 'Online' | 'Phone' | 'Email' | 'Post' | 'In person' | null;
   submissionMethodReason?: string | null;
   comment: string;
   /**
@@ -2424,17 +2420,15 @@ export interface CaseworkRepresentationSchema {
    * When representation is on behalf of a person/org/group
    */
   representedType?:
-    | (
-        | 'A person'
-        | 'An organisation or charity I work or volunteer for'
-        | 'An organisation or charity I do not work or volunteer for'
-      )
+    | 'A person'
+    | 'An organisation or charity I work or volunteer for'
+    | 'An organisation or charity I do not work or volunteer for'
     | null;
   /**
    * When representation is on behalf of a person/org/group
    */
   representedContact?: Contact[] | null;
-  representedCategory?: ('Consultees' | 'Interested party') | null;
+  representedCategory?: 'Consultees' | 'Interested party' | null;
   /**
    * Internal: wants to be heard at a hearing
    */
@@ -2458,7 +2452,7 @@ export interface CaseworkRepresentationSchema {
   /**
    * Reason for the withdrawal
    */
-  withdrawalReason?: ('Change of opinion' | 'Mistaken Submission' | 'Misunderstanding' | 'Personal Reasons') | null;
+  withdrawalReason?: 'Change of opinion' | 'Mistaken Submission' | 'Misunderstanding' | 'Personal Reasons' | null;
   /**
    * Date the representation was withdrawn
    */
@@ -2471,7 +2465,7 @@ export interface Contact {
    * Source PK for Contact
    */
   contactId: string;
-  contactPreference?: ('email' | 'post') | null;
+  contactPreference?: 'email' | 'post' | null;
   writtenRepOrgName?: string | null;
   writtenRepJobTitleorRole?: string | null;
 }
@@ -5910,7 +5904,7 @@ export type SchemaMap = {
     'appeal-representation.schema.json': AppealRepresentation;
     'appeal-s78.schema.json': AppealS78Case;
     'applications-application-update.schema.json': ApplicationUpdateSchema;
-    'applications-application.schema.json': CrownDevelopmentApplication;
+    'applications-crowndev-application.schema.json': CrownDevelopmentApplication;
     'applications-notify-email.schema.json': EmailNotificationRecordSchema;
     'applications-representation.schema.json': CaseworkRepresentationSchema;
     'dart-response.schema.json': DaRTAPIResponse;

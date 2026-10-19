@@ -965,6 +965,7 @@
         },
         "paymentDate": {
           "type": ["string", "null"],
+          "description": "Date of payment",
           "format": "date-time",
           "examples": ["2023-07-27T20:30:00.000Z"]
         },

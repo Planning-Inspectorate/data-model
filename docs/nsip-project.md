@@ -13,6 +13,7 @@
 | [projectDescription](#projectdescription)                                                               | `string`      | Required | can be null    | [NSIP Project](nsip-project-properties-projectdescription.md "nsip-project.schema.json#/properties/projectDescription")                                                               |
 | [projectDescriptionWelsh](#projectdescriptionwelsh)                                                     | `string`      | Optional | can be null    | [NSIP Project](nsip-project-properties-projectdescriptionwelsh.md "nsip-project.schema.json#/properties/projectDescriptionWelsh")                                                     |
 | [decision](#decision)                                                                                   | `string`      | Required | can be null    | [NSIP Project](nsip-project-properties-decision.md "nsip-project.schema.json#/properties/decision")                                                                                   |
+| [dcoStatus](#dcostatus)                                                                                 | `string`      | Optional | can be null    | [NSIP Project](nsip-project-properties-dcostatus.md "nsip-project.schema.json#/properties/dcoStatus")                                                                                 |
 | [publishStatus](#publishstatus)                                                                         | `string`      | Required | can be null    | [NSIP Project](nsip-project-properties-publishstatus.md "nsip-project.schema.json#/properties/publishStatus")                                                                         |
 | [sector](#sector)                                                                                       | `string`      | Required | can be null    | [NSIP Project](nsip-project-properties-sector.md "nsip-project.schema.json#/properties/sector")                                                                                       |
 | [projectType](#projecttype)                                                                             | `string`      | Required | can be null    | [NSIP Project](nsip-project-properties-projecttype.md "nsip-project.schema.json#/properties/projectType")                                                                             |
@@ -303,6 +304,41 @@ Decision outcome: approved/refused/split-decision/granted/partially\_consented/q
 | `"quashed"`             |             |
 | `"redetermination"`     |             |
 | `"withdrawn"`           |             |
+| `null`                  |             |
+
+## dcoStatus
+
+Decision outcome: approved/refused/split-decision/granted/partially\_consented/quashed/redetermination/withdrawn/revoked
+
+`dcoStatus`
+
+* is optional
+
+* Type: `string`
+
+* can be null
+
+* defined in: [NSIP Project](nsip-project-properties-dcostatus.md "nsip-project.schema.json#/properties/dcoStatus")
+
+### dcoStatus Type
+
+`string`
+
+### dcoStatus Constraints
+
+**enum**: the value of this property must be equal to one of the following values:
+
+| Value                   | Explanation |
+| :---------------------- | :---------- |
+| `"approved"`            |             |
+| `"refused"`             |             |
+| `"split-decision"`      |             |
+| `"granted"`             |             |
+| `"partially_consented"` |             |
+| `"quashed"`             |             |
+| `"redetermination"`     |             |
+| `"withdrawn"`           |             |
+| `"revoked"`             |             |
 | `null`                  |             |
 
 ## publishStatus

@@ -25,6 +25,23 @@ class Decision(Enum):
     NoneType_None = None
 
 
+class DcoStatus(Enum):
+    """
+    Decision outcome: approved/refused/split-decision/granted/partially_consented/quashed/redetermination/withdrawn/revoked
+    """
+
+    approved = "approved"
+    refused = "refused"
+    split_decision = "split-decision"
+    granted = "granted"
+    partially_consented = "partially_consented"
+    quashed = "quashed"
+    redetermination = "redetermination"
+    withdrawn = "withdrawn"
+    revoked = "revoked"
+    NoneType_None = None
+
+
 class PublishStatus(Enum):
     published = "published"
     unpublished = "unpublished"
@@ -439,6 +456,10 @@ class NsipProject(BaseModel):
     decision: Decision | None
     """
     Decision outcome: approved/refused/split-decision/granted/partially_consented/quashed/redetermination/withdrawn
+    """
+    dcoStatus: DcoStatus | None = None
+    """
+    Decision outcome: approved/refused/split-decision/granted/partially_consented/quashed/redetermination/withdrawn/revoked
     """
     publishStatus: PublishStatus | None
     sector: Sector | None

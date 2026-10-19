@@ -624,6 +624,18 @@ export const NSIP_CASE_TYPE = Object.freeze({
   NSIP: 'nsip',
 });
 
+export const NSIP_DCO_STATUS = Object.freeze({
+  APPROVED: 'approved',
+  GRANTED: 'granted',
+  PARTIALLY_CONSENTED: 'partially_consented',
+  QUASHED: 'quashed',
+  REDETERMINATION: 'redetermination',
+  REFUSED: 'refused',
+  REVOKED: 'revoked',
+  SPLIT_DECISION: 'split-decision',
+  WITHDRAWN: 'withdrawn',
+});
+
 export const NSIP_DECISION = Object.freeze({
   APPROVED: 'approved',
   GRANTED: 'granted',

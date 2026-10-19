@@ -118,6 +118,22 @@
         null
       ]
     },
+    "dcoStatus": {
+      "type": ["string", "null"],
+      "description": "Decision outcome: approved/refused/split-decision/granted/partially_consented/quashed/redetermination/withdrawn/revoked",
+      "enum": [
+        "approved",
+        "refused",
+        "split-decision",
+        "granted",
+        "partially_consented",
+        "quashed",
+        "redetermination",
+        "withdrawn",
+        "revoked",
+        null
+      ]
+    },
     "publishStatus": {
       "type": ["string", "null"],
       "enum": ["published", "unpublished", null]
@@ -949,7 +965,6 @@
         },
         "paymentDate": {
           "type": ["string", "null"],
-          "description": "Date of payment",
           "format": "date-time",
           "examples": ["2023-07-27T20:30:00.000Z"]
         },

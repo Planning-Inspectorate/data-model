@@ -707,6 +707,18 @@ const NSIP_CASE_TYPE = Object.freeze({
   NSIP: 'nsip',
 });
 
+const NSIP_DCO_STATUS = Object.freeze({
+  APPROVED: 'approved',
+  GRANTED: 'granted',
+  PARTIALLY_CONSENTED: 'partially_consented',
+  QUASHED: 'quashed',
+  REDETERMINATION: 'redetermination',
+  REFUSED: 'refused',
+  REVOKED: 'revoked',
+  SPLIT_DECISION: 'split-decision',
+  WITHDRAWN: 'withdrawn',
+});
+
 const NSIP_DECISION = Object.freeze({
   APPROVED: 'approved',
   GRANTED: 'granted',
@@ -1137,6 +1149,7 @@ exports.MESSAGE_EVENT_TYPE = MESSAGE_EVENT_TYPE;
 exports.METHOD = METHOD;
 exports.NSIP_CASE_TYPE = NSIP_CASE_TYPE;
 exports.NSIP_CA_AND_TP_EVIDENCE = NSIP_CA_AND_TP_EVIDENCE;
+exports.NSIP_DCO_STATUS = NSIP_DCO_STATUS;
 exports.NSIP_DECISION = NSIP_DECISION;
 exports.NSIP_DESIGN_APPROACH_DOCUMENT = NSIP_DESIGN_APPROACH_DOCUMENT;
 exports.NSIP_DOCUMENT_CASE_STAGE = NSIP_DOCUMENT_CASE_STAGE;

@@ -624,6 +624,18 @@ export const NSIP_CASE_TYPE = {
   NSIP: 'nsip',
 } as const;
 
+export const NSIP_DCO_STATUS = {
+  APPROVED: 'approved',
+  GRANTED: 'granted',
+  PARTIALLY_CONSENTED: 'partially_consented',
+  QUASHED: 'quashed',
+  REDETERMINATION: 'redetermination',
+  REFUSED: 'refused',
+  REVOKED: 'revoked',
+  SPLIT_DECISION: 'split-decision',
+  WITHDRAWN: 'withdrawn',
+} as const;
+
 export const NSIP_DECISION = {
   APPROVED: 'approved',
   GRANTED: 'granted',

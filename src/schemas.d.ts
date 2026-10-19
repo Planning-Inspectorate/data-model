@@ -3239,6 +3239,20 @@ export interface NSIPProject {
     | 'redetermination'
     | 'withdrawn'
     | null;
+  /**
+   * Decision outcome: approved/refused/split-decision/granted/partially_consented/quashed/redetermination/withdrawn/revoked
+   */
+  dcoStatus?:
+    | 'approved'
+    | 'refused'
+    | 'split-decision'
+    | 'granted'
+    | 'partially_consented'
+    | 'quashed'
+    | 'redetermination'
+    | 'withdrawn'
+    | 'revoked'
+    | null;
   publishStatus: 'published' | 'unpublished' | null;
   /**
    * {Sector Abbreviation} - {Sector Display Name}

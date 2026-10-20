@@ -13,7 +13,7 @@
       "example": "BBBBBBBBB-1234-1234-1234-AAAAAAAAAAAA"
     },
     "addressDimKey": {
-      "type": ["number", null],
+      "type": ["number", "null"],
       "description": "ODW Address Dimension Primary Key.",
       "example": 12345
     },

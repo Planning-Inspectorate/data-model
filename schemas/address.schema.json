@@ -1,15 +1,20 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
   "$id": "address.schema.json",
-  "title": "PINS Address Schema",
+  "title": "Address",
   "description": "A schema to define the structure of an Address object in PINS.",
   "type": "object",
   "additionalProperties": true,
-  "required": ["addressDimKey", "caseReference", "caseId", "caseType"],
+  "required": ["addressId", "caseReference", "caseId", "caseType"],
   "properties": {
+    "addressId": {
+      "type": "string",
+      "description": "The source system Primary Key for an address.",
+      "example": "BBBBBBBBB-1234-1234-1234-AAAAAAAAAAAA"
+    },
     "addressDimKey": {
-      "type": "number",
-      "description": "Primary Key for an Address.",
+      "type": ["number", null],
+      "description": "ODW Address Dimension Primary Key.",
       "example": 12345
     },
     "addressType": {

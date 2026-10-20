@@ -518,8 +518,12 @@
     "address": {
       "type": "object",
       "additionalProperties": true,
-      "required": ["postcode"],
+      "required": ["addressId"],
       "properties": {
+        "addressId": {
+          "type": "string",
+          "description": "The source system Primary Key for an address."
+        },
         "line1": {
           "type": ["string", "null"]
         },
@@ -533,7 +537,7 @@
           "type": ["string", "null"]
         },
         "postcode": {
-          "type": "string"
+          "type": ["string", "null"]
         }
       }
     }

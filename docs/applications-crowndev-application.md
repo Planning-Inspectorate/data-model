@@ -2153,14 +2153,33 @@ Reference this group by using
 {"$ref":"applications-crowndev-application.schema.json#/$defs/address"}
 ```
 
-| Property              | Type     | Required | Nullable       | Defined by                                                                                                                                                                                |
-| :-------------------- | :------- | :------- | :------------- | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [line1](#line1)       | `string` | Optional | can be null    | [Crown Development Application](applications-crowndev-application-defs-address-properties-line1.md "applications-crowndev-application.schema.json#/$defs/address/properties/line1")       |
-| [line2](#line2)       | `string` | Optional | can be null    | [Crown Development Application](applications-crowndev-application-defs-address-properties-line2.md "applications-crowndev-application.schema.json#/$defs/address/properties/line2")       |
-| [townCity](#towncity) | `string` | Optional | can be null    | [Crown Development Application](applications-crowndev-application-defs-address-properties-towncity.md "applications-crowndev-application.schema.json#/$defs/address/properties/townCity") |
-| [county](#county)     | `string` | Optional | can be null    | [Crown Development Application](applications-crowndev-application-defs-address-properties-county.md "applications-crowndev-application.schema.json#/$defs/address/properties/county")     |
-| [postcode](#postcode) | `string` | Required | cannot be null | [Crown Development Application](applications-crowndev-application-defs-address-properties-postcode.md "applications-crowndev-application.schema.json#/$defs/address/properties/postcode") |
-| Additional Properties | Any      | Optional | can be null    |                                                                                                                                                                                           |
+| Property                | Type     | Required | Nullable       | Defined by                                                                                                                                                                                  |
+| :---------------------- | :------- | :------- | :------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| [addressId](#addressid) | `string` | Required | cannot be null | [Crown Development Application](applications-crowndev-application-defs-address-properties-addressid.md "applications-crowndev-application.schema.json#/$defs/address/properties/addressId") |
+| [line1](#line1)         | `string` | Optional | can be null    | [Crown Development Application](applications-crowndev-application-defs-address-properties-line1.md "applications-crowndev-application.schema.json#/$defs/address/properties/line1")         |
+| [line2](#line2)         | `string` | Optional | can be null    | [Crown Development Application](applications-crowndev-application-defs-address-properties-line2.md "applications-crowndev-application.schema.json#/$defs/address/properties/line2")         |
+| [townCity](#towncity)   | `string` | Optional | can be null    | [Crown Development Application](applications-crowndev-application-defs-address-properties-towncity.md "applications-crowndev-application.schema.json#/$defs/address/properties/townCity")   |
+| [county](#county)       | `string` | Optional | can be null    | [Crown Development Application](applications-crowndev-application-defs-address-properties-county.md "applications-crowndev-application.schema.json#/$defs/address/properties/county")       |
+| [postcode](#postcode)   | `string` | Optional | can be null    | [Crown Development Application](applications-crowndev-application-defs-address-properties-postcode.md "applications-crowndev-application.schema.json#/$defs/address/properties/postcode")   |
+| Additional Properties   | Any      | Optional | can be null    |                                                                                                                                                                                             |
+
+### addressId
+
+The source system Primary Key for an address.
+
+`addressId`
+
+* is required
+
+* Type: `string`
+
+* cannot be null
+
+* defined in: [Crown Development Application](applications-crowndev-application-defs-address-properties-addressid.md "applications-crowndev-application.schema.json#/$defs/address/properties/addressId")
+
+#### addressId Type
+
+`string`
 
 ### line1
 
@@ -2240,11 +2259,11 @@ Reference this group by using
 
 `postcode`
 
-* is required
+* is optional
 
 * Type: `string`
 
-* cannot be null
+* can be null
 
 * defined in: [Crown Development Application](applications-crowndev-application-defs-address-properties-postcode.md "applications-crowndev-application.schema.json#/$defs/address/properties/postcode")
 

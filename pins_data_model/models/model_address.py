@@ -20,7 +20,7 @@ class AddressType(StrEnum):
     contact = "contact"
 
 
-class PinsAddressSchema(BaseModel):
+class Address(BaseModel):
     """
     A schema to define the structure of an Address object in PINS.
     """
@@ -28,9 +28,13 @@ class PinsAddressSchema(BaseModel):
     model_config = ConfigDict(
         extra="allow",
     )
-    addressDimKey: float = Field(..., examples=[12345])
+    addressId: str = Field(..., examples=["BBBBBBBBB-1234-1234-1234-AAAAAAAAAAAA"])
     """
-    Primary Key for an Address.
+    The source system Primary Key for an address.
+    """
+    addressDimKey: float | None = Field(None, examples=[12345])
+    """
+    ODW Address Dimension Primary Key.
     """
     addressType: AddressType | None = Field(None, examples=["site"])
     """

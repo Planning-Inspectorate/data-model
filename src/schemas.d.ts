@@ -8,11 +8,15 @@
 /**
  * A schema to define the structure of an Address object in PINS.
  */
-export interface PINSAddressSchema {
+export interface Address {
   /**
-   * Primary Key for an Address.
+   * The source system Primary Key for an address.
    */
-  addressDimKey: number;
+  addressId: string;
+  /**
+   * ODW Address Dimension Primary Key.
+   */
+  addressDimKey?: number | null;
   /**
    * The type of thing this address is for.
    */
@@ -2262,11 +2266,15 @@ export interface Organisation {
   [k: string]: unknown;
 }
 export interface Address {
+  /**
+   * The source system Primary Key for an address.
+   */
+  addressId: string;
   line1?: string | null;
   line2?: string | null;
   townCity?: string | null;
   county?: string | null;
-  postcode: string;
+  postcode?: string | null;
   [k: string]: unknown;
 }
 export interface Contact {
@@ -5910,7 +5918,7 @@ export interface InterestedParty1 {
 
 export type SchemaMap = {
   schemas: {
-    'address.schema.json': PINSAddressSchema;
+    'address.schema.json': Address;
     'appeal-document.schema.json': AppealDocument;
     'appeal-event-estimate.schema.json': AppealEventEstimate;
     'appeal-event.schema.json': AppealEvent;

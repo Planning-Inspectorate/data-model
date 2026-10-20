@@ -172,11 +172,15 @@ class Address(BaseModel):
     model_config = ConfigDict(
         extra="allow",
     )
+    addressId: str
+    """
+    The source system Primary Key for an address.
+    """
     line1: str | None = None
     line2: str | None = None
     townCity: str | None = None
     county: str | None = None
-    postcode: str
+    postcode: str | None = None
 
 
 class Organisation(BaseModel):

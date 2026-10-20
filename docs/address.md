@@ -1,44 +1,63 @@
-## PINS Address Schema Type
+## Address Type
 
-`object` ([PINS Address Schema](address.md))
+`object` ([Address](address.md))
 
-# PINS Address Schema Properties
+# Address Properties
 
-| Property                                | Type          | Required | Nullable       | Defined by                                                                                                         |
-| :-------------------------------------- | :------------ | :------- | :------------- | :----------------------------------------------------------------------------------------------------------------- |
-| [addressDimKey](#addressdimkey)         | `number`      | Required | cannot be null | [PINS Address Schema](address-properties-addressdimkey.md "address.schema.json#/properties/addressDimKey")         |
-| [addressType](#addresstype)             | `string`      | Optional | cannot be null | [PINS Address Schema](address-properties-addresstype.md "address.schema.json#/properties/addressType")             |
-| [caseReference](#casereference)         | `string`      | Required | cannot be null | [PINS Address Schema](address-properties-casereference.md "address.schema.json#/properties/caseReference")         |
-| [caseId](#caseid)                       | `string`      | Required | cannot be null | [PINS Address Schema](address-properties-caseid.md "address.schema.json#/properties/caseId")                       |
-| [caseType](#casetype)                   | `string`      | Required | cannot be null | [PINS Address Schema](address-properties-casetype.md "address.schema.json#/properties/caseType")                   |
-| [description](#description)             | `string`      | Optional | can be null    | [PINS Address Schema](address-properties-description.md "address.schema.json#/properties/description")             |
-| [line1](#line1)                         | `string`      | Optional | can be null    | [PINS Address Schema](address-properties-line1.md "address.schema.json#/properties/line1")                         |
-| [line2](#line2)                         | `string`      | Optional | can be null    | [PINS Address Schema](address-properties-line2.md "address.schema.json#/properties/line2")                         |
-| [townCity](#towncity)                   | `string`      | Optional | can be null    | [PINS Address Schema](address-properties-towncity.md "address.schema.json#/properties/townCity")                   |
-| [county](#county)                       | `string`      | Optional | can be null    | [PINS Address Schema](address-properties-county.md "address.schema.json#/properties/county")                       |
-| [postcode](#postcode)                   | `string`      | Optional | can be null    | [PINS Address Schema](address-properties-postcode.md "address.schema.json#/properties/postcode")                   |
-| [country](#country)                     | `string`      | Optional | can be null    | [PINS Address Schema](address-properties-country.md "address.schema.json#/properties/country")                     |
-| [easting](#easting)                     | `string`      | Optional | can be null    | [PINS Address Schema](address-properties-easting.md "address.schema.json#/properties/easting")                     |
-| [northing](#northing)                   | `string`      | Optional | can be null    | [PINS Address Schema](address-properties-northing.md "address.schema.json#/properties/northing")                   |
-| [latitudeWGS84](#latitudewgs84)         | `number`      | Optional | can be null    | [PINS Address Schema](address-properties-latitudewgs84.md "address.schema.json#/properties/latitudeWGS84")         |
-| [longitudeWGS84](#longitudewgs84)       | `number`      | Optional | can be null    | [PINS Address Schema](address-properties-longitudewgs84.md "address.schema.json#/properties/longitudeWGS84")       |
-| [UPRN](#uprn)                           | `string`      | Optional | can be null    | [PINS Address Schema](address-properties-uprn.md "address.schema.json#/properties/UPRN")                           |
-| [dependentRequired](#dependentrequired) | Not specified | Optional | cannot be null | [PINS Address Schema](address-properties-dependentrequired.md "address.schema.json#/properties/dependentRequired") |
-| Additional Properties                   | Any           | Optional | can be null    |                                                                                                                    |
+| Property                                | Type          | Required | Nullable       | Defined by                                                                                             |
+| :-------------------------------------- | :------------ | :------- | :------------- | :----------------------------------------------------------------------------------------------------- |
+| [addressId](#addressid)                 | `string`      | Required | cannot be null | [Address](address-properties-addressid.md "address.schema.json#/properties/addressId")                 |
+| [addressDimKey](#addressdimkey)         | `number`      | Optional | can be null    | [Address](address-properties-addressdimkey.md "address.schema.json#/properties/addressDimKey")         |
+| [addressType](#addresstype)             | `string`      | Optional | cannot be null | [Address](address-properties-addresstype.md "address.schema.json#/properties/addressType")             |
+| [caseReference](#casereference)         | `string`      | Required | cannot be null | [Address](address-properties-casereference.md "address.schema.json#/properties/caseReference")         |
+| [caseId](#caseid)                       | `string`      | Required | cannot be null | [Address](address-properties-caseid.md "address.schema.json#/properties/caseId")                       |
+| [caseType](#casetype)                   | `string`      | Required | cannot be null | [Address](address-properties-casetype.md "address.schema.json#/properties/caseType")                   |
+| [description](#description)             | `string`      | Optional | can be null    | [Address](address-properties-description.md "address.schema.json#/properties/description")             |
+| [line1](#line1)                         | `string`      | Optional | can be null    | [Address](address-properties-line1.md "address.schema.json#/properties/line1")                         |
+| [line2](#line2)                         | `string`      | Optional | can be null    | [Address](address-properties-line2.md "address.schema.json#/properties/line2")                         |
+| [townCity](#towncity)                   | `string`      | Optional | can be null    | [Address](address-properties-towncity.md "address.schema.json#/properties/townCity")                   |
+| [county](#county)                       | `string`      | Optional | can be null    | [Address](address-properties-county.md "address.schema.json#/properties/county")                       |
+| [postcode](#postcode)                   | `string`      | Optional | can be null    | [Address](address-properties-postcode.md "address.schema.json#/properties/postcode")                   |
+| [country](#country)                     | `string`      | Optional | can be null    | [Address](address-properties-country.md "address.schema.json#/properties/country")                     |
+| [easting](#easting)                     | `string`      | Optional | can be null    | [Address](address-properties-easting.md "address.schema.json#/properties/easting")                     |
+| [northing](#northing)                   | `string`      | Optional | can be null    | [Address](address-properties-northing.md "address.schema.json#/properties/northing")                   |
+| [latitudeWGS84](#latitudewgs84)         | `number`      | Optional | can be null    | [Address](address-properties-latitudewgs84.md "address.schema.json#/properties/latitudeWGS84")         |
+| [longitudeWGS84](#longitudewgs84)       | `number`      | Optional | can be null    | [Address](address-properties-longitudewgs84.md "address.schema.json#/properties/longitudeWGS84")       |
+| [UPRN](#uprn)                           | `string`      | Optional | can be null    | [Address](address-properties-uprn.md "address.schema.json#/properties/UPRN")                           |
+| [dependentRequired](#dependentrequired) | Not specified | Optional | cannot be null | [Address](address-properties-dependentrequired.md "address.schema.json#/properties/dependentRequired") |
+| Additional Properties                   | Any           | Optional | can be null    |                                                                                                        |
 
-## addressDimKey
+## addressId
 
-Primary Key for an Address.
+The source system Primary Key for an address.
 
-`addressDimKey`
+`addressId`
 
 * is required
 
-* Type: `number`
+* Type: `string`
 
 * cannot be null
 
-* defined in: [PINS Address Schema](address-properties-addressdimkey.md "address.schema.json#/properties/addressDimKey")
+* defined in: [Address](address-properties-addressid.md "address.schema.json#/properties/addressId")
+
+### addressId Type
+
+`string`
+
+## addressDimKey
+
+ODW Address Dimension Primary Key.
+
+`addressDimKey`
+
+* is optional
+
+* Type: `number`
+
+* can be null
+
+* defined in: [Address](address-properties-addressdimkey.md "address.schema.json#/properties/addressDimKey")
 
 ### addressDimKey Type
 
@@ -56,7 +75,7 @@ The type of thing this address is for.
 
 * cannot be null
 
-* defined in: [PINS Address Schema](address-properties-addresstype.md "address.schema.json#/properties/addressType")
+* defined in: [Address](address-properties-addresstype.md "address.schema.json#/properties/addressType")
 
 ### addressType Type
 
@@ -85,7 +104,7 @@ Business Key for the related case
 
 * cannot be null
 
-* defined in: [PINS Address Schema](address-properties-casereference.md "address.schema.json#/properties/caseReference")
+* defined in: [Address](address-properties-casereference.md "address.schema.json#/properties/caseReference")
 
 ### caseReference Type
 
@@ -103,7 +122,7 @@ The unique ID for the case this representation belongs to.
 
 * cannot be null
 
-* defined in: [PINS Address Schema](address-properties-caseid.md "address.schema.json#/properties/caseId")
+* defined in: [Address](address-properties-caseid.md "address.schema.json#/properties/caseId")
 
 ### caseId Type
 
@@ -121,7 +140,7 @@ The type of case this representation is for.
 
 * cannot be null
 
-* defined in: [PINS Address Schema](address-properties-casetype.md "address.schema.json#/properties/caseType")
+* defined in: [Address](address-properties-casetype.md "address.schema.json#/properties/caseType")
 
 ### caseType Type
 
@@ -139,7 +158,7 @@ Some sites may have a postcode, but do not have postal addresses.
 
 * can be null
 
-* defined in: [PINS Address Schema](address-properties-description.md "address.schema.json#/properties/description")
+* defined in: [Address](address-properties-description.md "address.schema.json#/properties/description")
 
 ### description Type
 
@@ -157,7 +176,7 @@ Some sites may have a postcode, but do not have postal addresses.
 
 * can be null
 
-* defined in: [PINS Address Schema](address-properties-line1.md "address.schema.json#/properties/line1")
+* defined in: [Address](address-properties-line1.md "address.schema.json#/properties/line1")
 
 ### line1 Type
 
@@ -175,7 +194,7 @@ Some sites may have a postcode, but do not have postal addresses.
 
 * can be null
 
-* defined in: [PINS Address Schema](address-properties-line2.md "address.schema.json#/properties/line2")
+* defined in: [Address](address-properties-line2.md "address.schema.json#/properties/line2")
 
 ### line2 Type
 
@@ -193,7 +212,7 @@ Some sites may have a postcode, but do not have postal addresses.
 
 * can be null
 
-* defined in: [PINS Address Schema](address-properties-towncity.md "address.schema.json#/properties/townCity")
+* defined in: [Address](address-properties-towncity.md "address.schema.json#/properties/townCity")
 
 ### townCity Type
 
@@ -211,7 +230,7 @@ Some sites may have a postcode, but do not have postal addresses.
 
 * can be null
 
-* defined in: [PINS Address Schema](address-properties-county.md "address.schema.json#/properties/county")
+* defined in: [Address](address-properties-county.md "address.schema.json#/properties/county")
 
 ### county Type
 
@@ -229,7 +248,7 @@ Some sites may have a postcode, but do not have postal addresses.
 
 * can be null
 
-* defined in: [PINS Address Schema](address-properties-postcode.md "address.schema.json#/properties/postcode")
+* defined in: [Address](address-properties-postcode.md "address.schema.json#/properties/postcode")
 
 ### postcode Type
 
@@ -247,7 +266,7 @@ Some sites may have a postcode, but do not have postal addresses.
 
 * can be null
 
-* defined in: [PINS Address Schema](address-properties-country.md "address.schema.json#/properties/country")
+* defined in: [Address](address-properties-country.md "address.schema.json#/properties/country")
 
 ### country Type
 
@@ -265,7 +284,7 @@ Some sites may have a postcode, but do not have postal addresses.
 
 * can be null
 
-* defined in: [PINS Address Schema](address-properties-easting.md "address.schema.json#/properties/easting")
+* defined in: [Address](address-properties-easting.md "address.schema.json#/properties/easting")
 
 ### easting Type
 
@@ -283,7 +302,7 @@ Some sites may have a postcode, but do not have postal addresses.
 
 * can be null
 
-* defined in: [PINS Address Schema](address-properties-northing.md "address.schema.json#/properties/northing")
+* defined in: [Address](address-properties-northing.md "address.schema.json#/properties/northing")
 
 ### northing Type
 
@@ -301,7 +320,7 @@ Some sites may have a postcode, but do not have postal addresses.
 
 * can be null
 
-* defined in: [PINS Address Schema](address-properties-latitudewgs84.md "address.schema.json#/properties/latitudeWGS84")
+* defined in: [Address](address-properties-latitudewgs84.md "address.schema.json#/properties/latitudeWGS84")
 
 ### latitudeWGS84 Type
 
@@ -319,7 +338,7 @@ Some sites may have a postcode, but do not have postal addresses.
 
 * can be null
 
-* defined in: [PINS Address Schema](address-properties-longitudewgs84.md "address.schema.json#/properties/longitudeWGS84")
+* defined in: [Address](address-properties-longitudewgs84.md "address.schema.json#/properties/longitudeWGS84")
 
 ### longitudeWGS84 Type
 
@@ -337,7 +356,7 @@ The Unique Property Reference Number (UPRN) is a unique number (a geocode) for e
 
 * can be null
 
-* defined in: [PINS Address Schema](address-properties-uprn.md "address.schema.json#/properties/UPRN")
+* defined in: [Address](address-properties-uprn.md "address.schema.json#/properties/UPRN")
 
 ### UPRN Type
 
@@ -355,7 +374,7 @@ The Unique Property Reference Number (UPRN) is a unique number (a geocode) for e
 
 * cannot be null
 
-* defined in: [PINS Address Schema](address-properties-dependentrequired.md "address.schema.json#/properties/dependentRequired")
+* defined in: [Address](address-properties-dependentrequired.md "address.schema.json#/properties/dependentRequired")
 
 ### dependentRequired Type
 

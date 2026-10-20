@@ -2,6 +2,8 @@
 
 ## Top-level Schemas
 
+* [Address](./address.md "A schema to define the structure of an Address object in PINS") – `address.schema.json`
+
 * [Appeal Document](./appeal-document.md "Schema defining the metadata for appeal documents") – `appeal-document.schema.json`
 
 * [Appeal Event](./appeal-event.md "Schema defining the metadata for appeal events, such as site visits, inquiries, hearings") – `appeal-event.schema.json`
@@ -45,8 +47,6 @@
 * [NSIP Project](./nsip-project.md "Subset of Pins Data Model \[Case]") – `nsip-project.schema.json`
 
 * [NSIP Project Update](./nsip-project-update.md "NSIP Project Update (formerly known as Banners)") – `nsip-project-update.schema.json`
-
-* [PINS Address Schema](./address.md "A schema to define the structure of an Address object in PINS") – `address.schema.json`
 
 * [PINS Inspector](./pins-inspector.md "Inspector Details originating from Horizon, SAP HR and Entra") – `pins-inspector.schema.json`
 

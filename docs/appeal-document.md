@@ -537,6 +537,7 @@ The type of document, used for exchange, migrations and consumption from the app
 
 | Value                                  | Explanation |
 | :------------------------------------- | :---------- |
+| `"appellantCase"`                      |             |
 | `"appellantCaseCorrespondence"`        |             |
 | `"appellantCaseWithdrawalLetter"`      |             |
 | `"appellantCostsApplication"`          |             |
@@ -551,6 +552,7 @@ The type of document, used for exchange, migrations and consumption from the app
 | `"whoNotifiedLetterToNeighbours"`      |             |
 | `"whoNotifiedPressAdvert"`             |             |
 | `"conservationMap"`                    |             |
+| `"lpaQuestionnaire"`                   |             |
 | `"lpaCaseCorrespondence"`              |             |
 | `"lpaCostsApplication"`                |             |
 | `"lpaCostsCorrespondence"`             |             |

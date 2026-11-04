@@ -137,6 +137,7 @@
     "documentType": {
       "type": ["string", "null"],
       "enum": [
+        "appellantCase",
         "appellantCaseCorrespondence",
         "appellantCaseWithdrawalLetter",
         "appellantCostsApplication",
@@ -151,6 +152,7 @@
         "whoNotifiedLetterToNeighbours",
         "whoNotifiedPressAdvert",
         "conservationMap",
+        "lpaQuestionnaire",
         "lpaCaseCorrespondence",
         "lpaCostsApplication",
         "lpaCostsCorrespondence",

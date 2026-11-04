@@ -1378,6 +1378,7 @@ The final outcome for the decision
 | `"planning_permission_granted"` |             |
 | `"quashed_on_legal_grounds"`    |             |
 | `"notice_varied_and_upheld"`    |             |
+| `"notice_quashed"`              |             |
 | `null`                          |             |
 
 ## caseCompletedDate
@@ -3697,6 +3698,13 @@ The net gain in residences of the proposed development
 | `"lawful-development-certificate"`     |             |
 | `"discontinuance-notice"`              |             |
 | `"permission-in-principle"`            |             |
+| `"tree-preservation-order"`            |             |
+| `"tree-replacement-notice"`            |             |
+| `"high-hedge-appeal"`                  |             |
+| `"hedgerows-appeal"`                   |             |
+| `"community-infrastructure-levy"`      |             |
+| `"planning-obligation"`                |             |
+| `"environmental"`                      |             |
 | `null`                                 |             |
 
 ## developmentType

@@ -137,6 +137,7 @@ export interface AppealDocument {
    * The type of document, used for exchange, migrations and consumption from the appeal back-office system
    */
   documentType:
+    | 'appellantCase'
     | 'appellantCaseCorrespondence'
     | 'appellantCaseWithdrawalLetter'
     | 'appellantCostsApplication'
@@ -151,6 +152,7 @@ export interface AppealDocument {
     | 'whoNotifiedLetterToNeighbours'
     | 'whoNotifiedPressAdvert'
     | 'conservationMap'
+    | 'lpaQuestionnaire'
     | 'lpaCaseCorrespondence'
     | 'lpaCostsApplication'
     | 'lpaCostsCorrespondence'
@@ -391,6 +393,278 @@ export interface AppealEvent {
    * Postal code of the event address
    */
   addressPostcode?: string | null;
+  [k: string]: unknown;
+}
+
+/**
+ * Group C - Schema defining the metadata for generic and low-volume appeals
+ */
+export interface AppealGroupCCase {
+  /**
+   * Internal case identifier
+   */
+  caseId: number | null;
+  /**
+   * External case identifier for Group C appeals (7 digit number starting in 6)
+   */
+  caseReference: string;
+  /**
+   * The internal letter code for an appeal type, e.g. W (Environmental)
+   */
+  caseType: 'C' | 'D' | 'F' | 'G' | 'H' | 'L' | 'Q' | 'S' | 'V' | 'W' | 'X' | 'Y' | 'Z' | 'ZA' | 'ZP';
+  /**
+   * The processing status for the appeal
+   */
+  caseStatus:
+    | 'assign_case_officer'
+    | 'validation'
+    | 'ready_to_start'
+    | 'lpa_questionnaire'
+    | 'issue_determination'
+    | 'statements'
+    | 'evidence'
+    | 'witnesses'
+    | 'final_comments'
+    | 'complete'
+    | 'invalid'
+    | 'closed'
+    | 'withdrawn'
+    | 'awaiting_transfer'
+    | 'transferred'
+    | 'event'
+    | 'awaiting_event'
+    | 'notice_withdrawn'
+    | 'closed_opened_in_error';
+  /**
+   * The type of procedure for the appeal
+   */
+  caseProcedure: 'written' | 'hearing' | 'inquiry' | 'writtenPart1' | 'writtenPart2' | null;
+  /**
+   * The date the appeal was received
+   */
+  caseCreatedDate: string;
+  /**
+   * The date the appeal was submitted by the appellant
+   */
+  caseSubmittedDate: string | null;
+  /**
+   * The date the appeal was last updated in the back-office
+   */
+  caseUpdatedDate: string | null;
+  /**
+   * The date since when the appeal was considered valid
+   */
+  caseValidDate: string | null;
+  /**
+   * The date the appeal was validated in the back-office
+   */
+  caseValidationDate: string | null;
+  /**
+   * The outcome of the validation action
+   */
+  caseValidationOutcome: 'valid' | 'invalid' | 'incomplete' | null;
+  /**
+   * A date indicating when the case was started, resulting in the creation of a timetable
+   */
+  caseStartedDate: string | null;
+  /**
+   * A date indicating when the case was published
+   */
+  casePublishedDate: string | null;
+  /**
+   * The date the LPA response was received
+   */
+  lpaQuestionnaireCreatedDate: string | null;
+  /**
+   * The date the LPA provided a response to the case
+   */
+  lpaQuestionnaireSubmittedDate: string | null;
+  /**
+   * The outcome of the LPA questionnaire validation action
+   */
+  lpaQuestionnaireValidationOutcome: 'complete' | 'incomplete' | null;
+  /**
+   * If the case is started and has a timetable, a deadline for the LPA to provide a response
+   */
+  lpaQuestionnaireDueDate: string | null;
+  /**
+   * The date of the appeal decision
+   */
+  caseDecisionOutcomeDate: string | null;
+  /**
+   * The final outcome for the decision
+   */
+  caseDecisionOutcome:
+    | 'allowed'
+    | 'split_decision'
+    | 'dismissed'
+    | 'invalid'
+    | 'notice_upheld'
+    | 'planning_permission_granted'
+    | 'quashed_on_legal_grounds'
+    | 'notice_varied_and_upheld'
+    | 'notice_quashed'
+    | null;
+  /**
+   * The date the appeal decision letter was issued
+   */
+  caseCompletedDate: string | null;
+  /**
+   * A unique identifier for the Local Planning Authority
+   */
+  lpaCode: string | null;
+  /**
+   * Unique identifier for the case officer assigned to the case
+   */
+  caseOfficerId: string | null;
+  /**
+   * Unique identifier for the inspector assigned to the case
+   */
+  inspectorId: string | null;
+  /**
+   * padsSapId for PADS inspectors
+   */
+  padsSapId: string | null;
+  /**
+   * A level used for allocation purposes
+   */
+  allocationLevel: 'A' | 'B' | 'C' | 'D' | 'E' | 'F' | 'G' | 'H' | null;
+  /**
+   * A band used for allocation purposes
+   */
+  allocationBand: 1 | 2 | 3 | null;
+  /**
+   * A list of specialisms for allocation purposes
+   */
+  caseSpecialisms: string[] | null;
+  /**
+   * First line of address for the appeal site
+   */
+  siteAddressLine1: string | null;
+  /**
+   * Second line of address for the appeal site
+   */
+  siteAddressLine2: string | null;
+  /**
+   * Town / City of the site address
+   */
+  siteAddressTown: string | null;
+  /**
+   * County of the site address
+   */
+  siteAddressCounty: string | null;
+  /**
+   * Postal code of the site address
+   */
+  siteAddressPostcode: string | null;
+  /**
+   * The date of the Case Management Conference (CMC)
+   */
+  caseManagementConferenceDate?: string | null;
+  /**
+   * Deadline for statements
+   */
+  statementDueDate?: string | null;
+  /**
+   * Deadline for proofs of evidence
+   */
+  proofsOfEvidenceDueDate?: string | null;
+  /**
+   * Deadline for final comments
+   */
+  finalCommentsDueDate?: string | null;
+  /**
+   * Deadline for interested party representations
+   */
+  interestedPartyRepsDueDate?: string | null;
+  /**
+   * Deadline for statement of common ground
+   */
+  statementOfCommonGroundDueDate?: string | null;
+  /**
+   * Deadline for planning obligation
+   */
+  planningObligationDueDate?: string | null;
+  /**
+   * The type of application or notice that is the subject of the appeal
+   */
+  typeOfPlanningApplication?:
+    | 'full-appeal'
+    | 'householder-planning'
+    | 'outline-planning'
+    | 'prior-approval'
+    | 'reserved-matters'
+    | 'removal-or-variation-of-conditions'
+    | 'listed-building'
+    | 'minor-commercial-development'
+    | 'advertisement'
+    | 'lawful-development-certificate'
+    | 'discontinuance-notice'
+    | 'permission-in-principle'
+    | 'tree-preservation-order'
+    | 'tree-replacement-notice'
+    | 'high-hedge-appeal'
+    | 'hedgerows-appeal'
+    | 'community-infrastructure-levy'
+    | 'planning-obligation'
+    | 'environmental'
+    | null;
+  /**
+   * Sub-type categorization for generic/low-volume appeals
+   */
+  caseSubType?:
+    | 'anti_pollution_works_notice'
+    | 'contaminated_land'
+    | 'marine_licensing'
+    | 'waste_carriers'
+    | 'water_abstraction'
+    | 'environmental_liability'
+    | 'environmental_permitting'
+    | 'hazardous_substances'
+    | 'silage_and_slurry'
+    | 'sssi'
+    | 'affordable_housing'
+    | null;
+  /**
+   * The date the appeal was withdrawn by the appellant
+   */
+  caseWithdrawnDate: string | null;
+  /**
+   * The date the appeal was transferred to a new case of a different type
+   */
+  caseTransferredDate: string | null;
+  /**
+   * The reference number of the enforcement notice
+   */
+  enforcementNoticeReference?: string | null;
+  /**
+   * The unique identifier of the LPA or regulator application
+   */
+  applicationReference?: string | null;
+  /**
+   * Indicates if the case is linked, and the type of relationship
+   */
+  linkedCaseStatus?: 'lead' | 'child' | null;
+  /**
+   * The reference of the lead case, if the case is a child case
+   */
+  leadCaseReference?: string | null;
+  /**
+   * Case sub-division applying to Environmental Permitting caseSubType
+   */
+  environmentalPermitSubtypes?:
+    | 'refusal_of_a_permit'
+    | 'deemed_refusal'
+    | 'conditions_attached_to_a_permit'
+    | 'decision_to_impose_conditions_by_regulator'
+    | 'deemed_withdrawal'
+    | 'enforcement_notice'
+    | 'suspension_notice'
+    | 'closure_notice'
+    | 'flood_risk_activity'
+    | 'revocation_notice'
+    | 'prohibition_notice'
+    | null;
   [k: string]: unknown;
 }
 
@@ -1211,6 +1485,7 @@ export type AppealS78Case = (GridReference | SiteAddress) & {
     | 'planning_permission_granted'
     | 'quashed_on_legal_grounds'
     | 'notice_varied_and_upheld'
+    | 'notice_quashed'
     | null;
   /**
    * The date the appeal decision letter
@@ -1591,6 +1866,13 @@ export type AppealS78Case = (GridReference | SiteAddress) & {
     | 'lawful-development-certificate'
     | 'discontinuance-notice'
     | 'permission-in-principle'
+    | 'tree-preservation-order'
+    | 'tree-replacement-notice'
+    | 'high-hedge-appeal'
+    | 'hedgerows-appeal'
+    | 'community-infrastructure-levy'
+    | 'planning-obligation'
+    | 'environmental'
     | null;
   developmentType:
     | 'householder'
@@ -5922,6 +6204,7 @@ export type SchemaMap = {
     'appeal-document.schema.json': AppealDocument;
     'appeal-event-estimate.schema.json': AppealEventEstimate;
     'appeal-event.schema.json': AppealEvent;
+    'appeal-group-c.schema.json': AppealGroupCCase;
     'appeal-has.schema.json': AppealHASCase;
     'appeal-representation.schema.json': AppealRepresentation;
     'appeal-s78.schema.json': AppealS78Case;

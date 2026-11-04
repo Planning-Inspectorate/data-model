@@ -58,6 +58,7 @@ class DocumentType(Enum):
     The type of document, used for exchange, migrations and consumption from the appeal back-office system
     """
 
+    appellantCase = "appellantCase"
     appellantCaseCorrespondence = "appellantCaseCorrespondence"
     appellantCaseWithdrawalLetter = "appellantCaseWithdrawalLetter"
     appellantCostsApplication = "appellantCostsApplication"
@@ -72,6 +73,7 @@ class DocumentType(Enum):
     whoNotifiedLetterToNeighbours = "whoNotifiedLetterToNeighbours"
     whoNotifiedPressAdvert = "whoNotifiedPressAdvert"
     conservationMap = "conservationMap"
+    lpaQuestionnaire = "lpaQuestionnaire"
     lpaCaseCorrespondence = "lpaCaseCorrespondence"
     lpaCostsApplication = "lpaCostsApplication"
     lpaCostsCorrespondence = "lpaCostsCorrespondence"

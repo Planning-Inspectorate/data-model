@@ -1,0 +1,385 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "appeal-group-c.schema.json",
+  "title": "Appeal Group C Case",
+  "description": "Group C - Schema defining the metadata for generic and low-volume appeals",
+  "type": "object",
+  "additionalProperties": true,
+  "required": [
+    "caseId",
+    "caseReference",
+    "caseStatus",
+    "caseType",
+    "caseProcedure",
+    "lpaCode",
+    "caseOfficerId",
+    "inspectorId",
+    "padsSapId",
+    "allocationLevel",
+    "allocationBand",
+    "caseSpecialisms",
+    "caseCreatedDate",
+    "caseSubmittedDate",
+    "caseUpdatedDate",
+    "caseValidDate",
+    "caseValidationDate",
+    "caseValidationOutcome",
+    "caseStartedDate",
+    "casePublishedDate",
+    "lpaQuestionnaireCreatedDate",
+    "lpaQuestionnaireSubmittedDate",
+    "lpaQuestionnaireValidationOutcome",
+    "lpaQuestionnaireDueDate",
+    "caseWithdrawnDate",
+    "caseTransferredDate",
+    "caseDecisionOutcomeDate",
+    "caseDecisionOutcome",
+    "caseCompletedDate",
+    "siteAddressLine1",
+    "siteAddressLine2",
+    "siteAddressTown",
+    "siteAddressCounty",
+    "siteAddressPostcode"
+  ],
+  "properties": {
+    "caseId": {
+      "type": ["integer", "null"],
+      "examples": [6000001],
+      "description": "Internal case identifier"
+    },
+    "caseReference": {
+      "type": "string",
+      "pattern": "^6\\d{6}$",
+      "examples": ["6000001"],
+      "description": "External case identifier for Group C appeals (7 digit number starting in 6)"
+    },
+    "caseType": {
+      "type": "string",
+      "enum": ["C", "D", "F", "G", "H", "L", "Q", "S", "V", "W", "X", "Y", "Z", "ZA", "ZP"],
+      "description": "The internal letter code for an appeal type, e.g. W (Environmental)"
+    },
+    "caseStatus": {
+      "type": "string",
+      "enum": [
+        "assign_case_officer",
+        "validation",
+        "ready_to_start",
+        "lpa_questionnaire",
+        "issue_determination",
+        "statements",
+        "evidence",
+        "witnesses",
+        "final_comments",
+        "complete",
+        "invalid",
+        "closed",
+        "withdrawn",
+        "awaiting_transfer",
+        "transferred",
+        "event",
+        "awaiting_event",
+        "notice_withdrawn",
+        "closed_opened_in_error"
+      ],
+      "description": "The processing status for the appeal"
+    },
+    "caseProcedure": {
+      "type": ["string", "null"],
+      "enum": ["written", "hearing", "inquiry", "writtenPart1", "writtenPart2", null],
+      "description": "The type of procedure for the appeal"
+    },
+    "caseCreatedDate": {
+      "type": "string",
+      "format": "date-time",
+      "examples": ["2026-07-27T20:30:00.000Z"],
+      "description": "The date the appeal was received"
+    },
+    "caseSubmittedDate": {
+      "type": ["string", "null"],
+      "format": "date-time",
+      "examples": ["2026-07-27T20:30:00.000Z"],
+      "description": "The date the appeal was submitted by the appellant"
+    },
+    "caseUpdatedDate": {
+      "type": ["string", "null"],
+      "format": "date-time",
+      "examples": ["2026-07-27T20:30:00.000Z"],
+      "description": "The date the appeal was last updated in the back-office"
+    },
+    "caseValidDate": {
+      "type": ["string", "null"],
+      "format": "date-time",
+      "examples": ["2026-07-27T20:30:00.000Z"],
+      "description": "The date since when the appeal was considered valid"
+    },
+    "caseValidationDate": {
+      "type": ["string", "null"],
+      "format": "date-time",
+      "examples": ["2026-07-27T20:30:00.000Z"],
+      "description": "The date the appeal was validated in the back-office"
+    },
+    "caseValidationOutcome": {
+      "type": ["string", "null"],
+      "enum": ["valid", "invalid", "incomplete", null],
+      "description": "The outcome of the validation action"
+    },
+    "caseStartedDate": {
+      "type": ["string", "null"],
+      "format": "date-time",
+      "examples": ["2026-07-27T20:30:00.000Z"],
+      "description": "A date indicating when the case was started, resulting in the creation of a timetable"
+    },
+    "casePublishedDate": {
+      "type": ["string", "null"],
+      "format": "date-time",
+      "examples": ["2026-07-27T20:30:00.000Z"],
+      "description": "A date indicating when the case was published"
+    },
+    "lpaQuestionnaireCreatedDate": {
+      "type": ["string", "null"],
+      "format": "date-time",
+      "examples": ["2026-07-27T20:30:00.000Z"],
+      "description": "The date the LPA response was received"
+    },
+    "lpaQuestionnaireSubmittedDate": {
+      "type": ["string", "null"],
+      "format": "date-time",
+      "examples": ["2026-07-27T20:30:00.000Z"],
+      "description": "The date the LPA provided a response to the case"
+    },
+    "lpaQuestionnaireValidationOutcome": {
+      "type": ["string", "null"],
+      "enum": ["complete", "incomplete", null],
+      "description": "The outcome of the LPA questionnaire validation action"
+    },
+    "lpaQuestionnaireDueDate": {
+      "type": ["string", "null"],
+      "format": "date-time",
+      "examples": ["2026-07-27T20:30:00.000Z"],
+      "description": "If the case is started and has a timetable, a deadline for the LPA to provide a response"
+    },
+    "caseDecisionOutcomeDate": {
+      "type": ["string", "null"],
+      "format": "date-time",
+      "examples": ["2026-07-27T20:30:00.000Z"],
+      "description": "The date of the appeal decision"
+    },
+    "caseDecisionOutcome": {
+      "type": ["string", "null"],
+      "enum": [
+        "allowed",
+        "split_decision",
+        "dismissed",
+        "invalid",
+        "notice_upheld",
+        "planning_permission_granted",
+        "quashed_on_legal_grounds",
+        "notice_varied_and_upheld",
+        "notice_quashed",
+        null
+      ],
+      "description": "The final outcome for the decision"
+    },
+    "caseCompletedDate": {
+      "type": ["string", "null"],
+      "format": "date-time",
+      "examples": ["2026-07-27T20:30:00.000Z"],
+      "description": "The date the appeal decision letter was issued"
+    },
+    "lpaCode": {
+      "type": ["string", "null"],
+      "examples": ["Q9999"],
+      "description": "A unique identifier for the Local Planning Authority"
+    },
+    "caseOfficerId": {
+      "type": ["string", "null"],
+      "description": "Unique identifier for the case officer assigned to the case"
+    },
+    "inspectorId": {
+      "type": ["string", "null"],
+      "description": "Unique identifier for the inspector assigned to the case"
+    },
+    "padsSapId": {
+      "type": ["string", "null"],
+      "description": "padsSapId for PADS inspectors"
+    },
+    "allocationLevel": {
+      "type": ["string", "null"],
+      "enum": ["A", "B", "C", "D", "E", "F", "G", "H", null],
+      "description": "A level used for allocation purposes"
+    },
+    "allocationBand": {
+      "type": ["number", "null"],
+      "enum": [1, 2, 3, null],
+      "description": "A band used for allocation purposes"
+    },
+    "caseSpecialisms": {
+      "type": ["array", "null"],
+      "items": {
+        "type": "string"
+      },
+      "examples": [["Environmental", "SSSI"]],
+      "description": "A list of specialisms for allocation purposes"
+    },
+    "siteAddressLine1": {
+      "type": ["string", "null"],
+      "examples": ["96 The Avenue"],
+      "description": "First line of address for the appeal site"
+    },
+    "siteAddressLine2": {
+      "type": ["string", "null"],
+      "description": "Second line of address for the appeal site"
+    },
+    "siteAddressTown": {
+      "type": ["string", "null"],
+      "examples": ["Maidstone"],
+      "description": "Town / City of the site address"
+    },
+    "siteAddressCounty": {
+      "type": ["string", "null"],
+      "examples": ["Kent"],
+      "description": "County of the site address"
+    },
+    "siteAddressPostcode": {
+      "type": ["string", "null"],
+      "examples": ["MD21 5XY"],
+      "description": "Postal code of the site address"
+    },
+    "caseManagementConferenceDate": {
+      "type": ["string", "null"],
+      "format": "date-time",
+      "examples": ["2026-07-27T20:30:00.000Z"],
+      "description": "The date of the Case Management Conference (CMC)"
+    },
+    "statementDueDate": {
+      "type": ["string", "null"],
+      "format": "date-time",
+      "examples": ["2026-07-27T20:30:00.000Z"],
+      "description": "Deadline for statements"
+    },
+    "proofsOfEvidenceDueDate": {
+      "type": ["string", "null"],
+      "format": "date-time",
+      "examples": ["2026-07-27T20:30:00.000Z"],
+      "description": "Deadline for proofs of evidence"
+    },
+    "finalCommentsDueDate": {
+      "type": ["string", "null"],
+      "format": "date-time",
+      "examples": ["2026-07-27T20:30:00.000Z"],
+      "description": "Deadline for final comments"
+    },
+    "interestedPartyRepsDueDate": {
+      "type": ["string", "null"],
+      "format": "date-time",
+      "examples": ["2026-07-27T20:30:00.000Z"],
+      "description": "Deadline for interested party representations"
+    },
+    "statementOfCommonGroundDueDate": {
+      "type": ["string", "null"],
+      "format": "date-time",
+      "examples": ["2026-07-27T20:30:00.000Z"],
+      "description": "Deadline for statement of common ground"
+    },
+    "planningObligationDueDate": {
+      "type": ["string", "null"],
+      "format": "date-time",
+      "examples": ["2026-07-27T20:30:00.000Z"],
+      "description": "Deadline for planning obligation"
+    },
+    "typeOfPlanningApplication": {
+      "type": ["string", "null"],
+      "enum": [
+        "full-appeal",
+        "householder-planning",
+        "outline-planning",
+        "prior-approval",
+        "reserved-matters",
+        "removal-or-variation-of-conditions",
+        "listed-building",
+        "minor-commercial-development",
+        "advertisement",
+        "lawful-development-certificate",
+        "discontinuance-notice",
+        "permission-in-principle",
+        "tree-preservation-order",
+        "tree-replacement-notice",
+        "high-hedge-appeal",
+        "hedgerows-appeal",
+        "community-infrastructure-levy",
+        "planning-obligation",
+        "environmental",
+        null
+      ],
+      "description": "The type of application or notice that is the subject of the appeal"
+    },
+    "caseSubType": {
+      "type": ["string", "null"],
+      "enum": [
+        "anti_pollution_works_notice",
+        "contaminated_land",
+        "marine_licensing",
+        "waste_carriers",
+        "water_abstraction",
+        "environmental_liability",
+        "environmental_permitting",
+        "hazardous_substances",
+        "silage_and_slurry",
+        "sssi",
+        "affordable_housing",
+        null
+      ],
+      "description": "Sub-type categorization for generic/low-volume appeals"
+    },
+    "caseWithdrawnDate": {
+      "type": ["string", "null"],
+      "format": "date-time",
+      "examples": ["2026-07-27T20:30:00.000Z"],
+      "description": "The date the appeal was withdrawn by the appellant"
+    },
+    "caseTransferredDate": {
+      "type": ["string", "null"],
+      "format": "date-time",
+      "examples": ["2026-07-27T20:30:00.000Z"],
+      "description": "The date the appeal was transferred to a new case of a different type"
+    },
+    "enforcementNoticeReference": {
+      "type": ["string", "null"],
+      "examples": ["myC45e-123"],
+      "description": "The reference number of the enforcement notice"
+    },
+    "applicationReference": {
+      "type": ["string", "null"],
+      "examples": ["43010/APP/1/290572"],
+      "description": "The unique identifier of the LPA or regulator application"
+    },
+    "linkedCaseStatus": {
+      "type": ["string", "null"],
+      "enum": ["lead", "child", null],
+      "description": "Indicates if the case is linked, and the type of relationship"
+    },
+    "leadCaseReference": {
+      "type": ["string", "null"],
+      "examples": ["6000001"],
+      "description": "The reference of the lead case, if the case is a child case"
+    },
+    "environmentalPermitSubtypes": {
+      "type": ["string", "null"],
+      "enum": [
+        "refusal_of_a_permit",
+        "deemed_refusal",
+        "conditions_attached_to_a_permit",
+        "decision_to_impose_conditions_by_regulator",
+        "deemed_withdrawal",
+        "enforcement_notice",
+        "suspension_notice",
+        "closure_notice",
+        "flood_risk_activity",
+        "revocation_notice",
+        "prohibition_notice",
+        null
+      ],
+      "description": "Case sub-division applying to Environmental Permitting caseSubType"
+    }
+  }
+}

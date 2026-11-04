@@ -141,6 +141,7 @@ class CaseDecisionOutcome(Enum):
     planning_permission_granted = "planning_permission_granted"
     quashed_on_legal_grounds = "quashed_on_legal_grounds"
     notice_varied_and_upheld = "notice_varied_and_upheld"
+    notice_quashed = "notice_quashed"
     NoneType_None = None
 
 
@@ -288,6 +289,13 @@ class TypeOfPlanningApplication(Enum):
     lawful_development_certificate = "lawful-development-certificate"
     discontinuance_notice = "discontinuance-notice"
     permission_in_principle = "permission-in-principle"
+    tree_preservation_order = "tree-preservation-order"
+    tree_replacement_notice = "tree-replacement-notice"
+    high_hedge_appeal = "high-hedge-appeal"
+    hedgerows_appeal = "hedgerows-appeal"
+    community_infrastructure_levy = "community-infrastructure-levy"
+    planning_obligation = "planning-obligation"
+    environmental = "environmental"
     NoneType_None = None
 
 

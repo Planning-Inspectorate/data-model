@@ -88,6 +88,7 @@ export const APPEAL_CASE_DECISION_OUTCOME = Object.freeze({
   ALLOWED: 'allowed',
   DISMISSED: 'dismissed',
   INVALID: 'invalid',
+  NOTICE_QUASHED: 'notice_quashed',
   NOTICE_UPHELD: 'notice_upheld',
   NOTICE_VARIED_AND_UPHELD: 'notice_varied_and_upheld',
   PLANNING_PERMISSION_GRANTED: 'planning_permission_granted',
@@ -137,6 +138,20 @@ export const APPEAL_CASE_STATUS = Object.freeze({
   VALIDATION: 'validation',
   WITHDRAWN: 'withdrawn',
   WITNESSES: 'witnesses',
+});
+
+export const APPEAL_CASE_SUB_TYPE = Object.freeze({
+  AFFORDABLE_HOUSING: 'affordable_housing',
+  ANTI_POLLUTION_WORKS_NOTICE: 'anti_pollution_works_notice',
+  CONTAMINATED_LAND: 'contaminated_land',
+  ENVIRONMENTAL_LIABILITY: 'environmental_liability',
+  ENVIRONMENTAL_PERMITTING: 'environmental_permitting',
+  HAZARDOUS_SUBSTANCES: 'hazardous_substances',
+  MARINE_LICENSING: 'marine_licensing',
+  SILAGE_AND_SLURRY: 'silage_and_slurry',
+  SSSI: 'sssi',
+  WASTE_CARRIERS: 'waste_carriers',
+  WATER_ABSTRACTION: 'water_abstraction',
 });
 
 export const APPEAL_CASE_TYPE = Object.freeze({
@@ -190,6 +205,7 @@ export const APPEAL_DISCONTINUANCE_NOTICE_SERVED_REASON = Object.freeze({
 export const APPEAL_DOCUMENT_TYPE = Object.freeze({
   ADDITIONAL_DOCUMENTS_LPA: 'additionalDocumentsLPA',
   APPEAL_NOTIFICATION: 'appealNotification',
+  APPELLANT_CASE: 'appellantCase',
   APPELLANT_CASE_CORRESPONDENCE: 'appellantCaseCorrespondence',
   APPELLANT_CASE_WITHDRAWAL_LETTER: 'appellantCaseWithdrawalLetter',
   APPELLANT_COSTS_APPLICATION: 'appellantCostsApplication',
@@ -256,6 +272,7 @@ export const APPEAL_DOCUMENT_TYPE = Object.freeze({
   LPA_ENFORCEMENT_NOTICE_WITHDRAWAL: 'lpaEnforcementNoticeWithdrawal',
   LPA_FINAL_COMMENT: 'lpaFinalComment',
   LPA_PROOF_OF_EVIDENCE: 'lpaProofOfEvidence',
+  LPA_QUESTIONNAIRE: 'lpaQuestionnaire',
   LPA_STATEMENT: 'lpaStatement',
   LPA_WITNESSES_EVIDENCE: 'lpaWitnessesEvidence',
   MAIN_PARTY_CORRESPONDENCE: 'mainPartyCorrespondence',
@@ -309,6 +326,20 @@ export const APPEAL_EIA_DEVELOPMENT_DESCRIPTION = Object.freeze({
 export const APPEAL_EIA_ENVIRONMENTAL_IMPACT_SCHEDULE = Object.freeze({
   SCHEDULE_1: 'schedule-1',
   SCHEDULE_2: 'schedule-2',
+});
+
+export const APPEAL_ENVIRONMENTAL_PERMIT_SUBTYPES = Object.freeze({
+  CLOSURE_NOTICE: 'closure_notice',
+  CONDITIONS_ATTACHED_TO_A_PERMIT: 'conditions_attached_to_a_permit',
+  DECISION_TO_IMPOSE_CONDITIONS_BY_REGULATOR: 'decision_to_impose_conditions_by_regulator',
+  DEEMED_REFUSAL: 'deemed_refusal',
+  DEEMED_WITHDRAWAL: 'deemed_withdrawal',
+  ENFORCEMENT_NOTICE: 'enforcement_notice',
+  FLOOD_RISK_ACTIVITY: 'flood_risk_activity',
+  PROHIBITION_NOTICE: 'prohibition_notice',
+  REFUSAL_OF_A_PERMIT: 'refusal_of_a_permit',
+  REVOCATION_NOTICE: 'revocation_notice',
+  SUSPENSION_NOTICE: 'suspension_notice',
 });
 
 export const APPEAL_EVENT_STATUS = Object.freeze({
@@ -428,17 +459,24 @@ export const APPEAL_SOURCE_SYSTEM = Object.freeze({
 
 export const APPEAL_TYPE_OF_PLANNING_APPLICATION = Object.freeze({
   ADVERTISEMENT: 'advertisement',
+  COMMUNITY_INFRASTRUCTURE_LEVY: 'community-infrastructure-levy',
   DISCONTINUANCE_NOTICE: 'discontinuance-notice',
+  ENVIRONMENTAL: 'environmental',
   FULL_APPEAL: 'full-appeal',
+  HEDGEROWS_APPEAL: 'hedgerows-appeal',
+  HIGH_HEDGE_APPEAL: 'high-hedge-appeal',
   HOUSEHOLDER_PLANNING: 'householder-planning',
   LAWFUL_DEVELOPMENT_CERTIFICATE: 'lawful-development-certificate',
   LISTED_BUILDING: 'listed-building',
   MINOR_COMMERCIAL_DEVELOPMENT: 'minor-commercial-development',
   OUTLINE_PLANNING: 'outline-planning',
   PERMISSION_IN_PRINCIPLE: 'permission-in-principle',
+  PLANNING_OBLIGATION: 'planning-obligation',
   PRIOR_APPROVAL: 'prior-approval',
   REMOVAL_OR_VARIATION_OF_CONDITIONS: 'removal-or-variation-of-conditions',
   RESERVED_MATTERS: 'reserved-matters',
+  TREE_PRESERVATION_ORDER: 'tree-preservation-order',
+  TREE_REPLACEMENT_NOTICE: 'tree-replacement-notice',
 });
 
 export const APPEAL_VIRUS_CHECK_STATUS = Object.freeze({

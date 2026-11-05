@@ -55,6 +55,11 @@ class CaseType(StrEnum):
     Z = "Z"
     ZA = "ZA"
     ZP = "ZP"
+    TPO = "TPO"
+    TRN = "TRN"
+    HH = "HH"
+    HR = "HR"
+    ENV = "ENV"
 
 
 class CaseProcedure(Enum):

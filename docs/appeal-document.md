@@ -465,24 +465,29 @@ The internal code for an appeal type, e.g. Householder (D)
 
 **enum**: the value of this property must be equal to one of the following values:
 
-| Value  | Explanation |
-| :----- | :---------- |
-| `"C"`  |             |
-| `"D"`  |             |
-| `"F"`  |             |
-| `"G"`  |             |
-| `"H"`  |             |
-| `"L"`  |             |
-| `"Q"`  |             |
-| `"S"`  |             |
-| `"V"`  |             |
-| `"W"`  |             |
-| `"X"`  |             |
-| `"Y"`  |             |
-| `"Z"`  |             |
-| `"ZA"` |             |
-| `"ZP"` |             |
-| `null` |             |
+| Value   | Explanation |
+| :------ | :---------- |
+| `"C"`   |             |
+| `"D"`   |             |
+| `"F"`   |             |
+| `"G"`   |             |
+| `"H"`   |             |
+| `"L"`   |             |
+| `"Q"`   |             |
+| `"S"`   |             |
+| `"V"`   |             |
+| `"W"`   |             |
+| `"X"`   |             |
+| `"Y"`   |             |
+| `"Z"`   |             |
+| `"ZA"`  |             |
+| `"ZP"`  |             |
+| `"TPO"` |             |
+| `"TRN"` |             |
+| `"HH"`  |             |
+| `"HR"`  |             |
+| `"ENV"` |             |
+| `null`  |             |
 
 ## redactedStatus
 

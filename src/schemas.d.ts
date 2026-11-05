@@ -128,7 +128,28 @@ export interface AppealDocument {
   /**
    * The internal code for an appeal type, e.g. Householder (D)
    */
-  caseType: 'C' | 'D' | 'F' | 'G' | 'H' | 'L' | 'Q' | 'S' | 'V' | 'W' | 'X' | 'Y' | 'Z' | 'ZA' | 'ZP' | null;
+  caseType:
+    | 'C'
+    | 'D'
+    | 'F'
+    | 'G'
+    | 'H'
+    | 'L'
+    | 'Q'
+    | 'S'
+    | 'V'
+    | 'W'
+    | 'X'
+    | 'Y'
+    | 'Z'
+    | 'ZA'
+    | 'ZP'
+    | 'TPO'
+    | 'TRN'
+    | 'HH'
+    | 'HR'
+    | 'ENV'
+    | null;
   /**
    * Indicates the redaction status for the document
    */
@@ -409,9 +430,29 @@ export interface AppealGroupCCase {
    */
   caseReference: string;
   /**
-   * The internal letter code for an appeal type, e.g. W (Environmental)
+   * Internal letter code for appeal types
    */
-  caseType: 'C' | 'D' | 'F' | 'G' | 'H' | 'L' | 'Q' | 'S' | 'V' | 'W' | 'X' | 'Y' | 'Z' | 'ZA' | 'ZP';
+  caseType:
+    | 'C'
+    | 'D'
+    | 'F'
+    | 'G'
+    | 'H'
+    | 'L'
+    | 'Q'
+    | 'S'
+    | 'V'
+    | 'W'
+    | 'X'
+    | 'Y'
+    | 'Z'
+    | 'ZA'
+    | 'ZP'
+    | 'TPO'
+    | 'TRN'
+    | 'HH'
+    | 'HR'
+    | 'ENV';
   /**
    * The processing status for the appeal
    */
@@ -706,7 +747,27 @@ export type AppealHASCase = (GridReference | SiteAddress) & {
   /**
    * The internal code for an appeal type, e.g. D (Householder)
    */
-  caseType: 'C' | 'D' | 'F' | 'G' | 'H' | 'L' | 'Q' | 'S' | 'V' | 'W' | 'X' | 'Y' | 'Z' | 'ZA' | 'ZP';
+  caseType:
+    | 'C'
+    | 'D'
+    | 'F'
+    | 'G'
+    | 'H'
+    | 'L'
+    | 'Q'
+    | 'S'
+    | 'V'
+    | 'W'
+    | 'X'
+    | 'Y'
+    | 'Z'
+    | 'ZA'
+    | 'ZP'
+    | 'TPO'
+    | 'TRN'
+    | 'HH'
+    | 'HR'
+    | 'ENV';
   /**
    * The type of procedure for the appeal
    */
@@ -1336,7 +1397,27 @@ export type AppealS78Case = (GridReference | SiteAddress) & {
   /**
    * The internal code for an appeal type, e.g. D (Householder)
    */
-  caseType: 'C' | 'D' | 'F' | 'G' | 'H' | 'L' | 'Q' | 'S' | 'V' | 'W' | 'X' | 'Y' | 'Z' | 'ZA' | 'ZP';
+  caseType:
+    | 'C'
+    | 'D'
+    | 'F'
+    | 'G'
+    | 'H'
+    | 'L'
+    | 'Q'
+    | 'S'
+    | 'V'
+    | 'W'
+    | 'X'
+    | 'Y'
+    | 'Z'
+    | 'ZA'
+    | 'ZP'
+    | 'TPO'
+    | 'TRN'
+    | 'HH'
+    | 'HR'
+    | 'ENV';
   /**
    * The type of procedure for the appeal
    */

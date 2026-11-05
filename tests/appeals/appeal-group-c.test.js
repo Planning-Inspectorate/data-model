@@ -339,4 +339,40 @@ describe('appeal-group-c.schema.json', () => {
 		baseDoc.documentType = 'lpaQuestionnaire';
 		assert.strictEqual(ajv.validate(docSchema, baseDoc), true, JSON.stringify(ajv.errors));
 	});
+
+	it('should validate caseType enums including new letter codes', () => {
+		const ajv = setupAjv();
+		const testCase = structuredClone(baseAppealGroupC);
+
+		const validCaseTypes = [
+			'C',
+			'D',
+			'F',
+			'G',
+			'H',
+			'L',
+			'Q',
+			'S',
+			'V',
+			'W',
+			'X',
+			'Y',
+			'Z',
+			'ZA',
+			'ZP',
+			'TPO',
+			'TRN',
+			'HH',
+			'HR',
+			'ENV'
+		];
+
+		for (const caseType of validCaseTypes) {
+			testCase.caseType = caseType;
+			assert.strictEqual(ajv.validate(schema, testCase), true, `caseType ${caseType} should be valid`);
+		}
+
+		testCase.caseType = 'INVALID_CODE';
+		assert.strictEqual(ajv.validate(schema, testCase), false);
+	});
 });

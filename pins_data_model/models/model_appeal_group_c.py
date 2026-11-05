@@ -10,7 +10,7 @@ from pydantic import AwareDatetime, BaseModel, ConfigDict, Field, constr
 
 class CaseType(StrEnum):
     """
-    The internal letter code for an appeal type, e.g. W (Environmental)
+    Internal letter code for appeal types
     """
 
     C = "C"
@@ -28,6 +28,11 @@ class CaseType(StrEnum):
     Z = "Z"
     ZA = "ZA"
     ZP = "ZP"
+    TPO = "TPO"
+    TRN = "TRN"
+    HH = "HH"
+    HR = "HR"
+    ENV = "ENV"
 
 
 class CaseStatus(StrEnum):
@@ -229,7 +234,7 @@ class AppealGroupCCase(BaseModel):
     """
     caseType: CaseType
     """
-    The internal letter code for an appeal type, e.g. W (Environmental)
+    Internal letter code for appeal types
     """
     caseStatus: CaseStatus
     """

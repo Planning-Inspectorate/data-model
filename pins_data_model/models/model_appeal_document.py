@@ -39,6 +39,11 @@ class CaseType(Enum):
     Z = "Z"
     ZA = "ZA"
     ZP = "ZP"
+    TPO = "TPO"
+    TRN = "TRN"
+    HH = "HH"
+    HR = "HR"
+    ENV = "ENV"
     NoneType_None = None
 
 

@@ -116,7 +116,7 @@ External case identifier for Group C appeals (7 digit number starting in 6)
 
 ## caseType
 
-The internal letter code for an appeal type, e.g. W (Environmental)
+Internal letter code for appeal types
 
 `caseType`
 
@@ -136,23 +136,28 @@ The internal letter code for an appeal type, e.g. W (Environmental)
 
 **enum**: the value of this property must be equal to one of the following values:
 
-| Value  | Explanation |
-| :----- | :---------- |
-| `"C"`  |             |
-| `"D"`  |             |
-| `"F"`  |             |
-| `"G"`  |             |
-| `"H"`  |             |
-| `"L"`  |             |
-| `"Q"`  |             |
-| `"S"`  |             |
-| `"V"`  |             |
-| `"W"`  |             |
-| `"X"`  |             |
-| `"Y"`  |             |
-| `"Z"`  |             |
-| `"ZA"` |             |
-| `"ZP"` |             |
+| Value   | Explanation |
+| :------ | :---------- |
+| `"C"`   |             |
+| `"D"`   |             |
+| `"F"`   |             |
+| `"G"`   |             |
+| `"H"`   |             |
+| `"L"`   |             |
+| `"Q"`   |             |
+| `"S"`   |             |
+| `"V"`   |             |
+| `"W"`   |             |
+| `"X"`   |             |
+| `"Y"`   |             |
+| `"Z"`   |             |
+| `"ZA"`  |             |
+| `"ZP"`  |             |
+| `"TPO"` |             |
+| `"TRN"` |             |
+| `"HH"`  |             |
+| `"HR"`  |             |
+| `"ENV"` |             |
 
 ## caseStatus
 

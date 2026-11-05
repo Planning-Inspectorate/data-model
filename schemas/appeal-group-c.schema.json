@@ -55,8 +55,29 @@
     },
     "caseType": {
       "type": "string",
-      "enum": ["C", "D", "F", "G", "H", "L", "Q", "S", "V", "W", "X", "Y", "Z", "ZA", "ZP"],
-      "description": "The internal letter code for an appeal type, e.g. W (Environmental)"
+      "enum": [
+        "C",
+        "D",
+        "F",
+        "G",
+        "H",
+        "L",
+        "Q",
+        "S",
+        "V",
+        "W",
+        "X",
+        "Y",
+        "Z",
+        "ZA",
+        "ZP",
+        "TPO",
+        "TRN",
+        "HH",
+        "HR",
+        "ENV"
+      ],
+      "description": "Internal letter code for appeal types"
     },
     "caseStatus": {
       "type": "string",

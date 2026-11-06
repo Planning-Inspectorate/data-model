@@ -637,6 +637,23 @@ const CASE_STAGE = Object.freeze({
   WITHDRAWN: 'withdrawn',
 });
 
+const EVENT_LOCATION_TYPE = Object.freeze({
+  HYBRID: 'hybrid',
+  IN_PERSON: 'in_person',
+  VIRTUAL: 'virtual',
+});
+
+const EVENT_TYPE = Object.freeze({
+  EXAMINATION_HEARING: 'examinationHearing',
+  GATEWAY_2_WORKSHOP: 'gateway2Workshop',
+  OTHER: 'other',
+});
+
+const EXAMINATION_OUTCOME = Object.freeze({
+  SOUND: 'Sound',
+  UNSOUND: 'Unsound',
+});
+
 const MESSAGE_EVENT_TYPE = Object.freeze({
   CREATE: 'Create',
   DELETE: 'Delete',
@@ -993,6 +1010,11 @@ const NSIP_VIRUS_CHECK_STATUS = Object.freeze({
   SCANNED: 'scanned',
 });
 
+const PLAN_TYPE = Object.freeze({
+  LOCAL_PLANS: 'local_plans',
+  OTHER: 'other',
+});
+
 const REDACTION_STATUS = Object.freeze({
   REDACTED: 'redacted',
   UNREDACTED: 'unredacted',
@@ -1077,6 +1099,9 @@ exports.APPLICATION_TYPE = APPLICATION_TYPE;
 exports.APPLICATION_UPDATE_STATUS = APPLICATION_UPDATE_STATUS;
 exports.APPLICATION_WITHDRAWAL_REASON = APPLICATION_WITHDRAWAL_REASON;
 exports.CASE_STAGE = CASE_STAGE;
+exports.EVENT_LOCATION_TYPE = EVENT_LOCATION_TYPE;
+exports.EVENT_TYPE = EVENT_TYPE;
+exports.EXAMINATION_OUTCOME = EXAMINATION_OUTCOME;
 exports.MESSAGE_EVENT_TYPE = MESSAGE_EVENT_TYPE;
 exports.METHOD = METHOD;
 exports.NSIP_CASE_TYPE = NSIP_CASE_TYPE;
@@ -1118,6 +1143,7 @@ exports.NSIP_SUB_PROJECT_TYPE = NSIP_SUB_PROJECT_TYPE;
 exports.NSIP_TIER = NSIP_TIER;
 exports.NSIP_UPDATE_STATUS = NSIP_UPDATE_STATUS;
 exports.NSIP_VIRUS_CHECK_STATUS = NSIP_VIRUS_CHECK_STATUS;
+exports.PLAN_TYPE = PLAN_TYPE;
 exports.REDACTION_STATUS = REDACTION_STATUS;
 exports.SERVICE_USER_TYPE = SERVICE_USER_TYPE;
 exports.STATUS = STATUS;

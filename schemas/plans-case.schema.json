@@ -1,0 +1,366 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "plans-case.schema.json",
+  "title": "Local Plans Case",
+  "description": "Local Plan case as defined for integration with the ODW",
+  "type": "object",
+  "additionalProperties": true,
+  "required": ["id", "caseReference", "planTitle", "planType", "planBand", "lpaId", "createdDate"],
+  "properties": {
+    "id": {
+      "type": "string",
+      "format": "uuid",
+      "description": "Primary Key"
+    },
+    "caseReference": {
+      "type": "string",
+      "description": "CBOS Business Key"
+    },
+    "planTitle": {
+      "type": "string",
+      "description": "The official title as in the Notice of Intention"
+    },
+    "planType": {
+      "type": "string",
+      "description": "Type of plan to be examined",
+      "enum": ["local_plans", "other"]
+    },
+    "planBand": {
+      "type": "integer",
+      "description": "Classification of grade/level of plan. Local Plans Band = 1",
+      "enum": [1, 2, 3]
+    },
+    "caseOfficerId": {
+      "type": ["array", "null"],
+      "description": "Entra IDs of PINS Case Officers assigned",
+      "items": {
+        "type": "string"
+      }
+    },
+    "lpaId": {
+      "type": "array",
+      "description": "LPAs involved with case",
+      "items": {
+        "type": "string"
+      }
+    },
+    "lpaContact": {
+      "type": ["array", "null"],
+      "description": "LPA Contacts involved with case",
+      "items": {
+        "$ref": "#/$defs/contact"
+      }
+    },
+    "caseProgrammeOfficer": {
+      "type": ["array", "null"],
+      "description": "Programme Officer(s) assigned to case by LPA(s)",
+      "items": {
+        "$ref": "#/$defs/contact"
+      }
+    },
+    "intentionToCommenceDate": {
+      "type": ["string", "null"],
+      "format": "date-time",
+      "description": "Date the LPA give notice to commence plan preparation"
+    },
+    "expectedSubmissionForExaminationDate": {
+      "type": ["string", "null"],
+      "format": "date-time",
+      "description": "Date that LPA are seeking to submit"
+    },
+    "expectedPublicationDate": {
+      "type": ["string", "null"],
+      "format": "date-time",
+      "description": "Date that LPA are seeking to publish"
+    },
+    "createdDate": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Date case created in Back Office?"
+    },
+    "deletedDate": {
+      "type": ["string", "null"],
+      "format": "date-time",
+      "description": "Date case (soft) deleted in Back Office?"
+    },
+    "gateway1ExpectedDate": {
+      "type": ["string", "null"],
+      "format": "date-time",
+      "description": "Date that LPA expect to pass Gateway 1"
+    },
+    "gateway1ActualDate": {
+      "type": ["string", "null"],
+      "format": "date-time",
+      "description": "Date that LPA actually passed Gateway 1"
+    },
+    "slaSentDate": {
+      "type": ["string", "null"],
+      "format": "date-time",
+      "description": "Date SLA sent to LPA"
+    },
+    "slaReceivedDate": {
+      "type": ["string", "null"],
+      "format": "date-time",
+      "description": "Date SLA(s) signed/received back from LPA(s)"
+    },
+    "dsaCurrentAndValid": {
+      "type": ["boolean", "null"],
+      "description": "Do PINS and LPA(s) have current/valid DSAs"
+    },
+    "gateway2ExpectedDate": {
+      "type": ["string", "null"],
+      "format": "date-time",
+      "description": "Date that LPA expect to pass Gateway 2"
+    },
+    "gateway2ActualDate": {
+      "type": ["string", "null"],
+      "format": "date-time",
+      "description": "Date that LPA actually passed Gateway 2"
+    },
+    "gateway2AssessorId": {
+      "type": ["array", "null"],
+      "description": "Gateway 2 Assessor inspector(s)",
+      "items": {
+        "$ref": "#/$defs/inspector"
+      }
+    },
+    "gateway2ReportIssuedDate": {
+      "type": ["string", "null"],
+      "format": "date-time",
+      "description": "Date report issued to LPA"
+    },
+    "reportPublishedByLpaDate": {
+      "type": ["string", "null"],
+      "format": "date-time",
+      "description": "LPA should publish within 2 weeks of receiving report"
+    },
+    "workshopDocumentUploadedDate": {
+      "type": ["string", "null"],
+      "format": "date-time",
+      "description": "Date workshop documents are uploaded"
+    },
+    "gateway3ExpectedDate": {
+      "type": ["string", "null"],
+      "format": "date-time",
+      "description": "Date that LPA expect to pass Gateway 3"
+    },
+    "gateway3ActualDate": {
+      "type": ["string", "null"],
+      "format": "date-time",
+      "description": "Date that LPA actually passed Gateway 3"
+    },
+    "gateway3AssessorId": {
+      "type": ["array", "null"],
+      "description": "Gateway 3 Assessor inspector(s)",
+      "items": {
+        "$ref": "#/$defs/inspector"
+      }
+    },
+    "completionDate": {
+      "type": ["string", "null"],
+      "format": "date-time",
+      "description": "Date Gateway3 completed"
+    },
+    "actualSubmissionForExaminationDate": {
+      "type": ["string", "null"],
+      "format": "date-time",
+      "description": "Actual examination submission date"
+    },
+    "examiningInspectorId": {
+      "type": ["array", "null"],
+      "description": "Examining inspector(s) and appointment dates",
+      "items": {
+        "$ref": "#/$defs/inspector"
+      }
+    },
+    "examinationWebsite": {
+      "type": ["string", "null"],
+      "format": "uri",
+      "description": "URL to examination website"
+    },
+    "letterSentToMHCLGDate": {
+      "type": ["string", "null"],
+      "format": "date-time",
+      "description": "Date letter is sent to MHCLG under 48 hour protocol"
+    },
+    "letterIssueDate": {
+      "type": ["string", "null"],
+      "format": "date-time",
+      "description": "Date Letter(s) sent to LPA"
+    },
+    "qaDate": {
+      "type": ["string", "null"],
+      "format": "date-time",
+      "description": "Date the report has come in for QA"
+    },
+    "qaInspectorId": {
+      "type": ["array", "null"],
+      "description": "QA inspector(s)",
+      "items": {
+        "$ref": "#/$defs/inspector"
+      }
+    },
+    "reportSentToPanelDate": {
+      "type": ["string", "null"],
+      "format": "date-time",
+      "description": "Date report is sent to panel"
+    },
+    "panelresponseToInspectorDate": {
+      "type": ["string", "null"],
+      "format": "date-time",
+      "description": "Date panel responds to inspector"
+    },
+    "factCheckDateReceivedFromInspector": {
+      "type": ["string", "null"],
+      "format": "date-time",
+      "description": "Date the report was received from the Inspector for Fact Check"
+    },
+    "factCheckDueDate": {
+      "type": ["string", "null"],
+      "format": "date-time",
+      "description": "Date the report is expected to be sent to the LPA for Fact Check"
+    },
+    "factCheckActualDate": {
+      "type": ["string", "null"],
+      "format": "date-time",
+      "description": "Date the report is actually sent to the LPA for Fact Check"
+    },
+    "factCheckReceivedBackFromLPADate": {
+      "type": ["string", "null"],
+      "format": "date-time",
+      "description": "Fact Check received back from LPA"
+    },
+    "finalReportIssueDate": {
+      "type": ["string", "null"],
+      "format": "date-time",
+      "description": "Date the report is issued to the LPA"
+    },
+    "pauses": {
+      "type": ["array", "null"],
+      "description": "Case pauses",
+      "items": {
+        "$ref": "#/$defs/pause"
+      }
+    },
+    "withdrawnDate": {
+      "type": ["string", "null"],
+      "format": "date-time",
+      "description": "Date the Plan is Withdrawn by the LPA"
+    },
+    "examinationOutcome": {
+      "type": ["string", "null"],
+      "description": "Outcome",
+      "enum": ["Sound", "Unsound", null]
+    },
+    "examinationOutcomeDate": {
+      "type": ["string", "null"],
+      "format": "date-time",
+      "description": "Outcome date"
+    },
+    "adoptionDate": {
+      "type": ["string", "null"],
+      "format": "date-time",
+      "description": "Date the LPA have adopted the Plan"
+    },
+    "approvedForCilDate": {
+      "type": ["string", "null"],
+      "format": "date-time",
+      "description": "TBC by Ops Team"
+    }
+  },
+  "$defs": {
+    "contact": {
+      "type": "object",
+      "description": "LPA contact or Programme Officer",
+      "additionalProperties": false,
+      "required": ["firstName", "lastName", "emailAddress", "pinsLpaCode", "startDate"],
+      "properties": {
+        "firstName": {
+          "type": "string",
+          "description": "First name"
+        },
+        "lastName": {
+          "type": "string",
+          "description": "Last name"
+        },
+        "emailAddress": {
+          "type": "string",
+          "format": "email",
+          "description": "Email address"
+        },
+        "phone": {
+          "type": ["string", "null"],
+          "description": "Phone number"
+        },
+        "pinsLpaCode": {
+          "type": "string",
+          "description": "PINS LPA Code"
+        },
+        "startDate": {
+          "type": "string",
+          "format": "date-time",
+          "description": "Start date"
+        },
+        "endDate": {
+          "type": ["string", "null"],
+          "format": "date-time",
+          "description": "End date"
+        }
+      }
+    },
+    "inspector": {
+      "type": "object",
+      "description": "Inspector assignment details",
+      "additionalProperties": false,
+      "required": ["entraId"],
+      "properties": {
+        "entraId": {
+          "type": "string",
+          "description": "Entra ID"
+        },
+        "appointmentDate": {
+          "type": ["string", "null"],
+          "format": "date-time",
+          "description": "Date inspector appointed to case"
+        },
+        "endDate": {
+          "type": ["string", "null"],
+          "format": "date-time",
+          "description": "Date inspector disassociated with case"
+        }
+      }
+    },
+    "pause": {
+      "type": "object",
+      "description": "Examination pause details",
+      "additionalProperties": false,
+      "required": [],
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "The id of the pause"
+        },
+        "createdAt": {
+          "type": "string",
+          "description": "When the pause was created"
+        },
+        "pauseStartDate": {
+          "type": "string",
+          "description": "When the pause is started"
+        },
+        "pauseStartDetails": {
+          "type": "string",
+          "description": "Why the examination is paused"
+        },
+        "pauseEndDate": {
+          "type": "string",
+          "description": "When the pause ends"
+        },
+        "pauseEndDetails": {
+          "type": "string",
+          "description": "Why the examination is unpaused"
+        }
+      }
+    }
+  }
+}

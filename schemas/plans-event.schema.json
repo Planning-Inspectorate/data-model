@@ -1,0 +1,74 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "plans-event.schema.json",
+  "title": "Local Plans Event",
+  "description": "Event associated with a Plans Case.",
+  "type": "object",
+  "additionalProperties": true,
+  "required": ["id", "caseId", "caseReference", "eventType", "eventStatus"],
+  "properties": {
+    "id": {
+      "type": "string",
+      "format": "uuid",
+      "description": "Primary Key"
+    },
+    "caseId": {
+      "type": "string",
+      "format": "uuid",
+      "description": "Foreign Key --> [plans-case]"
+    },
+    "caseReference": {
+      "type": "string",
+      "description": "CBOS Business Key case identifier"
+    },
+    "eventName": {
+      "type": "string",
+      "description": "Name of the event"
+    },
+    "eventType": {
+      "type": "string",
+      "description": "Type of event",
+      "enum": ["examinationHearing", "gateway2Workshop", "other"]
+    },
+    "eventLocationType": {
+      "type": "string",
+      "description": "How the event is delivered",
+      "enum": ["in_person", "hybrid", "virtual"]
+    },
+    "eventStartDateTime": {
+      "type": ["string", "null"],
+      "format": "date-time",
+      "description": "Event start date and time"
+    },
+    "eventEndDateTime": {
+      "type": ["string", "null"],
+      "format": "date-time",
+      "description": "Event end date and time"
+    },
+    "remoteEventLink": {
+      "type": ["string", "null"],
+      "format": "uri",
+      "description": "URL of hybrid or virtual event"
+    },
+    "addressLine1": {
+      "type": ["string", "null"],
+      "description": "Event address line 1"
+    },
+    "addressLine2": {
+      "type": ["string", "null"],
+      "description": "Event address line 2"
+    },
+    "addressTown": {
+      "type": ["string", "null"],
+      "description": "Event address town"
+    },
+    "addressCounty": {
+      "type": ["string", "null"],
+      "description": "Event address county"
+    },
+    "addressPostcode": {
+      "type": ["string", "null"],
+      "description": "Event address postcode"
+    }
+  }
+}

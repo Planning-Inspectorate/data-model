@@ -592,6 +592,23 @@ export const CASE_STAGE = {
   WITHDRAWN: 'withdrawn',
 } as const;
 
+export const EVENT_LOCATION_TYPE = {
+  HYBRID: 'hybrid',
+  IN_PERSON: 'in_person',
+  VIRTUAL: 'virtual',
+} as const;
+
+export const EVENT_TYPE = {
+  EXAMINATION_HEARING: 'examination_hearing',
+  GATEWAY_2_WORKSHOP: 'gateway_2_workshop',
+  OTHER: 'other',
+} as const;
+
+export const EXAMINATION_OUTCOME = {
+  SOUND: 'Sound',
+  UNSOUND: 'Unsound',
+} as const;
+
 export const MESSAGE_EVENT_TYPE = {
   CREATE: 'Create',
   DELETE: 'Delete',
@@ -946,6 +963,11 @@ export const NSIP_VIRUS_CHECK_STATUS = {
   AFFECTED: 'affected',
   NOT_SCANNED: 'not_scanned',
   SCANNED: 'scanned',
+} as const;
+
+export const PLAN_TYPE = {
+  LOCAL_PLANS: 'local_plans',
+  OTHER: 'other',
 } as const;
 
 export const REDACTION_STATUS = {

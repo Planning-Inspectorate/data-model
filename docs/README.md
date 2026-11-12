@@ -40,6 +40,8 @@
 
 * [Listed Buildings](./listed-buildings.md "Temporary copy of listed-building to ensure compatibility until ODW is updated") – `listed-buildings.schema.json`
 
+* [Local Plans Case](./plans-case.md "Local Plan case as defined for integration with the ODW") – `plans-case.schema.json`
+
 * [NSIP Document](./nsip-document.md "NSIP document schema") – `nsip-document.schema.json`
 
 * [NSIP Invoice](./nsip-invoice.md "NSIP Standalone Invoice Schema for ODW Curated layer") – `nsip-invoice.schema.json`
@@ -53,6 +55,8 @@
 * [PINS Inspector](./pins-inspector.md "Inspector Details originating from Horizon, SAP HR and Entra") – `pins-inspector.schema.json`
 
 * [PINS LPA](./pins-lpa.md "Local Planning Authority (LPA) attributes as per Horizon") – `pins-lpa.schema.json`
+
+* [Plans Event](./plans-event.md "Event associated with a Plans Case") – `plans-event.schema.json`
 
 * [Representation](./nsip-representation.md "NSIP Representation schema") – `nsip-representation.schema.json`
 
@@ -108,6 +112,12 @@
 
 * [Untitled object in Examination Timetable](./nsip-exam-timetable-defs-line-item.md) – `nsip-exam-timetable.schema.json#/$defs/line-item`
 
+* [Untitled object in Local Plans Case](./plans-case-defs-localplanscontact.md "LPA contact or Programme Officer") – `plans-case.schema.json#/$defs/localPlansContact`
+
+* [Untitled object in Local Plans Case](./plans-case-defs-inspector.md "Inspector assignment details") – `plans-case.schema.json#/$defs/inspector`
+
+* [Untitled object in Local Plans Case](./plans-case-defs-planpausehistory.md "History of plan pause(s)") – `plans-case.schema.json#/$defs/planPauseHistory`
+
 * [Untitled object in NSIP Project](./nsip-project-defs-meeting.md "A meeting related to the project") – `nsip-project.schema.json#/$defs/meeting`
 
 * [Untitled object in NSIP Project](./nsip-project-defs-invoice.md "An invoice related to the project") – `nsip-project.schema.json#/$defs/invoice`
@@ -125,6 +135,8 @@
 * [Untitled array in Examination Timetable](./nsip-exam-timetable-properties-events.md) – `nsip-exam-timetable.schema.json#/properties/events`
 
 * [Untitled array in Examination Timetable](./nsip-exam-timetable-defs-event-properties-eventlineitems.md) – `nsip-exam-timetable.schema.json#/$defs/event/properties/eventLineItems`
+
+* [Untitled array in Local Plans Case](./plans-case-properties-lpaid.md "LPAs involved with case") – `plans-case.schema.json#/properties/lpaId`
 
 * [Untitled array in NSIP Project](./nsip-project-properties-regions.md) – `nsip-project.schema.json#/properties/regions`
 

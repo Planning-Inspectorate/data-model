@@ -4469,6 +4469,343 @@ export interface PINSLPA {
 }
 
 /**
+ * Local Plan case as defined for integration with the ODW
+ */
+export interface LocalPlansCase {
+  /**
+   * Primary Key
+   */
+  id: string;
+  /**
+   * CBOS Business Key
+   */
+  caseReference: string;
+  /**
+   * The official title as in the Notice of Intention
+   */
+  planTitle: string;
+  /**
+   * Type of plan to be examined
+   */
+  planType: 'local_plans' | 'other';
+  /**
+   * Classification of grade/level of plan. Local Plans Band = 1
+   */
+  planBand?: (1 | 2 | 3) | null;
+  /**
+   * Entra IDs of PINS Case Officers assigned
+   */
+  caseOfficerId?: string[] | null;
+  /**
+   * LPAs involved with case
+   */
+  lpaId: string[];
+  /**
+   * LPA Contacts involved with case
+   */
+  lpaContact?: LocalPlansContact[] | null;
+  /**
+   * Programme Officer(s) assigned to case by LPA(s)
+   */
+  caseProgrammeOfficer?: LocalPlansContact[] | null;
+  /**
+   * Date the LPA give notice to commence plan preparation
+   */
+  intentionToCommenceDate?: string | null;
+  /**
+   * Date that LPA are seeking to submit
+   */
+  expectedSubmissionForExaminationDate?: string | null;
+  /**
+   * Date that LPA are seeking to publish
+   */
+  expectedPublicationDate?: string | null;
+  /**
+   * Date case created in Back Office?
+   */
+  createdDate: string;
+  /**
+   * Date case (soft) deleted in Back Office?
+   */
+  deletedDate?: string | null;
+  /**
+   * Date that LPA expect to pass Gateway 1
+   */
+  gateway1ExpectedDate?: string | null;
+  /**
+   * Date that LPA actually passed Gateway 1
+   */
+  gateway1ActualDate?: string | null;
+  /**
+   * Date SLA sent to LPA
+   */
+  slaSentDate?: string | null;
+  /**
+   * Date SLA(s) signed/received back from LPA(s)
+   */
+  slaReceivedDate?: string | null;
+  /**
+   * Do PINS and LPA(s) have current/valid DSAs
+   */
+  dsaCurrentAndValid?: boolean | null;
+  /**
+   * Date that LPA expect to pass Gateway 2
+   */
+  gateway2ExpectedDate?: string | null;
+  /**
+   * Date that LPA actually passed Gateway 2
+   */
+  gateway2ActualDate?: string | null;
+  /**
+   * Gateway 2 Assessor inspector(s)
+   */
+  gateway2AssessorId?: Inspector[] | null;
+  /**
+   * Date report issued to LPA
+   */
+  gateway2ReportIssuedDate?: string | null;
+  /**
+   * LPA should publish within 2 weeks of receiving report
+   */
+  reportPublishedByLpaDate?: string | null;
+  /**
+   * Date workshop documents are uploaded
+   */
+  workshopDocumentUploadedDate?: string | null;
+  /**
+   * Date that LPA expect to pass Gateway 3
+   */
+  gateway3ExpectedDate?: string | null;
+  /**
+   * Date that LPA actually passed Gateway 3
+   */
+  gateway3ActualDate?: string | null;
+  /**
+   * Gateway 3 Assessor inspector(s)
+   */
+  gateway3AssessorId?: Inspector[] | null;
+  /**
+   * Date Gateway3 completed
+   */
+  completionDate?: string | null;
+  /**
+   * Actual examination submission date
+   */
+  actualSubmissionForExaminationDate?: string | null;
+  /**
+   * Examining inspector(s) and appointment dates
+   */
+  examiningInspectorId?: Inspector[] | null;
+  /**
+   * URL to examination website
+   */
+  examinationWebsite?: string | null;
+  /**
+   * Date letter is sent to MHCLG under 48 hour protocol
+   */
+  letterSentToMHCLGDate?: string | null;
+  /**
+   * Date Letter(s) sent to LPA
+   */
+  letterIssueDate?: string | null;
+  /**
+   * Date the report has come in for QA
+   */
+  qaDate?: string | null;
+  /**
+   * QA inspector(s)
+   */
+  qaInspectorId?: Inspector[] | null;
+  /**
+   * Date report is sent to panel
+   */
+  reportSentToPanelDate?: string | null;
+  /**
+   * Date panel responds to inspector
+   */
+  panelresponseToInspectorDate?: string | null;
+  /**
+   * Date the report was received from the Inspector for Fact Check
+   */
+  factCheckDateReceivedFromInspector?: string | null;
+  /**
+   * Date the report is expected to be sent to the LPA for Fact Check
+   */
+  factCheckDueDate?: string | null;
+  /**
+   * Date the report is actually sent to the LPA for Fact Check
+   */
+  factCheckActualDate?: string | null;
+  /**
+   * Fact Check received back from LPA
+   */
+  factCheckReceivedBackFromLPADate?: string | null;
+  /**
+   * Date the report is issued to the LPA
+   */
+  finalReportIssueDate?: string | null;
+  /**
+   * History of plan pause(s)
+   */
+  planPauses?: PlanPauseHistory[] | null;
+  /**
+   * Date the Plan is Withdrawn by the LPA
+   */
+  withdrawnDate?: string | null;
+  /**
+   * Outcome
+   */
+  examinationOutcome?: 'Sound' | 'Unsound' | null;
+  /**
+   * Outcome date
+   */
+  examinationOutcomeDate?: string | null;
+  /**
+   * Date the LPA have adopted the Plan
+   */
+  adoptionDate?: string | null;
+  /**
+   * TBC by Ops Team
+   */
+  approvedForCilDate?: string | null;
+  [k: string]: unknown;
+}
+/**
+ * LPA contact or Programme Officer
+ */
+export interface LocalPlansContact {
+  /**
+   * Primary Key for Contact
+   */
+  id: string;
+  /**
+   * First name
+   */
+  firstName: string;
+  /**
+   * Last name
+   */
+  lastName: string;
+  /**
+   * Email address
+   */
+  emailAddress: string;
+  /**
+   * Phone number
+   */
+  phone?: string | null;
+  /**
+   * PINS LPA Code
+   */
+  pinsLpaCode: string;
+  /**
+   * Start date
+   */
+  startDate: string;
+  /**
+   * End date
+   */
+  endDate?: string | null;
+}
+/**
+ * Inspector assignment details
+ */
+export interface Inspector {
+  /**
+   * Entra ID
+   */
+  entraId: string;
+  /**
+   * Date inspector appointed to case
+   */
+  appointmentDate?: string | null;
+  /**
+   * Date inspector disassociated with case
+   */
+  endDate?: string | null;
+}
+/**
+ * History of plan pause(s)
+ */
+export interface PlanPauseHistory {
+  /**
+   * CBOS Internal key of pause
+   */
+  id: string;
+  /**
+   * Date pause begins
+   */
+  planPauseStartDate?: string | null;
+  /**
+   * Date pause ends
+   */
+  planPauseEndDate?: string | null;
+}
+
+/**
+ * Event associated with a Plans Case.
+ */
+export interface PlansEvent {
+  /**
+   * Primary Key
+   */
+  id: string;
+  /**
+   * Foreign Key --> [plans-case]
+   */
+  caseId: string;
+  /**
+   * CBOS Business Key case identifier
+   */
+  caseReference: string;
+  /**
+   * Type of event
+   */
+  eventType: 'examination_hearing' | 'gateway_2_workshop' | 'other';
+  /**
+   * How event is delivered
+   */
+  eventLocationType?: 'in_person' | 'hybrid' | 'virtual';
+  /**
+   * Event start date and time
+   */
+  eventStartDateTime?: string | null;
+  /**
+   * Event end date and time
+   */
+  eventEndDateTime?: string | null;
+  /**
+   * URL of hybrid or virtual event
+   */
+  remoteEventLink?: string | null;
+  /**
+   * Name of event venue
+   */
+  venueName?: string | null;
+  /**
+   * Event address line 1
+   */
+  addressLine1?: string | null;
+  /**
+   * Event address line 2
+   */
+  addressLine2?: string | null;
+  /**
+   * Event address town
+   */
+  addressTown?: string | null;
+  /**
+   * Event address county
+   */
+  addressCounty?: string | null;
+  /**
+   * Event address postcode
+   */
+  addressPostcode?: string | null;
+  [k: string]: unknown;
+}
+
+/**
  * Section 51 Advice schema
  */
 export interface S51Advice {
@@ -6309,6 +6646,8 @@ export type SchemaMap = {
     'nsip-subscription.schema.json': NsipSubscription;
     'pins-inspector.schema.json': PINSInspector;
     'pins-lpa.schema.json': PINSLPA;
+    'plans-case.schema.json': LocalPlansCase;
+    'plans-event.schema.json': PlansEvent;
     's51-advice.schema.json': S51Advice;
     'service-user.schema.json': ServiceUser;
   }

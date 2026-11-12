@@ -635,6 +635,23 @@ export const CASE_STAGE = Object.freeze({
   WITHDRAWN: 'withdrawn',
 });
 
+export const EVENT_LOCATION_TYPE = Object.freeze({
+  HYBRID: 'hybrid',
+  IN_PERSON: 'in_person',
+  VIRTUAL: 'virtual',
+});
+
+export const EVENT_TYPE = Object.freeze({
+  EXAMINATION_HEARING: 'examination_hearing',
+  GATEWAY_2_WORKSHOP: 'gateway_2_workshop',
+  OTHER: 'other',
+});
+
+export const EXAMINATION_OUTCOME = Object.freeze({
+  SOUND: 'Sound',
+  UNSOUND: 'Unsound',
+});
+
 export const MESSAGE_EVENT_TYPE = Object.freeze({
   CREATE: 'Create',
   DELETE: 'Delete',
@@ -989,6 +1006,11 @@ export const NSIP_VIRUS_CHECK_STATUS = Object.freeze({
   AFFECTED: 'affected',
   NOT_SCANNED: 'not_scanned',
   SCANNED: 'scanned',
+});
+
+export const PLAN_TYPE = Object.freeze({
+  LOCAL_PLANS: 'local_plans',
+  OTHER: 'other',
 });
 
 export const REDACTION_STATUS = Object.freeze({

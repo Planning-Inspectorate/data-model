@@ -164,11 +164,12 @@ Classification of grade/level of plan. Local Plans Band = 1
 
 **enum**: the value of this property must be equal to one of the following values:
 
-| Value | Explanation |
-| :---- | :---------- |
-| `1`   |             |
-| `2`   |             |
-| `3`   |             |
+| Value  | Explanation |
+| :----- | :---------- |
+| `null` |             |
+| `1`    |             |
+| `2`    |             |
+| `3`    |             |
 
 ## caseOfficerId
 

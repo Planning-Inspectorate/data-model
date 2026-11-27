@@ -23,6 +23,7 @@ class PlanBand(Enum):
     Classification of grade/level of plan. Local Plans Band = 1
     """
 
+    NoneType_None = None
     int_1 = 1
     int_2 = 2
     int_3 = 3

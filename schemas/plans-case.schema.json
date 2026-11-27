@@ -28,7 +28,7 @@
     "planBand": {
       "type": ["integer", "null"],
       "description": "Classification of grade/level of plan. Local Plans Band = 1",
-      "enum": [1, 2, 3]
+      "enum": [null, 1, 2, 3]
     },
     "caseOfficerId": {
       "type": ["array", "null"],

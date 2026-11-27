@@ -4491,7 +4491,7 @@ export interface LocalPlansCase {
   /**
    * Classification of grade/level of plan. Local Plans Band = 1
    */
-  planBand?: (1 | 2 | 3) | null;
+  planBand?: null | 1 | 2 | 3;
   /**
    * Entra IDs of PINS Case Officers assigned
    */
